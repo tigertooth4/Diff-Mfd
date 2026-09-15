@@ -2,4 +2,4 @@
 
 ## IMPORTANT Notes
 
-The lectureNotes is a AI generated reprint version of Warner's GTM book.
+The lectureNotes/ contains an AI generated reprint of Warner's GTM book.
