@@ -1,0 +1,108 @@
+\chapter{The Inverse Function Theorem in $\mathbb{R}^n$ and Related
+  Results}\label{sec:inverse-function-theorem}
+
+In this chapter we discuss three logically equivalent theorems: the inverse
+function theorem, the implicit function theorem, and the constant rank
+theorem, which describe the local behavior of $C^\infty$ maps from $\RR^n$ to
+$\RR^m$. We assume the inverse function theorem and then derive the other two
+theorems from it in the simplest cases.
+
+
+In subsequent discussions, these theorems are applied on manifolds to study
+the local behavior of $C^\infty$ maps, where the maps in question usually have
+maximal rank at a point or constant rank in a neighborhood.
+
+
+\section{The Inverse Function Theorem}
+
+A $C^\infty$ map $f: U\to \RR^n$ defined on an open set $U\subset\RR^n$ is
+said to be \emph{locally invertible}, or to be a \emph{local diffeomorphism}
+near a point $p\in U$, if $f$ has a $C^\infty$ inverse map in some
+neighborhood of $p$. The inverse function theorem gives a criterion for a map
+to be locally invertible. We call the matrix $Jf = [\partial f^i/\partial
+	x^j]$ the \emph{Jacobian matrix} of $f$, and its determinant $\det
+	[\partial f^i/\partial x^j]$ is called the \emph{Jacobian determinant of
+	$f$}.
+
+\begin{theorem}[The Inverse Function Theorem]
+  \label{thm:inverse-function-theorem-Rn}
+
+	Let $f:U\to\RR^n$ be a $C^\infty$ map defined on an open subset
+	$U\subset\RR^n$. At any point $p\in U$, the map $f$ is
+	\underline{locally invertible} near $p$ \underline{if and only if} the
+	determinant of its Jacobian matrix $\det [\partial f^i/\partial x^j
+			(p)]$ is nonzero.
+
+\end{theorem}
+
+% A proof of the theorem can be found in \cite{rudinma}, p. 221, Theorem 9.24.
+Note that although the inverse function theorem requires only the Jacobian
+determinant at the point $p$ to be nonzero, continuity in fact guarantees
+that the Jacobian determinant is nonzero throughout a neighborhood of $p$.
+
+
+Since the linear map defined by the Jacobian matrix $Jf(p)$ is the best
+approximation to $f$ at $p$, it is quite plausible that $f$ being invertible
+in a neighborhood of $p$ is equivalent to $Jf(p)$ being invertible (or,
+equivalently, to $\det Jf(p)\neq 0$).
+
+
+\begin{remark}
+	Theorem \ref{thm:inverse-function-theorem-Rn} gives a necessary and
+	sufficient condition. However, if one only requires the map $f$ to be a
+	local homeomorphism (without regard to smoothness), the theorem gives
+	only a sufficient condition.
+\end{remark}
+
+
+
+
+\section{The Implicit Function Theorem}
+
+As an application of the inverse function theorem, we state the following
+implicit function theorem. Let $F:U\subset\RR^m\to\RR^n$ be a $C^\infty$ map,
+where $m>n$. If $p\in U$ is a solution of the equation $F(x^1,\cdots,
+	x^m)=\bm{0}$, we would like to ask: in some neighborhood of this
+solution, do there exist other solutions? If so, how can these solutions be
+represented? The implicit function theorem answers these questions in terms of
+the rank of the Jacobian matrix of $F$ at $p$.
+
+
+
+\newpage
+
+\section{Supplementary Linear Algebra}
+
+\section{Dual Spaces}\label{sec:dualspace}
+
+If $V$ and $W$ are real linear spaces, we denote by $\Hom(V,W)$ the vector
+space of all linear maps $f: V\to W$. The \emph{dual space} $V^\vee$ of $V$ is
+defined to be the linear space of all linear real-valued functions on $V$:
+\begin{displaymath}
+	V^\vee = \Hom(V,\mathbb{R}).
+\end{displaymath}
+The elements of $V^\vee$ are called \emph{covectors} or $1$-covectors on $V$.
+
+In the discussion below, we always assume that $V$ is a \emph{finite
+	dimensional} vector space. Let $e_1,\cdots, e_n$ be a basis of $V$. Then
+every vector $v\in V$ can be uniquely expressed as a linear combination $v=
+	\sum v^i e_i$, where $v^i\in\mathbb{R}$. Let $\alpha^i: V\to \mathbb{R}$
+be the linear function that takes the value of the $i$-th coordinate component
+of $v$, $\alpha^i(v) = v^i$. Then
+\begin{displaymath}
+	\alpha^i(e_j) = \delta^i_j =
+	\begin{cases}
+		1 & \text{if $i=j$},     \\
+		0 & \text{if $i\neq j$}.
+	\end{cases}
+\end{displaymath}
+
+\begin{proposition}
+	The functions $\alpha^1,\cdots, \alpha^n$ form a basis of $V^\vee$.
+\end{proposition}
+
+
+\begin{corollary}
+	The dual space $V^\vee$ has the same dimension as the finite dimensional
+	vector space $V$.
+\end{corollary}
