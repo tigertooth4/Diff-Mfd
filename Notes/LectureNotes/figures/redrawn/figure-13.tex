@@ -1,0 +1,7 @@
+% Editable vector reconstruction of the supplied figure.
+\begin{tikzpicture}
+\foreach \a/\lab in {0/{M^m},4/{N^d}}{\begin{scope}[xshift=\a cm]\draw(0,1.2)--(.5,3)--(3,3.4)--(2.5,1.4)--cycle;\node at(3,3.45){$\lab$};\draw(1.5,2.25)ellipse(.85 and .55);\draw(.5,1.5)--(2.6,3);\end{scope}}
+\node at(.8,2.8){$U$};\node at(4.8,2.8){$V$};\node at(.7,1.6){$P$};\fill(5.4,2.2)circle(1.5pt)node[below]{$\varphi(p)$};\draw[->](2.8,2.3)--node[above]{$\psi$}(4,2.3);
+\draw[->](7.1,2.5)--node[above]{$\tau$}(8.1,2.5);\draw[->](8,1.8)--(10.6,1.8)node[right]{$\mathbb R^c$};\draw[->](9,1)--(9,3.5)node[above]{$\mathbb R^{d-c}$};\draw(8.3,1.2)rectangle(10,3);\node at(9.2,1.6){$0$};\draw[->](9.4,2.6)--node[above]{$\pi$}(10.2,2.6);
+\draw(4.5,-.6)..controls(5.4,.2)and(6.5,-.2)..(7,.7);\node at(7.2,.7){$O^c$};\fill(5.5,0)circle(1.5pt)node[below]{$p$};\node at(6.1,.25){$W$};\draw[->](5.5,.5)--node[left]{$\varphi$}(5.5,1.5);
+\end{tikzpicture}

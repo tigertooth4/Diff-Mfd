@@ -1,0 +1,90 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{reprint}[2026/09/16 Warner study reprint]
+\usepackage[margin=26mm,top=24mm,bottom=25mm,headheight=14pt,headsep=7mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeXGyreTermesX}[UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Extension=.otf]
+\usepackage{amsmath,amsthm}
+\let\reprinttextfont\rmdefault
+\let\reprinttextencoding\encodingdefault
+\def\encodingdefault{T1}
+\def\rmdefault{ntxtlf}
+\usepackage{newtxmath}
+\let\rmdefault\reprinttextfont
+\let\encodingdefault\reprinttextencoding
+\normalfont
+\usepackage{bm,graphicx,xcolor,enumitem,multicol,booktabs,longtable,array}
+\usepackage{tikz,tikz-cd}
+\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.markings}
+\usepackage{needspace,microtype,titlesec,fancyhdr,makeidx,xparse}
+\usepackage[unicode,pdfencoding=auto,psdextra]{hyperref}
+\usepackage{bookmark}
+\definecolor{inkblue}{HTML}{263E53}
+\hypersetup{pdftitle={Foundations of Differentiable Manifolds and Lie Groups - Study Reprint},
+ pdfauthor={Frank W. Warner},pdfsubject={Revised study reprint with editorial supplements},
+ pdfkeywords={differentiable manifolds, Lie groups, Warner, study reprint},
+ colorlinks=true,linkcolor=inkblue,citecolor=inkblue,urlcolor=inkblue,bookmarksnumbered=true}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{0}
+\linespread{1.06}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt plus .4pt}
+\setlength{\emergencystretch}{1.5em}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\allowdisplaybreaks[1]
+\raggedbottom
+\titleformat{\chapter}[display]{\normalfont\bfseries\color{inkblue}}{\large\chaptertitlename\ \thechapter}{8pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{0pt}{22pt}
+\titleformat{\section}{\large\bfseries\color{inkblue}}{\thesection}{.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{.65em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{.3pt}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\quad #1}{}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+\setlist{topsep=4pt,itemsep=3pt,parsep=0pt}
+\setlist[enumerate,1]{label=\arabic*.,leftmargin=*}
+\setlist[itemize,1]{label=\textbullet,leftmargin=*}
+\makeindex
+\newcounter{warner}[chapter]
+\renewcommand{\thewarner}{\thechapter.\arabic{warner}}
+\newcommand{\warnernumber}[1]{\setcounter{warner}{\numexpr#1-1\relax}\Needspace{4\baselineskip}}
+\newcommand{\discuss}[2]{\par\addvspace{10pt}\Needspace{4\baselineskip}\refstepcounter{warner}\noindent\textbf{\thewarner\if\relax\detokenize{#2}\relax\else\quad #2\fi}\quad\ignorespaces}
+\newtheoremstyle{reprintplain}{9pt}{7pt}{\itshape}{0pt}{\bfseries}{.}{.6em}{}
+\newtheoremstyle{reprintdefinition}{9pt}{7pt}{\normalfont}{0pt}{\bfseries}{.}{.6em}{}
+% Retain both historical {title} and standard [title] source syntax.
+\newcommand{\DeclareReprintTheorem}[3]{%
+ \theoremstyle{#3}%
+ \newtheorem{rp#1}[warner]{#2}%
+ \newtheorem*{rp#1star}{#2}%
+ \NewDocumentEnvironment{#1}{g o}{\IfNoValueTF{##1}{\IfNoValueTF{##2}{\begin{rp#1}}{\begin{rp#1}[{##2}]}}{\begin{rp#1}[{##1}]}}{\end{rp#1}}%
+ \NewDocumentEnvironment{#1*}{g o}{\IfNoValueTF{##1}{\IfNoValueTF{##2}{\begin{rp#1star}}{\begin{rp#1star}[{##2}]}}{\begin{rp#1star}[{##1}]}}{\end{rp#1star}}}
+\DeclareReprintTheorem{definition}{Definition}{reprintdefinition}
+\DeclareReprintTheorem{theorem}{Theorem}{reprintplain}
+\DeclareReprintTheorem{lemma}{Lemma}{reprintplain}
+\DeclareReprintTheorem{proposition}{Proposition}{reprintplain}
+\DeclareReprintTheorem{corollary}{Corollary}{reprintplain}
+\DeclareReprintTheorem{examples}{Examples}{reprintdefinition}
+\DeclareReprintTheorem{remarks}{Remarks}{reprintdefinition}
+\DeclareReprintTheorem{example}{Example}{reprintdefinition}
+\DeclareReprintTheorem{remark}{Remark}{reprintdefinition}
+\newenvironment{problemset}[1][]{\begin{enumerate}[#1]}{\end{enumerate}}
+\makeatletter
+\newcommand{\citem}[1]{\item[#1]\def\@currentlabel{#1}}
+\makeatother
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\ac}{\operatorname{ac}}
+\DeclareMathOperator{\Hom}{Hom}
+\newcommand{\circled}[1]{\text{\tikz[baseline=(n.base)]\node[draw,circle,inner sep=1pt,font=\scriptsize](n){#1};}}
+\newcommand{\redrawn}[1]{\input{figures/redrawn/#1.tex}}
+\tikzset{every picture/.style={line width=.55pt,>=Stealth},every node/.style={font=\small},every path/.style={line cap=round,line join=round}}
+\tikzcdset{arrow style=tikz,diagrams={row sep=2.6em,column sep=3.2em},labels={font=\small}}
+
+% Explicit local equation tags must still have globally unique PDF destinations.
+\newcounter{rpeqserial}
+\AddToHook{env/equation/before}{\stepcounter{rpeqserial}}
+\renewcommand{\theHequation}{reprint.\arabic{rpeqserial}}

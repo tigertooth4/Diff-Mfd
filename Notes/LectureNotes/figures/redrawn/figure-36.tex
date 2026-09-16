@@ -1,0 +1,5 @@
+% Editable vector reconstruction of the supplied figure.
+\begin{tikzpicture}
+\node (a) at (0,1.6) {$\operatorname{Aut}(V)$};\node (b) at (4,1.6) {$\operatorname{Aut}(\operatorname{End}V)$};\node (c) at (0,0) {$\operatorname{End}(V)$};\node (d) at (4,0) {$\operatorname{End}(\operatorname{End}V)$};
+\draw[->](a)--node[above]{$\operatorname{Ad}$}(b);\draw[->](c)--node[below]{$\operatorname{ad}$}(d);\draw[->](c)--node[left]{$\exp$}(a);\draw[->](d)--node[right]{$\exp$}(b);
+\end{tikzpicture}

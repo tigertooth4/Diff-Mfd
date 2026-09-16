@@ -1,0 +1,4 @@
+% Editable vector reconstruction of the supplied figure.
+\begin{tikzpicture}
+\node(a) at(0,0){$\mathbb R$};\node(b) at(4,0){$\mathbb R$};\node(c) at(0,2){$T(\mathbb R)$};\node(d) at(4,2){$T(\mathbb R)$};\draw[->](a)--node[below]{$\alpha$}(b);\draw[->](a)--node[left]{$\frac d{dt}$}(c);\draw[->](c)--node[above]{$d\alpha$}(d);\draw[->](a)--node[above left]{$X$}(d);\draw[->,transform canvas={xshift=-4pt}](d)--node[left]{$\pi$}(b);\draw[->,dashed,transform canvas={xshift=4pt}](b)--node[right]{$\dot X$}(d);
+\end{tikzpicture}

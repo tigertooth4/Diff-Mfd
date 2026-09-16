@@ -1,0 +1,772 @@
+[
+  {
+    "symbol": "$\\varnothing$",
+    "meaning": "Empty set",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$\\mapsto$",
+    "meaning": "Image of an individual element",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$g\\circ f$",
+    "meaning": "Composition of maps",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$\\mathrm{id}$",
+    "meaning": "Identity map",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$\\mathbb{R}^{d}, r_{i}:\\mathbb{R}^{d}\\to\\mathbb{R}$",
+    "meaning": "Euclidean space and coordinate projections",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$\\mathbb{C}^{n}$",
+    "meaning": "Complex Euclidean space",
+    "item": "1.1"
+  },
+  {
+    "symbol": "supp $\\varphi$",
+    "meaning": "Support of a function",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$\\bar{A}$",
+    "meaning": "Closure of a set",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$[\\alpha]$",
+    "meaning": "Total order of a multi-index",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$\\alpha!$",
+    "meaning": "Multi-index factorial",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$\\partial^\\alpha/\\partial r^\\alpha$",
+    "meaning": "Multi-index partial derivative",
+    "item": "1.1"
+  },
+  {
+    "symbol": "$C^{k}, C^{\\infty}$",
+    "meaning": "Differentiability classes",
+    "item": "1.2"
+  },
+  {
+    "symbol": "$(U,\\varphi), (U,x_{1},\\ldots,x_{d})$",
+    "meaning": "Coordinate chart and coordinate functions",
+    "item": "1.3"
+  },
+  {
+    "symbol": "$(M,\\mathcal{F})$",
+    "meaning": "Manifold with a differentiable structure",
+    "item": "1.4"
+  },
+  {
+    "symbol": "$M^{d}$",
+    "meaning": "A manifold of dimension d",
+    "item": "1.4"
+  },
+  {
+    "symbol": "$S^{d}$",
+    "meaning": "Unit sphere",
+    "item": "1.5"
+  },
+  {
+    "symbol": "$Gl(n,\\mathbb R)$",
+    "meaning": "Real general linear group",
+    "item": "1.5"
+  },
+  {
+    "symbol": "$C^{\\infty}(U), C^{\\infty}(M,N)$",
+    "meaning": "Smooth functions and smooth maps",
+    "item": "1.6"
+  },
+  {
+    "symbol": "$\\tilde{F}_{m}, F_{m}, F_{m}^{k}$",
+    "meaning": "Germs, vanishing germs, and powers of the ideal",
+    "item": "1.13"
+  },
+  {
+    "symbol": "$\\mathbf{f}, \\mathbf{f}(m)$",
+    "meaning": "Germ of a function and its value",
+    "item": "1.13"
+  },
+  {
+    "symbol": "$M_{m}$",
+    "meaning": "Tangent space at a point",
+    "item": "1.14"
+  },
+  {
+    "symbol": "$\\mathbf f-\\mathbf f(m)$",
+    "meaning": "Vanishing part of a germ",
+    "item": "1.15"
+  },
+  {
+    "symbol": "$\\left.\\partial/\\partial x_i\\right|_m,\\ \\left.\\partial f/\\partial x_i\\right|_m$",
+    "meaning": "Coordinate tangent vector and partial derivative",
+    "item": "1.19"
+  },
+  {
+    "symbol": "$d\\varphi, d\\varphi_{m}, \\delta\\varphi$",
+    "meaning": "Differential and its dual",
+    "item": "1.22"
+  },
+  {
+    "symbol": "$M_{m}^{*}$",
+    "meaning": "Cotangent space",
+    "item": "1.22"
+  },
+  {
+    "symbol": "$\\dot{\\sigma}(t)$",
+    "meaning": "Velocity vector of a curve",
+    "item": "1.23"
+  },
+  {
+    "symbol": "$T(M), T^{*}(M)$",
+    "meaning": "Tangent and cotangent bundles",
+    "item": "1.25"
+  },
+  {
+    "symbol": "$^{k}M_{m}, d^{k}f, M_{m}^{k}$",
+    "meaning": "Higher order tangent vectors and differentials",
+    "item": "1.26"
+  },
+  {
+    "symbol": "$(x-x(m))^{*}$",
+    "meaning": "Duals of coordinate monomials",
+    "item": "1.26"
+  },
+  {
+    "symbol": "$d^{k}\\varphi, \\delta^{k}\\varphi$",
+    "meaning": "Higher differentials and their duals",
+    "item": "1.26"
+  },
+  {
+    "symbol": "$(M,\\psi)$",
+    "meaning": "Submanifold with its immersion",
+    "item": "1.27"
+  },
+  {
+    "symbol": "$i:A\\to M$",
+    "meaning": "Inclusion of a submanifold",
+    "item": "1.38"
+  },
+  {
+    "symbol": "$O(d)$",
+    "meaning": "Orthogonal group",
+    "item": "1.40"
+  },
+  {
+    "symbol": "$X_{m}, X_{m}(f), X(f)$",
+    "meaning": "Vector field and its action on functions",
+    "item": "1.41"
+  },
+  {
+    "symbol": "$[X,Y]$",
+    "meaning": "Lie bracket of vector fields",
+    "item": "1.44"
+  },
+  {
+    "symbol": "$(a(m),b(m))$",
+    "meaning": "Maximal interval of an integral curve",
+    "item": "1.48"
+  },
+  {
+    "symbol": "$X_t,\\mathcal D_t$",
+    "meaning": "Local flow and its domain",
+    "item": "1.48"
+  },
+  {
+    "symbol": "$\\mathcal D,\\ X\\in\\mathcal D$",
+    "meaning": "Distribution and a vector field tangent to it",
+    "item": "1.56"
+  },
+  {
+    "symbol": "$V\\otimes W, v\\otimes w$",
+    "meaning": "Tensor product and decomposable tensor",
+    "item": "2.1"
+  },
+  {
+    "symbol": "$\\operatorname{Hom}(V,W)$",
+    "meaning": "Space of linear maps",
+    "item": "2.2"
+  },
+  {
+    "symbol": "$V_{r,s}, T(V)$",
+    "meaning": "Tensor spaces and tensor algebra",
+    "item": "2.3"
+  },
+  {
+    "symbol": "$C(V), I(V), I_{k}(V)$",
+    "meaning": "Tensor subalgebra and alternating relations",
+    "item": "2.4"
+  },
+  {
+    "symbol": "$\\Lambda(V), \\Lambda_{k}(V)$",
+    "meaning": "Exterior algebra and its graded pieces",
+    "item": "2.4"
+  },
+  {
+    "symbol": "$v\\wedge w$",
+    "meaning": "Exterior product",
+    "item": "2.4"
+  },
+  {
+    "symbol": "$\\operatorname{sgn}\\pi$",
+    "meaning": "Sign of a permutation",
+    "item": "2.5"
+  },
+  {
+    "symbol": "$A_{r}(V)$",
+    "meaning": "Alternating multilinear forms",
+    "item": "2.5"
+  },
+  {
+    "symbol": "$M_{r,s}(V)$",
+    "meaning": "Multilinear functions on tensor factors",
+    "item": "2.8"
+  },
+  {
+    "symbol": "$\\langle w_{1}\\wedge\\cdots\\wedge w_{p},v_{1}\\wedge\\cdots\\wedge v_{p}\\rangle$",
+    "meaning": "Pairing of exterior powers",
+    "item": "2.9"
+  },
+  {
+    "symbol": "$\\varepsilon(u), i(u)$",
+    "meaning": "Exterior and interior multiplication",
+    "item": "2.11"
+  },
+  {
+    "symbol": "$T_{r,s}(M)$",
+    "meaning": "Tensor bundle",
+    "item": "2.14"
+  },
+  {
+    "symbol": "$\\Lambda_{k}^{*}(M), \\Lambda^{*}(M)$",
+    "meaning": "Bundles of alternating covariant tensors",
+    "item": "2.14"
+  },
+  {
+    "symbol": "$E^k(M),E^*(M)$",
+    "meaning": "Spaces of smooth differential forms",
+    "item": "2.17"
+  },
+  {
+    "symbol": "$\\omega(X_{1},\\ldots,X_{k})$",
+    "meaning": "Evaluation of a form on vector fields",
+    "item": "2.18"
+  },
+  {
+    "symbol": "$\\mathfrak{X}(M)$",
+    "meaning": "Module of smooth vector fields",
+    "item": "2.18"
+  },
+  {
+    "symbol": "$d\\omega$",
+    "meaning": "Exterior derivative",
+    "item": "2.20"
+  },
+  {
+    "symbol": "$i(X)\\omega$",
+    "meaning": "Interior multiplication by a vector field",
+    "item": "2.21"
+  },
+  {
+    "symbol": "$\\delta\\psi(\\omega)$",
+    "meaning": "Pullback of a differential form",
+    "item": "2.22"
+  },
+  {
+    "symbol": "$L_{X}Y$",
+    "meaning": "Lie derivative of a vector field",
+    "item": "2.24"
+  },
+  {
+    "symbol": "$L_{X}\\omega$",
+    "meaning": "Lie derivative of a differential form",
+    "item": "2.24"
+  },
+  {
+    "symbol": "$\\mathcal I(\\mathcal D)$",
+    "meaning": "Ideal annihilating a distribution",
+    "item": "2.26"
+  },
+  {
+    "symbol": "$T^{n}$",
+    "meaning": "Torus",
+    "item": "3.3"
+  },
+  {
+    "symbol": "$l_\\sigma,r_\\sigma$",
+    "meaning": "Left and right translations",
+    "item": "3.6"
+  },
+  {
+    "symbol": "$V\\sigma,\\sigma V$ $(\\sigma\\in G,V\\subset G)$",
+    "meaning": "Right and left translates of a subset",
+    "item": "3.6"
+  },
+  {
+    "symbol": "$\\mathfrak g$",
+    "meaning": "Lie algebra of a Lie group",
+    "item": "3.8"
+  },
+  {
+    "symbol": "$G_{e}$",
+    "meaning": "Tangent space at the identity",
+    "item": "3.8"
+  },
+  {
+    "symbol": "$\\mathfrak{gl}(n,\\mathbb R)$",
+    "meaning": "Real matrix Lie algebra",
+    "item": "3.10"
+  },
+  {
+    "symbol": "$x_{ij}(\\sigma)$",
+    "meaning": "Matrix coordinate functions",
+    "item": "3.10"
+  },
+  {
+    "symbol": "$\\operatorname{End}(V),\\operatorname{Aut}(V)$",
+    "meaning": "Endomorphisms and automorphisms",
+    "item": "3.10"
+  },
+  {
+    "symbol": "$\\mathfrak{gl}(n,\\mathbb C),Gl(n,\\mathbb C)$",
+    "meaning": "Complex matrix algebra and general linear group",
+    "item": "3.10"
+  },
+  {
+    "symbol": "$E_{\\mathrm{inv}}^p,E_{\\mathrm{inv}}^*$",
+    "meaning": "Left invariant differential forms",
+    "item": "3.11"
+  },
+  {
+    "symbol": "$\\pi_{1}(X,x_{0})$",
+    "meaning": "Fundamental group",
+    "item": "3.22"
+  },
+  {
+    "symbol": "$\\exp_X,\\exp$",
+    "meaning": "Exponential map",
+    "item": "3.30"
+  },
+  {
+    "symbol": "$e^{A}$",
+    "meaning": "Matrix exponential",
+    "item": "3.35"
+  },
+  {
+    "symbol": "$A^t,\\bar A,A^{-1}$",
+    "meaning": "Transpose, complex conjugate, and inverse",
+    "item": "3.37"
+  },
+  {
+    "symbol": "$U(n),\\mathfrak u(n)$",
+    "meaning": "Unitary group and its Lie algebra",
+    "item": "3.37"
+  },
+  {
+    "symbol": "$Sl(n,\\mathbb C),\\mathfrak{sl}(n,\\mathbb C)$",
+    "meaning": "Complex special linear group and its Lie algebra",
+    "item": "3.37"
+  },
+  {
+    "symbol": "$O(n,\\mathbb C),\\mathfrak o(n,\\mathbb C)$",
+    "meaning": "Complex orthogonal group and its Lie algebra",
+    "item": "3.37"
+  },
+  {
+    "symbol": "$SU(n),\\mathfrak{su}(n)$",
+    "meaning": "Special unitary group and its Lie algebra",
+    "item": "3.37"
+  },
+  {
+    "symbol": "$Sl(n,\\mathbb R),\\mathfrak{sl}(n,\\mathbb R)$",
+    "meaning": "Real special linear group and its Lie algebra",
+    "item": "3.37"
+  },
+  {
+    "symbol": "$O(n),\\mathfrak o(n),SO(n)$",
+    "meaning": "Orthogonal groups and their Lie algebra",
+    "item": "3.37"
+  },
+  {
+    "symbol": "$\\operatorname{Ad}$",
+    "meaning": "Adjoint representation of a group",
+    "item": "3.46"
+  },
+  {
+    "symbol": "$\\operatorname{ad}$",
+    "meaning": "Adjoint representation of a Lie algebra",
+    "item": "3.46"
+  },
+  {
+    "symbol": "$G/H$",
+    "meaning": "Homogeneous quotient manifold",
+    "item": "3.58"
+  },
+  {
+    "symbol": "$P^{n},CP^{n}$",
+    "meaning": "Real and complex projective spaces",
+    "item": "3.65"
+  },
+  {
+    "symbol": "$S_{p}(V),M_{k}(V)$",
+    "meaning": "Stiefel and Grassmann manifolds",
+    "item": "3.65"
+  },
+  {
+    "symbol": "$J_\\varphi$",
+    "meaning": "Jacobian determinant",
+    "item": "4.4"
+  },
+  {
+    "symbol": "$\\Delta^{p}$",
+    "meaning": "Standard simplex",
+    "item": "4.6"
+  },
+  {
+    "symbol": "$k_{i}^{p},\\sigma^{i},\\partial\\sigma$",
+    "meaning": "Face inclusions, faces, and boundary",
+    "item": "4.6"
+  },
+  {
+    "symbol": "$\\int_\\sigma\\omega$",
+    "meaning": "Integral of a form over a simplex",
+    "item": "4.6"
+  },
+  {
+    "symbol": "$\\int_{D}\\omega$",
+    "meaning": "Integral over a regular domain",
+    "item": "4.8"
+  },
+  {
+    "symbol": "$\\langle\\ ,\\ \\rangle_{m}$",
+    "meaning": "Riemannian inner product at a point",
+    "item": "4.10"
+  },
+  {
+    "symbol": "$\\operatorname{grad}f,\\operatorname{div}V$",
+    "meaning": "Gradient and divergence",
+    "item": "4.10"
+  },
+  {
+    "symbol": "$H_{\\mathrm{de\\,R}}^p(M)$",
+    "meaning": "de Rham cohomology",
+    "item": "4.13"
+  },
+  {
+    "symbol": "${}_\\infty S_p(M,\\mathbb R),{}_\\infty H_p(M;\\mathbb R)$",
+    "meaning": "Differentiable singular chains and homology",
+    "item": "4.16"
+  },
+  {
+    "symbol": "$K,\\mathbb Z$",
+    "meaning": "Coefficient ring and the integers",
+    "item": "5.1"
+  },
+  {
+    "symbol": "$\\mathcal S,\\mathcal S_m$",
+    "meaning": "Sheaf and its stalk",
+    "item": "5.1"
+  },
+  {
+    "symbol": "$\\mathcal S\\circ\\mathcal S$",
+    "meaning": "Pairs of sheaf elements in the same stalk",
+    "item": "5.1"
+  },
+  {
+    "symbol": "$\\Gamma(\\mathcal S,U),\\Gamma(\\mathcal S)$",
+    "meaning": "Local and global sections of a sheaf",
+    "item": "5.1"
+  },
+  {
+    "symbol": "$\\mathcal C^\\infty(M),\\mathcal C^p(M)$",
+    "meaning": "Sheaves of germs of differentiable functions",
+    "item": "5.2"
+  },
+  {
+    "symbol": "$P=\\{S_{U};\\rho_{U,V}\\}$",
+    "meaning": "Presheaf and its restriction maps",
+    "item": "5.5"
+  },
+  {
+    "symbol": "$\\alpha(\\mathcal S)$",
+    "meaning": "Presheaf associated with a sheaf",
+    "item": "5.6"
+  },
+  {
+    "symbol": "$\\beta(P)$",
+    "meaning": "Sheaf associated with a presheaf",
+    "item": "5.6"
+  },
+  {
+    "symbol": "$\\mathcal S\\otimes\\mathcal T$",
+    "meaning": "Tensor product of sheaves",
+    "item": "5.9"
+  },
+  {
+    "symbol": "$C^{*}$",
+    "meaning": "Cochain complex",
+    "item": "5.16"
+  },
+  {
+    "symbol": "$d^{q}\\colon C^{q}\\to C^{q+1}$",
+    "meaning": "Cochain differential",
+    "item": "5.16"
+  },
+  {
+    "symbol": "$Z^{q}(C^{*}),B^{q}(C^{*}),H^{q}(C^{*})$",
+    "meaning": "Cocycles, coboundaries, and cohomology",
+    "item": "5.16"
+  },
+  {
+    "symbol": "$C^{\\ast}\\to D^{\\ast}$",
+    "meaning": "Cochain map",
+    "item": "5.16"
+  },
+  {
+    "symbol": "$\\partial$",
+    "meaning": "Connecting homomorphism",
+    "item": "5.17"
+  },
+  {
+    "symbol": "$\\mathcal{H},H^{q}(M,\\mathcal{S})$",
+    "meaning": "Sheaf cohomology theory and its groups",
+    "item": "5.18"
+  },
+  {
+    "symbol": "$\\Gamma(\\mathcal{C}^{\\ast}\\otimes\\mathcal{S})$",
+    "meaning": "Global sections of a tensor resolution",
+    "item": "5.20"
+  },
+  {
+    "symbol": "$\\mathcal S_0$",
+    "meaning": "Sheaf of germs of discontinuous sections",
+    "item": "5.22"
+  },
+  {
+    "symbol": "$U^{p+1},A^{p}(U,K)$",
+    "meaning": "Cartesian power and Alexander--Spanier cochains",
+    "item": "5.26"
+  },
+  {
+    "symbol": "$d:A^{p}(U,K)\\to A^{p+1}(U,K)$",
+    "meaning": "Alexander--Spanier differential",
+    "item": "5.26"
+  },
+  {
+    "symbol": "$A^{*}(U,K),\\mathcal{A}^{p}(M,K)$",
+    "meaning": "Alexander--Spanier complex and associated sheaves",
+    "item": "5.26"
+  },
+  {
+    "symbol": "$\\mathcal{A}^{*}(M,K),A^{p}(U,G),A_{0}^{p}(U,G)$",
+    "meaning": "Coefficient variants and locally zero cochains",
+    "item": "5.26"
+  },
+  {
+    "symbol": "$H_{A-S}^{q}(M;G)$",
+    "meaning": "Alexander--Spanier cohomology",
+    "item": "5.26"
+  },
+  {
+    "symbol": "$\\mathcal{E}^{p}(M)$",
+    "meaning": "Sheaf of germs of differential forms",
+    "item": "5.28"
+  },
+  {
+    "symbol": "$\\mathcal{E}^{*}(M)$",
+    "meaning": "de Rham complex of sheaves",
+    "item": "5.28"
+  },
+  {
+    "symbol": "$E^{*}(M)$",
+    "meaning": "Complex of global differential forms",
+    "item": "5.30"
+  },
+  {
+    "symbol": "$S_{p}(U),S^{p}(U,K),S_{0}^{p}(U,K)$",
+    "meaning": "Singular chains and cochains",
+    "item": "5.31"
+  },
+  {
+    "symbol": "$d:S^{p}(U,K)\\to S^{p+1}(U,K)$",
+    "meaning": "Singular coboundary map",
+    "item": "5.31"
+  },
+  {
+    "symbol": "$S^{*}(U,K),S^{p}(M,K),S_{0}^{p}(M,K)$",
+    "meaning": "Singular cochain complexes",
+    "item": "5.31"
+  },
+  {
+    "symbol": "$S^{p}(U,G)$",
+    "meaning": "Singular cochains with module coefficients",
+    "item": "5.32"
+  },
+  {
+    "symbol": "$H_\\Delta^q(M;G),H_{\\Delta^\\infty}^q(M;G)$",
+    "meaning": "Continuous and differentiable singular cohomology",
+    "item": "5.32"
+  },
+  {
+    "symbol": "$S_{\\mathfrak U}^q(M,G)$",
+    "meaning": "Cochains on simplices subordinate to a cover",
+    "item": "5.32"
+  },
+  {
+    "symbol": "$C^q(\\mathfrak U,\\mathcal S)$",
+    "meaning": "Čech cochains of an open cover",
+    "item": "5.33"
+  },
+  {
+    "symbol": "$d:C^q\\to C^{q+1}$",
+    "meaning": "Čech coboundary map",
+    "item": "5.33"
+  },
+  {
+    "symbol": "$\\check H^q(\\mathfrak U,\\mathcal S)$",
+    "meaning": "Čech cohomology of a cover",
+    "item": "5.33"
+  },
+  {
+    "symbol": "$\\check H^q(M,\\mathcal S),\\check H^q(M;G)$",
+    "meaning": "Čech cohomology of a space",
+    "item": "5.33"
+  },
+  {
+    "symbol": "$C^*\\otimes {}^{\\prime}C^*$",
+    "meaning": "Tensor product of cochain complexes",
+    "item": "5.39"
+  },
+  {
+    "symbol": "$\\mathcal S\\oplus\\mathcal T$",
+    "meaning": "Direct sum of sheaves",
+    "item": "5.41"
+  },
+  {
+    "symbol": "$f\\smile g$",
+    "meaning": "Cup product of singular cochains",
+    "item": "5.44"
+  },
+  {
+    "symbol": "$\\Delta g$",
+    "meaning": "Laplace--Beltrami operator",
+    "item": "6.1"
+  },
+  {
+    "symbol": "$\\ast:\\Lambda_p\\to\\Lambda_{n-p}$",
+    "meaning": "Hodge star operator",
+    "item": "6.1"
+  },
+  {
+    "symbol": "$\\delta$",
+    "meaning": "Codifferential",
+    "item": "6.1"
+  },
+  {
+    "symbol": "$H^p$",
+    "meaning": "Harmonic p-forms",
+    "item": "6.7"
+  },
+  {
+    "symbol": "$(H^p)^\\perp$",
+    "meaning": "Orthogonal complement of harmonic forms",
+    "item": "6.8"
+  },
+  {
+    "symbol": "$H,G$",
+    "meaning": "Harmonic projection and Green operator",
+    "item": "6.9"
+  },
+  {
+    "symbol": "$H_p(M;\\mathbb R)$",
+    "meaning": "Real singular homology",
+    "item": "6.14"
+  },
+  {
+    "symbol": "$D^\\alpha,\\mathcal P$",
+    "meaning": "Differential multi-index notation and periodic functions",
+    "item": "6.15"
+  },
+  {
+    "symbol": "$\\eta^\\alpha$",
+    "meaning": "Multi-index power",
+    "item": "6.15"
+  },
+  {
+    "symbol": "$\\varphi\\cdot\\psi$",
+    "meaning": "Pointwise Hermitian product",
+    "item": "6.15"
+  },
+  {
+    "symbol": "$|\\psi|,\\|\\psi\\|$",
+    "meaning": "Pointwise norm and normalized L2 norm",
+    "item": "6.15"
+  },
+  {
+    "symbol": "$\\langle\\psi,\\varphi\\rangle$",
+    "meaning": "Normalized L2 inner product",
+    "item": "6.15"
+  },
+  {
+    "symbol": "$\\|\\psi\\|_\\infty$",
+    "meaning": "Uniform norm",
+    "item": "6.15"
+  },
+  {
+    "symbol": "$\\varphi_\\xi$",
+    "meaning": "Fourier coefficient",
+    "item": "6.16"
+  },
+  {
+    "symbol": "$H_s,\\|u\\|_s$",
+    "meaning": "Sobolev spaces and norms",
+    "item": "6.17"
+  },
+  {
+    "symbol": "$\\langle u,v\\rangle_s$",
+    "meaning": "Sobolev inner product",
+    "item": "6.17"
+  },
+  {
+    "symbol": "$K^t$",
+    "meaning": "Sobolev order-shifting Fourier multiplier",
+    "item": "6.17"
+  },
+  {
+    "symbol": "$u^h$",
+    "meaning": "Difference quotient",
+    "item": "6.19"
+  },
+  {
+    "symbol": "$T_h$",
+    "meaning": "Translation by h",
+    "item": "6.19"
+  },
+  {
+    "symbol": "$L=\\{L_{ij}\\},L^*$",
+    "meaning": "Differential operator and formal adjoint",
+    "item": "6.24"
+  },
+  {
+    "symbol": "$\\sigma_L$",
+    "meaning": "Principal symbol of a differential operator",
+    "item": "6.28"
+  },
+  {
+    "symbol": "$C^\\infty,C_0^\\infty,C_0^\\infty(V)$",
+    "meaning": "Smooth and compactly supported test functions",
+    "item": "6.31"
+  }
+]

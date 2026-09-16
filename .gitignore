@@ -1,0 +1,49 @@
+# macOS metadata and local review/rendering artifacts
+.DS_Store
+/tmp/
+
+# Build directories: retain only the final PDF documents.
+**/output/*
+!**/output/*.pdf
+
+# TeX compiler, bibliography, index, and editor auxiliaries
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex(busy)
+*.xdv
+*.dvi
+*.toc
+*.out
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.loa
+*.lol
+*.thm
+*.bbl-SAVE-ERROR
+*.blg-SAVE-ERROR
+_minted*/
+
+# Local Python environments and bytecode
+.venv/
+__pycache__/
+*.py[cod]
