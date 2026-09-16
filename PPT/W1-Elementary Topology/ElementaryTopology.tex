@@ -1,0 +1,369 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{xeCJK}
+
+\setmainfont{Adobe 楷体 Std}
+
+
+% 1. 开启标题背景色填充
+\metroset{block=fill}
+
+
+% 3. 增加标题与内容的间距
+% theorem environments
+\newtheorem{proposition}{Proposition}
+\newtheorem{exercise}{Exercise}
+
+
+% notation
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathcal{B}}
+
+\title{Elementary Topology}
+\subtitle{Generalizing the concept of continuity to general sets of points}
+\date{September 15, 2026}
+\author{LXJ}
+
+\begin{document}
+
+\maketitle
+
+%--------------------------------------------------------------------
+\begin{frame}{Motivation: from calculus to topology}
+	\begin{block}{Recall (continuity in $\R^N$)}
+		A map $f:\R^N \to \R^M$ ($N=M=1$, for e.g.) is \emph{continuous} if
+		\[
+			\forall\, x_0 \in \R^N:\qquad \lim_{x \to x_0} f(x) = f(x_0),
+		\]
+		which is equivalent to the following description:
+		\[
+			\text{for every open set } U \subset \R^M,\quad f^{-1}(U) \text{ is open in } \R^N.
+		\]
+	\end{block}
+	\begin{alertblock}{Key}
+		To define continuity, we need the notion of \alert{open sets}.
+	\end{alertblock}
+\end{frame}
+
+%====================================================================
+\section{Topological Spaces}
+
+\begin{frame}{Topological structure}
+	\begin{definition}[Topological structure]
+		Let $S$ be a non-empty set. A \emph{topological structure} $\T$ on $S$ is a
+		collection of subsets of $S$ such that
+		\begin{enumerate}
+			\item $\varnothing,\ S \in \T$;
+			\item if $U_\alpha \in \T$ for $\alpha \in I$ ($I$ being some index set),
+			      then $\displaystyle\bigcup_{\alpha \in I} U_\alpha \in \T$;
+			\item if $U_1, \dots, U_n \in \T$, then
+			      $\displaystyle\bigcap_{i=1}^{n} U_i \in \T$.
+		\end{enumerate}
+		The pair $(S,\T)$ is called a \emph{topological space}.
+	\end{definition}
+	The elements of $\T$ are called \emph{open sets}.
+\end{frame}
+
+\begin{frame}{Closed sets}
+	\begin{definition}[Closed set]
+		The complement of an open set is called a \emph{closed set}.
+	\end{definition}
+\end{frame}
+
+%====================================================================
+\section{Continuous Maps}
+
+\begin{frame}{Continuous maps between topological spaces}
+	\begin{definition}[Continuous maps between topological spaces]
+		A map $f: X \to Y$ between topological spaces $X$ and $Y$ is
+		\emph{continuous} if for every open set $V \subset Y$, the preimage
+		$f^{-1}(V)$ is an open set of $X$.
+	\end{definition}
+	\begin{proposition}[Composition of continuous maps]
+		If $f: X \to Y$ and $g: Y \to Z$ are continuous maps, then
+		$g \circ f: X \to Z$ is continuous.
+	\end{proposition}
+	\begin{proposition}[Continuity defined via closed sets]
+		A map $f: X \to Y$ is continuous $\iff$ the preimage of every closed set
+		is closed.
+	\end{proposition}
+\end{frame}
+
+\begin{frame}{Open maps, closed maps, homeomorphisms}
+	\begin{definition}[Open maps and closed maps]
+		A map $f: X \to Y$ is called an \emph{open map} if the image
+		$f(U) \subset Y$ is open for every open set $U \subset X$;\\
+		$f: X \to Y$ is called \emph{closed} if $f(V) \subset Y$ is closed for
+		every closed $V \subset X$.
+	\end{definition}
+	\begin{definition}[Homeomorphism (同胚)]
+		A bijection (双射) $f: X \to Y$ is a \emph{homeomorphism} if both $f$ and
+		$f^{-1}$ are continuous. Topological spaces $X$ and $Y$ are then said to
+		be \emph{homeomorphic}.
+	\end{definition}
+\end{frame}
+
+%====================================================================
+\section{Subspace Topology}
+
+\begin{frame}{Subspace topology}
+	\begin{definition}[Subspace topology]
+		Let $(S,\T)$ be a topological space and $A \subset S$ be a subset. Then
+		\[
+			\T_A \coloneqq \{\, A \cap U \mid U \in \T \,\}
+		\]
+		is the \emph{subspace topology} on $A$.
+	\end{definition}
+	\begin{exercise}
+		Verify that $\T_A$ defines a topological structure on $A$.
+	\end{exercise}
+	\begin{exercise}
+		Define the natural inclusion $\iota: A \hookrightarrow S$. Show that
+		$(A,\T_A)$ is a subspace structure $\iff$ $\iota$ is continuous.
+	\end{exercise}
+\end{frame}
+
+%====================================================================
+\section{Bases}
+
+\begin{frame}{Basis of a topology}
+	\begin{definition}[Basis of a topology]
+		A subcollection $\B \subset \T$ is a \emph{basis} for $\T$ if
+		$\forall\, U \in \T$ and $p \in U$, $\exists\, B \in \B$ such that
+		\[
+			p \in B \subset U.
+		\]
+		We also say that $\B$ \emph{generates} the topology $\T$, or that $\B$ is
+		a basis for the topological space $S$.
+	\end{definition}
+	\begin{example}
+		$\B = \{\, B(p,r) \mid p \in \R^n,\ r > 0 \,\}$ is a basis for the
+		standard topology on $\R^n$.
+	\end{example}
+\end{frame}
+
+\begin{frame}{Characterizations of a basis}
+	\begin{proposition}
+		$\B$ is a basis for $\T$ iff every $U \in \T$ can be written as
+		\[
+			U = \bigcup_{\text{some } B \in \B} B.
+		\]
+	\end{proposition}
+	\begin{proposition}[Criterion]
+		A collection $\B$ of subsets of a set $S$ is a basis for a topology iff
+		\begin{enumerate}
+			\item $S = \displaystyle\bigcup_{B \in \B} B$;
+			\item $\forall\, B_1, B_2 \in \B$ and $p \in B_1 \cap B_2$
+			      (if it exists), $\exists\, B \in \B$ such that
+			      $p \in B \subset B_1 \cap B_2$.
+		\end{enumerate}
+	\end{proposition}
+	\begin{proposition}
+		Let $\B = \{B_\alpha\}$ be a basis for the topological space $S$, and let
+		$A$ be a subspace of $S$. Then $\{B_\alpha \cap A\}$ is a basis for $A$.
+	\end{proposition}
+\end{frame}
+
+%====================================================================
+\section{First and Second Countability}
+
+\begin{frame}{Second countability}
+	\begin{proposition}
+		Let
+		$\B_{\mathrm{rat}} \coloneqq \{\, B(p,r) \mid p \in \Q^n,\ r \in \Q^{+} \setminus \{0\} \,\}$.
+		Then $\B_{\mathrm{rat}}$ is a basis for $\R^n$.
+	\end{proposition}
+	\begin{definition}[Second countable]
+		A topological space is said to be \emph{second countable} if it has a
+		\emph{countable basis}.
+	\end{definition}
+\end{frame}
+
+\begin{frame}{First countability}
+	\begin{definition}[Neighborhood basis]
+		Let $S$ be a topological space and $p \in S$. A \emph{neighborhood basis}
+		at $p$ is a collection $\B = \{B_\alpha\}$ of neighborhoods of $p$ such
+		that for every neighborhood $U$ of $p$, $\exists\, B_\alpha \in \B$ with
+		\[
+			p \in B_\alpha \subset U.
+		\]
+	\end{definition}
+	\begin{definition}[First countable]
+		$S$ is said to be \emph{first countable} if it has a countable
+		neighborhood basis at every point $p \in S$.
+	\end{definition}
+\end{frame}
+
+%====================================================================
+\section{Separation Axioms}
+
+\begin{frame}{Hausdorff and normal spaces}
+	\begin{definition}[Hausdorff topological spaces]
+		A topological space $S$ is called a \emph{Hausdorff space} if
+		$\forall$ points $x, y \in S$, $\exists$ two \emph{disjoint open sets}
+		$U, V$ such that $x \in U$, $y \in V$.
+	\end{definition}
+	\begin{definition}[Normal spaces]
+		A Hausdorff space is called \emph{normal} if, given any two disjoint
+		closed sets $F, G$, $\exists$ disjoint open sets $U, V$ such that
+		\[
+			F \subset U \quad \& \quad G \subset V.
+		\]
+	\end{definition}
+	\begin{proposition}
+		Any one-point set in a Hausdorff space is closed.
+	\end{proposition}
+	\begin{exercise}
+		Any subspace of a Hausdorff space is also Hausdorff.
+	\end{exercise}
+\end{frame}
+
+\begin{frame}{Examples}
+	\begin{example}
+		$\R^n$ is a Hausdorff topological space.
+	\end{example}
+	\begin{example}[The Zariski topology]
+		Let $S = \C^n$ be the $n$-dimensional vector space over $\C$, endowed
+		with the \emph{Zariski topology}. Every open set $U$ is of the form
+		$S \setminus Z(I)$, where $I$ is a family of polynomials in $n$ variables
+		and $Z(I)$ is the solution set of this family.
+		\par\smallskip
+		Any two such open sets intersect:
+		\[
+			U \cap V = S \setminus \bigl( Z(I) \cup Z(J) \bigr)
+		\]
+		is nonempty, since $Z(I) \cup Z(J)$ --- being the solution set of $I$ or
+		$J$ --- cannot be the whole space. Hence the Zariski topology is
+		\emph{not} Hausdorff.
+	\end{example}
+\end{frame}
+
+%====================================================================
+\section{Product Topology}
+
+\begin{frame}{Product topology}
+	The Cartesian product $A \times B = \{(a,b) \mid a \in A,\ b \in B\}$.
+	\begin{definition}[Product topology]
+		Given two topological spaces $X$ and $Y$, construct the collection $\B$
+		consisting of all sets of the form $U \times V$ ($U, V$ open sets in $X$
+		and $Y$). $\B$ generates a topology on $X \times Y$, called the
+		\emph{product topology}.
+	\end{definition}
+	\begin{proposition}
+		Let $\{U_i\}$ and $\{V_j\}$ be bases for $X$ and $Y$ respectively. Then
+		$\{U_i \times V_j\}$ is a basis for $X \times Y$.
+	\end{proposition}
+	\begin{proposition}
+		The product of two second countable topological spaces is second
+		countable.
+	\end{proposition}
+	\begin{exercise}
+		The product of two Hausdorff topological spaces is Hausdorff.
+	\end{exercise}
+\end{frame}
+
+%====================================================================
+\section{Compactness}
+
+\begin{frame}{Covers and compact spaces}
+	\begin{definition}[Cover, subcover]
+		Let $S$ be a topological space. A collection of open sets
+		$\{U_\alpha\}_{\alpha \in A}$ of $S$ is called a \emph{cover} (or
+		\emph{open cover}) of $S$ if $S = \bigcup_{\alpha} U_\alpha$. If a
+		subcollection $\{U_\alpha\}_{\alpha \in B \subset A}$ of
+		$\{U_\alpha\}_{\alpha \in A}$ still covers $S$, the subcollection is
+		called a \emph{subcover} of $S$.
+	\end{definition}
+	\begin{definition}[Compact topological space]
+		A topological space $S$ is called \emph{compact} if every open cover of
+		$S$ has a \emph{finite subcover}.
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Compactness: basic properties}
+	\begin{exercise}
+		A closed subset of a compact topological space is compact.
+	\end{exercise}
+	\begin{exercise}
+		Every compact subset $K$ of a Hausdorff space $S$ is closed.
+	\end{exercise}
+	\begin{proposition}
+		The image of a compact set under a continuous map is compact.
+	\end{proposition}
+\end{frame}
+
+\begin{frame}{Maps from compact to Hausdorff spaces}
+	\begin{proposition}
+		A continuous map from a compact topological space $X$ to a Hausdorff
+		topological space $Y$ is a closed map.
+	\end{proposition}
+	\begin{corollary}
+		A continuous bijection $f$ from a compact topological space $X$ to a
+		Hausdorff space $Y$ is a homeomorphism.
+	\end{corollary}
+	\begin{exercise}
+		Prove the corollary above.
+	\end{exercise}
+\end{frame}
+
+%====================================================================
+\section{Connectedness}
+
+\begin{frame}{Connected spaces and connected components}
+	\begin{definition}[Connected topological spaces]
+		A topological space $S$ is called \emph{connected} if there do
+		\emph{not} exist two nonempty disjoint open subsets $U$ and $V$ such
+		that $S = U \cup V$. A subset $A \subset S$ is called \emph{connected}
+		if it is connected as a topological subspace.
+	\end{definition}
+	\begin{proposition}
+		The image of a connected topological space $X$ under a continuous map
+		$f: X \to Y$ is connected.
+	\end{proposition}
+	\begin{definition}[Connected components]
+		Let $x$ be a point of $S$. The set $C_x$ --- the union of all connected
+		subsets of $S$ containing $x$ --- is called the \emph{connected
+			component} of $S$ containing $x$.
+	\end{definition}
+\end{frame}
+
+%====================================================================
+\section{Closure}
+
+\begin{frame}{Closure}
+	\begin{definition}[Closure]
+		The \emph{closure} of $A$ in $S$, denoted by $\overline{A}$, is defined
+		as the intersection of all closed sets containing $A$ (the smallest
+		closed set containing $A$).
+	\end{definition}
+	\begin{proposition}[Local characterization of the closure]
+		Let $A \subset S$. A point $p \in S$ lies in $\overline{A}$ iff every
+		neighborhood of $p$ contains at least one point of $A$.
+	\end{proposition}
+	\begin{proposition}
+		A subset $A \subset S$ is closed iff $A = \overline{A}$.
+	\end{proposition}
+	\begin{proposition}
+		If $A \subset B$, then $\overline{A} \subset \overline{B}$.
+	\end{proposition}
+\end{frame}
+
+%====================================================================
+\section{Further Exercises}
+
+\begin{frame}{Exercises and further reading}
+	\begin{exercise}
+		What is a \emph{paracompact} topological space?
+	\end{exercise}
+	\begin{exercise}
+		Read the part on the \emph{quotient topology}.
+	\end{exercise}
+\end{frame}
+
+\end{document}
