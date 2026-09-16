@@ -1,0 +1,8 @@
+% Compact exhaustion in the proof of 1.9; reconstructed from source p. 9.
+\begin{tikzpicture}
+\draw(0,0)circle(.35);\draw(0,0)circle(.9);\node at(0,0){$G_1$};\node at(.3,-.6){$G_2$};\node at(1.4,0){$\cdots$};
+\foreach \x/\lab in {2.2/{i-2},3.5/{i-1},4.8/i,6.1/{i+1}}{
+ \draw(\x,-1)..controls(\x+.35,-.5)and(\x+.35,.5)..(\x,1);
+ \node[below left]at(\x+.23,-.45){$G_{\lab}$};}
+\node at(6.9,0){$\cdots$};
+\end{tikzpicture}

@@ -1,0 +1,366 @@
+[
+  {
+    "id": 1,
+    "original": "ch1_img_in_image_box_394_882_575_1063.jpg",
+    "source": "redrawn/figure-01.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 2,
+    "original": "ch1_img_in_image_box_142_360_796_574.jpg",
+    "source": "redrawn/figure-02.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 3,
+    "original": "ch1_img_in_image_box_193_1012_798_1161.jpg",
+    "source": "redrawn/figure-03.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 4,
+    "original": "ch1_img_in_image_box_128_118_775_372.jpg",
+    "source": "redrawn/figure-04.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 5,
+    "original": "ch1_img_in_image_box_173_372_781_655.jpg",
+    "source": "redrawn/figure-05.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 6,
+    "original": "ch1_img_in_image_box_153_1038_578_1216.jpg",
+    "source": "redrawn/figure-06.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 7,
+    "original": "ch1_img_in_image_box_615_1044_813_1171.jpg",
+    "source": "redrawn/figure-07.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 8,
+    "original": "ch1_img_in_image_box_346_196_547_325.jpg",
+    "source": "redrawn/figure-08.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 9,
+    "original": "ch1_img_in_image_box_345_900_553_1026.jpg",
+    "source": "redrawn/figure-09.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 10,
+    "original": "ch1_img_in_image_box_122_729_777_1178.jpg",
+    "source": "redrawn/figure-10.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 11,
+    "original": "ch1_img_in_image_box_131_248_790_491.jpg",
+    "source": "redrawn/figure-11.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 12,
+    "original": "ch1_img_in_image_box_158_769_735_1115.jpg",
+    "source": "redrawn/figure-12.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 13,
+    "original": "ch1_img_in_image_box_104_579_763_916.jpg",
+    "source": "redrawn/figure-13.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 14,
+    "original": "ch1_img_in_image_box_133_752_767_1159.jpg",
+    "source": "redrawn/figure-14.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 15,
+    "original": "ch1_img_in_image_box_318_101_583_300.jpg",
+    "source": "redrawn/figure-15.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 16,
+    "original": "ch1_img_in_image_box_294_558_684_923.jpg",
+    "source": "redrawn/figure-16.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 17,
+    "original": "ch1_img_in_image_box_173_247_798_592.jpg",
+    "source": "redrawn/figure-17.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 18,
+    "original": "ch1_img_in_image_box_351_351_552_477.jpg",
+    "source": "redrawn/figure-18.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 19,
+    "original": "ch1_img_in_image_box_316_422_604_490.jpg",
+    "source": "redrawn/figure-19.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 20,
+    "original": "ch1_img_in_image_box_503_282_816_506.jpg",
+    "source": "redrawn/figure-20.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 21,
+    "original": "ch1_img_in_image_box_336_889_529_1014.jpg",
+    "source": "redrawn/figure-21.tex",
+    "location": "chapters/chapter1.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 22,
+    "original": "ch2_img_in_image_box_398_276_648_398.jpg",
+    "source": "redrawn/figure-22.tex",
+    "location": "chapters/chapter2.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 23,
+    "original": "ch2_img_in_image_box_308_891_612_1039.jpg",
+    "source": "redrawn/figure-23.tex",
+    "location": "chapters/chapter2.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 24,
+    "original": "ch2_img_in_image_box_144_859_801_1175.jpg",
+    "source": "redrawn/figure-24.tex",
+    "location": "chapters/chapter2.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 25,
+    "original": "ch2_img_in_image_box_565_283_791_420.jpg",
+    "source": "redrawn/figure-25.tex",
+    "location": "chapters/chapter2.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 26,
+    "original": "ch3_img_in_image_box_353_929_594_1061.jpg",
+    "source": "redrawn/figure-26.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 27,
+    "original": "ch3_img_in_image_box_399_221_592_346.jpg",
+    "source": "redrawn/figure-27.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 28,
+    "original": "ch3_img_in_image_box_365_968_576_1111.jpg",
+    "source": "redrawn/figure-28.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 29,
+    "original": "ch3_img_in_image_box_343_810_737_1070.jpg",
+    "source": "redrawn/figure-29.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 30,
+    "original": "ch3_img_in_image_box_353_266_620_408.jpg",
+    "source": "redrawn/figure-30.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 31,
+    "original": "ch3_img_in_image_box_377_1064_567_1211.jpg",
+    "source": "redrawn/figure-31.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 32,
+    "original": "ch3_img_in_image_box_238_851_657_1180.jpg",
+    "source": "redrawn/figure-32.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 33,
+    "original": "ch3_img_in_image_box_336_383_573_524.jpg",
+    "source": "redrawn/figure-33.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 34,
+    "original": "ch3_img_in_image_box_329_219_602_347.jpg",
+    "source": "redrawn/figure-34.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 35,
+    "original": "ch3_img_in_image_box_340_404_587_530.jpg",
+    "source": "redrawn/figure-35.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 36,
+    "original": "ch3_img_in_image_box_297_635_642_767.jpg",
+    "source": "redrawn/figure-36.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 37,
+    "original": "ch3_img_in_image_box_299_797_601_924.jpg",
+    "source": "redrawn/figure-37.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 38,
+    "original": "ch3_img_in_image_box_110_434_764_801.jpg",
+    "source": "redrawn/figure-38.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 39,
+    "original": "ch3_img_in_image_box_319_852_565_987.jpg",
+    "source": "redrawn/figure-39.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 40,
+    "original": "ch3_img_in_image_box_341_806_657_927.jpg",
+    "source": "redrawn/figure-40.tex",
+    "location": "chapters/chapter3.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 41,
+    "original": "ch4_img_in_image_box_125_823_775_1072.jpg",
+    "source": "redrawn/figure-41.tex",
+    "location": "chapters/chapter4.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 42,
+    "original": "ch4_img_in_image_box_158_107_769_388.jpg",
+    "source": "redrawn/figure-42.tex",
+    "location": "chapters/chapter4.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 43,
+    "original": "ch4_img_in_image_box_404_245_599_433.jpg",
+    "source": "redrawn/figure-43.tex",
+    "location": "chapters/chapter4.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 44,
+    "original": "relative_open.pdf",
+    "source": "redrawn/figure-44.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 45,
+    "original": "criterion_bases.pdf",
+    "source": "redrawn/figure-45.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 46,
+    "original": "hausdorff_condition.pdf",
+    "source": "redrawn/figure-46.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 47,
+    "original": "separation.pdf",
+    "source": "redrawn/figure-47.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 48,
+    "original": "gluing_edges_of_square.pdf",
+    "source": "redrawn/figure-48.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 49,
+    "original": "circle_as_quotient_of_interval.pdf",
+    "source": "redrawn/figure-49.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 50,
+    "original": "projection_not_open.pdf",
+    "source": "redrawn/figure-50.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 51,
+    "original": "graph_of_equivalence_relation.pdf",
+    "source": "redrawn/figure-51.tex",
+    "location": "appendix/appendix_topology.tex",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  },
+  {
+    "id": 52,
+    "original": "scanned Warner, printed p. 9 (OCR mistook drawing for a formula)",
+    "source": "redrawn/figure-52.tex",
+    "location": "chapters/chapter1.tex, item 1.9",
+    "status": "editable TikZ; source image compared; rendered in the book and visually reviewed"
+  }
+]

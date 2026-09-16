@@ -1,0 +1,6 @@
+% Editable vector reconstruction of the supplied figure.
+\begin{tikzpicture}
+\draw(0,0)rectangle(1.5,1.5);\foreach \a in {0,1.5}{\draw[->](\a,.5)--(\a,1);\draw[->](.5,\a)--(1,\a);}\draw[->](1.8,.75)--(2.4,.75);
+\draw(2.8,.75)ellipse(.18 and .6);\draw(2.8,1.35)--(4.2,1.35);\draw(2.8,.15)--(4.2,.15);\draw[dashed](4.2,.75)ellipse(.18 and .6);\draw[->](4.6,.75)--(5.2,.75);
+\draw(6.6,.75)ellipse(1 and .6);\draw(6.1,.75)..controls(6.2,.25)and(7,.25)..(7.1,.75);\draw(6.1,.75)..controls(6.4,.95)and(6.8,.95)..(7.1,.75);\node at(.75,-.4){Square};\node at(3.5,-.4){Cylinder};\node at(6.6,-.4){Torus};
+\end{tikzpicture}

@@ -1,59 +1,18 @@
 % !TeX program = xelatex
-% Foundations of Differentiable Manifolds and Lie Groups — Frank W. Warner
-% Master file (ElegantBook)
-\documentclass[lang=en,mode=fancy,thmcnt=chapter,usesamecnt,10pt]{elegantbook}
-
-% ---- numbered examples / remarks sharing the chapter theorem counter ----
-\newcommand{\examplesname}{Examples}
-\newcommand{\remarksname}{Remarks}
-\makeatletter
-\ELEGANT@newtheorem{examples}{ex}{prostyle}
-\ELEGANT@newtheorem{remarks}{rem}{prostyle}
-\makeatother
-
-% ---- titled discussion items that share the x.y numbering sequence ----
-% usage: \discuss{2.33}{Title}  (keeps the shared counter in sync)
-\makeatletter
-\newcommand{\discuss}[2]{%
-  \par\medskip
-  \refstepcounter{ELEGANT@samecnt}%
-  \noindent\textbf{\color{structurecolor}#1\ #2}\par\nopagebreak\smallskip\noindent}
-\makeatother
-
-% --- define a custom item name macro
-\makeatletter
-% Define a command that takes the custom text, sets the item, and forces the label text
-\newcommand{\citem}[1]{\item[#1]\def\@currentlabel{#1}}
-\makeatother
-
-% ---- index ----
-\usepackage{makeidx}
-\makeindex
-
-% ---- packages and macros for the appendices ----
-\usepackage{bm}
-\usepackage{tikz-cd}
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\cl}{\operatorname{cl}}
-\newcommand{\ac}{\operatorname{ac}}
-\DeclareMathOperator{\Hom}{Hom}
-
-% ---- problemset: plain enumerate (chapters already have \section{Exercises}) ----
-\renewenvironment{problemset}[1][]{\begin{enumerate}}{\end{enumerate}}
-
-\title{Foundations of Differentiable Manifolds\\and Lie Groups}
-\author{Frank W. Warner}
-\date{}
-\version{Graduate Texts in Mathematics 94}
-\extrainfo{Springer-Verlag New York Berlin Heidelberg}
-\cover{figures/cover.png}
-
-\setcounter{tocdepth}{1}
-
+\ifdefined\ReprintElegant
+\documentclass[lang=en,mode=fancy,thmcnt=chapter,usesamecnt,11pt,math=newtx]{elegantbook}
+\usepackage{reprint-color}
+\else
+\documentclass[11pt,a4paper,oneside,openany]{book}
+\usepackage{reprint}
+\fi
 \begin{document}
 
 \frontmatter
-\maketitle
+\hypersetup{pageanchor=false}
+\ifdefined\ReprintElegant\maketitle\else\input{chapters/titlepage}\fi
+\pagenumbering{roman}\hypersetup{pageanchor=true}
+\input{chapters/reprint_note}
 \input{chapters/frontmatter}
 \tableofcontents
 \mainmatter
@@ -66,6 +25,7 @@
 \input{chapters/chapter6}
 
 \appendix
+\setcounter{secnumdepth}{2}
 \input{appendix/appendix_topology}
 \input{appendix/appendix_inverse}
 

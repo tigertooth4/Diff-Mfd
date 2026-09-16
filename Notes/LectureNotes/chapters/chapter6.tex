@@ -7,39 +7,40 @@ Throughout this chapter, $M$ will be a compact oriented Riemannian manifold of d
 \section{The Laplace-Beltrami Operator}
 
 
+\warnernumber{1}
 \begin{definition}\label{thm:6.1}
 Recall (from \eqref{eq:4.10:6} and Exercise 13 of Chapter 2) that there is a linear operator $\ast$ which assigns to each $p$-form on $M$ an  $ (n-p) $ form and which satisfies
 
 \begin{equation}
-\label{eq:6.1:1}
+\tag{1}\label{eq:6.1:1}
 \ast\ast=(-1)^{p(n-p)}.
 \end{equation}
 
 We define an operator $\delta$ from $p$-forms to $(p-1)$ forms by setting
 
 \begin{equation}
-\label{eq:6.1:2}
+\tag{2}\label{eq:6.1:2}
 \delta=(-1)^{n(p+1)+1}{*}d{*}.
 \end{equation}
 
 On 0-forms, $\delta$ is simply the zero linear functional. The Laplace-Beltrami operator $\Delta$ (Laplacian for short) is defined by
 
 \begin{equation}
-\label{eq:6.1:3}
+\tag{3}\label{eq:6.1:3}
 \Delta=\delta d+d\delta,
 \end{equation}
 
 and is a linear operator on  $ E^p(M) $ for each  $ p $ with  $ 0 \leq p \leq n $. We leave it to the reader as an exercise to check that on $E^{0}(\mathbb{R}^{n})$, that is, on $C^{\infty}$ functions on Euclidean space $\mathbb{R}^{n}$, the Laplacian is simply the operator $(-1)\sum_{i=1}^{n}\partial^{2}/\partial x_{i}^{2}$. Also, it is a straightforward exercise to check that the Laplacian commutes with *, that is,
 
 \begin{equation}
-\label{eq:6.1:4}
+\tag{4}\label{eq:6.1:4}
 \ast\Delta=\Delta\ast.
 \end{equation}
 
 We define an inner product on the vector space $E^{p}(M)$ of $p$-forms on $M$ by setting
 
 \begin{equation}
-\label{eq:6.1:5}
+\tag{5}\label{eq:6.1:5}
 \langle\alpha,\beta\rangle=\int_{M}\alpha\wedge\ast\beta\quad\mathrm{for}\ \alpha,\beta\in E^{p}(M),
 \end{equation}
 
@@ -47,12 +48,13 @@ and we denote the corresponding norm by  $ \|\alpha\| $. It follows from (6) of 
 
 \end{definition}
 
+\warnernumber{2}
 \begin{proposition}\label{thm:6.2}
 $\delta$ is the adjoint of $d$ on $\sum_{p=0}^{n} E^{p}(M)$; that is,
 
 
 \begin{equation}
-\label{eq:6.2:1}
+\tag{1}\label{eq:6.2:1}
 \langle d\alpha,\beta\rangle=\langle\alpha,\delta\beta\rangle.
 \end{equation}
 
@@ -62,7 +64,7 @@ $\delta$ is the adjoint of $d$ on $\sum_{p=0}^{n} E^{p}(M)$; that is,
 By linearity, and the orthogonality of the $E^{p}(M)$, the proof reduces to consideration of the case in which $\alpha$ is a $(p-1)$ form and $\beta$ is a $p$-form. In this case,
 
 \begin{equation}
-\label{eq:6.2:2}
+\tag{2}\label{eq:6.2:2}
 \begin{aligned}{d(\alpha\wedge{*}\beta)}&{{}=d\alpha\wedge{*}\beta+(-1)^{p-1}\alpha\wedge d\ast\beta}\\ {}&{{}=d\alpha\wedge{*}\beta-\alpha\wedge{*}\delta\beta.}\\ \end{aligned}
 \end{equation}
 
@@ -70,7 +72,7 @@ By integrating both sides over $M$ and applying the special case of Stokes' theo
 
 
 \begin{equation}
-\label{eq:6.2:3}
+\tag{3}\label{eq:6.2:3}
 0=\int_{M}(d\alpha\wedge*\beta-\alpha\wedge*\delta\beta)=\langle d\alpha,\beta\rangle-\langle\alpha,\delta\beta\rangle.
 \end{equation}
 
@@ -78,7 +80,7 @@ Thus
 
 
 \begin{equation}
-\label{eq:6.2:4}
+\tag{4}\label{eq:6.2:4}
 \langle d\alpha,\beta\rangle=\langle\alpha,\delta\beta\rangle.
 \end{equation}
 
@@ -93,6 +95,7 @@ $\Delta$ is self-adjoint, that is,
 
 \end{corollary*}
 
+\warnernumber{3}
 \begin{proposition}\label{thm:6.3}
 $ \Delta\alpha = 0 $ if and only if  $ d\alpha = 0 $ and  $ \delta\alpha = 0 $.
 
@@ -102,7 +105,7 @@ $ \Delta\alpha = 0 $ if and only if  $ d\alpha = 0 $ and  $ \delta\alpha = 0 $.
 Clearly  $ \Delta\alpha = 0 $ if  $ d\alpha = 0 $ and  $ \delta\alpha = 0 $. Now,
 
 \begin{equation}
-\label{eq:6.3:1}
+\tag{1}\label{eq:6.3:1}
 \langle\Delta\alpha,\alpha\rangle=\langle(d\delta+\delta d)\alpha,\alpha\rangle=\langle\delta\alpha,\delta\alpha\rangle+\langle d\alpha,d\alpha\rangle.
 \end{equation}
 
@@ -117,41 +120,42 @@ The only harmonic functions $(\Delta f = 0)$ on a compact, connected, oriented, 
 \section{The Hodge Theorem}
 
 
+\warnernumber{4}
 \begin{definition}\label{thm:6.4}
 We shall let $\Delta^{*}$ denote the adjoint of the Laplacian on $E^{*}(M)$. This operator is, of course, precisely $\Delta$ itself since the Laplacian is self-adjoint on $E^{*}(M)$, and usually we make no distinction between $\Delta$ and $\Delta^{*}$. However, this distinction will be important for the form of the following definition.
 
 We shall be interested in finding necessary and sufficient conditions for there to exist a solution  $ \omega $ of the equation  $ \Delta\omega = \alpha $. Suppose that  $ \omega $ is a solution of  $ \Delta\omega = \alpha $. Then
 
 \begin{equation}
-\label{eq:6.4:1}
+\tag{1}\label{eq:6.4:1}
 \langle\Delta\omega,\varphi\rangle=\langle\alpha,\varphi\rangle\quad\mathrm{for\ all}\ \varphi\in E^{p}(M),
 \end{equation}
 
 from which it follows that
 
 \begin{equation}
-\label{eq:6.4:2}
+\tag{2}\label{eq:6.4:2}
 \langle\omega,\Delta^{*}\varphi\rangle=\langle\alpha,\varphi\rangle\quad\mathrm{for\ all}\ \varphi\in E^{p}(M).
 \end{equation}
 
 Now, (2) suggests that we can view a solution of $\Delta\omega = \alpha$ as a certain type of linear functional on $E^{p}(M)$, namely, $\omega$ determines a bounded linear functional $l$ on $E^{p}(M)$ by
 
 \begin{equation}
-\label{eq:6.4:3}
+\tag{3}\label{eq:6.4:3}
 l(\beta)=\langle\omega,\beta\rangle;
 \end{equation}
 
 and in view of (2), the functional I satisfies
 
 \begin{equation}
-\label{eq:6.4:4}
+\tag{4}\label{eq:6.4:4}
 l(\Delta^{*}\varphi)=\langle\alpha,\varphi\rangle\quad\mathrm{for\ all}\ \varphi\in E^{*}(M).
 \end{equation}
 
 This view of a solution turns out to be extremely useful, for it will allow us to bring various techniques of functional analysis to bear on the problem of solving $\Delta\omega = \alpha$. We shall call such a linear functional a weak solution of $\Delta\omega = \alpha$. That is, a weak solution of $\Delta\omega = \alpha$ is a bounded linear functional $l: E^p(M) \to \mathbb{R}$ such that \index{Weak solution}
 
 \begin{equation}
-\label{eq:6.4:5}
+\tag{5}\label{eq:6.4:5}
 l(\Delta^{*}\varphi)=\langle\alpha,\varphi\rangle\quad\mathrm{for\ all}\ \varphi\in E^{p}(M).
 \end{equation}
 
@@ -160,13 +164,14 @@ Later we will deal with weak solutions of a general partial differential operato
 We have seen that each ordinary solution  $ \omega \in E^p(M) $ of  $ \Delta\omega = \alpha $ determines a weak solution by (3). It turns out that the major effort of this chapter will be to prove a regularity theorem which says that the converse of this is true; that is, each weak solution determines an ordinary solution. The main step in proving this converse is to show that if  $ l $ is a weak solution of  $ \Delta\omega = \alpha $, then  $ l $ is represented by a smooth form  $ \omega $ in the sense that there is a form  $ \omega \in E^p(M) $ such that (3) holds. That the form  $ \omega $ is then an ordinary solution follows from the fact that
 
 \begin{equation}
-\label{eq:6.4:6}
+\tag{6}\label{eq:6.4:6}
 \langle\Delta\omega,\beta\rangle=\langle\omega,\Delta^{*}\beta\rangle=l(\Delta^{*}\beta)=\langle\alpha,\beta\rangle
 \end{equation}
 
 for all  $ \beta \in E^p(M) $, which implies that  $ \Delta\omega = \alpha $.
 \end{definition}
 
+\warnernumber{5}
 \begin{theorem}{Regularity Theorem}\label{thm:6.5}
 Let  $ \alpha \in E^p(M) $, and let  $ l $ be a weak solution of  $ \Delta\omega = \alpha $. Then there exists  $ \omega \in E^p(M) $ such that \index{Regularity theorem}
 
@@ -179,28 +184,31 @@ for every  $ \beta \in E^p(M) $. Consequently,  $ \Delta\omega = \alpha $.
 
 We shall assume \hyperref[thm:6.5]{Theorem 6.5} for the moment as well as the following.
 
+\warnernumber{6}
 \begin{theorem}\label{thm:6.6}
 Let $\{\alpha_n\}$ be a sequence of smooth $p$-forms on $M$ such that $\|\alpha_n\| \leq c$ and $\|\Delta\alpha_n\| \leq c$ for all $n$ and for some constant $c > 0$. Then a subsequence of $\{\alpha_n\}$ is a Cauchy sequence in $E^p(M)$.
 \end{theorem}
 
 We will begin the machinery necessary for the proofs of Theorems 6.5 and 6.6 in the unit beginning with 6.15. We eventually return to the proofs of Theorems 6.5 and 6.6 in 6.32 and 6.33 respectively. Meanwhile, we shall assume the two theorems as proved and shall proceed to the Hodge theorem.
 
+\warnernumber{7}
 \begin{definition}\label{thm:6.7}
 We let
 
 \begin{equation}
-\label{eq:6.7:1}
+\tag{1}\label{eq:6.7:1}
 H^{p}=\{\omega\in E^{p}(M)\colon\Delta\omega=0\}.
 \end{equation}
 
 The elements of  $ H^{p} $ are called harmonic p-forms.
 \end{definition}
 
+\warnernumber{8}
 \begin{theorem}{The Hodge Decomposition Theorem}\label{thm:6.8}
 For each integer $p$ with $0 \leq p \leq n$, $H^p$ is finite dimensional, and we have the following orthogonal direct sum decompositions of the space $E^p(M)$ of smooth $p$-forms on $M$: \index{Hodge decomposition theorem}
 
 \begin{equation}
-\label{eq:6.8:1}
+\tag{1}\label{eq:6.8:1}
 \begin{aligned}{E^{p}(M)}&{{}=\Delta(E^{p})\oplus H^{p}}\\ {}&{{}=d\delta(E^{p})\oplus\delta d(E^{p})\oplus H^{p}}\\ {}&{{}=d(E^{p-1})\oplus\delta(E^{p+1})\oplus H^{p}.}\\ \end{aligned}
 \end{equation}
 
@@ -215,14 +223,14 @@ It is sufficient to prove the decomposition in the first line of (1), for the ot
 Let  $ \omega_1, \ldots, \omega_t $ be an orthonormal basis of  $ H^p $. Then an arbitrary form  $ \alpha \in E^p(M) $ can uniquely be written
 
 \begin{equation}
-\label{eq:6.8:2}
+\tag{2}\label{eq:6.8:2}
 \alpha=\beta+\sum_{i=1}^{t}\langle\alpha,\omega_{i}\rangle\omega_{i}
 \end{equation}
 
 where $\beta$ lies in $(H^{p})^{\perp}$, the subspace of $E^{p}(M)$ consisting of all elements orthogonal to $H^{p}$. Thus we have an orthogonal direct sum decomposition
 
 \begin{equation}
-\label{eq:6.8:3}
+\tag{3}\label{eq:6.8:3}
 E^{p}(M)=(H^{p})^{\perp}\oplus H^{p}.
 \end{equation}
 
@@ -239,21 +247,21 @@ Conversely, we claim that  $ (H^p)^\perp \subset \Delta(E^p) $. In order to prov
 We claim that there is a constant $c>0$ such that
 
 \begin{equation}
-\label{eq:6.8:4}
+\tag{4}\label{eq:6.8:4}
 \left\Vert\beta\right\Vert\leq c\left\Vert\Delta\beta\right\Vert\quad\mathrm{for\ all}\quad\beta\in(H^{p})^{\bot}.
 \end{equation}
 
 Suppose the contrary. Then there exists a sequence  $ \beta_j \in (H^p)^\perp $ with  $ \|\beta_j\| = 1 $ and  $ \|\Delta\beta_j\| \to 0 $. By \hyperref[thm:6.6]{Theorem 6.6}, a subsequence of the  $ \beta_j $, which for convenience we can assume to be  $ \{\beta_j\} $ itself, is Cauchy. Thus  $ \lim_{j \to \infty} \langle \beta_j, \psi \rangle $ exists for each  $ \psi \in E^p(M) $. We define a linear functional  $ l $ on  $ E^p(M) $ by setting
 
 \begin{equation}
-\label{eq:6.8:5}
+\tag{5}\label{eq:6.8:5}
 l(\psi)=\lim_{j\to\infty}\langle\beta_{j},\psi\rangle\quad\mathrm{for}\quad\psi\in E^{p}(M).
 \end{equation}
 
 Now $l$ is clearly bounded, and
 
 \begin{equation}
-\label{eq:6.8:6}
+\tag{6}\label{eq:6.8:6}
 l(\Delta\varphi)=\lim_{j\to\infty}\langle\beta_{j},\Delta\varphi\rangle=\lim_{j\to\infty}\langle\Delta\beta_{j},\varphi\rangle=0,
 \end{equation}
 
@@ -262,21 +270,21 @@ so $l$ is a weak solution of $\Delta\beta = 0$. By \hyperref[thm:6.5]{Theorem 6.
 Now we shall use (4) to prove that $(H^p)^\perp \subset \Delta(E^p)$. Let $\alpha \in (H^p)^\perp$. We define a linear functional $l$ on $\Delta(E^p)$ by setting
 
 \begin{equation}
-\label{eq:6.8:7}
+\tag{7}\label{eq:6.8:7}
 l(\Delta\varphi)=\langle\alpha,\varphi\rangle\quad\mathrm{for\ all}\ \varphi\in E^{p}(M).
 \end{equation}
 
 Now $l$ is well-defined; for if $\Delta\varphi_1 = \Delta\varphi_2$, then $\varphi_1 - \varphi_2 \in H^p$, so that $\langle \alpha, \varphi_1 - \varphi_2 \rangle = 0$. Also $l$ is a bounded linear functional on $\Delta(E^p)$, for let $\varphi \in E^p(M)$ and let $\psi = \varphi - H(\varphi)$. Then using (4), we obtain
 
 \begin{equation}
-\label{eq:6.8:8}
+\tag{8}\label{eq:6.8:8}
 \begin{aligned}{|l(\Delta\varphi)|}&{{}=|l(\Delta\psi)|=|\langle\alpha,\psi\rangle|\leq\|\alpha\|\|\psi\|}\\ {}&{{}\leq c\left\|\alpha\right\|\|\Delta\psi\|=c\left\|\alpha\right\|\|\Delta\varphi\|.}\\ \end{aligned}
 \end{equation}
 
 By the Hahn-Banach theorem [27, p. 228], $l$ extends to a bounded linear functional on $E^p(M)$. Thus $l$ is a weak solution of $\Delta\omega = \alpha$. By \hyperref[thm:6.5]{Theorem 6.5}, there exists $\omega \in E^p(M)$ such that $\Delta\omega = \alpha$. Hence
 
 \begin{equation}
-\label{eq:6.8:9}
+\tag{9}\label{eq:6.8:9}
 (H^{p})^{\perp}=\Delta(E^{p}),
 \end{equation}
 
@@ -284,11 +292,13 @@ and the Hodge decomposition theorem is proved.
 
 \end{proof}
 
+\warnernumber{9}
 \begin{definition}\label{thm:6.9}
 We define the Green's operator $G: E^p(M) \to (H^p)^\perp$ by setting $G(\alpha)$ equal to the unique solution of $\Delta\omega = \alpha - H(\alpha)$ in $(H^p)^\perp$. We leave it to the reader as an exercise to prove that $G$ is a bounded self-adjoint linear operator which takes bounded sequences into sequences with Cauchy subsequences. \index{Green's operator}
 
 \end{definition}
 
+\warnernumber{10}
 \begin{proposition}\label{thm:6.10}
 $G$ commutes with $d$, $\delta$, and $\Delta$. In fact, $G$ commutes with any linear operator which commutes with the Laplacian $\Delta$.
 
@@ -298,21 +308,21 @@ $G$ commutes with $d$, $\delta$, and $\Delta$. In fact, $G$ commutes with any li
 Suppose that $T\Delta = \Delta T$ with, say, $T: E^p(M) \to E^q(M)$. Let $\pi_{(H^p)^\perp}$ denote the projection mapping of $E^p(M)$ onto $(H^p)^\perp$. By definition, $G = (\Delta \mid (H^p)^\perp)^{-1} \circ \pi_{(H^p)^\perp}$. Now, the fact that $T\Delta = \Delta T$ implies that $T(H^p) \subset H^q$; and since $(H^p)^\perp = \Delta(E^p)$, it implies also that $T((H^p)^\perp) \subset (H^q)^\perp$. It follows that
 
 \begin{equation}
-\label{eq:6.10:1}
+\tag{1}\label{eq:6.10:1}
 T\circ\pi_{(H^{p})^{\perp}}=\pi_{(H^{q})^{\perp}}\circ T,
 \end{equation}
 
 and on  $ (H^{p})^{\perp} $,
 
 \begin{equation}
-\label{eq:6.10:2}
+\tag{2}\label{eq:6.10:2}
 T\circ\left(\Delta\bigm|(H^{p})^{\perp}\right)=\left(\Delta\bigm|(H^{q})^{\perp}\right)\circ T,
 \end{equation}
 
 and hence on  $ (H^{p})^{\perp} $
 
 \begin{equation}
-\label{eq:6.10:3}
+\tag{3}\label{eq:6.10:3}
 T\circ\bigl(\Delta\bigm|(H^{p})^{\perp}\bigr)^{-1}=\bigl(\Delta\bigm|(H^{q})^{\perp}\bigr)^{-1}\circ T.
 \end{equation}
 
@@ -320,6 +330,7 @@ It follows from (1) and (3) that $G$ commutes with $T$.
 
 \end{proof}
 
+\warnernumber{11}
 \begin{theorem}\label{thm:6.11}
 Each de Rham cohomology class on a compact oriented Riemannian manifold $M$ contains a unique harmonic representative.
 
@@ -329,14 +340,14 @@ Each de Rham cohomology class on a compact oriented Riemannian manifold $M$ cont
 Let $\alpha$ be an arbitrary $p$-form on $M$. From the Hodge decomposition theorem and from the definition of the Green's operator $G$, we have
 
 \begin{equation}
-\label{eq:6.11:1}
+\tag{1}\label{eq:6.11:1}
 \alpha=d\delta G\alpha+\delta d G\alpha+H\alpha.
 \end{equation}
 
 Since $G$, by 6.10, commutes with $d$, we have
 
 \begin{equation}
-\label{eq:6.11:2}
+\tag{2}\label{eq:6.11:2}
 \alpha=d\delta G\alpha+\delta G d\alpha+H\alpha.
 \end{equation}
 
@@ -371,34 +382,36 @@ The de Rham cohomology groups for a compact, orientable, differentiable manifold
 Any differentiable manifold can be equipped with a Riemannian metric (Exercise 23 of Chapter 1), and so the corollary follows immediately from \hyperref[thm:6.11]{Theorem 6.11} and from the finite dimensionality (6.8) of the spaces $H^{p}$ of harmonic forms.
 \end{proof}
 
-\subsection{\quad}\label{thm:6.12} Let $M$ be a compact, oriented, differentiable manifold of dimension $n$. We define a bilinear function
+\warnernumber{12}
+\discuss{6.12}{}\label{thm:6.12} Let $M$ be a compact, oriented, differentiable manifold of dimension $n$. We define a bilinear function
 
 \begin{equation}
-\label{eq:6.12:1}
+\tag{1}\label{eq:6.12:1}
 H_{\mathrm{de\,R}}^{p}(M)\times H_{\mathrm{de\,R}}^{n-p}(M)\to\mathbb{R}
 \end{equation}
 
 by sending
 
 \begin{equation}
-\label{eq:6.12:2}
+\tag{2}\label{eq:6.12:2}
 \left(\{\varphi\},\{\psi\}\right)\mapsto\int_{M}\varphi\wedge\psi,
 \end{equation}
 
 where $\varphi$ and $\psi$ are closed forms representing the cohomology classes $\{\varphi\}$ in $H_{\mathrm{de\,R}}^{p}(M)$ and $\{\psi\}$ in $H_{\mathrm{de\,R}}^{n-p}(M)$. Observe that the bilinear map (2) is well-defined. For example, if $\varphi_{1}$ is another representative of the de Rham class $\{\varphi\}$, then $\varphi_{1}=\varphi+d\xi$ for some form $\xi$, and by the special case of Stokes' theorem which is contained in the \hyperref[thm:4.9]{corollary of 4.9},
 
 \begin{equation}
-\label{eq:6.12:3}
+\tag{3}\label{eq:6.12:3}
 \begin{aligned}{\int_{M}\varphi_{1}\wedge\psi=}&{{}\int_{M}\varphi\wedge\psi}&{+}&{{}\quad\int_{M}d\xi\wedge\psi}\\ {=}&{{}\int_{M}\varphi\wedge\psi}&{+}&{{}\quad\int_{M}d(\xi\wedge\psi)=\int_{M}\varphi\wedge\psi.}\\ \end{aligned}
 \end{equation}
 
 Observe also from its definition that the bilinear function (2) depends on the orientation on $M$.
 
+\warnernumber{13}
 \begin{theorem}{Poincaré duality for the de Rham cohomology of a compact oriented $n$-dimensional manifold $M$}\label{thm:6.13}
 The bilinear function \eqref{eq:6.12:2} is a non-singular pairing and consequently determines isomorphisms of $H_{\mathrm{de\,R}}^{n-p}(M)$ with the dual space of $H_{\mathrm{de\,R}}^{p}(M)$: \index{Poincaré duality}
 
 \begin{equation}
-\label{eq:6.13:1}
+\tag{1}\label{eq:6.13:1}
 H_{\mathrm{de\,R}}^{n-p}(M)\cong\big(H_{\mathrm{de\,R}}^{p}(M)\big)^{*}.
 \end{equation}
 
@@ -408,7 +421,7 @@ H_{\mathrm{de\,R}}^{n-p}(M)\cong\big(H_{\mathrm{de\,R}}^{p}(M)\big)^{*}.
 Given a non-zero cohomology class $\{\varphi\} \in H_{\mathrm{de\,R}}^{p}(M)$, we must find a non-zero cohomology class $\{\psi\} \in H_{\mathrm{de\,R}}^{n-p}(M)$ such that $\left(\{\varphi\},\{\psi\}\right) \neq 0$. Choose a Riemannian structure on $M$. We can assume, according to 6.11, that $\varphi$ is the harmonic representative of $\{\varphi\}$. Since the cohomology class $\{\varphi\}$ is not zero, $\varphi$ is not identically zero. Since $\ast\Delta=\Delta\ast$, it follows that $* \varphi$ is also harmonic, and therefore closed by 6.3, and so $* \varphi$ represents a cohomology class $\{*\varphi\} \in H_{\mathrm{de\,R}}^{n-p}(M)$. Now
 
 \begin{equation}
-\label{eq:6.13:2}
+\tag{2}\label{eq:6.13:2}
 \left(\{\varphi\},\{\ast\varphi\}\right)=\int_{M}\varphi\wedge\ast\varphi=\|\varphi\|^{2}\neq0.
 \end{equation}
 
@@ -420,11 +433,12 @@ Thus the pairing \eqref{eq:6.12:2} is non-singular, and the isomorphism (1) foll
 If $M$ is a compact, connected, orientable, differentiable manifold of dimension $n$, then $H_{\mathrm{de\,R}}^{n}(M) \cong \mathbb{R}$.
 \end{corollary*}
 
+\warnernumber{14}
 \begin{remarks}\label{thm:6.14}
 The real continuous singular homology groups $H_{p}(M;\mathbb{R})$ are defined just as in 4.16, with the exception that all continuous simplices in $M$ are allowed, not just differentiable simplices. The isomorphism \eqref{eq:5.37:1} holds for the continuous case exactly as for the differentiable theory. By combining 6.13 with the de Rham \hyperref[thm:5.36]{theorem 5.36}, with the canonical isomorphism \eqref{eq:5.32:5} of the differentiable with the continuous real singular homology of $M$, and with the isomorphism \eqref{eq:5.37:1} for the continuous real cohomology and homology, we obtain the Poincaré duality between the real singular cohomology and the real singular homology of $M$: \index{Real continuous singular homology}
 
 \begin{equation}
-\label{eq:6.14:1}
+\tag{1}\label{eq:6.14:1}
 H_{\Delta}^{p}(M;\mathbb{R})\cong H_{n-p}(M;\mathbb{R}).
 \end{equation}
 
@@ -435,98 +449,100 @@ H_{\Delta}^{p}(M;\mathbb{R})\cong H_{n-p}(M;\mathbb{R}).
 
 We now begin to develop the machinery necessary for the proofs of Theorems 6.5 and 6.6.
 
-\subsection{Notation}\label{thm:6.15} We shall be using multi-index notation  $ \alpha = (\alpha_1, \ldots, \alpha_n) $ where the  $ \alpha_i $ are integers. We let  $ |\alpha| $ denote the ordinary Euclidean norm of  $ \alpha $; that is,
+\warnernumber{15}
+\discuss{6.15}{Notation}\label{thm:6.15} We shall be using multi-index notation  $ \alpha = (\alpha_1, \ldots, \alpha_n) $ where the  $ \alpha_i $ are integers. We let  $ |\alpha| $ denote the ordinary Euclidean norm of  $ \alpha $; that is,
 
 \begin{equation}
-\label{eq:6.15:1}
+\tag{1}\label{eq:6.15:1}
 |\alpha|=(\alpha_{1}^{2}+\cdots+\alpha_{n}^{2})^{1/2},
 \end{equation}
 
 and if the  $ \alpha_{i} $ are all non-negative, then we let \index{Multi-index notation}
 
 \begin{equation}
-\label{eq:6.15:2}
+\tag{2}\label{eq:6.15:2}
 [\alpha]=\alpha_{1}+\cdots+\alpha_{n}.
 \end{equation}
 
 If  $ \alpha $ and  $ \eta $ are both  $ n $-tuples of integers, then
 
 \begin{equation}
-\label{eq:6.15:3}
+\tag{3}\label{eq:6.15:3}
 \eta^{\alpha}=\eta_{1}^{\alpha_{1}}\cdots\eta_{n}^{\alpha_{n}},\quad\text{where we set }0^{0}=1.
 \end{equation}
 
 We shall use $x_{i}$ for the $i$th canonical coordinate function on $\mathbb{R}^{n}$, and let
 
 \begin{equation}
-\label{eq:6.15:4}
+\tag{4}\label{eq:6.15:4}
 x=(x_{1},\ldots,x_{n}).
 \end{equation}
 
 The $\alpha$th derivative operator $D^{\alpha}$ is defined for each $n$-tuple $\alpha$ of nonnegative integers by
 
 \begin{equation}
-\label{eq:6.15:5}
+\tag{5}\label{eq:6.15:5}
 D^{\alpha}u=\left(\frac{1}{i}\right)^{[\alpha]}\frac{\partial^{[\alpha]}u}{\partial x_{1}^{\alpha_{1}}\cdots\partial x_{n}^{\alpha_{n}}},
 \end{equation}
 
 where  $ i = \sqrt{-1} $. (The addition of the factor of $i$ will be convenient later.)
 
-We let $\mathcal{P}$ denote the complex vector space consisting of $C^\infty$ functions defined on $\mathbb{R}^n$ which have values in complex $m$ space $\mathbb{C}^m$ and are periodic of period $2\pi$ in each variable. I would suggest that the reader assume $m$ to be 1 for the first reading of this section since that case contains all of the essential ideas and the computations are somewhat simpler. We will arrange the notation so that it is essentially the same for general $m$. One note of caution concerning the notation is this. If $\gamma, \beta \in \mathbb{C}^m$, then $\gamma \cdot \beta$ means the Hermitian product $\gamma_1 \overline{\beta}_1 + \cdots + \gamma_m \overline{\beta}_m$. If $m$ happens to be 1, then $\gamma \cdot \beta$ means $\gamma \beta$. The associated norm is denoted by $|\gamma|$.
+We let $\mathcal{P}$ denote the complex vector space consisting of $C^\infty$ functions defined on $\mathbb{R}^n$ which have values in complex $m$ space $\mathbb{C}^m$ and are periodic of period $2\pi$ in each variable. I would suggest that the reader assume $m$ to be 1 for the first reading of this section since that case contains all of the essential ideas and the computations are somewhat simpler. We will arrange the notation so that it is essentially the same for general $m$. One note of caution concerning the notation is this. If $\gamma, \beta \in \mathbb{C}^m$, then $\gamma \cdot \beta$ means the Hermitian product $\gamma_1 \overline{\beta}_1 + \cdots + \gamma_m \overline{\beta}_m$. If $m$ happens to be 1, then $\gamma \cdot \beta$ means $\gamma\overline\beta$. The associated norm is denoted by $|\gamma|$.
 
 If $\varphi, \psi \in \mathcal{P}$, then $\varphi \cdot \psi$ is the complex-valued function which is the Hermitian product of $\varphi$ and $\psi$; that is,
 
 \begin{equation}
-\label{eq:6.15:6}
+\tag{6}\label{eq:6.15:6}
 \varphi\cdot\psi=\varphi_{1}\overline{{\psi_{1}}}+\cdots+\varphi_{m}\overline{{\psi_{m}}}.
 \end{equation}
 
 We let  $ |\psi| $ denote the real-valued function
 
 \begin{equation}
-\label{eq:6.15:7}
+\tag{7}\label{eq:6.15:7}
 |\psi|=(\psi\cdot\psi)^{1/2}.
 \end{equation}
 
 If $\varphi \in \mathcal{P}$ and if $f$ is a periodic complex-valued $C^\infty$ function on $\mathbb{R}^{n}$ (all periods always $2\pi$), then $\varphi f$ shall denote the element of $\mathcal{P}$ whose $i$th component function is $\varphi_i f$; that is,
 
 \begin{equation}
-\label{eq:6.15:8}
+\tag{8}\label{eq:6.15:8}
 \varphi f=(\varphi_{1}f,\ldots,\varphi_{m}f).
 \end{equation}
 
 Let  $ Q \subset \mathbb{R}^n $ be the open cube
 
 \begin{equation}
-\label{eq:6.15:9}
+\tag{9}\label{eq:6.15:9}
 Q=\{p\in\mathbb{R}^{n}\colon0<x_{i}(p)<2\pi,i=1,\ldots,n\}.
 \end{equation}
 
 We shall be introducing a number of different norms on $\mathcal{P}$. By $\|\psi\|$ we shall mean the ordinary $L_{2}$ norm of $\psi$ over $Q$,
 
 \begin{equation}
-\label{eq:6.15:10}
+\tag{10}\label{eq:6.15:10}
 \|\psi\|=\frac{1}{(2\pi)^{n/2}}\biggl(\int_{Q}\psi\cdot\psi\biggr)^{1/2},
 \end{equation}
 
 and  $ \langle\psi,\varphi\rangle $ shall denote the  $ L_{2} $ inner product,
 
 \begin{equation}
-\label{eq:6.15:11}
+\tag{11}\label{eq:6.15:11}
 \langle\psi,\varphi\rangle=\frac{1}{(2\pi)^{n}}\int_{Q}\psi\cdot\varphi.
 \end{equation}
 
 The norm  $ \|\psi\|_{\infty} $ shall denote the uniform norm of  $ \psi $,
 
 \begin{equation}
-\label{eq:6.15:12}
+\tag{12}\label{eq:6.15:12}
 \left\lVert{\psi}\right\rVert_{\infty}=\sup_{Q}\left\lvert{\psi}\right\rvert.
 \end{equation}
 
-\subsection{Some Facts about Fourier Series}\label{thm:6.16} If $\varphi \in \mathcal{P}$ and if $\xi = (\xi_1, \ldots, \xi_n)$ where the $\xi_i$ are integers, then the $\xi$th Fourier coefficient $\varphi_{\xi} \in \mathbb{C}^m$ is defined by
+\warnernumber{16}
+\discuss{6.16}{Some Facts about Fourier Series}\label{thm:6.16} If $\varphi \in \mathcal{P}$ and if $\xi = (\xi_1, \ldots, \xi_n)$ where the $\xi_i$ are integers, then the $\xi$th Fourier coefficient $\varphi_{\xi} \in \mathbb{C}^m$ is defined by
 
 \begin{equation}
-\label{eq:6.16:1}
+\tag{1}\label{eq:6.16:1}
 \varphi_{\xi}=\frac{1}{(2\pi)^{n}}\int_{Q}\varphi(x)e^{-i x\cdot\xi}d x,
 \end{equation}
 
@@ -535,42 +551,42 @@ where  $ x \cdot \xi = x_{1} \xi_{1} + \cdots + x_{n} \xi_{n} $
 First we are going to show that the Fourier series  $ \sum_{\xi} \varphi_{\xi} e^{ix\cdot\xi} $ of  $ \varphi $ converges uniformly to $ \varphi $. Let an integer  $ k > 0 $ be given. By integrating (1) repeatedly by parts, differentiating  $ \varphi $ and integrating  $ e^{-ix\cdot\xi} $, and observing that the boundary terms drop out since the integrand is periodic, one sees that there is a constant  $ c_{k}^{\prime} $ depending on  $ \varphi $ and its derivatives up to order at most  $ 2nk $ such that
 
 \begin{equation}
-\label{eq:6.16:2}
+\tag{2}\label{eq:6.16:2}
 |\varphi_{\xi}|\leq\frac{c_{k}^{\prime}}{(\prod\xi_{i})^{2k}}\quad\mathrm{for\ all}\quad\xi\not\equiv0,
 \end{equation}
 
 where $\prod\xi_{i}$ denotes the product of all the non-zero $\xi_{i}$. It follows that there is a constant $c_{k}$ such that
 
 \begin{equation}
-\label{eq:6.16:3}
+\tag{3}\label{eq:6.16:3}
 |\varphi_{\xi}|\leq\frac{c_{k}}{(1+|\xi|^{2})^{k}}\quad\mathrm{for\ all}\ \xi.
 \end{equation}
 
 Consider now the question of convergence of the series  $ \sum_{\xi} (1 + |\xi|^2)^{-k} $. If we let
 
 \begin{equation}
-\label{eq:6.16:4}
+\tag{4}\label{eq:6.16:4}
 S_{j}=\Big\{\xi=(\xi_{1},\ldots,\xi_{n})\colon\max_{1\leq i\leq n}|\xi_{i}|=j\Big\},
 \end{equation}
 
 then the number of elements of $S_j$ is at most $2n(2j+1)^{n-1}$, and for each $\xi \in S_j$, $|\xi|^2 \geq j^2$, so that
 
 \begin{equation}
-\label{eq:6.16:5}
+\tag{5}\label{eq:6.16:5}
 s_{j}=\sum_{\xi\in S_{j}}\frac{1}{(1+|\xi|^{2})^{k}}\leq\frac{2n(2j+1)^{n-1}}{(1+j^{2})^{k}}\leq c j^{n-1-2k}
 \end{equation}
 
 for $j \geq 1$, where $c$ is a constant depending only on $n$. Consequently,
 
 \begin{equation}
-\label{eq:6.16:6}
+\tag{6}\label{eq:6.16:6}
 \begin{array}{r c c c l}{\displaystyle\sum_{\xi}\frac{1}{(1+|\xi|^{2})^{k}}}&{=}&{1+\sum_{j=1}^{\infty}s_{j}}&{\leq}&{1+c\sum_{j=1}^{\infty}\frac{1}{j^{1+2k-n}},}\\ \end{array}
 \end{equation}
 
 and so the series  $ \sum_{\xi} (1 + |\xi|^{2})^{-k} $ converges for  $ 1 + 2k - n > 1 $, or in other words, for
 
 \begin{equation}
-\label{eq:6.16:7}
+\tag{7}\label{eq:6.16:7}
 k\geq\left[\frac{n}{2}\right]+1,
 \end{equation}
 
@@ -579,84 +595,85 @@ where  $ [n/2] $ denotes the greatest integer less than or equal to $n/2$. It wo
 It follows from (3) that if we take  $ k \geq [n/2] + 1 $ as in (7), then the Fourier series
 
 \begin{equation}
-\label{eq:6.16:8}
+\tag{8}\label{eq:6.16:8}
 \sum_{\xi}\varphi_{\xi}e^{ix\cdot\xi}
 \end{equation}
 
 converges uniformly to some continuous function $\Phi$. We claim that $\Phi = \varphi$. This is of course due to the completeness of the trigonometric system and may be deduced as follows from the Stone-Weierstrass theorem [13], [27]. Let $\psi = \varphi - \Phi$, and let $t \in \mathcal{P}$ be a trigonometric polynomial; that is, $t$ is a finite linear combination of terms of the form $a_t e^{i x \cdot \xi}$ for $a_t \in \mathbb{C}^m$. Then since $\varphi$ and $\Phi$ have the same Fourier coefficients,
 
 \begin{equation}
-\label{eq:6.16:9}
+\tag{9}\label{eq:6.16:9}
 \int_{Q}\psi\cdot t=0.
 \end{equation}
 
 Now if $\varepsilon > 0$ is given, then by the Stone-Weierstrass theorem there is a trigonometric polynomial $t \in \mathcal{P}$ such that $\|\psi - t\|_\infty < \varepsilon$. Thus, using (9), we see that
 
 \begin{equation}
-\label{eq:6.16:10}
+\tag{10}\label{eq:6.16:10}
 \bigg|\int_{Q}\psi\cdot\psi\bigg|=\bigg|\int_{Q}\psi\cdot(\psi-t)\bigg|\leq\varepsilon(2\pi)^{n}\|\psi\|.
 \end{equation}
 
 Consequently  $ \|\psi\| \leq \varepsilon $. But  $ \varepsilon > 0 $ was arbitrary and  $ \psi $ is continuous, so  $ \psi = 0 $. Thus the Fourier series of a periodic  $ C^\infty $ function  $ \varphi $ converges uniformly to  $ \varphi $,
 
 \begin{equation}
-\label{eq:6.16:11}
+\tag{11}\label{eq:6.16:11}
 \varphi(x)=\sum_{\xi}\varphi_{\xi}e^{i x\cdot\xi}.
 \end{equation}
 
 It follows from integration by parts that the $\xi$th Fourier coefficient of $D^{\alpha}\varphi$ is $\xi_{1}^{\alpha_{1}}\cdots\xi_{n}^{\alpha_{n}}\varphi_{\xi}$. Thus
 
 \begin{equation}
-\label{eq:6.16:12}
+\tag{12}\label{eq:6.16:12}
 D^{\alpha}\varphi(x)=\sum_{\xi}\xi^{\alpha}\varphi_{\xi}e^{ix\cdot\xi}.
 \end{equation}
 
 From (11) and the orthogonality of the trigonometric system, we obtain the Parseval identity:
 
 \begin{equation}
-\label{eq:6.16:13}
+\tag{13}\label{eq:6.16:13}
 \int_{Q}|\varphi|^{2}=(2\pi)^{n}\sum_{\xi}|\varphi_{\xi}|^{2}.
 \end{equation}
 
 Applying (13) to  $ D^{\alpha}\varphi $, we obtain
 
 \begin{equation}
-\label{eq:6.16:14}
+\tag{14}\label{eq:6.16:14}
 \Vert D^{\alpha}\varphi\Vert^{2}=\sum_{\xi}\xi^{2\alpha}|\varphi_{\xi}|^{2}.
 \end{equation}
 
 It follows from (14) that given a non-negative integer $t$, there is a constant $c$ greater than zero and depending only on $t$ and $n$ such that
 
 \begin{equation}
-\label{eq:6.16:15}
+\tag{15}\label{eq:6.16:15}
 \begin{array}{r l r l r}{c\displaystyle\sum_{\xi}(1+\vert\xi\vert^{2})^{t}\vert\varphi_{\xi}\vert^{2}}&{\leq}&{\displaystyle\sum_{[\alpha]=0}^{t}\Vert D^{\alpha}\varphi\Vert^{2}}&{\leq}&{\displaystyle\sum_{\xi}(1+\vert\xi\vert^{2})^{t}\vert\varphi_{\xi}\vert^{2}.}\end{array}
 \end{equation}
 
-\subsection{The Sobolev Spaces $H_{s}$}\label{thm:6.17} Let  $ \mathcal{S} $ denote the complex vector space consisting of all sequences of complex vectors in  $ \mathbb{C}^m $ indexed by  $ n $-tuples of integers  $ \xi = (\xi_1, \ldots, \xi_n) $. Thus if  $ u \in \mathcal{S} $,  $ u = \{u_\xi\} $ where  $ \xi $ runs over all  $ n $-tuples of integers and where each  $ u_\xi \in \mathbb{C}^m $. For each integer  $ s $ (positive, negative, or zero) the Sobolev space  $ H_s $ is the subspace of  $ \mathcal{S} $ defined by
+\warnernumber{17}
+\discuss{6.17}{The Sobolev Spaces $H_{s}$}\label{thm:6.17} Let  $ \mathcal{S} $ denote the complex vector space consisting of all sequences of complex vectors in  $ \mathbb{C}^m $ indexed by  $ n $-tuples of integers  $ \xi = (\xi_1, \ldots, \xi_n) $. Thus if  $ u \in \mathcal{S} $,  $ u = \{u_\xi\} $ where  $ \xi $ runs over all  $ n $-tuples of integers and where each  $ u_\xi \in \mathbb{C}^m $. For each integer  $ s $ (positive, negative, or zero) the Sobolev space  $ H_s $ is the subspace of  $ \mathcal{S} $ defined by
 
 \begin{equation}
-\label{eq:6.17:1}
+\tag{1}\label{eq:6.17:1}
 H_{s}=\Big\{u\in\mathcal{S}\colon\sum_{\xi}(1+\vert\xi\vert^{2})^{s}\vert u_{\xi}\vert^{2}<\infty\Big\}.
 \end{equation}
 
 It follows from the Schwarz inequality that \index{Sobolev spaces}
 
 \begin{equation}
-\label{eq:6.17:2}
+\tag{2}\label{eq:6.17:2}
 \begin{array}{r l}&{\bigg|\sum_{\xi}(1+\vert\xi\vert^{2})^{(s+t)/2}u_{\xi}\cdot v_{\xi}\bigg\rvert^{2}\leq\bigg(\sum_{\xi}(1+\vert\xi\vert^{2})^{s}\vert u_{\xi}\vert^{2}\bigg)\left(\sum_{\xi}(1+\vert\xi\vert^{2})^{t}\vert v_{\xi}\vert^{2}\right);}\end{array}
 \end{equation}
 
 hence the left-hand side of (2) is finite whenever each member of the right-hand side is finite. We can therefore define an inner product on  $ H_{s} $ by
 
 \begin{equation}
-\label{eq:6.17:3}
+\tag{3}\label{eq:6.17:3}
 \langle u,v\rangle_{s}=\sum_{\xi}(1+\vert\xi\vert^{2})^{s}u_{\xi}\cdot v_{\xi}.
 \end{equation}
 
 The associated norm is
 
 \begin{equation}
-\label{eq:6.17:4}
+\tag{4}\label{eq:6.17:4}
 \left\Vert{u}\right\Vert_{s}=\left\langle{u,u}\right\rangle_{s}^{1/2}.
 \end{equation}
 
@@ -667,14 +684,14 @@ Since $H_{s}$ is simply an $l_{2}$-space in which the measure space is the set o
 We define a linear transformation  $ K^{t} $ on $\mathcal{S}$ for each integer $t$ by setting
 
 \begin{equation}
-\label{eq:6.17:5}
+\tag{5}\label{eq:6.17:5}
 (K^{t}u)_{\xi}=(1+|\xi|^{2})^{t}u_{\xi}.
 \end{equation}
 
 Finally, we identify $\mathcal{P}$ with a subspace of $\mathcal{S}$ by associating with each $\varphi \in \mathcal{P}$ its sequence of Fourier coefficients $\{\varphi_{\xi}\}$. In view of \eqref{eq:6.16:12} we can extend the derivative operator $D^{\alpha}$ from $\mathcal{P}$ to all of $\mathcal{S}$ by setting
 
 \begin{equation}
-\label{eq:6.17:6}
+\tag{6}\label{eq:6.17:6}
 (D^{\alpha}u)_{\xi}=\xi^{\alpha}u_{\xi}.
 \end{equation}
 
@@ -682,18 +699,19 @@ The inequality \eqref{eq:6.16:3} together with \eqref{eq:6.16:7} shows that the 
 
 Some salient features of the $H_{s}$ spaces are collected in the following theorem, which is divided into parts (a)-(j).
 
+\warnernumber{18}
 \begin{theorem}\label{thm:6.18}
 (a) Let $s$ be a non-negative integer. Then there are constants $c$ and $c'$, depending at most on $s$ and $n$, such that
 
 \begin{equation}
-\label{eq:6.18:1}
+\tag{1}\label{eq:6.18:1}
 c\left\Vert{\varphi}\right\Vert_{s}\leq\sum_{[\alpha]=0}^{s}\left\Vert{D^{\alpha}\varphi}\right\Vert\leq c^{\prime}\left\Vert{\varphi}\right\Vert_{s}\quad\mathrm{for\ all}\ \varphi\in\mathcal{P}.
 \end{equation}
 
 Moreover, for the case $s=0$, we actually have the equality
 
 \begin{equation}
-\label{eq:6.18:2}
+\tag{2}\label{eq:6.18:2}
 \left\lVert{\varphi}\right\rVert=\left\lVert{\varphi}\right\rVert_{0}\quad\mathrm{for\ all}\ \varphi\in\mathcal{P}.
 \end{equation}
 
@@ -705,7 +723,7 @@ Moreover, for the case $s=0$, we actually have the equality
 
 
 \begin{equation}
-\label{eq:6.18:3}
+\tag{3}\label{eq:6.18:3}
 \left\Vert u\right\Vert_{s}=\left\Vert K^{t}u\right\Vert_{s-2t};
 \end{equation}
 
@@ -713,14 +731,14 @@ and  $ K^t $ maps  $ \mathcal{P} $ into  $ \mathcal{P} $. If  $ \varphi \in \mat
 
 
 \begin{equation}
-\label{eq:6.18:4}
+\tag{4}\label{eq:6.18:4}
 K^{t}\varphi=\left(1-\sum_{i=1}^{n}\frac{\partial^{2}}{\partial x_{i}^{2}}\right)^{t}\varphi.
 \end{equation}
 
 Moreover, for all s and t
 
 \begin{equation}
-\label{eq:6.18:5}
+\tag{5}\label{eq:6.18:5}
 \langle u,v\rangle_{s}=\langle u,K^{t}v\rangle_{s-t}=\langle K^{t}u,v\rangle_{s-t}\quad\mathrm{for}\ u,v\in H_{s}.
 \end{equation}
 
@@ -753,14 +771,14 @@ for all $u \in H_{t^{\prime\prime}}$. (We refer to this inequality as the Peter-
 (i) Let $\omega$ be a $C^{\infty}$ complex-valued periodic function on $\mathbb{R}^{n}$. Then given an integer $s$, there are positive constants $c$ and $c^{\prime}$, with $c$ depending only on $s$ and $n$, and $c^{\prime}$ depending on $s$, $n$, and on $\omega$ and its derivatives, such that
 
 \begin{equation}
-\label{eq:6.18:6}
+\tag{6}\label{eq:6.18:6}
 \left\Vert{\omega\varphi}\right\Vert_{s}\leq c\left\Vert{\omega}\right\Vert_{\infty}\left\Vert{\varphi}\right\Vert_{s}+c^{\prime}\left\Vert{\varphi}\right\Vert_{s-1},\quad\mathrm{for}\ \varphi\in\mathcal{P}.
 \end{equation}
 
 In particular, there is a constant $c^{\prime \prime}$ depending on $\omega$, $s$, and $n$ such that
 
 \begin{equation}
-\label{eq:6.18:7}
+\tag{7}\label{eq:6.18:7}
 \left\lVert{\omega\varphi}\right\rVert_{s}\leq c^{\prime\prime}\left\lVert{\varphi}\right\rVert_{s},
 \end{equation}
 
@@ -769,14 +787,14 @@ so multiplication by $\omega$ extends by continuity to a bounded operator on $H_
 (j) Let $\omega$ be a $C^{\infty}$ complex-valued periodic function on $\mathbb{R}^{n}$. Then given an integer $s$, there is a positive constant $c$ such that
 
 \begin{equation}
-\label{eq:6.18:8}
+\tag{8}\label{eq:6.18:8}
 \left|\left\langle\omega u,v\right\rangle_{s}-\left\langle u,\bar{\omega}v\right\rangle_{s}\right|\leq c(\left\|u\right\|_{s}\left\|v\right\|_{s-1}+\left\|u\right\|_{s-1}\left\|v\right\|_{s})
 \end{equation}
 
 for each $u, v \in H_{s}$. For the case $s = 0$, we have
 
 \begin{equation}
-\label{eq:6.18:9}
+\tag{9}\label{eq:6.18:9}
 \langle\omega u,v\rangle_{0}=\langle u,\bar{\omega}v\rangle_{0}.
 \end{equation}
 
@@ -786,7 +804,7 @@ for each $u, v \in H_{s}$. For the case $s = 0$, we have
 The inequality (1) follows from \eqref{eq:6.16:15} and the fact that whenever $a_{1},\ldots,a_{n}$ are positive numbers, then
 
 \begin{equation}
-\label{eq:6.18:10}
+\tag{10}\label{eq:6.18:10}
 \frac{1}{n}\Big(\sum_{i=1}^{n}a_{i}\Big)^{2}\leq\sum_{i=1}^{n}a_{i}^{2}\leq\Big(\sum_{i=1}^{n}a_{i}\Big)^{2}.
 \end{equation}
 
@@ -797,21 +815,21 @@ Part (b) is obvious. The fact that \eqref{eq:6.16:3} holds for each integer $k >
 The identities (3) and (5) in (d) are obvious; that the inner products are all well-defined follows from the remark immediately following \eqref{eq:6.17:4}. Let $\varphi \in \mathcal{P}$. We have $K^t\varphi = \{(1 + |\xi|^2)^t\varphi_\xi\}$. It follows from \eqref{eq:6.16:3} and \eqref{eq:6.16:7} and from the fact that there exists the inequality
 
 \begin{equation}
-\label{eq:6.18:11}
+\tag{11}\label{eq:6.18:11}
 \xi^{2\alpha}\leq(1+\vert\xi\vert^{2})^{[\alpha]}
 \end{equation}
 
 that the series
 
 \begin{equation}
-\label{eq:6.18:12}
+\tag{12}\label{eq:6.18:12}
 \sum_{\xi}(1+\vert\xi\vert^{2})^{t}\varphi_{\xi}e^{i x\cdot\xi}
 \end{equation}
 
 and all its formal derivatives
 
 \begin{equation}
-\label{eq:6.18:13}
+\tag{13}\label{eq:6.18:13}
 \sum_{\xi}D^{\alpha}(1+\vert\xi\vert^{2})^{t}\varphi_{\xi}e^{i x\cdot\xi}=\sum_{\xi}\xi^{\alpha}(1+\vert\xi\vert^{2})^{t}\varphi_{\xi}e^{i x\cdot\xi}
 \end{equation}
 
@@ -832,7 +850,7 @@ To prove the equality in (f), let  $ v = K^{t} u $. Then by (d),
 To prove the Peter-Paul inequality (g), first observe that for any positive number y,
 
 \begin{equation}
-\label{eq:6.18:14}
+\tag{14}\label{eq:6.18:14}
 1\leq y^{t^{\prime\prime}-t}+\;\left(\frac{1}{y}\right)^{t-t^{\prime}}
 \end{equation}
 
@@ -865,21 +883,21 @@ In part (i), the inequality (7) follows immediately from part (b) and inequality
 At the third stage we have used the fact that  $ D^{\alpha}\omega\varphi - \omega D^{\alpha}\varphi $ only contains derivatives of  $ \varphi $ up to order $[\alpha]-1$. For $s<0$ we have
 
 \begin{equation}
-\label{eq:6.18:15}
+\tag{15}\label{eq:6.18:15}
 \begin{aligned}{\|\omega\varphi\|_{s}^{2}}&{{}=\langle\omega\varphi,\omega\varphi\rangle_{s}=\langle\omega K^{-s}K^{s}\varphi,K^{s}\omega\varphi\rangle_{0}}\\ {}&{{}=\langle K^{-s}\omega K^{s}\varphi,K^{s}\omega\varphi\rangle_{0}+\langle(\omega K^{-s}-K^{-s}\omega)K^{s}\varphi,K^{s}\omega\varphi\rangle_{0}}\\ {}&{{}\leq|\langle K^{-s}\omega K^{s}\varphi,K^{s}\omega\varphi\rangle_{0}|+\left|\Big\langle\sum_{[\alpha]=0}^{-2s-1}a_{\alpha}D^{\alpha}K^{s}\varphi,K^{s}\omega\varphi\Big\rangle_{0}\right|,}\\ \end{aligned}
 \end{equation}
 
 where the  $ a_\alpha $ are combinations of derivatives of  $ \omega $. Now, by the case  $ s \geq 0 $ of (i) we obtain
 
 \begin{equation}
-\label{eq:6.18:16}
+\tag{16}\label{eq:6.18:16}
 \begin{aligned}{|\langle K^{-s}\omega K^{s}\varphi,K^{s}\omega\varphi\rangle_{0}|}&{{}=|\langle\omega K^{s}\varphi,K^{s}\omega\varphi\rangle_{-s}|\leq\|\omega K^{s}\varphi\|_{-s}\|K^{s}\omega\varphi\|_{-s}}\\ {}&{{}\leq(c\|\omega\|_{\infty}\|K^{s}\varphi\|_{-s}+c^{\prime}\|K^{s}\varphi\|_{-s-1})(\|K^{s}\omega\varphi\|_{-s})}\\ {}&{{}=(c\|\omega\|_{\infty}\|\varphi\|_{s}+c^{\prime}\|\varphi\|_{s-1})\|\omega\varphi\|_{s}.}\\ \end{aligned}
 \end{equation}
 
 As for the last term in (15),
 
 \begin{equation}
-\label{eq:6.18:17}
+\tag{17}\label{eq:6.18:17}
 \begin{aligned}{\left|\left\langle\sum_{[\alpha]=0}^{-2s-1}a_{\alpha}D^{\alpha}K^{s}\varphi,K^{s}\omega\varphi\right\rangle_{0}\right|}&{{}\leq\mathrm{const}\sum_{[\alpha]=0}^{-2s-1}|\langle D^{\alpha}K^{s}\varphi,K^{s}\omega\varphi\rangle_{0}|}\\ {}&{{}\leq\mathrm{const}\sum_{[\alpha]=0}^{-2s-1}\|D^{\alpha}K^{s}\varphi\|_{s}\|K^{s}\omega\varphi\|_{-s}}\\ {}&{{}\leq\mathrm{const}\sum_{[\alpha]=0}^{-2s-1}\|K^{s}\varphi\|_{s+[\alpha]}\|K^{s}\omega\varphi\|_{-s}}\\ {}&{{}\leq\mathrm{const}\|K^{s}\varphi\|_{-s-1}\|K^{s}\omega\varphi\|_{-s}}\\ {}&{{}\leq\mathrm{const}\|\varphi\|_{s-1}\|\omega\varphi\|_{s}.}\\ \end{aligned}
 \end{equation}
 
@@ -906,17 +924,18 @@ By symmetry we also have
 Thus (8) is proved for $s$ negative. The proof is similar for $s$ positive. The proof of \hyperref[thm:6.18]{Theorem 6.18} is complete.
 \end{proof}
 
-\subsection{Difference Quotients}\label{thm:6.19} If $\varphi \in \mathcal{P}$, then the $\xi$th Fourier coefficient of the translate $\varphi(x + h)$ of $\varphi$ by an element $h \in \mathbb{R}^n$ is $e^{ih \cdot \xi} \varphi_\xi$. Thus if $u \in \mathcal{S}$ and $h \in \mathbb{R}^n$, we define the translate $u$ by $h$ to be the element
+\warnernumber{19}
+\discuss{6.19}{Difference Quotients}\label{thm:6.19} If $\varphi \in \mathcal{P}$, then the $\xi$th Fourier coefficient of the translate $\varphi(x + h)$ of $\varphi$ by an element $h \in \mathbb{R}^n$ is $e^{ih \cdot \xi} \varphi_\xi$. Thus if $u \in \mathcal{S}$ and $h \in \mathbb{R}^n$, we define the translate $u$ by $h$ to be the element
 
 \begin{equation}
-\label{eq:6.19:1}
+\tag{1}\label{eq:6.19:1}
 T_{h}(u)=\{e^{i h\cdot\xi}u_{\xi}\}\in\mathcal{S}.
 \end{equation}
 
 The difference quotient of $u$ determined by a non-zero $h$ is the element \index{Difference quotients}
 
 \begin{equation}
-\label{eq:6.19:2}
+\tag{2}\label{eq:6.19:2}
 u^{h}=\frac{T_{h}(u)-u}{|h|}=\left\{\left(\frac{e^{i h\cdot\xi}-1}{|h|}\right)u_{\xi}\right\}\in\mathcal{S}.
 \end{equation}
 
@@ -929,26 +948,27 @@ So if  $ \varphi \in \mathcal{P} $, then  $ T_{h}(\varphi)(x) = \varphi(x + h) $
 Observe that if  $ u \in H_{s} $, then
 
 \begin{equation}
-\label{eq:6.19:3}
+\tag{3}\label{eq:6.19:3}
 \left\Vert T_{h}(u)\right\Vert_{s}=\left\Vert u\right\Vert_{s},
 \end{equation}
 
 so $T_h$ is an isometry on $H_s$. Thus, in particular, if $u \in H_s$, then also $u^h \in H_s$ for each $h$. It follows from the inequality
 
 \begin{equation}
-\label{eq:6.19:4}
+\tag{4}\label{eq:6.19:4}
 \begin{aligned}{\bigg|\frac{e^{i h\cdot\xi}-1}{|h|}\bigg|^{2}}&{{}=\bigg|\frac{(\cosh\cdot\xi)-1}{|h|}\bigg|^{2}+\bigg|\frac{\sinh\cdot\xi}{|h|}\bigg|^{2}=\frac{2(1-\cosh\cdot\xi)}{|h|^{2}}}\\ {}&{{}=\frac{4\sin^{2}(\frac{1}{2}h\cdot\xi)}{|h|^{2}}\leq\frac{(h\cdot\xi)^{2}}{|h|^{2}}\leq(1+|\xi|^{2})}\\ \end{aligned}
 \end{equation}
 
 that if  $ u \in H_{s+1} $, then the  $ u^h $ are uniformly bounded in the  $ s $-norm. In fact,
 
 \begin{equation}
-\label{eq:6.19:5}
+\tag{5}\label{eq:6.19:5}
 \|u^{h}\|_{s}\leq\|u\|_{s+1}.
 \end{equation}
 
 We shall need the converse of this, as follows.
 
+\warnernumber{20}
 \begin{lemma}\label{thm:6.20}
 Let  $ u \in H_s $, and assume that there is a constant  $ k $ such that  $ \|u^h\|_s \leq k $ for all non-zero  $ h \in \mathbb{R}^n $. Then  $ u \in H_{s+1} $.
 
@@ -958,15 +978,15 @@ Let  $ u \in H_s $, and assume that there is a constant  $ k $ such that  $ \|u^
 For each positive integer $N$ we let  $ u_{N} $ be the element of  $ H_{s} $ obtained by truncating $u$ at $N$; that is,
 
 \begin{equation}
-\label{eq:6.20:1}
+\tag{1}\label{eq:6.20:1}
 (u_{N})_{\xi}=\left\{\begin{matrix}{u_{\xi}}&{\mathrm{if}\quad|\xi|<N}\\ {0}&{\mathrm{otherwise}.}\\ \end{matrix}\right.
 \end{equation}
 
 We need only prove that the  $ \|u_N\|_{s+1} $ are uniformly bounded. Let  $ (e_1, \ldots, e_n) $ be the standard orthonormal basis of  $ \mathbb{R}^n $, and let  $ h = te_i $. Then
 
 \begin{equation}
-\label{eq:6.20:2}
-\bigg|\frac{e^{i h\cdot\xi}-1}{|h|}\bigg|^{2}=\bigg|\frac{e^{i t\xi_{i}}-1}{t}\bigg|^{2}\to|\xi_{i}|^{2}\quad\mathrm{a s}\quad t\to0.
+\tag{2}\label{eq:6.20:2}
+\bigg|\frac{e^{i h\cdot\xi}-1}{|h|}\bigg|^{2}=\bigg|\frac{e^{i t\xi_{i}}-1}{t}\bigg|^{2}\to|\xi_{i}|^{2}\quad\text{as}\quad t\to0.
 \end{equation}
 
 Since there are only finitely many  $ \xi $ with  $ |\xi| < N $, and since by hypothesis
@@ -988,8 +1008,10 @@ Thus
 so the  $ \|u_N\|_{s+1} $ are uniformly bounded, and consequently  $ u \in H_{s+1} $.
 \end{proof}
 
-\subsection{\quad}\label{thm:6.21} Associate with each $u \in H_{-\infty}$ the series $\sum u_{\xi} e^{ix \cdot \xi}$. It will be of fundamental importance in what follows to know when this series converges, and (if it converges) how differentiable its limit is. The answer is supplied by the following lemma due to Sobolev.
+\warnernumber{21}
+\discuss{6.21}{}\label{thm:6.21} Associate with each $u \in H_{-\infty}$ the series $\sum u_{\xi} e^{ix \cdot \xi}$. It will be of fundamental importance in what follows to know when this series converges, and (if it converges) how differentiable its limit is. The answer is supplied by the following lemma due to Sobolev.
 
+\warnernumber{22}
 \begin{lemma}{Sobolev Lemma}\label{thm:6.22}
 If $t \geq [n/2] + 1$ and $u \in H_t$, then the series $\sum_{\xi} u_{\xi} e^{i x \cdot \xi}$ converges uniformly. Thus each $u \in H_t$ for $t \geq [n/2] + 1$ corresponds to a continuous function.
 \end{lemma}
@@ -1026,6 +1048,7 @@ Applying (1) to  $ D^{\alpha} \varphi $ and using \hyperref[thm:6.18]{6.18(h)}, 
 \end{equation}
 \end{corollary*}
 
+\warnernumber{23}
 \begin{lemma}{Rellich Lemma}\label{thm:6.23}
 Let  $ \{u^i\} $ be a sequence of elements of  $ H_t $ with  $ \|u^i\|_t \leq 1 $. If  $ s < t $, then there is a subsequence of  $ \{u^i\} $ which converges in  $ H_s $. \index{Rellich lemma}
 \end{lemma}
@@ -1034,14 +1057,14 @@ Let  $ \{u^i\} $ be a sequence of elements of  $ H_t $ with  $ \|u^i\|_t \leq 1 
 By assumption,
 
 \begin{equation}
-\label{eq:6.23:1}
+\tag{1}\label{eq:6.23:1}
 \sum_{\xi}(1+\vert\xi\vert^{2})^{t}\vert u_{\xi}^{i}\vert^{2}\leq1.
 \end{equation}
 
 For each fixed $\xi$, elements of the sequence $\{|(1 + |\xi|^2)^{t/2}u_{\xi}^{i}|\}$ are all bounded by 1, so the sequence $\{(1 + |\xi|^2)^{t/2}u_{\xi}^{i}\}$ has a convergent subsequence in $\mathbb{C}^m$. By the usual diagonal process, one can select a subsequence $\{u^{j_i}\}$ such that the sequence $(1 + |\xi|^2)^{t/2}u_{\xi}^{j_i}$ converges in $\mathbb{C}^m$ for each fixed $\xi$. We claim that $\{u^{j_i}\}$ is Cauchy, and therefore convergent, in $H_s$ if $s < t$. Let $\varepsilon > 0$ be given. Now,
 
 \begin{equation}
-\label{eq:6.23:2}
+\tag{2}\label{eq:6.23:2}
 \begin{aligned}{\|u^{j_{i}}-u^{j_{k}}\|_{s}^{2}=}&{{}\sum_{|\xi|<N}(1+|\xi|^{2})^{s-t}(1+|\xi|^{2})^{t}|u_{\xi}^{j_{i}}-u_{\xi}^{j_{k}}|^{2}}\\ {}&{{}+\sum_{|\xi|\geq N}(1+|\xi|^{2})^{s-t}(1+|\xi|^{2})^{t}|u_{\xi}^{j_{i}}-u_{\xi}^{j_{k}}|^{2}.}\\ \end{aligned}
 \end{equation}
 
@@ -1054,7 +1077,7 @@ N^{2(s-t)}\sum_{|\xi|\geq N}(1+|\xi|^{2})^{t}(|u_{\xi}^{j_{i}}|^{2}+2|u_{\xi}^{j
 which is $\leq4N^{2(s-t)}$ in view of (1). Since $s-t<0$, $4N^{2(s-t)}$ can be made less than $\varepsilon/2$ by taking $N$ large enough, say $N=N_{0}$. The first sum in (2) is then bounded by
 
 \begin{equation}
-\label{eq:6.23:3}
+\tag{3}\label{eq:6.23:3}
 \sum_{|\xi|<N_{0}}(1+|\xi|^{2})^{t}|u_{\xi}^{j_{i}}-u_{\xi}^{j_{k}}|^{2},
 \end{equation}
 
@@ -1062,11 +1085,12 @@ and since there are only a finite number of terms in this sum and since the sequ
 
 \end{proof}
 
+\warnernumber{24}
 \begin{definition}\label{thm:6.24}
 A (linear) differential operator $L$ of order $l$ on the  $ C^{m} $-valued  $ C^{\infty} $ functions on  $ \mathbb{R}^{n} $ consists of an  $ m \times m $ matrix  $ (L_{ij}) $ in which \index{Linear differential operator}
 
 \begin{equation}
-\label{eq:6.24:1}
+\tag{1}\label{eq:6.24:1}
 L_{ij}=\sum_{[\alpha]=0}^{l}a_{ij}^{\alpha}D^{\alpha},
 \end{equation}
 
@@ -1075,28 +1099,28 @@ and the $a_{ij}^{\alpha}$ are $C^{\infty}$ complex-valued functions on $\mathbb{
 Let $L$ be a periodic differential operator, and let $\varphi \in \mathcal{P}$ with component functions $\varphi_1, \ldots, \varphi_m$. Then
 
 \begin{equation}
-\label{eq:6.24:2}
+\tag{2}\label{eq:6.24:2}
 L\varphi=\left(\sum_{j}L_{1j}\varphi_{j},\ldots,\sum_{j}L_{mj}\varphi_{j}\right).
 \end{equation}
 
 It follows from integration by parts that if we define the operator  $ L^{*} $ on  $ \mathcal{P} $ by
 
 \begin{equation}
-\label{eq:6.24:3}
+\tag{3}\label{eq:6.24:3}
 L_{ij}^{*}=\sum_{[\alpha]=0}^{l}D^{\alpha}\overline{a_{ji}^{\alpha}}
 \end{equation}
 
 so that the $i$th component of  $ L^{*}\varphi $ is given by
 
 \begin{equation}
-\label{eq:6.24:4}
+\tag{4}\label{eq:6.24:4}
 (L^{*}\varphi)_{i}=\sum_{j=1}^{m}\sum_{[\alpha]=0}^{l}D^{\alpha}(\overline{a_{ji}^{\alpha}}\varphi_{j}),
 \end{equation}
 
 then in the $L_{2}$ inner product on $\mathcal{P}$ we have
 
 \begin{equation}
-\label{eq:6.24:5}
+\tag{5}\label{eq:6.24:5}
 \langle L\varphi,\psi\rangle=\langle\varphi,L^{*}\psi\rangle
 \end{equation}
 
@@ -1104,18 +1128,19 @@ for $\varphi, \psi \in \mathcal{P}$. $L^{*}$ is called the formal adjoint of $L$
 
 \end{definition}
 
+\warnernumber{25}
 \begin{proposition}\label{thm:6.25}
 Let $L$ be a partial differential operator on $\mathcal{P}$ of order $l$, and let $s$ be an integer. Then there are positive constants $c$, $k$, and $c'$, where $c$ depends only on $n, m, l$, and $s$, where $k$ is a bound on the absolute values of the coefficients of the highest order terms in $L$, and where $c'$ depends on $n, m, l$, and on all the coefficients of $L$ and their derivatives up to order $l$, such that
 
 \begin{equation}
-\label{eq:6.25:1}
+\tag{1}\label{eq:6.25:1}
 \left\Vert{L\varphi}\right\Vert_{s}\leq c k\left\Vert{\varphi}\right\Vert_{s+l}+c^{\prime}\left\Vert{\varphi}\right\Vert_{s+l-1}
 \end{equation}
 
 for all $\varphi \in \mathcal{P}$. In particular, there is a constant $c$ such that
 
 \begin{equation}
-\label{eq:6.25:2}
+\tag{2}\label{eq:6.25:2}
 \left\Vert L\varphi\right\Vert_{s}\leq c^{\prime\prime}\left\Vert\varphi\right\Vert_{s+l}
 \end{equation}
 
@@ -1130,11 +1155,12 @@ $ \varphi = (\varphi_1, \ldots, \varphi_m) \in \mathcal{P} $, and the constant d
 
 \end{proof}
 
+\warnernumber{26}
 \begin{remarks}\label{thm:6.26}
 If $L$ is an operator on $\mathcal{P}$ of order $l$, and if $\omega$ is a $C^\infty$ complex-valued function on $\mathbb{R}^n$, then the operator $M = \omega L - L\omega$, where $M\varphi = \omega(L\varphi) - L(\omega\varphi)$, is of order at most $l-1$. Consequently, given $s$, there is a positive constant such that
 
 \begin{equation}
-\label{eq:6.26:1}
+\tag{1}\label{eq:6.26:1}
 \left\Vert M\varphi\right\Vert_{s}\leq\mathrm{const}\left\Vert\varphi\right\Vert_{s+l-1}
 \end{equation}
 
@@ -1142,11 +1168,12 @@ for all  $ \varphi \in \mathcal{P} $.
 
 \end{remarks}
 
+\warnernumber{27}
 \begin{lemma}\label{thm:6.27}
 If $\omega$ is a real-valued periodic $C^{\infty}$ function, and $L$ is a differential operator of order $l$ on $\mathcal{P}$, then there is a positive constant such that
 
 \begin{equation}
-\label{eq:6.27:1}
+\tag{1}\label{eq:6.27:1}
 |\langle L(\omega^{2}u),L u\rangle_{s}-\|L(\omega u)\|_{s}^{2}|\leq\mathrm{const}\left(\|u\|_{s+l}\|u\|_{s+l-1}\right)
 \end{equation}
 
@@ -1164,25 +1191,26 @@ and (1) follows by applying \hyperref[thm:6.18]{6.18(j)}, \eqref{eq:6.25:2}, and
 \section{Elliptic Operators}
 
 
+\warnernumber{28}
 \begin{definition}\label{thm:6.28}
 Let $L$ be a partial differential operator of order $l$. We write $L$ as \index{Elliptic operators}
 
 \begin{equation}
-\label{eq:6.28:1}
+\tag{1}\label{eq:6.28:1}
 L=P_{l}(D)+\cdots+P_{0}(D),
 \end{equation}
 
 where $P_{j}(D)$ is an $m \times m$ matrix each entry of which is a differential operator $\sum_{[\alpha]=j}a_{\alpha}D^{\alpha}$, homogeneous of order $j$, and where the $a_{\alpha}$ are $C^{\infty}$ complex-valued functions on  $ \mathbb{R}^n $. We let  $ P_j(\xi) $ denote the matrix obtained by substituting  $ \xi^{\alpha} $ for  $ D^{\alpha} $ in  $ P_j(D) $, where  $ \xi = (\xi_1, \ldots, \xi_n) $ is a point in  $ \mathbb{R}^n $. $L$ is said to be elliptic at the point  $ x \in \mathbb{R}^n $ if the matrix  $ P_{l}(\xi) $ is non-singular at $x$ for each non-zero  $ \xi $. $L$ is elliptic if it is elliptic at each $x$. Observe that ellipticity is a condition on the highest-order part of $L$ only. Observe also that $L$ is elliptic at $x$ if and only if
 
 \begin{equation}
-\label{eq:6.28:2}
+\tag{2}\label{eq:6.28:2}
 L(\varphi^{l}u)(x)\neq0
 \end{equation}
 
 for each $C^{m}$-valued $C^{\infty}$ function $u$ such that $u(x) \neq 0$ and each smooth real-valued function $\varphi$ such that $\varphi(x) = 0$ but $d\varphi(x) \neq 0$, since for each such $\varphi$ and $u$,
 
 \begin{equation}
-\label{eq:6.28:3}
+\tag{3}\label{eq:6.28:3}
 L(\varphi^{l}u)(x)=P_{l}(D)(\varphi^{l}u)(x)=P_{l}(d\varphi|_{x})(u(x)).
 \end{equation}
 
@@ -1192,11 +1220,12 @@ The advantage of this criterion (2) for ellipticity is that it generalizes to a 
 
 The basic analytic property of an elliptic operator that we shall need is the following.
 
+\warnernumber{29}
 \begin{theorem}{Fundamental Inequality}\label{thm:6.29}
 Let $L$ be an elliptic operator on  $ \mathcal{P} $ of order $l$, and let $s$ be an integer. Then there is a constant $c>0$ such that \index{Fundamental inequality}
 
 \begin{equation}
-\label{eq:6.29:1}
+\tag{1}\label{eq:6.29:1}
 \|u\|_{s+l}\leq c(\|L u\|_{s}+\|u\|_{s})
 \end{equation}
 
@@ -1216,14 +1245,14 @@ $P_l(D)$ only. If $u \in \mathbb{R}^n$ with $u \neq 0$, and if $\xi \neq 0$, the
 for all  $ u $ and  $ \xi $ such that  $ |u| = |\xi| = 1 $. From this it follows that
 
 \begin{equation}
-\label{eq:6.29:2}
+\tag{2}\label{eq:6.29:2}
 |P_{l}(\xi)u|^{2}\geq c|\xi|^{2l}|u|^{2}
 \end{equation}
 
 for all $u$ and $\xi$ in $\mathbb{R}^n$. Thus for $\varphi \in \mathcal{P}$, it follows from (2) and the fact that $L_0$ has constant coefficients that
 
 \begin{equation}
-\label{eq:6.29:3}
+\tag{3}\label{eq:6.29:3}
 \begin{aligned}{\|L_{0}\varphi\|_{s}^{2}}&{{}=\sum_{\xi}|P_{l}(\xi)\varphi_{\xi}|^{2}\left(1+|\xi|^{2}\right)^{s}}\\ {}&{{}\geq\mathrm{const}\sum_{\xi}|\xi|^{2l}|\varphi_{\xi}|^{2}(1+|\xi|^{2})^{s}.}\\ \end{aligned}
 \end{equation}
 
@@ -1231,14 +1260,14 @@ Hence
 
 
 \begin{equation}
-\label{eq:6.29:4}
+\tag{4}\label{eq:6.29:4}
 \begin{aligned}{(\|L_{0}\varphi\|_{s}+\|\varphi\|_{s})^{2}}&{{}\geq\|L_{0}\varphi\|_{s}^{2}+\|\varphi\|_{s}^{2}}\\ {}&{{}\geq\sum_{\xi}|\varphi_{\xi}|^{2}(1+|\xi|^{2})^{s}(1+\mathrm{const}|\xi|^{2l})}\\ {}&{{}\geq\mathrm{const}\sum_{\xi}|\varphi_{\xi}|^{2}(1+|\xi|^{2})^{s+l}}\\ {}&{{}=\mathrm{const}\|\varphi\|_{s+l}^{2}.}\\ \end{aligned}
 \end{equation}
 
 Secondly, consider a general periodic elliptic operator $L$ of order $l$, and let $p \in \mathbb{R}^n$. We shall prove that there is a neighborhood $U$ of $p$ such that (1) holds for all $\varphi \in \mathcal{P}$ with support in $U$. (By a slight abuse of terminology we say that the support of a periodic function $\varphi$ lies in $U$ if the support of $\varphi$ lies in the union of $U$ with all of the periodic translates of $U$.) Let $L_0$ denote the constant coefficient elliptic operator, homogeneous of order $l$, determined by the highest-order part of $L$ at the point $p$. Then it follows from (4) that for each $\varphi \in \mathcal{P}$,
 
 \begin{equation}
-\label{eq:6.29:5}
+\tag{5}\label{eq:6.29:5}
 \begin{aligned}{\|\varphi\|_{s+l}}&{{}\leq\mathrm{const}\left(\|L_{0}\varphi\|_{s}+\|\varphi\|_{s}\right)}\\ {}&{{}\leq\mathrm{const}\left(\|L\varphi\|_{s}+\|(L_{0}-L)\varphi\|_{s}+\|\varphi\|_{s}\right).}\\ \end{aligned}
 \end{equation}
 
@@ -1259,7 +1288,7 @@ which proves (1) for these $\varphi$.
 Let  $ T^n $ be the torus obtained as the quotient of  $ \mathbb{R}^n $ by the lattice consisting of all points  $ 2\pi\xi $, where  $ \xi $ is an  $ n $-tuple of integers. The open sets  $ U $ obtained above for each  $ p \in \mathbb{R}^n $ project to an open cover of  $ T^n $. Let  $ U_1, \ldots, U_k $ be a finite subcover, and let  $ \omega_1, \ldots, \omega_k $ be a partition of unity fitting this cover, of the special form
 
 \begin{equation}
-\label{eq:6.29:6}
+\tag{6}\label{eq:6.29:6}
 \sum_{i=1}^{k}\omega_{i}^{2}=1.
 \end{equation}
 
@@ -1285,11 +1314,12 @@ It follows that (1) holds for all  $ \varphi \in \mathcal{P} $ and hence for all
 
 \end{proof}
 
+\warnernumber{30}
 \begin{theorem}{Regularity for Periodic Elliptic Operators}\label{thm:6.30}
 Let $L$ be a periodic elliptic operator of order $l$. Assume that $u \in H_{-\infty}, v \in H_{t}$, and
 
 \begin{equation}
-\label{eq:6.30:1}
+\tag{1}\label{eq:6.30:1}
 Lu=v.
 \end{equation}
 
@@ -1307,21 +1337,21 @@ It is sufficient to prove that if  $ u \in H_s $ and  $ v = Lu \in H_{s-l+1} $, 
 Then it follows for  $ \varphi \in \mathcal{P} $, and hence by continuity for all  $ u \in H_{-\infty} $, that
 
 \begin{equation}
-\label{eq:6.30:2}
+\tag{2}\label{eq:6.30:2}
 L(u^{h})=(L u)^{h}-L^{h}(T_{h}u)\qquad\text{(cf. 6.19).}
 \end{equation}
 
 It follows from (2) and the Fundamental Inequality \eqref{eq:6.29:1}, that
 
 \begin{equation}
-\label{eq:6.30:3}
+\tag{3}\label{eq:6.30:3}
 \begin{aligned}{\|u^{h}\|_{s}}&{{}\leq\mathrm{const}\|L(u^{h})\|_{s-l}+\mathrm{const}\|u^{h}\|_{s-l}}\\ {}&{{}\leq\mathrm{const}\|(L u)^{h}\|_{s-l}+\mathrm{const}\|L^{h}(T_{h}u)\|_{s-l}+\mathrm{const}\|u^{h}\|_{s-l}.}\\ \end{aligned}
 \end{equation}
 
 Now since the coefficients of the operator L are periodic  $ C^{\infty} $ functions, their difference quotients are uniformly bounded, so that
 
 \begin{equation}
-\label{eq:6.30:4}
+\tag{4}\label{eq:6.30:4}
 \|L^{h}(T_{h}u)\|_{s-l}\leq\mathrm{const}\|T_{h}(u)\|_{s}
 \end{equation}
 
@@ -1338,13 +1368,14 @@ where the right-hand side is independent of $h$. Thus, by 6.20, $u \in H_{s+1}$,
 \section{Reduction to the Periodic Case}
 
 
+\warnernumber{31}
 \begin{remarks}\label{thm:6.31}
 Before beginning the proof of \hyperref[thm:6.5]{Theorem 6.5} we need to establish some convenient notation and to make a few observations.
 
 We are going to let $C^{\infty}$ denote the set of all complex $m$-space valued $C^{\infty}$ functions on $\mathbb{R}^n$. $C_0^{\infty}$ will denote those of compact support, and $C_0^{\infty}(V)$ those whose compact support lies in $V$. By the $L_2$ inner product on $C_0^{\infty}$ we shall mean
 
 \begin{equation}
-\label{eq:6.31:1}
+\tag{1}\label{eq:6.31:1}
 \langle u,v\rangle=\frac{1}{(2\pi)^{n}}\int_{R^{n}}u\cdot v,
 \end{equation}
 
@@ -1364,9 +1395,10 @@ is elliptic on all of  $ \mathbb{R}^n $ and clearly can be extended from $Q$ to 
 
 We shall need the following slight extension of the formal adjoint property of  $ L^* $. Let  $ u \in H_s $, and let  $ \varphi \in C_0^\infty(V) $. Then
 
-\[
+\begin{equation}
+\tag{2}\label{eq:6.31:2}
 \langle\tilde{L}u,\varphi\rangle_{0}=\langle u,L^{*}\varphi\rangle_{0}.
-\]
+\end{equation}
 
 For let $\psi_{j} \to u$ in $\|\cdot\|_{s}$, with  $ \psi_{j} \in \mathcal{P} $. Then
 
@@ -1384,36 +1416,42 @@ which converges to zero as  $ j \to \infty $.
 
 Let $V$, as above, be an open set whose closure lies in some $2\pi$ cube. Let $u$ and $v$ belong to $H_{s}$. Then we shall say that $u$ and $v$ are equal on $V$ if
 
-\[
+\begin{equation}
+\tag{3}\label{eq:6.31:3}
 \langle u-v,\varphi\rangle_{0}=0
-\]
+\end{equation}
 
 for all $\varphi \in C_0^\infty(V)$. We shall say that a periodic operator $L$ has support in $V$ if the coefficients of $L$ belong to $C_0^\infty(V) \subset \mathcal{P}$. Now, if $L$ has support in $V$, and if the elements $u$ and $v$ of $H_s$ are equal on $V$, then
 
-\[
+\begin{equation}
+\tag{4}\label{eq:6.31:4}
 L u=L v.
-\]
+\end{equation}
 
 For by \hyperref[thm:6.18]{6.18(f)}, it is sufficient to prove that
 
-\[
+\begin{equation}
+\tag{5}\label{eq:6.31:5}
 \langle L(u-v),\varphi\rangle_{0}=0
-\]
+\end{equation}
 
 for all $\varphi \in \mathcal{P}$. But applying (2) (with $\tilde{L} = L$), we obtain
 
-\begin{equation}
-\label{eq:6.31:2}
+\[
 \langle L(u-v),\varphi\rangle_{0}=\langle(u-v),L^{*}\varphi\rangle_{0}
-\end{equation}
+\]
 
 which is zero by (3) since $L^{*}\varphi\in C_{0}^{\infty}(V)\subset\mathcal{P}$.
 
 \end{remarks}
 
-\subsection{Proof of the Regularity \hyperref[thm:6.5]{Theorem 6.5}}\label{thm:6.32} We are going to restate \hyperref[thm:6.5]{Theorem 6.5} in slightly different notation, adapted to the local problem in  $ \mathbb{R}^{n} $ to which the theorem will immediately be reduced. We shall use $\langle\ ,\ \rangle'$ to denote the inner product \eqref{eq:6.1:5} on  $ E^{p}(M) $. We shall prove:
+\warnernumber{32}
+\discuss{6.32}{Proof of the Regularity \hyperref[thm:6.5]{Theorem 6.5}}\label{thm:6.32} We are going to restate \hyperref[thm:6.5]{Theorem 6.5} in slightly different notation, adapted to the local problem in  $ \mathbb{R}^{n} $ to which the theorem will immediately be reduced. We shall use $\langle\ ,\ \rangle'$ to denote the inner product \eqref{eq:6.1:5} on  $ E^{p}(M) $. We shall prove:
 
-(1) \emph{Given a $C^\infty$ p-form $f$ on $M$ and a bounded linear functional $l'\colon E^p(M) \to \mathbb{R}$ such that $l'(\Delta^*\varphi) = \langle f,\varphi\rangle'$ for every $\varphi \in E^p(M)$, then there exists a $C^\infty$ p-form $u$ on $M$ such that $l'(t) = \langle u,t\rangle'$ for every $t \in E^p(M)$.}
+\begin{equation}
+\tag{1}\label{eq:6.32:1}
+\parbox{.88\linewidth}{\itshape Given a $C^\infty$ p-form $f$ on $M$ and a bounded linear functional $l'\colon E^p(M) \to \mathbb{R}$ such that $l'(\Delta^*\varphi) = \langle f,\varphi\rangle'$ for every $\varphi \in E^p(M)$, then there exists a $C^\infty$ p-form $u$ on $M$ such that $l'(t) = \langle u,t\rangle'$ for every $t \in E^p(M)$.}
+\end{equation}
 
 We note that the last statement of \hyperref[thm:6.5]{Theorem 6.5}, which says that $\Delta u = f$, is an immediate consequence of (1), since, as we have already observed in \eqref{eq:6.4:6}, $\langle\Delta u,\varphi\rangle' = \langle u,\Delta^*\varphi\rangle' = l'(\Delta^*\varphi) = \langle f,\varphi\rangle'$ for all $\varphi \in E^p(M)$.
 
@@ -1421,15 +1459,14 @@ We now reduce \hyperref[thm:6.5]{Theorem 6.5} to a local problem. Let $U$ be a c
 
 We extend the inner product $\langle\ ,\ \rangle'$ to complex-valued p-forms in the obvious way, so that if  $ u_{1}, u_{2}, v_{1} $, and  $ v_{2} $ are real-valued p-forms, then
 
-\begin{equation}
-\label{eq:6.32:1}
+\[
 \langle u_{1}+i u_{2},v_{1}+i v_{2}\rangle^{\prime}=\langle u_{1},v_{1}\rangle^{\prime}+\langle u_{2},v_{2}\rangle^{\prime}+i(\langle u_{2},v_{1}\rangle^{\prime}-\langle u_{1},v_{2}\rangle^{\prime}).
-\end{equation}
+\]
 
 Then by transferring this to Euclidean space we obtain another inner product $\langle\ ,\ \rangle'$ on $C_{0}^{\infty}$ induced from the inner product on complex-valued p-forms on $M$. It follows from the observation that both the $L_{2}$ inner product $\langle\ ,\ \rangle$ and the inner product $\langle\ ,\ \rangle'$ on $C_{0}^{\infty}$ are integrals of pointwise inner products, that there exists a matrix $A$ of smooth functions on $\mathbb{R}^{n}$, Hermitian and positive definite at each point, such that
 
 \begin{equation}
-\label{eq:6.32:2}
+\tag{2}\label{eq:6.32:2}
 \langle\varphi,\psi\rangle^{\prime}=\langle\varphi,A\psi\rangle
 \end{equation}
 
@@ -1438,7 +1475,7 @@ for all  $ \varphi, \psi \in C_0^\infty $.
 The adjoint of $L$ on $C_0^\infty$ with respect to $\langle\ ,\ \rangle'$ is simply $\Delta^*$ restricted to $C_0^\infty$. We claim that for $\varphi \in C_0^\infty$,
 
 \begin{equation}
-\label{eq:6.32:3}
+\tag{3}\label{eq:6.32:3}
 L^{*}\varphi=A\Delta^{*}A^{-1}\varphi.
 \end{equation}
 
@@ -1451,34 +1488,38 @@ Indeed, for arbitrary  $ \psi \in C_{0}^{\infty} $,
 We extend the linear functional $l': E^p(M) \to \mathbb{R}$ complex linearly to complex-valued differential forms, and we define a complex-valued linear functional $l$ on $C_0^\infty$ by setting
 
 \begin{equation}
-\label{eq:6.32:4}
+\tag{4}\label{eq:6.32:4}
 l(\varphi)=l'(A^{-1}\varphi).
 \end{equation}
 
 We claim that $l$ is locally represented by a $C^{\infty}$ function. Precisely, we shall prove:
 
-(5) If $p \in \mathbb{R}^n$, then there is a neighborhood $W_p$ of $p$ and an element $u_p \in \mathcal{P}$ such that $l(t) = \langle u_p, t \rangle$ for every $t \in C_0^\infty(W_p)$.
+\begin{equation}
+\tag{5}\label{eq:6.32:5}
+\parbox{.88\linewidth}{\itshape If $p\in\mathbb R^n$, there is a neighborhood
+$W_p$ of $p$ and $u_p\in\mathcal P$ such that $l(t)=\langle u_p,t\rangle$
+for every $t\in C_0^\infty(W_p)$.}
+\end{equation}
 
 First we show that (5) implies (1). It follows from (5) that for each $p, q \in \mathbb{R}^n$, $u_p \mid W_p \cap W_q = u_q \mid W_p \cap W_q$, since both $u_p$ and $u_q$ have the same $L_2$ inner product with all elements of $C_0^\infty(W_p \cap W_q)$. Thus the $u_p$ piece together to give $u \in C^\infty$ such that $u \mid W_p = u_p \mid W_p$ for each $p \in \mathbb{R}^n$. Now let $\{\varphi_i\}$ be a partition of unity on $\mathbb{R}^n$ subordinate to the $\{W_p\}$. Then if $t \in C_0^\infty$, $l(t) = \sum_i l(\varphi_i t) = \sum_i \langle u, \varphi_i t \rangle = \langle u, t \rangle$. Now if $\varphi$ is a smooth $p$-form on $M$ with support in $U$, then $l'(\varphi) = l(A\varphi) = \langle u, A\varphi \rangle = \langle u, \varphi \rangle'$. By the same argument as above, the $u$'s for various coordinate systems on $M$ piece together to form a $C^\infty$ $p$-form $u$ (necessarily real-valued) on $M$ such that $l'(\varphi) = \langle u, \varphi \rangle'$ for every $\varphi \in E^p(M)$. Thus we have reduced the proof of (1) to the proof of (5), which follows.
 
 Let $p \in \mathbb{R}^n$ be fixed, and let $Q'$ be some open $2\pi$ cube containing $p$. Choose an open set $V$ such that $p \in V \subset \overline{V} \subset Q'$, and let
 
 \begin{equation}
-\label{eq:6.32:6}
+\tag{6}\label{eq:6.32:6}
 \tilde{l}=l\mid C_{0}^{\infty}(V).
 \end{equation}
 
 First of all, we observe that $\tilde{l}$ is a bounded linear functional on  $ C_0^\infty(V) $. For since  $ \overline{V} $ is compact, the matrix norms $\|A_x^{-1}\|$ have a maximum as $x$ ranges over $\overline{V}$, and thus, using the fact that $l'$ is bounded, we obtain
 
-\begin{equation}
-\label{eq:6.32:5}
+\[
 \begin{aligned}{|\tilde{l}(\varphi)|}&{{}=|l(\varphi)|=|l^{\prime}(A^{-1}\varphi)|\leq\mathrm{const}\|A^{-1}\varphi\|^{\prime}}\\ {}&{{}=\mathrm{const}\left(\langle A^{-1}\varphi,A^{-1}\varphi\rangle^{\prime}\right)^{1/2}=\mathrm{const}\langle\varphi,A^{-1}\varphi\rangle^{1/2}}\\ {}&{{}\leq\mathrm{const}\left(\|\varphi\|\|A^{-1}\varphi\|\right)^{1/2}\leq\mathrm{const}\|\varphi\|}\\ \end{aligned}
-\end{equation}
+\]
 
 for all  $ \varphi \in C_0^\infty(V) $. Second, we observe that it follows from (6), (4), (3), (2), and (1) that
 
 \begin{equation}
-\label{eq:6.32:7}
+\tag{7}\label{eq:6.32:7}
 \tilde{l}(L^{*}\varphi)=l^{\prime}(A^{-1}L^{*}\varphi)=l^{\prime}(\Delta^{*}A^{-1}\varphi)=\langle f,A^{-1}\varphi\rangle^{\prime}=\langle f,\varphi\rangle
 \end{equation}
 
@@ -1488,7 +1529,7 @@ Since $\tilde{l}$ is bounded, $\tilde{l}$ extends to a bounded linear functional
 
 
 \begin{equation}
-\label{eq:6.32:8}
+\tag{8}\label{eq:6.32:8}
 \tilde{l}(t)=\langle\tilde{u},t\rangle_{0}\quad\mathrm{for\ all}\ t\in H_{0}.
 \end{equation}
 
@@ -1530,21 +1571,21 @@ of neighborhoods $O_n$ of $p$ such that $\overline{O} \subset O_n$ and $\overlin
 
 
 \begin{equation}
-\label{eq:6.32:9}
+\tag{9}\label{eq:6.32:9}
 v_{1}=\omega_{1}\tilde{u}\in H_{0}.
 \end{equation}
 
 Then
 
 \begin{equation}
-\label{eq:6.32:10}
+\tag{10}\label{eq:6.32:10}
 \tilde{L}v_{1}=\tilde{L}\omega_{1}\tilde{u}=\omega_{1}\tilde{L}\tilde{u}+M_{1}\tilde{u},
 \end{equation}
 
 where
 
 \begin{equation}
-\label{eq:6.32:11}
+\tag{11}\label{eq:6.32:11}
 M_{1}=\tilde{L}\omega_{1}-\omega_{1}\tilde{L}.
 \end{equation}
 
@@ -1554,14 +1595,14 @@ First, we claim that
 
 
 \begin{equation}
-\label{eq:6.32:12}
+\tag{12}\label{eq:6.32:12}
 \omega_{1}\tilde{L}\tilde{u}=\omega_{1}f,
 \end{equation}
 
 from which it follows that  $ \omega_1\tilde{L}\tilde{u} \in C_0^\infty(O_0) $ and thus belongs to  $ H_s $ for each  $ s $. Now both sides of (12) belong to some  $ H_s $, and it follows from \hyperref[thm:6.18]{6.18(f)} that for (12) to hold, it is sufficient to prove that
 
 \begin{equation}
-\label{eq:6.32:13}
+\tag{13}\label{eq:6.32:13}
 \langle\omega_{1}\tilde{L}\tilde{u}-\omega_{1}f,\varphi\rangle_{0}=0
 \end{equation}
 
@@ -1574,21 +1615,21 @@ for all  $ \varphi \in \mathcal{P} $. We compute, using (7), (8), \eqref{eq:6.18
 Thus (12) holds. Now since $L$ (and hence $\tilde{L}$) is an operator of order 2, then $M_1$ is of order 1; hence $M_1\tilde{u} \in H_{-1}$. Thus the right-hand side of (10) belongs to $H_{-1}$. It follows from the periodic regularity \hyperref[thm:6.30]{theorem 6.30} that $v_1 \in H_1$. Now we let
 
 \begin{equation}
-\label{eq:6.32:14}
+\tag{14}\label{eq:6.32:14}
 v_{2}=\omega_{2}\tilde{u}.
 \end{equation}
 
 Then
 
 \begin{equation}
-\label{eq:6.32:15}
+\tag{15}\label{eq:6.32:15}
 \tilde{L}v_{2}=\omega_{2}\tilde{L}\tilde{u}+M_{2}\tilde{u}=\omega_{2}\tilde{L}\tilde{u}+M_{2}v_{1},
 \end{equation}
 
 where the last equality follows from \hyperref[thm:6.31]{6.31(4)} since  $ M_2 = \tilde{L}\omega_2 - \omega_2\tilde{L} $ has support in  $ O_1 $ and  $ \tilde{u} = v_1 $ on  $ O_1 $. Now, arguing as before, we see that the right-hand side of (15) lies in  $ H_0 $. Thus by 6.30,  $ v_2 \in H_2 $. Continuing in the same manner, we obtain
 
 \begin{equation}
-\label{eq:6.32:16}
+\tag{16}\label{eq:6.32:16}
 v_{n}=\omega_{n}\tilde{u}\quad\text{with }v_{n}\in H_{n}.
 \end{equation}
 
@@ -1600,7 +1641,8 @@ Finally, let $W_p$ be an open neighborhood of $p$ with $\overline{W}_p \subset O
 
 and (5) is proved. Except for a proof of the fact that $L$ is elliptic, this completes the proof of \hyperref[thm:6.5]{Theorem 6.5}.
 
-\subsection{Proof of \hyperref[thm:6.6]{Theorem 6.6}}\label{thm:6.33} It suffices to show that if $m \in M$, then there is some neighborhood of $m$ such that if $\varphi$ is any $C^\infty$ function on $M$ with support in that neighborhood, then $\{\varphi\alpha_n\}$ has a Cauchy subsequence. For then we simply cover $M$ by a finite number of such neighborhoods
+\warnernumber{33}
+\discuss{6.33}{Proof of \hyperref[thm:6.6]{Theorem 6.6}}\label{thm:6.33} It suffices to show that if $m \in M$, then there is some neighborhood of $m$ such that if $\varphi$ is any $C^\infty$ function on $M$ with support in that neighborhood, then $\{\varphi\alpha_n\}$ has a Cauchy subsequence. For then we simply cover $M$ by a finite number of such neighborhoods
 
 and take a partition of unity $\varphi_{1},\ldots,\varphi_{N}$ subordinate to this cover. One can select a subsequence $\alpha_{n_{k}}$ such that $\varphi_{j}\alpha_{n_{k}}$ is Cauchy for each $j$. Then $\{\alpha_{n_{k}}\}$ is Cauchy for
 
@@ -1611,14 +1653,14 @@ and take a partition of unity $\varphi_{1},\ldots,\varphi_{N}$ subordinate to th
 We reduce the problem to Euclidean space by choosing a coordinate neighborhood of $m$ with $m$ going to $p \in \mathbb{R}^n$. We continue with the notation and setup as developed in 6.31 and 6.32; in particular, the norm on $M$ and the corresponding induced norm on $C_0^\infty$ will now be denoted by $\|\cdot\|'$. Let $\varphi$ be a real-valued $C^\infty$ function with support in $O_0$. It suffices to show that the sequence $\{\varphi\alpha_{n}\}$ of elements of $\mathcal{P}$ has a Cauchy subsequence $\{\varphi\alpha_{n_{k}}\}$ in the 0-norm, since the 0-norm and the $L_2$-norm agree on $C_0^\infty(O_0)$, and the $L_2$-norm and the norm $\|\cdot\|'$ are equivalent on $C_0^\infty(O_0)$. According to the Rellich \hyperref[thm:6.23]{lemma 6.23}, in order to prove that $\{\varphi_{\alpha_n}\}$ has a Cauchy subsequence in the 0-norm, it is sufficient to show that the sequence is bounded in $H_1$. It follows from the Fundamental Inequality that
 
 \begin{equation}
-\label{eq:6.33:1}
+\tag{1}\label{eq:6.33:1}
 \begin{aligned}{\|\varphi\alpha_{n}\|_{1}}&{{}\leq\mathrm{const}\left(\|\tilde{L}\varphi\alpha_{n}\|_{-1}+\|\varphi\alpha_{n}\|_{-1}\right)}\\ {}&{{}=\mathrm{const}\left(\|L\varphi\alpha_{n}\|_{-1}+\|\varphi\alpha_{n}\|_{-1}\right)}\\ {}&{{}\leq\mathrm{const}\|\varphi L\alpha_{n}\|_{-1}+\mathrm{const}\|(L\varphi-\varphi L)\alpha_{n}\|_{-1}+\mathrm{const}\|\varphi\alpha_{n}\|_{-1}.}\\ \end{aligned}
 \end{equation}
 
 Now
 
 \begin{equation}
-\label{eq:6.33:2}
+\tag{2}\label{eq:6.33:2}
 \begin{aligned}{\|\varphi L\alpha_{n}\|_{-1}}&{{}\leq\|\varphi L\alpha_{n}\|_{0}=\|\varphi L\alpha_{n}\|}\\ {}&{{}\leq\mathrm{const}\|\varphi L\alpha_{n}\|^{\prime}\leq\mathrm{const}\|L\alpha_{n}\|^{\prime}\leq\mathrm{const}\|\Delta\alpha_{n}\|^{\prime}.}\\ \end{aligned}
 \end{equation}
 
@@ -1631,21 +1673,21 @@ Let  $ \tau $ be a  $ C^{\infty} $ function with values between 0 and 1 which eq
 so that
 
 \begin{equation}
-\label{eq:6.33:3}
+\tag{3}\label{eq:6.33:3}
 \begin{aligned}{\|(L\varphi-\varphi L)\alpha_{n}\|_{-1}}&{{}=\|(L\varphi-\varphi L)(\tau\alpha_{n})\|_{-1}}\\ {}&{{}\leq\mathrm{const}\|\tau\alpha_{n}\|_{0}=\mathrm{const}\|\tau\alpha_{n}\|}\\ {}&{{}\leq\mathrm{const}\|\tau\alpha_{n}\|^{\prime}\leq\mathrm{const}\|\alpha_{n}\|^{\prime}.}\\ \end{aligned}
 \end{equation}
 
 Finally,
 
 \begin{equation}
-\label{eq:6.33:4}
+\tag{4}\label{eq:6.33:4}
 \|\varphi\alpha_{n}\|_{-1}\leq\|\varphi\alpha_{n}\|_{0}=\|\varphi\alpha_{n}\|\leq\mathrm{const}\|\varphi\alpha_{n}\|'\leq\mathrm{const}\|\alpha_{n}\|'.
 \end{equation}
 
 So from (1), (2), (3), and (4) we obtain
 
 \begin{equation}
-\label{eq:6.33:5}
+\tag{5}\label{eq:6.33:5}
 \|\varphi\alpha_{n}\|_{1}\leq\mathrm{const}\left(\|\Delta\alpha_{n}\|^{\prime}+\|\alpha_{n}\|^{\prime}\right).
 \end{equation}
 
@@ -1654,6 +1696,7 @@ But by assumption $\|\Delta\alpha_n\|'$ and $\|\alpha_n\|'$ are bounded. Therefo
 \section{Ellipticity of the Laplace-Beltrami Operator}
 
 
+\warnernumber{34}
 \begin{remarks}\label{thm:6.34}
 We shall make use of the following observation. Let $U$, $V$, and $W$ be finite dimensional inner product spaces, and suppose that
 
@@ -1678,21 +1721,21 @@ We shall apply this to the special case in which $U$, $V$, and $W$ are $\Lambda_
 and with $A$ and $B$ both left exterior multiplication by $\xi \in M_{m}^{*}$:
 
 \begin{equation}
-\label{eq:6.34:1}
+\tag{1}\label{eq:6.34:1}
 \Lambda_{p-1}(M_{m}^{*})\xrightarrow{\xi}\Lambda_{p}(M_{m}^{*})\xrightarrow{\xi}\Lambda_{p+1}(M_{m}^{*}).
 \end{equation}
 
 According to Exercise 15 of Chapter 2, the sequence (1) is exact; and according to Exercise 14 of Chapter 2, the adjoint of  $ \xi\colon \Lambda_{p}(M_{m}^{*})\to\Lambda_{p+1}(M_{m}^{*}) $ is
 
 \begin{equation}
-\label{eq:6.34:2}
+\tag{2}\label{eq:6.34:2}
 (-1)^{n p}*{\xi}*:\:\Lambda_{p+1}(M_{m}^{*})\to\Lambda_{p}(M_{m}^{*}).
 \end{equation}
 
 Thus it follows from the above remarks that
 
 \begin{equation}
-\label{eq:6.34:3}
+\tag{3}\label{eq:6.34:3}
 (-1)^{n p}{*}\xi{*}\xi+(-1)^{n(p-1)}\xi{*}\xi{*}
 \end{equation}
 
@@ -1700,10 +1743,11 @@ is an isomorphism on $\Lambda_{p}(M_{m}^{*})$.
 
 \end{remarks}
 
-\subsection{The Laplacian is Elliptic}\label{thm:6.35} In order to complete the proofs of Theorems 6.5 and 6.6, we need to prove that the operator $L$ of 6.32 induced on Euclidean space by the Laplace-Beltrami operator $\Delta$ via a coordinate system is elliptic. Proving this, according to \eqref{eq:6.28:2}, is equivalent to showing that for each $m \in M$,
+\warnernumber{35}
+\discuss{6.35}{The Laplacian is Elliptic}\label{thm:6.35} In order to complete the proofs of Theorems 6.5 and 6.6, we need to prove that the operator $L$ of 6.32 induced on Euclidean space by the Laplace-Beltrami operator $\Delta$ via a coordinate system is elliptic. Proving this, according to \eqref{eq:6.28:2}, is equivalent to showing that for each $m \in M$,
 
 \begin{equation}
-\label{eq:6.35:1}
+\tag{1}\label{eq:6.35:1}
 \Delta(\varphi^{2}\alpha)(m)\neq0
 \end{equation}
 
@@ -1733,11 +1777,12 @@ Thus
 
 which is not zero, according to \eqref{eq:6.34:3}. Hence $\Delta$ is elliptic, and the proof of the Hodge theorem is at last complete.
 
+\warnernumber{36}
 \begin{remarks}\label{thm:6.36}
 We have seen that for each $\xi$ in $M_m^*$ there is a well-defined linear transformation $\sigma_\Delta(\xi)$ on $\Lambda_p(M_m^*)$ defined by
 
 \begin{equation}
-\label{eq:6.36:1}
+\tag{1}\label{eq:6.36:1}
 \sigma_{\Delta}(\xi)(v)=\Delta(\varphi^{2}\alpha)(m),
 \end{equation}
 

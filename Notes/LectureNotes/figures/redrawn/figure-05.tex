@@ -1,0 +1,10 @@
+% Editable vector reconstruction of the supplied figure.
+\begin{tikzpicture}
+\foreach \a/\lab in {0/M,5/N}{\begin{scope}[xshift=\a cm]\draw(0,1.5)--(.3,3.2)--(3.2,3.4)--(2.9,1.7)--cycle;\node at(3.15,3.5){$\lab$};\draw(1.5,2.5)ellipse(1.1 and .5);\end{scope}}
+\draw(1.5,2.5)ellipse(.65 and .3);\node at(2.3,2.75){$V$};\node at(2,2.45){$U$};\fill(1.3,2.5)circle(1.3pt)node[left]{$m$};
+\node at(7.3,2.7){$W$};\fill(6.5,2.5)circle(1.3pt)node[below]{$\psi(m)$};\draw[->](3.3,2.6)--node[above]{$\psi$}(4.9,2.6);
+\foreach \a/\lab in {0/{\varphi(V)},5/{\tau(W)}}{\begin{scope}[xshift=\a cm]\draw[->](-.2,-.7)--(3.2,-.7);\draw[->](.3,-1)--(.3,1.2);\draw(1.5,0)ellipse(1.15 and .75);\node at(2.3,.8){$\lab$};\end{scope}}
+\draw(1.5,0)ellipse(.6 and .4);\node at(2,-.35){$O$};\fill(1.3,0)circle(1.3pt)node[left]{$p$};
+\draw(6.5,0)ellipse(.6 and .4);\fill(6.3,0)circle(1.3pt)node[left]{$q$};\node at(7,-.35){$\alpha(O)$};
+\draw[->](1.4,1.8)--node[left]{$\varphi$}(1.4,.9);\draw[->](6.4,1.8)--node[right]{$\tau$}(6.4,.9);\draw[->](3.1,0)--node[above]{$\alpha$}(4.8,0);
+\end{tikzpicture}
