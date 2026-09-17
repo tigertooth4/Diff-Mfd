@@ -1,0 +1,301 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{xeCJK}
+\setCJKmainfont{Adobe 楷体 Std}
+\usepackage{tikz-cd}
+
+% 1. 开启标题背景色填充
+\metroset{block=fill}
+
+% theorem environments
+\newtheorem{proposition}{Proposition}
+\newtheorem{exercise}{Exercise}
+
+% notation
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\RP}{\mathbb{R}\mathrm{P}}
+
+\title{Ch1\quad Manifolds}
+\subtitle{Differentiable Manifolds}
+\date{September 17, 2026}
+\author{LXJ}
+
+\begin{document}
+
+\maketitle
+
+%====================================================================
+\section{Notations}
+
+\begin{frame}{Notations (I)}
+	\begin{itemize}
+		\item \textbf{injective}: A map $f: A \to B$; if $\forall\, x, y \in A$,
+		      $x \neq y \Rightarrow f(x) \neq f(y)$, then $f$ is an
+		      \emph{injective map}.
+		\item \textbf{surjective}: A map $f: A \to B$ is a \emph{surjective map}
+		      if $f$ is onto, i.e.\ $f(A) = B$.
+		\item A \emph{commutative diagram} (of maps)
+		      \[
+			      \begin{tikzcd}[column sep=small, row sep=small, ampersand replacement=\&]
+				      \& A \arrow[dl, "f"'] \arrow[dr, "h"] \& \\
+				      B \arrow[rr, "g"'] \& \& C
+			      \end{tikzcd}
+			      \qquad\text{means}\qquad h = g \circ f .
+		      \]
+		\item $\R^d$ —— $d$-dim Euclidean space.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Notations (II)}
+	\begin{itemize}
+		\item The function $r_i: \R^d \to \R$, $(x_1, \dots, x_d) \mapsto x_i$,
+		      is called the \emph{$i$-th (canonical) coordinate function} on
+		      $\R^d$.\\
+		      If $f: X \to \R^d$, then $f^i \coloneqq r_i \circ f$ is the
+		      \emph{$i$-th component function} of $f$.
+		\item $B_p(r)$ —— the \emph{open ball} of radius $r$ about $p$.
+		\item Given a function $f: X \to \R$,
+		      \[
+			      \operatorname{supp} f \coloneqq \overline{f^{-1}(\R \setminus \{0\})}
+		      \]
+		      is called the \emph{support} of $f$.
+		\item Given a multi-index $\alpha$:
+		      \[
+			      \frac{\partial^\alpha}{\partial x^\alpha}
+			      \coloneqq
+			      \frac{\partial^{|\alpha|}}{\partial x_1^{\alpha_1} \cdots \partial x_d^{\alpha_d}} .
+		      \]
+	\end{itemize}
+\end{frame}
+
+%====================================================================
+\section{Differentiable Manifolds}
+
+\begin{frame}{Functions of class $C^k$}
+	\begin{definition}[$C^k$ functions]
+		Let $U \subset \R^d$ be open, $f: U \to \R$. We say $f$ is
+		\emph{differentiable of class $C^k$} on $U$ (for $k \geq 0$) if
+		$\dfrac{\partial^\alpha}{\partial x^\alpha} f$ exists and is continuous
+		for all $|\alpha| \leq k$.
+		\begin{itemize}
+			\item In particular, $f$ is $C^0$ if $f$ is continuous.
+			\item $f: U \to \R^n$ is $C^k$ if each component of $f$ is $C^k$ on $U$.
+			\item $f$ is $C^\infty$ if $f$ is $C^k$ for all $k \geq 0$.
+		\end{itemize}
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Locally Euclidean spaces}
+	\begin{definition}[Locally Euclidean space]
+		A \emph{locally Euclidean space} $M$ of dim $d$ is a Hausdorff
+		topological space $M$ for which each point $p \in M$ has a neighborhood
+		homeomorphic to an open subset of $\R^d$.
+		\begin{itemize}
+			\item If $\varphi$ is a homeomorphism of a connected open set
+			      $U \subset M$ to an open subset of $\R^d$, then $\varphi$ is
+			      called a \emph{coordinate map};
+			\item $x_i \coloneqq r_i \circ \varphi$ is called the
+			      \emph{coordinate function};
+			\item $(U, \varphi)$, i.e.\ $\bigl(U, (x_1, \dots, x_d)\bigr)$, is
+			      called a \emph{coordinate system};
+			\item if $p \in U$ s.t.\ $\varphi(p) = 0$, the coordinate system is
+			      said to be \emph{centered at $p$}.
+		\end{itemize}
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Differentiable structure}
+	\begin{definition}[Differentiable structure]
+		A \emph{differentiable structure} $\F$ of class $C^k$
+		($1 \leq k \leq \infty$) on a locally Euclidean space $M$ is a
+		collection of coordinate systems
+		$\{(U_\alpha, \varphi_\alpha) \mid \alpha \in A\}$ satisfying:
+		\begin{enumerate}
+			\item[(a)] the coordinate systems \emph{cover} $M$:
+			      $\displaystyle\bigcup_{\alpha \in A} U_\alpha = M$;
+			\item[(b)] whenever $U_\alpha \cap U_\beta \neq \varnothing$, the map
+			      $\varphi_\alpha \circ \varphi_\beta^{-1}$ defined on the image of
+			      $U_\alpha \cap U_\beta$ is of class $C^k$,
+			      $\forall\, \alpha, \beta \in A$;
+			\item[(c)] the collection $\F$ is \emph{maximal}: if $(U, \varphi)$ is
+			      a coordinate system s.t.\ $\varphi_\alpha \circ \varphi^{-1}$ and
+			      $\varphi \circ \varphi_\alpha^{-1}$ are $C^k$ for all
+			      $\alpha \in A$, then $(U, \varphi) \in \F$.
+		\end{enumerate}
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Differentiable manifolds}
+	\begin{definition}[Differentiable manifold]
+		A \emph{$d$-dimensional differentiable manifold} of class $C^k$ is a
+		pair $(M, \F)$ consisting of a second countable, locally Euclidean space
+		$M$ of dim $d$, together with a differentiable structure $\F$ of class
+		$C^k$.
+	\end{definition}
+	\begin{block}{Remark}
+		If $\F_0 = \{(U_\alpha, \varphi_\alpha) \mid \alpha \in A\}$ is any
+		collection of local coordinate systems satisfying (a) \& (b), there is a
+		\emph{unique maximal} collection containing $\F_0$. Namely
+		\[
+			\F = \bigl\{ (U, \varphi) \bigm|
+			\varphi \circ \varphi_\alpha^{-1} \ \&\ \varphi_\alpha \circ \varphi^{-1}
+			\text{ are } C^k \text{ for all } (U_\alpha, \varphi_\alpha) \in \F_0 \bigr\}.
+		\]
+	\end{block}
+	\begin{exercise}
+		Prove $\F$ satisfies (a) \& (b), as well as (c).
+	\end{exercise}
+\end{frame}
+
+\begin{frame}{Remarks}
+	\begin{block}{Remark (other structures)}
+		There are differentiable structures of class $C^\omega$ and
+		\emph{complex analytic} structures: $C^\omega$ refers to the composition
+		$\varphi_\alpha \circ \varphi_\beta^{-1}$ being given by convergent
+		power series; a complex analytic structure refers to the composition
+		given by holomorphic functions.
+	\end{block}
+	\begin{alertblock}{Remark}
+		In this lecture, we only focus on the differentiable structure of class
+		$C^\infty$.
+	\end{alertblock}
+\end{frame}
+
+%====================================================================
+\section{Examples of Differentiable Manifolds}
+
+\begin{frame}{Examples (a), (b)}
+	\begin{example}
+		$\R^d$ is a manifold. A differentiable structure $\F$ is the
+		\emph{maximal collection} of coordinate systems containing
+		$(\R^d, \mathrm{Id})$.
+	\end{example}
+	\begin{example}
+		A \emph{real} vector space $V$ has a natural manifold structure. Let
+		$\{e_i\}$ be a basis of $V$ and $\{f_i\}$ the dual basis of $V^*$,
+		i.e.\ $f_i(e_j) = \delta_{ij}$. Then $\bigl(V, (f_1, \dots, f_n)\bigr)$
+		is a coordinate system.
+	\end{example}
+\end{frame}
+
+\begin{frame}{Example (c): the $d$-sphere}
+	\begin{example}[The $d$-sphere]
+		$S^d = \{(x_1, \dots, x_{d+1}) \mid x_1^2 + \cdots + x_{d+1}^2 = 1\}$
+		is a manifold. Denote
+		\[
+			n = (0, \dots, 0, 1), \qquad s = (0, \dots, 0, -1).
+		\]
+		Then $\bigl(S^d \setminus \{n\}, \pi_n\bigr)$,
+		$\bigl(S^d \setminus \{s\}, \pi_s\bigr)$ are \emph{local coordinates}
+		(stereographic projections) contained in its differentiable structure
+		$\F$.
+	\end{example}
+	\begin{exercise}
+		Verify that $\pi_n = \varphi_n^{-1}$, where
+		\[
+			\varphi_n(u) = \left( \frac{2u}{1 + \|u\|^2},\;
+			\frac{\|u\|^2 - 1}{1 + \|u\|^2} \right) \in S^d,
+			\qquad u = (u_1, \dots, u_d) \in \R^d .
+		\]
+	\end{exercise}
+\end{frame}
+
+\begin{frame}{Examples (d), (e)}
+	\begin{example}
+		An open subset $U$ of a differentiable manifold $(M, \F_M)$ is itself a
+		differentiable manifold with
+		\[
+			\F_U = \bigl\{ \bigl(U_\alpha \cap U,\;
+			\varphi_\alpha \big|_{U_\alpha \cap U}\bigr) \bigm|
+			(U_\alpha, \varphi_\alpha) \in \F_M \bigr\}.
+		\]
+	\end{example}
+	\begin{example}[The general linear group]
+		$\mathrm{GL}_n(\R) \subset \R^{n^2}$ is an \emph{open subset} of
+		$\R^{n^2}$, therefore it is a manifold --- since
+		$\det: \R^{n^2} \to \R$ is continuous and
+		\[
+			\mathrm{GL}_n(\R) = \det{}^{-1}\bigl(\R \setminus \{0\}\bigr).
+		\]
+	\end{example}
+\end{frame}
+
+\begin{frame}{Example (f): product manifolds}
+	\begin{example}[Product manifolds]
+		Let $(M_1, \F_1)$ and $(M_2, \F_2)$ be differentiable manifolds of dim
+		$d_1, d_2$. Then $M_1 \times M_2$ becomes a differentiable manifold of
+		dim $d_1 + d_2$, with the differentiable structure $\F$ the
+		\emph{maximal collection} containing
+		\[
+			\bigl\{ \bigl(U_\alpha \times V_\beta,\; (\varphi_\alpha, \psi_\beta)\bigr)
+			\bigm| (U_\alpha, \varphi_\alpha) \in \F_1,\;
+			(V_\beta, \psi_\beta) \in \F_2 \bigr\}.
+		\]
+	\end{example}
+\end{frame}
+
+\begin{frame}{Example (g): projective space $\RP^n$}
+	\begin{example}[Projective space]
+		Define $\RP^n$ to be the \emph{quotient topological space} of
+		$\R^{n+1} \setminus \{0\}$:
+		\[
+			\RP^n = \bigl(\R^{n+1} \setminus \{0\}\bigr) \big/ {\sim},
+		\]
+		with ``$\sim$'' the equivalence relation
+		\[
+			X \sim Y \iff \exists\, \lambda \neq 0 \ \text{s.t.}\ X = \lambda Y .
+		\]
+		Introducing \emph{homogeneous coordinates} to denote points of $\RP^n$:
+		\[
+			[x] \coloneqq (x_1 : x_2 : \cdots : x_{n+1}).
+		\]
+	\end{example}
+\end{frame}
+
+\begin{frame}{Example (g): local coordinates on $\RP^n$}
+	\begin{example}[Projective space (continued)]
+		Consider the open set
+		\[
+			U_k = \bigl\{ x \in \R^{n+1} \mid x_k \neq 0 \bigr\} \big/ {\sim}
+			\ \subset \RP^n ,
+		\]
+		and denote
+		\[
+			\varphi_k([x]) = \left( \frac{x_1}{x_k}, \dots,
+			\widehat{\frac{x_k}{x_k}}, \dots, \frac{x_{n+1}}{x_k} \right) \in \R^n .
+		\]
+		Then $(U_k, \varphi_k)$ gives a local coordinate system of $\RP^n$.\\
+		$\Rightarrow$ $\RP^n$ is a differentiable manifold with differentiable
+		structure $\F$ containing
+		\[
+			\bigl\{ (U_k, \varphi_k) \bigm| k = 1, \dots, n+1 \bigr\}.
+		\]
+	\end{example}
+\end{frame}
+
+%====================================================================
+\section{Smooth Functions and Maps}
+
+\begin{frame}{$C^\infty$ functions and $C^\infty$ maps}
+	\begin{definition}[$C^\infty$ functions and $C^\infty$ maps]
+		We say $f: M \to \R$ is a \emph{$C^\infty$ function} on $M$ if
+		$f \circ \varphi_\alpha^{-1}$ is $C^\infty$ for each coordinate map
+		$(U_\alpha, \varphi_\alpha)$ on $M$.
+		\par\medskip
+		A continuous map $f: M \to N$ is a \emph{$C^\infty$ map} between
+		manifolds $M$ and $N$ if
+		\[
+			\psi_\beta \circ f \circ \varphi_\alpha^{-1} \in C^\infty
+			\qquad \text{for all } (U_\alpha, \varphi_\alpha)
+			\text{ on } M \text{ and } (V_\beta, \psi_\beta) \text{ on } N .
+		\]
+	\end{definition}
+\end{frame}
+
+\end{document}
