@@ -7,6 +7,7 @@ In this chapter we shall set the foundations for the study of Lie groups. Of cen
 
 \section{Lie Groups and Their Lie Algebras}
 
+\warnernumber{1}
 \begin{definition}\label{thm:3.1}
 A Lie group $G$ is a differentiable manifold which is also endowed with a group structure such that the map $G \times G \to G$ defined by $(\sigma, \tau) \mapsto \sigma\tau^{-1}$ is $C^\infty$.
 
@@ -14,6 +15,7 @@ Throughout this chapter, G and H will denote Lie groups, and we shall universall
 
 \end{definition}
 
+\warnernumber{2}
 \begin{remarks}\label{thm:3.2}
 (a) Let $G$ be a Lie group. Then the map $\tau \mapsto \tau^{-1}$ is $C^\infty$ since it is the composition $\tau \mapsto (e, \tau) \mapsto \tau^{-1}$ of $C^\infty$ maps. Also, the map $(\sigma, \tau) \mapsto \sigma\tau$ of $G \times G \to G$ is $C^\infty$ since it is the composition $(\sigma, \tau) \mapsto (\sigma, \tau^{-1}) \mapsto \sigma\tau$ of $C^\infty$ maps.
 
@@ -23,6 +25,7 @@ Throughout this chapter, G and H will denote Lie groups, and we shall universall
 
 \end{remarks}
 
+\warnernumber{3}
 \begin{examples}{of Lie Groups}\label{thm:3.3}
 
 (a) The Euclidean space  $ \mathbb{R}^{n} $ is a Lie group under vector addition.
@@ -51,6 +54,7 @@ K becomes a Lie group. This Lie group is the group of affine motions of  $ \math
 
 \end{examples}
 
+\warnernumber{4}
 \begin{definition}\label{thm:3.4}
 A Lie algebra $\mathfrak{g}$ over $\mathbb{R}$ is a real vector space $\mathfrak{g}$ together with a bilinear operator $[,\;]\colon\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$ (called the bracket) such that for all $x,y,z\in\mathfrak{g}$,
 
@@ -70,6 +74,7 @@ The importance of the concept of Lie algebra is that there is a special finite d
 
 \end{definition}
 
+\warnernumber{5}
 \begin{examples}{of Lie Algebras}\label{thm:3.5}
 
 (a) The vector space of all smooth vector fields on the manifold M forms a Lie algebra under the Lie bracket operation on vector fields.
@@ -96,18 +101,19 @@ The proof that the above are Lie algebras is left to the reader as an exercise.
 
 \end{examples}
 
+\warnernumber{6}
 \begin{definition}\label{thm:3.6}
 Let $\sigma \in G$. Left translation by $\sigma$ and right translation by $\sigma$ are respectively the diffeomorphisms $l_{\sigma}$ and $r_{\sigma}$ of $G$ defined by \index{Left translation}\index{Right translation}
 
 \begin{equation}
-\label{eq:3.6:1}
+\tag{1}\label{eq:3.6:1}
 \begin{aligned}{}&{{}l_{\sigma}(\tau)=\sigma\tau,}\\ {}&{{}r_{\sigma}(\tau)=\tau\sigma}\\ \end{aligned}
 \end{equation}
 
 for all $\tau \in G$. If $V$ is a subset of $G$, we denote $r_{\sigma}(V)$ and $l_{\sigma}(V)$ by $V\sigma$ and $\sigma V$ respectively. A vector field $X$ (not assumed a priori to be smooth) on $G$ is called left invariant if for each $\sigma \in G$, $X$ is $l_e$-related to itself; that is,
 
 \begin{equation}
-\label{eq:3.6:2}
+\tag{2}\label{eq:3.6:2}
 dl_{\sigma}\circ X=X\circ l_{\sigma}.
 \end{equation}
 
@@ -115,6 +121,7 @@ The set of all left invariant vector fields on a Lie group $G$ will be denoted b
 
 \end{definition}
 
+\warnernumber{7}
 \begin{proposition}\label{thm:3.7}
 Let $G$ be a Lie group and $\mathfrak{g}$ its set of left invariant vector fields.
 
@@ -132,7 +139,7 @@ Let $G$ be a Lie group and $\mathfrak{g}$ its set of left invariant vector field
 That $\mathfrak{g}$ is a real vector space and that $\alpha$ is linear is clear. $\alpha$ is injective, for if $\alpha(X) = \alpha(Y)$, then for each $\sigma \in G$
 
 \begin{equation}
-\label{eq:3.7:1}
+\tag{1}\label{eq:3.7:1}
 X(\sigma)=d l_{\sigma}\big(X(e)\big)=d l_{\sigma}\big(Y(e)\big)=Y(\sigma);
 \end{equation}
 
@@ -147,14 +154,14 @@ for all  $ \sigma $ and  $ \tau $ in G. This proves part (a).
 For (b), let  $ X \in \mathfrak{g} $, and let  $ f \in C^\infty(G) $. We need only show that  $ X f \in C^\infty(G) $. Now,
 
 \begin{equation}
-\label{eq:3.7:2}
+\tag{2}\label{eq:3.7:2}
 X f(\sigma)=X_{\sigma}f=d l_{\sigma}(X_{e})f=X_{e}(f\circ l_{\sigma}).
 \end{equation}
 
 Thus we need to show that $\sigma \mapsto X_e(f \circ l_\sigma)$ is a $C^\infty$ function on $G$. We do this by exhibiting this function as a suitable composition of $C^\infty$ maps. Let $\varphi: G \times G \to G$ denote group multiplication, $\varphi(\sigma, \tau) = \sigma\tau$. And let $i_e^1$ and $i_\sigma^2$ be the maps of $G \to G \times G$ defined by
 
 \begin{equation}
-\label{eq:3.7:3}
+\tag{3}\label{eq:3.7:3}
 \begin{aligned}{}&{{}i_{e}{}^{1}(\tau)=(\tau,e),}\\ {}&{{}i_{\sigma}{}^{2}(\tau)=(\sigma,\tau).}\\ \end{aligned}
 \end{equation}
 
@@ -170,77 +177,78 @@ Since, by (b), left invariant vector fields are smooth, their Lie brackets are d
 
 \end{proof}
 
+\warnernumber{8}
 \begin{definition}\label{thm:3.8}
 We define the Lie algebra of the Lie group G to be the Lie algebra $\mathfrak{g}$ of left invariant vector fields on $G$. Alternatively, we could take as the Lie algebra of $G$ the tangent space $G_{e}$ at the identity with Lie algebra structure induced by requiring the vector space isomorphism \hyperref[thm:3.7]{3.7(a)} of $\mathfrak{g}$ with $G_{e}$ to be an isomorphism of Lie algebras. It will be convenient at times to consider the Lie algebra from this alternate point of view. In particular, we shall see (3.10 and 3.37) that the Lie algebras of the classical groups admit particularly nice interpretations in terms of their tangent spaces at the identity.
 
 \end{definition}
 
+\warnernumber{9}
 \begin{remarks}{on Vector Spaces as Manifolds}\label{thm:3.9}
 In \hyperref[thm:1.5]{1.5(b)} we observe that any finite dimensional real vector space $V$ is, in a natural way, a differentiable manifold. Let $\{e_i\}$ be a basis of $V$, and let $\{r_i\}$ be the dual basis. Now let $p \in V$. Then there is a natural identification of the tangent space $V_p$, to $V$ at $p$ with $V$ itself, given by
 
 \begin{equation}
-\label{eq:3.9:1}
+\tag{1}\label{eq:3.9:1}
 \left.\Sigma a_{i}\frac{\partial}{\partial r_{i}}\right\vert_{p}\leftrightarrow\left.\Sigma a_{i}e_{i}.\right.
 \end{equation}
 
 It is easily seen that this identification is independent of the basis chosen. We shall often make use of this identification in describing tangent vectors to a vector space as elements of the vector space itself. In particular, if $\sigma(t)$ is a smooth curve in $V$, then
 
 \begin{equation}
-\label{eq:3.9:2}
+\tag{2}\label{eq:3.9:2}
 \dot{\sigma}(t_{0})=\lim_{t\to t_{0}}\frac{\sigma(t)-\sigma(t_{0})}{t-t_{0}}.
 \end{equation}
 
 \end{remarks}
 
+\warnernumber{10}
 \begin{examples}{of Lie Groups and Their Lie Algebras}\label{thm:3.10}
 
 (a) The real line  $ \mathbb{R} $ is a Lie group under addition. The left invariant vector fields are simply the constant vector fields  $ \{\lambda(d/dr): \lambda \in \mathbb{R}\} $. The bracket of any two such vector fields is 0.
 
 (b) The General Linear Group. The set  $ \mathfrak{gl}(n, \mathbb{R}) $ of all  $ n \times n $ real matrices is a real vector space of dimension  $ n^2 $. Matrices are added and multiplied by scalars componentwise. As we have already remarked,  $ \mathfrak{gl}(n, \mathbb{R}) $ becomes a Lie algebra if we set  $ [A, B] = AB - BA $.
 
-The general linear group $Gl(n,\mathbb{R})$ inherits its manifold structure as the open subset of $\mathfrak{gl}(n,\mathbb{R})$ where the determinant function does not vanish, and is a Lie group under matrix multiplication. Let $x_{i}$ be the global coordinate function on $\mathfrak{gl}(n,\mathbb{R})$ which assigns to each matrix
-
-its $ijth$ entry. Then if $\sigma, \tau \in Gl(n, \mathbb{R})$, $x_{ij}(\sigma\tau^{-1})$ is a rational function of $\{x_{kl}(\sigma)\}$ and $\{x_{kl}(\tau)\}$ with non-zero denominator, which proves that the map $(\sigma, \tau) \to \sigma\tau^{-1}$ is $C^\infty$.
+The general linear group $Gl(n,\mathbb{R})$ inherits its manifold structure as the open subset of $\mathfrak{gl}(n,\mathbb{R})$ where the determinant function does not vanish, and is a Lie group under matrix multiplication. Let $x_{ij}$ be the global coordinate function on $\mathfrak{gl}(n,\mathbb{R})$ which assigns to each matrix its $ij$th entry. Then if $\sigma, \tau \in Gl(n, \mathbb{R})$, $x_{ij}(\sigma\tau^{-1})$ is a rational function of $\{x_{kl}(\sigma)\}$ and $\{x_{kl}(\tau)\}$ with non-zero denominator, which proves that the map $(\sigma, \tau) \to \sigma\tau^{-1}$ is $C^\infty$.
 
 Now let $\mathfrak{g}$ be the Lie algebra of $Gl(n,\mathbb{R})$. Let $\alpha: \mathfrak{gl}(n,\mathbb{R})_e \to \mathfrak{gl}(n,\mathbb{R})$ be the canonical identification of the tangent space to $\mathfrak{gl}(n,\mathbb{R})$ at the identity matrix $e$ with $\mathfrak{gl}(n,\mathbb{R})$ itself. Thus for $v \in \mathfrak{gl}(n,\mathbb{R})_e$,
 
 \begin{equation}
-\label{eq:3.10:1}
+\tag{1}\label{eq:3.10:1}
 \alpha(v)_{i j}=v(x_{i j}).
 \end{equation}
 
 Then since $Gl(n,\mathbb{R})_{e}=\mathfrak{gl}(n,\mathbb{R})_{e}$, we have a natural map $\beta\colon\mathfrak{g}\to\mathfrak{gl}(n,\mathbb{R})$ defined by
 
 \begin{equation}
-\label{eq:3.10:2}
+\tag{2}\label{eq:3.10:2}
 \beta(X)=\alpha\bigl(X(e)\bigr).
 \end{equation}
 
 We claim that $\beta$ is a Lie algebra isomorphism, and in this way we consider $\mathfrak{gl}(n,\mathbb{R})$ to be the Lie algebra of $Gl(n,\mathbb{R})$. $\beta$ is clearly a vector space isomorphism. We need only show that
 
 \begin{equation}
-\label{eq:3.10:3}
+\tag{3}\label{eq:3.10:3}
 \beta([X,Y])=[\beta(X),\beta(Y)]
 \end{equation}
 
 whenever $X, Y \in \mathfrak{g}$. Now,
 
 \begin{equation}
-\label{eq:3.10:4}
+\tag{4}\label{eq:3.10:4}
 (x_{i j}\circ l_{\sigma})(\tau)=x_{i j}(\sigma\tau)=\sum_{k}x_{i k}(\sigma)x_{k j}(\tau).
 \end{equation}
 
 Since Y is a left invariant vector field,
 
 \begin{equation}
-\label{eq:3.10:5}
+\tag{5}\label{eq:3.10:5}
 \begin{aligned}{\big(Y(x_{i j})\big)(\sigma)}&{{}=dl_{\sigma}(Y_{e})(x_{i j})=Y_{e}(x_{i j}\circ l_{\sigma})}\\ {}&{{}=\sum_{k}x_{i k}(\sigma)Y_{e}(x_{k j})=\sum_{k}x_{i k}(\sigma)\alpha(Y_{e})_{k j}}\\ {}&{{}=\sum_{k}x_{i k}(\sigma)\beta(Y)_{k j}.}\\ \end{aligned}
 \end{equation}
 
-Using (5), we now compute the  $ ijth $ component of  $ \beta([X,Y]) $:
+Using (5), we now compute the  $ij$th component of  $ \beta([X,Y]) $:
 
 \begin{equation}
-\label{eq:3.10:6}
+\tag{6}\label{eq:3.10:6}
 \begin{aligned}{\beta([X,Y])_{i j}}&{{}=[X,Y]_{e}(x_{i j})=X_{e}\big(Y(x_{i j})\big)-Y_{e}\big(X(x_{i j})\big)}\\ {}&{{}=\sum_{k}\left\{X_{e}(x_{i k})\beta(Y)_{k j}-Y_{e}(x_{i k})\beta(X)_{k j}\right\}}\\ {}&{{}=\sum_{k}\left\{\beta(X)_{i k}\beta(Y)_{k j}-\beta(Y)_{i k}\beta(X)_{k j}\right\}}\\ {}&{{}=[\beta(X),\beta(Y)]_{i j}.}\\ \end{aligned}
 \end{equation}
 
@@ -260,18 +268,19 @@ A basis of $V$ determines a diffeomorphism of $\mathrm{End}(V)$ with $\mathfrak{
 
 \end{examples}
 
+\warnernumber{11}
 \begin{definition}\label{thm:3.11}
 A form  $ \omega $ on G is called left invariant if
 
 \begin{equation}
-\label{eq:3.11:1}
+\tag{1}\label{eq:3.11:1}
 \delta l_{\sigma}\omega=\omega
 \end{equation}
 
 for each $\sigma \in G$. As in the case of left invariant vector fields, it is not necessary to assume that left invariant forms are smooth, for smoothness is a consequence of the left invariance. We shall denote the vector space of left invariant $p$-forms on $G$ by $E_{l\,\mathrm{inv}}^{p}(G)$, and we let \index{Left invariant forms}
 
 \begin{equation}
-\label{eq:3.11:2}
+\tag{2}\label{eq:3.11:2}
 E^{*}_{l\,\mathrm{inv}}(G)=\sum_{p=0}^{\dim G}E_{l\,\mathrm{inv}}^{p}(G).
 \end{equation}
 
@@ -281,6 +290,7 @@ Left invariant 1-forms are also known as Maurer-Cartan forms. \index{Maurer-Cart
 
 The following proposition is the analog for left invariant forms of 3.7. The proofs are straightforward, and we leave them to the reader as an exercise.
 
+\warnernumber{12}
 \begin{proposition}\label{thm:3.12}
 (a) Left invariant forms are smooth.
 
@@ -291,28 +301,28 @@ The following proposition is the analog for left invariant forms of 3.7. The pro
 (d) If  $ \omega \in E_{l\,\mathrm{inv}}^{1}(G) $ and  $ X, Y \in \mathfrak{g} $, then it follows from \hyperref[thm:2.25]{2.25(f)} that
 
 \begin{equation}
-\label{eq:3.12:1}
+\tag{1}\label{eq:3.12:1}
 d\omega(X,Y)=-\omega[X,Y].
 \end{equation}
 
 (e) Let $\{X_{1}, \ldots, X_{d}\}$ be a basis of $\mathfrak{g}$ with dual basis $\{\omega_{1}, \ldots, \omega_{d}\}$ for $E_{l\,\mathrm{inv}}^{1}(G)$. Then there exist constants $c_{ijk}$ such that
 
 \begin{equation}
-\label{eq:3.12:2}
+\tag{2}\label{eq:3.12:2}
 [X_{i},X_{j}]=\sum_{k=1}^{d}c_{i j k}X_{k}.
 \end{equation}
 
 (The $c_{ijk}$ are called the structural constants of $G$ with respect to the basis $\{X_{i}\}$ of $\mathfrak{g}$.) They satisfy
 
 \begin{equation}
-\label{eq:3.12:3}
+\tag{3}\label{eq:3.12:3}
 \begin{array}{c}{c_{i j k}+c_{j i k}=0,}\\ {\sum_{r}(c_{i j r}c_{r k s}+c_{j k r}c_{r i s}+c_{k i r}c_{r j s})=0.}\\ \end{array}
 \end{equation}
 
 The exterior derivatives of the $\omega_{i}$ are given by the Maurer-Cartan equations
 
 \begin{equation}
-\label{eq:3.12:4}
+\tag{4}\label{eq:3.12:4}
 d\omega_{i}=\sum_{j<k}c_{j k i}\omega_{k}\wedge\omega_{j}.
 \end{equation}
 
@@ -320,6 +330,7 @@ d\omega_{i}=\sum_{j<k}c_{j k i}\omega_{k}\wedge\omega_{j}.
 
 \section{Homomorphisms}
 
+\warnernumber{13}
 \begin{definition}\label{thm:3.13}
 A map $\varphi: G \to H$ is a (Lie group) homomorphism if $\varphi$ is both $C^\infty$ and a group homomorphism of the abstract groups. We call $\varphi$ an isomorphism if, in addition, $\varphi$ is a diffeomorphism. An isomorphism of a Lie group with itself is called an automorphism. If $H = \text{Aut}(V)$ for some vector space $V$, or if $H = \text{Gl}(n, \mathbb{C})$ or $\text{Gl}(n, \mathbb{R})$, then a homomorphism $\varphi: G \to H$ is called a representation of the Lie group $G$.
 
@@ -328,19 +339,20 @@ If $\mathfrak{g}$ and $\mathfrak{h}$ are Lie algebras, a map $\psi\colon\mathfra
 Let $\varphi: G \to H$ be a homomorphism. Then since $\varphi$ maps the identity of $G$ to the identity of $H$, the differential $d\varphi$ of $\varphi$ is a linear transformation of $G_e$ into $H_e$. By means of the natural identifications of the tangent spaces at the identities with the Lie algebras, this linear transformation $d\varphi$ of $G_e$ into $H_e$ induces a linear transformation of $\mathfrak{g}$ into $\mathfrak{h}$ which we shall denote also by $d\varphi$. Thus
 
 \begin{equation}
-\label{eq:3.13:1}
+\tag{1}\label{eq:3.13:1}
 d\varphi\colon\mathfrak{g}\to\mathfrak{h},
 \end{equation}
 
 where if $X\in\mathfrak{g}$, then $d\varphi(X)$ is the unique left invariant vector field on $H$ such that
 
 \begin{equation}
-\label{eq:3.13:2}
+\tag{2}\label{eq:3.13:2}
 d\varphi(X)(e)=d\varphi\bigl(X(e)\bigr).
 \end{equation}
 
 \end{definition}
 
+\warnernumber{14}
 \begin{theorem}\label{thm:3.14}
 Let G and H be Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$ respectively, and let $\varphi\colon G\to H$ be a homomorphism. Then
 
@@ -354,69 +366,70 @@ Let G and H be Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$ re
 Let  $ \tilde{X} = d\varphi(X) $. Then  $ \tilde{X} $ and  $ X $ are  $ \varphi $-related. For since  $ \varphi $ is a homomorphism,  $ l_{\varphi(\sigma)} \circ \varphi = \varphi \circ l_{\sigma} $; hence
 
 \begin{equation}
-\label{eq:3.14:1}
+\tag{1}\label{eq:3.14:1}
 \begin{aligned}{\tilde{X}\big(\varphi(\sigma)\big)}&{{}=d l_{\varphi(\sigma)}\tilde{X}(e)=d l_{\varphi(\sigma)}d\varphi\big(X(e)\big)}\\ {}&{{}=d(l_{\varphi(\sigma)}\circ\varphi)X(e)=d(\varphi\circ l_{\sigma})X(e)=d\varphi\big(X(\sigma)\big).}\\ \end{aligned}
 \end{equation}
 
 This proves part (a). Now let $X, Y \in \mathfrak{g}$. Then for part (b), we must show that
 
 \begin{equation}
-\label{eq:3.14:2}
+\tag{2}\label{eq:3.14:2}
 [\widetilde{X,Y}]=[\widetilde{X},\widetilde{Y}].
 \end{equation}
 
 By 1.55, [X,Y] is  $ \varphi $-related to the left invariant vector field  $ [\tilde{X},\tilde{Y}] $. In particular,
 
 \begin{equation}
-\label{eq:3.14:3}
+\tag{3}\label{eq:3.14:3}
 [\tilde{X},\tilde{Y}](e)=d\varphi\big([X,Y](e)\big).
 \end{equation}
 
 But  $ [X,Y] $, by \hyperref[thm:3.13]{Definition 3.13}(2), is the unique left invariant vector field on H whose value at the identity is  $ d\varphi([X,Y](e)) $. Thus (2) holds, and the theorem is proved.
 
 \end{proof}
-\subsection{Effect of Homomorphisms on Left Invariant Forms}\label{thm:3.15}
+\warnernumber{15}
+\discuss{3.15}{Effect of Homomorphisms on Left Invariant Forms}\label{thm:3.15}
 Let  $ \varphi: G \to H $ be a homomorphism. Then  $ \delta\varphi $ pulls left invariant forms on H back to left invariant forms on G, since whenever  $ \omega $ is a left invariant form
 
 on H,
 
 \begin{equation}
-\label{eq:3.15:1}
+\tag{1}\label{eq:3.15:1}
 \begin{aligned}{\delta l_{\sigma}\delta\varphi(\omega)}&{{}=\delta(\varphi\circ l_{\sigma})\omega=\delta(l_{\varphi(\sigma)}\circ\varphi)\omega}\\ {}&{{}=\delta\varphi\delta l_{\varphi(\sigma)}(\omega)=\delta\varphi(\omega).}\\ \end{aligned}
 \end{equation}
 
 Moreover, the mapping $\delta\varphi\colon E_{l\,\mathrm{inv}}^{1}(H)\to E_{l\,\mathrm{inv}}^{1}(G)$, considered as a mapping of the dual space of $\mathfrak{h}$ to the dual space of $\mathfrak{g}$, is precisely the transpose of $d\varphi\colon\mathfrak{g}\to\mathfrak{h}$; that is,
 
 \begin{equation}
-\label{eq:3.15:2}
+\tag{2}\label{eq:3.15:2}
 \big(\delta\varphi(\omega)\big)(X)=\omega\big(d\varphi(X)\big)\qquad\big(\omega\in E_{l\,\mathrm{inv}}^{1}(H);\quad X\in\mathfrak{g}\big).
 \end{equation}
 
 Recall that if $\{\omega_1, \ldots, \omega_d\}$ is a basis of $E_{l\,\mathrm{inv}}^{1}(H)$, then there are structural constants $\{c_{ijk}\}$ (see \eqref{eq:3.12:4}) such that
 
 \begin{equation}
-\label{eq:3.15:3}
+\tag{3}\label{eq:3.15:3}
 d\omega_{i}=\sum_{j<k}c_{j k i}\omega_{k}\wedge\omega_{j}.
 \end{equation}
 
 Thus since $d$ and $\delta\varphi$ commute,
 
 \begin{equation}
-\label{eq:3.15:4}
+\tag{4}\label{eq:3.15:4}
 d\big(\delta\varphi(\omega_{i})\big)=\sum_{j<k}c_{j k i}\;\delta\varphi(\omega_{k})\wedge\delta\varphi(\omega_{j}).
 \end{equation}
 
 Now let $\pi_{1}$ and $\pi_{2}$ be the canonical projections of $G \times H$ onto $G$ and $H$ respectively. Then the ideal $\mathcal{J}$ of forms on $G \times H$ generated by the collection of independent 1-forms
 
 \begin{equation}
-\label{eq:3.15:5}
+\tag{5}\label{eq:3.15:5}
 \{\delta\pi_{1}\delta\varphi(\omega_{i})-\delta\pi_{2}(\omega_{i})\colon i=1,\ldots,d\}
 \end{equation}
 
 is a differential ideal; for using (4), we obtain for each i,
 
 \begin{equation}
-\label{eq:3.15:6}
+\tag{6}\label{eq:3.15:6}
 \begin{aligned}{d\big(\delta\pi_{1}\delta\varphi(\omega_{i})}&{{}-\delta\pi_{2}(\omega_{i})\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}\big(\delta\pi_{1}\delta\varphi(\omega_{k})\wedge\delta\pi_{1}\delta\varphi(\omega_{j})-\delta\pi_{2}(\omega_{k})\wedge\delta\pi_{2}(\omega_{j})\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}[\{\delta\pi_{1}\delta\varphi(\omega_{k})-\delta\pi_{2}(\omega_{k})\}\wedge\delta\pi_{1}\delta\varphi(\omega_{j})}\\ {}&{{}\quad+\delta\pi_{2}(\omega_{k})\wedge\{\delta\pi_{1}\delta\varphi(\omega_{j})-\delta\pi_{2}(\omega_{j})\}],}\\ \end{aligned}
 \end{equation}
 
@@ -425,28 +438,28 @@ which belongs to the ideal $\mathcal{J}$. Moreover, observe that the 1-forms (5)
 To carry out the above construction of a differential ideal on $G \times H$, it is sufficient to start simply with a homomorphism of the Lie algebras rather than a homomorphism of the Lie groups. Let $G$ and $H$ be Lie groups, and let $\psi\colon\mathfrak{g}\to\mathfrak{h}$ be a homomorphism of their Lie algebras. $\psi$ has a transpose $\psi^*: E_{l\,\mathrm{inv}}^{1}(H) \to E_{l\,\mathrm{inv}}^{1}(G)$, namely,
 
 \begin{equation}
-\label{eq:3.15:7}
+\tag{7}\label{eq:3.15:7}
 \big(\psi^{*}(\omega)\big)(X)=\omega\big(\psi(X)\big)\qquad\big(\omega\in E_{l\,\mathrm{inv}}^{1}(H);X\in\mathfrak{g}\big).
 \end{equation}
 
 Let $\{\omega_i\}$ be a basis of $E^{1}_{l\,\mathrm{inv}}(H)$. Then we claim that the ideal $\mathcal{J}$ of forms on $G \times H$ generated by the collection of independent 1-forms
 
 \begin{equation}
-\label{eq:3.15:8}
+\tag{8}\label{eq:3.15:8}
 \{\delta\pi_{1}(\psi^{*}(\omega_{i}))-\delta\pi_{2}(\omega_{i})\colon i=1,\cdots,d\}
 \end{equation}
 
 is a differential ideal. This follows from a computation similar to (6) together with the observation that
 
 \begin{equation}
-\label{eq:3.15:9}
+\tag{9}\label{eq:3.15:9}
 d\bigl(\psi^{*}(\omega_{i})\bigr)=\sum_{j<k}c_{j k i}\psi^{*}(\omega_{k})\wedge\psi^{*}(\omega_{j}).
 \end{equation}
 
 To prove (9), it suffices to prove that both sides have the same effect on an arbitrary pair X, Y of left invariant vector fields on G:
 
 \begin{equation}
-\label{eq:3.15:10}
+\tag{10}\label{eq:3.15:10}
 \begin{aligned}{d\big(\psi^{*}(\omega_{i})\big)(X,Y)}&{{}=-\psi^{*}(\omega_{i})[X,Y]=-\omega_{i}[\psi(X),\psi(Y)]}\\ {}&{{}=d\omega_{i}\big(\psi(X),\psi(Y)\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}\omega_{k}\wedge\omega_{j}\big(\psi(X),\psi(Y)\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}\psi^{*}(\omega_{k})\wedge\psi^{*}(\omega_{j})(X,Y).}\\ \end{aligned}
 \end{equation}
 
@@ -454,6 +467,7 @@ Here the first and third equalities follow from \eqref{eq:3.12:1}. Finally, obse
 
 We shall make use of these ideals on  $ G \times H $ in proving existence and uniqueness of homomorphisms in various situations.
 
+\warnernumber{16}
 \begin{theorem}\label{thm:3.16}
 Let G be connected, and let $\varphi$ and $\psi$ be homomorphisms of G into $H$ such that the Lie algebra homomorphisms $d\varphi$ and $d\psi$ of $\mathfrak{g}$ into $\mathfrak{h}$ are identical. Then $\varphi = \psi$.
 
@@ -463,7 +477,7 @@ Let G be connected, and let $\varphi$ and $\psi$ be homomorphisms of G into $H$ 
 Since  $ d\varphi = d\psi $, we have
 
 \begin{equation}
-\label{eq:3.16:1}
+\tag{1}\label{eq:3.16:1}
 \begin{array}{r}{\delta\varphi=\delta\psi\colon E_{l\,\mathrm{inv}}^{1}(H)\to E_{l\,\mathrm{inv}}^{1}(G).}\end{array}
 \end{equation}
 
@@ -473,6 +487,7 @@ Thus we have two $C^\infty$ maps $\varphi$ and $\psi$ of the connected manifold 
 
 \section{Lie Subgroups}
 
+\warnernumber{17}
 \begin{definition}\label{thm:3.17}
 $(H,\varphi)$ is a Lie subgroup of the Lie group $G$ if \index{Lie subgroup}
 
@@ -494,11 +509,12 @@ We are now going to prove one of the fundamental theorems of Lie group theory, w
 
 \end{definition}
 
+\warnernumber{18}
 \begin{proposition}\label{thm:3.18}
 Let G be a connected Lie group, and let U be a neighborhood of e. Then
 
 \begin{equation}
-\label{eq:3.18:1}
+\tag{1}\label{eq:3.18:1}
 G=\bigcup_{n=1}^{\infty}U^{n}
 \end{equation}
 
@@ -510,14 +526,14 @@ where $U^{n}$ consists of all $n$-fold products of elements of $U$. (We say that
 Let $V$ be an open subset of $U$ containing $e$ such that $V = V^{-1}$ (where $V^{-1} = \{\sigma^{-1}: \sigma \in V\}$). For example, $V = U \cap U^{-1}$ will do. Let
 
 \begin{equation}
-\label{eq:3.18:2}
+\tag{2}\label{eq:3.18:2}
 H=\bigcup_{n=1}^{\infty}V^{n}\subset\bigcup_{n=1}^{\infty}U^{n}.
 \end{equation}
 
 Then $H$ is an abstract subgroup of $G$ and is an open subset of $G$ since $\sigma \in H$ implies $\sigma V \subset H$. Thus each coset mod $H$ is open in $G$. Now, $H$ is the complement in $G$ of the union of all the cosets mod $H$ different from $H$ itself. Therefore $H$ is also a closed subset of $G$. Since $G$ is connected, and $H$ is also non-empty, $H$ must be all of $G$. This together with (2) implies (1).
-
 \end{proof}
 
+\warnernumber{19}
 \begin{theorem}\label{thm:3.19}
 Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and let $\widetilde{\mathfrak{h}} \subset \mathfrak{g}$ be a subalgebra. Then there is a unique connected Lie subgroup $(H, \varphi)$ of $G$ such that $d\varphi(\mathfrak{h}) = \widetilde{\mathfrak{h}}$.
 
@@ -527,14 +543,14 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and let $\widetilde{\mat
 We define a distribution $\mathcal{D}$ on $G$ by setting
 
 \begin{equation}
-\label{eq:3.19:1}
+\tag{1}\label{eq:3.19:1}
 \mathcal{D}(\sigma)=\{X(\sigma)\colon X\in\tilde{\mathfrak{h}}\}
 \end{equation}
 
 for each $\sigma \in G$. Let $\dim \tilde{\mathfrak{h}}=d$. Then $\mathcal{D}$ is of dimension $d$. $\mathcal{D}$ is smooth since $\mathcal{D}$ is globally spanned by a basis $X_1, \ldots, X_d$ for $\widetilde{\mathfrak{h}}$. Moreover, $\mathcal{D}$ is involutive, since if $X$ and $Y$ are vector fields lying in $\mathcal{D}$, then there are $C^\infty$ functions $\{a_i\}$ and $\{b_i\}$ on $G$ such that $X = \sum a_i X_i$ and $Y = \sum b_i X_i$, and thus
 
 \begin{equation}
-\label{eq:3.19:2}
+\tag{2}\label{eq:3.19:2}
 [X,Y]=\sum_{i,j=1}^{d}\{a_{i}b_{j}[X_{i},X_{j}]+a_{i}X_{i}(b_{j})X_{j}-b_{j}X_{j}(a_{i})X_{i}\},
 \end{equation}
 
@@ -543,7 +559,7 @@ which again is a vector field in $\mathcal{D}$ since $\tilde{\mathfrak{h}}$ is a
 Let $(H,\varphi)$ be a maximal connected integral manifold of $\mathcal{D}$ through $e$ (see 1.64). Let $\sigma\in\varphi(H)$. Since $\mathcal{D}$ is invariant under left translations, $(H,l_{\sigma^{-1}}\circ\varphi)$ is also an integral manifold of $\mathcal{D}$ through $e$. Thus by the maximality, $l_{\sigma^{-1}}\circ\varphi(H)\subset\varphi(H)$. Therefore if $\sigma\in\varphi(H)$ and $\tau\in\varphi(H)$, then also $\sigma^{-1}\tau\in\varphi(H)$. It follows that $\varphi(H)$ is an abstract subgroup of $G$. Thus we can induce a group structure on $H$ so that $\varphi:H\to G$ is a homomorphism of abstract groups. It remains only to check that $H$ is a Lie group, that is, the map $\alpha:H\times H\to H$ where $\alpha(\sigma,\tau)=\sigma\tau^{-1}$ is $C^\infty$. Now, the map $\beta:H\times H\to G$ sending $(\sigma,\tau)\mapsto\varphi(\sigma)\varphi(\tau)^{-1}$ is $C^\infty$, and we have the following commutative diagram:
 
 \begin{center}
-\includegraphics[width=0.24\textwidth]{figures/ch3_img_in_image_box_353_929_594_1061.jpg}
+\redrawn{figure-26}
 \end{center}
 
 Since $(H,\varphi)$ is an integral manifold of an involutive distribution on $G$, it follows from 1.62 that $\alpha$ is $C^\infty$. Thus $(H,\varphi)$ is a Lie subgroup of $G$; and if $\mathfrak{h}$ is the Lie algebra of $H$, clearly $d\varphi(\mathfrak{h})=\widetilde{\mathfrak{h}}$.
@@ -551,7 +567,7 @@ Since $(H,\varphi)$ is an integral manifold of an involutive distribution on $G$
 For uniqueness, let $(K,\psi)$ be another connected Lie subgroup of $G$ with $d\psi(\mathfrak{k})=\tilde{\mathfrak{h}}$. Then $(K,\psi)$ must also be an integral manifold of $\mathcal{D}$ through $e$. By the maximality of $(H,\varphi)$, $\psi(K)\subset\varphi(H)$, and there is uniquely determined a map $\eta$ such that $\varphi\circ\eta=\psi$.
 
 \begin{center}
-\includegraphics[width=0.20\textwidth]{figures/ch3_img_in_image_box_399_221_592_346.jpg}
+\redrawn{figure-27}
 \end{center}
 
 $\eta$ is smooth by 1.62, and consequently is an injective Lie group homomorphism. Moreover, $\eta$ is everywhere non-singular; in particular, $\eta$ is a diffeomorphism on a neighborhood of the identity, and therefore is surjective by 3.18. Thus $\eta$ is a Lie group isomorphism, and the subgroups $(K,\psi)$ and $(H,\varphi)$ are equivalent. This proves uniqueness.
@@ -574,6 +590,7 @@ Suppose that the ideal $\mathcal{J}$ generated by a collection $\{\omega_1, \ldo
 
 The following theorem should be compared with the situation for submanifolds (see 1.33).
 
+\warnernumber{20}
 \begin{theorem}\label{thm:3.20}
 If an abstract subgroup $A$ of a Lie group $G$ has a manifold structure (that is, a second countable locally Euclidean topology together with a differentiable structure) which makes $(A,i)$ into a submanifold of $G$, where $i$ is the inclusion map, then it has a unique such manifold structure, and in this manifold structure, $A$ is a Lie group, and hence $(A,i)$ is a Lie subgroup of $G$.
 
@@ -593,7 +610,7 @@ This map is non-singular at the origin, thus is a diffeomorphism of a neighborho
 It follows that for any $\sigma\in G$, $(A,l_{\sigma})$ is an integral manifold of $\mathcal{D}$ through $\sigma$. Thus by 1.59, $\mathcal{D}$ is an involutive distribution; and now it follows from an argument as in \hyperref[thm:3.19]{3.19(3)} that the map $(\sigma,\tau)\to\sigma\tau^{-1}$ of $A\times A\to A$ is $C^{\infty}$, which proves that $A$ is a Lie group. Now suppose that we have two manifold structures on $A$ for which $(A,i)$ is a submanifold. Denote $A$ with these manifold structures by $A_{1}$ and $A_{2}$ respectively. Then $(A_{1},i)$ and $(A_{2},i)$ are both integral manifolds of involutive distributions on $G$; hence 1.62 applied to the commutative diagram
 
 \begin{center}
-\includegraphics[width=0.21\textwidth]{figures/ch3_img_in_image_box_365_968_576_1111.jpg}
+\redrawn{figure-28}
 \end{center}
 
 implies that the identity map id: $A_{1} \to A_{2}$ is a diffeomorphism. Thus there is a unique such manifold structure on $A$.
@@ -604,6 +621,7 @@ We are now in a position to describe exactly in which situation a Lie subgroup $
 
 \end{proof}
 
+\warnernumber{21}
 \begin{theorem}\label{thm:3.21}
 Let $(H^{d},\varphi)$ be a Lie subgroup of $G^{c}$. Then $\varphi$ is an imbedding (that is, $\varphi$ is a homeomorphism of $H$ with $\varphi(H)$ in the relative topology) if and only if $(H,\varphi)$ is a closed subgroup of $G$ (that is, $\varphi(H)$ is closed in $G$).
 
@@ -613,19 +631,19 @@ Let $(H^{d},\varphi)$ be a Lie subgroup of $G^{c}$. Then $\varphi$ is an imbeddi
 Assume that $\varphi(H)$ is closed in $G$. It suffices to prove that there is some non-empty open set $V \subset H$ such that $\varphi \mid V$ is a homeomorphism of $V$ into $\varphi(H)$ where $\varphi(H)$ has the relative topology. For then it follows from the fact that $\varphi$ commutes with left translations $(\varphi\circ l_{\sigma}=l_{\varphi(\sigma)}\circ\varphi)$ that $\varphi$ is an imbedding on all of $H$. By 3.19, Corollary (b), and by 1.60, there exists a cubic-centered coordinate system $(U, \tau)$ about $e \in G$ such that $\varphi(H) \cap U$ consists of a union (at most countable) of slices of the form
 
 \begin{equation}
-\label{eq:3.21:1}
+\tag{1}\label{eq:3.21:1}
 \tau_{i}=\mathrm{constant}\qquad\mathrm{for~all~}i\in\{d+1,\ldots,c\},
 \end{equation}
 
 including at least the slice through $e$. Let $C$ be a closed subset of $U$ containing $e$ whose image under $\tau$ is a cube, and let $S$ be the slice of $C$ given by
 
 \begin{equation}
-\label{eq:3.21:2}
+\tag{2}\label{eq:3.21:2}
 \tau_{1}=0,\ldots,\tau_{d}=0.
 \end{equation}
 
 \begin{center}
-\includegraphics[width=0.41\textwidth]{figures/ch3_img_in_image_box_343_810_737_1070.jpg}
+\redrawn{figure-29}
 \end{center}
 
 Then  $ \tau(\varphi(H) \cap S) $ is a non-empty, closed, countable subset of  $ \mathbb{R}^{c-d} $. Now, any closed countable subset of Euclidean space must have an isolated point. Otherwise, such a set with the induced metric would be a
@@ -640,6 +658,7 @@ Conversely, suppose that $\varphi$ is an imbedding. Let $\{\sigma_i\}$ be a sequ
 
 We shall assume that the reader has some familiarity with the notions of homotopy, fundamental group, simple connectivity, and covering space. In \hyperref[thm:3.23]{Theorem 3.23} we state three of the fundamental facts on covering spaces which we shall need. The proofs are sketched in Exercise 7 at the end of this chapter. Details of the proofs and additional facts on covering spaces may be found, for example, in [26] or [28].
 
+\warnernumber{22}
 \begin{definition}\label{thm:3.22}
 Before stating \hyperref[thm:3.23]{Theorem 3.23}, we recall a few definitions and establish some notation. We let  $ \pi_1(X, x_0) $ denote the fundamental group of the topological space  $ X $ with base point  $ x_0 \in X $. We let  $ \pi \colon (X, x_0) \to (Y, y_0) $ denote a mapping of the topological space  $ X $ into the topological space  $ Y $ sending the base point  $ x_0 $ in  $ X $ to the base point  $ y_0 $ in  $ Y $, and we denote the corresponding induced homomorphism of the fundamental groups by  $ \pi_* \colon \pi_1(X, x_0) \to \pi_1(Y, y_0) $.
 
@@ -651,11 +670,12 @@ A topological space Y is called semi-locally 1-connected if each point $y \in Y$
 
 \end{definition}
 
+\warnernumber{23}
 \begin{theorem}\label{thm:3.23}
 (a) Let $\pi: (X, x_0) \to (Y, y_0)$ be a covering. Let $Z$ be a pathwise connected and locally pathwise connected topological space, and let $\alpha: (Z, z_0) \to (Y, y_0)$ be a continuous map such that $\alpha_*(\pi_1(Z, z_0)) \subset \pi_*(\pi_1(X, x_0))$. Then there exists a unique continuous map $\tilde{\alpha}: (Z, z_0) \to (X, x_0)$ such that $\pi \circ \tilde{\alpha} = \alpha$.
 
 \begin{center}
-\includegraphics[width=0.28\textwidth]{figures/ch3_img_in_image_box_353_266_620_408.jpg}
+\redrawn{figure-30}
 \end{center}
 
 (b) If X is a pathwise connected, locally pathwise connected, and semilocally 1-connected topological space, then X has a simply connected covering space.
@@ -663,29 +683,32 @@ A topological space Y is called semi-locally 1-connected if each point $y \in Y$
 (c) If  $ \pi: X \to Y $ is a covering and Y is simply connected, then  $ \pi $ is a homeomorphism.
 
 \end{theorem}
-\subsection{Simply Connected Covering Group}\label{thm:3.24}
+\warnernumber{24}
+\discuss{3.24}{Simply Connected Covering Group}\label{thm:3.24}
 Let $\pi: \widetilde{M} \to M$ be a covering of a differentiable manifold $M$. Then $\widetilde{M}$ is automatically a locally Euclidean, second countable (cf. Exercise 8) Hausdorff space, and there is a unique differentiable structure on $\widetilde{M}$ for which the covering map $\pi$ is $C^\infty$ and non-singular. This differentiable structure is obtained simply by requiring that the local homeomorphisms obtained from $\pi$ over evenly covered open sets be diffeomorphisms.
 
 Now let $G$ be a connected Lie group. By $3.23(b)$, $G$ has a covering $\pi: \tilde{G} \to G$ with $\tilde{G}$ simply connected. As we have observed, $\tilde{G}$ has a unique differentiable structure for which $\pi$ is $C^\infty$ and non-singular. We shall now show that a group structure can be induced in $\tilde{G}$ making $\tilde{G}$ into a Lie group and making $\pi$ into a Lie group homomorphism. Consider the map $\alpha: \tilde{G} \times \tilde{G} \to G$ such that $\alpha(\tilde{\sigma}, \tilde{\tau}) = \pi(\tilde{\sigma}) \pi(\tilde{\tau})^{-1}$. Choose $\tilde{\varepsilon} \in \pi^{-1}(e)$. Since $\tilde{G} \times \tilde{G}$ is simply connected, it follows from $3.23(a)$ that a unique mapping $\tilde{\alpha}: \tilde{G} \times \tilde{G} \to \tilde{G}$ exists such that $\pi \circ \tilde{\alpha} = \alpha$ and such that $\tilde{\alpha}(\tilde{\varepsilon}, \tilde{\varepsilon}) = \tilde{\varepsilon}$. For $\tilde{\sigma}$ and $\tilde{\tau}$ in $\tilde{G}$ we define
 
 \begin{equation}
-\label{eq:3.24:1}
+\tag{1}\label{eq:3.24:1}
 \tilde{\tau}^{-1}=\tilde{\alpha}(\tilde{e},\tilde{\tau}),\quad\tilde{\sigma}\tilde{\tau}=\tilde{\alpha}(\tilde{\sigma},\tilde{\tau}^{-1}).
 \end{equation}
 
 It follows easily from applications of the uniqueness part of \hyperref[thm:3.23]{3.23(a)} that $\tilde{\sigma}\tilde{e}=\tilde{e}\tilde{\sigma}=\tilde{\sigma}$, for the maps $\tilde{\sigma}\mapsto\tilde{\sigma}\tilde{e}$, $\tilde{\sigma}\mapsto\tilde{e}\tilde{\sigma}$, and $\tilde{\sigma}\mapsto\tilde{\sigma}$ of $\tilde{G}\to\tilde{G}$ all make the following diagram commute, and they all send $\tilde{e}$ to $\tilde{e}$.
 
 \begin{center}
-\includegraphics[width=0.20\textwidth]{figures/ch3_img_in_image_box_377_1064_567_1211.jpg}
+\redrawn{figure-31}
 \end{center}
 
 Thus since $\tilde{G}$ is simply connected, it follows from the uniqueness in \hyperref[thm:3.23]{3.23(a)} that these maps are all identical. Similarly, if follows that $\tilde{\sigma}\tilde{\sigma}^{-1}=\tilde{\sigma}^{-1}\tilde{\sigma}=\tilde{\varepsilon}$, and that $(\tilde{\sigma}\tilde{\tau})\tilde{\gamma}=\tilde{\sigma}(\tilde{\tau}\tilde{\gamma})$ for all $\tilde{\sigma},\tilde{\tau},\tilde{\gamma}\in\tilde{G}$. Thus (1) makes $\tilde{G}$ into an abstract group; and since $\tilde{\alpha}$ is smooth, $\tilde{G}$ is a Lie group. Also, (1) implies that $\pi(\tilde{\tau}^{-1})=\pi(\tilde{\tau})^{-1}$ and that $\pi(\tilde{\sigma}\tilde{\tau})=\pi(\tilde{\sigma})\pi(\tilde{\tau})$; hence $\pi:\tilde{G}\to G$ is a Lie group homomorphism. Thus we have proved the following.
 
+\warnernumber{25}
 \begin{theorem}\label{thm:3.25}
 Each connected Lie group has a simply connected covering space which is itself a Lie group such that the covering map is a Lie group homomorphism.
 
 \end{theorem}
 
+\warnernumber{26}
 \begin{proposition}\label{thm:3.26}
 Let G and H be connected Lie groups, and let $\varphi: G \to H$ be a homomorphism. Then $\varphi$ is a covering map if and only if $d\varphi\colon G_{e}\to H_{e}$ is an isomorphism.
 
@@ -697,21 +720,21 @@ Suppose first that $\varphi$ is a covering. Then $d\varphi\mid G_{e}$ must be in
 Conversely, suppose that $d\varphi:G_{e}\to H_{e}$ is an isomorphism. Then $\varphi$ is everywhere a local diffeomorphism. Thus, by 3.18, $\varphi$ maps $G$ onto $H$ since $\varphi$ is a homomorphism and since $\varphi(G)$ contains a neighborhood of the identity in the connected Lie group $H$. $G$ certainly is pathwise and locally pathwise connected, so to prove that $\varphi$ is a covering map, it only remains to show that each point of $H$ is contained in an evenly covered neighborhood. Let
 
 \begin{equation}
-\label{eq:3.26:1}
+\tag{1}\label{eq:3.26:1}
 D=\ker\varphi=\varphi^{-1}(e).
 \end{equation}
 
 Then since $\varphi$ is a local diffeomorphism, $D$ is a discrete normal subgroup of $G$, where “discrete” means that if $\sigma \in D$, then there is an open set $V$ in $G$ such that $V \cap D = \sigma$. Since $(\sigma, \tau) \mapsto \sigma^{-1} \tau$ is a continuous (in fact $C^\infty$) map of $G \times G \to G$, there exists a neighborhood $V$ of $e$ in $G$ such that
 
 \begin{equation}
-\label{eq:3.26:2}
+\tag{2}\label{eq:3.26:2}
 (V^{-1}V)\cap D=e.
 \end{equation}
 
 We claim that $\varphi(V)$ is a neighborhood of $e$ in $H$, evenly covered by $\varphi$. First, $\varphi\big|V$ is $1:1$, since if $\sigma,\tau\in V$ and $\varphi(\sigma)=\varphi(\tau)$, then $\varphi(\sigma^{-1}\tau)=e$, whence $\sigma^{-1}\tau=e$ by (2), and thus $\sigma=\tau$. Moreover, $d\varphi$ is an isomorphism at each point of $G$. Thus $\varphi\big|V$ is a diffeomorphism of $V$ with the open neighborhood $\varphi(V)$ of $e$ in $H$. Now, we claim that
 
 \begin{equation}
-\label{eq:3.26:3}
+\tag{3}\label{eq:3.26:3}
 \varphi^{-1}\bigl(\varphi(V)\bigr)=\bigcup_{\theta\in D}V\theta.
 \end{equation}
 
@@ -721,6 +744,7 @@ The inclusion $\supset$ is obvious. To prove $\subset$, suppose that $\varphi(\s
 
 \section{Simply Connected Lie Groups}
 
+\warnernumber{27}
 \begin{theorem}\label{thm:3.27}
 Let G and H be Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$ respectively and with $G$ simply connected. Let $\psi\colon\mathfrak{g}\to\mathfrak{h}$ be a homomorphism. Then there exists a unique homomorphism $\varphi\colon G\to H$ such that $d\varphi=\psi$.
 
@@ -732,14 +756,14 @@ Uniqueness was proved in 3.16.
 Let $\{\omega_i\}$ be a basis of the left invariant 1-forms on $H$, and let $\psi^*$ be the transpose of $\psi$ (see \eqref{eq:3.15:7}). Then according to 3.15, the 1-forms
 
 \begin{equation}
-\label{eq:3.27:1}
+\tag{1}\label{eq:3.27:1}
 \{\delta\pi_{1}\big(\psi^{*}(\omega_{i})\big)-\delta\pi_{2}(\omega_{i})\}
 \end{equation}
 
 on $G \times H$ (where $\pi_1$ and $\pi_2$ are the canonical projections of $G \times H$ onto $G$ and $H$ respectively) are left invariant, and the ideal $\mathcal{J}$ which they generate is a differential ideal. Thus by 3.19, Corollary (c), the maximal connected integral manifold $I$ of $\mathcal{J}$ through $(e,e) \in G \times H$ is a Lie subgroup of $G \times H$ with dimension equal to the dimension of $G$. Now, we know from 2.33 that $(\pi_1 \mid I): I \to G$ is non-singular, and therefore by 3.26 is a covering homomorphism. $G$ was assumed to be simply connected; hence by \hyperref[thm:3.23]{3.23(c)} and the inverse function theorem, $\pi_1 \mid I: I \to G$ is an isomorphism. We define $\varphi: G \to H$ by setting
 
 \begin{equation}
-\label{eq:3.27:2}
+\tag{2}\label{eq:3.27:2}
 \varphi=\pi_{2}\circ(\pi_{1}\mid I)^{-1}.
 \end{equation}
 
@@ -759,6 +783,7 @@ If simply connected Lie groups $G$ and $H$ have isomorphic Lie algebras, then $G
 
 There is a theorem [12, p. 199] due to Ado, which we will not prove, that every Lie algebra has a faithful (1:1) representation in $\mathfrak{gl}(n,\mathbb{R})$ for some $n$. As a consequence, if $\mathfrak{g}$ is a Lie algebra, then there is a Lie group, in particular a simply connected one, with Lie algebra $\mathfrak{g}$. In view of this we have:
 
+\warnernumber{28}
 \begin{theorem}\label{thm:3.28}
 There is a one-to-one correspondence between isomorphism classes of Lie algebras and isomorphism classes of simply connected Lie groups.
 
@@ -766,55 +791,58 @@ There is a one-to-one correspondence between isomorphism classes of Lie algebras
 
 \section{Exponential Map}
 
+\warnernumber{29}
 \begin{definition}\label{thm:3.29}
 A homomorphism $\varphi: \mathbb{R} \to G$ is called a 1-parameter subgroup of $G$.
 
 \end{definition}
 
+\warnernumber{30}
 \begin{definition}\label{thm:3.30}
 Let $G$ be a Lie group, and let $\mathfrak{g}$ be its Lie algebra. Let $X\in\mathfrak{g}$. Then
 
 \begin{equation}
-\label{eq:3.30:1}
+\tag{1}\label{eq:3.30:1}
 \lambda\frac{d}{d r}\mapsto\lambda X
 \end{equation}
 
 is a homomorphism of the Lie algebra of $\mathbb{R}$ into $\mathfrak{g}$. Since the real line is simply connected, there exists, by 3.27, a unique 1-parameter subgroup
 
 \begin{equation}
-\label{eq:3.30:2}
+\tag{2}\label{eq:3.30:2}
 \exp_{X}\colon\mathbb{R}\to G
 \end{equation}
 
 such that
 
 \begin{equation}
-\label{eq:3.30:3}
+\tag{3}\label{eq:3.30:3}
 d\exp_{X}\Big(\lambda\frac{d}{d r}\Big)=\lambda X.
 \end{equation}
 
 In other words, $t \mapsto \exp_{X}(t)$ is the unique 1-parameter subgroup of $G$ whose tangent vector at $0$ is $X(e)$. We define the exponential map
 
 \begin{equation}
-\label{eq:3.30:4}
+\tag{4}\label{eq:3.30:4}
 \exp\colon\mathfrak{g}\to G
 \end{equation}
 
 by setting
 
 \begin{equation}
-\label{eq:3.30:5}
+\tag{5}\label{eq:3.30:5}
 \exp(X)=\exp_{X}(1).
 \end{equation}
 
 The reason for this terminology will become apparent in \eqref{eq:3.35:13}, where we show that the exponential map for the general linear group is actually given by exponentiation of matrices.
 
 \begin{center}
-\includegraphics[width=0.42\textwidth]{figures/ch3_img_in_image_box_238_851_657_1180.jpg}
+\redrawn{figure-32}
 \end{center}
 
 \end{definition}
 
+\warnernumber{31}
 \begin{theorem}\label{thm:3.31}
 Let $X$ belong to the Lie algebra $\mathfrak{g}$ of the Lie group $G$. Then
 
@@ -837,10 +865,10 @@ X_{t}=r_{\exp tX}.
 \end{theorem}
 
 \begin{proof}
-By 3.14, $(d/dr)$ and $d\exp_X(d/dr)$, which is $X$, are $\exp_X$ related. Thus $\exp_X$ is an integral curve of $X$ and is the unique one for which $\exp_X(0) = e$. Since $X$ is left invariant, $I_\sigma^\circ \circ \exp_X$ is also an integral curve of $X$ and is the unique one taking the value $\sigma$ at 0. Thus part (e) is proved; and (f) is an immediate consequence of (e). Now define $\mathbf{maps} \varphi$ and $\psi$ of $\mathbb{R}$ into $G$ by setting
+By 3.14, $(d/dr)$ and $d\exp_X(d/dr)$, which is $X$, are $\exp_X$ related. Thus $\exp_X$ is an integral curve of $X$ and is the unique one for which $\exp_X(0) = e$. Since $X$ is left invariant, $l_\sigma\circ\exp_X$ is also an integral curve of $X$ and is the unique one taking the value $\sigma$ at 0. Thus part (e) is proved; and (f) is an immediate consequence of (e). Now define maps $\varphi$ and $\psi$ of $\mathbb{R}$ into $G$ by setting
 
 \begin{equation}
-\label{eq:3.31:1}
+\tag{1}\label{eq:3.31:1}
 \psi(t)=\exp_{sX}(t)\qquad\mathrm{and}\qquad\varphi(t)=\exp_{X}(st)
 \end{equation}
 
@@ -853,7 +881,7 @@ d\varphi\left(\frac{d}{d r}\bigg\vert_{t}\right)=d\exp_{X}\left(s\frac{d}{d r}\b
 Thus $\varphi$ also is an integral curve of $sX$ such that $\varphi(0)=e$. By the uniqueness (1.48(c)) of integral curves, $\varphi=\psi$. Thus
 
 \begin{equation}
-\label{eq:3.31:2}
+\tag{2}\label{eq:3.31:2}
 \exp_{s X}(t)=\exp_{X}(s t)\qquad(s,\;t\in\mathbb{R}\;;\;X\in\mathfrak{g}).
 \end{equation}
 
@@ -885,11 +913,12 @@ Thus we have exhibited $\exp$ as the composition of  $ C^{\infty} $ mappings, so
 
 \end{proof}
 
+\warnernumber{32}
 \begin{theorem}\label{thm:3.32}
 Let $\varphi\colon H\to G$ be a homomorphism, Then the following diagram is commutative:
 
 \begin{equation}
-\label{eq:3.32:1}\includegraphics[width=0.24\textwidth]{figures/ch3_img_in_image_box_336_383_573_524.jpg}
+\tag{1}\label{eq:3.32:1}\redrawn{figure-33}
 \end{equation}
 
 \end{theorem}
@@ -898,19 +927,20 @@ Let $\varphi\colon H\to G$ be a homomorphism, Then the following diagram is comm
 Let $X\in\mathfrak{h}$. Then $t\mapsto\varphi(\exp tX)$ is a smooth curve in $G$ whose tangent at $0$ is $d\varphi(X(e))$. This is also a 1-parameter subgroup of $G$ since $\varphi$ is a homomorphism. But $t\mapsto\exp t(d\varphi(X))$ is the unique 1-parameter subgroup of $G$ whose tangent at $0$ is $(d\varphi(X))(e)$. Thus
 
 \begin{equation}
-\label{eq:3.32:2}
+\tag{2}\label{eq:3.32:2}
 \varphi(\exp t X)=\exp t\big(d\varphi(X)\big),
 \end{equation}
 
 whence
 
 \begin{equation}
-\label{eq:3.32:3}
+\tag{3}\label{eq:3.32:3}
 \varphi(\exp X)=\exp\bigl(d\varphi(X)\bigr).
 \end{equation}
 
 \end{proof}
 
+\warnernumber{33}
 \begin{proposition}\label{thm:3.33}
 Let $(H,\varphi)$ be a Lie subgroup of $G$, and let $X\in\mathfrak{g}$. If $X\in d\varphi(\mathfrak{h})$, then $\exp tX\in\varphi(H)$ for all $t$. Conversely, if $\exp tX\in\varphi(H)$ for $t$ in some open interval, then $X\in d\varphi(\mathfrak{h})$.
 
@@ -921,11 +951,12 @@ If $X\in d\varphi(\mathfrak{h})$, then $\exp tX\in\varphi(H)$ for all $t$, accor
 
 \end{proof}
 
+\warnernumber{34}
 \begin{theorem}\label{thm:3.34}
 Let A be an abstract subgroup of a Lie group G, and let $\mathfrak{a}$ be a subspace of $\mathfrak{g}$. Let $U$ be a neighborhood of 0 in $\mathfrak{g}$ diffeomorphic under the exponential map with a neighborhood V of the identity in G. Suppose that
 
 \begin{equation}
-\label{eq:3.34:1}
+\tag{1}\label{eq:3.34:1}
 \exp(U\cap\mathfrak{a})=A\cap V.
 \end{equation}
 
@@ -944,29 +975,30 @@ Then the desired differentiable structure on $A$ is the maximal collection of sm
 
 \[
 \{(A\cap\sigma V,\varphi^{-1}\circ l_{\sigma^{-1}})\colon\sigma\in A\}.
+\qedhere
 \]
-
 \end{proof}
 
+\warnernumber{35}
 \begin{examples}\label{thm:3.35}
 We shall see that the exponential map
 
 \begin{equation}
-\label{eq:3.35:1}
+\tag{1}\label{eq:3.35:1}
 \exp\colon\mathfrak{gl}(n,\mathbb{C})\;\to\;Gl(n,\mathbb{C})
 \end{equation}
 
 for the complex general linear group is given by exponentiation of matrices. We shall now let $I$ rather than $e$ denote the identity matrix in $Gl(n,\mathbb{C})$. Let
 
 \begin{equation}
-\label{eq:3.35:2}
+\tag{2}\label{eq:3.35:2}
 e^{A}=I+A+\frac{A^{2}}{2!}+\cdots+\frac{A^{j}}{j!}+\cdots
 \end{equation}
 
 for $A \in \mathfrak{gl}(n, \mathbb{C})$. To see that this makes sense, that is, to see that the right-hand side of (2) converges, observe that in fact the right-hand side of (2) converges uniformly for $A$ in a bounded region of $\mathfrak{gl}(n, \mathbb{C})$. For given a bounded region $\Omega$ of $\mathfrak{gl}(n, \mathbb{C})$, there is a $\mu > 0$ such that for any matrix $A$ in this region, $|x_{ik}(A)| \leq \mu$ for each component $x_{ik}(A)$ of the matrix $A$. It follows easily by induction that $|x_{ik}(A^f)| \leq n^{(f-1)}\mu^f$. Thus, by the Weierstrass $M$-test, each of the series
 
 \begin{equation}
-\label{eq:3.35:3}
+\tag{3}\label{eq:3.35:3}
 \sum_{j=0}^{\infty}\frac{x_{ik}(A^{j})}{j!}\qquad(1\leq i\leq n;1\leq k\leq n)
 \end{equation}
 
@@ -975,63 +1007,63 @@ converges uniformly for $A$ in $\Omega$. Thus the right-hand side of (2) converg
 Now let $S_{j}(A)$ be the $j$th partial sum of the series (2), that is,
 
 \begin{equation}
-\label{eq:3.35:4}
+\tag{4}\label{eq:3.35:4}
 S_{j}(A)=I+A+\frac{A^{2}}{2!}+\cdots+\frac{A^{j}}{j!},
 \end{equation}
 
 and let $B \in \mathfrak{gl}(n,\mathbb{C})$. Then since $C \mapsto BC$ is a continuous map of $\mathfrak{gl}(n,\mathbb{C})$ into itself, it follows that
 
 \begin{equation}
-\label{eq:3.35:5}
+\tag{5}\label{eq:3.35:5}
 B\left(\lim_{j\to\infty}S_{j}(A)\right)=\lim_{j\to\infty}\bigl(B S_{j}(A)\bigr).
 \end{equation}
 
 In particular, if $B \in Gl(n, \mathbb{C})$, then $B\left(\lim_{j \to \infty} S_j(A)\right)B^{-1} = \lim_{j \to \infty} BS_j(A)B^{-1}$, from which it follows that
 
 \begin{equation}
-\label{eq:3.35:6}
+\tag{6}\label{eq:3.35:6}
 Be^{A}B^{-1}=e^{BAB^{-1}}.
 \end{equation}
 
 There exists a $B\in Gl(n,\mathbb{C})$ such that $BAB^{-1}$ is super-triangular; that is, all entries below the diagonal are zero. (Simply take $B$ to be the inverse of the matrix whose columns $v_1,\ldots,v_n$ are determined as follows: Let $I$ be the linear transformation of $\mathbb{C}^n$ whose matrix with respect to the canonical basis is $A$, let $v_1$ be an eigenvector of $I$, and inductively let $v_{i+1}$ be an eigenvector of $\pi_i\circ I\mid W_i$ where $W_i$ is any complement of the subspace $V_i$ of $C^n$ spanned by $v_1,\ldots,v_i$ and where $\pi_i$ is projection of $\mathbb{C}^n=V_i\oplus W_i$ onto $W_i$. If the diagonal entries of $BAB^{-1}$ are $\lambda_1,\ldots,\lambda_n$, then $e^{BAB^{-1}}$ is also super-triangular, with diagonal entries $e^{\lambda_1},\ldots,e^{\lambda_n}$. In particular, det $e^{BAB^{-1}}\neq0$, so it follows from (6) that
 
 \begin{equation}
-\label{eq:3.35:7}
+\tag{7}\label{eq:3.35:7}
 e^{A}\in Gl(n,\mathbb{C})\quad\mathrm{for~each}\quad A\in\mathfrak{gl}(n,\mathbb{C}).
 \end{equation}
 
 Since the trace of a matrix is the sum of its eigenvalues, and the determinant is the product of its eigenvalues, we have also shown that
 
 \begin{equation}
-\label{eq:3.35:8}
+\tag{8}\label{eq:3.35:8}
 \det e^{A}=e^{\mathrm{trace}A}.
 \end{equation}
 
 Next we shall prove that
 
 \begin{equation}
-\label{eq:3.35:9}
+\tag{9}\label{eq:3.35:9}
 e^{A+B}=e^{A}e^{B}\quad\mathrm{if}\quad A B=B A.
 \end{equation}
 
 By definition,  $ e^{A+B} = \lim_{j \to \infty} S_j(A + B) $. It follows from the fact that matrix multiplication gives a continuous map of  $ \mathfrak{gl}(n, \mathbb{C}) \times \mathfrak{gl}(n, \mathbb{C}) $ into  $ \mathfrak{gl}(n, \mathbb{C}) $ that  $ e^A e^B = \lim_{j \to \infty} S_j(A) \cdot S_j(B) $. So to prove (9), it suffices to show that
 
 \begin{equation}
-\label{eq:3.35:10}
+\tag{10}\label{eq:3.35:10}
 \lim_{j\to\infty}\left\{S_{j}(A)S_{j}(B)-S_{j}(A+B)\right\}=0.
 \end{equation}
 
 Now,
 
 \begin{equation}
-\label{eq:3.35:11}
+\tag{11}\label{eq:3.35:11}
 S_{j}(A)S_{j}(B)-S_{j}(A+B)=\sum\frac{B^{l}A^{k}}{l!k!}
 \end{equation}
 
 where the sum is over all integers $l$ and $k$ for which $1 \leq l \leq j$, $1 \leq k \leq j$, and $j + 1 \leq l + k \leq 2j$. If $\mu > 1$ is an upper bound for the absolute value of each of the entries of $A$ and $B$, then it follows that each entry of the right-hand side of (11) is bounded in absolute value by
 
 \begin{equation}
-\label{eq:3.35:12}
+\tag{12}\label{eq:3.35:12}
 \sum\frac{n^{(l+k-1)}\mu^{(l+k)}}{l!k!}\leq\frac{(n\mu)^{2j}(j^{2})}{[j/2]!}
 \end{equation}
 
@@ -1042,21 +1074,21 @@ Consider the map $t \mapsto e^{tA}$ of $\mathbb{R}$ into $Gl(n,\mathbb{C})$. It 
 Thus $t \mapsto e^{tA}$ is the unique 1-parameter subgroup of $Gl(n,\mathbb{C})$ whose tangent vector at 0 is $A$. So the exponential map (1) for $Gl(n,\mathbb{C})$ is given by exponentiation of matrices:
 
 \begin{equation}
-\label{eq:3.35:13}
+\tag{13}\label{eq:3.35:13}
 \exp(A)=e^{A}\qquad\big(A\in\mathfrak{gl}(n,\mathbb{C})\big).
 \end{equation}
 
 If $A \in \mathfrak{gl}(n, \mathbb{R})$, then $e^A \in Gl(n, \mathbb{R})$, and $A \to e^A$ is the exponential map for the real general linear group. Similarly, the exponential map
 
 \begin{equation}
-\label{eq:3.35:14}
+\tag{14}\label{eq:3.35:14}
 \exp\colon\operatorname{End}(V)\;\to\;\operatorname{Aut}(V),
 \end{equation}
 
 where $V$ is a real or complex vector space, is given by exponentiation of endomorphisms. If $l \in \mathrm{End}(V)$, then
 
 \begin{equation}
-\label{eq:3.35:15}
+\tag{15}\label{eq:3.35:15}
 \exp(l)=e^{l}=1+l+\frac{l^{2}}{2!}+\cdots+\frac{l^{j}}{j!}+\cdots
 \end{equation}
 
@@ -1064,23 +1096,25 @@ where $l^{j}$ means “$l$ composed with itself $j$ times,” and where $1$ is t
 
 \end{examples}
 
+\warnernumber{36}
 \begin{remarks}\label{thm:3.36}
 If $\varphi: G \to \mathrm{Aut}(V)$ is a representation, and $X \in \mathfrak{g}$, then it follows from \eqref{eq:3.35:15} and 3.32 that
 
 \begin{equation}
-\label{eq:3.36:1}
+\tag{1}\label{eq:3.36:1}
 \varphi(\exp X)=1+d\varphi(X)+\frac{(d\varphi(X))^{2}}{2!}+\cdots,
 \end{equation}
 
 and it follows from 3.32 and \eqref{eq:3.9:2} that
 
 \begin{equation}
-\label{eq:3.36:2}
+\tag{2}\label{eq:3.36:2}
 d\varphi(X)=\lim_{t\to0}\frac{\varphi(\exp tX)-1}{t}=\left.\frac{d}{dt}\right|_{t=0}(\varphi(\exp tX)).
 \end{equation}
 
 \end{remarks}
-\subsection{Subgroups of $Gl(n,\mathbb{C})$}\label{thm:3.37}
+\warnernumber{37}
+\discuss{3.37}{Subgroups of $Gl(n,\mathbb{C})$}\label{thm:3.37}
 Using 3.34 and 3.35, we shall now obtain some of the classical Lie subgroups of $Gl(n,\mathbb{C})$ by exponentiating subalgebras of $\mathfrak{gl}(n,\mathbb{C})$. We already have one example, namely, $Gl(n,\mathbb{R})$ is a closed Lie subgroup of $Gl(n,\mathbb{C})$ with Lie algebra $\mathfrak{gl}(n,\mathbb{R}) \subset \mathfrak{gl}(n,\mathbb{C})$. Let $A \in \mathfrak{gl}(n,\mathbb{C})$. Then the transpose of $A$ is the matrix $A^t$ such that $(A^t)_{ij} = A_{ji}$; and the complex conjugate of $A$ is the matrix $\bar{A}$ whose $ij$th entry $(\bar{A})_{ij}$ is the complex conjugate $\overline{A_{ij}}$ of $A_{ij}$. And $n$, of course, is an integer $\geq 1$.
 
 (a) Unitary group \index{Unitary group}
@@ -1137,6 +1171,7 @@ The dimensions of these Lie groups are easily computed from their Lie algebras. 
 
 \section{Continuous Homomorphisms}
 
+\warnernumber{38}
 \begin{theorem}\label{thm:3.38}
 Let $\varphi: \mathbb{R} \to G$ be a continuous homomorphism of the real line $\mathbb{R}$ into the Lie group $G$. Then $\varphi$ is $C^\infty$.
 
@@ -1159,6 +1194,7 @@ and since  $ \exp $ is injective on  $ U' $, we need only show that  $ nX \in U'
 
 \end{proof}
 
+\warnernumber{39}
 \begin{theorem}\label{thm:3.39}
 Let $\varphi: H \to G$ be a continuous homomorphism of Lie groups. Then $\varphi$ is $C^\infty$.
 
@@ -1175,11 +1211,13 @@ is $C^{\infty}$, and is non-singular at $0\in\mathbb{R}^{d}$ by \hyperref[thm:3.
 
 \end{proof}
 
+\warnernumber{40}
 \begin{definition}\label{thm:3.40}
 A topological group $G$ is an abstract group $G$ which has a topology such that the map $(\sigma,\tau) \mapsto \sigma\tau^{-1}$ of $G \times G \to G$ is continuous. \index{Topological group}
 
 \end{definition}
 
+\warnernumber{41}
 \begin{corollary}{to \hyperref[thm:3.39]{Theorem 3.39}}\label{thm:3.41}
 A second countable locally Euclidean topological group can have at most one differentiable structure making it into a Lie group.
 
@@ -1196,6 +1234,7 @@ We have dealt exclusively with the $C^{\infty}$ structure on Lie groups. It can 
 
 \section{Closed Subgroups}
 
+\warnernumber{42}
 \begin{theorem}\label{thm:3.42}
 Let G be a Lie group, and let A be a closed abstract subgroup of G. Then A has a unique manifold structure which makes A into a Lie subgroup of G.
 
@@ -1207,14 +1246,14 @@ According to 3.21, the topology in this manifold structure on A must be the rela
 Uniqueness has been proved in 3.20. Let
 
 \begin{equation}
-\label{eq:3.42:1}
+\tag{1}\label{eq:3.42:1}
 \mathfrak{a}=\{X\in\mathfrak{g}\colon\exp tX\in A\mathrm{~for~all~}t\in\mathbb{R}\}.
 \end{equation}
 
 The idea of the proof is to show that $\mathfrak{a}$ is a subspace of $\mathfrak{g}$, and to apply 3.34. It is clear from the definition (1) that if $X\in\mathfrak{a}$, then also $tX \in a$ for any $t \in \mathbb{R}$. Now, let $X, Y \in a$. Suppose that
 
 \begin{equation}
-\label{eq:3.42:2}
+\tag{2}\label{eq:3.42:2}
 \lim_{n\to\infty}\Big(\exp\frac{t}{n}X\exp\frac{t}{n}Y\Big)^{n}=\exp\big(t(X+Y)\big).
 \end{equation}
 
@@ -1223,21 +1262,21 @@ Since $A$ is closed, the left-hand side of (2) belongs to $A$. Thus (2) implies 
 The theorem will follow from 3.34 once we have shown that there exists a neighborhood $U$ of 0 in $\mathfrak{g}$, diffeomorphic under the exponential map with a neighborhood V of e in G such that
 
 \begin{equation}
-\label{eq:3.42:3}
+\tag{3}\label{eq:3.42:3}
 \exp(U\cap\mathfrak{a})=V\cap A.
 \end{equation}
 
 Suppose, on the contrary, that no such $U$ exists. Then there is a neighborhood $W$ of 0 in $\mathfrak{a}$ and a sequence $\{\sigma_k\} \subset A$ such that $\sigma_k \to e$ in $G$ and
 
 \begin{equation}
-\label{eq:3.42:4}
+\tag{4}\label{eq:3.42:4}
 \sigma_{k}\notin\exp(W).
 \end{equation}
 
 Let $\mathfrak{b}$ be any complementary subspace to $\mathfrak{a}$ in $\mathfrak{g}$. It follows from \hyperref[thm:3.31]{3.31(d)} that the map $\alpha\colon\mathfrak{a}\times\mathfrak{b}\to G$ defined by $\alpha(X, Y) = \exp X \exp Y$ is $C^\infty$ and non-singular at $(0,0)$. Thus there are neighborhoods $W_{\mathfrak{a}}\subset W$ of $0$ in $\mathfrak{a}$ and $W_{\mathfrak{b}}$ of $0$ in $\mathfrak{b}$ such that $\alpha\big|W_{\mathfrak{a}}\times W_{\mathfrak{b}}$ is a diffeomorphism of $W_{\mathfrak{a}}\times W_{\mathfrak{b}}$ with a neighborhood $\tilde{V}$ of $e$ in $G$. If we can choose $W_{\mathfrak{b}}$ small enough that
 
 \begin{equation}
-\label{eq:3.42:5}
+\tag{5}\label{eq:3.42:5}
 A\cap\exp(W_{\mathfrak{b}}-\{0\})=\varnothing,
 \end{equation}
 
@@ -1262,7 +1301,7 @@ To complete the proof we need the following lemma, which clearly implies (2).
 Lemma Let G be a Lie group with Lie algebra $\mathfrak{g}$. If $X, Y \in \mathfrak{g}$, then for $t$ sufficiently small,
 
 \begin{equation}
-\label{eq:3.42:6}
+\tag{6}\label{eq:3.42:6}
 \exp tX\exp tY=\exp\{t(X+Y)+O(t^{2})\},
 \end{equation}
 
@@ -1274,7 +1313,7 @@ where $O(t^{2})$ denotes a $\mathfrak{g}$-valued $C^{\infty}$ function of $t$ su
 For $t$ small enough, there is a $C^{\infty}$ curve $Z(t)$ in $\mathfrak{g}$ such that
 
 \begin{equation}
-\label{eq:3.42:7}
+\tag{7}\label{eq:3.42:7}
 \exp tX\exp tY=\exp Z(t).
 \end{equation}
 
@@ -1287,7 +1326,7 @@ t\mapsto\exp t X\exp t Y
 at $t=0$ is $X(e)+Y(e)$ (see Exercise 11), it follows that the tangent vector to $Z(t)$ at $t=0$ is $X+Y$, so the Taylor expansion with integral remainder of $Z(t)$ about $t=0$ has the form
 
 \begin{equation}
-\label{eq:3.42:8}
+\tag{8}\label{eq:3.42:8}
 Z(t)=t(X+Y)+O(t^{2}),
 \end{equation}
 
@@ -1295,6 +1334,7 @@ where $O(t^{2})$ is a $C^{\infty}$ $\mathfrak{g}$-valued function of $t$ such th
 
 \end{proof}
 
+\warnernumber{43}
 \begin{theorem}\label{thm:3.43}
 Let $\psi: G \to K$ be a homomorphism of Lie groups. If $A = \ker \psi$ and $\mathfrak{a} = \ker d\psi$, then $A$ is a closed Lie subgroup of $G$ with Lie algebra $\mathfrak{a}$.
 
@@ -1307,18 +1347,19 @@ $A$ is a closed abstract subgroup of $G$, hence, by 3.42, is a Lie subgroup of $
 
 \section{The Adjoint Representation}
 
+\warnernumber{44}
 \begin{definition}\label{thm:3.44}
 Let $M$ be a manifold, and let $G$ be a Lie group. A $C^{\infty}$ map $\mu: G \times M \to M$ such that \index{Adjoint representation}
 
 \begin{equation}
-\label{eq:3.44:1}
+\tag{1}\label{eq:3.44:1}
 \mu(\sigma\tau,m)=\mu\big(\sigma,\mu(\tau,m)\big),\qquad\mu(e,m)=m
 \end{equation}
 
 for all $\sigma, \tau \in G$ and $m \in M$ is called an action of $G$ on $M$ on the left. If $\mu: G \times M \to M$ is an action of $G$ on $M$ on the left, then for a fixed $\sigma \in G$ the map $m \mapsto \mu(\sigma, m)$ is a diffeomorphism of $M$ which we shall denote by $\mu_{\sigma}$. Similarly, a $C^{\infty}$ map $\mu: M \times G \to M$ such that \index{Action of Lie groups}
 
 \begin{equation}
-\label{eq:3.44:2}
+\tag{2}\label{eq:3.44:2}
 \mu(m,\sigma\tau)=\mu\big(\mu(m,\sigma),\tau\big),\qquad\mu(m,e)=m
 \end{equation}
 
@@ -1326,18 +1367,19 @@ for all $\sigma, \tau \in G$ and $m \in M$ is called an action of $G$ on $M$ on 
 
 \end{definition}
 
+\warnernumber{45}
 \begin{theorem}\label{thm:3.45}
 Let $\mu: G \times M \to M$ be an action of $G$ on $M$ on the left. Assume that $m_0 \in M$ is a fixed point, that is, $\mu_\sigma(m_0) = m_0$ for each $\sigma \in G$. Then the map
 
 \begin{equation}
-\label{eq:3.45:1}
+\tag{1}\label{eq:3.45:1}
 \psi\colon G\to\mathrm{Aut}(M_{m_{0}})
 \end{equation}
 
 defined by
 
 \begin{equation}
-\label{eq:3.45:2}
+\tag{2}\label{eq:3.45:2}
 \psi(\sigma)=d\mu_{\sigma}\mid M_{m_{0}}
 \end{equation}
 
@@ -1349,7 +1391,7 @@ is a representation of G.
 $ \psi $ is a homomorphism for
 
 \begin{equation}
-\label{eq:3.45:3}
+\tag{3}\label{eq:3.45:3}
 \psi(\sigma\tau)=d\mu_{\sigma\tau}\left|M_{m_{0}}=d(\mu_{\sigma}\circ\mu_{\tau})\right|M_{m_{0}}=\psi(\sigma)\circ\psi(\tau).
 \end{equation}
 
@@ -1362,7 +1404,7 @@ It remains only to prove that $\psi$ is $C^{\infty}$. For this, it suffices to p
 is a $C^{\infty}$ function on $G$. For (3), it suffices to prove that
 
 \begin{equation}
-\label{eq:3.45:4}
+\tag{4}\label{eq:3.45:4}
 \sigma\mapsto d\mu_{\sigma}(v_{0})
 \end{equation}
 
@@ -1375,67 +1417,68 @@ G\to T(G)\times T(M)\to T(G\times M)\to T(M)
 in which the first map sends $\sigma \mapsto \big((\sigma,0),(m_0,v_0)\big)$, the second map is the canonical diffeomorphism of $T(G) \times T(M)$ with $T(G \times M)$, and the third map is $d\mu$. Thus $\psi$ is $C^\infty$.
 
 \end{proof}
-\subsection{The Adjoint Representation}\label{thm:3.46}
+\warnernumber{46}
+\discuss{3.46}{The Adjoint Representation}\label{thm:3.46}
 A Lie group G acts on itself on the left by inner automorphisms:
 
 \begin{equation}
-\label{eq:3.46:1}
+\tag{1}\label{eq:3.46:1}
 a\colon G\times G\to G,\qquad a(\sigma,\tau)=\sigma\tau\sigma^{-1}=a_{\sigma}(\tau).
 \end{equation}
 
 The identity is a fixed point of this action. Hence, by 3.45, the map
 
 \begin{equation}
-\label{eq:3.46:2}
+\tag{2}\label{eq:3.46:2}
 \sigma\mapsto da_{\sigma}\mid G_{e}\cong\mathfrak{g}
 \end{equation}
 
 is a representation of $G$ into $\operatorname{Aut}(\mathfrak{g})$. This is called the adjoint representation and is denoted by
 
 \begin{equation}
-\label{eq:3.46:3}
+\tag{3}\label{eq:3.46:3}
 \mathrm{Ad}\colon G\to\mathrm{Aut}(\mathfrak{g}).
 \end{equation}
 
 We let the differential of the adjoint representation be denoted by ad.
 
 \begin{equation}
-\label{eq:3.46:4}
+\tag{4}\label{eq:3.46:4}
 d(\mathrm{Ad})=\mathrm{ad},
 \end{equation}
 
 and we denote $\mathrm{Ad}(\sigma)$ by $\mathrm{Ad}_{\sigma}$ and $\mathrm{ad}(X)$ by $\mathrm{ad}_{X}$. Thus by 3.32 we have a commutative diagram
 
 \begin{equation}
-\label{eq:3.46:5}\includegraphics[width=0.27\textwidth]{figures/ch3_img_in_image_box_329_219_602_347.jpg}
+\tag{5}\label{eq:3.46:5}\redrawn{figure-34}
 \end{equation}
 
 Also applying 3.32 to the automorphism $a_{\sigma}$ of $G$, we obtain the commutative diagram
 
 \begin{equation}
-\label{eq:3.46:6}\includegraphics[width=0.25\textwidth]{figures/ch3_img_in_image_box_340_404_587_530.jpg}
+\tag{6}\label{eq:3.46:6}\redrawn{figure-35}
 \end{equation}
 
 In other words,
 
 \begin{equation}
-\label{eq:3.46:7}
+\tag{7}\label{eq:3.46:7}
 \exp t\operatorname{Ad}_{\sigma}(X)=\sigma(\exp tX)\sigma^{-1}.
 \end{equation}
 
 In the special case in which $G = \mathrm{Aut}(V)$, the above diagrams become
 
 \begin{equation}
-\label{eq:3.46:8}\begin{gathered}
-\includegraphics[width=0.35\textwidth]{figures/ch3_img_in_image_box_297_635_642_767.jpg}\\[6pt]
-\includegraphics[width=0.30\textwidth]{figures/ch3_img_in_image_box_299_797_601_924.jpg}
+\tag{8}\label{eq:3.46:8}\begin{gathered}
+\redrawn{figure-36}\\[6pt]
+\redrawn{figure-37}
 \end{gathered}
 \end{equation}
 
 where  $ B \in \text{Aut}(V) $. If in addition  $ C \in \text{End}(V) $, then
 
 \begin{equation}
-\label{eq:3.46:9}
+\tag{9}\label{eq:3.46:9}
 \mathrm{Ad}_{B}(C)=B\circ C\circ B^{-1}.
 \end{equation}
 
@@ -1446,15 +1489,16 @@ For from \eqref{eq:3.36:2}, using \eqref{eq:3.35:15} and \eqref{eq:3.35:6}, we o
 Similarly, in the case in which $G = Gl(n, \mathbb{R})(\text{or } Gl(n, \mathbb{C}))$ and $B \in Gl(n, \mathbb{R})$ and $C \in \mathfrak{gl}(n, \mathbb{R})$, then
 
 \begin{equation}
-\label{eq:3.46:10}
+\tag{10}\label{eq:3.46:10}
 \mathrm{Ad}_{B}(C)=B C B^{-1}.
 \end{equation}
 
+\warnernumber{47}
 \begin{proposition}\label{thm:3.47}
 Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and let $X,Y\in\mathfrak{g}$. Then
 
 \begin{equation}
-\label{eq:3.47:1}
+\tag{1}\label{eq:3.47:1}
 \mathrm{ad}_{X}Y=[X,Y].
 \end{equation}
 
@@ -1464,13 +1508,13 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and let $X,Y\in\mathfrak
 By \eqref{eq:3.36:2},
 
 \begin{equation}
-\label{eq:3.47:2}\begin{aligned}\mathrm{ad}_{X}Y&=\left(\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}(\exp tX)\right)Y\\&=\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}_{\exp tX}(Y)=\frac{d}{dt}\bigg|_{t=0}d(a_{\exp tX})(Y).\end{aligned}
+\tag{2}\label{eq:3.47:2}\begin{aligned}\mathrm{ad}_{X}Y&=\left(\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}(\exp tX)\right)Y\\&=\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}_{\exp tX}(Y)=\frac{d}{dt}\bigg|_{t=0}d(a_{\exp tX})(Y).\end{aligned}
 \end{equation}
 
 Thus if $X_{t}$ denotes, as usual, the 1-parameter group of diffeomorphisms associated with $X$, then
 
 \begin{equation}
-\label{eq:3.47:3}
+\tag{3}\label{eq:3.47:3}
 \begin{aligned}{\operatorname{ad}_{X}Y(e)}&{{}=\frac{d}{d t}\bigg|_{t=0}d(r_{\exp(-tX)})\big(d(l_{\exp tX})(Y(e))\big)}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}d(r_{\exp(-tX)})(Y\big|_{\exp tX})}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}d(X_{-t})(Y_{X_{t}(e)})}\\ {}&{{}=(L_{X}Y)(e)=[X,Y](e).}\\ \end{aligned}
 \end{equation}
 
@@ -1478,6 +1522,7 @@ The last equality follows from 2.25(b). Since $\operatorname{ad}_{X}Y$ and $[X,Y
 
 \end{proof}
 
+\warnernumber{48}
 \begin{theorem}\label{thm:3.48}
 Let $A \subseteq G$ be a connected Lie subgroup of a connected Lie group $G$. Then $A$ is a normal subgroup of $G$ if and only if the Lie algebra $\mathfrak{a}$ of $A$ is an ideal in $\mathfrak{g}$.
 
@@ -1487,7 +1532,7 @@ Let $A \subseteq G$ be a connected Lie subgroup of a connected Lie group $G$. Th
 Assume that $\mathfrak{a}$ is an ideal in $\mathfrak{g}$. Let  $ Y\in\mathfrak{a} $, let  $ X \in \mathfrak{g} $, and let  $ \sigma = \exp X $. Then
 
 \begin{equation}
-\label{eq:3.48:1}
+\tag{1}\label{eq:3.48:1}
 \begin{aligned}\sigma(\exp Y)\sigma^{-1}&=\exp\operatorname{Ad}_{\sigma}(Y)\\&=\exp\bigl((\exp\operatorname{ad}_{X})(Y)\bigr)\\ \end{aligned}
 \end{equation}
 
@@ -1498,7 +1543,7 @@ Assume that $\mathfrak{a}$ is an ideal in $\mathfrak{g}$. Let  $ Y\in\mathfrak{a
 Under the assumption that $\mathfrak{a}$ is an ideal in $\mathfrak{g}$, the series in the last term in (1) converges to an element of $\mathfrak{a}$, so that
 
 \begin{equation}
-\label{eq:3.48:2}
+\tag{2}\label{eq:3.48:2}
 \sigma(\exp Y)\sigma^{-1}\in A.
 \end{equation}
 
@@ -1507,7 +1552,7 @@ Now, by 3.18 and \hyperref[thm:3.31]{3.31(d)}, $A$ is generated by elements of t
 Conversely, assume that $A$ is normal in $G$. Let $s$ and $t$ be real numbers, let $Y\in\mathfrak{a}$ and $X\in\mathfrak{g}$, and let $\sigma=\exp tX$. Then, according to (1),
 
 \begin{equation}
-\label{eq:3.48:3}
+\tag{3}\label{eq:3.48:3}
 \sigma(\exp sY)\sigma^{-1}=\exp\operatorname{Ad}_{\sigma}(sY)=\exp s\big\{(\exp\operatorname{ad}_{tX})(Y)\big\}.
 \end{equation}
 
@@ -1521,6 +1566,7 @@ which is a smooth curve in $\mathfrak{a}$ whose tangent vector at $t=0$ is $[X,Y
 
 \end{proof}
 
+\warnernumber{49}
 \begin{definition}\label{thm:3.49}
 (a) Center of $\mathfrak{g}=\{X\in\mathfrak{g}:[X,Y]=0 \text{ for all } Y\in\mathfrak{g}\}$.
 
@@ -1528,6 +1574,7 @@ which is a smooth curve in $\mathfrak{a}$ whose tangent vector at $t=0$ is $[X,Y
 
 \end{definition}
 
+\warnernumber{50}
 \begin{theorem}\label{thm:3.50}
 Let G be a connected Lie group. Then the center of G is the kernel of the adjoint representation.
 
@@ -1537,7 +1584,7 @@ Let G be a connected Lie group. Then the center of G is the kernel of the adjoin
 Let  $ \sigma $ belong to the center of G, and let  $ X \in \mathfrak{g} $. Then
 
 \begin{equation}
-\label{eq:3.50:1}
+\tag{1}\label{eq:3.50:1}
 \exp tX=\sigma(\exp tX)\sigma^{-1}=\exp t\operatorname{Ad}_{\sigma}(X)
 \end{equation}
 
@@ -1557,6 +1604,7 @@ This corollary is an immediate consequence of 3.50 and 3.43.
 A connected Lie group $G$ is abelian if and only if its Lie algebra $\mathfrak{g}$ is abelian.
 \end{corollary*}
 
+\warnernumber{51}
 \begin{proposition}\label{thm:3.51}
 Let $X$, $Y$ belong to the Lie algebra $\mathfrak{g}$ of a Lie group $G$. Then
 
@@ -1583,6 +1631,7 @@ for all t.
 
 \end{proof}
 
+\warnernumber{52}
 \begin{remarks}\label{thm:3.52}
 Recall that in 3.27 we stated Ado's theorem which asserts that any Lie algebra g has a faithful representation in some $\mathfrak{gl}(n,\mathbb{R})$ from which it follows that there is a Lie group with Lie algebra g. If g has trivial center, we can get such a faithful representation from the adjoint representation. Simply define $ad:g \to \mathrm{Erd}(g)$ by $ad_x(Y) = [X, Y]$, and check that this is a Lie algebra homomorphism. If g has trivial center, ad is one-to-one; so we have a faithful representation of g in $\mathrm{End}(g)$. This together with 3.19 gives a simple proof that every Lie algebra with trivial center is the Lie algebra of some Lie group. \index{Ado's theorem}
 
@@ -1590,6 +1639,7 @@ Recall that in 3.27 we stated Ado's theorem which asserts that any Lie algebra g
 
 \section{Automorphisms and Derivations of Bilinear Operations and Forms}
 
+\warnernumber{53}
 \begin{definition}\label{thm:3.53}
 Let $V$ be a finite dimensional real or complex vector space. A bilinear operation on $V$ is a linear map $\psi: V\otimes V \to V$ where the tensor product is taken over the real (resp. complex) numbers when $V$ is a real (resp. complex) vector space. We shall use the notation
 
@@ -1615,6 +1665,7 @@ Elements of  $ \mathfrak{d}_{\psi} $ are called derivations of the bilinear oper
 
 \end{definition}
 
+\warnernumber{54}
 \begin{theorem}\label{thm:3.54}
 $A_{\psi}(V)$ is a closed Lie subgroup of $\mathrm{Aut}(V)$ with Lie algebra $\mathfrak{d}_{\psi}$.
 
@@ -1626,14 +1677,14 @@ It is easy to check that $\mathfrak{d}_{\psi}$ is a subalgebra of $\mathrm{End}(
 If  $ l\in\mathfrak{a} $, then  $ \exp t l \in A_{\psi}(V) $, so that
 
 \begin{equation}
-\label{eq:3.54:1}
+\tag{1}\label{eq:3.54:1}
 (\exp t\,l)\{v,w\}=\{(\exp t\,l)(v),(\exp t\,l)(w)\}.
 \end{equation}
 
 Both sides of (1) are smooth curves in V. Taking their derivatives at t = 0, we obtain
 
 \begin{equation}
-\label{eq:3.54:2}
+\tag{2}\label{eq:3.54:2}
 l\{v,w\}=\{l(v),w\}+\{v,l(w)\},
 \end{equation}
 
@@ -1648,35 +1699,35 @@ Conversely, suppose that  $ l\in\mathfrak{d}_{\psi} $. To prove that  $ l\in\mat
 The fact that  $ l\in\mathfrak{d}_{\psi} $ means that
 
 \begin{equation}
-\label{eq:3.54:3}
+\tag{3}\label{eq:3.54:3}
 l\{v,w\}=\{l(v),w\}+\{v,l(w)\}
 \end{equation}
 
 for all v and w in V; and this can be expressed as
 
 \begin{equation}
-\label{eq:3.54:4}
+\tag{4}\label{eq:3.54:4}
 l\circ\varphi=\varphi\circ(l\otimes1+1\otimes l).
 \end{equation}
 
 It follows from (4) that
 
 \begin{equation}
-\label{eq:3.54:5}
+\tag{5}\label{eq:3.54:5}
 l^{n}\circ\varphi=\varphi\circ(l\otimes1+1\otimes l)^{n},
 \end{equation}
 
 so that
 
 \begin{equation}
-\label{eq:3.54:6}
+\tag{6}\label{eq:3.54:6}
 e^{tl}\circ\varphi=\varphi\circ e^{t(l\otimes1+1\otimes l)}.
 \end{equation}
 
 Now,  $ (l \otimes 1) \circ (1 \otimes l) = (1 \otimes l) \circ (l \otimes 1) $, so we can apply \eqref{eq:3.35:9} to the right-hand term in (6). Then, by the fact that  $ e^{t(l \otimes 1)} = e^{t l} \otimes 1 $, equation (6) becomes
 
 \begin{equation}
-\label{eq:3.54:7}
+\tag{7}\label{eq:3.54:7}
 \begin{aligned}e^{tl}\circ\varphi&=\varphi\circ e^{t(l\otimes1)}\circ e^{t(1\otimes l)}=\varphi\circ(e^{tl}\otimes1)\circ(1\otimes e^{tl})\\&=\varphi\circ e^{tl}\otimes e^{tl}.\end{aligned}
 \end{equation}
 
@@ -1690,6 +1741,7 @@ for all $v$ and $w$ in $V$, which implies that $\exp t l \in A_{\psi}(V)$ for al
 
 \end{proof}
 
+\warnernumber{55}
 \begin{definition}\label{thm:3.55}
 Again we let $V$ be a finite dimensional vector space over a field $F$ where $F$ is either $\mathbb{R}$ or $\mathbb{C}$. A bilinear form $B$ on $V$ is a linear map $B: V \otimes V \to F$. We shall use the notation $B(v \otimes w) = (v, w)$.
 
@@ -1711,22 +1763,22 @@ Elements of  $ \mathfrak{d}_{B} $ are called derivations of the bilinear form $B
 
 \end{definition}
 
+\warnernumber{56}
 \begin{theorem}\label{thm:3.56}
 $ A_{B}(V) $ is a closed Lie subgroup of  $ \mathrm{Aut}(V) $ with Lie algebra  $ \mathfrak{d}_{B} $.
 
 The proof is similar to the proof of \hyperref[thm:3.54]{Theorem 3.54}, and we leave it to the reader as an exercise.
 
 \end{theorem}
-\subsection{Applications of 3.54 and 3.56}\label{thm:3.57}
-
-(a) Let $V$ be a real vector space with an inner product $B$. According to \hyperref[thm:3.56]{Theorem 3.56}, the automorphisms of $V$ which preserve the inner product form a closed Lie subgroup $A_B(V) \subset \mathrm{Aut}(V)$ whose Lie algebra is the Lie subalgebra $\mathfrak{b}_B \subset \mathrm{End}(V)$ of derivations of the inner product $B$. Choose an orthonormal basis for $V$. Now consider the Lie group isomorphism of $\mathrm{Aut}(V)$ with $Gl(n, \mathbb{R})$ and the associated Lie algebra isomorphism of $\mathrm{End}(V)$ with $\mathfrak{gl}(n, \mathbb{R})$ determined by associating with each linear transformation on $V$ its matrix relative to this basis. It is easily seen that $A_B(V)$ is mapped onto the orthogonal group $O(n) \subset Gl(n, \mathbb{R})$ and that $\mathfrak{b}_B$ is mapped onto the set $\mathfrak{o}(n)$ of skew-symmetric matrices in $\mathfrak{gl}(n, \mathbb{R})$. This provides another proof of the fact that the orthogonal group $O(n)$ is a closed Lie subgroup of $Gl(n, \mathbb{R})$ with Lie algebra $\mathfrak{o}(n)$.
+\warnernumber{57}
+\discuss{3.57}{Applications of 3.54 and 3.56}\label{thm:3.57} (a) Let $V$ be a real vector space with an inner product $B$. According to \hyperref[thm:3.56]{Theorem 3.56}, the automorphisms of $V$ which preserve the inner product form a closed Lie subgroup $A_B(V) \subset \mathrm{Aut}(V)$ whose Lie algebra is the Lie subalgebra $\mathfrak{b}_B \subset \mathrm{End}(V)$ of derivations of the inner product $B$. Choose an orthonormal basis for $V$. Now consider the Lie group isomorphism of $\mathrm{Aut}(V)$ with $Gl(n, \mathbb{R})$ and the associated Lie algebra isomorphism of $\mathrm{End}(V)$ with $\mathfrak{gl}(n, \mathbb{R})$ determined by associating with each linear transformation on $V$ its matrix relative to this basis. It is easily seen that $A_B(V)$ is mapped onto the orthogonal group $O(n) \subset Gl(n, \mathbb{R})$ and that $\mathfrak{b}_B$ is mapped onto the set $\mathfrak{o}(n)$ of skew-symmetric matrices in $\mathfrak{gl}(n, \mathbb{R})$. This provides another proof of the fact that the orthogonal group $O(n)$ is a closed Lie subgroup of $Gl(n, \mathbb{R})$ with Lie algebra $\mathfrak{o}(n)$.
 
 (b) A Lie algebra $\mathfrak{g}$ has a bilinear operation—the bracket $[,\;]$. The automorphisms of $\mathfrak{g}$ which preserve the bracket are precisely the Lie algebra isomorphisms of $\mathfrak{g}$. We shall denote them by $A(\mathfrak{g})$. According to 3.54, $A(\mathfrak{g})$ is a closed Lie subgroup of $\mathrm{Aut}(\mathfrak{g})$ with Lie algebra the derivations of $[,\;]$ which we shall denote by $\mathfrak{d}(\mathfrak{g})$.
 
 Suppose that $G$ is a simply connected Lie group with Lie algebra $\mathfrak{g}$. Let  $ A(G) $ be the group of all Lie group automorphisms of G. The map
 
 \begin{equation}
-\label{eq:3.57:1}
+\tag{1}\label{eq:3.57:1}
 \psi\colon A(G)\to A(\mathfrak{g})\quad{\mathrm{defined~by}}\quad\psi(\alpha)=d\alpha
 \end{equation}
 
@@ -1734,6 +1786,7 @@ is a homomorphism and is 1:1 by 3.16 and onto by 3.27. Thus we can induce via $\
 
 \section{Homogeneous Manifolds}
 
+\warnernumber{58}
 \begin{theorem}\label{thm:3.58}
 Let $H$ be a closed subgroup of a Lie group $G$, and let $G|H$ be the set $\{\sigma H: \sigma \in G\}$ of left cosets modulo $H$. Let $\pi: G \to G|H$ denote the natural projection $\pi(\sigma) = \sigma H$. Then $G|H$ has a unique manifold structure such that
 
@@ -1755,83 +1808,83 @@ which implies that $\pi(W)$ is open in $G/H$. Moreover, $G/H$ is Hausdorff. To s
 According to 3.42, the closed subgroup $H$ is a Lie subgroup of $G$. Suppose that $G$ is of dimension $d$ and that $H$ is of dimension $d-k$. To prove that $G/H$ is locally Euclidean and to obtain a cover of smoothly overlapping coordinate systems on $G/H$, we first prove that there exists a cubic centered coordinate system $(U,\varphi)$ about $e$ in $G$, with coordinate functions $x_{1},\ldots,x_{d}$, such that distinct slices of the form
 
 \begin{equation}
-\label{eq:3.58:1}
+\tag{1}\label{eq:3.58:1}
 x_{i}=\mathrm{constant}\qquad\mathrm{for~all~}i\in\{1,\ldots,k\}
 \end{equation}
 
 lie on distinct left cosets of $H$. Let $\mathcal{D}$ be the distribution on $G$ determined by the Lie algebra of $H$. Then, by 1.60, there is a cubic centered coordinate system $(V,\varphi)$ about $e$ in $G$, with coordinate functions $x_{1},\ldots,x_{d}$, such that the integral manifolds of $\mathcal{D}$ in $V$ are slices of the form (1). Since $H$ is a closed subgroup of $G$, and therefore as a Lie subgroup has the relative topology, $V$ can be chosen small enough so that
 
 \begin{equation}
-\label{eq:3.58:2}
+\tag{2}\label{eq:3.58:2}
 \bullet \quad \quad V\cap H=\mathrm{the~slice~}S_{0}\mathrm{~through~}e.
 \end{equation}
 
 Choose neighborhoods U and $V_{1}$ of $e$, cubic relative to the coordinate system $(V,\varphi)$, such that
 
 \begin{equation}
-\label{eq:3.58:3}
+\tag{3}\label{eq:3.58:3}
 V_{1}V_{1}\subset V\qquad\mathrm{and}\qquad U^{-1}U\subset V_{1}.
 \end{equation}
 
 Now suppose that $\sigma$ and $\tau$ are points of $U$ which lie in the same coset modulo $H$, so $\sigma \in \tau H$. Then
 
 \begin{equation}
-\label{eq:3.58:4}
+\tag{4}\label{eq:3.58:4}
 \tau^{-1}\sigma\in V_{1}\cap H=V_{1}\cap S_{0}.
 \end{equation}
 
 So $\sigma \in \tau(V_1 \cap S_0)$. Now $\tau(V_1 \cap S_0)$ is an integral manifold of $\mathcal{D}$ which lies in $V$ by the choice of $V_1$ in (3), and $\tau(V_1 \cap S_0)$ is connected. Therefore $\tau(V_1 \cap S_0)$ lies in a single slice of $V$. So $\sigma$ and $\tau$ lie in the same slice. Conversely, it is easily seen that a single slice lies on a single coset. Thus $(U, \varphi)$ is the desired coordinate system.
 
 \begin{center}
-\includegraphics[width=0.60\textwidth]{figures/ch3_img_in_image_box_110_434_764_801.jpg}
+\redrawn{figure-38}
 \end{center}
 
 Let $S$ be the slice of $\varphi(U)$ on which $x_{k+1},\ldots,x_{d}$ vanish. Let $\widetilde{\varphi}^{-1}$ be the map defined by setting
 
 \begin{equation}
-\label{eq:3.58:5}
+\tag{5}\label{eq:3.58:5}
 \tilde{\varphi}^{-1}=\pi\circ\varphi^{-1}\bigm|S\colon S\to\pi(U).
 \end{equation}
 
 Then $\tilde{\varphi}^{-1}$ is one-to-one by the choice of the coordinate system $(U,\varphi)$, and is also continuous and an open map; hence it is a homeomorphism. Let $\tilde{\varphi}$ be the inverse,
 
 \begin{equation}
-\label{eq:3.58:6}
+\tag{6}\label{eq:3.58:6}
 \tilde{\varphi}\colon\pi(U)\to S\subset\mathbb{R}^{k}.
 \end{equation}
 
 Then $(\pi(U),\tilde{\varphi})$ is a coordinate system about the identity coset in $G/H$. We obtain coordinate systems about other points of $G/H$ by left translations. Indeed, if $\sigma\in G$, we let $l_\sigma$ be the homeomorphism of $G/H$ induced by left translation $l_\sigma$ on $G$; that is,
 
 \begin{equation}
-\label{eq:3.58:7}
+\tag{7}\label{eq:3.58:7}
 \tilde{l}_{\sigma}(\tau H)=\sigma\tau H.
 \end{equation}
 
 Then for each $\sigma H \in G/H$ we define a map $\tilde{\varphi}_{\sigma H}$ by setting
 
 \begin{equation}
-\label{eq:3.58:8}
+\tag{8}\label{eq:3.58:8}
 \tilde{\varphi}_{\sigma H}=\tilde{\varphi}\circ\tilde{l}_{\sigma^{-1}}\big|\tilde{l}_{\sigma}\big(\pi(U)\big).
 \end{equation}
 
 Then  $ (\tilde{l}_{\sigma}(\pi(U)), \tilde{\varphi}_{\sigma H}) $ is a coordinate system about  $ \sigma H $. Note that in this notation  $ \tilde{\varphi}_{H} $ is just the map  $ \tilde{\varphi} $. Now, we claim that one obtains a differentiable structure on  $ G/H $ by maximizing the collection of coordinate systems
 
 \begin{equation}
-\label{eq:3.58:9}
+\tag{9}\label{eq:3.58:9}
 \big\{\big(\tilde{l}_{\sigma}\big(\pi(U)\big),\tilde{\varphi}_{\sigma H}\big)\colon\sigma\in G\big\}.
 \end{equation}
 
 One has only to check differentiability on overlaps. So let  $ (\tilde{l}_{\sigma_{1}}(\pi(U)), \tilde{\varphi}_{\sigma_{1}H}) $ and  $ (\tilde{l}_{\sigma_{2}}(\pi(U)), \tilde{\varphi}_{\sigma_{2}H}) $ be two such coordinate systems, and let
 
 \begin{equation}
-\label{eq:3.58:10}
+\tag{10}\label{eq:3.58:10}
 V=\tilde{\varphi}_{\sigma_{1}H}(\tilde{l}_{\sigma_{1}}(\pi(U))\cap\tilde{l}_{\sigma_{2}}(\pi(U))).
 \end{equation}
 
 We must prove that $\tilde{\varphi}_{\sigma_2H} \circ \tilde{\varphi}_{\sigma_1H}^{-1} \mid V$ is $C^\infty$. Let $t \in V$. Then since $\tilde{l}_{\sigma_2^{-1}} \circ \tilde{l}_{\sigma_1} \circ \tilde{\varphi}^{-1}(t) \in \pi(U)$, there exists an element $g \in H$ such that $\sigma_2^{-1} \sigma_1 \varphi^{-1}(t) g \in U$. It follows that there exists a neighborhood $W$ of $t$ in $V$ such that $\sigma_2^{-1} \sigma_1 \varphi^{-1}(W) g \subset U$. It suffices to prove that $\tilde{\varphi}_{\sigma_2H} \circ \tilde{\varphi}_{\sigma_1H}^{-1} \mid W$ is $C^\infty$. But we can express $\tilde{\varphi}_{\sigma_2H} \circ \tilde{\varphi}_{\sigma_1H}^{-1} \mid W$ as the following composition of $C^\infty$ maps:
 
 \begin{equation}
-\label{eq:3.58:11}
+\tag{11}\label{eq:3.58:11}
 \tilde{\varphi}_{\sigma_{2}H}\circ\tilde{\varphi}_{\sigma_{1}H}^{-1}\mid W=\pi_{0}\circ\varphi\circ r_{g}\circ l_{\sigma_{2}^{-1}\sigma_{1}}\circ\varphi^{-1}\mid W,
 \end{equation}
 
@@ -1842,49 +1895,52 @@ With this differentiable structure on $G/H$, the projection $\pi: G \to G/H$ is 
 Uniqueness Let  $ (G/H)_{1} $ denote G/H with another differentiable structure satisfying (a) and (b).
 
 \begin{center}
-\includegraphics[width=0.25\textwidth]{figures/ch3_img_in_image_box_319_852_565_987.jpg}
+\redrawn{figure-39}
 \end{center}
 
 Then the identity map and its inverse are both $C^{\infty}$ since locally they can be expressed as the composition of local smooth sections into $G$ followed by $\pi$. Thus id is a diffeomorphism, which proves uniqueness.
 
 \end{proof}
 
+\warnernumber{59}
 \begin{definition}\label{thm:3.59}
 Manifolds of the form $G/H$ where $G$ is a Lie group, $H$ is a closed subgroup of $G$, and the manifold structure is the unique one satisfying (a) and (b) of \hyperref[thm:3.58]{Theorem 3.58} are called homogeneous manifolds.
 
 \end{definition}
 
+\warnernumber{60}
 \begin{remarks}\label{thm:3.60}
 Observe that $f$ is a $C^{\infty}$ function on $G/H$ if and only if $f\circ\pi$ is a $C^{\infty}$ function on $G$; for if $f$ is $C^{\infty}$, then certainly $f\circ\pi$ is $C^{\infty}$. Conversely if $f\circ\pi$ is $C^{\infty}$, then $f$, which can locally be represented as the composition of a smooth section of $G/H$ in $G$ with $f\circ\pi$, is also $C^{\infty}$.
 
 \end{remarks}
 
+\warnernumber{61}
 \begin{definition}\label{thm:3.61}
 Let
 
 \begin{equation}
-\label{eq:3.61:1}
+\tag{1}\label{eq:3.61:1}
 \eta\colon G\times M\to M
 \end{equation}
 
 be an action of G on M on the left (cf. 3.44); and, as usual, let
 
 \begin{equation}
-\label{eq:3.61:2}
+\tag{2}\label{eq:3.61:2}
 \eta_{\sigma}(m)=\eta(\sigma,m).
 \end{equation}
 
 The action is called effective if $e$ is the only element of $G$ for which $\eta_{e}$ is the identity map on $M$. The action is called transitive if whenever $m$ and $n$ belong to $M$ there exists a $\sigma$ in $G$ such that $\eta_{e}(m) = n$. Let $m_{0} \in M$, and let \index{Effective action of a Lie group}
 
 \begin{equation}
-\label{eq:3.61:3}
+\tag{3}\label{eq:3.61:3}
 H=\{\sigma\in G\colon\eta_{\sigma}(m_{0})=m_{0}\}.
 \end{equation}
 
 H is a closed subgroup of G called the isotropy group at  $ m_{0} $. The action  $ \eta $ restricted to H gives an action of H on M on the left with a fixed point  $ m_{0} $, so by 3.45 we have a representation \index{Isotropy group}
 
 \begin{equation}
-\label{eq:3.61:4}
+\tag{4}\label{eq:3.61:4}
 \alpha\colon H\to\operatorname{Aut}(M_{m_{0}})\quad\mathrm{where}\quad\alpha(\sigma)=d\eta_{\sigma}\mid M_{m_{0}}.
 \end{equation}
 
@@ -1892,11 +1948,12 @@ The group  $ \alpha(H) $ of linear transformations of  $ M_{m_{0}} $ is called t
 
 \end{definition}
 
+\warnernumber{62}
 \begin{theorem}\label{thm:3.62}
 Let $\eta: G \times M \to M$ be a transitive action of the Lie group $G$ on the manifold $M$ on the left. Let $m_0 \in M$, and let $H$ be the isotropy group at $m_0$. Define a mapping \index{Transitive action}
 
 \begin{equation}
-\label{eq:3.62:1}
+\tag{1}\label{eq:3.62:1}
 \tilde{\beta}\colon G/H\to M\quad\mathrm{by}\quad\tilde{\beta}(\sigma H)=\eta_{\sigma}(m_{0}).
 \end{equation}
 
@@ -1910,14 +1967,14 @@ Observe first that $\tilde{\beta}$ is well-defined since $\eta_{\sigma h}(m_0) =
 According to \hyperref[thm:3.60]{Remark 3.60}, $\tilde{\beta}$ is $C^{\infty}$ if and only if $\tilde{\beta}\circ\pi$ is $C^{\infty}$ where $\pi$ is the natural projection of $G$ onto $G/H$. But
 
 \begin{equation}
-\label{eq:3.62:2}
+\tag{2}\label{eq:3.62:2}
 \tilde{\beta}\circ\pi=\eta\circ i_{m_{0}}
 \end{equation}
 
 where  $ i_{m} $ is the  $ C^{\infty} $ map of G into  $ G \times M $ defined by
 
 \begin{equation}
-\label{eq:3.62:3}
+\tag{3}\label{eq:3.62:3}
 i_{m_{0}}(\sigma)=(\sigma,m_{0}).
 \end{equation}
 
@@ -1926,7 +1983,7 @@ Thus  $ \tilde{\beta} $ is  $ C^{\infty} $.
 Now let $\beta=\tilde{\beta}\circ\pi$. Since the kernel of $d\pi\mid G_{\sigma}$ is $(\sigma H)_{\sigma}\subset G_{\sigma}$, in order to prove that $d\tilde{\beta}\mid(G/H)_{\sigma H}$ is non-singular it is sufficient to prove that the kernel of $d\beta\mid G_{e}$ is also $(\sigma H)_{e}$. Since for each $\sigma\in G$,
 
 \begin{equation}
-\label{eq:3.62:4}
+\tag{4}\label{eq:3.62:4}
 \beta=\eta_{\sigma}\circ\beta\circ l_{\sigma^{-1}},
 \end{equation}
 
@@ -1940,11 +1997,12 @@ Thus $d\tilde{\beta}$ is everywhere non-singular, and the theorem is proved.
 
 \end{proof}
 
+\warnernumber{63}
 \begin{remarks}\label{thm:3.63}
 If $G$ is a Lie group and $H$ a closed subgroup of $G$, then there is a natural action $\tilde{l}$ of $G$ on the homogeneous manifold $G/H$ on the left, namely,
 
 \begin{equation}
-\label{eq:3.63:1}
+\tag{1}\label{eq:3.63:1}
 \tilde{l}\colon G\times G/H\to G/H,\qquad\tilde{l}(\sigma,\tau H)=\sigma\tau H.
 \end{equation}
 
@@ -1954,6 +2012,7 @@ From \hyperref[thm:3.62]{Theorem 3.62} we get another characterization of the ma
 
 \end{remarks}
 
+\warnernumber{64}
 \begin{theorem}\label{thm:3.64}
 Let G be a Lie group and H a closed normal subgroup of G. Then the homogeneous manifold G/H with its natural group structure is a Lie group.
 
@@ -1963,7 +2022,7 @@ Let G be a Lie group and H a closed normal subgroup of G. Then the homogeneous m
 One has only to check that the map
 
 \begin{equation}
-\label{eq:3.64:1}
+\tag{1}\label{eq:3.64:1}
 (\sigma H,\tau H)\mapsto\sigma\tau^{-1}H
 \end{equation}
 
@@ -1972,7 +2031,7 @@ of $G/H \times G/H \to G/H$ is $C^{\infty}$. Let $\alpha_{\sigma}: W_{\sigma} \t
 respectively. Then locally the map (1) can be expressed as the following composition of $C^{\infty}$ maps:
 
 \begin{equation}
-\label{eq:3.64:2}
+\tag{2}\label{eq:3.64:2}
 \pi\circ\varphi\circ(\alpha_{\sigma}\times\alpha_{\tau}),
 \end{equation}
 
@@ -1980,60 +2039,61 @@ where  $ \varphi: G \times G \to G $ is the map  $ \varphi(\sigma, \tau) = \sigm
 
 \end{proof}
 
+\warnernumber{65}
 \begin{examples}{of Homogeneous Manifolds}\label{thm:3.65}
 
 (a) Let $\{e_i: i = 1, \ldots, n\}$ be the canonical basis of $\mathbb{R}^n$ where $e_i$ is the $n$-tuple consisting of all zeros except for a 1 in the $i$th spot. Each matrix $\sigma \in Gl(n, \mathbb{R})$ uniquely determines a linear transformation on $\mathbb{R}^n$, which we shall also denote by $\sigma$, by requiring that
 
 \begin{equation}
-\label{eq:3.65:1}
+\tag{1}\label{eq:3.65:1}
 \sigma(e_{j})=\sum_{i}\sigma_{i j}e_{i}.
 \end{equation}
 
 In other words, if we consider the $n$-tuples of $\mathbb{R}^n$ as $n \times 1$ matrices, then $\sigma$ acts on $\mathbb{R}^n$ in the natural way by matrix multiplication. The map $(\sigma, v) \mapsto \sigma(v)$ gives an action of $Gl(n, \mathbb{R})$ on $\mathbb{R}^n$ on the left:
 
 \begin{equation}
-\label{eq:3.65:2}
+\tag{2}\label{eq:3.65:2}
 Gl(n,\mathbb{R})\times\mathbb{R}^{n}\to\mathbb{R}^{n}.
 \end{equation}
 
 Let  $ \langle\quad,\quad\rangle $ denote the standard inner product on  $ \mathbb{R}^n $ with respect to which the basis  $ \{e_i\} $ is orthonormal. Then if  $ \sigma\in Gl(n,\mathbb{R}) $,
 
 \begin{equation}
-\label{eq:3.65:3}
+\tag{3}\label{eq:3.65:3}
 \langle\sigma(v),w\rangle=\langle v,\sigma^{t}(w)\rangle.
 \end{equation}
 
 If  $ \sigma \in O(n) $, then  $ \sigma^t \sigma = I $, so it follows from (3) that
 
 \begin{equation}
-\label{eq:3.65:4}
+\tag{4}\label{eq:3.65:4}
 \langle\sigma(v),\sigma(v)\rangle=\langle v,\sigma^{t}\sigma(v)\rangle=\langle v,v\rangle;
 \end{equation}
 
 thus $\sigma$ preserves lengths of vectors. Thus the action (2) restricted to $O(n) \times S^{n-1}$ factors through the unit sphere $S^{n-1}$.
 
 \begin{equation}
-\label{eq:3.65:5}\includegraphics[width=0.33\textwidth]{figures/ch3_img_in_image_box_341_806_657_927.jpg}
+\tag{5}\label{eq:3.65:5}\redrawn{figure-40}
 \end{equation}
 
 According to 1.32, the factoring map is smooth, so we have a natural  $ C^{\infty} $ action
 
 \begin{equation}
-\label{eq:3.65:6}
+\tag{6}\label{eq:3.65:6}
 O(n)\times S^{n-1}\to S^{n-1}
 \end{equation}
 
 of the orthogonal group $O(n)$ on the unit sphere $S^{n-1}$ on the left. We claim that the action (6) is transitive. If $v_1 \in S^{n-1}$, let $\{v_1, v_2, \ldots, v_n\}$ be an orthonormal basis of $\mathbb{R}^n$ containing $v_1$ as the first element. Let
 
 \begin{equation}
-\label{eq:3.65:7}
+\tag{7}\label{eq:3.65:7}
 v_{i}=\sum_{j}\sigma_{j i}e_{j}.
 \end{equation}
 
 Then the matrix  $ \sigma $ whose entries are determined by (7) is orthogonal, and
 
 \begin{equation}
-\label{eq:3.65:8}
+\tag{8}\label{eq:3.65:8}
 \sigma(e_{1})=v_{1}.
 \end{equation}
 
@@ -2042,7 +2102,7 @@ It follows that if v and w are any two points of  $ S^{n-1} $, there is an ortho
 The set of matrices in  $ O(n) $ of the form
 
 \begin{equation}
-\label{eq:3.65:9}
+\tag{9}\label{eq:3.65:9}
 \sigma=\begin{pmatrix} & & & 0\\ & \tilde{\sigma} & & \vdots\\ & & & 0\\ 0 & \cdots & 0 & 1\end{pmatrix}
 \end{equation}
 
@@ -2055,7 +2115,7 @@ forms a closed subgroup of $O(n)$. The matrices $\tilde{\sigma}$ occurring in th
 so  $ \sigma_{in}=0 $ for  $ i<n $ and  $ \sigma_{nn}=1 $. Since  $ \sigma $ is orthogonal,  $ \sigma\sigma^{t}=I $, and this implies that  $ \sum\sigma_{ni}^{2}=1 $. Since  $ \sigma_{nn}=1 $, we must have  $ \sigma_{ni}=0 $,  $ i<n $. Thus  $ \sigma\in O(n-1) $. It follows from \hyperref[thm:3.62]{Theorem 3.62} that the map
 
 \begin{equation}
-\label{eq:3.65:10}
+\tag{10}\label{eq:3.65:10}
 O(n)/O(n-1)\to S^{n-1},\qquad\sigma O(n-1)\mapsto\sigma(e_{n})
 \end{equation}
 
@@ -2066,7 +2126,7 @@ By a similar argument one can show that there is a diffeomorphism of the sphere 
 (b) Let $\{e_i: i = 1, \ldots, n\}$ be the canonical complex basis of $\mathbb{C}^n$ where $e_i$ is the $n$-tuple consisting of all zeros except for a 1 in the $i$th spot. Just as in Example (a), each matrix $\sigma \in G/(n, \mathbb{C})$ uniquely determines a linear transformation of $\mathbb{C}^n$, which we still denote by $\sigma$, by requiring
 
 \begin{equation}
-\label{eq:3.65:11}
+\tag{11}\label{eq:3.65:11}
 \sigma(e_{j})=\sum_{i}\sigma_{i j}e_{i}.
 \end{equation}
 
@@ -2075,35 +2135,35 @@ So if we consider the complex $n$-tuples of $\mathbb{C}^n$ as $n \times 1$ matri
 the real $2n^{2}$-dimensional Lie group $Gl(n,\mathbb{C})$ on the real $2n$-dimensional manifold $\mathbb{C}^n$ on the left:
 
 \begin{equation}
-\label{eq:3.65:12}
+\tag{12}\label{eq:3.65:12}
 Gl(n,\mathbb{C})\times\mathbb{C}^{n}\to\mathbb{C}^{n}.
 \end{equation}
 
 Let  $ \langle $ ,  $ \rangle $ denote the standard inner product on  $ \mathbb{C}^n $, where
 
 \begin{equation}
-\label{eq:3.65:13}
+\tag{13}\label{eq:3.65:13}
 \left\langle\sum_{i}a_{i}e_{i},\sum_{i}b_{i}e_{i}\right\rangle=\sum_{i=1}^{n}a_{i}\bar{b}_{i}.
 \end{equation}
 
 Then if  $ \sigma \in Gl(n, \mathbb{C}) $,
 
 \begin{equation}
-\label{eq:3.65:14}
+\tag{14}\label{eq:3.65:14}
 \langle\sigma(v),w\rangle=\langle v,\bar{\sigma}^{t}(w)\rangle.
 \end{equation}
 
 If $\sigma$ is an element of the unitary group $U(n)$, then $\bar{\sigma}^{t}\sigma=I$, so it follows from (14) that $\sigma$ preserves lengths of vectors in $\mathbb{C}^{n}$. If $X$ denotes the unit sphere in $\mathbb{C}^{n}$, then the action (12) restricted to $U(n) \times X$ factors through $X$, and so, by 1.32, yields a $C^{\infty}$ action
 
 \begin{equation}
-\label{eq:3.65:15}
+\tag{15}\label{eq:3.65:15}
 U(n)\times X\to X
 \end{equation}
 
 of the unitary group $U(n)$ on the unit sphere $X\subset\mathbb{C}^n$ on the left. It follows by an argument similar to that in Example (a) that the action (15) is transitive and that the isotropy group for the action (15) at the point $e_n$ is simply $U(n-1)$, which we consider to be a closed subgroup of $U(n)$ by identifying $\tilde{\sigma} \in U(n-1)$ with
 
 \begin{equation}
-\label{eq:3.65:16}
+\tag{16}\label{eq:3.65:16}
 \sigma=\begin{pmatrix} & & & 0\\ & \tilde{\sigma} & & \vdots\\ & & & 0\\ 0 & \cdots & 0 & 1\end{pmatrix}
 \end{equation}
 
@@ -2114,7 +2174,7 @@ By a similar argument, the sphere $S^{2n-1}$ is also diffeomorphic with the homo
 (c) The real projective space  $ P^{n-1} $ is the set of equivalence classes of points in  $ \mathbb{R}^n - \{0\} $ where  $ (a_1, \ldots, a_n) $ is equivalent to  $ (b_1, \ldots, b_n) $ if there is a non-zero real number  $ c $ such that  $ ca_i = b_i $ for  $ i = 1, \ldots, n $. If  $ P^{n-1} $ is given the largest topology in which the natural projection \index{Real projective space}
 
 \begin{equation}
-\label{eq:3.65:17}
+\tag{17}\label{eq:3.65:17}
 \pi\colon(\mathbb{R}^{n}-\{0\})\to P^{n-1}
 \end{equation}
 
@@ -2127,7 +2187,7 @@ is continuous, then $\pi$ restricted to $S^{n-1}$ is a 2-fold covering of $P^{n-
 (d) As a set, the complex projective space $CP^{n-1}$ is the set of equivalence classes of points of $\mathbb{C}^{n}-\{0\}$ under the equivalence relation in which $(\alpha_{1},\ldots,\alpha_{n})$ is equivalent to $(\beta_{1},\ldots,\beta_{n})$ if there is a non-zero complex number $\gamma$ such that $\gamma\alpha_{i}=\beta_{i}$ for $i=1,\ldots,n$. We make $CP^{n-1}$ into a real $2(n-1)$ dimensional manifold as follows. The action of the special unitary group on the unit sphere in $C^{n}$ preserves these equivalence classes, and each element of $CP^{n-1}$ has representatives of unit length; thus we have a natural transitive action of $SU(n)$ on the set $CP^{n-1}$: \index{Complex projective space}
 
 \begin{equation}
-\label{eq:3.65:18}
+\tag{18}\label{eq:3.65:18}
 SU(n)\times\mathbb{C}P^{n-1}\to\mathbb{C}P^{n-1}.
 \end{equation}
 
@@ -2140,7 +2200,7 @@ The subgroup of $SU(n)$ leaving fixed the point of $\mathbb{C}P^{n-1}$ determine
 in SU(n). It follows that the map
 
 \begin{equation}
-\label{eq:3.65:19}
+\tag{19}\label{eq:3.65:19}
 \sigma U(n-1)\mapsto\{\sigma(e_{n})\},
 \end{equation}
 
@@ -2149,7 +2209,7 @@ where $\{\sigma(e_n)\}$ denotes the point of $CP^{n-1}$ determined by $\sigma(e_
 (e) Let $V$ be a real $d$-dimensional vector space, and let $S_{p}(V)$ be the set of $p$-frames in $V$. That is,
 
 \begin{equation}
-\label{eq:3.65:20}
+\tag{20}\label{eq:3.65:20}
 S_{p}(V)=\{\tilde{w}=(w_{1},\ldots,w_{p})\colon\mathrm{the}w_{1},\ldots,w_{p}
 \end{equation}
 
@@ -2162,14 +2222,14 @@ If we choose a basis $v_{1}, \ldots, v_{d}$ for $V$, then $Gl(d,\mathbb{R})$ act
 \]
 
 \begin{equation}
-\label{eq:3.65:21}
+\tag{21}\label{eq:3.65:21}
 \begin{array}{r l}{\mathrm{by}}&{\eta\big(\sigma,(w_{1},\ldots,w_{p})\big)=\big(\sigma(w_{1}),\ldots,\sigma(w_{p})\big).}\end{array}
 \end{equation}
 
 Observe that if $\tilde{v}$, $\tilde{w} \in S_p(V)$, then there is a $\sigma \in Gl(d, \mathbb{R})$ such that $\eta(\sigma, \tilde{v}) = \tilde{w}$. Now let $\tilde{s}$ be the element of $S_p(V)$ determined by the first $p$ elements of the basis $v_1, \ldots, v_d$; hence $\tilde{s} = (v_1, \ldots, v_p)$. Let $H$ be the subset of $Gl(d, \mathbb{R})$ leaving $\tilde{s}$ fixed. Then
 
 \begin{equation}
-\label{eq:3.65:22}
+\tag{22}\label{eq:3.65:22}
 H=\Big\{\left(\frac{I}{O}\left|\frac{A}{B}\right.\right)\in{G l}(d,\mathbb{R})\Big\},
 \end{equation}
 
@@ -2178,14 +2238,14 @@ where $I$ is the $p \times p$ identity matrix; thus $H$ is a closed subgroup of 
 (f) Again let $V$ be a real $d$-dimensional vector space, and now let $M_{k}(V)$ be the set of all $k$-dimensional subspaces $(k$-planes) of $V$. If we choose a basis $v_{1}, \ldots, v_{d}$ for $V$, then the orthogonal group $O(d)$ acts naturally on $V$ by matrix multiplication; and since non-singular linear transformations map $k$-planes to $k$-planes, we have a map
 
 \begin{equation}
-\label{eq:3.65:23}
+\tag{23}\label{eq:3.65:23}
 \eta\colon O(d)\times M_{k}(V)\to M_{k}(V).
 \end{equation}
 
 Observe that if $P$ and $Q$ are $k$-planes, then there is a $\sigma \in O(d)$ such that $\eta(\sigma,P) = Q$. Now, let $P_0$ be the $k$-plane spanned by the first $k$ elements of the basis $v_1, \ldots, v_d$, and let $H$ be the subset of $O(d)$ leaving $P_0$ fixed. Then
 
 \begin{equation}
-\label{eq:3.65:24}
+\tag{24}\label{eq:3.65:24}
 H=\Big\{\left(\frac{\sigma}{0}\Big|\frac{0}{\tau}\right)\in O(d)\colon\sigma\in O(k),\;\tau\in O(d-k)\Big\},
 \end{equation}
 
@@ -2193,6 +2253,7 @@ so $H$ is a closed subgroup of $O(d)$ which we can identify with $O(k) \times O(
 
 \end{examples}
 
+\warnernumber{66}
 \begin{proposition}\label{thm:3.66}
 Let H be a closed subgroup of the Lie group G. If H and G/H are connected, then G is connected.
 
@@ -2202,42 +2263,42 @@ Let H be a closed subgroup of the Lie group G. If H and G/H are connected, then 
 Assume that
 
 \begin{equation}
-\label{eq:3.66:1}
+\tag{1}\label{eq:3.66:1}
 G=U\cup V
 \end{equation}
 
 where $U$ and $V$ are non-empty open subsets of $G$. Then
 
 \begin{equation}
-\label{eq:3.66:2}
+\tag{2}\label{eq:3.66:2}
 G/H=\pi(U)\cup\pi(V)
 \end{equation}
 
 where $\pi(U)$ and $\pi(V)$ are non-empty open subsets of $G/H$. Since $G/H$ is connected, there must be a point $\sigma H$ of $G/H$ such that
 
 \begin{equation}
-\label{eq:3.66:3}
+\tag{3}\label{eq:3.66:3}
 \sigma H\in\pi(U)\cap\pi(V).
 \end{equation}
 
 Now, (1) implies that
 
 \begin{equation}
-\label{eq:3.66:4}
+\tag{4}\label{eq:3.66:4}
 \sigma H=(\sigma H\cap U)\cup(\sigma H\cap V)
 \end{equation}
 
 where $(\sigma H \cap U)$ and $(\sigma H \cap V)$ are both open subsets of $\sigma H$ (since $H$ has the relative topology). According to (3), both $(\sigma H \cap U)$ and $(\sigma H \cap V)$ are non-empty; thus, since $\sigma H$ is homeomorphic with $H$ and therefore connected, we have
 
 \begin{equation}
-\label{eq:3.66:5}
+\tag{5}\label{eq:3.66:5}
 (\sigma H\cap U)\cap(\sigma H\cap V)\neq\varnothing,
 \end{equation}
 
 which implies that
 
 \begin{equation}
-\label{eq:3.66:6}
+\tag{6}\label{eq:3.66:6}
 U\cap V\neq\varnothing,
 \end{equation}
 
@@ -2245,6 +2306,7 @@ which proves that G is connected.
 
 \end{proof}
 
+\warnernumber{67}
 \begin{theorem}\label{thm:3.67}
 Each of the Lie groups $SO(n)$, $SU(n)$, and $U(n)$ is connected for $n\geq1$, and $O(n)$ has two components ($n\geq1$).
 
@@ -2269,6 +2331,7 @@ Thus $O(n)$ has two components.
 
 \end{proof}
 
+\warnernumber{68}
 \begin{theorem}\label{thm:3.68}
 $ Gl(n,\mathbb{R}) $ has two components.
 
@@ -2280,7 +2343,7 @@ Let $Gl(n,\mathbb{R})^{+}$ be the subset of $Gl(n,\mathbb{R})$ consisting of mat
 First we show that each element of $Gl(n, \mathbb{R})$ has a polar decomposition; that is, each matrix $\sigma \in Gl(n, \mathbb{R})$ can be expressed in the form
 
 \begin{equation}
-\label{eq:3.68:1}
+\tag{1}\label{eq:3.68:1}
 \sigma=P R
 \end{equation}
 
@@ -2293,35 +2356,35 @@ a\langle v,v\rangle=\langle\sigma\sigma^{t}(v),v\rangle=\langle\sigma^{t}(v),\si
 Consequently, $a \geq 0$, and since $\sigma\sigma^t$ is non-singular, we must have $a > 0$. Thus $\sigma\sigma^t$ is a positive definite symmetric matrix. Since $\sigma\sigma^t$ is symmetric, there exists an orthogonal matrix $\beta \in O(n)$ such that the matrix
 
 \begin{equation}
-\label{eq:3.68:2}
+\tag{2}\label{eq:3.68:2}
 \beta\sigma\sigma^{t}\beta^{t}
 \end{equation}
 
 is diagonal (cf. Exercise 22(a)). Since the eigenvalues of $\sigma\sigma^{t}$ are all positive, the matrix (2) has a square root
 
 \begin{equation}
-\label{eq:3.68:3}
+\tag{3}\label{eq:3.68:3}
 (\beta\sigma\sigma^{t}\beta^{t})^{1/2};
 \end{equation}
 
 that is, (3) is a diagonal matrix, and each diagonal entry is the positive square root of the corresponding entry in the matrix (2). Let
 
 \begin{equation}
-\label{eq:3.68:4}
+\tag{4}\label{eq:3.68:4}
 P=\beta^{t}(\beta\sigma\sigma^{t}\beta^{t})^{1/2}\beta,
 \end{equation}
 
 and let
 
 \begin{equation}
-\label{eq:3.68:5}
+\tag{5}\label{eq:3.68:5}
 R=P^{-1}\sigma.
 \end{equation}
 
 P is a positive definite symmetric matrix, and R is orthogonal since (4) implies that  $ P^{2} = \sigma\sigma^{t} $ and therefore that
 
 \begin{equation}
-\label{eq:3.68:6}
+\tag{6}\label{eq:3.68:6}
 \begin{aligned}{R R^{t}}&{{}=P^{-1}\sigma\sigma^{t}(P^{-1})^{t}=P^{-1}\sigma\sigma^{t}(P^{t})^{-1}}\\ {}&{{}=P^{-1}\sigma\sigma^{t}P^{-1}=P^{-1}P P P^{-1}=I.}\\ \end{aligned}
 \end{equation}
 
@@ -2330,7 +2393,7 @@ Thus  $ \sigma = PR $, as we asserted in (1).
 If $\sigma \in Gl(n, \mathbb{R})^+$, then $\sigma$ has a polar decomposition (1), where now $R$ must have positive determinant; thus $R \in SO(n)$. Let
 
 \begin{equation}
-\label{eq:3.68:7}
+\tag{7}\label{eq:3.68:7}
 P_{t}=t I+(1-t)P
 \end{equation}
 

@@ -1,5 +1,7 @@
-\chapter{The Inverse Function Theorem in $\mathbb{R}^n$ and Related
-  Results}\label{sec:inverse-function-theorem}
+\chapter{Inverse and Implicit Function Theorems}
+\label{sec:inverse-function-theorem}
+\noindent\emph{Editorial supplement. This appendix is not part of Warner's original text.}
+\medskip
 
 In this chapter we discuss three logically equivalent theorems: the inverse
 function theorem, the implicit function theorem, and the constant rank
@@ -69,11 +71,92 @@ the rank of the Jacobian matrix of $F$ at $p$.
 
 
 
-\newpage
+\begin{theorem}[Implicit Function Theorem]
+\label{thm:appendix-implicit}
+Let $F$ be a smooth map from an open neighborhood of $(a,b)$ in
+$\RR^r\times\RR^n$ to $\RR^n$, with $F(a,b)=0$. If the partial derivative
+$D_yF(a,b):\RR^n\to\RR^n$ is invertible, then there are neighborhoods
+$A$ of $a$ and $B$ of $b$ and a unique smooth map $g:A\to B$ such that
+\[
+ F(x,y)=0\quad\Longleftrightarrow\quad y=g(x)
+ \qquad((x,y)\in A\times B).
+\]
+Moreover, $g(a)=b$ and
+\[
+ Dg(x)=-[D_yF(x,g(x))]^{-1}D_xF(x,g(x)).
+\]
+\end{theorem}
+\begin{proof}
+Define $\Phi(x,y)=(x,F(x,y))$. Its derivative at $(a,b)$ is the block matrix
+\[
+ D\Phi(a,b)=\begin{pmatrix}I&0\\D_xF(a,b)&D_yF(a,b)\end{pmatrix},
+\]
+which is invertible. By the inverse function theorem, $\Phi$ is a
+diffeomorphism between neighborhoods of $(a,b)$ and $(a,0)$. Its inverse
+has the form $(u,v)\mapsto(u,h(u,v))$ because $\Phi$ preserves the first
+coordinate. Set $g(u)=h(u,0)$ and shrink to product neighborhoods so that
+the graph remains in the domain of this inverse. Injectivity of $\Phi$
+gives uniqueness and the displayed equivalence. Differentiating
+$F(x,g(x))=0$ gives the derivative formula, after shrinking the neighborhoods
+so that $D_yF$ remains invertible.
+\end{proof}
+
+\begin{corollary}[Regular Level Sets]
+If $F:U\subset\RR^m\to\RR^n$ has rank $n$ at $p$ and $F(p)=c$, then
+near $p$ the level set $F^{-1}(c)$ is the graph of a smooth function in
+$m-n$ variables. In particular, it is a submanifold of dimension $m-n$.
+\end{corollary}
+\begin{proof}
+A nonzero $n\times n$ minor permits a permutation of the variables for
+which $D_yF(p)$ is invertible. Apply the implicit function theorem to $F-c$.
+\end{proof}
+
+\section{The Constant Rank Theorem}
+\begin{theorem}[Constant Rank Theorem]
+\label{thm:appendix-constant-rank}
+Let $f:U\subset\RR^m\to\RR^n$ be smooth and have constant rank $k$ in
+a neighborhood of $p$. There are smooth coordinates centered at $p$ and
+$f(p)$ in which $f$ has the form
+\[
+ (u_1,\ldots,u_m)\longmapsto(u_1,\ldots,u_k,0,\ldots,0).
+\]
+\end{theorem}
+\begin{proof}
+For $k=0$, all first derivatives vanish near $p$, so $f$ is constant on a
+sufficiently small ball and the assertion follows by translating the target.
+For $k>0$, translate $p$ and $f(p)$ to zero and permute the coordinates so
+that $\partial(f_1,\ldots,f_k)/\partial(x_1,\ldots,x_k)$ is invertible at
+zero. The inverse function theorem applies to
+\[
+ \Phi(x)=(f_1(x),\ldots,f_k(x),x_{k+1},\ldots,x_m).
+\]
+In the coordinates $u=\Phi(x)$, the map is
+$f\circ\Phi^{-1}(u)=(u_1,\ldots,u_k,h_{k+1}(u),\ldots,h_n(u))$.
+Its derivative has the block form
+\[
+ \begin{pmatrix}I_k&0\\ A&B\end{pmatrix}.
+\]
+Since its rank is exactly $k$ throughout a neighborhood, $B=0$ there.
+On a smaller coordinate box, each $h_j$ therefore depends only on
+$u_1,\ldots,u_k$. The target coordinate change
+\[
+ \Psi(y)=\bigl(y_1,\ldots,y_k,
+ y_{k+1}-h_{k+1}(y_1,\ldots,y_k),\ldots,
+ y_n-h_n(y_1,\ldots,y_k)\bigr)
+\]
+has a smooth inverse obtained by adding the same functions. Thus
+$\Psi\circ f\circ\Phi^{-1}$ has the asserted form.
+\end{proof}
+
+When $k=m$, this is the local form of an immersion; when $k=n$, it is
+the local form of a submersion. Unlike the regular-level-set case, a rank
+condition at just one point is not sufficient for the general constant-rank
+conclusion. For example, $x\mapsto x^2$ has rank zero at zero but is not
+locally constant.
 
 \section{Supplementary Linear Algebra}
 
-\section{Dual Spaces}\label{sec:dualspace}
+\subsection{Dual Spaces}\label{sec:dualspace}
 
 If $V$ and $W$ are real linear spaces, we denote by $\Hom(V,W)$ the vector
 space of all linear maps $f: V\to W$. The \emph{dual space} $V^\vee$ of $V$ is
@@ -101,8 +184,42 @@ of $v$, $\alpha^i(v) = v^i$. Then
 	The functions $\alpha^1,\cdots, \alpha^n$ form a basis of $V^\vee$.
 \end{proposition}
 
+\begin{proof}
+For $\lambda\in V^\vee$ and $v=\sum_i v^ie_i$, linearity gives
+$\lambda(v)=\sum_i\lambda(e_i)v^i$. Hence
+$\lambda=\sum_i\lambda(e_i)\alpha^i$, so the $\alpha^i$ span $V^\vee$.
+Evaluating a relation $\sum_i c_i\alpha^i=0$ on each $e_j$ gives $c_j=0$,
+which proves linear independence.
+\end{proof}
+
 
 \begin{corollary}
 	The dual space $V^\vee$ has the same dimension as the finite dimensional
 	vector space $V$.
 \end{corollary}
+
+\subsection{Dual Maps and Annihilators}
+For a linear map $T:V\to W$, its dual map is
+$T^*:W^\vee\to V^\vee$, $T^*(\lambda)=\lambda\circ T$.
+For a subspace $E\subset V$, its annihilator is
+$E^\circ=\{\lambda\in V^\vee:\lambda|_E=0\}$.
+Extending a basis of $E$ to a basis of $V$ shows that
+$\dim E^\circ=\dim V-\dim E$.
+
+\begin{proposition}
+For finite-dimensional $V$ and $W$,
+\[
+ \ker T^*=(\operatorname{im}T)^\circ,\qquad
+ \operatorname{im}T^*=(\ker T)^\circ.
+\]
+In particular, $\operatorname{rank}T^*=\operatorname{rank}T$.
+\end{proposition}
+\begin{proof}
+The first equality follows directly from $T^*\lambda=\lambda\circ T$.
+Every element of $\operatorname{im}T^*$ vanishes on $\ker T$, giving one
+inclusion in the second equality. Conversely, if $\mu$ vanishes on
+$\ker T$, the rule $Tv\mapsto\mu(v)$ defines a linear functional on
+$\operatorname{im}T$. Extend it to $W$ using a basis; the extension $\lambda$
+satisfies $T^*\lambda=\mu$. The rank identity now follows from the
+dimension formula for annihilators and rank--nullity.
+\end{proof}

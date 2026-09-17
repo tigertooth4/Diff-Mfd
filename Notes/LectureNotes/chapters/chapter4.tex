@@ -6,13 +6,14 @@ We shall consider integration of $p$-forms over differentiable singular $p$-chai
 \section{Orientation}
 
 
+\warnernumber{1}
 \begin{definition}\label{thm:4.1}
 Let $V$ be a real vector space of dimension $n$. The notion of an orientation on $V$ was introduced in Exercise 13 of Chapter 2. Recall that the $n$th exterior power $\Lambda_n(V)$ is 1-dimensional, so that $\Lambda_n(V) - \{0\}$ has two components. An orientation on $V$ is a choice of a component of $\Lambda_n(V) - \{0\}$. \index{Orientation}
 
 Now let $M$ be a connected differentiable manifold of dimension $n$. We shall call $M$ orientable if it is possible to choose in a consistent way an orientation on $M_m^*$ for each $m \in M$. More precisely, let $O$ be the “0-section” of the exterior $n$-bundle $\Lambda_n^*(M)$; that is,
 
 \begin{equation}
-\label{eq:4.1:1}
+\tag{1}\label{eq:4.1:1}
 O=\bigcup_{m\in M}\left\{0\in\Lambda_{n}(M_{m}^{*})\right\}.
 \end{equation}
 
@@ -24,6 +25,7 @@ Let $M$ and $N$ be orientable $n$-dimensional manifolds, and let $\psi: M \to N$
 
 \end{definition}
 
+\warnernumber{2}
 \begin{proposition}\label{thm:4.2}
 Let M be a differentiable manifold of dimension n. Then the following are equivalent:
 
@@ -32,7 +34,7 @@ Let M be a differentiable manifold of dimension n. Then the following are equiva
 (b) There is a collection $\Phi = \{(V,\psi)\}$ of coordinate systems on $M$ such that
 
 \begin{equation}
-\label{eq:4.2:1}
+\tag{1}\label{eq:4.2:1}
 M=\bigcup_{(V,\psi)\in\Phi}V\qquad\mathrm{and}\qquad\det\left(\frac{\partial x_{i}}{\partial y_{j}}\right)>0\quad\mathrm{on}\quad U\cap V
 \end{equation}
 
@@ -46,14 +48,14 @@ whenever $(U, x_{1}, \ldots, x_{n})$ and $(V, y_{1}, \ldots, y_{n})$ belong to $
 We can assume, without loss of generality, that $M$ is connected. We prove that (a) $\Rightarrow$ (b) $\Rightarrow$ (c) $\Rightarrow$ (a). Given (a), that $M$ is orientable, choose an orientation on $M$; that is, we choose one of the two components, call it $\Lambda$, of $\Lambda_n^*(M) - O$. Observe that for each $m \in M$, $\Lambda \cap \Lambda_n(M_m^*)$ is precisely one of the two components of $\Lambda_n(M_m^*) - \{0\}$. Now let $\Phi$ consist of all of those coordinate systems $(V, y_1, \ldots, y_n)$ on $M$ such that the map of $V$ into $\Lambda_n^*(M)$ defined by
 
 \begin{equation}
-\label{eq:4.2:2}
+\tag{2}\label{eq:4.2:2}
 m\mapsto(d y_{1}\land\cdots\land d y_{n})(m)
 \end{equation}
 
 has range in $\Lambda$. Now, if $(U, x_1, \ldots, x_n)$ and $(V, y_1, \ldots, y_n)$ are any two coordinate systems on $M$, then for $m \in U \cap V$,
 
 \begin{equation}
-\label{eq:4.2:3}
+\tag{3}\label{eq:4.2:3}
 (d x_{1}\wedge\dotsm\wedge d x_{n})(m)=\det\biggl(\frac{\partial x_{i}}{\partial y_{j}}\bigg|_{m}\biggr)(d y_{1}\wedge\dotsm\wedge d y_{n})(m).
 \end{equation}
 
@@ -68,7 +70,7 @@ for each $m \in U \cap V$. Consequently, (1) is satisfied, and result (b) follow
 Now assume (b). Let $\{\varphi_i\}$ be a partition of unity subordinate to the cover of $M$ given by the coordinate neighborhoods in the collection $\Phi$ with $\varphi_i$ subordinate to $(V_i, x_1^i, \ldots, x_n^i)$. Then
 
 \begin{equation}
-\label{eq:4.2:4}
+\tag{4}\label{eq:4.2:4}
 \omega=\sum_{i}\varphi_{i}d x_{1}{}^{i}\wedge\cdots\wedge d x_{n}{}^{i}
 \end{equation}
 
@@ -88,6 +90,7 @@ Then  $ \Lambda_n^*(M) - O $ is the disjoint union of the two open subsets  $ \L
 
 \end{proof}
 
+\warnernumber{3}
 \begin{examples}\label{thm:4.3}
 (a) Every Lie group $G$ is orientable, for if $\omega_1, \ldots, \omega_n$ is a basis for the left invariant 1-forms on $G$, then $\omega_1 \wedge \cdots \wedge \omega_n$ is a global nowhere-vanishing $n$-form on $G$.
 
@@ -104,7 +107,8 @@ Then  $ \Lambda_n^*(M) - O $ is the disjoint union of the two open subsets  $ \L
 \section{Integration on Manifolds}
 
 
-\subsection{Integration in the Euclidean Space $\mathbb{R}^n$}\label{thm:4.4}
+\warnernumber{4}
+\discuss{4.4}{Integration in the Euclidean Space $\mathbb{R}^n$}\label{thm:4.4}
 We assume that the reader is familiar with some theory of integration in  $ \mathbb{R}^n $. Since we shall be integrating continuous (in fact usually  $ C^\infty $) functions over nice subsets of  $ \mathbb{R}^n $ \index{Integration}
 
 (polyhedra for example), the theory of the Riemann integral will be quite sufficient. The principal theorem that we need to recall is the change of variables formula. Several versions of this formula and their proofs may be found in [6], [18], or [29]. A version sufficient for our purposes is the following. Let $\varphi$ be a diffeomorphism of a bounded open set $D$ in $\mathbb{R}^{n}$ with a bounded open set $\varphi(D)$. Let $J_{\varphi}$ denote the determinant of the Jacobian matrix of $\varphi$:
@@ -116,63 +120,65 @@ J_{\varphi}=\det\left(\frac{\partial\varphi_{i}}{\partial r_{j}}\right)\;.
 Let $f$ be a bounded continuous function on $\varphi(D)$, and let $A$ be a nice subset of $D$. ($A$ will be polyhedral in most of our applications. Generally, for the Riemann theory, a nice subset would be one which has Jordan content.) Then
 
 \begin{equation}
-\label{eq:4.4:1}
+\tag{1}\label{eq:4.4:1}
 \int_{\varphi(A)}f=\int_{A}f\circ\varphi\,|J_{\varphi}|.
 \end{equation}
 
-\subsection{Integration of $n$-forms in $\mathbb{R}^n$}\label{thm:4.5}
+\warnernumber{5}
+\discuss{4.5}{Integration of $n$-forms in $\mathbb{R}^n$}\label{thm:4.5}
 As usual, we let $r_1, \ldots, r_n$ denote the canonical coordinate system on $\mathbb{R}^n$. The standard orientation is determined by the $n$-form $dr_1 \wedge \cdots \wedge dr_n$. Now let $\omega$ be an $n$-form on an open set $D \subset \mathbb{R}^n$. Then there is a uniquely determined function $f$ on $D$ such that $\omega = f dr_1 \wedge \cdots \wedge dr_n$. Let $A \subset D$. We define
 
 \begin{equation}
-\label{eq:4.5:1}
+\tag{1}\label{eq:4.5:1}
 \int_{A}\omega=\int_{A}f,
 \end{equation}
 
 provided that the latter exists. We can restate the change of variables formula \eqref{eq:4.4:1} in terms of differential forms. Let $\varphi$, $D$, and $A$ be as in 4.4, and let $\omega$ be an $n$-form on $\varphi(D)$. Then
 
 \begin{equation}
-\label{eq:4.5:2}
+\tag{2}\label{eq:4.5:2}
 \int_{\varphi(A)}\omega=\pm\int_{A}\delta\varphi(\omega),
 \end{equation}
 
 where one uses “+” if φ is orientation preserving and “−” if φ is orientation reversing.
 
-\subsection{Integration over Chains}\label{thm:4.6}
+\warnernumber{6}
+\discuss{4.6}{Integration over Chains}\label{thm:4.6}
 The first type of integration that we shall consider on general manifolds involves integration of $p$-forms over differentiable singular $p$-chains in an $n$-manifold.
 
 For each  $ p \geq 1 $ we let
 
 \begin{equation}
-\label{eq:4.6:1}
+\tag{1}\label{eq:4.6:1}
 \Delta^{p}=\Big\{(a_{1},\ldots,a_{p})\in\mathbb{R}^{p}\colon\sum_{i=1}^{p}a_{i}\leq1,\mathrm{and~each}a_{i}\geq0\Big\}.
 \end{equation}
 
 $\Delta^{p}$ is called the standard $p$-simplex in $\mathbb{R}^{p}$. For $p=0$, we set $\Delta^{p}$ equal to the $1$-point space $\{0\}$; $\Delta^{p}$ is the standard $0$-simplex. Let $M$ be a manifold. A differentiable singular $p$-simplex $\sigma$ in $M$ is a map $\sigma$ of $\Delta^{p}$ into $M$ which extends to be a differentiable $(C^{\infty})$ map of a neighborhood of $\Delta^{p}$ in $\mathbb{R}^{p}$ into $M$. \index{Simplex}
 
-In this chapter we shall refer to such a $\sigma$ as simply a $p$-simplex $\sigma$ in $M$. (In Chapter 5 we shall deal, in addition, with continuous singular simplices, and so there we shall need to retain the term “differentiable” for distinction.) A $0$-simplex in $M$ consists of a map of the 1-point space $\{0\}$ into $M$. $\mathbf{A}p$-chain $c$ in $M$ (with real coefficients) is a finite linear combination $c=\sum a_i\sigma_i$ of $p$-simplices $\sigma_i$ in $M$ where the $a_i$ are real numbers. \index{Chain}
+In this chapter we shall refer to such a $\sigma$ as simply a $p$-simplex $\sigma$ in $M$. (In Chapter 5 we shall deal, in addition, with continuous singular simplices, and so there we shall need to retain the term “differentiable” for distinction.) A $0$-simplex in $M$ consists of a map of the 1-point space $\{0\}$ into $M$. A $p$-chain $c$ in $M$ (with real coefficients) is a finite linear combination $c=\sum a_i\sigma_i$ of $p$-simplices $\sigma_i$ in $M$ where the $a_i$ are real numbers. \index{Chain}
 
 For each $p \geq 0$ we define a collection of maps $k_i^{p}: \Delta^{p} \to \Delta^{p+1}$ for $0 \leq i \leq p + 1$ as follows:
 
 \[
-\mathrm{f o r}\quad p=0,\quad k_{0}^{0}(0)=1\quad\mathrm{a n d}\quad k_{1}^{0}(0)=0.
+\text{for}\quad p=0,\quad k_{0}^{0}(0)=1\quad\text{and}\quad k_{1}^{0}(0)=0.
 \]
 
 \begin{equation}
-\label{eq:4.6:2}
-\begin{array}{l l}{\mathrm{f o r}\quad p\geq1,}&{\begin{cases}{k_{0}^{p}(a_{1},\ldots,a_{p})=\left(1-\sum_{i=1}^{p}a_{i},a_{1},\ldots,a_{p}\right)\quad\mathrm{and}}\\ {k_{i}^{p}(a_{1},\ldots,a_{p})=(a_{1},\ldots,a_{i-1},0,a_{i},\ldots,a_{p})}\\ {\quad(1\leq i\leq p+1).}\\ \end{cases}}\\ \end{array}
+\tag{2}\label{eq:4.6:2}
+\begin{array}{l l}{\text{for}\quad p\geq1,}&{\begin{cases}{k_{0}^{p}(a_{1},\ldots,a_{p})=\left(1-\sum_{i=1}^{p}a_{i},a_{1},\ldots,a_{p}\right)\quad\mathrm{and}}\\ {k_{i}^{p}(a_{1},\ldots,a_{p})=(a_{1},\ldots,a_{i-1},0,a_{i},\ldots,a_{p})}\\ {\quad(1\leq i\leq p+1).}\\ \end{cases}}\\ \end{array}
 \end{equation}
 
 If  $ \sigma $ is a  $ p $-simplex in  $ M $ with  $ p \geq 1 $, we define its  $ ith $ face,  $ 0 \leq i \leq p $, to be the  $ (p-1) $-simplex
 
 \begin{equation}
-\label{eq:4.6:3}
+\tag{3}\label{eq:4.6:3}
 \sigma^{i}=\sigma\circ k_{i}^{p-1},
 \end{equation}
 
 and we define the boundary of  $ \sigma $ to be the  $ (p - 1) $ chain
 
 \begin{equation}
-\label{eq:4.6:4}
+\tag{4}\label{eq:4.6:4}
 \partial\sigma=\sum_{i=0}^{p}(-1)^{i}\sigma^{i}.
 \end{equation}
 
@@ -183,65 +189,66 @@ We extend the boundary operator linearly to chains. Note carefully the use of th
 \]
 
 \begin{center}
-\includegraphics[width=0.60\textwidth]{figures/ch4_img_in_image_box_125_823_775_1072.jpg}
+\redrawn{figure-41}
 \end{center}
 
 We claim that
 
 \begin{equation}
-\label{eq:4.6:5}
+\tag{5}\label{eq:4.6:5}
 k_{i}^{p+1}\circ k_{j}^{p}=k_{j+1}^{p+1}\circ k_{i}^{p}\qquad(p\geq0;i\leq j).
 \end{equation}
 
 For $p=0$, check the three possible cases separately. For $p\geq1$, observe that both sides of (5) give the following maps:
 
 \begin{equation}
-\label{eq:4.6:6}
+\tag{6}\label{eq:4.6:6}
 \begin{aligned}{}&{{}\quad1\leq i<j\quad(a_{1},\ldots,a_{p})\mapsto(a_{1},\ldots,a_{i-1},0,a_{i},\ldots,a_{j-1},0,a_{j},\ldots,a_{p})}\\ {}&{{}\quad1\leq i=j\quad(a_{1},\ldots,a_{p})\mapsto(a_{1},\ldots,a_{i-1},0,0,a_{i},\ldots,a_{p})}\\ {}&{{}\quad0=i<j\quad(a_{1},\ldots,a_{p})\mapsto\bigg(1-\sum_{i=1}^{p}a_{i},a_{1},\ldots,a_{j-1},0,a_{j},\ldots,a_{p}\bigg)}\\ {}&{{}\quad0=i=j\quad(a_{1},\ldots,a_{p})\mapsto\bigg(0,1-\sum_{i=1}^{p}a_{i},a_{1},\ldots,a_{p}\bigg).}\\ \end{aligned}
 \end{equation}
 
 It follows from (5), (3), and (4) that the boundary of the boundary of a chain is always 0. That is,
 
 \begin{equation}
-\label{eq:4.6:7}
+\tag{7}\label{eq:4.6:7}
 \partial\circ\partial=0.
 \end{equation}
 
 Now let $\sigma$ be a $p$-simplex in $M$, and let $\omega$ be a $p$-form defined on a neighborhood of the image of $\sigma$. In most of our applications we shall deal only with smooth forms, but for the purposes of the following definition it would be quite sufficient for $\omega$ to be a continuous $p$-form. First of all, if $p = 0$, then a 0-simplex consists simply of a point in $M$, and a 0-form is simply a function. In this case, we define the integral of the function $\omega$ over the 0-simplex $\sigma$ to be the value of $\omega$ at the point $\sigma(0) \in M$:
 
 \begin{equation}
-\label{eq:4.6:8}
+\tag{8}\label{eq:4.6:8}
 \int_{\sigma}\omega=\omega\left(\sigma(0)\right).
 \end{equation}
 
 If $p \geq 1$, then since $\sigma$ extends to be a smooth map of a neighborhood of $\Delta^p$ in $\mathbb{R}^p$ into $M$, $\omega$ can be pulled back via $\sigma$ to a $p$-form $\delta\sigma(\omega)$ on a neighborhood of $\Delta^p$. In this case, we define the integral of the $p$-form $\omega$ over the $p$-simplex $\sigma$ by
 
 \begin{equation}
-\label{eq:4.6:9}
+\tag{9}\label{eq:4.6:9}
 \int_{\sigma}\omega=\int_{\Delta^{p}}\delta\sigma(\omega).
 \end{equation}
 
 We extend these integrals linearly to chains, so that if  $ c = \sum a_i \sigma_i $, then
 
 \begin{equation}
-\label{eq:4.6:10}
+\tag{10}\label{eq:4.6:10}
 \int_{c}\omega=\sum a_{i}\int_{\sigma_{i}}\omega.
 \end{equation}
 
 Perhaps the single most important theorem in integration theory on manifolds is Stokes' theorem. This is a generalization of the Fundamental Theorem of Calculus. Observe that in our context the Fundamental Theorem says that if $F$ is a smooth function on the real line, and if $\sigma$ is a smooth 1-simplex in the real line, then
 
 \begin{equation}
-\label{eq:4.6:11}
+\tag{11}\label{eq:4.6:11}
 \int_{\partial\sigma}F=\int_{\sigma}dF.
 \end{equation}
 
 We shall present two versions of Stokes' theorem. The first is in terms of integration of forms over chains. \index{Stokes' theorem}
 
+\warnernumber{7}
 \begin{theorem}{Stokes' Theorem I}\label{thm:4.7}
 Let $c$ be a $p$-chain ($p \geq 1$) in a differentiable manifold $M$, and let $\omega$ be a smooth ($p-1$) form defined on a neighborhood of the image of $c$. Then
 
 \begin{equation}
-\label{eq:4.7:1}
+\tag{1}\label{eq:4.7:1}
 \int_{\partial c}\omega=\int_{c}d\omega.
 \end{equation}
 
@@ -251,49 +258,49 @@ Let $c$ be a $p$-chain ($p \geq 1$) in a differentiable manifold $M$, and let $\
 It is sufficient to consider the case in which the p-chain c consists of a single p-simplex  $ \sigma $. Thus we must prove that
 
 \begin{equation}
-\label{eq:4.7:2}
+\tag{2}\label{eq:4.7:2}
 \int_{\sigma}d\omega=\int_{\partial\sigma}\omega.
 \end{equation}
 
 It follows immediately from our definitions that (2) is equivalent with
 
 \begin{equation}
-\label{eq:4.7:3}
+\tag{3}\label{eq:4.7:3}
 \int_{\Delta^{p}}d\left(\delta\sigma(\omega)\right)=\sum_{i=0}^{p}(-1)^{i}\int_{\Delta^{p-1}}\delta\sigma^{i}(\omega)=\sum_{i=0}^{p}(-1)^{i}\int_{\Delta^{p-1}}\delta k_{i}^{p-1}\circ\delta\sigma(\omega).
 \end{equation}
 
 Observe first of all that the case p = 1 reduces directly to the Fundamental Theorem of Calculus:
 
 \begin{equation}
-\label{eq:4.7:4}
+\tag{4}\label{eq:4.7:4}
 \int_{\Delta^{1}}\frac{d}{d r}(\omega\circ\sigma)d r=\omega\big(\sigma(1)\big)-\omega\big(\sigma(0)\big),
 \end{equation}
 
 so we now assume that  $ p \geq 2 $. Then the  $ (p - 1) $ form  $ \delta\sigma(\omega) $ can be expressed as
 
 \begin{equation}
-\label{eq:4.7:5}
+\tag{5}\label{eq:4.7:5}
 \delta\sigma(\omega)=\sum_{j=1}^{p}a_{j}\,dr_{1}\wedge\cdots\wedge\widehat{dr_{j}}\wedge\cdots\wedge dr_{p},
 \end{equation}
 
 where the circumflex over a term means that the term is to be omitted, and where the $a_i$ are $C^\infty$ functions on a neighborhood of $\Delta^p$ in $\mathbb{R}^p$. Since the integral is linear, we may consider the special case in which $\delta\sigma(\omega)$ consists of a single term of the form $a_i dr_1 \wedge \cdots \wedge \widehat{dr}_j \wedge \cdots \wedge dr_p$. In this case, the left-hand side of (3) becomes
 
 \begin{equation}
-\label{eq:4.7:6}
+\tag{6}\label{eq:4.7:6}
 (-1)^{j-1}\int_{\Delta^{p}}\frac{\partial a_{j}}{\partial r_{j}}d r_{1}\wedge\cdots\wedge d r_{p}.
 \end{equation}
 
 To evaluate the right-hand side of (3), we observe that for  $ 1 \leq i \leq p $,
 
 \begin{equation}
-\label{eq:4.7:7}
+\tag{7}\label{eq:4.7:7}
 \delta k_{i}^{p-1}(r_{j})=\left\{\begin{matrix}{r_{j}}&{}&{(1\leq j\leq i-1)}\\ {0}&{}&{(j=i)}\\ {r_{j-1}}&{}&{(i+1\leq j\leq p),}\\ \end{matrix}\right.
 \end{equation}
 
 and
 
 \begin{equation}
-\label{eq:4.7:8}
+\tag{8}\label{eq:4.7:8}
 \delta k_{0}^{p-1}(r_{j})=\left\{\begin{aligned}{}&{{}1-\sum_{i=1}^{p-1}r_{i}}&{(j=1)}\\ {}&{{}r_{j-1}}&{(1<j\leq p).}\\ \end{aligned}\right.
 \end{equation}
 
@@ -318,7 +325,7 @@ Then  $\varphi_j(\Delta^{p-1}) = \Delta^{p-1}$, and $|J_{\varphi_j}| = 1$, so th
 From (3), (6), (9), and (11) we see that the proof has been reduced to showing that
 
 \begin{equation}
-\label{eq:4.7:9}
+\tag{9}\label{eq:4.7:9}
 \begin{aligned}{}&{{}\int_{\Delta^{p}}\frac{\partial a_{j}}{\partial r_{j}}d r_{1}\wedge\cdots\wedge d r_{p}}\\ {}&{{}\quad=\int_{\Delta^{p-1}}a_{j}\bigg(r_{1},\ldots,r_{j-1},1-\sum_{i=1}^{p-1}r_{i},r_{j},\ldots,r_{p-1}\bigg)d r_{1}\wedge\cdots\wedge d r_{p-1}}\\ {}&{{}\quad-\int_{\Delta^{p-1}}a_{j}(r_{1},\ldots,r_{j-1},0,r_{j},\ldots,r_{p-1})d r_{1}\wedge\cdots\wedge d r_{p-1}.}\\ \end{aligned}
 \end{equation}
 
@@ -326,7 +333,8 @@ But now (12) is simply the evaluation of the integral of $\partial a_{i}/\partia
 
 \end{proof}
 
-\subsection{Integration on an Oriented Manifold}\label{thm:4.8}
+\warnernumber{8}
+\discuss{4.8}{Integration on an Oriented Manifold}\label{thm:4.8}
 Let $M$ be an $n$-dimensional oriented manifold. We shall integrate $n$-forms over regular domains in $M$. A subset $D$ of $M$ will be called a regular domain if for each point $m \in M$ one of the following holds: \index{Regular domain}
 
 (a) There is an open neighborhood of m which is contained in M - D.
@@ -356,34 +364,34 @@ $ (\alpha') \quad U $ lies in the interior of an oriented regular  $ n $-simplex
 $ (\beta') $ U is the image under a type  $ (\beta) $ oriented regular  $ n $-simplex  $ \sigma $ of an open set  $ V $ in  $ \mathbb{R}^n $ which is a neighborhood of a point in the  $ n $th face of  $ \Delta^n $, which intersects the boundary of  $ \Delta^n $ only in that  $ n $th face, and whose image under  $ \sigma $ is contained in  $ \sigma(\Delta^n) \cup (M - D) $.
 
 \begin{center}
-\includegraphics[width=0.60\textwidth]{figures/ch4_img_in_image_box_158_107_769_388.jpg}
+\redrawn{figure-42}
 \end{center}
 
 Since supp $\omega \cap D$ is compact, it has a finite cover $U_1, \ldots, U_k$ by open sets of type $(\alpha')$ or $(\beta')$. Let the associated oriented regular $n$-simplices be $\sigma_1, \ldots, \sigma_k$. Let $U = M - (\text{supp} \omega \cap D)$, and let $\varphi, \varphi_1, \ldots, \varphi_k$ be a partition of unity subordinate to the cover $U, U_1, \ldots, U_k$ of $M$. We define the integral of $\omega$ over $D$ by
 
 \begin{equation}
-\label{eq:4.8:1}
+\tag{1}\label{eq:4.8:1}
 \int_{D}\omega=\sum_{i=1}^{k}\int_{\sigma_{i}}\varphi_{i}\omega.
 \end{equation}
 
 We must check that the definition (1) is independent of the cover and the partition of unity chosen. Let $V, V_{1}, \ldots, V_{l}$ and $\psi, \psi_{1}, \ldots, \psi_{l}$ be another such cover and another such partition of unity respectively, with $V_{j}$ associated with the oriented regular $n$-simplex $\tau_{j}$. Since $\psi = 0$ on $\mathrm{supp} \omega \cap D$, it follows that $\sum_{j=1}^{l}\psi_{j} = 1$ there, so that
 
 \begin{equation}
-\label{eq:4.8:2}
+\tag{2}\label{eq:4.8:2}
 \sum_{i=1}^{k}\int_{\sigma_{i}}\varphi_{i}\omega=\sum_{i=1}^{k}\int_{\sigma_{i}}\sum_{j=1}^{l}\psi_{j}\varphi_{i}\omega=\sum_{i,j}\int_{\sigma_{i}}\psi_{j}\varphi_{i}\omega.
 \end{equation}
 
 Similarly,
 
 \begin{equation}
-\label{eq:4.8:3}
+\tag{3}\label{eq:4.8:3}
 \sum_{j=1}^{l}\int_{\tau_{j}}\psi_{j}\omega=\sum_{i,j}\int_{\tau_{j}}\psi_{j}\varphi_{i}\omega.
 \end{equation}
 
 Now, since $\sigma_i^{-1}\circ\tau_j$ is an orientation-preserving diffeomorphism on the open set (possibly empty) where it is defined, and since (supp $\psi_j\varphi_i\omega$) $\cap\sigma_i(\Delta^n) = (\mathrm{supp}\,\psi_j\varphi_i\omega)\cap\tau_j(\Delta^n)$, it follows from the change of variables formula \eqref{eq:4.5:2} that
 
 \begin{equation}
-\label{eq:4.8:4}
+\tag{4}\label{eq:4.8:4}
 \begin{aligned}{\int_{\sigma_{i}}\psi_{j}\varphi_{i}\omega=}&{{}\int_{\Delta^{n}}\delta\sigma_{i}(\psi_{j}\varphi_{i}\omega)=\int_{\Delta^{n}}\delta(\sigma_{i}^{-1}\circ\tau_{j})[\delta\sigma_{i}(\psi_{j}\varphi_{i}\omega)]}\\ {=}&{{}\int_{\Delta^{n}}\delta\tau_{j}(\psi_{j}\varphi_{i}\omega)=\int_{\tau_{j}}\psi_{j}\varphi_{i}\omega.}\\ \end{aligned}
 \end{equation}
 
@@ -392,7 +400,7 @@ It follows from (2), (3), and (4) that $\int_{D} \omega$ is well-defined, indepe
 Observe that if $\gamma$ is a diffeomorphism of $M$, then
 
 \begin{equation}
-\label{eq:4.8:5}
+\tag{5}\label{eq:4.8:5}
 \int_{\gamma(D)}\omega=\pm\int_{D}\delta\gamma(\omega)
 \end{equation}
 
@@ -400,11 +408,12 @@ with “+” if and only if  $ \gamma $ is orientation-preserving.
 
 We now are ready to state and prove our second version of Stokes' theorem.
 
+\warnernumber{9}
 \begin{theorem}{Stokes' Theorem II}\label{thm:4.9}
 Let $D$ be a regular domain in an oriented $n$-dimensional manifold $M$, and let $\omega$ be a smooth $(n-1)$ form of compact support. Then
 
 \begin{equation}
-\label{eq:4.9:1}
+\tag{1}\label{eq:4.9:1}
 \int_{D}d\omega=\int_{\partial D}\omega.
 \end{equation}
 
@@ -414,28 +423,28 @@ Let $D$ be a regular domain in an oriented $n$-dimensional manifold $M$, and let
 Let $\varphi_{1},\ldots,\varphi_{k}$ and $\sigma_{1},\ldots,\sigma_{k}$ be chosen as in \eqref{eq:4.8:1} relative to (supp $\omega$) $\cap D$. Since $\sum_{i=1}^{k}\varphi_{i}=1$ on a neighborhood of (supp $\omega$) $\cap D$, $d(\sum\varphi_{i})=0$ there. Thus on a neighborhood of (supp $\omega$) $\cap D$ we have
 
 \begin{equation}
-\label{eq:4.9:2}
+\tag{2}\label{eq:4.9:2}
 \sum_{i=1}^{k}d(\varphi_{i}\omega)=\sum_{i=1}^{k}d\varphi_{i}\wedge\omega+\sum_{i=1}^{k}\varphi_{i}d\omega=d\omega.
 \end{equation}
 
 Now, if $\sigma_{i}$ is an $n$-simplex of type 4.8( $ \alpha $), then
 
 \begin{equation}
-\label{eq:4.9:3}
+\tag{3}\label{eq:4.9:3}
 \int_{\partial\sigma_{i}}\varphi_{i}\omega=0=\int_{\partial D}\varphi_{i}\omega
 \end{equation}
 
 since $\mathrm{supp} \ \varphi_i \omega \subset \mathrm{Int} \ \sigma_i(\Delta^n) \subset \mathrm{Int} \, D$. On the other hand, suppose that $\sigma_i$ is an $n$-simplex of type 4.8($\beta$). In this case, $\varphi_i \omega$ is zero on the boundary of $\sigma_i$ except possibly at points in the interior of the $n$th face $\sigma_i^n$. Now $\sigma_i^n$ is an orientation-preserving regular ($n-1$) simplex in $\partial D$ if $n$ is even, and is orientation-reversing if $n$ is odd. It follows that
 
 \begin{equation}
-\label{eq:4.9:4}
+\tag{4}\label{eq:4.9:4}
 \int_{\partial\sigma_{i}}\varphi_{i}\omega=(-1)^{n}\int_{\sigma_{i}{}^{n}}\varphi_{i}\omega=(-1)^{n}(-1)^{n}\int_{\partial D}\varphi_{i}\omega=\int_{\partial D}\varphi_{i}\omega.
 \end{equation}
 
 From (2), (3), (4), and from our first version (4.7) of Stokes' theorem, we see that
 
 \begin{equation}
-\label{eq:4.9:5}
+\tag{5}\label{eq:4.9:5}
 \begin{aligned}{\int_{D}d\omega}&{{}=\sum_{i}\int_{D}d(\varphi_{i}\omega)=\sum_{i}\int_{\sigma_{i}}d(\varphi_{i}\omega)}\\ {}&{{}=\sum_{i}\int_{\partial\sigma_{i}}\varphi_{i}\omega=\sum_{i}\int_{\partial D}\varphi_{i}\omega=\int_{\partial D}\omega.}\\ \end{aligned}
 \end{equation}
 
@@ -450,14 +459,15 @@ Let $\omega$ be a smooth $(n-1)$ form on a compact oriented $n$-dimensional mani
 
 \end{corollary*}
 
-\subsection{Integration on a Riemannian Manifold}\label{thm:4.10} Let $M$ be a Riemannian manifold of dimension $n$. That is, $M$ is an $n$-dimensional differentiable manifold with a positive definite inner product $\langle \ , \rangle_m$ on each tangent space $M_m$ such that $m \mapsto \langle X, Y \rangle_m$ is a smooth function on $M$ whenever $X$ and $Y$ are smooth vector fields. The existence of Riemannian metrics on differentiable manifolds was asserted in Exercise 23 of Chapter 1.
+\warnernumber{10}
+\discuss{4.10}{Integration on a Riemannian Manifold}\label{thm:4.10} Let $M$ be a Riemannian manifold of dimension $n$. That is, $M$ is an $n$-dimensional differentiable manifold with a positive definite inner product $\langle \ , \rangle_m$ on each tangent space $M_m$ such that $m \mapsto \langle X, Y \rangle_m$ is a smooth function on $M$ whenever $X$ and $Y$ are smooth vector fields. The existence of Riemannian metrics on differentiable manifolds was asserted in Exercise 23 of Chapter 1.
 
 Given a point  $ m \in M $, one can find a neighborhood  $ U $ of  $ m $ and a collection  $ e_1, \ldots, e_n $ of  $ C^\infty $ vector fields on  $ U $ which are orthonormal in the sense that they form an orthonormal basis of the tangent space to  $ M $ at each point of  $ U $. Start with a coordinate neighborhood  $ (U, x_1, \ldots, x_n) $, apply the usual Gram-Schmidt procedure to orthonormalize the vector fields  $ \partial/\partial x_1, \ldots, \partial/\partial x_n $, and do it simultaneously at all points of  $ U $. Such a collection  $ e_1, \ldots, e_n $ is called a local orthonormal frame field. \index{Frame field}
 
 Since the inner product  $ \langle \quad, \quad\rangle_{m} $ is, in particular, a non-singular pairing of  $ M_{m} $ with itself, it induces (see 2.7) a natural isomorphism of  $ M_{m} $ with  $ M_{m}^{*} $, namely,  $ v \mapsto \varphi_{v} $ where
 
 \begin{equation}
-\label{eq:4.10:1}
+\tag{1}\label{eq:4.10:1}
 \varphi_{v}(w)=\langle v,w\rangle_{m}.
 \end{equation}
 
@@ -466,21 +476,21 @@ Via this isomorphism,  $ M_{m}^{*} $ inherits an inner product. Observe that the
 Now let  $ e_{1}, \ldots, e_{n} $ be a local orthonormal frame field on U, and let  $ \omega_{1}, \ldots, \omega_{n} $ be the dual 1-forms. That is,
 
 \begin{equation}
-\label{eq:4.10:2}
+\tag{2}\label{eq:4.10:2}
 \omega_{i}(e_{j})=\delta_{ij}\quad\mathrm{on}~U.
 \end{equation}
 
 Then $\omega_{1}, \ldots, \omega_{n}$ form a local orthonormal coframe field on $U$. Consider now two local orthonormal coframe fields $\omega_{1}, \ldots, \omega_{n}$ on $U$ and $\omega_{1}^{\prime}, \ldots, \omega_{n}^{\prime}$ on $U^{\prime}$. Then on $U \cap U^{\prime}$ \index{Coframe field}
 
 \begin{equation}
-\label{eq:4.10:3}
+\tag{3}\label{eq:4.10:3}
 \omega_{1}\wedge\cdots\wedge\omega_{n}=\det(\sigma)\,\omega_{1}^{\prime}\wedge\cdots\wedge\omega_{n}^{\prime}
 \end{equation}
 
 where  $ \sigma $ is an orthogonal matrix whose entries are  $ C^{\infty} $ functions on  $ U \cap U' $. Thus
 
 \begin{equation}
-\label{eq:4.10:4}
+\tag{4}\label{eq:4.10:4}
 \omega_{1}\wedge\cdots\wedge\omega_{n}=\pm\omega_{1}^{\prime}\wedge\cdots\wedge\omega_{n}^{\prime}.
 \end{equation}
 
@@ -489,21 +499,21 @@ Now assume that $M$ is oriented. A local coframe field $\omega_1, \ldots, \omega
 In Exercise 13 of Chapter 2, the star operator * was introduced on $\Lambda(V)$ for an oriented inner product space $V$. On an oriented Riemannian manifold $M$, we therefore have * defined on $\Lambda(M_{m}^{*})$ for each $m$. It is easy to see that * takes smooth forms to smooth forms, so we have a linear operator
 
 \begin{equation}
-\label{eq:4.10:5}
+\tag{5}\label{eq:4.10:5}
 *:E^{p}(M)\to E^{n-p}(M),
 \end{equation}
 
 which, according to Exercise 13 of Chapter 2, satisfies
 
 \begin{equation}
-\label{eq:4.10:6}
+\tag{6}\label{eq:4.10:6}
 **=(-1)^{p(n-p)}.
 \end{equation}
 
 We already know from 4.8 how to integrate $n$-forms over an oriented $n$-dimensional manifold. Now in the case of an oriented Riemannian manifold $M$, we define the integral over $M$ of a continuous function $f$ with compact support to be the integral of the (continuous) $n$-form $*f = f_\omega$. That is,
 
 \begin{equation}
-\label{eq:4.10:7}
+\tag{7}\label{eq:4.10:7}
 \int_{M}f=\int_{M}*f=\int_{M}f\omega.
 \end{equation}
 
@@ -516,7 +526,7 @@ Actually, the orientation was convenient but not necessary in the definition of 
 Let $\{\varphi_{\alpha}\}$ be a partition of unity subordinate to the cover $\{U_{\alpha}\}$, and let $f$ be a continuous function with compact support on $M$. Then we define
 
 \begin{equation}
-\label{eq:4.10:8}
+\tag{8}\label{eq:4.10:8}
 \int_{M}f=\sum_{\alpha}\int_{\Delta^{n}}(\varphi_{\alpha}f)\circ\sigma_{\alpha}\left|h_{\alpha}\right|d r_{1}\wedge\cdots\wedge d r_{n}.
 \end{equation}
 
@@ -525,27 +535,28 @@ That this definition is independent of the cover and partition of unity chosen f
 In classical vector analysis the gradient of a function $f$ on $\mathbb{R}^n$ is defined to be the vector field $\sum_{i=1}^{n}(\partial f/\partial r_i)\partial/\partial r_i$, and the divergence of a vector field $V=\sum_{i=1}^{n}v_i\,\partial/\partial r_i$ is defined to be the function $\sum_{i=1}^{n}\partial v_i/\partial r_i$. We extend these notions to general Riemannian manifolds as follows. Recall that the metric gives us canonical isomorphisms $M_m\cong M_m^*$. We shall for convenience denote such isomorphisms by a tilde, so that if $v\in M_m$, then $\tilde{v}$ will be the corresponding dual element in $M_m^*$; and if $\omega\in M_m^*$, then $\tilde{\omega}$ will be the corresponding vector in $M_m$. Then if $f$ is a function on $M$, its gradient is the vector field \index{Divergence of a vector field}\index{Gradient}
 
 \begin{equation}
-\label{eq:4.10:9}
+\tag{9}\label{eq:4.10:9}
 \mathrm{grad}f=\widetilde{df}.
 \end{equation}
 
 If V is a vector field on an oriented Riemannian manifold, then its divergence is the function
 
 \begin{equation}
-\label{eq:4.10:10}
+\tag{10}\label{eq:4.10:10}
 \mathrm{div}\,V=*d*\tilde{V}.
 \end{equation}
 
 Stokes' theorem has an equivalent version on oriented Riemannian manifolds known as the divergence theorem. This theorem says that if $V$ is a smooth vector field on an oriented Riemannian manifold $M$, if $D$ is a regular domain in $M$, and if $\vec{n}$ is the unit outer normal vector field on $\partial D$, then \index{Divergence theorem}
 
 \begin{equation}
-\label{eq:4.10:11}
+\tag{11}\label{eq:4.10:11}
 \int_{D}\mathrm{div}\,V=\int_{\partial D}\langle V,\vec{n}\rangle.
 \end{equation}
 
 The proof is left to the reader as an exercise. (For a few additional remarks see Exercise 4.)
 
-\subsection{Integration on a Lie Group}\label{thm:4.11}
+\warnernumber{11}
+\discuss{4.11}{Integration on a Lie Group}\label{thm:4.11}
 Let $G$ be an $n$-dimensional Lie group. We observed in \hyperref[thm:4.3]{4.3(a)} that G is orientable. We now fix once and for all an orientation on G.
 
 Consider the left invariant $n$-forms on $G$. Since such a form is uniquely determined by its value at one point, and since the $n$th exterior power of an $n$-dimensional vector space is one-dimensional, there is exactly a one-dimensional space of left invariant $n$-forms on $G$. Choose a non-zero left invariant $n$-form $\omega$ consistent with the fixed orientation on $G$.
@@ -553,21 +564,21 @@ Consider the left invariant $n$-forms on $G$. Since such a form is uniquely dete
 Since $G$ is oriented, the integral of compactly supported $n$-forms is defined on $G$ as in 4.8. We now define, with respect to $\omega$, the integral of a compactly supported continuous function $f$ on $G$ by setting
 
 \begin{equation}
-\label{eq:4.11:1}
+\tag{1}\label{eq:4.11:1}
 \int_{G}f=\int_{G}f\omega.
 \end{equation}
 
 The integral (1) depends, of course, on the choice of the non-zero left invariant n-form  $ \omega $ consistent with the orientation on G. But since such forms are uniquely determined up to a positive constant multiple, so is the integral (1). In the case of a compact group G, we can and always will fix the choice of  $ \omega $ by requiring the normalization
 
 \begin{equation}
-\label{eq:4.11:2}
+\tag{2}\label{eq:4.11:2}
 \int_{G}\omega=1.
 \end{equation}
 
 Consider the diffeomorphism $l_{\sigma}$, which is left translation by the element $\sigma$ of $G$. Then since $\delta l_{\sigma}(\omega) = \omega$, $l_{\sigma}$ is orientation-preserving, so that, according to \eqref{eq:4.8:5},
 
 \begin{equation}
-\label{eq:4.11:3}
+\tag{3}\label{eq:4.11:3}
 \int_{G}f=\int_{G}f\omega=\int_{G}\delta l_{\sigma}(f\omega)=\int_{G}(f\circ l_{\sigma})\omega=\int_{G}f\circ l_{\sigma}.
 \end{equation}
 
@@ -576,7 +587,7 @@ In view of property (3)—that the integral of a function $f$ on $G$ is the same
 Now we ask to what extent the integral (1) is also right invariant. That is, when do we have
 
 \begin{equation}
-\label{eq:4.11:4}
+\tag{4}\label{eq:4.11:4}
 \int_{G}f=\int_{G}f\circ r_{\sigma}
 \end{equation}
 
@@ -589,21 +600,21 @@ for each $\sigma \in G$? The form $\delta r_{\sigma}\omega$ is still left invari
 Thus $\delta r_{\sigma}\omega$ is some constant multiple of $\omega$. Thus there is defined a function $\tilde{\lambda}$ of $G$ into the non-zero real numbers such that
 
 \begin{equation}
-\label{eq:4.11:5}
+\tag{5}\label{eq:4.11:5}
 \delta r_{\sigma}(\omega)=\tilde{\lambda}(\sigma)\omega.
 \end{equation}
 
 It is easily checked that  $ \tilde{\lambda} $ is  $ C^{\infty} $. We let
 
 \begin{equation}
-\label{eq:4.11:6}
+\tag{6}\label{eq:4.11:6}
 \lambda(\sigma)=|\tilde{\lambda}(\sigma)|.
 \end{equation}
 
 Observe that
 
 \begin{equation}
-\label{eq:4.11:7}
+\tag{7}\label{eq:4.11:7}
 \lambda(\sigma\tau)=\lambda(\sigma)\lambda(\tau),
 \end{equation}
 
@@ -621,13 +632,14 @@ it follows that the integral (1) is right invariant if and only if $\lambda \equ
 
 Thus the integral on a compact Lie group is both left and right invariant.
 
-\subsection{Application of 4.11}\label{thm:4.12}
+\warnernumber{12}
+\discuss{4.12}{Application of 4.11}\label{thm:4.12}
 A typical application of the integral on a compact Lie group is the following.
 
 Let $G$ be a Lie group, and let $\alpha: G \to \mathrm{Aut}(V)$ be a representation into the automorphisms of a real or complex inner product space $V$. The representation $\alpha$ is called unitary (respectively orthogonal) in the case in which $V$ is a complex (respectively real) inner product space if
 
 \begin{equation}
-\label{eq:4.12:1}
+\tag{1}\label{eq:4.12:1}
 \langle\alpha(\tau)v,\alpha(\tau)w\rangle=\langle v,w\rangle
 \end{equation}
 
@@ -636,7 +648,7 @@ for all v and w in V and for all  $ \tau \in G $.
 Let $G$ be compact and $V$ complex (respectively real). Then there is an inner product on $V$ with respect to which $\alpha$ is unitary (respectively orthogonal). The proofs in the real case and in the complex cases are similar. Let \{, \} be any inner product on $V$. We set
 
 \begin{equation}
-\label{eq:4.12:2}
+\tag{2}\label{eq:4.12:2}
 \langle v,w\rangle=\int_{G}\{\alpha(\sigma)v,\alpha(\sigma)w\}d\sigma,
 \end{equation}
 
@@ -649,21 +661,23 @@ where we use $d\sigma$ to denote that we are considering the integrand as a func
 \section{De Rham Cohomology}
 
 
+\warnernumber{13}
 \begin{definition}\label{thm:4.13}
 A p-form $\alpha$ on a differentiable manifold $M$ is called closed if $d\alpha = 0$. It is called exact if there is a $(p - 1)$ form $\beta$ such that $\alpha = d\beta$. Since $d^{2} = 0$, every exact form is closed. The quotient space of the real vector space of closed $p$-forms modulo the subspace of exact $p$-forms is called the $p$th \emph{de Rham cohomology group of $M$}. \index{de Rham cohomology}
 
 \begin{equation}
-\label{eq:4.13:1}
+\tag{1}\label{eq:4.13:1}
 H_{\mathrm{de\,R}}^{p}(M)=\{\mathrm{closed}~p\mathrm{-forms}\}/\{\mathrm{exact}~p\mathrm{-forms}\}.
 \end{equation}
 
 \end{definition}
 
+\warnernumber{14}
 \begin{examples}\label{thm:4.14}
 Consider the case of the unit circle  $ S^1 $. Since there are no non-zero p-forms on  $ S^1 $ for  $ p > 1 $, all of the cohomology groups  $ H_{\mathrm{de\,R}}^{p}(S^{1}) $ are zero except possibly for  $ p = 0, 1 $. There are no exact 0-forms, and a closed 0-form on a connected manifold is simply a constant function, so
 
 \begin{equation}
-\label{eq:4.14:1}
+\tag{1}\label{eq:4.14:1}
 H_{\mathrm{de\,R}}^{0}(S^{1})\cong\mathbb{R}.
 \end{equation}
 
@@ -682,65 +696,68 @@ g(\theta)=\int_{0}^{\theta}\left(f(\theta)-c\right)d\theta.
 Since  $ g(\theta + 2\pi n) = g(\theta) $ for every integer n, then g is a well-defined  $ C^\infty $ function on  $ S^1 $; and  $ dg = (f(\theta) - c) d\theta = \alpha - c d\theta $. Thus every 1-form on  $ S^1 $ differs from a real multiple of  $ d\theta $ by an exact form. Consequently,
 
 \begin{equation}
-\label{eq:4.14:2}
+\tag{2}\label{eq:4.14:2}
 H_{\mathrm{de\,R}}^{1}(S^{1})\cong\mathbb{R}.
 \end{equation}
 
 \end{examples}
 
-\subsection{Effect of Mappings}\label{thm:4.15}
+\warnernumber{15}
+\discuss{4.15}{Effect of Mappings}\label{thm:4.15}
 Let $f: M \to N$ be a $C^\infty$ map. Then the algebra homomorphism $\delta f: E^*(N) \to E^*(M)$ commutes with $d$, according to 2.23, and hence maps closed forms to closed forms and exact forms to exact forms. Thus it induces a homomorphism
 
 \begin{equation}
-\label{eq:4.15:1}
+\tag{1}\label{eq:4.15:1}
 f^{*}\colon H_{\mathrm{de\,R}}^{p}(N)\to H_{\mathrm{de\,R}}^{p}(M)
 \end{equation}
 
 for each integer  $ p \geq 0 $. If, in addition,  $ g: N \to X $ is  $ C^\infty $, then
 
 \begin{equation}
-\label{eq:4.15:2}
+\tag{2}\label{eq:4.15:2}
 (g\circ f)^{*}=f^{*}\circ g^{*}.
 \end{equation}
 
 Clearly the identity map id: $M \to M$ induces the identity on de Rham cohomology:
 
 \begin{equation}
-\label{eq:4.15:3}
+\tag{3}\label{eq:4.15:3}
 (\mathrm{id})^{*}=\mathrm{id}.
 \end{equation}
 
 It follows from (2) and (3) that a diffeomorphism $f\colon M\to N$ induces isomorphisms on de Rham cohomology. Thus the de Rham cohomology is a differentiable invariant of a differentiable manifold $M$. We shall prove in Chapter 5 that it is actually a topological invariant. That is, the de Rham cohomology groups depend only on the underlying topological structure of $M$ and do not depend on the differentiable structure. A key part in the proof of this fact is the de Rham theorem, a version of which we shall formulate now. First, we need to define the real differentiable singular homology groups of $M$. \index{Real differentiable singular homology}\index{de Rham theorem}
 
-\subsection{Real Differentiable Singular Homology}\label{thm:4.16}
+\warnernumber{16}
+\discuss{4.16}{Real Differentiable Singular Homology}\label{thm:4.16}
 For each integer $p \geq 0$ we let ${}_{\infty}S_p(M,\mathbb{R})$ denote the real vector space generated by the differentiable singular $p$-simplices in $M$. Hence the elements of ${}_{\infty}S_p(M,\mathbb{R})$ are precisely the differentiable singular $p$-chains in $M$ with real coefficients. For $p < 0$, we let ${}_{\infty}S_p(M,\mathbb{R})$ be the zero vector space. The boundary operator $\partial$ induces linear transformations
 
 \begin{equation}
-\label{eq:4.16:1}
+\tag{1}\label{eq:4.16:1}
 \partial_{p}\colon{}_{\infty}S_{p}(M,\mathbb{R})\to{}_{\infty}S_{p-1}(M,\mathbb{R})
 \end{equation}
 
 for each integer $p$, which for $p \leq 0$ are simply the zero transformation. According to \eqref{eq:4.6:7}, $\partial_{p} \circ \partial_{p+1} = 0$, so that the image of $\partial_{p+1}$ lies in the kernel of $\partial_{p}$. The $p$th differential singular homology group of $M$ with real coefficients is defined by
 
 \begin{equation}
-\label{eq:4.16:2}
+\tag{2}\label{eq:4.16:2}
 {}_{\infty}H_{p}(M;\mathbb{R})=\ker\partial_{p}/\mathrm{Im}\,\partial_{p+1},
 \end{equation}
 
 and is moreover a real vector space. Elements of $\ker\partial_{p}$ are called differentiable $p$-cycles, and elements of $\mathrm{Im}\,\partial_{p+1}$ are called differentiable $p$-boundaries.
 
-\subsection{The de Rham Theorem}\label{thm:4.17}
+\warnernumber{17}
+\discuss{4.17}{The de Rham Theorem}\label{thm:4.17}
 We shall define a linear mapping of the de Rham cohomology  $ H_{\mathrm{de\,R}}^{p}(M) $ into the dual space ${}_{\infty}H_{p}(M;\mathbb{R})^{*}$ of the real differentiable singular homology:
 
 \begin{equation}
-\label{eq:4.17:1}
+\tag{1}\label{eq:4.17:1}
 H_{\mathrm{de\,R}}^{p}(M)\to{}_{\infty}H_{p}(M;\mathbb{R})^{*}.
 \end{equation}
 
 Let $\alpha$ be a closed $p$-form representing the de Rham cohomology class $\{\alpha\}$, and let $z$ be a $p$-cycle representing the real differentiable singular homology class $\{z\}$. Then (1) is defined by
 
 \begin{equation}
-\label{eq:4.17:2}
+\tag{2}\label{eq:4.17:2}
 \{\alpha\}(\{z\})=\int_{z}\alpha.
 \end{equation}
 
@@ -749,24 +766,25 @@ That (2) is independent of the representatives  $ \alpha $ and z chosen follows 
 \emph{The de Rham theorem asserts that (1) is an isomorphism.} This will be proved in 5.36 and 5.37. The real numbers determined by the integrals of a differential form over differentiable cycles are called the periods of the differential form. Now, Stokes' theorem I says that the periods of an exact form are all zero. The injectiveness of the isomorphism (1) gives a converse, namely, if a closed form has all of its periods zero, then it is an exact form. The surjectivity of (1) says that if a real number per(z) is assigned to each cycle z in such a way that
 
 \begin{equation}
-\label{eq:4.17:3}
+\tag{3}\label{eq:4.17:3}
 \operatorname{per}(az_{1}+z_{2})=a\operatorname{per}(z_{1})+\operatorname{per}(z_{2}),\qquad\operatorname{per}(\mathrm{boundary})=0,
 \end{equation}
 
 then there is a closed form  $ \alpha $ on M such that for all cycles z
 
 \begin{equation}
-\label{eq:4.17:4}
-\int_{z}\alpha=\operatorname{p e r}(z).
+\tag{4}\label{eq:4.17:4}
+\int_{z}\alpha=\operatorname{per}(z).
 \end{equation}
 
 A key ingredient in the proof of the de Rham theorem (see 5.28) is the
 
+\warnernumber{18}
 \begin{lemma}{Poincaré Lemma}\label{thm:4.18}
 Let $U$ be the open unit ball in Euclidean space  $ \mathbb{R}^n $, and let  $ E^k(U) $, as usual, be the space of differential k-forms on U. Then for each  $ k \geq 1 $ there is a linear transformation  $ h_k: E^k(U) \to E^{k-1}(U) $ such that \index{Poincaré lemma}
 
 \begin{equation}
-\label{eq:4.18:1}
+\tag{1}\label{eq:4.18:1}
 h_{k+1}\circ d+d\circ h_{k}=\mathrm{id}.
 \end{equation}
 
@@ -776,43 +794,43 @@ h_{k+1}\circ d+d\circ h_{k}=\mathrm{id}.
 We begin with formula \hyperref[thm:2.25]{2.25(d)}, which expresses the Lie derivative in terms of exterior differentiation and interior multiplication:
 
 \begin{equation}
-\label{eq:4.18:2}
+\tag{2}\label{eq:4.18:2}
 L_{X}=i(X)\circ d+d\circ i(X).
 \end{equation}
 
 We shall apply (2) to the radial vector field
 
 \begin{equation}
-\label{eq:4.18:3}
+\tag{3}\label{eq:4.18:3}
 X=\sum_{i=1}^{n}r_{i}\frac{\partial}{\partial r_{i}}
 \end{equation}
 
 on $U$. We define a linear operator $\alpha_{k}$ on $E^{k}(U)$ by setting
 
 \begin{equation}
-\label{eq:4.18:4}
+\tag{4}\label{eq:4.18:4}
 \alpha_{k}(f\,dr_{i_{1}}\wedge\cdots\wedge dr_{i_{k}})(p)=\left(\int_{0}^{1}t^{k-1}f(t p)\;d t\right)\;d r_{i_{1}}\wedge\cdots\wedge d r_{i_{k}}(p)
 \end{equation}
 
 and extending linearly to all of  $ E^{k}(U) $. Now with X defined by (3), we show that
 
 \begin{equation}
-\label{eq:4.18:5}
+\tag{5}\label{eq:4.18:5}
 \alpha_{k}\circ L_{X}=\operatorname{id}\quad\operatorname{on}\quad E^{k}(U).
 \end{equation}
 
 For, using the fact that $L_{X}$ is a derivation which commutes with $d$, we have
 
 \begin{equation}
-\label{eq:4.18:6}
+\tag{6}\label{eq:4.18:6}
 \begin{aligned}{\alpha_{k}\circ L_{X}(f}&{{}dr_{i_{1}}\wedge\cdots\wedge dr_{i_{k}})(p)}\\ {}&{{}=\alpha_{k}\bigg\{\left(k f+\sum r_{i}\frac{\partial f}{\partial r_{i}}\right)dr_{i_{1}}\wedge\cdots\wedge dr_{i_{k}}\bigg\}(p)}\\ {}&{{}=\left(\int_{0}^{1}t^{k-1}\bigg(k f(t p)+\sum r_{i}(t p)\frac{\partial f}{\partial r_{i}}\bigg|_{t p}\right)d t\bigg)dr_{i_{1}}\wedge\cdots\wedge dr_{i_{k}}(p)}\\ {}&{{}=\left(\int_{0}^{1}\frac{d}{d t}\left(t^{k}f(t p)\right)d t\right)dr_{i_{1}}\wedge\cdots\wedge dr_{i_{k}}(p)}\\ {}&{{}=f(p)dr_{i_{1}}\wedge\cdots\wedge dr_{i_{k}}(p).}\\ \end{aligned}
 \end{equation}
 
 From (5) and (2) we obtain
 
 \begin{equation}
-\label{eq:4.18:7}
-\mathrm{i d}=\alpha_{k}\circ i(X)\circ d+\alpha_{k}\circ d\circ i(X)
+\tag{7}\label{eq:4.18:7}
+\mathrm{id}=\alpha_{k}\circ i(X)\circ d+\alpha_{k}\circ d\circ i(X)
 \end{equation}
 
 on  $ E^{k}(U) $ with X given by (3). Now  $ \alpha $ commutes with  $ d $; that is,
@@ -831,15 +849,15 @@ Thus from (8) and (7) we obtain
 
 
 \[
-\mathrm{i d}=\alpha_{k}\circ i(X)\circ d+d\circ\alpha_{k-1}\circ i(X)
+\mathrm{id}=\alpha_{k}\circ i(X)\circ d+d\circ\alpha_{k-1}\circ i(X)
 \]
 
 on  $ E^{k}(U) $. Thus the desired linear transformation  $ h_{k} $ which yields (1) is obtained by setting
 
 \[
 h_{k}=\alpha_{k-1}\circ i\left(\sum r_{i}\frac{\partial}{\partial r_{i}}\right).
+\qedhere
 \]
-
 \end{proof}
 
 \begin{corollary*}{a}
@@ -851,25 +869,26 @@ If $\omega$ is a $k$-form, $k \geq 1$, on the open unit ball in $\mathbb{R}^n$ a
 The de Rham cohomology groups of the open unit ball in  $ \mathbb{R}^n $ are all zero for  $ p \geq 1 $.
 \end{corollary*}
 
+\warnernumber{19}
 \begin{remarks}\label{thm:4.19}
 Let $f_{1}$ and $f_{2}$ be $C^{\infty}$ maps of $M$ into $N$. Then we have induced maps
 
 \begin{equation}
-\label{eq:4.19:1}
+\tag{1}\label{eq:4.19:1}
 \delta f_{i}\colon E^{k}(N)\to E^{k}(M)\quad\mathrm{for~each~}k.
 \end{equation}
 
 If we wish to prove that $\delta f_{1}$ and $\delta f_{2}$ both induce the same homomorphism on de Rham cohomology, then we need only find a collection of linear transformations
 
 \begin{equation}
-\label{eq:4.19:2}
+\tag{2}\label{eq:4.19:2}
 h_{k}\colon E^{k}(N)\to E^{k-1}(M)
 \end{equation}
 
 such that
 
 \begin{equation}
-\label{eq:4.19:3}
+\tag{3}\label{eq:4.19:3}
 h_{k+1}\circ d+d\circ h_{k}=\delta f_{1}-\delta f_{2}.
 \end{equation}
 
@@ -954,7 +973,7 @@ where  $ \tilde{X}_{i} $ is the 1-form dual (via the Riemannian structure) to th
 \item Consider the 1-form  $ \alpha = (x^2 + 7y)\,dx + (-x + y\sin y^2)\,dy $ on  $ \mathbb{R}^2 $. Compute its integral over the following 1-cycle z.
 
 \begin{center}
-\includegraphics[width=0.20\textwidth]{figures/ch4_img_in_image_box_404_245_599_433.jpg}
+\redrawn{figure-43}
 \end{center}
 
 \item Let  $ \alpha = (2x + y \cos xy)dx + (x \cos xy)dy $ on  $ \mathbb{R}^2 $. Show that  $ \alpha $ is closed. Show that  $ \alpha $ is exact by finding a function  $ f $:  $ \mathbb{R}^2 \to \mathbb{R} $ with  $ \alpha = df $. What would the integral of  $ \alpha $ over the cycle of Exercise 13 be?
@@ -1017,16 +1036,16 @@ Suppose that $M$ is oriented, and that $\vec{n}$ is the oriented unit normal fie
 \omega=\delta f\big(i(\vec{n})(dr_{1}\wedge\cdots\wedge dr_{n+1})\big).
 \]
 
+\enlargethispage{2\baselineskip}
 (b) Let $D$ be an open set in the xy plane, and let $\varphi: D \to \mathbb{R}^3$ be a smooth map of the form
 
 \[
 \varphi(x,y)=\bigl(x,y,f(x,y)\bigr).
 \]
 
-Thus $\varphi$ determines an imbedded surface in $\mathbb{R}^{3}$. Give $D$ and $\mathbb{R}^{3}$ the standard orientations. Use part (a) to prove that the induced volume form on $D$ is given by
-
-\[
-\omega=\left(\sqrt{\left(\frac{\partial f}{\partial x}\right)^{2}+\left(\frac{\partial f}{\partial y}\right)^{2}+1}\right)\,dx\wedge dy.
-\]
+Thus $\varphi$ determines an imbedded surface in $\mathbb R^3$. Give $D$
+and $\mathbb R^3$ the standard orientations. Use part (a) to prove that
+its induced volume form is
+$\omega=\sqrt{1+(\partial f/\partial x)^2+(\partial f/\partial y)^2}\,dx\wedge dy$.
 
 \end{problemset}

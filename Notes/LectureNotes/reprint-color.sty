@@ -1,0 +1,65 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{reprint-color}[2026/09/16 Small refinements to the original ElegantBook class]
+% Color palette, chapter decoration, cover, theorem boxes and terminal ornaments
+% are provided by the UNMODIFIED local elegantbook.cls (its default blue theme).
+\RequirePackage{bm,tikz-cd,needspace,microtype,longtable,array,makeidx,varwidth}
+\usetikzlibrary{arrows.meta,patterns,decorations.markings}
+\makeindex
+\linespread{1.13}
+\setlength{\emergencystretch}{4em}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\raggedbottom
+\allowdisplaybreaks[1]
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{0}
+% Original palette: structure (60,113,183), definitions (0,166,82),
+% theorems (255,134,24), propositions/examples/remarks (0,174,247).
+\colorlet{inkblue}{structurecolor}
+\hypersetup{pdftitle={Foundations of Differentiable Manifolds and Lie Groups - ElegantBook Color Reprint},
+ pdfauthor={Frank W. Warner},pdfsubject={Revised study reprint in the original ElegantBook template},
+ pdfkeywords={differentiable manifolds,Lie groups,Warner,ElegantBook}}
+\title{Foundations of Differentiable Manifolds\\and Lie Groups}
+\author{Frank W. Warner}
+\date{16 September 2026}
+\version{Revised study reprint / GTM 94}
+\extrainfo{Editorial supplements are marked separately.\\This is not a publisher-issued edition.}
+\cover{figures/cover.png}
+
+\newcommand{\examplesname}{Examples}
+\newcommand{\remarksname}{Remarks}
+\makeatletter
+\ELEGANT@newtheorem{examples}{ex}{prostyle}
+\ELEGANT@newtheorem{remarks}{rem}{prostyle}
+\newcommand{\warnernumber}[1]{\setcounter{ELEGANT@samecnt}{\numexpr#1-1\relax}}
+\newcommand{\discuss}[2]{\par\addvspace{9pt}\Needspace{4\baselineskip}\refstepcounter{ELEGANT@samecnt}\noindent\textbf{\color{structurecolor}\theELEGANT@samecnt\if\relax\detokenize{#2}\relax\else\quad #2\fi}\quad\ignorespaces}
+\newcommand{\citem}[1]{\item[#1]\def\@currentlabel{#1}}
+% Keep the original inline example/remark treatment in the appendices, but
+% synchronize their counters with the revised appendix references.
+\renewenvironment{example}[1][]{\par\medskip\refstepcounter{ELEGANT@samecnt}\noindent\textbf{\color{main}\examplename~\theELEGANT@samecnt\ifstrempty{#1}{}{\ (#1)}}\enspace\normalfont}{\par\smallskip}
+\renewenvironment{remark}[1][]{\par\medskip\refstepcounter{ELEGANT@samecnt}\noindent\textbf{\color{second}\remarkname~\theELEGANT@samecnt\ifstrempty{#1}{}{\ (#1)}}\enspace\normalfont}{\par\smallskip}
+% A caption within a boxed statement must be inline, not a floating object.
+\newenvironment{elegantinlinefigure}[1][]{\par\medskip\noindent\begin{minipage}{\linewidth}\def\@captype{figure}}{\end{minipage}\par\medskip}
+\newcommand{\elegantlocalfigures}{\let\figure\elegantinlinefigure\let\endfigure\endelegantinlinefigure}
+\makeatother
+\renewenvironment{problemset}[1][]{\begin{enumerate}[#1]}{\end{enumerate}}
+\RenewDocumentEnvironment{proof}{O{\proofname}}{\par\medskip\noindent\textbf{\color{second}#1}\enspace\normalfont\ignorespaces}{\par\smallskip}
+\providecommand{\qedhere}{}
+% Local adjustments only: wrap long title tabs, keep definitions upright,
+% and avoid splitting off fewer than four lines at a page boundary.
+\tcbset{common/.append style={varwidth boxed title*=-10mm,
+ boxed title style={before upper=\raggedright},lines before break=4,
+ before upper={\elegantlocalfigures}},defstyle/.append style={fontupper=\normalfont}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\ac}{\operatorname{ac}}
+\DeclareMathOperator{\Hom}{Hom}
+\renewcommand{\circled}[1]{\text{\tikz[baseline=(n.base)]\node[draw,circle,inner sep=1pt,font=\scriptsize](n){#1};}}
+\newcommand{\redrawn}[1]{\input{figures/redrawn/#1.tex}}
+\tikzset{every picture/.style={line width=.55pt,>=Stealth},every node/.style={font=\small},every path/.style={line cap=round,line join=round}}
+\tikzcdset{arrow style=tikz,diagrams={row sep=2.6em,column sep=3.2em},labels={font=\small}}
+\newcounter{rpeqserial}
+\AddToHook{env/equation/before}{\stepcounter{rpeqserial}}
+\renewcommand{\theHequation}{reprint.\arabic{rpeqserial}}

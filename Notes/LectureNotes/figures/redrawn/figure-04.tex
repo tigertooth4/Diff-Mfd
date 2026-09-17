@@ -1,0 +1,10 @@
+% Editable vector reconstruction of the supplied figure.
+\begin{tikzpicture}
+\foreach \a in {0,4,8}{\begin{scope}[xshift=\a cm]\draw[->](-.3,-.8)--(-.3,1.8);\draw[->](-1,0)--(2.1,0);\end{scope}}
+\draw(-1,0)--(.7,0)..controls(1.7,0)and(1.6,1.6)..(.8,1.2)..controls(.4,1)and(.7,-.5)..(.7,-.9);
+\draw[dashed](.7,-.9)--(.7,-1.2);
+\draw(3,0)--(4.5,0)..controls(5.7,0)and(5.5,1.6)..(4.7,1.2)..controls(4.25,1)and(4.15,.2)..(4.05,.03);
+\fill(4.05,0)circle(1.3pt)node[below]{$p$};\draw[->](4.3,.55)--(4.08,.07);
+\draw(7,.5)--(10,.5);
+\node[align=center]at(.5,-1.65){Immersion,\\not injective};\node[align=center]at(4.5,-1.65){Injective immersion,\\not an imbedding};\node at(8.6,-1.65){Imbedding};
+\end{tikzpicture}
