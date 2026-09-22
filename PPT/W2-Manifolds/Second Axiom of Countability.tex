@@ -1,0 +1,172 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{xeCJK}
+\setCJKmainfont{Adobe 楷体 Std}
+\usepackage{tikz-cd}
+
+% 1. 开启标题背景色填充
+\metroset{block=fill}
+
+% theorem environments
+\newtheorem{proposition}{Proposition}
+\newtheorem{exercise}{Exercise}
+
+% notation
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\supp}{\operatorname{supp}}
+
+\title{Ch1\quad Manifolds (continued)}
+\subtitle{Second Countability \& Partition of Unity}
+\date{September 22, 2026}
+\author{LXJ}
+
+\begin{document}
+
+\maketitle
+
+%====================================================================
+\section{Paracompactness}
+
+\begin{frame}{Covers, refinements and local finiteness}
+	\begin{definition}[Cover, subcover, refinement]
+		A collection $\{U_\alpha\}$ is a \emph{cover} of $W \subset M$ if
+		$W \subset \bigcup_\alpha U_\alpha$. It is an \emph{open cover} if each
+		$U_\alpha$ is open. A subcollection of $\{U_\alpha\}$ which still
+		covers is called a \emph{subcover}. A \emph{refinement} $\{V_\beta\}$
+		of the cover $\{U_\alpha\}$ is a cover such that
+		\[
+			\forall\, \beta,\ \exists\, \alpha \quad \text{s.t.}\quad
+			V_\beta \subset U_\alpha .
+		\]
+	\end{definition}
+	\begin{definition}[Locally finite]
+		A collection $\{A_\alpha\}$ of subsets of $M$ is \emph{locally finite}
+		if whenever $m \in M$, $\exists$ a neighborhood $W_m$ of $m$ s.t.\
+		\[
+			W_m \cap A_\alpha \neq \varnothing
+			\quad\text{for only finitely many } \alpha .
+		\]
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Paracompactness}
+	\begin{definition}[Paracompact]
+		A topological space is \emph{paracompact} if every open cover has a
+		\emph{locally finite refinement}.
+	\end{definition}
+	\begin{proposition}
+		Let $X$ be a topological space which is
+		\begin{itemize}
+			\item \emph{locally compact} (each point has a compact
+			      neighborhood),
+			\item \emph{Hausdorff}, and
+			\item \emph{second countable}.
+		\end{itemize}
+		Then $X$ is paracompact.
+	\end{proposition}
+	\begin{alertblock}{Corollary}
+		Every differentiable manifold is paracompact.
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{Proof sketch of the proposition}
+	\begin{proof}[Sketch]
+		\begin{enumerate}
+			\item \textbf{Exhaustion.} $X$ has a countable basis
+			      $\{B_n\}_{n \in \N^+}$ of open sets with compact closure.
+			      Inductively build $G_1 = B_1$,
+			      $G_{k+1} = \bigcup_{n=1}^{j_{k+1}} B_n$ with $j_{k+1}$
+			      smallest s.t.\ $\overline{G_k} \subset
+				      \bigcup_{n=1}^{j_{k+1}} B_n$. Then
+			      \[
+				      G_1 \subset G_2 \subset \cdots \subset G_i \subset G_{i+1}
+				      \subset \cdots, \qquad \textstyle\bigcup_k G_k = X .
+			      \]
+			\item \textbf{Refinement.} Given an open cover $\{U_\alpha\}$:
+			      $\overline{G_i} \setminus G_{i-1}$ is compact, covered by
+			      finitely many $U_\alpha \cap (G_{i+1} \setminus
+				      \overline{G_{i-2}})$; similarly cover $\overline{G_2}$ by
+			      finitely many $U_\alpha \cap G_3$. Collecting these gives
+			      a countable refinement $\{V_n\}$.
+			\item \textbf{Local finiteness.} Each $p \in X$ lies in at most two
+			      ``rings'' $\overline{G_i} \setminus G_{i-1}$, each meeting
+			      only finitely many $V_n$.
+		\end{enumerate}
+	\end{proof}
+\end{frame}
+
+\begin{frame}{An exercise hidden in the proof}
+	\begin{exercise}
+		If $X$ is second countable, locally compact and Hausdorff, then $X$
+		has a countable basis consisting of open sets with compact closure.
+	\end{exercise}
+	\begin{block}{Remark}
+		The picture behind the construction:
+		\[
+			\overline{G_i} \setminus G_{i-1}
+			\ \subset\
+			G_{i+1} \setminus \overline{G_{i-2}}
+			\qquad (\text{compact ring inside open ring}).
+		\]
+		Each $V_n$ has compact closure, being contained in
+		$\overline{G_{i+1}} \setminus G_{i-2}$ or $\overline{G_3}$.
+	\end{block}
+\end{frame}
+
+%====================================================================
+\section{Partition of Unity}
+
+\begin{frame}{Partition of unity}
+	\begin{definition}[Partition of unity]
+		A \emph{partition of unity} on $M$ is a collection
+		$\{\varphi_i \mid i \in I\}$ of $C^\infty$ functions on $M$ s.t.
+		\begin{enumerate}
+			\item[(a)] the collection $\{\supp \varphi_i\}_{i \in I}$ is
+			      \emph{locally finite};
+			\item[(b)] $\displaystyle\sum_{i \in I} \varphi_i = 1$ on $M$, and
+			      $\varphi_i(p) \geq 0$ for all $p \in M$ and $i \in I$.
+		\end{enumerate}
+	\end{definition}
+	\begin{definition}[Subordination]
+		A partition of unity $\{\varphi_i \mid i \in I\}$ is
+		\emph{subordinated to the cover} $\{U_\alpha\}_{\alpha \in A}$ if
+		\[
+			\forall\, i \in I,\ \exists\, \alpha \in A \quad \text{s.t.}\quad
+			\supp \varphi_i \subset U_\alpha .
+		\]
+		It is subordinated to $\{U_i\}_{i \in I}$ \emph{with the same index}
+		if $\supp \varphi_i \subset U_i$ for each $i \in I$.
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Bump functions on $\R^d$}
+	\begin{proposition}[Existence of bump functions]
+		There exists a non-negative $C^\infty$ function $\varphi$ on $\R^d$
+		which equals $1$ on the closed cube $\overline{C(1)}$ and zero on the
+		complement of the open cube $C(2)$.
+		\par\smallskip
+		Similarly, $\exists$ a non-negative $C^\infty$ function $\varphi$ on
+		$\R^d$ which equals $1$ on the closed ball $\overline{B_0(1)}$ and
+		zero outside of the open ball $B_0(2)$.
+	\end{proposition}
+	\begin{proof}[Sketch]
+		\begin{enumerate}
+			\item $f(t) = \begin{cases} e^{-1/t^2}, & t > 0 \\ 0, & t \leq 0 \end{cases}$
+			      is $C^\infty$, and $f(t) \to 1^{-}$ as $t \to +\infty$.
+			\item $g(t) = \dfrac{f(t)}{f(t) + f(1-t)}$ is $C^\infty$
+			      (denominator never zero), with $g(t) \equiv 0$ ($t \leq 0$)
+			      and $g(t) \equiv 1$ ($t \geq 1$).
+			\item $h(t) = g(t+2)\, g(2-t)$: then $h \equiv 1$ on $[-1, 1]$ and
+			      $h \equiv 0$ outside $[-2, 2]$.
+			\item General case: $\varphi = (h \circ r_1) \cdots (h \circ r_d)$
+			      for the cube, or $\varphi = h\bigl(\|x\|^2\bigr)$ for the ball.
+		\end{enumerate}
+	\end{proof}
+\end{frame}
+
+\end{document}
