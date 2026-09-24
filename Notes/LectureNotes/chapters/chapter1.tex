@@ -23,7 +23,8 @@ existence and uniqueness of integral manifolds of involutive distributions on ma
 \section{Preliminaries}
 
 \warnernumber{1}
-\discuss{1.1}{Some Basic Notation and Terminology}\label{thm:1.1} Throughout this text we will describe sets either by listings of their elements, for example
+\discuss{1.1}{Some Basic Notation and Terminology}\label{thm:1.1} Throughout this text
+we will describe sets either by listings of their elements, for example
 \[
 	\{a_{1},\ldots,a_{n}\},
 \]
@@ -43,10 +44,10 @@ $U_\alpha$ simply by $\{U_\alpha\}$ when the index set is understood. Their
 union and intersection are denoted by $\bigcup_{\alpha\in A}U_\alpha$ and
 $\bigcap_{\alpha\in A}U_\alpha$, respectively:
 \[
- \bigcup_{\alpha\in A}U_\alpha=\{x:x\in U_\alpha\text{ for some }\alpha\in A\},
+	\bigcup_{\alpha\in A}U_\alpha=\{x:x\in U_\alpha\text{ for some }\alpha\in A\},
 \]
 \[
- \bigcap_{\alpha\in A}U_\alpha=\{x:x\in U_\alpha\text{ for every }\alpha\in A\}.
+	\bigcap_{\alpha\in A}U_\alpha=\{x:x\in U_\alpha\text{ for every }\alpha\in A\}.
 \]
 The expression $f\colon A\to B$ means that $f$ is a mapping of the set $A$ into
 the set $B$. When describing a mapping by describing its effect on individual
@@ -322,6 +323,36 @@ a manifold of dimension $d$.
 		\index{Product manifolds}
 		\[
 			\{(U_{\alpha}\times V_{\beta},\,\varphi_{\alpha}\times\psi_{\beta})\colon U_{\alpha}\times V_{\beta}\to\mathbb{R}^{d_{1}}\times\mathbb{R}^{d_{2}})\colon(U_{\alpha},\varphi_{\alpha})\in\mathcal{F}_{1},\ (V_{\beta},\psi_{\beta})\in\mathcal{F}_{2}\}.
+		\]
+
+		\citem{(h)} Projective space $\mathbb{RP}^{n}$. \index{Projective space}
+		Define $\mathbb{RP}^{n}$ to be the quotient topological space of
+		$\mathbb{R}^{n+1}-\{0\}$:
+		\[
+			\mathbb{RP}^{n}=(\mathbb{R}^{n+1}-\{0\})/{\sim},
+		\]
+		where ``$\sim$'' is the equivalence relation
+		\[
+			x\sim y\iff\exists\,\lambda\neq0\ \ \text{such that}\ \ x=\lambda y.
+		\]
+		We introduce homogeneous coordinates to denote the points of
+		$\mathbb{RP}^{n}$:
+		\[
+			[x]\triangleq(x_{1}\colon x_{2}\colon\cdots\colon x_{n+1}).
+		\]
+		Consider the open set
+		\[
+			U_{k}=\{x\in\mathbb{R}^{n+1}\colon x_{k}\neq0\}/{\sim}\ \subset\mathbb{R}P^{n},
+		\]
+		and denote
+		\[
+			\varphi_{k}([x])=\left(\frac{x_{1}}{x_{k}},\ldots,\cancel{\frac{x_{k}}{x_{k}}},\ldots,\frac{x_{n+1}}{x_{k}}\right)\in\mathbb{R}^{n}.
+		\]
+		Then $(U_{k},\varphi_{k})$ gives a local coordinate system of $\mathbb{R}P^{n}$.
+		Hence $\mathbb{R}P^{n}$ is a differentiable manifold with differentiable
+		structure $\mathcal{F}$ the maximal collection containing
+		\[
+			\{(U_{k},\varphi_{k})\colon k=1,\ldots,n+1\}.
 		\]
 	\end{enumerate}
 \end{examples}
@@ -757,23 +788,23 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 
 \warnernumber{19}
 \begin{definition}\label{thm:1.19}
-Let $(U,\varphi)$ be a coordinate system with coordinate functions $x_{1},\ldots,x_{d}$, and let $m\in U$. For each $i\in\{1,\ldots,d\}$, we define a tangent vector  $ (\partial/\partial x_i)|_{m} \in M_m $ by setting
+	Let $(U,\varphi)$ be a coordinate system with coordinate functions $x_{1},\ldots,x_{d}$, and let $m\in U$. For each $i\in\{1,\ldots,d\}$, we define a tangent vector  $ (\partial/\partial x_i)|_{m} \in M_m $ by setting
 
-\begin{equation}
-\tag{1}\label{eq:1.19:1}
-\left(\frac{\partial}{\partial x_{i}}\bigg\vert_{m}\right)(f)=\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg\vert_{\varphi(m)}
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.19:1}
+		\left(\frac{\partial}{\partial x_{i}}\bigg\vert_{m}\right)(f)=\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg\vert_{\varphi(m)}
+	\end{equation}
 
-for each function $f$ which is $C^{\infty}$ on a neighborhood of $m$. We interpret (1) as the directional derivative of $f$ at $m$ in the $x_{i}$ coordinate direction. We also use the notation
+	for each function $f$ which is $C^{\infty}$ on a neighborhood of $m$. We interpret (1) as the directional derivative of $f$ at $m$ in the $x_{i}$ coordinate direction. We also use the notation
 
-\begin{equation}
-\tag{2}\label{eq:1.19:2}
-\left.\frac{\partial f}{\partial x_{i}}\right|_{m}=\left(\left.\frac{\partial}{\partial x_{i}}\right|_{m}\right)(f).
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.19:2}
+		\left.\frac{\partial f}{\partial x_{i}}\right|_{m}=\left(\left.\frac{\partial}{\partial x_{i}}\right|_{m}\right)(f).
+	\end{equation}
 
-\begin{center}
-\redrawn{figure-02}
-\end{center}
+	\begin{center}
+		\redrawn{figure-02}
+	\end{center}
 
 \end{definition}
 
@@ -781,85 +812,85 @@ for each function $f$ which is $C^{\infty}$ on a neighborhood of $m$. We interpr
 \begin{remarks}{on 1.19}\label{thm:1.20}
 
 
-(a) Clearly  $  ((\partial/\partial x_i)_m)(f)  $ depends only on the germ of  $  f  $ at  $  m  $, and (a) and (b) of 1.14 are satisfied; so  $  (\partial/\partial x_i)_m  $ is a tangent vector at  $  m  $. Moreover,  $  \{(\partial/\partial x_i)_m : i = 1, \ldots, d\}  $ is a basis of  $  M_m  $. Indeed, it is the basis of  $  M_m  $ dual to the basis  $  \{(\mathbf{x}_i - \mathbf{x}_1(\mathbf{m})) : i = 1, \ldots, d\}  $ of  $  F_m/F_m^2  $ since
+	(a) Clearly  $  ((\partial/\partial x_i)_m)(f)  $ depends only on the germ of  $  f  $ at  $  m  $, and (a) and (b) of 1.14 are satisfied; so  $  (\partial/\partial x_i)_m  $ is a tangent vector at  $  m  $. Moreover,  $  \{(\partial/\partial x_i)_m : i = 1, \ldots, d\}  $ is a basis of  $  M_m  $. Indeed, it is the basis of  $  M_m  $ dual to the basis  $  \{(\mathbf{x}_i - \mathbf{x}_1(\mathbf{m})) : i = 1, \ldots, d\}  $ of  $  F_m/F_m^2  $ since
 
-\[
-\frac{\partial}{\partial x_{i}}\bigg|_{m}(x_{j}-x_{j}(m))=\delta_{ij}.
-\]
+	\[
+		\frac{\partial}{\partial x_{i}}\bigg|_{m}(x_{j}-x_{j}(m))=\delta_{ij}.
+	\]
 
-(b) If  $ v \in M_{m} $, then
+	(b) If  $ v \in M_{m} $, then
 
-\[
-v=\sum_{i=1}^{d}v(x_{i})\left.\frac{\partial}{\partial x_{i}}\right|_{m}.
-\]
+	\[
+		v=\sum_{i=1}^{d}v(x_{i})\left.\frac{\partial}{\partial x_{i}}\right|_{m}.
+	\]
 
-Simply check that both sides give the same results when applied to the functions $(x_{j}-x_{j}(m))$.
+	Simply check that both sides give the same results when applied to the functions $(x_{j}-x_{j}(m))$.
 
-(c) Suppose that $(U,\varphi)$ and $(V,\psi)$ are coordinate systems about $m$, with coordinate functions $x_{1},\ldots,x_{d}$ and $y_{1},\ldots,y_{d}$ respectively. Then it follows from remark (b) that
+	(c) Suppose that $(U,\varphi)$ and $(V,\psi)$ are coordinate systems about $m$, with coordinate functions $x_{1},\ldots,x_{d}$ and $y_{1},\ldots,y_{d}$ respectively. Then it follows from remark (b) that
 
-\[
-\frac{\partial}{\partial y_{j}}\Big|_{m}=\sum_{i=1}^{d}\frac{\partial x_{i}}{\partial y_{j}}\Big|_{m}\frac{\partial}{\partial x_{i}}\Big|_{m}.
-\]
+	\[
+		\frac{\partial}{\partial y_{j}}\Big|_{m}=\sum_{i=1}^{d}\frac{\partial x_{i}}{\partial y_{j}}\Big|_{m}\frac{\partial}{\partial x_{i}}\Big|_{m}.
+	\]
 
-Observe that $(\partial/\partial x_{i})$ depends on $\varphi$ and not only on $x_{i}$. In particular, if $x_{1}$ were equal to $y_{1}$, it would not necessarily follow that $\partial/\partial x_{1}$ equals $\partial/\partial y_{1}$.
+	Observe that $(\partial/\partial x_{i})$ depends on $\varphi$ and not only on $x_{i}$. In particular, if $x_{1}$ were equal to $y_{1}$, it would not necessarily follow that $\partial/\partial x_{1}$ equals $\partial/\partial y_{1}$.
 
-(d) If we apply \hyperref[thm:1.19]{Definition 1.19} to the canonical coordinate system  $ r_{1}, \ldots, r_{d} $ on  $ R^{d} $, then the tangent vectors which we obtain are none other than the ordinary partial derivative operators  $ (\partial/\partial r_{i}) $.
+	(d) If we apply \hyperref[thm:1.19]{Definition 1.19} to the canonical coordinate system  $ r_{1}, \ldots, r_{d} $ on  $ R^{d} $, then the tangent vectors which we obtain are none other than the ordinary partial derivative operators  $ (\partial/\partial r_{i}) $.
 
-\warnernumber{21}
-\discuss{1.21}{}\label{thm:1.21}
-Our proof of the finite dimensionality of $F_m/F_m^2$ certainly fails in the  $ C^k $ case for  $ k < \infty $ since the remainder term in the \hyperref[thm:1.17]{lemma of 1.17} will not be a sum of products of  $ C^k $ functions, and the lemma doesn't even make sense in the  $ C^1 $ case. In fact, it turns out (see [21]) that $F_m/F_m^2$ is always infinite dimensional in the  $ C^k $ case for  $ 1 \leq k < \infty $. There are various ways to define tangent vectors in the  $ C^k $ case in order that  $ \dim M_m = \dim M $ (all of which work in the  $ C^\infty $ case, too). One way is to define a tangent vector v at m as a mapping which assigns to each function (defined and differentiable of class  $ C^k $ on a neighborhood of m) a real number  $ v(f) $ such that if  $ (U, \varphi) $ is a coordinate system on a neighborhood of m, then there exists a list of real numbers  $ (a_1, \ldots, a_d) $ (depending on  $ \varphi $) such that
+	\warnernumber{21}
+	\discuss{1.21}{}\label{thm:1.21}
+	Our proof of the finite dimensionality of $F_m/F_m^2$ certainly fails in the  $ C^k $ case for  $ k < \infty $ since the remainder term in the \hyperref[thm:1.17]{lemma of 1.17} will not be a sum of products of  $ C^k $ functions, and the lemma doesn't even make sense in the  $ C^1 $ case. In fact, it turns out (see [21]) that $F_m/F_m^2$ is always infinite dimensional in the  $ C^k $ case for  $ 1 \leq k < \infty $. There are various ways to define tangent vectors in the  $ C^k $ case in order that  $ \dim M_m = \dim M $ (all of which work in the  $ C^\infty $ case, too). One way is to define a tangent vector v at m as a mapping which assigns to each function (defined and differentiable of class  $ C^k $ on a neighborhood of m) a real number  $ v(f) $ such that if  $ (U, \varphi) $ is a coordinate system on a neighborhood of m, then there exists a list of real numbers  $ (a_1, \ldots, a_d) $ (depending on  $ \varphi $) such that
 
-\[
-v(f)=\sum_{i=1}^{d}a_{i}\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg|_{\varphi(m)}.
-\]
+	\[
+		v(f)=\sum_{i=1}^{d}a_{i}\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg|_{\varphi(m)}.
+	\]
 
-Then the space  $ M_m $ of tangent vectors again turns out to be finite dimensional, with a basis  $ \{(\partial/\partial x_i)\big|_{m}\} $.
+	Then the space  $ M_m $ of tangent vectors again turns out to be finite dimensional, with a basis  $ \{(\partial/\partial x_i)\big|_{m}\} $.
 
-\warnernumber{22}
-\discuss{1.22}{The Differential}\label{thm:1.22}
-Let  $ \psi: M \to N $ be  $ C^\infty $, and let  $ m \in M $. The differential of  $ \psi $ at  $ m $ is the linear map
+	\warnernumber{22}
+	\discuss{1.22}{The Differential}\label{thm:1.22}
+	Let  $ \psi: M \to N $ be  $ C^\infty $, and let  $ m \in M $. The differential of  $ \psi $ at  $ m $ is the linear map
 
-\begin{equation}
-\tag{1}\label{eq:1.22:1}
-d\psi\colon M_{m}\to N_{\psi(m)}
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.22:1}
+		d\psi\colon M_{m}\to N_{\psi(m)}
+	\end{equation}
 
-defined as follows. If $v\in M_{m}$, then $d\psi(v)$ is to be a tangent vector at $\psi(m)$, so we describe how it operates on functions. Let $g$ be a $C^{\infty}$ function on a neighborhood of $\psi(m)$. Define $d\psi(v)(g)$ by setting
+	defined as follows. If $v\in M_{m}$, then $d\psi(v)$ is to be a tangent vector at $\psi(m)$, so we describe how it operates on functions. Let $g$ be a $C^{\infty}$ function on a neighborhood of $\psi(m)$. Define $d\psi(v)(g)$ by setting
 
-\begin{equation}
-\tag{2}\label{eq:1.22:2}
-d\psi(v)(g)=v(g\circ\psi).
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.22:2}
+		d\psi(v)(g)=v(g\circ\psi).
+	\end{equation}
 
-It is easily checked that $d\psi$ is a linear map of $M_{m}$ into $N_{\psi(m)}$. Strictly speaking, this map should be denoted $d\psi\mid M_{m}$, or simply $d\psi_{m}$. However, we omit the subscript $m$ when there is no possibility of confusion. The map $\psi$ is called non-singular at $m$ if $d\psi_{m}$ is non-singular, that is, if the kernel of (1) consists of 0 alone. The dual map \index{Non-singular mapping}
+	It is easily checked that $d\psi$ is a linear map of $M_{m}$ into $N_{\psi(m)}$. Strictly speaking, this map should be denoted $d\psi\mid M_{m}$, or simply $d\psi_{m}$. However, we omit the subscript $m$ when there is no possibility of confusion. The map $\psi$ is called non-singular at $m$ if $d\psi_{m}$ is non-singular, that is, if the kernel of (1) consists of 0 alone. The dual map \index{Non-singular mapping}
 
-\begin{equation}
-\tag{3}\label{eq:1.22:3}
-\delta\psi\colon N_{\psi(m)}^{*}\to M_{m}^{*}
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.22:3}
+		\delta\psi\colon N_{\psi(m)}^{*}\to M_{m}^{*}
+	\end{equation}
 
-is defined as usual by requiring that
+	is defined as usual by requiring that
 
-\begin{equation}
-\tag{4}\label{eq:1.22:4}
-\delta\psi(\omega)(v)=\omega\bigl(d\psi(v)\bigr)
-\end{equation}
+	\begin{equation}
+		\tag{4}\label{eq:1.22:4}
+		\delta\psi(\omega)(v)=\omega\bigl(d\psi(v)\bigr)
+	\end{equation}
 
-whenever $\omega \in N_{\psi(m)}^{*}$ and $v \in M_{m}$. In the special case of a $C^{\infty}$ function $f: M \to \mathbb{R}$, if $v \in M_{m}$ and $f(m) = r_{0}$, then
+	whenever $\omega \in N_{\psi(m)}^{*}$ and $v \in M_{m}$. In the special case of a $C^{\infty}$ function $f: M \to \mathbb{R}$, if $v \in M_{m}$ and $f(m) = r_{0}$, then
 
-\begin{equation}
-\tag{5}\label{eq:1.22:5}
-d f(v)=v(f)\frac{d}{d r}\bigg|_{r_{0}}.
-\end{equation}
+	\begin{equation}
+		\tag{5}\label{eq:1.22:5}
+		d f(v)=v(f)\frac{d}{d r}\bigg|_{r_{0}}.
+	\end{equation}
 
-In this case, we usually take $df$ to mean the element of $M_{m}^{*}$ defined by
+	In this case, we usually take $df$ to mean the element of $M_{m}^{*}$ defined by
 
-\begin{equation}
-\tag{6}\label{eq:1.22:6}
-d f(v)=v(f).
-\end{equation}
+	\begin{equation}
+		\tag{6}\label{eq:1.22:6}
+		d f(v)=v(f).
+	\end{equation}
 
-That is, we identify $df$ with $\delta f(\omega)$, where $\omega$ is the basis of the 1-dimensional space $\mathbb{R}_{r_{0}}^{*}$ dual to $(d/dr)|_{r_{0}}$. Particular usage will be clear from the context.
+	That is, we identify $df$ with $\delta f(\omega)$, where $\omega$ is the basis of the 1-dimensional space $\mathbb{R}_{r_{0}}^{*}$ dual to $(d/dr)|_{r_{0}}$. Particular usage will be clear from the context.
 
 \end{remarks}
 
@@ -867,98 +898,98 @@ That is, we identify $df$ with $\delta f(\omega)$, where $\omega$ is the basis o
 \begin{remarks}{on 1.22}\label{thm:1.23}
 
 
-(a) Let $(U, x_{1}, \ldots, x_{d})$ and $(V, y_{1}, \ldots, y_{c})$ be coordinate systems about $m$ and $\psi(m)$ respectively. Then it follows from \eqref{eq:1.22:2} and \hyperref[thm:1.20]{1.20(b)} that
+	(a) Let $(U, x_{1}, \ldots, x_{d})$ and $(V, y_{1}, \ldots, y_{c})$ be coordinate systems about $m$ and $\psi(m)$ respectively. Then it follows from \eqref{eq:1.22:2} and \hyperref[thm:1.20]{1.20(b)} that
 
-\[
-d\psi\left(\frac{\partial}{\partial x_{j}}\bigg|_{m}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\bigg|_{m}\frac{\partial}{\partial y_{i}}\bigg|_{\psi(m)}.
-\]
+	\[
+		d\psi\left(\frac{\partial}{\partial x_{j}}\bigg|_{m}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\bigg|_{m}\frac{\partial}{\partial y_{i}}\bigg|_{\psi(m)}.
+	\]
 
-The matrix $\{\partial(y_{i}\circ\psi)/\partial x_{j}\}$ is called the Jacobian of the map $\psi$ (with respect to the given coordinate system). For maps between Euclidean spaces, the Jacobian will always be taken with respect to the canonical coordinate systems. \index{Jacobian}
+	The matrix $\{\partial(y_{i}\circ\psi)/\partial x_{j}\}$ is called the Jacobian of the map $\psi$ (with respect to the given coordinate system). For maps between Euclidean spaces, the Jacobian will always be taken with respect to the canonical coordinate systems. \index{Jacobian}
 
-(b) If $(U, x_1, \ldots, x_d)$ is a coordinate system on $M$, and $m \in U$, then $\{(dx_i)_m\}$ is the basis of $M_m^*$ dual to $\{(\partial/\partial x_i)|_m\}$. If $f: M \to \mathbb{R}$ is a $C^\infty$ function, then
+	(b) If $(U, x_1, \ldots, x_d)$ is a coordinate system on $M$, and $m \in U$, then $\{(dx_i)_m\}$ is the basis of $M_m^*$ dual to $\{(\partial/\partial x_i)|_m\}$. If $f: M \to \mathbb{R}$ is a $C^\infty$ function, then
 
-\[
-\begin{array}{r}{d f_{m}=\left.\sum_{i=1}^{d}\frac{\partial f}{\partial x_{i}}\right|_{m}d x_{i}|_{m}.}\end{array}
-\]
+	\[
+		\begin{array}{r}{d f_{m}=\left.\sum_{i=1}^{d}\frac{\partial f}{\partial x_{i}}\right|_{m}d x_{i}|_{m}.}\end{array}
+	\]
 
-(c) Chain Rule. Let  $ \psi $:  $ M \to N $ and  $ \varphi $:  $ N \to X $ be  $ C^\infty $ maps. Then \index{Chain rule}
+	(c) Chain Rule. Let  $ \psi $:  $ M \to N $ and  $ \varphi $:  $ N \to X $ be  $ C^\infty $ maps. Then \index{Chain rule}
 
-\[
-d(\varphi\circ\psi)_{m}=d\varphi_{\psi(m)}\circ d\psi_{m},
-\]
+	\[
+		d(\varphi\circ\psi)_{m}=d\varphi_{\psi(m)}\circ d\psi_{m},
+	\]
 
-or simply $d(\varphi\circ\psi)=d\varphi\circ d\psi$. It is a useful exercise to check the form that this equation takes when the maps are expressed in terms of the matrices obtained by choosing coordinate systems.
+	or simply $d(\varphi\circ\psi)=d\varphi\circ d\psi$. It is a useful exercise to check the form that this equation takes when the maps are expressed in terms of the matrices obtained by choosing coordinate systems.
 
-(d) If $\psi: M \to N$ and $f: N \to \mathbb{R}$ are $C^\infty$, then $\delta\psi(df_{\psi(m)}) = d(f \circ \psi)_m$, for $\delta\psi(df_{\psi(m)})(v) = df(d\psi(v)) = d(f \circ \psi)_m(v)$ whenever $v \in M_m$.
+	(d) If $\psi: M \to N$ and $f: N \to \mathbb{R}$ are $C^\infty$, then $\delta\psi(df_{\psi(m)}) = d(f \circ \psi)_m$, for $\delta\psi(df_{\psi(m)})(v) = df(d\psi(v)) = d(f \circ \psi)_m(v)$ whenever $v \in M_m$.
 
-(e) A $C^{\infty}$ mapping $\sigma: (a,b)\to M$ is called a smooth curve in $M$. Let $t\in(a,b)$. Then the tangent vector to the curve $\sigma$ at $t$ is the vector \index{Curve}
+	(e) A $C^{\infty}$ mapping $\sigma: (a,b)\to M$ is called a smooth curve in $M$. Let $t\in(a,b)$. Then the tangent vector to the curve $\sigma$ at $t$ is the vector \index{Curve}
 
-\[
-d\sigma\left(\frac{d}{d r}\bigg|_{t}\right)\in M_{\sigma(t)}.
-\]
+	\[
+		d\sigma\left(\frac{d}{d r}\bigg|_{t}\right)\in M_{\sigma(t)}.
+	\]
 
-We shall denote the tangent vector to  $ \sigma $ at t by  $ \dot{\sigma}(t) $.
+	We shall denote the tangent vector to  $ \sigma $ at t by  $ \dot{\sigma}(t) $.
 
-\begin{center}
-\redrawn{figure-03}
-\end{center}
+	\begin{center}
+		\redrawn{figure-03}
+	\end{center}
 
-Now, if $v$ is any element of $M_{m}$, then $v$ is the tangent vector to a smooth curve in $M$. For one can simply choose a coordinate system $(U,\varphi)$, centered at $m$, for which
+	Now, if $v$ is any element of $M_{m}$, then $v$ is the tangent vector to a smooth curve in $M$. For one can simply choose a coordinate system $(U,\varphi)$, centered at $m$, for which
 
-\[
-v=d\varphi\left(\frac{\partial}{\partial r_{1}}\bigg|_{0}\right).
-\]
+	\[
+		v=d\varphi\left(\frac{\partial}{\partial r_{1}}\bigg|_{0}\right).
+	\]
 
-Then $v$ is the tangent vector at 0 to the curve $t \mapsto \varphi^{-1}(t, 0, \ldots, 0)$. One should observe that many curves can have the same tangent vector, and that two smooth curves $\sigma$ and $\tau$ in $M$ for which $\sigma(t_{0}) = \tau(t_{0}) = m$ have the same tangent vector at $t_{0}$ if and only if
+	Then $v$ is the tangent vector at 0 to the curve $t \mapsto \varphi^{-1}(t, 0, \ldots, 0)$. One should observe that many curves can have the same tangent vector, and that two smooth curves $\sigma$ and $\tau$ in $M$ for which $\sigma(t_{0}) = \tau(t_{0}) = m$ have the same tangent vector at $t_{0}$ if and only if
 
-\[
-\frac{d(f\circ\sigma)}{d r}\Big|_{t_{0}}=\frac{d(f\circ\tau)}{d r}\Big|_{t_{0}}
-\]
+	\[
+		\frac{d(f\circ\sigma)}{d r}\Big|_{t_{0}}=\frac{d(f\circ\tau)}{d r}\Big|_{t_{0}}
+	\]
 
-for all functions $f$ which are $C^{\infty}$ on a neighborhood of $m$.
+	for all functions $f$ which are $C^{\infty}$ on a neighborhood of $m$.
 
-If $\sigma$ happens to be a curve in the Euclidean space $\mathbb{R}^{n}$, then
+	If $\sigma$ happens to be a curve in the Euclidean space $\mathbb{R}^{n}$, then
 
-\[
-\dot{\sigma}(t)=\frac{d\sigma_{1}}{d r}\bigg|_{t}\frac{\partial}{\partial r_{1}}\bigg|_{\sigma(t)}+\cdots+\frac{d\sigma_{n}}{d r}\bigg|_{t}\frac{\partial}{\partial r_{n}}\bigg|_{\sigma(t)}.
-\]
+	\[
+		\dot{\sigma}(t)=\frac{d\sigma_{1}}{d r}\bigg|_{t}\frac{\partial}{\partial r_{1}}\bigg|_{\sigma(t)}+\cdots+\frac{d\sigma_{n}}{d r}\bigg|_{t}\frac{\partial}{\partial r_{n}}\bigg|_{\sigma(t)}.
+	\]
 
-If we identify this tangent vector with the element
+	If we identify this tangent vector with the element
 
-\[
-\left(\frac{d\sigma_{1}}{d r}\bigg|_{t},\ldots,\frac{d\sigma_{n}}{d r}\bigg|_{t}\right)
-\]
+	\[
+		\left(\frac{d\sigma_{1}}{d r}\bigg|_{t},\ldots,\frac{d\sigma_{n}}{d r}\bigg|_{t}\right)
+	\]
 
-of $\mathbb{R}^{n}$, then we have
+	of $\mathbb{R}^{n}$, then we have
 
-\[
-\dot{\sigma}(t)=\lim_{h\to0}\frac{\sigma(t+h)-\sigma(t)}{h}.
-\]
+	\[
+		\dot{\sigma}(t)=\lim_{h\to0}\frac{\sigma(t+h)-\sigma(t)}{h}.
+	\]
 
-Thus with this identification our notion of tangent vector coincides, in this special case, with the geometric notion of a tangent to a curve in Euclidean space.
+	Thus with this identification our notion of tangent vector coincides, in this special case, with the geometric notion of a tangent to a curve in Euclidean space.
 
 \end{remarks}
 
 \warnernumber{24}
 \begin{theorem}\label{thm:1.24}
-Let $\psi$ be a $C^\infty$ mapping of the connected manifold $M$ into the manifold $N$. Suppose that for each $m \in M$, $d\psi_m \equiv 0$. Then $\psi$ is a constant map.
+	Let $\psi$ be a $C^\infty$ mapping of the connected manifold $M$ into the manifold $N$. Suppose that for each $m \in M$, $d\psi_m \equiv 0$. Then $\psi$ is a constant map.
 
 \end{theorem}
 
 \begin{proof}
-Let $n\in\psi(M)$. $\psi^{-1}(n)$ is closed. We need only show that it is open. For this, let $m\in\psi^{-1}(n)$. Choose coordinate systems $(U,x_{1},\ldots,x_{d})$ and $(V,y_{1},\ldots,y_{c})$ about $m$ and $n$ respectively, so that $\psi(U)\subset V$. Then on $U$,
+	Let $n\in\psi(M)$. $\psi^{-1}(n)$ is closed. We need only show that it is open. For this, let $m\in\psi^{-1}(n)$. Choose coordinate systems $(U,x_{1},\ldots,x_{d})$ and $(V,y_{1},\ldots,y_{c})$ about $m$ and $n$ respectively, so that $\psi(U)\subset V$. Then on $U$,
 
-\[
-0=d\psi\left(\frac{\partial}{\partial x_{j}}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\frac{\partial}{\partial y_{i}}\qquad(j=1,\ldots,d),
-\]
+	\[
+		0=d\psi\left(\frac{\partial}{\partial x_{j}}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\frac{\partial}{\partial y_{i}}\qquad(j=1,\ldots,d),
+	\]
 
-which implies that
+	which implies that
 
-\[
-\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\equiv0\qquad(i=1,\ldots,c;j=1,\ldots,d).
-\]
+	\[
+		\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\equiv0\qquad(i=1,\ldots,c;j=1,\ldots,d).
+	\]
 
-Thus the functions $y_{i}\circ\psi$ are constant on $U$. This implies that $\psi(U)=n$; hence $\psi^{-1}(n)$ is open and consequently $\psi^{-1}(n)=M$.
+	Thus the functions $y_{i}\circ\psi$ are constant on $U$. This implies that $\psi(U)=n$; hence $\psi^{-1}(n)$ is open and consequently $\psi^{-1}(n)=M$.
 
 \end{proof}
 
@@ -969,31 +1000,31 @@ We shall now see that in a natural way the collection of all tangent vectors to 
 Let $M$ be a $C^{\infty}$ manifold with differentiable structure $\mathcal{F}$. Let
 
 \begin{equation}
-\tag{1}\label{eq:1.25:1}
-\begin{aligned}{T(M)=\bigcup_{m\in M}M_{m},}\\ {T^{*}(M)=\bigcup_{m\in M}M_{m}^{*}.}\\ \end{aligned}
+	\tag{1}\label{eq:1.25:1}
+	\begin{aligned}{T(M)=\bigcup_{m\in M}M_{m},}\\ {T^{*}(M)=\bigcup_{m\in M}M_{m}^{*}.}\\ \end{aligned}
 \end{equation}
 
 There are natural projections:
 
 \begin{equation}
-\tag{2}\label{eq:1.25:2}
-\begin{aligned}{\pi\colon T(M)\to M,\qquad}&{{}\pi(v)=m\quad\text{if}\quad v\in M_{m},}\\ {\pi^{*}\colon T^{*}(M)\to M,\qquad}&{{}\pi^{*}(\tau)=m\quad\text{if}\quad\tau\in M_{m}^{*}.}\\ \end{aligned}
+	\tag{2}\label{eq:1.25:2}
+	\begin{aligned}{\pi\colon T(M)\to M,\qquad}&{{}\pi(v)=m\quad\text{if}\quad v\in M_{m},}\\ {\pi^{*}\colon T^{*}(M)\to M,\qquad}&{{}\pi^{*}(\tau)=m\quad\text{if}\quad\tau\in M_{m}^{*}.}\\ \end{aligned}
 \end{equation}
 
 Let $(U,\varphi)\in\mathcal{F}$ with coordinate functions $x_1,\ldots,x_d$. Define maps
 \[
- \tilde\varphi:\pi^{-1}(U)\to\mathbb R^{2d},\qquad
- \tilde\varphi^*:(\pi^*)^{-1}(U)\to\mathbb R^{2d}
+	\tilde\varphi:\pi^{-1}(U)\to\mathbb R^{2d},\qquad
+	\tilde\varphi^*:(\pi^*)^{-1}(U)\to\mathbb R^{2d}
 \]
 by
 
 \[
-\tilde{\varphi}(v)=\big(x_{1}\big(\pi(v)\big),\ldots,x_{d}\big(\pi(v)\big),d x_{1}(v),\ldots,d x_{d}(v)\big)
+	\tilde{\varphi}(v)=\big(x_{1}\big(\pi(v)\big),\ldots,x_{d}\big(\pi(v)\big),d x_{1}(v),\ldots,d x_{d}(v)\big)
 \]
 
 \begin{equation}
-\tag{3}\label{eq:1.25:3}
-\tilde{\varphi}^{*}(\tau)=\Bigl(x_{1}\bigl(\pi^{*}(\tau)\bigr),\ldots,x_{d}\bigl(\pi^{*}(\tau)\bigr),\tau\Bigl(\frac{\partial}{\partial x_{1}}\Bigr),\ldots,\tau\Bigl(\frac{\partial}{\partial x_{d}}\Bigr)\Bigr)
+	\tag{3}\label{eq:1.25:3}
+	\tilde{\varphi}^{*}(\tau)=\Bigl(x_{1}\bigl(\pi^{*}(\tau)\bigr),\ldots,x_{d}\bigl(\pi^{*}(\tau)\bigr),\tau\Bigl(\frac{\partial}{\partial x_{1}}\Bigr),\ldots,\tau\Bigl(\frac{\partial}{\partial x_{d}}\Bigr)\Bigr)
 \end{equation}
 
 for all $v\in\pi^{-1}(U)$ and $\tau\in(\pi^{*})^{-1}(U)$. Note that $\widetilde{\varphi}$ and $\widetilde{\varphi}^*$ are both one-to-one maps onto open subsets of $\mathbb{R}^{2d}$. The following steps outline the construction of a topology and a differentiable structure on $T(M)$. The construction for $T^*(M)$ goes similarly. The proofs are left as exercises.
@@ -1005,7 +1036,7 @@ for all $v\in\pi^{-1}(U)$ and $\tau\in(\pi^{*})^{-1}(U)$. Note that $\widetilde{
 (c) Let $\widetilde{\mathcal{F}}$ be the maximal collection, with respect to \hyperref[thm:1.4]{1.4(b)}, containing
 
 \[
-\{(\pi^{-1}(U),\widetilde{\varphi})\colon(U,\varphi)\in\mathcal{F}\}.
+	\{(\pi^{-1}(U),\widetilde{\varphi})\colon(U,\varphi)\in\mathcal{F}\}.
 \]
 
 Then $\widetilde{\mathcal{F}}$ is a differentiable structure on $T(M)$.
@@ -1015,8 +1046,8 @@ $T(M)$ and $T^{*}(M)$ with these differentiable structures are called respective
 If $\psi: M \to N$ is a $C^{\infty}$ map, then the differential of $\psi$ defines a mapping of the tangent bundles
 
 \begin{equation}
-\tag{4}\label{eq:1.25:4}
-d\psi\colon T(M)\to T(N),
+	\tag{4}\label{eq:1.25:4}
+	d\psi\colon T(M)\to T(N),
 \end{equation}
 
 where  $ d\psi(m,v) = d\psi_{m}(v) $ whenever  $ v \in M_{m} $. It is easily checked that (4) is a  $ C^{\infty} $ map.
@@ -1030,8 +1061,8 @@ Recall that $\tilde{F}_{m}$ is the algebra of germs of functions at $m$. $F_{m} 
 The vector space $F_m/F_m^{k+1}$ is called the space of $k$th order differentials at $m$, and we denote it by ${}^kM_m$. As before, $f$ denotes the germ of $f$ at $m$, and \{\} will denote cosets in $F_m/F_m^{k+1}$. Let $f$ be a differentiable function on a neighborhood of $m$. We define the $k$th order differential $d^k f$ of $f$ at $m$ by
 
 \begin{equation}
-\tag{1}\label{eq:1.26:1}
-d^{k}f=\{\mathbf{f}-\mathbf{f}(\mathbf{m})\}.
+	\tag{1}\label{eq:1.26:1}
+	d^{k}f=\{\mathbf{f}-\mathbf{f}(\mathbf{m})\}.
 \end{equation}
 
 A $k$th order tangent vector at $m$ is a real linear function on $\tilde{F}_{m}$ vanishing on $F_{m}^{k+1}$ and vanishing also on the set of germs of functions constant on a neighborhood of m. The real linear space of kth order tangent vectors at m will be denoted by  $ M_{m}^{k} $. We have a natural identification of  $ M_{m}^{k} $ with  $ ({}^kM_{m})^{*} $ since any kth order tangent vector restricted to  $ F_{m} $ yields a linear function on  $ F_{m} $ vanishing on  $ F_{m}^{k+1} $, and hence yields an element of  $ ({}^kM_{m})^{*} $; and conversely an element of  $ ({}^kM_{m})^{*} $ uniquely determines a linear function on  $ F_{m} $ vanishing on  $ F_{m}^{k+1} $, and this extends uniquely to a kth order tangent vector by requiring it to annihilate germs of constant functions.
@@ -1039,85 +1070,85 @@ A $k$th order tangent vector at $m$ is a real linear function on $\tilde{F}_{m}$
 We can tie up this notion of higher order tangent vector with the usual notion of higher order derivative in Euclidean space by looking at the forms that these tangent vectors and differentials take in a coordinate system. Let  $ (U,\varphi) $ be a coordinate system about  $ m $ with coordinate functions  $ x_1, \ldots, x_d $ such that  $ \varphi(U) $ is a convex open set in Euclidean space  $ \mathbb{R}^d $. Let  $ \alpha = (\alpha_1, \ldots, \alpha_d) $ be a list of non-negative integers. In addition to our conventions of 1.1, we let
 
 \[
-(x-x(m))^{\alpha}=(x_{1}-x_{1}(m))^{\alpha_{1}}\cdots(x_{d}-x_{d}(m))^{\alpha_{d}}.
+	(x-x(m))^{\alpha}=(x_{1}-x_{1}(m))^{\alpha_{1}}\cdots(x_{d}-x_{d}(m))^{\alpha_{d}}.
 \]
 
 Let f be a  $ C^{\infty} $ function on U. Then it follows from the \hyperref[thm:1.17]{lemma of 1.17}, that
 
 \begin{equation}
-\tag{2}\label{eq:1.26:2}
-f=f(m)+\sum_{[\alpha]=1}^{k}a_{\alpha}(x-x(m))^{\alpha}+\sum_{[\alpha]=k+1}h_{\alpha}(x-x(m))^{\alpha},
+	\tag{2}\label{eq:1.26:2}
+	f=f(m)+\sum_{[\alpha]=1}^{k}a_{\alpha}(x-x(m))^{\alpha}+\sum_{[\alpha]=k+1}h_{\alpha}(x-x(m))^{\alpha},
 \end{equation}
 
 
 where the $h_{\alpha}$ are $C^{\infty}$ functions on $U$ and where
 
 \begin{equation}
-\tag{3}\label{eq:1.26:3}
-a_{\alpha}=\frac{1}{\alpha!}\frac{\partial^{\alpha}(f\circ\varphi^{-1})}{\partial r^{\alpha}}\bigg|_{\varphi(m)}.
+	\tag{3}\label{eq:1.26:3}
+	a_{\alpha}=\frac{1}{\alpha!}\frac{\partial^{\alpha}(f\circ\varphi^{-1})}{\partial r^{\alpha}}\bigg|_{\varphi(m)}.
 \end{equation}
 
 Hence
 
 \begin{equation}
-\tag{4}\label{eq:1.26:4}
-d^{k}f=\sum_{1\leq[\alpha]\leq k}a_{\alpha}\{\left(\mathbf{x}-\mathbf{x}(\mathbf{m})\right)^{\alpha}\}.
+	\tag{4}\label{eq:1.26:4}
+	d^{k}f=\sum_{1\leq[\alpha]\leq k}a_{\alpha}\{\left(\mathbf{x}-\mathbf{x}(\mathbf{m})\right)^{\alpha}\}.
 \end{equation}
 
 Thus the collection
 
 \begin{equation}
-\tag{5}\label{eq:1.26:5}
-[\{(x-\mathbf{x}(\mathbf{m}))^{a}\}\colon1\leq[\alpha]\leq k]
+	\tag{5}\label{eq:1.26:5}
+	[\{(x-\mathbf{x}(\mathbf{m}))^{a}\}\colon1\leq[\alpha]\leq k]
 \end{equation}
 
 spans  $ ^{k}M_{m} $. The proof that these elements are linearly independent in  $ ^{k}M_{m} $ is the obvious generalization of the proof for the case k = 2 which was treated in 1.17. Thus the collection (5) forms a basis of  $ ^{k}M_{m} $. Consequently  $ ^{k}M_{m} $ is finite dimensional with dimension equal to the binomial coefficient  $ \sum_{j=1}^{k}\binom{d+j-1}{j} $. As the dual space of  $ ^{k}M_{m} $,  $ M_{m}^{k} $ is also finite dimensional with the same dimension. Since  $ M_{m}^{k} $ is identified with  $ (^{k}M_{m})^{*} $, and these spaces are finite dimensional, we have a canonical isomorphism of  $ ^{k}M_{m} $ with  $ (M_{m}^{k})^{*} $, under which the element $d^{k}f \in {}^{k}M_{m}$, considered as an element of  $ (M_{m}^{k})^{*} $, satisfies
 
 \begin{equation}
-\tag{6}\label{eq:1.26:6}
-d^{k}f(v)=v(\mathbf{f}).
+	\tag{6}\label{eq:1.26:6}
+	d^{k}f(v)=v(\mathbf{f}).
 \end{equation}
 
 Let
 
 \begin{equation}
-\tag{7}\label{eq:1.26:7}
-\frac{\partial^{\alpha}f}{\partial x^{\alpha}}\bigg|_{m}=\frac{\partial^{\alpha}(f\circ\varphi^{-1})}{\partial r^{\alpha}}\bigg|_{\varphi(m)}.
+	\tag{7}\label{eq:1.26:7}
+	\frac{\partial^{\alpha}f}{\partial x^{\alpha}}\bigg|_{m}=\frac{\partial^{\alpha}(f\circ\varphi^{-1})}{\partial r^{\alpha}}\bigg|_{\varphi(m)}.
 \end{equation}
 
 Since the derivative is linear, and since the value of $\partial^{\alpha} f/\partial x^{\alpha}$ at $m$ depends only on the germ of $f$ at $m$ and vanishes if $f$ is constant on a neighborhood of $m$ or if $f$ is an $[\alpha]+1$-fold product of functions which vanish at $m$, then $(\partial^{\alpha}/\partial x^{\alpha})\big|_m$ is an $[\alpha]$th order tangent vector at $m$. It follows that
 
 \begin{equation}
-\tag{8}\label{eq:1.26:8}
-\left\{\left(\frac{1}{\alpha!}\right)\frac{\partial^{\alpha}}{\partial x^{\alpha}}\bigg|_{m}:1\leq[\alpha]\leq k\right\}
+	\tag{8}\label{eq:1.26:8}
+	\left\{\left(\frac{1}{\alpha!}\right)\frac{\partial^{\alpha}}{\partial x^{\alpha}}\bigg|_{m}:1\leq[\alpha]\leq k\right\}
 \end{equation}
 
 is the basis of $M_{m}^{k}$ dual to the basis (5) of $^{k}M_{m}$. If $v$ is a $k$th order tangent vector at $m$, then
 
 \begin{equation}
-\tag{9}\label{eq:1.26:9}
-v=\sum_{[\alpha]=1}^{k}b_{\alpha}\frac{\partial^{\alpha}}{\partial x^{\alpha}}\bigg|_{m},
+	\tag{9}\label{eq:1.26:9}
+	v=\sum_{[\alpha]=1}^{k}b_{\alpha}\frac{\partial^{\alpha}}{\partial x^{\alpha}}\bigg|_{m},
 \end{equation}
 
 where
 
 \begin{equation}
-\tag{10}\label{eq:1.26:10}
-b_{\alpha}=\left(\frac{1}{\alpha!}\right)v(({\bf x}-{\bf x}({\bf m}))^{\alpha}).
+	\tag{10}\label{eq:1.26:10}
+	b_{\alpha}=\left(\frac{1}{\alpha!}\right)v(({\bf x}-{\bf x}({\bf m}))^{\alpha}).
 \end{equation}
 
 In terms of the basis (8), equation (3) becomes
 
 \begin{equation}
-\tag{11}\label{eq:1.26:11}
-a_{\alpha}=\frac{1}{\alpha!}\frac{\partial^{\alpha}f}{\partial x^{\alpha}}\bigg|_{m}.
+	\tag{11}\label{eq:1.26:11}
+	a_{\alpha}=\frac{1}{\alpha!}\frac{\partial^{\alpha}f}{\partial x^{\alpha}}\bigg|_{m}.
 \end{equation}
 
 As in the case of first order tangent vectors, we customarily think of tangent vectors as operating on the functions themselves rather than their germs; indeed, we define
 
 \begin{equation}
-\tag{12}\label{eq:1.26:12}
-v(f)=v(\mathbf{f})
+	\tag{12}\label{eq:1.26:12}
+	v(f)=v(\mathbf{f})
 \end{equation}
 
 whenever $f$ is $C^{\infty}$ on a neighborhood of $m$ and $v$ is a tangent vector of any order at $m$.
@@ -1125,15 +1156,15 @@ whenever $f$ is $C^{\infty}$ on a neighborhood of $m$ and $v$ is a tangent vecto
 Finally, just as there are natural mappings of tangent vectors and differentials associated with a differentiable map $\varphi\colon M\to N$, so are there linear mappings
 
 \begin{equation}
-\tag{13}\label{eq:1.26:13}
-\begin{aligned}{}&{{}d^{k}\varphi\colon M_{m}^{k}\to N_{\varphi(m)}^{k},}\\ {}&{{}\delta^{k}\varphi\colon{}^{k}N_{\varphi(m)}\to{}^{k}M_{m}}\\ \end{aligned}
+	\tag{13}\label{eq:1.26:13}
+	\begin{aligned}{}&{{}d^{k}\varphi\colon M_{m}^{k}\to N_{\varphi(m)}^{k},}\\ {}&{{}\delta^{k}\varphi\colon{}^{k}N_{\varphi(m)}\to{}^{k}M_{m}}\\ \end{aligned}
 \end{equation}
 
 defined by
 
 \begin{equation}
-\tag{14}\label{eq:1.26:14}
-\begin{array}{c}{d^{k}\varphi(v)(g)=v(g\circ\varphi),}\\ {\delta^{k}\varphi(d^{k}g)=d^{k}(g\circ\varphi)}\\ \end{array}
+	\tag{14}\label{eq:1.26:14}
+	\begin{array}{c}{d^{k}\varphi(v)(g)=v(g\circ\varphi),}\\ {\delta^{k}\varphi(d^{k}g)=d^{k}(g\circ\varphi)}\\ \end{array}
 \end{equation}
 
 whenever $v\in M_{m}^{k}$ and $g$ is a $C^{\infty}$ function on a neighborhood of $\varphi(m)$. It is easily checked that (14) does indeed define the mappings (13) and that the mappings $d^{k}\varphi$ and $\delta^{k}\varphi$ are dual.
@@ -1146,111 +1177,111 @@ Our definition of a first order tangent vector in this section agrees with \hype
 
 \warnernumber{27}
 \begin{definition}\label{thm:1.27}
-Let  $ \psi\colon M \to N $ be  $ C^\infty $. \index{Inverse function theorem}\index{Submanifolds}
+	Let  $ \psi\colon M \to N $ be  $ C^\infty $. \index{Inverse function theorem}\index{Submanifolds}
 
-(a)  $ \psi $ is an immersion if  $ d\psi_{m} $ is non-singular for each  $ m \in M $. \index{Immersion}
+	(a)  $ \psi $ is an immersion if  $ d\psi_{m} $ is non-singular for each  $ m \in M $. \index{Immersion}
 
-(b) The pair $(M,\psi)$ is a submanifold of $N$ if $\psi$ is a one-to-one immersion.
+	(b) The pair $(M,\psi)$ is a submanifold of $N$ if $\psi$ is a one-to-one immersion.
 
-(c)  $ \psi $ is an imbedding if  $ \psi $ is a one-to-one immersion which is also a homeomorphism into; that is,  $ \psi $ is open as a map into  $ \psi(M) $ with the relative topology. \index{Imbedding}
+	(c)  $ \psi $ is an imbedding if  $ \psi $ is a one-to-one immersion which is also a homeomorphism into; that is,  $ \psi $ is open as a map into  $ \psi(M) $ with the relative topology. \index{Imbedding}
 
-(d)  $ \psi $ is a diffeomorphism if  $ \psi $ maps  $ M $ one-to-one onto  $ N $ and  $ \psi^{-1} $ is  $ C^\infty $. \index{Diffeomorphism}
+	(d)  $ \psi $ is a diffeomorphism if  $ \psi $ maps  $ M $ one-to-one onto  $ N $ and  $ \psi^{-1} $ is  $ C^\infty $. \index{Diffeomorphism}
 
 \end{definition}
 
 \warnernumber{28}
 \begin{remarks}{on 1.27}\label{thm:1.28}
-One can, for example, immerse the real line R into the plane, as illustrated in the following figure, so that the first case is an immersion which is not a submanifold, the second is a submanifold which is not an imbedding, and the third is an imbedding.
+	One can, for example, immerse the real line R into the plane, as illustrated in the following figure, so that the first case is an immersion which is not a submanifold, the second is a submanifold which is not an imbedding, and the third is an imbedding.
 
-\begin{center}
-\redrawn{figure-04}
-\end{center}
+	\begin{center}
+		\redrawn{figure-04}
+	\end{center}
 
 
-Observe that if $(U,\varphi)$ is a coordinate system, then $\varphi\colon U\to\varphi(U)$ is a diffeomorphism.
+	Observe that if $(U,\varphi)$ is a coordinate system, then $\varphi\colon U\to\varphi(U)$ is a diffeomorphism.
 
-The composition of diffeomorphisms is again a diffeomorphism. Thus the relation of being diffeomorphic is an equivalence relation on the collection of differentiable manifolds. It is quite possible for a locally Euclidean space to possess distinct differentiable structures which are diffeomorphic. (See Exercise 2.) In a remarkable paper, Milnor showed the existence of locally Euclidean spaces ($S^{7}$ is an example) which possess non-diffeomorphic differentiable structures [19]. There are also locally Euclidean spaces which possess no differentiable structures at all [14].
+	The composition of diffeomorphisms is again a diffeomorphism. Thus the relation of being diffeomorphic is an equivalence relation on the collection of differentiable manifolds. It is quite possible for a locally Euclidean space to possess distinct differentiable structures which are diffeomorphic. (See Exercise 2.) In a remarkable paper, Milnor showed the existence of locally Euclidean spaces ($S^{7}$ is an example) which possess non-diffeomorphic differentiable structures [19]. There are also locally Euclidean spaces which possess no differentiable structures at all [14].
 
-If $\psi$ is a diffeomorphism, then $d\psi_m$ is an isomorphism since both $(d\psi \circ d\psi^{-1})|_{\psi(m)}$ and $(d\psi^{-1} \circ d\psi)|_m$ are the identity transformations. The inverse function theorem gives us a local converse of this—whenever $d\psi_m$ is an isomorphism, $\psi$ is a diffeomorphism on a neighborhood of $m$. Before we recall the precise statement of the inverse function theorem, we give a definition which will be needed in the corollaries.
+	If $\psi$ is a diffeomorphism, then $d\psi_m$ is an isomorphism since both $(d\psi \circ d\psi^{-1})|_{\psi(m)}$ and $(d\psi^{-1} \circ d\psi)|_m$ are the identity transformations. The inverse function theorem gives us a local converse of this—whenever $d\psi_m$ is an isomorphism, $\psi$ is a diffeomorphism on a neighborhood of $m$. Before we recall the precise statement of the inverse function theorem, we give a definition which will be needed in the corollaries.
 
 \end{remarks}
 
 \warnernumber{29}
 \begin{definition}\label{thm:1.29}
-A set $y_{1}, \ldots, y_{l}$ of $C^{\infty}$ functions defined on some neighborhood of $m$ in $M$ is called an independent set at $m$ if the differentials $dy_{1}, \ldots, dy_{l}$ form an independent set in $M_{m}^{*}$.
+	A set $y_{1}, \ldots, y_{l}$ of $C^{\infty}$ functions defined on some neighborhood of $m$ in $M$ is called an independent set at $m$ if the differentials $dy_{1}, \ldots, dy_{l}$ form an independent set in $M_{m}^{*}$.
 \end{definition}
 
 \warnernumber{30}
 \begin{theorem}{Inverse Function Theorem}\label{thm:1.30}
-Let  $ U \subset \mathbb{R}^d $ be open, and let  $ f: U \to \mathbb{R}^d $ be  $ C^\infty $. If the Jacobian matrix
+	Let  $ U \subset \mathbb{R}^d $ be open, and let  $ f: U \to \mathbb{R}^d $ be  $ C^\infty $. If the Jacobian matrix
 
-\[
-\left\{\frac{\partial r_{i}\circ f}{\partial r_{j}}\right\}_{i,j=1,\ldots,d}
-\]
+	\[
+		\left\{\frac{\partial r_{i}\circ f}{\partial r_{j}}\right\}_{i,j=1,\ldots,d}
+	\]
 
-is non-singular at  $ r_0 \in U $, then there exists an open set  $ V $ with  $ r_0 \in V \subset U $ such that  $ f \mid V $ maps  $ V $ one-to-one onto the open set  $ f(V) $, and  $ (f \mid V)^{-1} $ is  $ C^\infty $.
+	is non-singular at  $ r_0 \in U $, then there exists an open set  $ V $ with  $ r_0 \in V \subset U $ such that  $ f \mid V $ maps  $ V $ one-to-one onto the open set  $ f(V) $, and  $ (f \mid V)^{-1} $ is  $ C^\infty $.
 
-This is one of the results we shall assume from advanced calculus. For a proof, we refer the reader, for example, to [31] or [6].
+	This is one of the results we shall assume from advanced calculus. For a proof, we refer the reader, for example, to [31] or [6].
 \end{theorem}
 
 \begin{corollary*}{a}
-Assume that $\psi\colon M \to N$ is $C^{\infty}$, that $m \in M$, and that $d\psi\colon M_{m} \to N_{\psi(m)}$ is an isomorphism. Then there is a neighborhood $U$ of $m$ such that $\psi\colon U \to \psi(U)$ is a diffeomorphism onto the open set $\psi(U)$ in $N$.
+	Assume that $\psi\colon M \to N$ is $C^{\infty}$, that $m \in M$, and that $d\psi\colon M_{m} \to N_{\psi(m)}$ is an isomorphism. Then there is a neighborhood $U$ of $m$ such that $\psi\colon U \to \psi(U)$ is a diffeomorphism onto the open set $\psi(U)$ in $N$.
 \end{corollary*}
 
 \begin{proof}
-Observe that $\dim M = \dim N$, say $d$. Choose coordinate systems $(V, \varphi)$ about $m$ and $(W, \tau)$ about $\psi(m)$ with $\psi(V) \subset W$. Let $\varphi(m) = p$ and $\tau(\psi(m)) = q$. The differential of the map $\tau \circ \psi \circ \varphi^{-1} \mid \varphi(V)$ is non-singular at $p$. Thus the inverse function theorem yields a diffeomorphism $\alpha\colon \tilde{U} \to \alpha(\tilde{U})$ on a neighborhood $\tilde{U}$ of $p$ with $\tilde{U} \subset \varphi(V)$. Then $\tau^{-1} \circ \alpha \circ \varphi$ is the required diffeomorphism on the neighborhood $U = \varphi^{-1}(\tilde{U})$ of $m$.
+	Observe that $\dim M = \dim N$, say $d$. Choose coordinate systems $(V, \varphi)$ about $m$ and $(W, \tau)$ about $\psi(m)$ with $\psi(V) \subset W$. Let $\varphi(m) = p$ and $\tau(\psi(m)) = q$. The differential of the map $\tau \circ \psi \circ \varphi^{-1} \mid \varphi(V)$ is non-singular at $p$. Thus the inverse function theorem yields a diffeomorphism $\alpha\colon \tilde{U} \to \alpha(\tilde{U})$ on a neighborhood $\tilde{U}$ of $p$ with $\tilde{U} \subset \varphi(V)$. Then $\tau^{-1} \circ \alpha \circ \varphi$ is the required diffeomorphism on the neighborhood $U = \varphi^{-1}(\tilde{U})$ of $m$.
 
-\begin{center}
-\redrawn{figure-05}
-\end{center}
+	\begin{center}
+		\redrawn{figure-05}
+	\end{center}
 \end{proof}
 
 \begin{corollary*}{b}
-Suppose that $\dim M = d$ and that $y_1, \ldots, y_d$ is an independent set of functions at $m_0 \in M$. Then the functions $y_1, \ldots, y_d$ form a coordinate system on a neighborhood of $m_0$. \index{Independent set of functions}
+	Suppose that $\dim M = d$ and that $y_1, \ldots, y_d$ is an independent set of functions at $m_0 \in M$. Then the functions $y_1, \ldots, y_d$ form a coordinate system on a neighborhood of $m_0$. \index{Independent set of functions}
 \end{corollary*}
 
 \begin{proof}
-Suppose that the $y_i$ are defined on the open set $U$ containing $m_0$. Define $\psi\colon U \to \mathbb{R}^d$ by
-\[
-\psi(m)=\left(y_{1}(m),\ldots,y_{d}(m)\right)\qquad(m\in U).
-\]
-Then $\psi$ is $C^{\infty}$. Now $\delta\psi$ is an isomorphism on $(\mathbb{R}^{d}_{\psi(m_{0})})^{*}$ since
-\[
-\delta\psi(d r_{i})=d(r_{i}\circ\psi)=d y_{i}
-\]
-which implies that $\delta\psi\big|_{\psi(m_0)}$ takes a basis to a basis. Consequently, the differential $d\psi_{m_0}$ (which is the dual of $\delta\psi\big|_{\psi(m_0)}$) is an isomorphism. So the inverse function theorem implies that $\psi$ is a diffeomorphism on a neighborhood $V \subset U$ of $m_0$, and consequently the functions $y_1, \ldots, y_d$ yield a coordinate system when restricted to $V$.
+	Suppose that the $y_i$ are defined on the open set $U$ containing $m_0$. Define $\psi\colon U \to \mathbb{R}^d$ by
+	\[
+		\psi(m)=\left(y_{1}(m),\ldots,y_{d}(m)\right)\qquad(m\in U).
+	\]
+	Then $\psi$ is $C^{\infty}$. Now $\delta\psi$ is an isomorphism on $(\mathbb{R}^{d}_{\psi(m_{0})})^{*}$ since
+	\[
+		\delta\psi(d r_{i})=d(r_{i}\circ\psi)=d y_{i}
+	\]
+	which implies that $\delta\psi\big|_{\psi(m_0)}$ takes a basis to a basis. Consequently, the differential $d\psi_{m_0}$ (which is the dual of $\delta\psi\big|_{\psi(m_0)}$) is an isomorphism. So the inverse function theorem implies that $\psi$ is a diffeomorphism on a neighborhood $V \subset U$ of $m_0$, and consequently the functions $y_1, \ldots, y_d$ yield a coordinate system when restricted to $V$.
 \end{proof}
 
 \begin{corollary*}{c}
-Suppose that $\dim M = d$ and that $y_{1}, \ldots, y_{l}$, with $l < d$, is an independent set of functions at $m$. Then they form part of a coordinate system on a neighborhood of $m$.
+	Suppose that $\dim M = d$ and that $y_{1}, \ldots, y_{l}$, with $l < d$, is an independent set of functions at $m$. Then they form part of a coordinate system on a neighborhood of $m$.
 \end{corollary*}
 
 \begin{proof}
-Let $(U, x_1, \ldots, x_d)$ be a coordinate system about $m$. Then $\{dy_1, \ldots, dy_l, dx_1, \ldots, dx_d\}$ spans $M_m^*$. Choose $d-l$ of the $x_i$ so that $\{dy_1, \ldots, dy_l, dx_{i_1}, \ldots, dx_{i_{d-l}}\}$ is a basis of $M_m^*$. Then apply Corollary (b).
+	Let $(U, x_1, \ldots, x_d)$ be a coordinate system about $m$. Then $\{dy_1, \ldots, dy_l, dx_1, \ldots, dx_d\}$ spans $M_m^*$. Choose $d-l$ of the $x_i$ so that $\{dy_1, \ldots, dy_l, dx_{i_1}, \ldots, dx_{i_{d-l}}\}$ is a basis of $M_m^*$. Then apply Corollary (b).
 \end{proof}
 
 \begin{corollary*}{d}
-Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $d\psi\colon M_{m} \to N_{\psi(m)}$ is surjective. Let $x_{1}, \ldots, x_{l}$ form a coordinate system on some neighborhood of $\psi(m)$. Then $x_{1} \circ \psi, \ldots, x_{l} \circ \psi$ form part of a coordinate system on some neighborhood of $m$.
+	Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $d\psi\colon M_{m} \to N_{\psi(m)}$ is surjective. Let $x_{1}, \ldots, x_{l}$ form a coordinate system on some neighborhood of $\psi(m)$. Then $x_{1} \circ \psi, \ldots, x_{l} \circ \psi$ form part of a coordinate system on some neighborhood of $m$.
 \end{corollary*}
 
 \begin{proof}
-The fact that $d\psi_{m}$ is surjective implies that the dual map $\delta\psi|_{\psi(m)}$ is injective. Thus the functions $\{x_{i}\circ\psi\colon i=1,\ldots,l\}$ are independent at $m$ since $\delta\psi(dx_{i})=d(x_{i}\circ\psi)$. The claim now follows from Corollary (c).
+	The fact that $d\psi_{m}$ is surjective implies that the dual map $\delta\psi|_{\psi(m)}$ is injective. Thus the functions $\{x_{i}\circ\psi\colon i=1,\ldots,l\}$ are independent at $m$ since $\delta\psi(dx_{i})=d(x_{i}\circ\psi)$. The claim now follows from Corollary (c).
 \end{proof}
 
 \begin{corollary*}{e}
-Suppose that $y_{1},\ldots,y_{k}$ is a set of $C^{\infty}$ functions on a neighborhood of $m$ such that their differentials span $M_{m}^{*}$. Then a subset of the $y_{i}$ forms a coordinate system on a neighborhood of $m$.
+	Suppose that $y_{1},\ldots,y_{k}$ is a set of $C^{\infty}$ functions on a neighborhood of $m$ such that their differentials span $M_{m}^{*}$. Then a subset of the $y_{i}$ forms a coordinate system on a neighborhood of $m$.
 \end{corollary*}
 
 \begin{proof}
-Simply choose a subset whose differentials form a basis of $M_{m}^{*}$, and apply Corollary (b).
+	Simply choose a subset whose differentials form a basis of $M_{m}^{*}$, and apply Corollary (b).
 \end{proof}
 
 \begin{corollary*}{f}
-Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $d\psi\colon M_{m} \to N_{\psi(m)}$ is injective. Let $x_{1}, \ldots, x_{k}$ form a coordinate system on a neighborhood of $\psi(m)$. Then a subset of the functions $\{x_{i} \circ \psi\}$ forms a coordinate system on a neighborhood of $m$. In particular, $\psi$ is one-to-one on a neighborhood of $m$.
+	Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $d\psi\colon M_{m} \to N_{\psi(m)}$ is injective. Let $x_{1}, \ldots, x_{k}$ form a coordinate system on a neighborhood of $\psi(m)$. Then a subset of the functions $\{x_{i} \circ \psi\}$ forms a coordinate system on a neighborhood of $m$. In particular, $\psi$ is one-to-one on a neighborhood of $m$.
 \end{corollary*}
 
 \begin{proof}
-The fact that $d\psi_m$ is injective implies that $\delta\psi|_{\psi(m)}$ is surjective. This implies that $\{d(x_i \circ \psi) = \delta\psi(dx_i)\colon i = 1, \ldots, k\}$ spans $M_m^*$. This corollary then follows from Corollary (e).
+	The fact that $d\psi_m$ is injective implies that $\delta\psi|_{\psi(m)}$ is surjective. This implies that $\{d(x_i \circ \psi) = \delta\psi(dx_i)\colon i = 1, \ldots, k\}$ spans $M_m^*$. This corollary then follows from Corollary (e).
 \end{proof}
 
 \warnernumber{31}
@@ -1258,37 +1289,37 @@ The fact that $d\psi_m$ is injective implies that $\delta\psi|_{\psi(m)}$ is sur
 The situation often arises that one has a $C^{\infty}$ mapping, say $\psi$, of a manifold $N$ into a manifold $M$ factoring through a submanifold $(P,\varphi)$ of $M$. That is, $\psi(N) \subset \varphi(P)$, whence there is a uniquely defined mapping $\psi_0$ of $N$ into $P$ such that $\varphi \circ \psi_0 = \psi$. The problem is: When is $\psi_0$ of class $C^{\infty}$? This is certainly not always the case. As an example, let $N$ and $P$ both be the real line, and let $M$ be the plane. Let $(\mathbb{R},\psi)$ and $(\mathbb{R},\varphi)$ both be figure-8 submanifolds with precisely the same image sets, but with the difference that as $t \to \pm \infty$, $\psi(t)$ approaches the intersection along the horizontal direction, but $\varphi(t)$ approaches along the vertical. Suppose also that $\psi(0) = \varphi(0) = 0$. Then $\psi_0$ is not even continuous since $\psi_0^{-1}(-1,1)$ consists of the origin plus two open sets of the form $(\alpha,+\infty)$, $(-\infty,-\alpha)$ for some $\alpha > 0$.
 
 \begin{center}
-\redrawn{figure-06}
+	\redrawn{figure-06}
 \end{center}
 
 \begin{center}
-\redrawn{figure-07}
+	\redrawn{figure-07}
 \end{center}
 
 \warnernumber{32}
 \begin{theorem}\label{thm:1.32}
-Suppose that $\psi: N \to M$ is $C^\infty$, that $(P, \varphi)$ is a submanifold of $M$, and that $\psi$ factors through $(P, \varphi)$, that is, $\psi(N) \subset \varphi(P)$. Since $\varphi$ is injective, there is a unique mapping $\psi_0$ of $N$ into $P$ such that $\varphi \circ \psi_0 = \psi$.
+	Suppose that $\psi: N \to M$ is $C^\infty$, that $(P, \varphi)$ is a submanifold of $M$, and that $\psi$ factors through $(P, \varphi)$, that is, $\psi(N) \subset \varphi(P)$. Since $\varphi$ is injective, there is a unique mapping $\psi_0$ of $N$ into $P$ such that $\varphi \circ \psi_0 = \psi$.
 
-\begin{center}
-\redrawn{figure-08}
-\end{center}
+	\begin{center}
+		\redrawn{figure-08}
+	\end{center}
 
-(a)  $ \psi_{0} $ is  $ C^{\infty} $ if it is continuous.
+	(a)  $ \psi_{0} $ is  $ C^{\infty} $ if it is continuous.
 
-(b)  $ \psi_{0} $ is continuous if  $ \varphi $ is an imbedding.
+	(b)  $ \psi_{0} $ is continuous if  $ \varphi $ is an imbedding.
 
-Another important case in which $\psi_{0}$ is continuous occurs when  $ (P,\varphi) $ is an integral manifold of an involutive distribution on M, as we shall see in 1.62.
+	Another important case in which $\psi_{0}$ is continuous occurs when  $ (P,\varphi) $ is an integral manifold of an involutive distribution on M, as we shall see in 1.62.
 
 \end{theorem}
 
 \begin{proof}
-Result (b) is obvious. So assume that $\psi_0$ is continuous. We prove that it is $C^\infty$. It suffices to show that $P$ can be covered by coordinate systems $(U,\tau)$ such that the map $\tau\circ\psi_0$ restricted to the open set $\psi_0^{-1}(U)$ is $C^\infty$. Let $p\in P$, and let $(V,\gamma)$ be a coordinate system on a neighborhood of $\varphi(p)$ in $M^d$. Then by Corollary (f) of 1.30 there exists a projection $\pi$ of $\mathbb{R}^d$ onto a suitable subspace (obtained by setting certain of the coordinate functions equal to $0$) such that the map $\tau=\pi\circ\gamma\circ\varphi$ yields a coordinate system on a neighborhood $U$ of $p$. Then
+	Result (b) is obvious. So assume that $\psi_0$ is continuous. We prove that it is $C^\infty$. It suffices to show that $P$ can be covered by coordinate systems $(U,\tau)$ such that the map $\tau\circ\psi_0$ restricted to the open set $\psi_0^{-1}(U)$ is $C^\infty$. Let $p\in P$, and let $(V,\gamma)$ be a coordinate system on a neighborhood of $\varphi(p)$ in $M^d$. Then by Corollary (f) of 1.30 there exists a projection $\pi$ of $\mathbb{R}^d$ onto a suitable subspace (obtained by setting certain of the coordinate functions equal to $0$) such that the map $\tau=\pi\circ\gamma\circ\varphi$ yields a coordinate system on a neighborhood $U$ of $p$. Then
 
-\[
-\begin{aligned}{\tau\circ\psi_{0}\mid\psi_{0}^{-1}(U)}&{{}=\pi\circ\gamma\circ\varphi\circ\psi_{0}\mid\psi_{0}^{-1}(U)}\\ {}&{{}=\pi\circ\gamma\circ\psi\mid\psi_{0}^{-1}(U),}\\ \end{aligned}
-\]
+	\[
+		\begin{aligned}{\tau\circ\psi_{0}\mid\psi_{0}^{-1}(U)}&{{}=\pi\circ\gamma\circ\varphi\circ\psi_{0}\mid\psi_{0}^{-1}(U)}\\ {}&{{}=\pi\circ\gamma\circ\psi\mid\psi_{0}^{-1}(U),}\\ \end{aligned}
+	\]
 
-which is $C^{\infty}$.
+	which is $C^{\infty}$.
 
 \end{proof}
 
@@ -1297,7 +1328,7 @@ which is $C^{\infty}$.
 Submanifolds  $ (N_{1},\varphi_{1}) $ and  $ (N_{2},\varphi_{2}) $ of M will be called equivalent if there exists a diffeomorphism  $ \alpha\colon N_{1}\to N_{2} $ such that  $ \varphi_{1}=\varphi_{2}\circ\alpha $. \index{Equivalence of submanifolds}
 
 \begin{center}
-\redrawn{figure-09}
+	\redrawn{figure-09}
 \end{center}
 
 This is an equivalence relation on the collection of all submanifolds of $M$. Each equivalence class $\xi$ has a unique representative of the form $(A,i)$ where $A$ is a subset of $M$ with a manifold structure such that the inclusion map $i: A \to M$ is a $C^\infty$ immersion. Namely, if $(N,\varphi)$ is any representative
@@ -1321,15 +1352,15 @@ We leave these to the reader as exercises. Result (a) follows from an applicatio
 Suppose that $(U,\varphi)$ is a coordinate system on $M$ with coordinate functions $x_1,\ldots,x_d$, and that $c$ is an integer, $0\leq c\leq d$. Let $a\in\varphi(U)$, and let
 
 \begin{equation}
-\tag{1}\label{eq:1.34:1}
-S=\{q\in U\colon x_{i}(q)=r_{i}(a),i=c+1,\ldots,d\}.
+	\tag{1}\label{eq:1.34:1}
+	S=\{q\in U\colon x_{i}(q)=r_{i}(a),i=c+1,\ldots,d\}.
 \end{equation}
 
 The subspace S of M together with the coordinate system
 
 \begin{equation}
-\tag{2}\label{eq:1.34:2}
-\{x_{j}\mid S\colon j=1,\ldots,c\}
+	\tag{2}\label{eq:1.34:2}
+	\{x_{j}\mid S\colon j=1,\ldots,c\}
 \end{equation}
 
 forms a manifold which is a submanifold of $M$ called a slice of the coordinate system $(U, \varphi)$.
@@ -1338,43 +1369,43 @@ forms a manifold which is a submanifold of $M$ called a slice of the coordinate 
 
 \warnernumber{35}
 \begin{proposition}\label{thm:1.35}
-Let $\psi: M^{c} \to N^{d}$ be an immersion, and let $m \in M$. Then there exists a cubic-centered coordinate system $(V, \varphi)$ about $\psi(m)$ and a neighborhood $U$ of $m$ such that $\psi \mid U$ is 1:1 and $\psi(U)$ is a slice of $(V, \varphi)$. \index{Centered coordinate system}
+	Let $\psi: M^{c} \to N^{d}$ be an immersion, and let $m \in M$. Then there exists a cubic-centered coordinate system $(V, \varphi)$ about $\psi(m)$ and a neighborhood $U$ of $m$ such that $\psi \mid U$ is 1:1 and $\psi(U)$ is a slice of $(V, \varphi)$. \index{Centered coordinate system}
 
 \end{proposition}
 
 \begin{proof}
-Let $(W,\tau)$ be a centered coordinate system about $\psi(m)$ with coordinate functions $y_{1},\ldots,y_{d}$. By Corollary (f) of 1.30 we can renumber the coordinate functions so that
+	Let $(W,\tau)$ be a centered coordinate system about $\psi(m)$ with coordinate functions $y_{1},\ldots,y_{d}$. By Corollary (f) of 1.30 we can renumber the coordinate functions so that
 
-\begin{equation}
-\tag{1}\label{eq:1.35:1}
-\tilde{\tau}=\pi_{c}\circ\tau\circ\psi
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.35:1}
+		\tilde{\tau}=\pi_{c}\circ\tau\circ\psi
+	\end{equation}
 
-is a coordinate map on a neighborhood $V'$ of $m$ where $\pi_c\colon\mathbb{R}^d\to\mathbb{R}^c$ is projection on the first $c$ coordinates. Define functions $\{x_i\}$ on $(\pi_c\circ\tau)^{-1}(\tilde{\tau}(V'))$ by setting
+	is a coordinate map on a neighborhood $V'$ of $m$ where $\pi_c\colon\mathbb{R}^d\to\mathbb{R}^c$ is projection on the first $c$ coordinates. Define functions $\{x_i\}$ on $(\pi_c\circ\tau)^{-1}(\tilde{\tau}(V'))$ by setting
 
-\begin{equation}
-\tag{2}\label{eq:1.35:2}
-x_{i}=\left\{\begin{aligned}{}&{{}y_{i}}&{}&{{}(i=1,\ldots,c)}\\ {}&{{}y_{i}-y_{i}\circ\psi\circ\tilde{\tau}^{-1}\circ\pi_{c}\circ\tau}&{}&{{}(i=c+1,\ldots,d).}\\ \end{aligned}\right.
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.35:2}
+		x_{i}=\left\{\begin{aligned}{}&{{}y_{i}}&{}&{{}(i=1,\ldots,c)}\\ {}&{{}y_{i}-y_{i}\circ\psi\circ\tilde{\tau}^{-1}\circ\pi_{c}\circ\tau}&{}&{{}(i=c+1,\ldots,d).}\\ \end{aligned}\right.
+	\end{equation}
 
-The functions $\{x_{i}\}$ are independent at $\psi(m)$, since at $\psi(m)$,
+	The functions $\{x_{i}\}$ are independent at $\psi(m)$, since at $\psi(m)$,
 
-\begin{equation}
-\tag{3}\label{eq:1.35:3}
-d x_{i}=\left\{\begin{aligned}{}&{{}d y_{i}}&{}&{{}(i=1,\ldots,c)}\\ {}&{{}d y_{i}+\sum_{j=1}^{c}a_{i j}d y_{j}}&{}&{{}(i=c+1,\ldots,d)}\\ \end{aligned}\right.
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.35:3}
+		d x_{i}=\left\{\begin{aligned}{}&{{}d y_{i}}&{}&{{}(i=1,\ldots,c)}\\ {}&{{}d y_{i}+\sum_{j=1}^{c}a_{i j}d y_{j}}&{}&{{}(i=c+1,\ldots,d)}\\ \end{aligned}\right.
+	\end{equation}
 
-for some constants $a_{ij}$. By Corollary (b) of 1.30 the $\{x_i\}$ form a coordinate system on a neighborhood of $\psi(m)$. Let $V$ be a neighborhood of $\psi(m)$ on which the $x_1, \ldots, x_d$ form a cubic coordinate system. Denote the corresponding coordinate map by $\varphi$. Let $U = \psi^{-1}(V) \cap V'$. Then $U$ and $(V, \varphi)$ are the required neighborhood and coordinate system.
+	for some constants $a_{ij}$. By Corollary (b) of 1.30 the $\{x_i\}$ form a coordinate system on a neighborhood of $\psi(m)$. Let $V$ be a neighborhood of $\psi(m)$ on which the $x_1, \ldots, x_d$ form a cubic coordinate system. Denote the corresponding coordinate map by $\varphi$. Let $U = \psi^{-1}(V) \cap V'$. Then $U$ and $(V, \varphi)$ are the required neighborhood and coordinate system.
 \end{proof}
 
 \begin{center}
-\redrawn{figure-10}
+	\redrawn{figure-10}
 \end{center}
 
 We emphasize that this proposition only says that there is a neighborhood $U$ of $m$ such that $\psi(U)$ is a slice of the coordinate system $(V,\varphi)$. Even if $(M,\psi)$ is a submanifold of $N$, it may well be that $\psi(M)\cap V$ is far from being a slice or even a union of slices. For an example, consider again the figure-8 submanifold of the plane:
 
 \begin{center}
-\redrawn{figure-11}
+	\redrawn{figure-11}
 \end{center}
 
 However, in the case that $(M,\psi)$ is an imbedded submanifold, the coordinate system $(V,\varphi)$ can be chosen so that all of $\psi(M)\cap V$ is a single slice of $V$.
@@ -1383,14 +1414,14 @@ Let us now consider the question of the extent to which the set of $C^{\infty}$ 
 
 \warnernumber{36}
 \begin{proposition}\label{thm:1.36}
-Let $\psi: M \to N$ be an imbedding such that $\psi(M)$ is closed in $N$. If $g \in C^{\infty}(M)$, then there exists $f \in C^{\infty}(N)$ such that $f \circ \psi = g$.
+	Let $\psi: M \to N$ be an imbedding such that $\psi(M)$ is closed in $N$. If $g \in C^{\infty}(M)$, then there exists $f \in C^{\infty}(N)$ such that $f \circ \psi = g$.
 
-To simplify notation, we shall suppress the map $\psi$ and consider $M \subset N$.
+	To simplify notation, we shall suppress the map $\psi$ and consider $M \subset N$.
 
 \end{proposition}
 
 \begin{proof}
-For each point $p \in M$ there exists an open set $O_p$ in $N$ containing $p$ and an extension of $g$ from $O_p \cap M$ to a $C^\infty$ function $\tilde{g}_p$ on $O_p$. One simply has to take $O_p$ to be a cubic-centered coordinate neighborhood of $p$ for which $M \cap O_p$ is a single slice, and then define $\tilde{g}_p$ to be the composition of the natural projection of $O_p$ onto the slice followed by $g$. The collection $\{O_p : p \in M\}$ together with $N - M$ forms an open cover of $N$. By \hyperref[thm:1.11]{Theorem 1.11}, there exists a partition of unity $\{\varphi_j\}$, with $j = 1, 2, \ldots$, subordinate to this cover. Take the subsequence (which we shall continue to denote by $\{\varphi_j\}$) such that supp $\varphi_j \cap M \neq \emptyset$. For each such $j$, we can choose a point $p_j$ such that supp $\varphi_j \subset O_{p_j}$. Then $f = \sum_{j} \varphi_j \tilde{g}_{p_j}$ is a $C^\infty$ function on $N$, and $f \mid M = g$.
+	For each point $p \in M$ there exists an open set $O_p$ in $N$ containing $p$ and an extension of $g$ from $O_p \cap M$ to a $C^\infty$ function $\tilde{g}_p$ on $O_p$. One simply has to take $O_p$ to be a cubic-centered coordinate neighborhood of $p$ for which $M \cap O_p$ is a single slice, and then define $\tilde{g}_p$ to be the composition of the natural projection of $O_p$ onto the slice followed by $g$. The collection $\{O_p : p \in M\}$ together with $N - M$ forms an open cover of $N$. By \hyperref[thm:1.11]{Theorem 1.11}, there exists a partition of unity $\{\varphi_j\}$, with $j = 1, 2, \ldots$, subordinate to this cover. Take the subsequence (which we shall continue to denote by $\{\varphi_j\}$) such that supp $\varphi_j \cap M \neq \emptyset$. For each such $j$, we can choose a point $p_j$ such that supp $\varphi_j \subset O_{p_j}$. Then $f = \sum_{j} \varphi_j \tilde{g}_{p_j}$ is a $C^\infty$ function on $N$, and $f \mid M = g$.
 
 \end{proof}
 
@@ -1401,178 +1432,178 @@ From the inverse function theorem we shall obtain two theorems which will provid
 
 \warnernumber{37}
 \begin{theorem}{Implicit Function Theorem}\label{thm:1.37}
-Let  $ U \subset \mathbb{R}^{c-d} \times \mathbb{R}^{d} $ be open, and let  $ f: U \to \mathbb{R}^{d} $ be  $ C^{\infty} $. We denote the canonical coordinate system on  $ \mathbb{R}^{c-d} \times \mathbb{R}^{d} $ by  $ (r_{1}, \ldots, r_{e-d}, s_{1}, \ldots, s_{d}) $. Suppose that at the point  $ (r_{0}, s_{0}) \in U $
+	Let  $ U \subset \mathbb{R}^{c-d} \times \mathbb{R}^{d} $ be open, and let  $ f: U \to \mathbb{R}^{d} $ be  $ C^{\infty} $. We denote the canonical coordinate system on  $ \mathbb{R}^{c-d} \times \mathbb{R}^{d} $ by  $ (r_{1}, \ldots, r_{e-d}, s_{1}, \ldots, s_{d}) $. Suppose that at the point  $ (r_{0}, s_{0}) \in U $
 
-\[
-f(r_{0},s_{0})=0,
-\]
+	\[
+		f(r_{0},s_{0})=0,
+	\]
 
-and that the matrix
+	and that the matrix
 
-\[
-\left\{\frac{\partial f_{i}}{\partial s_{j}}\bigg|_{(r_{0},s_{0})}\right\}_{i,j=1,\ldots,d}
-\]
+	\[
+		\left\{\frac{\partial f_{i}}{\partial s_{j}}\bigg|_{(r_{0},s_{0})}\right\}_{i,j=1,\ldots,d}
+	\]
 
-is non-singular. Then there exists an open neighborhood $V$ of $r_0$ in $\mathbb{R}^{c-d}$ and an open neighborhood $W$ of $s_0$ in $\mathbb{R}^d$ such that $V \times W \subset U$, and there exists a $C^\infty$ map $g: V \to W$ such that for each $(p,q) \in V \times W$
+	is non-singular. Then there exists an open neighborhood $V$ of $r_0$ in $\mathbb{R}^{c-d}$ and an open neighborhood $W$ of $s_0$ in $\mathbb{R}^d$ such that $V \times W \subset U$, and there exists a $C^\infty$ map $g: V \to W$ such that for each $(p,q) \in V \times W$
 
-\begin{equation}
-\tag{1}\label{eq:1.37:1}
-f(p,q)=0\iff q=g(p).
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.37:1}
+		f(p,q)=0\iff q=g(p).
+	\end{equation}
 
-\begin{center}
-\redrawn{figure-12}
-\end{center}
+	\begin{center}
+		\redrawn{figure-12}
+	\end{center}
 \end{theorem}
 
 \warnernumber{38}
 \begin{theorem}\label{thm:1.38}
-Assume that $\psi\colon M^{c} \to N^{d}$ is $C^{\infty}$, that $n$ is a point of $N$, that $P = \psi^{-1}(n)$ is non-empty, and that $d\psi: M_{m} \to N_{\psi(m)}$ is surjective for all $m \in P$. Then $P$ has a unique manifold structure such that $(P, i)$ is a submanifold of $M$, where $i$ is the inclusion map. Moreover, $i: P \to M$ is actually an imbedding, and the dimension of $P$ is $c - d$.
+	Assume that $\psi\colon M^{c} \to N^{d}$ is $C^{\infty}$, that $n$ is a point of $N$, that $P = \psi^{-1}(n)$ is non-empty, and that $d\psi: M_{m} \to N_{\psi(m)}$ is surjective for all $m \in P$. Then $P$ has a unique manifold structure such that $(P, i)$ is a submanifold of $M$, where $i$ is the inclusion map. Moreover, $i: P \to M$ is actually an imbedding, and the dimension of $P$ is $c - d$.
 
 \end{theorem}
 
 \begin{proof}
-According to result (b) of 1.33, it is sufficient to prove that in the relative topology, $P$ has a differentiable structure such that $(P,i)$ is a submanifold of $M$ of dimension $c-d$. For this it is sufficient to prove that if $m\in P$, then there exists a coordinate system on a neighborhood $U$ of $m$ in $M$ for which $P\cap U$ is a single slice of the correct dimension. Let $x_{1},\ldots,x_{d}$ be a coordinate system centered at $n$ in $N$. Then since $d\psi:M_{m}\to N_{n}$ is surjective, it follows from Corollary (d) of 1.30 that the collection of functions
+	According to result (b) of 1.33, it is sufficient to prove that in the relative topology, $P$ has a differentiable structure such that $(P,i)$ is a submanifold of $M$ of dimension $c-d$. For this it is sufficient to prove that if $m\in P$, then there exists a coordinate system on a neighborhood $U$ of $m$ in $M$ for which $P\cap U$ is a single slice of the correct dimension. Let $x_{1},\ldots,x_{d}$ be a coordinate system centered at $n$ in $N$. Then since $d\psi:M_{m}\to N_{n}$ is surjective, it follows from Corollary (d) of 1.30 that the collection of functions
 
-\[
-\{y_{i}=x_{i}\circ\psi\colon i=1,\ldots,d\},
-\]
+	\[
+		\{y_{i}=x_{i}\circ\psi\colon i=1,\ldots,d\},
+	\]
 
-forms part of a coordinate system about $m\in M$. Complete these functions to a coordinate system $y_1,\ldots,y_c$ on a neighborhood $U$ of $m$. Then $P\cap U$ is precisely the slice of this coordinate system given by
+	forms part of a coordinate system about $m\in M$. Complete these functions to a coordinate system $y_1,\ldots,y_c$ on a neighborhood $U$ of $m$. Then $P\cap U$ is precisely the slice of this coordinate system given by
 
-\[
-y_{1}=y_{2}=\cdots=y_{d}=0.
-\qedhere
-\]
+	\[
+		y_{1}=y_{2}=\cdots=y_{d}=0.
+		\qedhere
+	\]
 \end{proof}
 
 In this theorem the inverse image of a point is shown to be a submanifold as long as the differential is surjective at each point of the inverse image. A point can be thought of as a 0-dimensional submanifold. We now generalize this theorem by proving that under suitable conditions the inverse images of higher dimensional submanifolds are themselves submanifolds.
 
 \warnernumber{39}
 \begin{theorem}\label{thm:1.39}
-Assume that $\psi: M \to N^d$ is $C^\infty$ and that $(O^c, \varphi)$ is a submanifold of $N$. Suppose that whenever $m \in \psi^{-1}\left(\varphi(O)\right)$, then
+	Assume that $\psi: M \to N^d$ is $C^\infty$ and that $(O^c, \varphi)$ is a submanifold of $N$. Suppose that whenever $m \in \psi^{-1}\left(\varphi(O)\right)$, then
 
-\begin{equation}
-\tag{1}\label{eq:1.39:1}
-N_{\psi(m)}=d\psi(M_{m})+d\varphi(O_{\varphi^{-1}(\psi(m))})
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.39:1}
+		N_{\psi(m)}=d\psi(M_{m})+d\varphi(O_{\varphi^{-1}(\psi(m))})
+	\end{equation}
 
-(not necessarily a direct sum). Then if $P=\psi^{-1}\big(\varphi(O)\big)$ and is non-empty, $P$ can be given a manifold structure so that $(P,i)$ is a submanifold of $M$, where $i$ is the inclusion map, with
+	(not necessarily a direct sum). Then if $P=\psi^{-1}\big(\varphi(O)\big)$ and is non-empty, $P$ can be given a manifold structure so that $(P,i)$ is a submanifold of $M$, where $i$ is the inclusion map, with
 
-\begin{equation}
-\tag{2}\label{eq:1.39:2}
-\dim M-\dim P=\dim N-\dim O.
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.39:2}
+		\dim M-\dim P=\dim N-\dim O.
+	\end{equation}
 
-Moreover, if $(O,\varphi)$ is an imbedded submanifold, then so is $(P,i)$, and in this case there is a unique manifold structure on $P$ such that $(P,i)$ is a submanifold of $M$.
+	Moreover, if $(O,\varphi)$ is an imbedded submanifold, then so is $(P,i)$, and in this case there is a unique manifold structure on $P$ such that $(P,i)$ is a submanifold of $M$.
 
-In general, if $(O,\varphi)$ is not an imbedding, $P$ need not have the relative topology, and there is no unique manifold structure on $P$ such that $(P,i)$ is a submanifold. We leave it to the reader to supply examples.
+	In general, if $(O,\varphi)$ is not an imbedding, $P$ need not have the relative topology, and there is no unique manifold structure on $P$ such that $(P,i)$ is a submanifold. We leave it to the reader to supply examples.
 
 \end{theorem}
 
 \begin{proof}
-The proof will consist of locally reducing this case to the case of \hyperref[thm:1.38]{Theorem 1.38}. Let $p \in O$. By \hyperref[thm:1.35]{Proposition 1.35}, we can pick a neighborhood $W$ of $p$ and a centered coordinate system $(V, \tau)$ with coordinate functions $x_{1}, \ldots, x_{d}$ about $\varphi(p)$ such that $\varphi(W)$ is the slice
+	The proof will consist of locally reducing this case to the case of \hyperref[thm:1.38]{Theorem 1.38}. Let $p \in O$. By \hyperref[thm:1.35]{Proposition 1.35}, we can pick a neighborhood $W$ of $p$ and a centered coordinate system $(V, \tau)$ with coordinate functions $x_{1}, \ldots, x_{d}$ about $\varphi(p)$ such that $\varphi(W)$ is the slice
 
 
 
-\begin{equation}
-\tag{3}\label{eq:1.39:3}
-x_{c+j}=0\qquad(j=1,\ldots,d-c).
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.39:3}
+		x_{c+j}=0\qquad(j=1,\ldots,d-c).
+	\end{equation}
 
-Let
+	Let
 
-\[
-\pi\colon\mathbb{R}^{d}\to\mathbb{R}^{d-c},
-\]
+	\[
+		\pi\colon\mathbb{R}^{d}\to\mathbb{R}^{d-c},
+	\]
 
-\begin{equation}
-\tag{4}\label{eq:1.39:4}
-\pi(a)=(a_{c+1},\ldots,a_{d}).
-\end{equation}
+	\begin{equation}
+		\tag{4}\label{eq:1.39:4}
+		\pi(a)=(a_{c+1},\ldots,a_{d}).
+	\end{equation}
 
-So
-
-
-
-\begin{equation}
-\tag{5}\label{eq:1.39:5}
-\pi\circ\tau\bigl(\varphi(W)\bigr)=\{0\}.
-\end{equation}
-
-Let
+	So
 
 
 
-\begin{equation}
-\tag{6}\label{eq:1.39:6}
-U=\psi^{-1}(V),
-\end{equation}
+	\begin{equation}
+		\tag{5}\label{eq:1.39:5}
+		\pi\circ\tau\bigl(\varphi(W)\bigr)=\{0\}.
+	\end{equation}
 
-and let
+	Let
 
 
 
-\begin{equation}
-\tag{7}\label{eq:1.39:7}
-\psi_{1}=\pi\circ\tau\circ\psi\mid U\colon U\to\mathbb{R}^{d-c}.
-\end{equation}
+	\begin{equation}
+		\tag{6}\label{eq:1.39:6}
+		U=\psi^{-1}(V),
+	\end{equation}
 
-\begin{center}
-\redrawn{figure-13}
-\end{center}
+	and let
 
-Now, (3) through (7) imply that
 
-\begin{equation}
-\tag{8}\label{eq:1.39:8}
-\psi_{1}^{-1}(0)=\psi^{-1}\big(\varphi(W)\big).
-\end{equation}
 
-For each point  $ m \in \psi_{1}^{-1}(0) $,  $ d\psi_{1} \mid M_{m} $ is surjective since  $ d(\pi \circ \tau) \mid N_{\psi(m)} $ is surjective and since by (1), (5), and (7)
+	\begin{equation}
+		\tag{7}\label{eq:1.39:7}
+		\psi_{1}=\pi\circ\tau\circ\psi\mid U\colon U\to\mathbb{R}^{d-c}.
+	\end{equation}
 
-\[
-d(\pi\circ\tau)(N_{\varphi(m)})=d\psi_{1}(M_{m})+\{0\}.
-\]
+	\begin{center}
+		\redrawn{figure-13}
+	\end{center}
 
-Thus by 1.38,  $ \psi^{-1}(\varphi(W)) $ has a unique manifold structure such that  $ (\psi^{-1}(\varphi(W)), i) $ is a submanifold of  $ M $; and in this manifold structure,
+	Now, (3) through (7) imply that
 
-$ \psi^{-1}\left(\varphi(W)\right) $ has the relative topology and has dimension equal to  $ \dim M - \dim N + \dim O $. Cover O by a countable collection  $ \{W_i: i = 1, 2, 3, \ldots\} $ of such sets. Then
+	\begin{equation}
+		\tag{8}\label{eq:1.39:8}
+		\psi_{1}^{-1}(0)=\psi^{-1}\big(\varphi(W)\big).
+	\end{equation}
 
-\begin{equation}
-\tag{9}\label{eq:1.39:9}
-P=\bigcup_{i=1}^{\infty}\psi^{-1}\bigl(\varphi(W_{i})\bigr).
-\end{equation}
+	For each point  $ m \in \psi_{1}^{-1}(0) $,  $ d\psi_{1} \mid M_{m} $ is surjective since  $ d(\pi \circ \tau) \mid N_{\psi(m)} $ is surjective and since by (1), (5), and (7)
 
-If $i \neq j$, the submanifolds $\psi^{-1}(\varphi(W_i))$ and $\psi^{-1}(\varphi(W_i))$ intersect in open subsets of each other. It follows that the union of the topologies on the various $\psi^{-1}(\varphi(W_i))$ forms a basis for a topology on $P$. With this topology, $P$ is a locally Euclidean space with dimension equal to $\dim M - \dim N + \dim O$; and, moreover, $P$ is second countable since (9) expresses $P$ as a countable union of second countable open subsets. The manifold structures on the various $\psi^{-1}(\varphi(W_i))$ are compatible on overlaps because of the uniqueness of the manifold structure on $\psi^{-1}(\varphi(W_i))$ (or any open subset of $\psi^{-1}(\varphi(W_i))$) such that $(\psi^{-1}(\varphi(W_i)),i)$ is a submanifold of $M$ (by result (b) of 1.33). Thus the collection of coordinate systems on $P$ containing the coordinate systems on the various $\psi^{-1}(\varphi(W_i))$ and maximal with respect to \hyperref[thm:1.4]{1.4(b)} forms a differentiable structure on $P$. That $(P,i)$ is a submanifold of $M$ now follows immediately from the fact that the $(\psi^{-1}(\varphi(W_i)))$ are submanifolds. If $(O, \varphi)$ is an imbedding, the coordinate neighborhood $V$ can be chosen small enough so that $\varphi(O) \cap V$ consists only of the single slice $\varphi(W)$, and thus $U \cap P = \psi^{-1}(\varphi(W))$. It follows in this case that $P$ has the relative topology; hence $(P,i)$ is an imbedding. The uniqueness of the manifold structure in this case is guaranteed by result (b) of 1.33.
+	\[
+		d(\pi\circ\tau)(N_{\varphi(m)})=d\psi_{1}(M_{m})+\{0\}.
+	\]
+
+	Thus by 1.38,  $ \psi^{-1}(\varphi(W)) $ has a unique manifold structure such that  $ (\psi^{-1}(\varphi(W)), i) $ is a submanifold of  $ M $; and in this manifold structure,
+
+	$ \psi^{-1}\left(\varphi(W)\right) $ has the relative topology and has dimension equal to  $ \dim M - \dim N + \dim O $. Cover O by a countable collection  $ \{W_i: i = 1, 2, 3, \ldots\} $ of such sets. Then
+
+	\begin{equation}
+		\tag{9}\label{eq:1.39:9}
+		P=\bigcup_{i=1}^{\infty}\psi^{-1}\bigl(\varphi(W_{i})\bigr).
+	\end{equation}
+
+	If $i \neq j$, the submanifolds $\psi^{-1}(\varphi(W_i))$ and $\psi^{-1}(\varphi(W_i))$ intersect in open subsets of each other. It follows that the union of the topologies on the various $\psi^{-1}(\varphi(W_i))$ forms a basis for a topology on $P$. With this topology, $P$ is a locally Euclidean space with dimension equal to $\dim M - \dim N + \dim O$; and, moreover, $P$ is second countable since (9) expresses $P$ as a countable union of second countable open subsets. The manifold structures on the various $\psi^{-1}(\varphi(W_i))$ are compatible on overlaps because of the uniqueness of the manifold structure on $\psi^{-1}(\varphi(W_i))$ (or any open subset of $\psi^{-1}(\varphi(W_i))$) such that $(\psi^{-1}(\varphi(W_i)),i)$ is a submanifold of $M$ (by result (b) of 1.33). Thus the collection of coordinate systems on $P$ containing the coordinate systems on the various $\psi^{-1}(\varphi(W_i))$ and maximal with respect to \hyperref[thm:1.4]{1.4(b)} forms a differentiable structure on $P$. That $(P,i)$ is a submanifold of $M$ now follows immediately from the fact that the $(\psi^{-1}(\varphi(W_i)))$ are submanifolds. If $(O, \varphi)$ is an imbedding, the coordinate neighborhood $V$ can be chosen small enough so that $\varphi(O) \cap V$ consists only of the single slice $\varphi(W)$, and thus $U \cap P = \psi^{-1}(\varphi(W))$. It follows in this case that $P$ has the relative topology; hence $(P,i)$ is an imbedding. The uniqueness of the manifold structure in this case is guaranteed by result (b) of 1.33.
 
 \end{proof}
 
 \warnernumber{40}
 \begin{examples}\label{thm:1.40}
-(a) The differential of the function $f(p) = \sum_{i=1}^{d} r_i(p)^2$ on $\mathbb{R}^d$ is surjective except at the origin. Thus it follows from 1.38 that the sphere $f^{-1}(r^2)$, for a constant $r > 0$, has a unique manifold structure for which it is a submanifold of $\mathbb{R}^d$ under the inclusion map. In particular, this is the same manifold structure as the one defined in \hyperref[thm:1.5]{Example 1.5}(d).
+	(a) The differential of the function $f(p) = \sum_{i=1}^{d} r_i(p)^2$ on $\mathbb{R}^d$ is surjective except at the origin. Thus it follows from 1.38 that the sphere $f^{-1}(r^2)$, for a constant $r > 0$, has a unique manifold structure for which it is a submanifold of $\mathbb{R}^d$ under the inclusion map. In particular, this is the same manifold structure as the one defined in \hyperref[thm:1.5]{Example 1.5}(d).
 
-(b) We define a map $\psi$ from the general linear group $Gl(d, \mathbb{R})$ (\hyperref[thm:1.5]{Example 1.5}(f)) to the vector space of all real symmetric $d \times d$ matrices by
+	(b) We define a map $\psi$ from the general linear group $Gl(d, \mathbb{R})$ (\hyperref[thm:1.5]{Example 1.5}(f)) to the vector space of all real symmetric $d \times d$ matrices by
 
-\[
-\psi(A)=A A^{t},
-\]
+	\[
+		\psi(A)=A A^{t},
+	\]
 
-where  $ A^{t} $ is the transpose of the matrix A. Let
+	where  $ A^{t} $ is the transpose of the matrix A. Let
 
-\[
-O(d)=\psi^{-1}(I)
-\]
+	\[
+		O(d)=\psi^{-1}(I)
+	\]
 
-where $I$ is the $d \times d$ identity matrix. $O(d)$ is a subgroup of $Gl(d,\mathbb{R})$ under matrix multiplication called the orthogonal group. To apply 1.38 to conclude that $O(d)$ has a unique manifold structure such that $(O(d),i)$ is a submanifold of $Gl(d,\mathbb{R})$, and that in this manifold structure $i$ is an imbedding and $O(d)$ has dimension $\frac{1}{2}(d(d-1))$, one \index{Orthogonal group}
+	where $I$ is the $d \times d$ identity matrix. $O(d)$ is a subgroup of $Gl(d,\mathbb{R})$ under matrix multiplication called the orthogonal group. To apply 1.38 to conclude that $O(d)$ has a unique manifold structure such that $(O(d),i)$ is a submanifold of $Gl(d,\mathbb{R})$, and that in this manifold structure $i$ is an imbedding and $O(d)$ has dimension $\frac{1}{2}(d(d-1))$, one \index{Orthogonal group}
 
-need only check that  $ d\psi_\sigma $ is surjective at each  $ \sigma \in O(d) $. For this, it suffices to check that  $ d\psi_I $ is surjective, since whenever  $ \sigma \in O(d) $,
+	need only check that  $ d\psi_\sigma $ is surjective at each  $ \sigma \in O(d) $. For this, it suffices to check that  $ d\psi_I $ is surjective, since whenever  $ \sigma \in O(d) $,
 
-\[
-\psi=\psi\circ r_{\sigma}
-\]
+	\[
+		\psi=\psi\circ r_{\sigma}
+	\]
 
-where  $ r_{\sigma} $ (right translation by  $ \sigma $) is the diffeomorphism of  $ Gl(d, \mathbb{R}) $ defined by  $ r_{\sigma}(\tau) = \tau\sigma $. We leave the details to the reader as an exercise.
+	where  $ r_{\sigma} $ (right translation by  $ \sigma $) is the diffeomorphism of  $ Gl(d, \mathbb{R}) $ defined by  $ r_{\sigma}(\tau) = \tau\sigma $. We leave the details to the reader as an exercise.
 
 \end{examples}
 
@@ -1581,70 +1612,70 @@ where  $ r_{\sigma} $ (right translation by  $ \sigma $) is the diffeomorphism o
 
 \warnernumber{41}
 \begin{definition}\label{thm:1.41}
-Smooth curves $\sigma: (a,b) \to M$ and their tangent vectors $\dot{\sigma}(t)$ were defined in \hyperref[thm:1.23]{1.23(e)}. We say that a mapping $\sigma: [a,b] \to M$ is a smooth curve in $M$ if $\sigma$ extends to be a $C^\infty$ mapping of $(a-\varepsilon, b+\varepsilon)$ into $M$ for some $\varepsilon > 0$. The curve $\sigma: [a,b] \to M$ is said to be piecewise smooth if there exists a partition $a = \alpha_0 < \alpha_1 < \cdots < \alpha_n = b$ such that $\sigma \mid [\alpha_i, \alpha_{i+1}]$ is smooth for each $i = 0, \ldots, n-1$. Observe that piecewise smooth curves are necessarily continuous. If $\sigma: [a,b] \to M$ is a smooth curve in $M$, then its tangent vector \index{Vector fields}
+	Smooth curves $\sigma: (a,b) \to M$ and their tangent vectors $\dot{\sigma}(t)$ were defined in \hyperref[thm:1.23]{1.23(e)}. We say that a mapping $\sigma: [a,b] \to M$ is a smooth curve in $M$ if $\sigma$ extends to be a $C^\infty$ mapping of $(a-\varepsilon, b+\varepsilon)$ into $M$ for some $\varepsilon > 0$. The curve $\sigma: [a,b] \to M$ is said to be piecewise smooth if there exists a partition $a = \alpha_0 < \alpha_1 < \cdots < \alpha_n = b$ such that $\sigma \mid [\alpha_i, \alpha_{i+1}]$ is smooth for each $i = 0, \ldots, n-1$. Observe that piecewise smooth curves are necessarily continuous. If $\sigma: [a,b] \to M$ is a smooth curve in $M$, then its tangent vector \index{Vector fields}
 
-\[
-\dot{\sigma}(t)=d\sigma\biggl(\frac{d}{d r}\biggl|_{t}\biggr)\in M_{\sigma(t)}
-\]
+	\[
+		\dot{\sigma}(t)=d\sigma\biggl(\frac{d}{d r}\biggl|_{t}\biggr)\in M_{\sigma(t)}
+	\]
 
-is well-defined for each  $ t \in [a, b] $.
+	is well-defined for each  $ t \in [a, b] $.
 
 \end{definition}
 
 \warnernumber{42}
 \begin{definition}\label{thm:1.42}
-A vector field X along a curve  $ \sigma $:  $ [a,b] \to M $ is a mapping  $ X\colon [a,b] \to T(M) $ which lifts  $ \sigma $; that is,  $ \pi \circ X = \sigma $. A vector field
+	A vector field X along a curve  $ \sigma $:  $ [a,b] \to M $ is a mapping  $ X\colon [a,b] \to T(M) $ which lifts  $ \sigma $; that is,  $ \pi \circ X = \sigma $. A vector field
 
-\begin{center}
-\redrawn{figure-14}
-\end{center}
+	\begin{center}
+		\redrawn{figure-14}
+	\end{center}
 
-X is called a smooth $(C^{\infty})$ vector field along $\sigma$ if the mapping $X\colon[a,b]\to T(M)$ is $C^{\infty}$. A vector field $X$ on an open set $U$ in $M$ is a lifting of $U$ into $T(M)$, that is, a map $X\colon U\to T(M)$ such that \index{Lifting}
+	X is called a smooth $(C^{\infty})$ vector field along $\sigma$ if the mapping $X\colon[a,b]\to T(M)$ is $C^{\infty}$. A vector field $X$ on an open set $U$ in $M$ is a lifting of $U$ into $T(M)$, that is, a map $X\colon U\to T(M)$ such that \index{Lifting}
 
-\[
-\pi\circ X=\text{identity map on }U.
-\]
+	\[
+		\pi\circ X=\text{identity map on }U.
+	\]
 
-Again, for the vector field $X$ to be smooth ($C^\infty$) means that $X \in C^\infty(U, T(M))$. The set of smooth vector fields over $U$ forms in the obvious way a vector space over $\mathbb{R}$ and a module over the ring $C^\infty(U)$ of $C^\infty$ functions on $U$. If $X$ is a vector field on $U$ and $m \in U$, then $X(m)$ (often denoted $X_m$) is an element of $M_m$. If $f$ is a $C^\infty$ function on $U$, then $X(f)$ is the function on $U$ whose value at $m$ is $X_m(f)$.
+	Again, for the vector field $X$ to be smooth ($C^\infty$) means that $X \in C^\infty(U, T(M))$. The set of smooth vector fields over $U$ forms in the obvious way a vector space over $\mathbb{R}$ and a module over the ring $C^\infty(U)$ of $C^\infty$ functions on $U$. If $X$ is a vector field on $U$ and $m \in U$, then $X(m)$ (often denoted $X_m$) is an element of $M_m$. If $f$ is a $C^\infty$ function on $U$, then $X(f)$ is the function on $U$ whose value at $m$ is $X_m(f)$.
 
 \end{definition}
 
 \warnernumber{43}
 \begin{proposition}\label{thm:1.43}
-Let X be a vector field on M. Then the following are equivalent:
+	Let X be a vector field on M. Then the following are equivalent:
 
-(a) X is  $ C^{\infty} $.
+	(a) X is  $ C^{\infty} $.
 
-(b) If $(U, x_{1}, \ldots, x_{d})$ is a coordinate system on $M$, and if $\{a_{i}\}$ is the collection of functions on $U$ defined by
+	(b) If $(U, x_{1}, \ldots, x_{d})$ is a coordinate system on $M$, and if $\{a_{i}\}$ is the collection of functions on $U$ defined by
 
-\[
-X\mid U=\sum_{i=1}^{d}a_{i}\frac{\partial}{\partial x_{i}},
-\]
+	\[
+		X\mid U=\sum_{i=1}^{d}a_{i}\frac{\partial}{\partial x_{i}},
+	\]
 
-then  $ a_{i} \in C^{\infty}(U) $.
+	then  $ a_{i} \in C^{\infty}(U) $.
 
-(c) Whenever $V$ is open in $M$ and $f\in C^{\infty}(V)$, then $X(f)\in C^{\infty}(V)$.
+	(c) Whenever $V$ is open in $M$ and $f\in C^{\infty}(V)$, then $X(f)\in C^{\infty}(V)$.
 
 \end{proposition}
 
 \begin{proof}
-(a) $\Rightarrow$ (b) The fact that $X$ is smooth implies that $X \mid U$ is smooth; and since the composition of differentiable maps is again differentiable, it follows that $dx_i \circ X \mid U$ is smooth. (Recall that the $dx_i$ are coordinate functions on $\pi^{-1}(U) \subset T(M)$, \eqref{eq:1.25:3}.) But \index{Coordinate functions on Euclidean space}
+	(a) $\Rightarrow$ (b) The fact that $X$ is smooth implies that $X \mid U$ is smooth; and since the composition of differentiable maps is again differentiable, it follows that $dx_i \circ X \mid U$ is smooth. (Recall that the $dx_i$ are coordinate functions on $\pi^{-1}(U) \subset T(M)$, \eqref{eq:1.25:3}.) But \index{Coordinate functions on Euclidean space}
 
-\[
-d x_{i}\circ X\mid U=a_{i}.
-\]
+	\[
+		d x_{i}\circ X\mid U=a_{i}.
+	\]
 
-Hence the  $ a_{i} $ are  $ C^{\infty} $ functions on U.
+	Hence the  $ a_{i} $ are  $ C^{\infty} $ functions on U.
 
-(b) $\Rightarrow$ (c) It suffices to prove that $X(f) \mid U \in C^{\infty}(U)$ where $(U, x_{1}, \ldots, x_{d})$ is an arbitrary coordinate system on $M$ for which $U \subset V$. But, by (b),
+	(b) $\Rightarrow$ (c) It suffices to prove that $X(f) \mid U \in C^{\infty}(U)$ where $(U, x_{1}, \ldots, x_{d})$ is an arbitrary coordinate system on $M$ for which $U \subset V$. But, by (b),
 
-\[
-X(f)\,|\,U=\sum_{i=1}^{d}a_{i}\frac{\partial f}{\partial x_{i}},
-\]
+	\[
+		X(f)\,|\,U=\sum_{i=1}^{d}a_{i}\frac{\partial f}{\partial x_{i}},
+	\]
 
-and the right-hand side is a  $ C^{\infty} $ function on U.
+	and the right-hand side is a  $ C^{\infty} $ function on U.
 
-(c) $\Rightarrow$ (a) To prove that $X$ is $C^{\infty}$, it suffices to prove that $X\mid U$ is $C^{\infty}$ where $(U, x_1, \ldots, x_d)$ is an arbitrary coordinate system on $M$. To prove that $X\mid U$ is $C^{\infty}$, we need only check that $X\mid U$ composed with the canonical coordinate functions $\eqref{eq:1.25:3}$ on $\pi^{-1}(U)$ are $C^{\infty}$ functions. Now, $x_i \circ \pi \circ X\mid U = x_i$ and $dx_i \circ X\mid U = X(x_i)$, all of which are $C^{\infty}$ functions on $U$.
+	(c) $\Rightarrow$ (a) To prove that $X$ is $C^{\infty}$, it suffices to prove that $X\mid U$ is $C^{\infty}$ where $(U, x_1, \ldots, x_d)$ is an arbitrary coordinate system on $M$. To prove that $X\mid U$ is $C^{\infty}$, we need only check that $X\mid U$ composed with the canonical coordinate functions $\eqref{eq:1.25:3}$ on $\pi^{-1}(U)$ are $C^{\infty}$ functions. Now, $x_i \circ \pi \circ X\mid U = x_i$ and $dx_i \circ X\mid U = X(x_i)$, all of which are $C^{\infty}$ functions on $U$.
 \end{proof}
 
 \warnernumber{44}
@@ -1652,34 +1683,34 @@ and the right-hand side is a  $ C^{\infty} $ function on U.
 If $X$ and $Y$ are smooth vector fields on $M$, we define a vector field  $ [X,Y] $ called the Lie bracket of X and Y by setting \index{Lie bracket}
 
 \begin{equation}
-\tag{1}\label{eq:1.44:1}
-[X,Y]_{m}(f)=X_{m}(Y f)-Y_{m}(X f).
+	\tag{1}\label{eq:1.44:1}
+	[X,Y]_{m}(f)=X_{m}(Y f)-Y_{m}(X f).
 \end{equation}
 
 \warnernumber{45}
 \begin{proposition}\label{thm:1.45}
-(a) [X,Y] is indeed a smooth vector field on M.
+	(a) [X,Y] is indeed a smooth vector field on M.
 
-(b) If $f, g \in C^{\infty}(M)$, then $[fX, gY] = fg[X, Y] + f(Xg)Y - g(Yf)X$.
+	(b) If $f, g \in C^{\infty}(M)$, then $[fX, gY] = fg[X, Y] + f(Xg)Y - g(Yf)X$.
 
-(c)  $ [X,Y] = -[Y,X] $.
+	(c)  $ [X,Y] = -[Y,X] $.
 
-(d)  $ [[X,Y],Z] + [[Y,Z],X] + [[Z,X],Y] = 0 $ for all smooth vector fields X, Y, and Z on M.
+	(d)  $ [[X,Y],Z] + [[Y,Z],X] + [[Z,X],Y] = 0 $ for all smooth vector fields X, Y, and Z on M.
 
-We leave the proof as an exercise. Part (d) is known as the Jacobi identity. A vector space with a bilinear operation satisfying (c) and (d) is called a Lie algebra. \index{Jacobi identity}
+	We leave the proof as an exercise. Part (d) is known as the Jacobi identity. A vector space with a bilinear operation satisfying (c) and (d) is called a Lie algebra. \index{Jacobi identity}
 
 \end{proposition}
 
 \warnernumber{46}
 \begin{definition}\label{thm:1.46}
-Let $X$ be a smooth vector field on $M$. A smooth curve $\sigma$ in $M$ is an integral curve of $X$ if
+	Let $X$ be a smooth vector field on $M$. A smooth curve $\sigma$ in $M$ is an integral curve of $X$ if
 
-\begin{equation}
-\tag{1}\label{eq:1.46:1}
-\dot{\sigma}(t)=X(\sigma(t))
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.46:1}
+		\dot{\sigma}(t)=X(\sigma(t))
+	\end{equation}
 
-for each $t$ in the domain of $\sigma$.
+	for each $t$ in the domain of $\sigma$.
 \end{definition}
 
 \warnernumber{47}
@@ -1689,291 +1720,291 @@ Let $X$ be a $C^\infty$ vector field on $M$, and let $m \in M$. Let us now consi
 A curve  $ \gamma $:  $ (a,b) \to M $ is an integral curve of X if and only if
 
 \begin{equation}
-\tag{1}\label{eq:1.47:1}
-d\gamma\left(\frac{d}{d r}\bigg|_{t}\right)=X\big(\gamma(t)\big)\qquad\big(t\in(a,b)\big).
+	\tag{1}\label{eq:1.47:1}
+	d\gamma\left(\frac{d}{d r}\bigg|_{t}\right)=X\big(\gamma(t)\big)\qquad\big(t\in(a,b)\big).
 \end{equation}
 
 Let us interpret this in coordinates. Suppose that  $ 0 \in (a,b) $ and  $ \gamma(0) = m $. Choose a coordinate system  $ (U,\varphi) $ with coordinate functions  $ x_1, \ldots, x_d $ about m. By \hyperref[thm:1.43]{1.43(b)},
 
 \begin{equation}
-\tag{2}\label{eq:1.47:2}
-X\mid U=\sum_{i=1}^{d}f_{i}\frac{\partial}{\partial x_{i}}
+	\tag{2}\label{eq:1.47:2}
+	X\mid U=\sum_{i=1}^{d}f_{i}\frac{\partial}{\partial x_{i}}
 \end{equation}
 
 where the $f_{i}$ are $C^{\infty}$ functions on $U$. Moreover, for each $t$ such that $\gamma(t) \in U$,
 
 \begin{equation}
-\tag{3}\label{eq:1.47:3}
-d\gamma\left(\frac{d}{d r}\bigg\vert_{t}\right)=\sum_{i=1}^{d}\frac{d(x_{i}\circ\gamma)}{d r}\bigg\vert_{t}\frac{\partial}{\partial x_{i}}\bigg\vert_{\gamma(t)}.
+	\tag{3}\label{eq:1.47:3}
+	d\gamma\left(\frac{d}{d r}\bigg\vert_{t}\right)=\sum_{i=1}^{d}\frac{d(x_{i}\circ\gamma)}{d r}\bigg\vert_{t}\frac{\partial}{\partial x_{i}}\bigg\vert_{\gamma(t)}.
 \end{equation}
 
 Thus, in view of (2) and (3), equation (1) becomes
 
 \begin{equation}
-\tag{4}\label{eq:1.47:4}
-\sum_{i=1}^{d}\frac{d(x_{i}\circ\gamma)}{d r}\bigg|_{t}\frac{\partial}{\partial x_{i}}\bigg|_{\gamma(t)}=\sum_{i=1}^{d}f_{i}(\gamma(t))\frac{\partial}{\partial x_{i}}\bigg|_{\gamma(t)}.
+	\tag{4}\label{eq:1.47:4}
+	\sum_{i=1}^{d}\frac{d(x_{i}\circ\gamma)}{d r}\bigg|_{t}\frac{\partial}{\partial x_{i}}\bigg|_{\gamma(t)}=\sum_{i=1}^{d}f_{i}(\gamma(t))\frac{\partial}{\partial x_{i}}\bigg|_{\gamma(t)}.
 \end{equation}
 
 Thus $\gamma$ is an integral curve of $X$ on $\gamma^{-1}(U)$ if and only if
 
 \[
-\left.\frac{d\gamma_{i}}{d r}\right|_{t}=f_{i}\circ\varphi^{-1}\big(\gamma_{1}(t),\ldots,\gamma_{d}(t)\big)\qquad\big(i=1,\ldots,d\quad\mathrm{and}\quad t\in\gamma^{-1}(U)\big),
+	\left.\frac{d\gamma_{i}}{d r}\right|_{t}=f_{i}\circ\varphi^{-1}\big(\gamma_{1}(t),\ldots,\gamma_{d}(t)\big)\qquad\big(i=1,\ldots,d\quad\mathrm{and}\quad t\in\gamma^{-1}(U)\big),
 \]
 
 where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ordinary differential equations for which there exist fundamental existence and uniqueness theorems [11]. These theorems, when translated into manifold terminology, give the following.
 
 \warnernumber{48}
 \begin{theorem}\label{thm:1.48}
-Let $X$ be a $C^\infty$ vector field on a differentiable manifold $M$. For each $m\in M$ there exists $a(m)$ and $b(m)$ in $\mathbb{R}\cup\{\pm\infty\}$, and a smooth curve
+	Let $X$ be a $C^\infty$ vector field on a differentiable manifold $M$. For each $m\in M$ there exists $a(m)$ and $b(m)$ in $\mathbb{R}\cup\{\pm\infty\}$, and a smooth curve
 
 
 
-\begin{equation}
-\tag{1}\label{eq:1.48:1}
-\gamma_{m}\colon\big(a(m),b(m)\big)\to M
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.48:1}
+		\gamma_{m}\colon\big(a(m),b(m)\big)\to M
+	\end{equation}
 
-such that
+	such that
 
-(a)  $ 0 \in (a(m), b(m)) $ and  $ \gamma_m(0) = m $.
+	(a)  $ 0 \in (a(m), b(m)) $ and  $ \gamma_m(0) = m $.
 
-(b)  $ \gamma_{m} $ is an integral curve of X.
+	(b)  $ \gamma_{m} $ is an integral curve of X.
 
-(c) If $\mu\colon(c,d)\to M$ is a smooth curve satisfying conditions (a) and (b), then $(c,d)\subset(a(m),b(m))$ and $\mu=\gamma_{m}\mid(c,d)$.
+	(c) If $\mu\colon(c,d)\to M$ is a smooth curve satisfying conditions (a) and (b), then $(c,d)\subset(a(m),b(m))$ and $\mu=\gamma_{m}\mid(c,d)$.
 
-We continue with the statement of the theorem after the following.
+	We continue with the statement of the theorem after the following.
 
-\medskip\noindent\textbf{Definition}\quad For each $t\in\mathbb{R}$, we define a transformation $X_{t}$ with domain
+	\medskip\noindent\textbf{Definition}\quad For each $t\in\mathbb{R}$, we define a transformation $X_{t}$ with domain
 
-\begin{equation}
-\tag{2}\label{eq:1.48:2}
-\mathcal{D}_{t}=\left\{m\in M\colon t\in\left(a(m),b(m)\right)\right\}
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.48:2}
+		\mathcal{D}_{t}=\left\{m\in M\colon t\in\left(a(m),b(m)\right)\right\}
+	\end{equation}
 
-by setting
-
-
-
-\begin{equation}
-\tag{3}\label{eq:1.48:3}
-X_{t}(m)=\gamma_{m}(t).
-\end{equation}
-
-(d) For each $m \in M$, there exists an open neighborhood $V$ of $m$ and an $\varepsilon > 0$ such that the map
+	by setting
 
 
 
-\begin{equation}
-\tag{4}\label{eq:1.48:4}
-(t,p)\mapsto X_{t}(p)
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.48:3}
+		X_{t}(m)=\gamma_{m}(t).
+	\end{equation}
 
-is defined and is  $ C^{\infty} $ from  $ (-\varepsilon,\varepsilon) \times V $ into M.
-
-(e) $\mathcal{D}_{t}$ is open for each $t$.
-
-(f) $\bigcup_{t>0} \mathcal{D}_{t} = M$.
-
-(g)  $ X_{t}\colon \mathcal{D}_{t} \to \mathcal{D}_{-t} $ is a diffeomorphism with inverse  $ X_{-t} $.
-
-(h) Let $s$ and $t$ be real numbers. Then the domain of $X_{s} \circ X_{t}$ is contained in but generally not equal to $\mathcal{D}_{s+t}$. However, the domain of $X_{s} \circ X_{t}$ is $\mathcal{D}_{s+t}$ in the case in which $s$ and $t$ both have the same sign. Moreover, on the domain of $X_{s} \circ X_{t}$ we have
+	(d) For each $m \in M$, there exists an open neighborhood $V$ of $m$ and an $\varepsilon > 0$ such that the map
 
 
 
-\begin{equation}
-\tag{5}\label{eq:1.48:5}
-X_{s}\circ X_{t}=X_{s+t}.
-\end{equation}
+	\begin{equation}
+		\tag{4}\label{eq:1.48:4}
+		(t,p)\mapsto X_{t}(p)
+	\end{equation}
+
+	is defined and is  $ C^{\infty} $ from  $ (-\varepsilon,\varepsilon) \times V $ into M.
+
+	(e) $\mathcal{D}_{t}$ is open for each $t$.
+
+	(f) $\bigcup_{t>0} \mathcal{D}_{t} = M$.
+
+	(g)  $ X_{t}\colon \mathcal{D}_{t} \to \mathcal{D}_{-t} $ is a diffeomorphism with inverse  $ X_{-t} $.
+
+	(h) Let $s$ and $t$ be real numbers. Then the domain of $X_{s} \circ X_{t}$ is contained in but generally not equal to $\mathcal{D}_{s+t}$. However, the domain of $X_{s} \circ X_{t}$ is $\mathcal{D}_{s+t}$ in the case in which $s$ and $t$ both have the same sign. Moreover, on the domain of $X_{s} \circ X_{t}$ we have
+
+
+
+	\begin{equation}
+		\tag{5}\label{eq:1.48:5}
+		X_{s}\circ X_{t}=X_{s+t}.
+	\end{equation}
 
 \end{theorem}
 
 \begin{proof}
-We let $(a(m),b(m))$ be the union of all the open intervals which contain the origin and which are domains of integral curves of $X$ satisfying the initial condition that the origin maps to $m$. That $(a(m),b(m)) \neq \varnothing$ (and hence part (f) holds) follows from an application of the fundamental existence theorem [11, THEOREM 4, p. 28] to the system \hyperref[thm:1.47]{1.47(5)}. Now if $\alpha$ and $\beta$ are integral curves of $X$ with domains the open intervals $A$ and $B$ (with $A \cap B \neq \varnothing$), and if $\alpha$ and $\beta$ have the same initial conditions $\alpha(t_0) = \beta(t_0)$ at some point $t_0 \in A \cap B$, then the subset of $A \cap B$ on which $\alpha$ and $\beta$ agree is nonempty, open by the basic uniqueness theorem [11, THEOREM 3, p. 28], and closed by continuity; and hence this subset is equal to $A \cap B$ by the connectedness of $A \cap B$. It follows that there exists a curve $\gamma_m$ defined on $(a(m), b(m))$ and satisfying parts (a), (b), and (c).
+	We let $(a(m),b(m))$ be the union of all the open intervals which contain the origin and which are domains of integral curves of $X$ satisfying the initial condition that the origin maps to $m$. That $(a(m),b(m)) \neq \varnothing$ (and hence part (f) holds) follows from an application of the fundamental existence theorem [11, THEOREM 4, p. 28] to the system \hyperref[thm:1.47]{1.47(5)}. Now if $\alpha$ and $\beta$ are integral curves of $X$ with domains the open intervals $A$ and $B$ (with $A \cap B \neq \varnothing$), and if $\alpha$ and $\beta$ have the same initial conditions $\alpha(t_0) = \beta(t_0)$ at some point $t_0 \in A \cap B$, then the subset of $A \cap B$ on which $\alpha$ and $\beta$ agree is nonempty, open by the basic uniqueness theorem [11, THEOREM 3, p. 28], and closed by continuity; and hence this subset is equal to $A \cap B$ by the connectedness of $A \cap B$. It follows that there exists a curve $\gamma_m$ defined on $(a(m), b(m))$ and satisfying parts (a), (b), and (c).
 
-The existence of an $\varepsilon>0$ and a neighborhood $V$ of $m$ such that the map (4) is defined on $(-\varepsilon,\varepsilon)\times V$ is the content of THEOREM 7 on p. 29 of [11]. That the map (4) is smooth (and hence part (d) holds) follows from THEOREM 9 on p. 29 of [11] on the differentiability of the solutions of \hyperref[thm:1.47]{1.47(5)} with respect to their initial values.
+	The existence of an $\varepsilon>0$ and a neighborhood $V$ of $m$ such that the map (4) is defined on $(-\varepsilon,\varepsilon)\times V$ is the content of THEOREM 7 on p. 29 of [11]. That the map (4) is smooth (and hence part (d) holds) follows from THEOREM 9 on p. 29 of [11] on the differentiability of the solutions of \hyperref[thm:1.47]{1.47(5)} with respect to their initial values.
 
-Next we prove part (h). Let  $ t \in (a(m), b(m)) $. Then  $ s \mapsto \gamma_m(t + s) $ is an integral curve of X with the initial condition  $ 0 \mapsto \gamma_m(t) $ and with maximal domain  $ (a(m) - t, b(m) - t) $. It follows from part (c) that
+	Next we prove part (h). Let  $ t \in (a(m), b(m)) $. Then  $ s \mapsto \gamma_m(t + s) $ is an integral curve of X with the initial condition  $ 0 \mapsto \gamma_m(t) $ and with maximal domain  $ (a(m) - t, b(m) - t) $. It follows from part (c) that
 
-\begin{equation}
-\tag{6}\label{eq:1.48:6}
-(a(m)-t,b(m)-t)=\bigl(a\bigl(\gamma_{m}(t)\bigr),b\bigl(\gamma_{m}(t)\bigr)\bigr),
-\end{equation}
+	\begin{equation}
+		\tag{6}\label{eq:1.48:6}
+		(a(m)-t,b(m)-t)=\bigl(a\bigl(\gamma_{m}(t)\bigr),b\bigl(\gamma_{m}(t)\bigr)\bigr),
+	\end{equation}
 
-and for s in the interval (6),
+	and for s in the interval (6),
 
-\begin{equation}
-\tag{7}\label{eq:1.48:7}
-\gamma_{\gamma_{m}(t)}(s)=\gamma_{m}(t+s).
-\end{equation}
+	\begin{equation}
+		\tag{7}\label{eq:1.48:7}
+		\gamma_{\gamma_{m}(t)}(s)=\gamma_{m}(t+s).
+	\end{equation}
 
-Now let $m$ belong to the domain of $X_s \circ X_t$. Then $t \in (a(m), b(m))$ and $s \in (a(\gamma_m(t)), b(\gamma_m(t)))$, so by (6), $s + t \in (a(m), b(m))$. Thus $m \in \mathcal{D}_{s+t}$, and (5) follows from (7). It is easy to construct examples to show that the domain of $X_s \circ X_t$ is generally not equal to $\mathcal{D}_{s+t}$. (Consider, for example, the vector field $\partial/\partial r_1$ on $\mathbb{R}^{2} - \{0\}$ with $s = -1$ and $t = 1$.) If, however, $s$ and $t$ both have the same sign, and if $m \in \mathcal{D}_{s+t}$, that is, if $s + t \in (a(m), b(m))$, then it follows that $t \in (a(m), b(m))$ and, by (6), $s \in (a(\gamma_m(t)), b(\gamma_m(t)))$; hence $m$ is in the domain of $X_s \circ X_t$.
+	Now let $m$ belong to the domain of $X_s \circ X_t$. Then $t \in (a(m), b(m))$ and $s \in (a(\gamma_m(t)), b(\gamma_m(t)))$, so by (6), $s + t \in (a(m), b(m))$. Thus $m \in \mathcal{D}_{s+t}$, and (5) follows from (7). It is easy to construct examples to show that the domain of $X_s \circ X_t$ is generally not equal to $\mathcal{D}_{s+t}$. (Consider, for example, the vector field $\partial/\partial r_1$ on $\mathbb{R}^{2} - \{0\}$ with $s = -1$ and $t = 1$.) If, however, $s$ and $t$ both have the same sign, and if $m \in \mathcal{D}_{s+t}$, that is, if $s + t \in (a(m), b(m))$, then it follows that $t \in (a(m), b(m))$ and, by (6), $s \in (a(\gamma_m(t)), b(\gamma_m(t)))$; hence $m$ is in the domain of $X_s \circ X_t$.
 
-Parts (e) and (g) are trivial if $t=0$, so assume that $t>0$ and that $m\in\mathcal{D}_t$. (A similar argument will prove (e) and (g) if $t<0$.) It follows from part (d) and the compactness of $[0,t]$ that there exists a neighborhood $W$ of $\gamma_m([0,t]]$ and an $\varepsilon>0$ such that the map (4) is defined and $C^\infty$ on $(-\varepsilon,\varepsilon)\times W$. Choose a positive integer $n$ large enough so that $t/n\in(-\varepsilon,\varepsilon)$. Let $\alpha_1=X_{t/n}\mid W$, and let $W_1=\alpha_1^{-1}(W)$. Then for $i=2,\ldots,n$ we inductively define
+	Parts (e) and (g) are trivial if $t=0$, so assume that $t>0$ and that $m\in\mathcal{D}_t$. (A similar argument will prove (e) and (g) if $t<0$.) It follows from part (d) and the compactness of $[0,t]$ that there exists a neighborhood $W$ of $\gamma_m([0,t]]$ and an $\varepsilon>0$ such that the map (4) is defined and $C^\infty$ on $(-\varepsilon,\varepsilon)\times W$. Choose a positive integer $n$ large enough so that $t/n\in(-\varepsilon,\varepsilon)$. Let $\alpha_1=X_{t/n}\mid W$, and let $W_1=\alpha_1^{-1}(W)$. Then for $i=2,\ldots,n$ we inductively define
 
-\[
-\alpha_{i}=X_{t/n}\mid W_{i-1}
-\]
+	\[
+		\alpha_{i}=X_{t/n}\mid W_{i-1}
+	\]
 
-and
+	and
 
-\[
-W_{i}=\alpha_{i}^{-1}(W_{i-1}).
-\]
+	\[
+		W_{i}=\alpha_{i}^{-1}(W_{i-1}).
+	\]
 
-$\alpha_{i}$ is a $C^{\infty}$ map on the open set $W_{i-1} \subset W$. It follows that $W_{n}$ is an open subset of $W$, that $W_{n}$ contains $m$ (since if $X_{t/n}$ composed with itself $n$ times is applied to $m$, we obtain $\gamma_{m}(t)$, which lies in $W$), and that by part (h),
+	$\alpha_{i}$ is a $C^{\infty}$ map on the open set $W_{i-1} \subset W$. It follows that $W_{n}$ is an open subset of $W$, that $W_{n}$ contains $m$ (since if $X_{t/n}$ composed with itself $n$ times is applied to $m$, we obtain $\gamma_{m}(t)$, which lies in $W$), and that by part (h),
 
-\begin{equation}
-\tag{8}\label{eq:1.48:8}
-\alpha_{1}\circ\alpha_{2}\circ\cdots\circ\alpha_{n}\mid W_{n}=X_{t}\mid W_{n}.
-\end{equation}
+	\begin{equation}
+		\tag{8}\label{eq:1.48:8}
+		\alpha_{1}\circ\alpha_{2}\circ\cdots\circ\alpha_{n}\mid W_{n}=X_{t}\mid W_{n}.
+	\end{equation}
 
-Consequently, $W_{n} \subset \mathcal{D}_{t}$; hence $\mathcal{D}_{t}$ is open, which proves part (e).
+	Consequently, $W_{n} \subset \mathcal{D}_{t}$; hence $\mathcal{D}_{t}$ is open, which proves part (e).
 
-Finally, $X_{t}$ is a 1:1 map of $\mathcal{D}_{t}$ onto $\mathcal{D}_{-t}$ with inverse $X_{-t}$. That $X_{t}$ is $C^{\infty}$ (similarly for $X_{-t}$) follows from (8), which locally expresses $X_{t}$ as a composition of $C^{\infty}$ maps. Hence $X_{t}$ is a diffeomorphism from $\mathcal{D}_{t}$ to $\mathcal{D}_{-t}$, which proves part (g) and finishes \hyperref[thm:1.48]{Theorem 1.48}.
+	Finally, $X_{t}$ is a 1:1 map of $\mathcal{D}_{t}$ onto $\mathcal{D}_{-t}$ with inverse $X_{-t}$. That $X_{t}$ is $C^{\infty}$ (similarly for $X_{-t}$) follows from (8), which locally expresses $X_{t}$ as a composition of $C^{\infty}$ maps. Hence $X_{t}$ is a diffeomorphism from $\mathcal{D}_{t}$ to $\mathcal{D}_{-t}$, which proves part (g) and finishes \hyperref[thm:1.48]{Theorem 1.48}.
 
 \end{proof}
 
 \warnernumber{49}
 \begin{definition}\label{thm:1.49}
-A smooth vector field $X$ on $M$ is complete if $\mathcal{D}_t = M$ for all $t$ (that is, the domain of $\gamma_m$ is $(-\infty, \infty)$ for each $m \in M$). In this case, the transformations $X_t$ form a group of transformations of $M$ parametrized by the real numbers called the 1-parameter group of $X$. If $X$ is not complete, the transformations $X_t$ do not form a group since their domains depend on $t$. In this case, we shall refer to the collection of transformations $X_t$ as the local 1-parameter group of $X$. \index{Local 1-parameter group of a vector field}
+	A smooth vector field $X$ on $M$ is complete if $\mathcal{D}_t = M$ for all $t$ (that is, the domain of $\gamma_m$ is $(-\infty, \infty)$ for each $m \in M$). In this case, the transformations $X_t$ form a group of transformations of $M$ parametrized by the real numbers called the 1-parameter group of $X$. If $X$ is not complete, the transformations $X_t$ do not form a group since their domains depend on $t$. In this case, we shall refer to the collection of transformations $X_t$ as the local 1-parameter group of $X$. \index{Local 1-parameter group of a vector field}
 
 \end{definition}
 
 \warnernumber{50}
 \begin{remarks}\label{thm:1.50}
-A simple example of a non-complete vector field is obtained by considering the vector field $\partial/\partial r_{1}$ on the plane with the origin removed. If $a>0$, the domain of the maximal integral curve through $(a,0)$ is $(-a,+\infty)$. In the case in which the manifold $M$ is compact, any $C^{\infty}$ vector field on $M$ is complete. We leave the proof as an exercise.
+	A simple example of a non-complete vector field is obtained by considering the vector field $\partial/\partial r_{1}$ on the plane with the origin removed. If $a>0$, the domain of the maximal integral curve through $(a,0)$ is $(-a,+\infty)$. In the case in which the manifold $M$ is compact, any $C^{\infty}$ vector field on $M$ is complete. We leave the proof as an exercise.
 
 \end{remarks}
 
 \warnernumber{51}
 \begin{definition}\label{thm:1.51}
-Let $\psi: M \to N$ be $C^\infty$. A smooth vector field $X$ along $\psi$ (that is, $X \in C^\infty(M, T(N))$ and $\pi \circ X = \psi$) has local $C^\infty$ extensions in $N$ if given $m \in M$ there exist a neighborhood $U$ of $m$ and a neighborhood $V$ of $\psi(m)$ such that $\psi(U) \subset V$, and there also exists a $C^\infty$ vector field $\tilde{X}$ on $V$ such that
+	Let $\psi: M \to N$ be $C^\infty$. A smooth vector field $X$ along $\psi$ (that is, $X \in C^\infty(M, T(N))$ and $\pi \circ X = \psi$) has local $C^\infty$ extensions in $N$ if given $m \in M$ there exist a neighborhood $U$ of $m$ and a neighborhood $V$ of $\psi(m)$ such that $\psi(U) \subset V$, and there also exists a $C^\infty$ vector field $\tilde{X}$ on $V$ such that
 
-\begin{equation}
-\tag{1}\label{eq:1.51:1}
-\tilde{X}\circ\psi\mid U=X\mid U.
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.51:1}
+		\tilde{X}\circ\psi\mid U=X\mid U.
+	\end{equation}
 
 \end{definition}
 
 \warnernumber{52}
 \begin{remarks}\label{thm:1.52}
-It is easy to prove that a $C^{\infty}$ vector field $X$ along an immersion $\psi: M \to N$ always has local $C^{\infty}$ extensions in $N$. However, if $\psi$ is not an immersion, such extensions generally do not exist. Consider the following example. We shall first define a smooth vector field $X$ along a smooth curve $\alpha: \mathbb{R} \to \mathbb{R}$ in the real line. Let
+	It is easy to prove that a $C^{\infty}$ vector field $X$ along an immersion $\psi: M \to N$ always has local $C^{\infty}$ extensions in $N$. However, if $\psi$ is not an immersion, such extensions generally do not exist. Consider the following example. We shall first define a smooth vector field $X$ along a smooth curve $\alpha: \mathbb{R} \to \mathbb{R}$ in the real line. Let
 
-\begin{equation}
-\tag{1}\label{eq:1.52:1}
-\alpha(t)=t^{3},
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.52:1}
+		\alpha(t)=t^{3},
+	\end{equation}
 
-(that is,  $ \alpha = r^{3} $ where r is the canonical coordinate function on  $ \mathbb{R} $), and let
+	(that is,  $ \alpha = r^{3} $ where r is the canonical coordinate function on  $ \mathbb{R} $), and let
 
-\begin{equation}
-\tag{2}\label{eq:1.52:2}
-X(t)=\dot{\alpha}(t)=d\alpha\left(\frac{d}{d r}\bigg|_{t}\right).
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.52:2}
+		X(t)=\dot{\alpha}(t)=d\alpha\left(\frac{d}{d r}\bigg|_{t}\right).
+	\end{equation}
 
-\begin{center}
-\redrawn{figure-15}
-\end{center}
+	\begin{center}
+		\redrawn{figure-15}
+	\end{center}
 
-Since $\alpha$ is a homeomorphism, there is induced a vector field $\tilde{X}$ on $\mathbb{R}^{1}$ so that the above diagram commutes. Now, $X$ is a smooth vector field along $\alpha$, but $\tilde{X}$ is not a smooth vector field on $\mathbb{R}^{1}$. To show this, let $u = t^{3}$. Then
+	Since $\alpha$ is a homeomorphism, there is induced a vector field $\tilde{X}$ on $\mathbb{R}^{1}$ so that the above diagram commutes. Now, $X$ is a smooth vector field along $\alpha$, but $\tilde{X}$ is not a smooth vector field on $\mathbb{R}^{1}$. To show this, let $u = t^{3}$. Then
 
-\begin{equation}
-\tag{3}\label{eq:1.52:3}
-\begin{aligned}{\tilde{X}_{u}}&{{}=\tilde{X}_{\alpha(t)}=X(t)=d\alpha\bigg(\frac{d}{d r}\bigg|_{t}\bigg)}\\ {}&{{}=\frac{d\alpha}{d r}\bigg|_{t}\frac{d}{d r}\bigg|_{\alpha(t)}=3t^{2}\frac{d}{d r}\bigg|_{\alpha(t)}=3u^{2/3}\frac{d}{d r}\bigg|_{u}.}\\ \end{aligned}
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.52:3}
+		\begin{aligned}{\tilde{X}_{u}}&{{}=\tilde{X}_{\alpha(t)}=X(t)=d\alpha\bigg(\frac{d}{d r}\bigg|_{t}\bigg)}\\ {}&{{}=\frac{d\alpha}{d r}\bigg|_{t}\frac{d}{d r}\bigg|_{\alpha(t)}=3t^{2}\frac{d}{d r}\bigg|_{\alpha(t)}=3u^{2/3}\frac{d}{d r}\bigg|_{u}.}\\ \end{aligned}
+	\end{equation}
 
-Thus
+	Thus
 
-\begin{equation}
-\tag{4}\label{eq:1.52:4}
-\tilde{X}=3r^{2/3}\frac{d}{d r},
-\end{equation}
+	\begin{equation}
+		\tag{4}\label{eq:1.52:4}
+		\tilde{X}=3r^{2/3}\frac{d}{d r},
+	\end{equation}
 
-and the function  $ r^{2/3} $ is not differentiable at the origin. If we extend  $ \alpha $ to be a mapping into the plane by setting
+	and the function  $ r^{2/3} $ is not differentiable at the origin. If we extend  $ \alpha $ to be a mapping into the plane by setting
 
-\begin{equation}
-\tag{5}\label{eq:1.52:5}
-\alpha(t)=(t^{3},0),
-\end{equation}
+	\begin{equation}
+		\tag{5}\label{eq:1.52:5}
+		\alpha(t)=(t^{3},0),
+	\end{equation}
 
-and again we let $X(t)=\dot{\alpha}(t)$, then $X$ is a smooth vector field along the one-to-one $C^{\infty}$ curve $\alpha$ in the plane, which admits no local $C^{\infty}$ extension to a neighborhood of $(0,0)$.
+	and again we let $X(t)=\dot{\alpha}(t)$, then $X$ is a smooth vector field along the one-to-one $C^{\infty}$ curve $\alpha$ in the plane, which admits no local $C^{\infty}$ extension to a neighborhood of $(0,0)$.
 
 \end{remarks}
 
 \warnernumber{53}
 \begin{proposition}\label{thm:1.53}
-Let $m \in M^{d}$, and let $X$ be a smooth vector field on $M$ such that $X(m) \neq 0$. Then there exists a coordinate system $(U, \varphi)$ with coordinate functions $x_{1}, \ldots, x_{d}$ on a neighborhood of $m$ such that
+	Let $m \in M^{d}$, and let $X$ be a smooth vector field on $M$ such that $X(m) \neq 0$. Then there exists a coordinate system $(U, \varphi)$ with coordinate functions $x_{1}, \ldots, x_{d}$ on a neighborhood of $m$ such that
 
-\begin{equation}
-\tag{1}\label{eq:1.53:1}
-X\mid U=\frac{\partial}{\partial x_{1}}\mid U.
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.53:1}
+		X\mid U=\frac{\partial}{\partial x_{1}}\mid U.
+	\end{equation}
 
 \end{proposition}
 
 \begin{proof}
-Choose a coordinate system $(V,\tau)$ centered at $m$ with coordinate functions $y_{1},\ldots,y_{d}$, such that
+	Choose a coordinate system $(V,\tau)$ centered at $m$ with coordinate functions $y_{1},\ldots,y_{d}$, such that
 
-\begin{equation}
-\tag{2}\label{eq:1.53:2}
-X_{m}=\frac{\partial}{\partial y_{1}}\Big|_{m}.
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.53:2}
+		X_{m}=\frac{\partial}{\partial y_{1}}\Big|_{m}.
+	\end{equation}
 
-It follows from \hyperref[thm:1.48]{1.48(d)} that there exists an $\varepsilon>0$ and a neighborhood $W$ of the origin in $\mathbb{R}^{d-1}$ such that the map
+	It follows from \hyperref[thm:1.48]{1.48(d)} that there exists an $\varepsilon>0$ and a neighborhood $W$ of the origin in $\mathbb{R}^{d-1}$ such that the map
 
-\[
-\sigma(t,a_{2},\ldots,a_{d})=X_{t}\big(\tau^{-1}(0,a_{2},\ldots,a_{d})\big)
-\]
+	\[
+		\sigma(t,a_{2},\ldots,a_{d})=X_{t}\big(\tau^{-1}(0,a_{2},\ldots,a_{d})\big)
+	\]
 
-is well-defined and smooth for $(t, a_{2}, \ldots, a_{d}) \in (-\varepsilon, \varepsilon) \times W \subset \mathbb{R}^{d}$.
+	is well-defined and smooth for $(t, a_{2}, \ldots, a_{d}) \in (-\varepsilon, \varepsilon) \times W \subset \mathbb{R}^{d}$.
 
-Now,  $ \sigma $ is non-singular at the origin since
+	Now,  $ \sigma $ is non-singular at the origin since
 
-\[
-d\sigma\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{0}\bigg)=X_{m}=\frac{\partial}{\partial y_{1}}\bigg|_{m}\quad\mathrm{and}\quad d\sigma\bigg(\frac{\partial}{\partial r_{i}}\bigg|_{0}\bigg)=\frac{\partial}{\partial y_{i}}\bigg|_{m}\qquad(i\geq2).
-\]
+	\[
+		d\sigma\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{0}\bigg)=X_{m}=\frac{\partial}{\partial y_{1}}\bigg|_{m}\quad\mathrm{and}\quad d\sigma\bigg(\frac{\partial}{\partial r_{i}}\bigg|_{0}\bigg)=\frac{\partial}{\partial y_{i}}\bigg|_{m}\qquad(i\geq2).
+	\]
 
-Thus by Corollary (a) of 1.30,  $ \varphi = \sigma^{-1} $ is a coordinate map on some neighborhood U of m. Let  $ x_1, \ldots, x_d $ denote the coordinate functions of the coordinate system  $ (U, \varphi) $. Then since
+	Thus by Corollary (a) of 1.30,  $ \varphi = \sigma^{-1} $ is a coordinate map on some neighborhood U of m. Let  $ x_1, \ldots, x_d $ denote the coordinate functions of the coordinate system  $ (U, \varphi) $. Then since
 
-\[
-d\sigma\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{(t,a_{2},\ldots,a_{d})}\bigg)=X_{\sigma(t,a_{2},\ldots,a_{d})}\;,
-\]
+	\[
+		d\sigma\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{(t,a_{2},\ldots,a_{d})}\bigg)=X_{\sigma(t,a_{2},\ldots,a_{d})}\;,
+	\]
 
-we have
+	we have
 
-\[
-X\mid U=\frac{\partial}{\partial x_{1}}\mid U.
-\qedhere
-\]
+	\[
+		X\mid U=\frac{\partial}{\partial x_{1}}\mid U.
+		\qedhere
+	\]
 \end{proof}
 
 \warnernumber{54}
 \begin{definition}\label{thm:1.54}
-Let  $ \varphi: M \to N $ be  $ C^\infty $. Smooth vector fields X on M and Y on N are called  $ \varphi $-related if  $ d\varphi \circ X = Y \circ \varphi $.
+	Let  $ \varphi: M \to N $ be  $ C^\infty $. Smooth vector fields X on M and Y on N are called  $ \varphi $-related if  $ d\varphi \circ X = Y \circ \varphi $.
 
 \end{definition}
 
 \warnernumber{55}
 \begin{proposition}\label{thm:1.55}
-Let $\varphi: M \to N$ be $C^\infty$. Let $X$ and $X_1$ be smooth vector fields on $M$, and let $Y$ and $Y_1$ be smooth vector fields on $N$. If $X$ is $\varphi$-related to $Y$, and if $X_1$ is $\varphi$-related to $Y_1$, then $[X, X_1]$ is $\varphi$-related to $[Y, Y_1]$.
+	Let $\varphi: M \to N$ be $C^\infty$. Let $X$ and $X_1$ be smooth vector fields on $M$, and let $Y$ and $Y_1$ be smooth vector fields on $N$. If $X$ is $\varphi$-related to $Y$, and if $X_1$ is $\varphi$-related to $Y_1$, then $[X, X_1]$ is $\varphi$-related to $[Y, Y_1]$.
 
 \end{proposition}
 
 \begin{proof}
-We must show that $d\varphi \circ [X, X_1] = [Y, Y_1] \circ \varphi$. For this, let  $ m \in M $ and  $f \in C^{\infty}(N)$. Then we must show that
+	We must show that $d\varphi \circ [X, X_1] = [Y, Y_1] \circ \varphi$. For this, let  $ m \in M $ and  $f \in C^{\infty}(N)$. Then we must show that
 
-\begin{equation}
-\tag{1}\label{eq:1.55:1}
-d\varphi([X,X_{1}]_{m})(f)=[Y,Y_{1}]_{\varphi(m)}(f).
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.55:1}
+		d\varphi([X,X_{1}]_{m})(f)=[Y,Y_{1}]_{\varphi(m)}(f).
+	\end{equation}
 
-We simply unwind the definitions:
+	We simply unwind the definitions:
 
-\[
-\begin{aligned}{d\varphi([X,X_{1}]_{m})(f)}&{{}=[X,X_{1}]_{m}(f\circ\varphi)}\\ {}&{{}=X_{m}\big(X_{1}(f\circ\varphi)\big)-X_{1}\big|_{m}\left(X(f\circ\varphi)\right)}\\ {}&{{}=X_{m}\big((d\varphi\circ X_{1})(f)\big)-X_{1}\big|_{m}\left((d\varphi\circ X)(f)\right)}\\ {}&{{}=X_{m}\big(Y_{1}(f)\circ\varphi\big)-X_{1}\big|_{m}\big(Y(f)\circ\varphi\big)}\\ {}&{{}=d\varphi(X_{m})\big(Y_{1}(f)\big)-d\varphi(X_{1}|_{m})\big(Y(f)\big)}\\ {}&{{}=Y_{\varphi(m)}\big(Y_{1}(f)\big)-Y_{1}\big|_{\varphi(m)}\left(Y(f)\right)}\\ {}&{{}=[Y,Y_{1}]_{\varphi(m)}(f).}\\ \end{aligned}
-\qedhere
-\]
+	\[
+		\begin{aligned}{d\varphi([X,X_{1}]_{m})(f)}&{{}=[X,X_{1}]_{m}(f\circ\varphi)}\\ {}&{{}=X_{m}\big(X_{1}(f\circ\varphi)\big)-X_{1}\big|_{m}\left(X(f\circ\varphi)\right)}\\ {}&{{}=X_{m}\big((d\varphi\circ X_{1})(f)\big)-X_{1}\big|_{m}\left((d\varphi\circ X)(f)\right)}\\ {}&{{}=X_{m}\big(Y_{1}(f)\circ\varphi\big)-X_{1}\big|_{m}\big(Y(f)\circ\varphi\big)}\\ {}&{{}=d\varphi(X_{m})\big(Y_{1}(f)\big)-d\varphi(X_{1}|_{m})\big(Y(f)\big)}\\ {}&{{}=Y_{\varphi(m)}\big(Y_{1}(f)\big)-Y_{1}\big|_{\varphi(m)}\left(Y(f)\right)}\\ {}&{{}=[Y,Y_{1}]_{\varphi(m)}(f).}\\ \end{aligned}
+		\qedhere
+	\]
 \end{proof}
 
 \section{Distributions and the Frobenius Theorem}
@@ -1981,441 +2012,441 @@ We simply unwind the definitions:
 
 \warnernumber{56}
 \begin{definition}\label{thm:1.56}
-Let $c$ be an integer, $1 \leq c \leq d$. A $c$-dimensional distribution $\mathcal{D}$ on a $d$-dimensional manifold $M$ is a choice of a $c$-dimensional subspace $\mathcal{D}(m)$ of $M_m$ for each $m$ in $M$. $\mathcal{D}$ is smooth if for each $m$ in $M$ there is a neighborhood $U$ of $m$ and there are $c$ vector fields $X_1, \ldots, X_c$ of class $C^\infty$ on $U$ which span $\mathcal{D}$ at each point of $U$. A vector field $X$ on $M$ is said to belong to (or lie in) the distribution $\mathcal{D}(X \in \mathcal{D})$ if $X_m \in \mathcal{D}(m)$ for each \index{Distributions}\index{Frobenius theorem}
+	Let $c$ be an integer, $1 \leq c \leq d$. A $c$-dimensional distribution $\mathcal{D}$ on a $d$-dimensional manifold $M$ is a choice of a $c$-dimensional subspace $\mathcal{D}(m)$ of $M_m$ for each $m$ in $M$. $\mathcal{D}$ is smooth if for each $m$ in $M$ there is a neighborhood $U$ of $m$ and there are $c$ vector fields $X_1, \ldots, X_c$ of class $C^\infty$ on $U$ which span $\mathcal{D}$ at each point of $U$. A vector field $X$ on $M$ is said to belong to (or lie in) the distribution $\mathcal{D}(X \in \mathcal{D})$ if $X_m \in \mathcal{D}(m)$ for each \index{Distributions}\index{Frobenius theorem}
 
-$ m \in M $. A smooth distribution  $ \mathcal{D} $ is called involutive (or completely integrable) if  $ [X, Y] \in \mathcal{D} $ whenever  $ X $ and  $ Y $ are smooth vector fields lying in  $ \mathcal{D} $.
+	$ m \in M $. A smooth distribution  $ \mathcal{D} $ is called involutive (or completely integrable) if  $ [X, Y] \in \mathcal{D} $ whenever  $ X $ and  $ Y $ are smooth vector fields lying in  $ \mathcal{D} $.
 
 \end{definition}
 
 \warnernumber{57}
 \begin{definition}\label{thm:1.57}
-A submanifold $(N,\psi)$ of $M$ is an integral manifold of a distribution $\mathcal{D}$ on $M$ if \index{Integral manifold}
+	A submanifold $(N,\psi)$ of $M$ is an integral manifold of a distribution $\mathcal{D}$ on $M$ if \index{Integral manifold}
 
-\begin{equation}
-\tag{1}\label{eq:1.57:1}
-d\psi(N_{n})=\mathcal{D}\big(\psi(n)\big)\qquad\text{for each }n\in N.
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.57:1}
+		d\psi(N_{n})=\mathcal{D}\big(\psi(n)\big)\qquad\text{for each }n\in N.
+	\end{equation}
 
 \end{definition}
 
 \warnernumber{58}
 \begin{remarks}\label{thm:1.58}
-Our object in this section is to prove that a necessary and sufficient condition for there to exist integral manifolds of $\mathcal{D}$ through each point of $M$ is that $\mathcal{D}$ be involutive. Perhaps a word of explanation is in order about the expression “completely integrable” sometimes used in place of “involutive.” We have required integral manifolds to be submanifolds whose tangent spaces coincide with the subspaces determined by the distribution. One could define a weaker notion of integral manifold by requiring only that the tangent spaces of the submanifold be contained in but not necessarily equal to the distribution at each point. It is possible for a distribution $\mathcal{D}$ to be “integrable” in the sense that it has low-dimensional “integral manifolds,” but not completely integrable in the sense that $\mathcal{D}$ does not have integral manifolds of the maximal dimension. For us, unless specified otherwise, integral manifolds of distributions will always be taken to mean integral manifolds of maximal dimension, that is, as defined in 1.57.
+	Our object in this section is to prove that a necessary and sufficient condition for there to exist integral manifolds of $\mathcal{D}$ through each point of $M$ is that $\mathcal{D}$ be involutive. Perhaps a word of explanation is in order about the expression “completely integrable” sometimes used in place of “involutive.” We have required integral manifolds to be submanifolds whose tangent spaces coincide with the subspaces determined by the distribution. One could define a weaker notion of integral manifold by requiring only that the tangent spaces of the submanifold be contained in but not necessarily equal to the distribution at each point. It is possible for a distribution $\mathcal{D}$ to be “integrable” in the sense that it has low-dimensional “integral manifolds,” but not completely integrable in the sense that $\mathcal{D}$ does not have integral manifolds of the maximal dimension. For us, unless specified otherwise, integral manifolds of distributions will always be taken to mean integral manifolds of maximal dimension, that is, as defined in 1.57.
 
 \end{remarks}
 
 \warnernumber{59}
 \begin{proposition}\label{thm:1.59}
-Let $\mathcal{D}$ be a smooth distribution on $M$ such that through each point of $M$ there passes an integral manifold of $\mathcal{D}$. Then $\mathcal{D}$ is involutive.
+	Let $\mathcal{D}$ be a smooth distribution on $M$ such that through each point of $M$ there passes an integral manifold of $\mathcal{D}$. Then $\mathcal{D}$ is involutive.
 
 \end{proposition}
 
 \begin{proof}
-Let $X$ and $Y$ be smooth vector fields lying in $\mathcal{D}$, and let $m \in M$. We must prove that $[X, Y]_{m} \in \mathcal{D}(m)$. Let $(N, \psi)$ be an integral manifold of $\mathcal{D}$ through $m$, and suppose that $\psi(n_0) = m$. Since $d\psi: N_n \to \mathcal{D}(\psi(n))$ is an isomorphism at each $n$ in $N$, there exist vector fields $\widetilde{X}$, $\widetilde{Y}$ on $N$ such that
+	Let $X$ and $Y$ be smooth vector fields lying in $\mathcal{D}$, and let $m \in M$. We must prove that $[X, Y]_{m} \in \mathcal{D}(m)$. Let $(N, \psi)$ be an integral manifold of $\mathcal{D}$ through $m$, and suppose that $\psi(n_0) = m$. Since $d\psi: N_n \to \mathcal{D}(\psi(n))$ is an isomorphism at each $n$ in $N$, there exist vector fields $\widetilde{X}$, $\widetilde{Y}$ on $N$ such that
 
-\begin{equation}
-\tag{1}\label{eq:1.59:1}
-d\psi\circ\tilde{X}=X\circ\psi,
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.59:1}
+		d\psi\circ\tilde{X}=X\circ\psi,
+	\end{equation}
 
-\[
-d\psi\circ\tilde{Y}=Y\circ\psi.
-\]
+	\[
+		d\psi\circ\tilde{Y}=Y\circ\psi.
+	\]
 
-It is easily checked that $\tilde{X}$ and $\tilde{Y}$ are smooth. By 1.55, $[\tilde{X},\tilde{Y}]$ and $[X,Y]$ are $\psi$-related. Hence $[X,Y]_{m}=d\psi([\tilde{X},\tilde{Y}]_{n_{0}})\in\mathcal{D}(m)$.
+	It is easily checked that $\tilde{X}$ and $\tilde{Y}$ are smooth. By 1.55, $[\tilde{X},\tilde{Y}]$ and $[X,Y]$ are $\psi$-related. Hence $[X,Y]_{m}=d\psi([\tilde{X},\tilde{Y}]_{n_{0}})\in\mathcal{D}(m)$.
 
 \end{proof}
 
 \warnernumber{60}
 \begin{theorem}{Frobenius}\label{thm:1.60}
-Let $\mathcal{D}$ be a $c$-dimensional, involutive, $C^{\infty}$ distribution on $M^{d}$. Let $m\in M$. Then there exists an integral manifold of $\mathcal{D}$ passing through $m$. Indeed, there exists a cubic coordinate system $(U,\varphi)$ which is centered at $m$, with coordinate functions $x_{1},\ldots,x_{d}$ such that the slices
+	Let $\mathcal{D}$ be a $c$-dimensional, involutive, $C^{\infty}$ distribution on $M^{d}$. Let $m\in M$. Then there exists an integral manifold of $\mathcal{D}$ passing through $m$. Indeed, there exists a cubic coordinate system $(U,\varphi)$ which is centered at $m$, with coordinate functions $x_{1},\ldots,x_{d}$ such that the slices
 
-\begin{equation}
-\tag{1}\label{eq:1.60:1}
-x_{i}=\mathrm{constant}\qquad\text{for all }i\in\{c+1,\ldots,d\}
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.60:1}
+		x_{i}=\mathrm{constant}\qquad\text{for all }i\in\{c+1,\ldots,d\}
+	\end{equation}
 
-are integral manifolds of $\mathcal{D}$; and if $(N,\psi)$ is a connected integral manifold of $\mathcal{D}$ such that $\psi(N)\subset U$, then $\psi(N)$ lies in one of these slices.
+	are integral manifolds of $\mathcal{D}$; and if $(N,\psi)$ is a connected integral manifold of $\mathcal{D}$ such that $\psi(N)\subset U$, then $\psi(N)$ lies in one of these slices.
 
 \end{theorem}
 
 \begin{proof}
-We shall prove the existence part of the theorem by induction on $c$. For the case $c=1$, choose a vector field $X$ lying in $\mathcal{D}$, defined on an open neighborhood of $m$, such that $X(m)\neq0$. Then \hyperref[thm:1.53]{Proposition 1.53} yields a coordinate system $(U,\varphi)$ about $m$, which can be taken to be cubic centered, for which $X\mid U=\partial/\partial x_1$. Hence the theorem holds for $c=1$.
+	We shall prove the existence part of the theorem by induction on $c$. For the case $c=1$, choose a vector field $X$ lying in $\mathcal{D}$, defined on an open neighborhood of $m$, such that $X(m)\neq0$. Then \hyperref[thm:1.53]{Proposition 1.53} yields a coordinate system $(U,\varphi)$ about $m$, which can be taken to be cubic centered, for which $X\mid U=\partial/\partial x_1$. Hence the theorem holds for $c=1$.
 
-Now assume that the theorem holds for $c-1$; we prove it for a distribution $\mathcal{D}$ of dimension $c$. Since $\mathcal{D}$ is smooth, there exist smooth vector fields $X_1,\ldots,X_c$ spanning $\mathcal{D}$ on a neighborhood $\tilde{V}$ of $m$. By 1.53, there exists a coordinate system $(V,y_1,\ldots,y_d)$ centered at $m$, with $V\subset\tilde{V}$, such that
+	Now assume that the theorem holds for $c-1$; we prove it for a distribution $\mathcal{D}$ of dimension $c$. Since $\mathcal{D}$ is smooth, there exist smooth vector fields $X_1,\ldots,X_c$ spanning $\mathcal{D}$ on a neighborhood $\tilde{V}$ of $m$. By 1.53, there exists a coordinate system $(V,y_1,\ldots,y_d)$ centered at $m$, with $V\subset\tilde{V}$, such that
 
-\begin{equation}
-\tag{2}\label{eq:1.60:2}
-X_{1}\mid V=\frac{\partial}{\partial y_{1}}.
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.60:2}
+		X_{1}\mid V=\frac{\partial}{\partial y_{1}}.
+	\end{equation}
 
-On V, let
+	On V, let
 
-\[
-Y_{1}=X_{1},
-\]
+	\[
+		Y_{1}=X_{1},
+	\]
 
-\begin{equation}
-\tag{3}\label{eq:1.60:3}
-Y_{i}=X_{i}-X_{i}(y_{1})X_{1}\qquad(i=2,\ldots,c).
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.60:3}
+		Y_{i}=X_{i}-X_{i}(y_{1})X_{1}\qquad(i=2,\ldots,c).
+	\end{equation}
 
-\begin{center}
-\redrawn{figure-16}
-\end{center}
+	\begin{center}
+		\redrawn{figure-16}
+	\end{center}
 
-Then the vector fields $Y_{1}, \ldots, Y_{c}$ are independent $C^{\infty}$ vector fields spanning $\mathcal{D}$ in $V$. Let $S$ be the slice $y_{1}=0$, and let
+	Then the vector fields $Y_{1}, \ldots, Y_{c}$ are independent $C^{\infty}$ vector fields spanning $\mathcal{D}$ in $V$. Let $S$ be the slice $y_{1}=0$, and let
 
-\begin{equation}
-\tag{4}\label{eq:1.60:4}
-Z_{i}=Y_{i}\left|S\right.\quad(i=2,\ldots,c).
-\end{equation}
+	\begin{equation}
+		\tag{4}\label{eq:1.60:4}
+		Z_{i}=Y_{i}\left|S\right.\quad(i=2,\ldots,c).
+	\end{equation}
 
-Then since (2) and (3) imply that
+	Then since (2) and (3) imply that
 
-\begin{equation}
-\tag{5}\label{eq:1.60:5}
-Y_{i}(y_{1})=0\qquad(i=2,\ldots,c),
-\end{equation}
+	\begin{equation}
+		\tag{5}\label{eq:1.60:5}
+		Y_{i}(y_{1})=0\qquad(i=2,\ldots,c),
+	\end{equation}
 
-the $Z_i$ are actually vector fields on $S$; that is, $Z_i(q) \in S_q$ whenever $q \in S$. The $Z_i$ span a smooth $c - 1$ dimensional distribution on $S$.
+	the $Z_i$ are actually vector fields on $S$; that is, $Z_i(q) \in S_q$ whenever $q \in S$. The $Z_i$ span a smooth $c - 1$ dimensional distribution on $S$.
 
-We claim this is involutive. Indeed, the $Z_{i}$ are $i$-related (inclusion map of $S$ in $M$) to the $Y_{i}$, and therefore, by 1.55, their Lie brackets are also $i$-related to the corresponding brackets of the $Y_{i}$. But $[Y_{i}, Y_{j}]$, $(i, j \geq 2)$, has no component in the $Y_{1}$ direction (apply to $y_{1}$ and get 0). Therefore, there exist $C^{\infty}$ functions $c_{ijk}$ such that
+	We claim this is involutive. Indeed, the $Z_{i}$ are $i$-related (inclusion map of $S$ in $M$) to the $Y_{i}$, and therefore, by 1.55, their Lie brackets are also $i$-related to the corresponding brackets of the $Y_{i}$. But $[Y_{i}, Y_{j}]$, $(i, j \geq 2)$, has no component in the $Y_{1}$ direction (apply to $y_{1}$ and get 0). Therefore, there exist $C^{\infty}$ functions $c_{ijk}$ such that
 
-\begin{equation}
-\tag{6}\label{eq:1.60:6}
-[Y_{i},Y_{j}]=\sum_{k=2}^{c}c_{i j k}Y_{k}
-\end{equation}
+	\begin{equation}
+		\tag{6}\label{eq:1.60:6}
+		[Y_{i},Y_{j}]=\sum_{k=2}^{c}c_{i j k}Y_{k}
+	\end{equation}
 
-on V, and thus
+	on V, and thus
 
-\begin{equation}
-\tag{7}\label{eq:1.60:7}
-[Z_{i},Z_{j}]=\sum_{k=2}^{c}c_{i j k}\bigg|_{S}Z_{k}.
-\end{equation}
+	\begin{equation}
+		\tag{7}\label{eq:1.60:7}
+		[Z_{i},Z_{j}]=\sum_{k=2}^{c}c_{i j k}\bigg|_{S}Z_{k}.
+	\end{equation}
 
-This proves that the distribution on $S$ is involutive. By the induction hypothesis, there exists a centered coordinate system $w_{2}, \ldots, w_{d}$ on some neighborhood of $m$ in $S$ such that the slices defined by $w_{i} = \mathrm{constant}$ for all $i \in \{c+1, \ldots, d\}$ are precisely the integral manifolds of the distribution spanned by $Z_{2}, \ldots, Z_{c}$ on this neighborhood.
+	This proves that the distribution on $S$ is involutive. By the induction hypothesis, there exists a centered coordinate system $w_{2}, \ldots, w_{d}$ on some neighborhood of $m$ in $S$ such that the slices defined by $w_{i} = \mathrm{constant}$ for all $i \in \{c+1, \ldots, d\}$ are precisely the integral manifolds of the distribution spanned by $Z_{2}, \ldots, Z_{c}$ on this neighborhood.
 
-The functions
+	The functions
 
-\begin{equation}
-\tag{8}\label{eq:1.60:8}
-\begin{aligned}{}&{{}x_{1}=y_{1},}\\ {}&{{}x_{j}=w_{j}\circ\pi\qquad(j=2,\ldots,d),}\\ \end{aligned}
-\end{equation}
+	\begin{equation}
+		\tag{8}\label{eq:1.60:8}
+		\begin{aligned}{}&{{}x_{1}=y_{1},}\\ {}&{{}x_{j}=w_{j}\circ\pi\qquad(j=2,\ldots,d),}\\ \end{aligned}
+	\end{equation}
 
-where $\pi: V \to S$ is the natural projection in the $y$ coordinate system, are defined on some neighborhood of $m$ in $M$, are independent at $m$, and they all vanish at $m$. Thus there is a cubic-centered coordinate system $(U,\varphi)$ with the coordinate functions $x_{1},\ldots,x_{d}$ on a suitable neighborhood $U$ of $m$. We now prove that
+	where $\pi: V \to S$ is the natural projection in the $y$ coordinate system, are defined on some neighborhood of $m$ in $M$, are independent at $m$, and they all vanish at $m$. Thus there is a cubic-centered coordinate system $(U,\varphi)$ with the coordinate functions $x_{1},\ldots,x_{d}$ on a suitable neighborhood $U$ of $m$. We now prove that
 
-\begin{equation}
-\tag{9}\label{eq:1.60:9}
-Y_{i}(x_{c+r})\equiv0\quad\text{on }U\qquad(i=1,\ldots,c;\ r=1,\ldots,d-c).
-\end{equation}
+	\begin{equation}
+		\tag{9}\label{eq:1.60:9}
+		Y_{i}(x_{c+r})\equiv0\quad\text{on }U\qquad(i=1,\ldots,c;\ r=1,\ldots,d-c).
+	\end{equation}
 
-From this it follows that the vector fields $\partial/\partial x_{1},\ldots,\partial/\partial x_{c}$ form a basis for $\mathcal{D}$ at each point of $U$, and thus the slices (1) are integral manifolds of $\mathcal{D}$.
+	From this it follows that the vector fields $\partial/\partial x_{1},\ldots,\partial/\partial x_{c}$ form a basis for $\mathcal{D}$ at each point of $U$, and thus the slices (1) are integral manifolds of $\mathcal{D}$.
 
-To prove (9), first observe that (8) implies that
+	To prove (9), first observe that (8) implies that
 
-\begin{equation}
-\tag{10}\label{eq:1.60:10}
-\frac{\partial x_{j}}{\partial y_{1}}=\left\{\begin{aligned}{}&{{}1\quad}&{(j=1)}\\ {}&{{}0\quad}&{(j=2,\ldots,d)}\\ \end{aligned}\right.
-\end{equation}
+	\begin{equation}
+		\tag{10}\label{eq:1.60:10}
+		\frac{\partial x_{j}}{\partial y_{1}}=\left\{\begin{aligned}{}&{{}1\quad}&{(j=1)}\\ {}&{{}0\quad}&{(j=2,\ldots,d)}\\ \end{aligned}\right.
+	\end{equation}
 
-on $U$; and thus (2), (3), and (10) imply that
+	on $U$; and thus (2), (3), and (10) imply that
 
-\begin{equation}
-\tag{11}\label{eq:1.60:11}
-Y_{1}=\frac{\partial}{\partial x_{1}}\quad\text{on }U,
-\end{equation}
+	\begin{equation}
+		\tag{11}\label{eq:1.60:11}
+		Y_{1}=\frac{\partial}{\partial x_{1}}\quad\text{on }U,
+	\end{equation}
 
-so certainly (9) holds for $i = 1$. Now let $i \in \{2, \ldots, c\}$ and $r \in \{1, \ldots, d - c\}$. By (11),
+	so certainly (9) holds for $i = 1$. Now let $i \in \{2, \ldots, c\}$ and $r \in \{1, \ldots, d - c\}$. By (11),
 
-\begin{equation}
-\tag{12}\label{eq:1.60:12}
-\frac{\partial}{\partial x_{1}}\left(Y_{i}(x_{c+r})\right)=Y_{1}\big(Y_{i}(x_{c+r})\big)=[Y_{1},Y_{i}](x_{c+r}).
-\end{equation}
+	\begin{equation}
+		\tag{12}\label{eq:1.60:12}
+		\frac{\partial}{\partial x_{1}}\left(Y_{i}(x_{c+r})\right)=Y_{1}\big(Y_{i}(x_{c+r})\big)=[Y_{1},Y_{i}](x_{c+r}).
+	\end{equation}
 
-The involutivity of $\mathcal{D}$ implies that there are $C^{\infty}$ functions $c_{ik}$ such that
+	The involutivity of $\mathcal{D}$ implies that there are $C^{\infty}$ functions $c_{ik}$ such that
 
-\begin{equation}
-\tag{13}\label{eq:1.60:13}
-[Y_{1},Y_{i}]=\sum_{k=1}^{c}c_{i k}Y_{k}.
-\end{equation}
+	\begin{equation}
+		\tag{13}\label{eq:1.60:13}
+		[Y_{1},Y_{i}]=\sum_{k=1}^{c}c_{i k}Y_{k}.
+	\end{equation}
 
-Using (13), (12) becomes
+	Using (13), (12) becomes
 
-\begin{equation}
-\tag{14}\label{eq:1.60:14}
-\frac{\partial}{\partial x_{1}}\left(Y_{i}(x_{c+r})\right)=\sum_{k=2}^{c}c_{i k}Y_{k}(x_{c+r})\quad(i=2,\ldots,c;\ r=1,\ldots,d-c).
-\end{equation}
+	\begin{equation}
+		\tag{14}\label{eq:1.60:14}
+		\frac{\partial}{\partial x_{1}}\left(Y_{i}(x_{c+r})\right)=\sum_{k=2}^{c}c_{i k}Y_{k}(x_{c+r})\quad(i=2,\ldots,c;\ r=1,\ldots,d-c).
+	\end{equation}
 
-\begin{center}
-\redrawn{figure-17}
-\end{center}
+	\begin{center}
+		\redrawn{figure-17}
+	\end{center}
 
-Fix a slice of $U$ of the form $x_{2}=$ constant, ..., $x_{d}=$ constant. On such a slice, $Y_{i}(x_{c+r})$ is a function of $x_{1}$ alone, and (14) becomes a system of $c-1$ homogeneous linear differential equations with respect to $x_{1}$. Such a system has a unique solution with given initial values [11]. Since the system is homogeneous, the 0 functions give a solution. But each such slice has a unique point in $S\cap U$, and on $S\cap U$,
+	Fix a slice of $U$ of the form $x_{2}=$ constant, ..., $x_{d}=$ constant. On such a slice, $Y_{i}(x_{c+r})$ is a function of $x_{1}$ alone, and (14) becomes a system of $c-1$ homogeneous linear differential equations with respect to $x_{1}$. Such a system has a unique solution with given initial values [11]. Since the system is homogeneous, the 0 functions give a solution. But each such slice has a unique point in $S\cap U$, and on $S\cap U$,
 
-\begin{equation}
-\tag{15}\label{eq:1.60:15}
-Y_{i}(x_{c+r})=Z_{i}(w_{c+r})=0\qquad(i=2,\ldots,c).
-\end{equation}
+	\begin{equation}
+		\tag{15}\label{eq:1.60:15}
+		Y_{i}(x_{c+r})=Z_{i}(w_{c+r})=0\qquad(i=2,\ldots,c).
+	\end{equation}
 
-The first equality follows from (4) and (8), and the second from the fact that the integral manifolds of the distribution on $S$ determined by the $Z_{i}$ are given by suitable slices in the $w$ coordinate system. It follows from (14) and (15) that the functions $Y_{i}(x_{c+r})$ must be identically zero on $U$. Thus (9) holds, and the induction step is completed.
+	The first equality follows from (4) and (8), and the second from the fact that the integral manifolds of the distribution on $S$ determined by the $Z_{i}$ are given by suitable slices in the $w$ coordinate system. It follows from (14) and (15) that the functions $Y_{i}(x_{c+r})$ must be identically zero on $U$. Thus (9) holds, and the induction step is completed.
 
-Finally, suppose that $(N,\psi)$ is a connected integral manifold of $\mathcal{D}$ such that $\psi(N)\subset U$. Let $\pi$ be the projection of $\mathbb{R}^d$ onto the last $d-c$ coordinates. Then vectors in $\mathcal{D}$ are annihilated by $d(\pi\circ\varphi)$. Thus
+	Finally, suppose that $(N,\psi)$ is a connected integral manifold of $\mathcal{D}$ such that $\psi(N)\subset U$. Let $\pi$ be the projection of $\mathbb{R}^d$ onto the last $d-c$ coordinates. Then vectors in $\mathcal{D}$ are annihilated by $d(\pi\circ\varphi)$. Thus
 
-\[
-d(\pi\circ\varphi\circ\psi)|_{n}\equiv0
-\]
+	\[
+		d(\pi\circ\varphi\circ\psi)|_{n}\equiv0
+	\]
 
-for each $n \in N$. By 1.24, $\pi \circ \varphi \circ \psi$ is a constant map since $N$ is connected. Thus $\psi(N)$ is contained in one of the slices (1).
+	for each $n \in N$. By 1.24, $\pi \circ \varphi \circ \psi$ is a constant map since $N$ is connected. Thus $\psi(N)$ is contained in one of the slices (1).
 
 \end{proof}
 
 \warnernumber{61}
 \begin{remarks}\label{thm:1.61}
-The classical version of the Frobenius theorem appears quite different from our version in 1.60. The classical Frobenius theorem can be formulated as follows.
+	The classical version of the Frobenius theorem appears quite different from our version in 1.60. The classical Frobenius theorem can be formulated as follows.
 
-Let $U$ and $V$ be open sets in $\mathbb{R}^m$ and $\mathbb{R}^n$ respectively. We use coordinates $r_1, \ldots, r_m$ on $\mathbb{R}^m$ and $s_1, \ldots, s_n$ on $\mathbb{R}^n$. Let
+	Let $U$ and $V$ be open sets in $\mathbb{R}^m$ and $\mathbb{R}^n$ respectively. We use coordinates $r_1, \ldots, r_m$ on $\mathbb{R}^m$ and $s_1, \ldots, s_n$ on $\mathbb{R}^n$. Let
 
-\begin{equation}
-\tag{1}\label{eq:1.61:1}
-b\colon U\times V\to M(n,m)
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.61:1}
+		b\colon U\times V\to M(n,m)
+	\end{equation}
 
-be a $C^{\infty}$ map of $U\times V$ into the set of all $n\times m$ real matrices, and let $(r_{0},s_{0})\in U\times V$. If
+	be a $C^{\infty}$ map of $U\times V$ into the set of all $n\times m$ real matrices, and let $(r_{0},s_{0})\in U\times V$. If
 
-\begin{equation}
-\tag{2}\label{eq:1.61:2}
-\begin{array}{r l r}&{}&{\frac{\partial b_{i\beta}}{\partial r_{\gamma}}-\frac{\partial b_{i\gamma}}{\partial r_{\beta}}+\displaystyle\sum_{j=1}^{n}\left(\frac{\partial b_{i\beta}}{\partial s_{j}}\,b_{j\gamma}-\frac{\partial b_{i\gamma}}{\partial s_{j}}\,b_{j\beta}\right)=0}\\ &{}&{(i=1,\ldots,n;\gamma,\beta=1,\ldots,m)}\end{array}
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.61:2}
+		\begin{array}{r l r}&{}&{\frac{\partial b_{i\beta}}{\partial r_{\gamma}}-\frac{\partial b_{i\gamma}}{\partial r_{\beta}}+\displaystyle\sum_{j=1}^{n}\left(\frac{\partial b_{i\beta}}{\partial s_{j}}\,b_{j\gamma}-\frac{\partial b_{i\gamma}}{\partial s_{j}}\,b_{j\beta}\right)=0}\\ &{}&{(i=1,\ldots,n;\gamma,\beta=1,\ldots,m)}\end{array}
+	\end{equation}
 
-on $U\times V$, then there exist neighborhoods $U_{0}$ of $r_{0}$ in $U$ and $V_{0}$ of $s_{0}$ in $V$ and a unique $C^{\infty}$ map
+	on $U\times V$, then there exist neighborhoods $U_{0}$ of $r_{0}$ in $U$ and $V_{0}$ of $s_{0}$ in $V$ and a unique $C^{\infty}$ map
 
-\begin{equation}
-\tag{3}\label{eq:1.61:3}
-\alpha\colon U_{0}\times V_{0}\to V
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.61:3}
+		\alpha\colon U_{0}\times V_{0}\to V
+	\end{equation}
 
-such that if
+	such that if
 
-\[
-\alpha_{s}(r)=\alpha(r,s)\qquad(s\in V_{0},\quad r\in U_{0}),
-\]
+	\[
+		\alpha_{s}(r)=\alpha(r,s)\qquad(s\in V_{0},\quad r\in U_{0}),
+	\]
 
-then
+	then
 
-\begin{equation}
-\tag{4}\label{eq:1.61:4}
-\alpha_{s}(r_{0})=s,
-\end{equation}
+	\begin{equation}
+		\tag{4}\label{eq:1.61:4}
+		\alpha_{s}(r_{0})=s,
+	\end{equation}
 
-\[
-d\alpha_{s}|_{r}=b(r,\alpha(r,s))
-\]
+	\[
+		d\alpha_{s}|_{r}=b(r,\alpha(r,s))
+	\]
 
-for all  $ (r,s)\in U_{0}\times V_{0} $
+	for all  $ (r,s)\in U_{0}\times V_{0} $
 
-Equation (4) is a so-called total differential equation. We specify in (1) what the differential of a map should be as a function of the graph, and in (2) we have a necessary and sufficient condition for the existence of such a map with the specified initial conditions. It can be shown that this version is equivalent to 1.60. For example, if we start with a c-dimensional, involutive,  $ C^\infty $ distribution  $ \mathcal{D} $ on  $ M^d $ and a point  $ m \in M $, then we can obtain 1.60 from the classical version as follows. We can first choose a coordinate system  $ (W, \tau) $ about  $ m $ with coordinate functions  $ y_1, \ldots, y_d $ and with  $\tau(W) = U \times V \subset \mathbb{R}^c \times \mathbb{R}^{d-c}$, for which there exist  $ C^\infty $ functions  $ f_{ji} $ on  $ U \times V $ ( $ i = 1, \ldots, c $;  $ j = 1, \ldots, d-c $) such that the vector fields
+	Equation (4) is a so-called total differential equation. We specify in (1) what the differential of a map should be as a function of the graph, and in (2) we have a necessary and sufficient condition for the existence of such a map with the specified initial conditions. It can be shown that this version is equivalent to 1.60. For example, if we start with a c-dimensional, involutive,  $ C^\infty $ distribution  $ \mathcal{D} $ on  $ M^d $ and a point  $ m \in M $, then we can obtain 1.60 from the classical version as follows. We can first choose a coordinate system  $ (W, \tau) $ about  $ m $ with coordinate functions  $ y_1, \ldots, y_d $ and with  $\tau(W) = U \times V \subset \mathbb{R}^c \times \mathbb{R}^{d-c}$, for which there exist  $ C^\infty $ functions  $ f_{ji} $ on  $ U \times V $ ( $ i = 1, \ldots, c $;  $ j = 1, \ldots, d-c $) such that the vector fields
 
-\begin{equation}
-\tag{5}\label{eq:1.61:5}
-Y_{i}=\frac{\partial}{\partial y_{i}}+\sum_{j=1}^{d-c}f_{ji}\circ\tau\frac{\partial}{\partial y_{c+j}}\qquad(i=1,\ldots,c)
-\end{equation}
+	\begin{equation}
+		\tag{5}\label{eq:1.61:5}
+		Y_{i}=\frac{\partial}{\partial y_{i}}+\sum_{j=1}^{d-c}f_{ji}\circ\tau\frac{\partial}{\partial y_{c+j}}\qquad(i=1,\ldots,c)
+	\end{equation}
 
-span $\mathcal{D}$ on $W$. Then we define a map $b$ as in (1) by setting
+	span $\mathcal{D}$ on $W$. Then we define a map $b$ as in (1) by setting
 
-\begin{equation}
-\tag{6}\label{eq:1.61:6}
-b(r,s)=\{f_{j i}(r,s)\}.
-\end{equation}
+	\begin{equation}
+		\tag{6}\label{eq:1.61:6}
+		b(r,s)=\{f_{j i}(r,s)\}.
+	\end{equation}
 
-It turns out that the involutivity of $\mathcal{D}$ implies that (2) is satisfied, and from the map $\alpha$ one can obtain the desired coordinate system \eqref{eq:1.60:1}. Conversely, one can obtain the classical version from 1.60 in a similar way.
+	It turns out that the involutivity of $\mathcal{D}$ implies that (2) is satisfied, and from the map $\alpha$ one can obtain the desired coordinate system \eqref{eq:1.60:1}. Conversely, one can obtain the classical version from 1.60 in a similar way.
 
-We shall give in Chapter 2 yet another version of the Frobenius theorem in terms of differential forms and differential ideals.
+	We shall give in Chapter 2 yet another version of the Frobenius theorem in terms of differential forms and differential ideals.
 
-In 1.32 we considered the situation in which a $C^{\infty}$ map $\psi: N \to M$ factors through a submanifold $(P,\varphi)$ of $M$ so that $\psi = \varphi \circ \psi_{0}$ where $\psi_{0}: N \to P$, and we sought sufficient conditions for $\psi_{0}$ to be $C^{\infty}$. An important case occurs when $(P,\varphi)$ is an integral manifold of an involutive distribution on $M$.
+	In 1.32 we considered the situation in which a $C^{\infty}$ map $\psi: N \to M$ factors through a submanifold $(P,\varphi)$ of $M$ so that $\psi = \varphi \circ \psi_{0}$ where $\psi_{0}: N \to P$, and we sought sufficient conditions for $\psi_{0}$ to be $C^{\infty}$. An important case occurs when $(P,\varphi)$ is an integral manifold of an involutive distribution on $M$.
 
 \end{remarks}
 
 \warnernumber{62}
 \begin{theorem}\label{thm:1.62}
-Suppose that $\psi: N \to M^d$ is $C^\infty$, that $(P^c, \varphi)$ is an integral manifold of an involutive distribution $\mathcal{D}$ on $M$, and that $\psi$ factors through $(P, \varphi)$, that is, $\psi(N) \subset \varphi(P)$. Let $\psi_0: N \to P$ be the (unique) mapping such that $\varphi \circ \psi_0 = \psi$.
+	Suppose that $\psi: N \to M^d$ is $C^\infty$, that $(P^c, \varphi)$ is an integral manifold of an involutive distribution $\mathcal{D}$ on $M$, and that $\psi$ factors through $(P, \varphi)$, that is, $\psi(N) \subset \varphi(P)$. Let $\psi_0: N \to P$ be the (unique) mapping such that $\varphi \circ \psi_0 = \psi$.
 
-\begin{equation}
-\tag{1}\label{eq:1.62:1}\redrawn{figure-18}
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.62:1}\redrawn{figure-18}
+	\end{equation}
 
-Then  $ \psi_{0} $ is continuous (and hence  $ C^{\infty} $ by 1.32(a)).
+	Then  $ \psi_{0} $ is continuous (and hence  $ C^{\infty} $ by 1.32(a)).
 
 \end{theorem}
 
 \begin{proof}
-Let $p$ belong to an open set $U$ in $P$, and let $n\in\psi_0^{-1}(p)$. Using 1.60, we can obtain an open set $\tilde{U}$ with $p\in\tilde{U}\subset U$ and a cubic coordinate system $(V,\tau)$ centered at $\varphi(p)$ with coordinate functions $x_1,\ldots,x_d$ such that the slices
+	Let $p$ belong to an open set $U$ in $P$, and let $n\in\psi_0^{-1}(p)$. Using 1.60, we can obtain an open set $\tilde{U}$ with $p\in\tilde{U}\subset U$ and a cubic coordinate system $(V,\tau)$ centered at $\varphi(p)$ with coordinate functions $x_1,\ldots,x_d$ such that the slices
 
-\begin{equation}
-\tag{2}\label{eq:1.62:2}
-x_{i}=\mathrm{constant}\qquad\text{for all }i\in\{c+1,\ldots,d\}
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.62:2}
+		x_{i}=\mathrm{constant}\qquad\text{for all }i\in\{c+1,\ldots,d\}
+	\end{equation}
 
-are the integral manifolds of $\mathcal{D}$ in $V$, and such that $\varphi(\tilde{U})$ is the slice
+	are the integral manifolds of $\mathcal{D}$ in $V$, and such that $\varphi(\tilde{U})$ is the slice
 
-\begin{equation}
-\tag{3}\label{eq:1.62:3}
-x_{c+1}=\cdots=x_{d}=0.
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.62:3}
+		x_{c+1}=\cdots=x_{d}=0.
+	\end{equation}
 
-$\psi^{-1}(V)$ is open in $N$. Let $W$ be the component of $\psi^{-1}(V)$ containing $n$. $W$ is open. To prove that $\psi_0$ is continuous, we need only prove that $\psi_0(W) \subset \tilde{U} \subset U$. By the commutativity of (1) and the injectivity of $\varphi$, it suffices to prove that $\psi(W)$ lies in the slice (3) of $V$. Now, $\psi$ is continuous and $W$ connected; hence $\psi(W)$ is connected. Moreover, $\psi(W)$ has at least the point $\psi(n)$ in common with the slice (3). So since $\psi(W)$ lies in a component of $\varphi(P) \cap V$, it is sufficient to prove that components of $\varphi(P) \cap V$ are contained in slices of the form (2).
+	$\psi^{-1}(V)$ is open in $N$. Let $W$ be the component of $\psi^{-1}(V)$ containing $n$. $W$ is open. To prove that $\psi_0$ is continuous, we need only prove that $\psi_0(W) \subset \tilde{U} \subset U$. By the commutativity of (1) and the injectivity of $\varphi$, it suffices to prove that $\psi(W)$ lies in the slice (3) of $V$. Now, $\psi$ is continuous and $W$ connected; hence $\psi(W)$ is connected. Moreover, $\psi(W)$ has at least the point $\psi(n)$ in common with the slice (3). So since $\psi(W)$ lies in a component of $\varphi(P) \cap V$, it is sufficient to prove that components of $\varphi(P) \cap V$ are contained in slices of the form (2).
 
-Let $C$ be a component of $\varphi(P) \cap V$, and let $\pi: V \to \mathbb{R}^{d-c}$ be defined by
+	Let $C$ be a component of $\varphi(P) \cap V$, and let $\pi: V \to \mathbb{R}^{d-c}$ be defined by
 
-\begin{equation}
-\tag{4}\label{eq:1.62:4}
-\pi(m)=\left(x_{c+1}(m),\ldots,x_{d}(m)\right).
-\end{equation}
+	\begin{equation}
+		\tag{4}\label{eq:1.62:4}
+		\pi(m)=\left(x_{c+1}(m),\ldots,x_{d}(m)\right).
+	\end{equation}
 
-Then since $P$ is second countable, and since $\varphi(P) \cap V$ is a union of the slices (2) due to the fact that $(P,\varphi)$ is an integral manifold of $\mathcal{D}$, it follows that $\pi(\varphi(P) \cap V)$ consists of a countable number of points in $\mathbb{R}^{d-c}$. Thus $\pi(C)$ is a connected countable subset of $\mathbb{R}^{d-c}$; hence $\pi(C)$ is a single point, and $C$ lies in a single slice.
+	Then since $P$ is second countable, and since $\varphi(P) \cap V$ is a union of the slices (2) due to the fact that $(P,\varphi)$ is an integral manifold of $\mathcal{D}$, it follows that $\pi(\varphi(P) \cap V)$ consists of a countable number of points in $\mathbb{R}^{d-c}$. Thus $\pi(C)$ is a connected countable subset of $\mathbb{R}^{d-c}$; hence $\pi(C)$ is a single point, and $C$ lies in a single slice.
 
 \end{proof}
 
 \warnernumber{63}
 \begin{definition}\label{thm:1.63}
-A maximal integral manifold $(N,\psi)$ of a distribution $\mathcal{D}$ on a manifold $M$ is a connected integral manifold of $\mathcal{D}$ whose image in $M$ is not a proper subset of any other connected integral manifold of $\mathcal{D}$. That is, there does not exist a connected integral manifold $(N_1,\psi_1)$ of $\mathcal{D}$ such that $\psi(N)$ is a proper subset of $\psi_1(N_1)$. \index{Maximal integral manifold}
+	A maximal integral manifold $(N,\psi)$ of a distribution $\mathcal{D}$ on a manifold $M$ is a connected integral manifold of $\mathcal{D}$ whose image in $M$ is not a proper subset of any other connected integral manifold of $\mathcal{D}$. That is, there does not exist a connected integral manifold $(N_1,\psi_1)$ of $\mathcal{D}$ such that $\psi(N)$ is a proper subset of $\psi_1(N_1)$. \index{Maximal integral manifold}
 
 \end{definition}
 
 \warnernumber{64}
 \begin{theorem}\label{thm:1.64}
-Let $\mathcal{D}$ be a $c$-dimensional, involutive, $C^{\infty}$ distribution on $M^{d}$. Let $m \in M$. Then through $m$ there passes a unique maximal connected integral manifold of $\mathcal{D}$, and every connected integral manifold of $\mathcal{D}$ through $m$ is contained in the maximal one.
+	Let $\mathcal{D}$ be a $c$-dimensional, involutive, $C^{\infty}$ distribution on $M^{d}$. Let $m \in M$. Then through $m$ there passes a unique maximal connected integral manifold of $\mathcal{D}$, and every connected integral manifold of $\mathcal{D}$ through $m$ is contained in the maximal one.
 
 \end{theorem}
 
 \begin{proof}
-Existence Let K be the set of all those points p in M for which there is a piecewise smooth curve joining m to p whose smooth portions
+	Existence Let K be the set of all those points p in M for which there is a piecewise smooth curve joining m to p whose smooth portions
 
-\begin{center}
-\redrawn{figure-19}
-\end{center}
+	\begin{center}
+		\redrawn{figure-19}
+	\end{center}
 
 
-are 1-dimensional integral curves of $\mathcal{D}$, that is, their tangent vectors belong to $\mathcal{D}$. By 1.60 and the second countability of $M$, there is a countable covering of $M$ by cubic coordinate systems $\{(U_{i}, x_{1}^{i}, \ldots, x_{d}^{i})\colon i = 0, 1, 2, \ldots\}$ such that the integral manifolds of $\mathcal{D}$ in $U_{i}$ are the slices
+	are 1-dimensional integral curves of $\mathcal{D}$, that is, their tangent vectors belong to $\mathcal{D}$. By 1.60 and the second countability of $M$, there is a countable covering of $M$ by cubic coordinate systems $\{(U_{i}, x_{1}^{i}, \ldots, x_{d}^{i})\colon i = 0, 1, 2, \ldots\}$ such that the integral manifolds of $\mathcal{D}$ in $U_{i}$ are the slices
 
-\begin{equation}
-\tag{1}\label{eq:1.64:1}
-x_{c+j}^{i}=\mathrm{constant}\qquad\text{for all }j\in\{1,\ldots,d-c\}.
-\end{equation}
+	\begin{equation}
+		\tag{1}\label{eq:1.64:1}
+		x_{c+j}^{i}=\mathrm{constant}\qquad\text{for all }j\in\{1,\ldots,d-c\}.
+	\end{equation}
 
-We shall assume that $m \in U_{0}$.
+	We shall assume that $m \in U_{0}$.
 
-Now let $p \in K$. Then there exists an index $i$, such that $p \in U_{i_p}$, and there is a slice $S_{i_p}$ of $U_{i_p}$ of the form (1) containing $p$. Observe that $S_{i_p} \subset K$. It follows from 1.60 that the collection of all open subsets of all such $S_{i_p}$ as $p$ runs over $K$ forms a basis for a locally Euclidean topology on $K$, and that we obtain a differentiable structure on $K$ if we take the maximal family of coordinate systems (with respect to 1.4(b)) containing the collection
+	Now let $p \in K$. Then there exists an index $i$, such that $p \in U_{i_p}$, and there is a slice $S_{i_p}$ of $U_{i_p}$ of the form (1) containing $p$. Observe that $S_{i_p} \subset K$. It follows from 1.60 that the collection of all open subsets of all such $S_{i_p}$ as $p$ runs over $K$ forms a basis for a locally Euclidean topology on $K$, and that we obtain a differentiable structure on $K$ if we take the maximal family of coordinate systems (with respect to 1.4(b)) containing the collection
 
-\begin{equation}
-\tag{2}\label{eq:1.64:2}
-\{(S_{i_{p}},\;x_{1}^{i_{p}}\;\big|\;S_{i_{p}},\;\ldots,\;x_{c}^{i_{p}}\;\big|\;S_{i_{p}}):p\in K\}.
-\end{equation}
+	\begin{equation}
+		\tag{2}\label{eq:1.64:2}
+		\{(S_{i_{p}},\;x_{1}^{i_{p}}\;\big|\;S_{i_{p}},\;\ldots,\;x_{c}^{i_{p}}\;\big|\;S_{i_{p}}):p\in K\}.
+	\end{equation}
 
-We claim that $K$ with this topology and differentiable structure is a connected differentiable manifold of dimension $c$. $K$ is clearly connected since it is pathwise connected by construction. We have only to prove that the topology on $K$ is second countable. For this, fix an $i\in\{0,1,2,\ldots\}$. We need only show that there are at most countably many slices of $U_{i}$ in $K$. Each point of $U_{i}$ which lies in $K$ is joinable to $m$ by a piecewise smooth curve whose range also lies in $K$. To each such curve from $m$ to points in $U_{i}$ there corresponds (although not uniquely) a finite sequence
+	We claim that $K$ with this topology and differentiable structure is a connected differentiable manifold of dimension $c$. $K$ is clearly connected since it is pathwise connected by construction. We have only to prove that the topology on $K$ is second countable. For this, fix an $i\in\{0,1,2,\ldots\}$. We need only show that there are at most countably many slices of $U_{i}$ in $K$. Each point of $U_{i}$ which lies in $K$ is joinable to $m$ by a piecewise smooth curve whose range also lies in $K$. To each such curve from $m$ to points in $U_{i}$ there corresponds (although not uniquely) a finite sequence
 
-\begin{equation}
-\tag{3}\label{eq:1.64:3}
-U_{0},~U_{i_{1}},~\ldots,~U_{i_{n}},~U_{i}
-\end{equation}
+	\begin{equation}
+		\tag{3}\label{eq:1.64:3}
+		U_{0},~U_{i_{1}},~\ldots,~U_{i_{n}},~U_{i}
+	\end{equation}
 
-of the coordinate neighborhoods through which the curve passes in order. The curve thus begins in the slice of $U_{0}$ containing $m$, passes through some slice of $U_{i_{1}}$, then through some slice of $U_{i_{2}}$, and so on, until in a finite number of steps it reaches a slice in $U_{i}$. Since there are at most countably many such sequences (3) from $U_{0}$ to $U_{i}$, we need only show that for each such sequence there are at most countably many slices of $U_{i}$ reachable in the above manner. \emph{For this,} we need only observe that for any $j, k \in \{0, 1, \ldots\}$ a single slice of $U_{j}$ can intersect at most countably many slices of $U_{k}$; for if $S$ is a slice of $U_{j}$, then $S \cap U_{k}$ is an open submanifold of $S$ and therefore consists of at most countably many components, each such component being a connected integral manifold of $\mathcal{D}$ in $U_{k}$, and hence lying in a slice of $U_{k}$. This proves the second countability of $K$.
+	of the coordinate neighborhoods through which the curve passes in order. The curve thus begins in the slice of $U_{0}$ containing $m$, passes through some slice of $U_{i_{1}}$, then through some slice of $U_{i_{2}}$, and so on, until in a finite number of steps it reaches a slice in $U_{i}$. Since there are at most countably many such sequences (3) from $U_{0}$ to $U_{i}$, we need only show that for each such sequence there are at most countably many slices of $U_{i}$ reachable in the above manner. \emph{For this,} we need only observe that for any $j, k \in \{0, 1, \ldots\}$ a single slice of $U_{j}$ can intersect at most countably many slices of $U_{k}$; for if $S$ is a slice of $U_{j}$, then $S \cap U_{k}$ is an open submanifold of $S$ and therefore consists of at most countably many components, each such component being a connected integral manifold of $\mathcal{D}$ in $U_{k}$, and hence lying in a slice of $U_{k}$. This proves the second countability of $K$.
 
-$ (K,i) $, where  $ i: K \to M $ is the inclusion map, is now a submanifold of  $ M $ and is a connected integral manifold of  $ \mathcal{D} $ passing through  $ m $. Moreover,  $ (K,i) $ is a maximal connected integral manifold of  $ \mathcal{D} $. For let  $ (N,\psi) $ be any connected integral manifold of  $ \mathcal{D} $ passing through  $ m $, and let  $ p \in \psi(N) $. There is a piecewise smooth curve  $ c: [0,1] \to N $ joining  $ \psi^{-1}(m) $ to  $ \psi^{-1}(p) $. (Connected manifolds are pathwise connected.) Then  $ \psi \circ c $ is a piecewise smooth 1-dimensional integral curve of  $ \mathcal{D} $ connecting  $ m $ to  $ p $. Thus  $ p \in K $, and so  $ \psi(N) \subset K $, which proves that  $ K $ is maximal. Thus we have proved the existence of a maximal connected integral manifold  $ (K,i) $ of  $ \mathcal{D} $ passing through  $ m $, and have proved that every connected integral manifold of  $ \mathcal{D} $ through  $ m $ has its image in  $ K $.
+	$ (K,i) $, where  $ i: K \to M $ is the inclusion map, is now a submanifold of  $ M $ and is a connected integral manifold of  $ \mathcal{D} $ passing through  $ m $. Moreover,  $ (K,i) $ is a maximal connected integral manifold of  $ \mathcal{D} $. For let  $ (N,\psi) $ be any connected integral manifold of  $ \mathcal{D} $ passing through  $ m $, and let  $ p \in \psi(N) $. There is a piecewise smooth curve  $ c: [0,1] \to N $ joining  $ \psi^{-1}(m) $ to  $ \psi^{-1}(p) $. (Connected manifolds are pathwise connected.) Then  $ \psi \circ c $ is a piecewise smooth 1-dimensional integral curve of  $ \mathcal{D} $ connecting  $ m $ to  $ p $. Thus  $ p \in K $, and so  $ \psi(N) \subset K $, which proves that  $ K $ is maximal. Thus we have proved the existence of a maximal connected integral manifold  $ (K,i) $ of  $ \mathcal{D} $ passing through  $ m $, and have proved that every connected integral manifold of  $ \mathcal{D} $ through  $ m $ has its image in  $ K $.
 
-\begin{center}
-\redrawn{figure-20}
-\end{center}
+	\begin{center}
+		\redrawn{figure-20}
+	\end{center}
 
-Uniqueness (cf. 1.33) Let $(N,\psi)$ be any other maximal connected integral manifold of $\mathcal{D}$ passing through $m$. As we have observed above, $\psi(N) \subset K$; thus $\psi$ factors as follows:
+	Uniqueness (cf. 1.33) Let $(N,\psi)$ be any other maximal connected integral manifold of $\mathcal{D}$ passing through $m$. As we have observed above, $\psi(N) \subset K$; thus $\psi$ factors as follows:
 
-\begin{center}
-\redrawn{figure-21}
-\end{center}
+	\begin{center}
+		\redrawn{figure-21}
+	\end{center}
 
-$\psi_{0}$ is $C^{\infty}$ by 1.62, and is 1:1 and non-singular since $\psi$ is 1:1 and non-singular. $\psi_{0}$ is onto since the fact that $(N,\psi)$ is a maximal integral manifold of $\mathcal{D}$ through $m$ implies that $\psi(N)$ cannot be a proper subset of $K$. It follows from Corollary (a) of 1.30 that $\psi_{0}$ is a diffeomorphism. Thus $(N,\psi)$ and $(K,i)$ are equivalent, and the maximal connected integral manifold of $\mathcal{D}$ through $m$ is unique.
+	$\psi_{0}$ is $C^{\infty}$ by 1.62, and is 1:1 and non-singular since $\psi$ is 1:1 and non-singular. $\psi_{0}$ is onto since the fact that $(N,\psi)$ is a maximal integral manifold of $\mathcal{D}$ through $m$ implies that $\psi(N)$ cannot be a proper subset of $K$. It follows from Corollary (a) of 1.30 that $\psi_{0}$ is a diffeomorphism. Thus $(N,\psi)$ and $(K,i)$ are equivalent, and the maximal connected integral manifold of $\mathcal{D}$ through $m$ is unique.
 
 \end{proof}
 
 \section{Exercises}
 
 \begin{problemset}
-\item Prove that in \hyperref[thm:1.5]{Example 1.5}(d) one does indeed obtain a differentiable structure on  $ S^{d} $.
+	\item Prove that in \hyperref[thm:1.5]{Example 1.5}(d) one does indeed obtain a differentiable structure on  $ S^{d} $.
 
-\item The usual differentiable structure on the real line $\mathbb{R}$ was obtained by taking $\mathcal{F}$ to be the maximal collection containing the identity map. Let $\mathcal{F}_1$ be the maximal collection (with respect to 1.4(b)) containing the map $t \mapsto t^3$. Prove that $\mathcal{F} \neq \mathcal{F}_1$, but that $(\mathbb{R},\mathcal{F})$ and $(\mathbb{R},\mathcal{F}_1)$ are diffeomorphic.
+	\item The usual differentiable structure on the real line $\mathbb{R}$ was obtained by taking $\mathcal{F}$ to be the maximal collection containing the identity map. Let $\mathcal{F}_1$ be the maximal collection (with respect to 1.4(b)) containing the map $t \mapsto t^3$. Prove that $\mathcal{F} \neq \mathcal{F}_1$, but that $(\mathbb{R},\mathcal{F})$ and $(\mathbb{R},\mathcal{F}_1)$ are diffeomorphic.
 
-\item Let $\{U_{\alpha}\}$ be an open cover of a manifold $M$. Prove that there exists a refinement $\{V_{\alpha}\}$ such that $\overline{V}_{\alpha} \subset U_{\alpha}$ for each $\alpha$.
+	\item Let $\{U_{\alpha}\}$ be an open cover of a manifold $M$. Prove that there exists a refinement $\{V_{\alpha}\}$ such that $\overline{V}_{\alpha} \subset U_{\alpha}$ for each $\alpha$.
 
-\item Use the fact that manifolds are regular and paracompact to prove that manifolds are normal topological spaces.
+	\item Use the fact that manifolds are regular and paracompact to prove that manifolds are normal topological spaces.
 
-\item Prove \hyperref[thm:1.25]{1.25(a)}, (b), and (c).
+	\item Prove \hyperref[thm:1.25]{1.25(a)}, (b), and (c).
 
-\item Prove that if $\psi: M \to N$ is $C^{\infty}$, one-to-one, onto, and everywhere non-singular, then $\psi$ is a diffeomorphism. (This proposition depends strongly on the second countability of $M$. Here is an outline for a proof. This map $\psi$ is a diffeomorphism if and only if $d\psi$ is surjective everywhere. If $d\psi$ is not surjective at some point, then the dimension of $M$ is less than the dimension of $N$. Let $\dim M = p$ and $\dim N = d$. Assuming that $p < d$, one arrives at a contradiction as follows. Let $(U,\varphi)$ be a coordinate system on $N$ such that $\varphi(U) = \mathbb{R}^d$. Since $\psi$ maps $M$ onto $N$, the range of $\varphi \circ \psi$ is all of $\mathbb{R}^d$. Now we show that this yields a contradiction. One way is to use 1.35 to observe that the range of $\varphi \circ \psi$ is a countable union of nowhere dense sets in $\mathbb{R}^d$, and therefore, by the Baire category theorem, could not possibly be all of $\mathbb{R}^d$. Another way is to use the fact that $p < d$ to prove that the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$, which also is a contradiction (where a set in $\mathbb{R}^d$ has measure 0 if it can be covered by a sequence of balls, the union of whose volumes is arbitrarily small). That the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$ follows from the second countability of $M$ and the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ has image of measure 0, and this, in turn, follows from the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ takes sets of measure 0 to sets of measure 0. To prove the latter, observe that if $f: \mathbb{R}^d \to \mathbb{R}^d$ is $C^1$, and if $A$ is a compact set in $\mathbb{R}^d$, then $f$ has a Lipschitz constant $K$ on $A$,
+	\item Prove that if $\psi: M \to N$ is $C^{\infty}$, one-to-one, onto, and everywhere non-singular, then $\psi$ is a diffeomorphism. (This proposition depends strongly on the second countability of $M$. Here is an outline for a proof. This map $\psi$ is a diffeomorphism if and only if $d\psi$ is surjective everywhere. If $d\psi$ is not surjective at some point, then the dimension of $M$ is less than the dimension of $N$. Let $\dim M = p$ and $\dim N = d$. Assuming that $p < d$, one arrives at a contradiction as follows. Let $(U,\varphi)$ be a coordinate system on $N$ such that $\varphi(U) = \mathbb{R}^d$. Since $\psi$ maps $M$ onto $N$, the range of $\varphi \circ \psi$ is all of $\mathbb{R}^d$. Now we show that this yields a contradiction. One way is to use 1.35 to observe that the range of $\varphi \circ \psi$ is a countable union of nowhere dense sets in $\mathbb{R}^d$, and therefore, by the Baire category theorem, could not possibly be all of $\mathbb{R}^d$. Another way is to use the fact that $p < d$ to prove that the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$, which also is a contradiction (where a set in $\mathbb{R}^d$ has measure 0 if it can be covered by a sequence of balls, the union of whose volumes is arbitrarily small). That the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$ follows from the second countability of $M$ and the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ has image of measure 0, and this, in turn, follows from the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ takes sets of measure 0 to sets of measure 0. To prove the latter, observe that if $f: \mathbb{R}^d \to \mathbb{R}^d$ is $C^1$, and if $A$ is a compact set in $\mathbb{R}^d$, then $f$ has a Lipschitz constant $K$ on $A$,
 
-\[
-\|f(x)-f(y)\|\leq K\|x-y\|\quad(x,y\in A),
-\]
+	\[
+		\|f(x)-f(y)\|\leq K\|x-y\|\quad(x,y\in A),
+	\]
 
-so that $f$ magnifies the volume of balls in $A$ by at most $K^{d}$, and hence takes sets of measure 0 in $A$ into sets of measure 0.)
+	so that $f$ magnifies the volume of balls in $A$ by at most $K^{d}$, and hence takes sets of measure 0 in $A$ into sets of measure 0.)
 
-\item Prove \hyperref[thm:1.33]{1.33(a)} and (b).
+	\item Prove \hyperref[thm:1.33]{1.33(a)} and (b).
 
-\item Obtain the classical implicit function \hyperref[thm:1.37]{theorem 1.37} from 1.38.
+	\item Obtain the classical implicit function \hyperref[thm:1.37]{theorem 1.37} from 1.38.
 
-\item Let  $ f\colon \mathbb{R}^2 \to \mathbb{R} $ be defined by.
+	\item Let  $ f\colon \mathbb{R}^2 \to \mathbb{R} $ be defined by.
 
-\[
-f(x,y)=x^{3}+x y+y^{3}+1.
-\]
+	\[
+		f(x,y)=x^{3}+x y+y^{3}+1.
+	\]
 
-For which points $p = (0,0)$, $p = (\tfrac{1}{3},\tfrac{1}{3})$, $p = (-\tfrac{1}{3},-\tfrac{1}{3})$ is $f^{-1}(f(p))$ an imbedded submanifold in $\mathbb{R}^2$?
+	For which points $p = (0,0)$, $p = (\tfrac{1}{3},\tfrac{1}{3})$, $p = (-\tfrac{1}{3},-\tfrac{1}{3})$ is $f^{-1}(f(p))$ an imbedded submanifold in $\mathbb{R}^2$?
 
-\item Let $M$ be a compact manifold of dimension $n$, and let $f: M \to \mathbb{R}^n$ be $C^\infty$. Prove that $f$ cannot everywhere be non-singular.
+	\item Let $M$ be a compact manifold of dimension $n$, and let $f: M \to \mathbb{R}^n$ be $C^\infty$. Prove that $f$ cannot everywhere be non-singular.
 
-\item Find counterexamples to show that \hyperref[thm:1.36]{Proposition 1.36} would fail if either of the hypotheses closed or imbedded were deleted. In fact, one can prove more; namely, if $(M,\psi)$ is a submanifold of $N$ such that whenever $g\in C^\infty(M)$ there is a $C^\infty$ function $f$ on $N$ such that $f\circ\psi=g$, then $\psi$ is an imbedding and $\psi(M)$ is closed in $N$.
+	\item Find counterexamples to show that \hyperref[thm:1.36]{Proposition 1.36} would fail if either of the hypotheses closed or imbedded were deleted. In fact, one can prove more; namely, if $(M,\psi)$ is a submanifold of $N$ such that whenever $g\in C^\infty(M)$ there is a $C^\infty$ function $f$ on $N$ such that $f\circ\psi=g$, then $\psi$ is an imbedding and $\psi(M)$ is closed in $N$.
 
-\item Supply the details for \hyperref[thm:1.40]{1.40(a)} and (b).
+	\item Supply the details for \hyperref[thm:1.40]{1.40(a)} and (b).
 
-\item Prove \hyperref[thm:1.45]{Proposition 1.45}.
+	\item Prove \hyperref[thm:1.45]{Proposition 1.45}.
 
-\item Is every vector field on the real line complete?
+	\item Is every vector field on the real line complete?
 
-\item Prove that if $(U, x_1, \ldots, x_d)$ is a coordinate system on $M$, then $[\partial/\partial x_i, \partial/\partial x_j] = 0$ on $U$.
+	\item Prove that if $(U, x_1, \ldots, x_d)$ is a coordinate system on $M$, then $[\partial/\partial x_i, \partial/\partial x_j] = 0$ on $U$.
 
-\item Let $N \subset M$ be a submanifold. Let $\gamma: (a,b) \to M$ be a $C^\infty$ curve such that $\gamma(a,b) \subset N$. Show that it is not necessarily true that $\dot{\gamma}(t) \in N_{\gamma(t)}$ for each $t \in (a,b)$.
+	\item Let $N \subset M$ be a submanifold. Let $\gamma: (a,b) \to M$ be a $C^\infty$ curve such that $\gamma(a,b) \subset N$. Show that it is not necessarily true that $\dot{\gamma}(t) \in N_{\gamma(t)}$ for each $t \in (a,b)$.
 
-\item Prove that any $C^{\infty}$ vector field on a compact manifold is complete.
+	\item Prove that any $C^{\infty}$ vector field on a compact manifold is complete.
 
-\item Prove that a $C^{\infty}$ map $f\colon \mathbb{R}^{2} \to \mathbb{R}^{1}$ cannot be one-to-one.
+	\item Prove that a $C^{\infty}$ map $f\colon \mathbb{R}^{2} \to \mathbb{R}^{1}$ cannot be one-to-one.
 
-\item Supply the details of the equivalence of the two versions 1.60 and 1.61 of the Frobenius theorem.
+	\item Supply the details of the equivalence of the two versions 1.60 and 1.61 of the Frobenius theorem.
 
-\item Let $\varphi: N \to M$ be $C^\infty$, and let $X$ be a $C^\infty$ vector field on $N$. Suppose that $d\varphi(X(p)) = d\varphi(X(q))$ whenever $\varphi(p) = \varphi(q)$. Is there a smooth vector field $Y$ on $M$ which is $\varphi$-related to $X?$
+	\item Let $\varphi: N \to M$ be $C^\infty$, and let $X$ be a $C^\infty$ vector field on $N$. Suppose that $d\varphi(X(p)) = d\varphi(X(q))$ whenever $\varphi(p) = \varphi(q)$. Is there a smooth vector field $Y$ on $M$ which is $\varphi$-related to $X?$
 
-\item The torus is the manifold $S^{1} \times S^{1}$. Consider $S^{1}$ as the unit circle in the complex plane. We define a mapping $\varphi: \mathbb{R} \to S^{1} \times S^{1}$ by setting $\varphi(t) = (e^{2\pi i t}, e^{2\pi i\alpha t})$ where $\alpha$ is an irrational number. Prove that $(\mathbb{R}, \varphi)$ is a dense submanifold of $S^{1} \times S^{1}$. This submanifold is known as the skew line on the torus. \index{Skew line on torus} \index{Torus}
+	\item The torus is the manifold $S^{1} \times S^{1}$. Consider $S^{1}$ as the unit circle in the complex plane. We define a mapping $\varphi: \mathbb{R} \to S^{1} \times S^{1}$ by setting $\varphi(t) = (e^{2\pi i t}, e^{2\pi i\alpha t})$ where $\alpha$ is an irrational number. Prove that $(\mathbb{R}, \varphi)$ is a dense submanifold of $S^{1} \times S^{1}$. This submanifold is known as the skew line on the torus. \index{Skew line on torus} \index{Torus}
 
-\item Let $\gamma(t)$ be an integral curve of a vector field $X$ on $M$. Suppose that $\dot{\gamma}(t)=0$ for some $t$. Prove that $\gamma$ is a constant map, that is, its range consists of one point.
+	\item Let $\gamma(t)$ be an integral curve of a vector field $X$ on $M$. Suppose that $\dot{\gamma}(t)=0$ for some $t$. Prove that $\gamma$ is a constant map, that is, its range consists of one point.
 
-\item A Riemannian structure on a differentiable manifold M is a smooth choice of a positive definite inner product  $ \langle\cdot,\rangle_{m} $ on each tangent space  $ M_{m} $, smooth in the sense that whenever X and Y are  $ C^{\infty} $ vector fields on M, then  $ \langle X,Y\rangle $ is a  $ C^{\infty} $ function on M. Prove that there exists a Riemannian structure on every differentiable manifold. You will need to use a partition of unity argument. A Riemannian manifold is a differentiable manifold together with a Riemannian structure.
+	\item A Riemannian structure on a differentiable manifold M is a smooth choice of a positive definite inner product  $ \langle\cdot,\rangle_{m} $ on each tangent space  $ M_{m} $, smooth in the sense that whenever X and Y are  $ C^{\infty} $ vector fields on M, then  $ \langle X,Y\rangle $ is a  $ C^{\infty} $ function on M. Prove that there exists a Riemannian structure on every differentiable manifold. You will need to use a partition of unity argument. A Riemannian manifold is a differentiable manifold together with a Riemannian structure.
 
-\item Consider the product manifold  $ M \times N $ with the canonical projections  $ \pi_1: M \times N \to M $ and  $ \pi_2\colon M \times N \to N $.
+	\item Consider the product manifold  $ M \times N $ with the canonical projections  $ \pi_1: M \times N \to M $ and  $ \pi_2\colon M \times N \to N $.
 
-(a) Prove that  $ \alpha\colon \tilde{M} \to M \times N $ is  $ C^\infty $ if and only if  $ \pi_1 \circ \alpha $ and  $ \pi_2 \circ \alpha $ are  $ C^\infty $. \index{Riemannian structure}
+	(a) Prove that  $ \alpha\colon \tilde{M} \to M \times N $ is  $ C^\infty $ if and only if  $ \pi_1 \circ \alpha $ and  $ \pi_2 \circ \alpha $ are  $ C^\infty $. \index{Riemannian structure}
 
-(b) Prove that the map $v \mapsto (d\pi_{1}(v), d\pi_{2}(v))$ is an isomorphism of $(M \times N)_{(m,n)}$ with $M_{m} \oplus N_{n}$.
+	(b) Prove that the map $v \mapsto (d\pi_{1}(v), d\pi_{2}(v))$ is an isomorphism of $(M \times N)_{(m,n)}$ with $M_{m} \oplus N_{n}$.
 
-(c) Let $X$ and $Y$ be $C^{\infty}$ vector fields on $M$ and $N$ respectively. Then, by (b), $X$ and $Y$ canonically determine vector fields $\tilde{X} = (X,0)$ and $\tilde{Y} = (0,Y)$ on $M \times N$. Prove that $[\tilde{X}, \tilde{Y}] = 0$.
+	(c) Let $X$ and $Y$ be $C^{\infty}$ vector fields on $M$ and $N$ respectively. Then, by (b), $X$ and $Y$ canonically determine vector fields $\tilde{X} = (X,0)$ and $\tilde{Y} = (0,Y)$ on $M \times N$. Prove that $[\tilde{X}, \tilde{Y}] = 0$.
 
-(d) Let  $ (m_{0}, n_{0}) \in M \times N $, and define injections  $ i_{n_{0}}: M \to M \times N $ and  $ i_{m_{0}}: N \to M \times N $ by setting
+	(d) Let  $ (m_{0}, n_{0}) \in M \times N $, and define injections  $ i_{n_{0}}: M \to M \times N $ and  $ i_{m_{0}}: N \to M \times N $ by setting
 
-\[
-\begin{aligned}{}&{{}i_{n_{0}}(m)=(m,n_{0}),}\\ {}&{{}i_{m_{0}}(n)=(m_{0},n).}\\ \end{aligned}
-\]
+	\[
+		\begin{aligned}{}&{{}i_{n_{0}}(m)=(m,n_{0}),}\\ {}&{{}i_{m_{0}}(n)=(m_{0},n).}\\ \end{aligned}
+	\]
 
-Let  $ v \in (M \times N)_{(m_0, n_0)} $, and let  $ v_1 = d\pi_1(v) \in M_{m_0} $ and  $ v_2 = d\pi_2(v) \in N_{m_0} $. Let  $ f \in C^\infty(M \times N) $. Prove that
+	Let  $ v \in (M \times N)_{(m_0, n_0)} $, and let  $ v_1 = d\pi_1(v) \in M_{m_0} $ and  $ v_2 = d\pi_2(v) \in N_{m_0} $. Let  $ f \in C^\infty(M \times N) $. Prove that
 
-\[
-v(f)=v_{1}(f\circ i_{n_{0}})+v_{2}(f\circ i_{m_{0}}).
-\]
+	\[
+		v(f)=v_{1}(f\circ i_{n_{0}})+v_{2}(f\circ i_{m_{0}}).
+	\]
 
 \end{problemset}
