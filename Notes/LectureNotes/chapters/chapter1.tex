@@ -354,27 +354,36 @@ a manifold of dimension $d$.
 		\[
 			\{(U_{k},\varphi_{k})\colon k=1,\ldots,n+1\}.
 		\]
+
+		\citem{(i)} Not a Manifold. Consider $M = \{(x,y,z)\,|\, z^2=x^2+y^2\}\subset\mathbb{R}^3$
+		with the usual subspace topology. Then $M$ is not a local Euclidean
+		space, because the there is no connected open set of $M$ containing $\mathbf{0}$
+		that is homeomorphic to an open set in $\mathbb{R}^2$. So $M$ is not a manifold.
 	\end{enumerate}
 \end{examples}
 
 \warnernumber{6}
-\begin{definition}\label{thm:1.6}
+\begin{definition}[Smooth Maps]\label{thm:1.6}
 	Let $U \subset M$ be open. We say that $f: U \to \mathbb{R}$ is a $C^\infty$ function on
 	$U$ (denoted $f \in C^\infty(U)$) if $f \circ \varphi^{-1}$ is $C^\infty$
 	for each coordinate map $\varphi$ on $M$. A continuous map
 	$\psi: M \to N$ is said to be differentiable of class $C^\infty$
 	(denoted $\psi \in C^\infty(M,N)$ or simply $\psi \in C^\infty$)
-	if $g \circ \psi$ is a $C^\infty$ function on $\psi^{-1}$ (domain of $g$)
-	for all $C^\infty$ functions $g$ defined on open sets in $N$.
-	Equivalently, the continuous map $\psi$ is $C^\infty$ if and
+	if and
 	only if $\varphi \circ \psi \circ \tau^{-1}$ is $C^\infty$
-	for each coordinate map $\tau$ on $M$ and $\omega$ on $N$.
+	for each coordinate map $\tau$ on $M$ and $\varphi$ on $N$.
 \end{definition}
 
 Clearly the composition of two differentiable maps
 is again differentiable. Observe that a mapping $\psi: M \to N$ is $C^\infty$
 if and only if for each $m \in M$ there exists an open
 neighborhood $U$ of $m$ such that $\psi \mid U$ is $C^\infty$.
+
+
+\begin{definition}[Diffeomorphism]\label{def:diffeo}
+	A $C^\infty$ map $\psi: M\to N$ is a diffeomorphism if
+	$\psi$ maps $M$ one-to-one onto $N$ and $\psi^{-1}$ is $C^\infty$. \index{Diffeomorphism}
+\end{definition}
 
 
 \section{The Second Axiom of Countability}
@@ -470,7 +479,7 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	$\overline{G_i} - G_{i-1}$, and choose a finite subcover of the open
 	cover $\{U_\alpha \cap G_3 : \alpha \in A\}$ of the compact set $\overline{G_2}$.
 	This collection of open sets is easily seen to be a countable,
-	locally finite refinement of the open cover $\{U_n\}$, and consists of open sets with compact closures.
+	locally finite refinement of the open cover $\{U_\alpha\}$, and consists of open sets with compact closures.
 \end{proof}
 
 \warnernumber{10}
@@ -512,13 +521,13 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 \warnernumber{11}
 \begin{theorem}[Existence of Partitions of Unity]\label{thm:1.11}
 	Let $M$ be a differentiable manifold and
-	$\{U_a: a \in A\}$ an open cover of $M$. Then there exists a
+	$\{U_\alpha: \alpha \in A\}$ an open cover of $M$. Then there exists a
 	countable partition of unity $\{\varphi_i: i = 1, 2, 3, \ldots\}$
-	subordinate to the cover $\{U_a\}$ with $\operatorname{supp} \varphi_i$
+	subordinate to the cover $\{U_\alpha\}$ with $\operatorname{supp} \varphi_i$
 	compact for each $i$. If one does not require compact supports,
-	then there is a partition of unity $\{\varphi_a\}$ subordinate to
-	the cover $\{U_a\}$ (that is, $\operatorname{supp} \varphi_a \subset U_a$)
-	with at most countably many of the $\varphi_a$ not identically zero.
+	then there is a partition of unity $\{\varphi_\alpha\}$ subordinate to
+	the cover $\{U_\alpha\}$ (that is, $\operatorname{supp} \varphi_\alpha \subset U_\alpha$)
+	with at most countably many of the $\varphi_\alpha$ not identically zero.
 
 \end{theorem}
 
@@ -535,7 +544,7 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	\begin{equation}
 		%\tag{1}\hypertarget{eq:1.11:1}{}
 		\tag{1}\label{eq:1.11:1}
-		\psi_{p}=\left\{\begin{aligned}{}&{{}\varphi\circ\tau}&{\quad\text{on }V}\\ {}&{{}0}&{\quad\text{elsewhere}}\\ \end{aligned}\right.
+		\psi_{p}=\left\{\begin{aligned}{}&{{}\varphi\circ\tau}&{\quad\text{on }V}\\ {}&{{}0}&{\quad\text{elsewhere}} \end{aligned}\right.
 	\end{equation}
 
 	where $\varphi$ is the function \eqref{eq:1.10:1}.
