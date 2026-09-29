@@ -4,7 +4,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{mathtools}
 \usepackage{xeCJK}
-\setCJKmainfont{Adobe 楷体 Std}
+\setCJKmainfont{Noto Serif SC}
 \usepackage{tikz-cd}
 
 % 1. 开启标题背景色填充
@@ -166,6 +166,99 @@
 			\item General case: $\varphi = (h \circ r_1) \cdots (h \circ r_d)$
 			      for the cube, or $\varphi = h\bigl(\|x\|^2\bigr)$ for the ball.
 		\end{enumerate}
+	\end{proof}
+\end{frame}
+
+%====================================================================
+\section{Existence of Partition of Unity}
+
+\begin{frame}{Existence of partition of unity}
+	\begin{theorem}[Existence of partition of unity]
+		Let $M$ be a differentiable manifold and
+		$\{U_\alpha\}_{\alpha \in A}$ an open cover of $M$.
+		\begin{enumerate}
+			\item There exists a \emph{countable} partition of unity
+			      $\{\varphi_i \mid i = 1, 2, \dots\}$ subordinate to the
+			      cover $\{U_\alpha\}$, with $\supp \varphi_i$ compact for
+			      each $i$.
+			\item If one does not require compact support, there exists a
+			      partition of unity $\{\varphi_\alpha\}_{\alpha \in A}$
+			      \emph{with the same index} (subordinate to
+			      $\{U_\alpha\}$, $\supp \varphi_\alpha \subset U_\alpha$),
+			      with at most countably many of the $\varphi_\alpha$ not
+			      identically zero.
+		\end{enumerate}
+	\end{theorem}
+\end{frame}
+
+\begin{frame}{Proof sketch: local bumps}
+	\begin{proof}[Sketch]
+		\begin{enumerate}
+			\item Let $\{G_i\}$ exhaust $M$ as in the previous lemma, set
+			      $G_0 = \varnothing$. For $\forall\, p \in M$, let $i_p$ be
+			      the largest integer s.t.\
+			      $p \in M \setminus \overline{G_{i_p}}$. Choose
+			      $\alpha_p$ s.t.\ $p \in U_{\alpha_p}$.
+			\item Take a coordinate system $(V, \tau)$ centered at $p$ with
+			      \[
+				      V \subset U_{\alpha_p} \cap
+				      \bigl( G_{i_p+2} \setminus \overline{G_{i_p}} \bigr),
+				      \qquad \tau(V) \supset \overline{C(2)} .
+			      \]
+			\item Define
+			      \[
+				      \psi_p = \begin{cases} \varphi \circ \tau, & \text{on } V, \\ 0, & \text{elsewhere}, \end{cases}
+			      \]
+			      where $\varphi$ is the bump function of the previous
+			      lemma. Then $\psi_p \in C^\infty(M)$ and $\psi_p \equiv 1$
+			      on a neighborhood $W_p$ of $p$.
+		\end{enumerate}
+	\end{proof}
+\end{frame}
+
+\begin{frame}{Proof sketch: normalization and regrouping}
+	\begin{proof}[Sketch (continued)]
+		\begin{enumerate}
+			\setcounter{enumi}{3}
+			\item For each $i \geq 1$, finitely many $W_p$ cover the compact
+			      ring $\overline{G_i} \setminus G_{i-1}$. Ordering all
+			      these $\psi_p$ in a sequence $\psi_j$:
+			      $\{\supp \psi_j\}$ is locally finite, so
+			      \[
+				      \psi = \sum_{j=1}^{\infty} \psi_j
+			      \]
+			      is a well-defined $C^\infty$ function on $M$ with
+			      $\psi(p) > 0$ for all $p \in M$.
+			\item Then $\varphi_j = \psi_j / \psi$ forms the desired
+			      partition of unity with $\supp \varphi_j$ compact.
+			\item For the same-index version, set
+			      $\widetilde{\varphi}_\alpha = 0$ if no $\supp \varphi_j
+				      \subset U_\alpha$, otherwise the sum of all such
+			      $\varphi_j$. Local finiteness gives
+			      \[
+				      \supp \widetilde{\varphi}_\alpha \subset U_\alpha .
+				      \qedhere
+			      \]
+		\end{enumerate}
+	\end{proof}
+\end{frame}
+
+\begin{frame}{Corollary: separating a closed set from an open set}
+	\begin{corollary}
+		Let $G \subset M$ be open and $A \subset M$ closed with
+		$A \subset G$. Then $\exists$ a $C^\infty$ function
+		$\varphi: M \to [0,1]$ s.t.
+		\begin{enumerate}
+			\item[(a)] $0 \leq \varphi(p) \leq 1$ for all $p \in M$;
+			\item[(b)] $\varphi \equiv 1$ on $A$;
+			\item[(c)] $\supp \varphi \subset G$.
+		\end{enumerate}
+	\end{corollary}
+	\begin{proof}
+		Take a partition of unity $\{\phi, \psi\}$ subordinate to the cover
+		$\{G,\ M \setminus A\}$ with $\supp \phi \subset G$ and
+		$\supp \psi \subset M \setminus A$. Then $\varphi = 1 - \psi$ is
+		the desired function.
 	\end{proof}
 \end{frame}
 

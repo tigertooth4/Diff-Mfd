@@ -1,0 +1,327 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tikz-cd}
+
+% 1. 开启标题背景色填充
+\metroset{block=fill}
+
+% theorem environments
+\newtheorem{proposition}{Proposition}
+\newtheorem{exercise}{Exercise}
+
+% notation
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\supp}{\operatorname{supp}}
+
+\title{Ch2\quad Tangent Vectors and Differentials}
+\subtitle{Germs of Functions \& The Tangent Space}
+\date{September 28, 2026}
+\author{LXJ}
+
+\begin{document}
+
+\maketitle
+
+%====================================================================
+\section{The Idea: Derivations}
+
+\begin{frame}{Tangent vectors as operators}
+	\textbf{Idea.} Any vector $v = (v_1, \dots, v_n) \in \R^n$ can be thought
+	of as an \emph{operator} on differentiable functions. If $f$ is
+	differentiable at $p$, then $v$ assigns to $f$ the
+	\emph{directional derivative}
+	\[
+		v(f) = \sum_{i=1}^{n} v_i \, \frac{\partial f}{\partial r_i}(p),
+		\qquad \text{which is a real value.}
+	\]
+	It satisfies
+	\begin{enumerate}
+		\item \textbf{linearity}\quad
+		      $v(\lambda f + \mu g) = \lambda\, v(f) + \mu\, v(g)$;
+		\item \textbf{Leibniz rule}\quad
+		      $v(f \cdot g) = f(p)\cdot v(g) + v(f)\cdot g(p)$.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Why germs of functions?}
+	The operation of taking derivatives only depends on the
+	\emph{local} properties of functions. This is captured by the concept
+	of \emph{germs of functions}.
+	\begin{block}{Remark}
+		A vector $v$ is thus ``defined'' as a linear function on
+		differentiable functions, determined by the values of $v(f)$.
+	\end{block}
+	\begin{definition}[Germs of functions]
+		Let $m \in M$. Functions $f$ and $g$ defined on open sets
+		containing $m$ are said to have the \emph{same germ at $m$} if they
+		agree on some neighborhood of $m$. The equivalence classes of germs
+		of $C^\infty$ functions are called \emph{germs}, denoted by
+		$\widetilde{\F}_m$, i.e.
+		\[
+			\widetilde{\F}_m = \bigl\{ [f] \bigm|
+			f, g \in [f] \ \text{if } \exists \text{ open set } U \ni m,
+			\ \text{s.t.\ } f\big|_U = g\big|_U \bigr\}.
+		\]
+	\end{definition}
+\end{frame}
+
+%====================================================================
+\section{The Algebra of Germs}
+
+\begin{frame}{Operations on $\widetilde{\F}_m$}
+	The addition, scalar multiplication and multiplication of functions
+	induce
+	\begin{align*}
+		\text{(addition)}   & \quad [f] + [g] = [f + g], \\
+		\text{(scalar mult.)} & \quad \lambda [f] = [\lambda f], \\
+		\text{(multiplication)} & \quad [f] \cdot [g] = [fg].
+	\end{align*}
+	\begin{exercise}
+		Prove that these are well-defined operations.
+	\end{exercise}
+	\begin{block}{Remark}
+		These operations make $\widetilde{\F}_m$ an \emph{algebra} over
+		$\R$. A germ $[f]$ has a well-defined value $f(m)$ at $m$.
+	\end{block}
+	\begin{definition}[The ideals $F_m$ and $F_m^k$]
+		\[
+			F_m = \bigl\{ [f] \bigm| f \in \widetilde{\F}_m,\ f(m) = 0 \bigr\}.
+		\]
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Powers of the ideal $F_m$}
+	$F_m$ is an \emph{ideal} of $\widetilde{\F}_m$. Let $F_m^k$ be the
+	$k$-th power of $F_m$: the ideal of $\widetilde{\F}_m$ consisting of
+	all finite linear combinations of $k$-fold products of elements of
+	$F_m$,
+	\[
+		F_m^k = \bigl\{ \text{linear comb.\ of } [f_1] \cdots [f_k],
+		\ [f_i] \in F_m \bigr\}.
+	\]
+	These form a descending sequence of ideals
+	\[
+		\widetilde{\F}_m \supset F_m \supset F_m^2 \supset F_m^3
+		\supset \cdots
+	\]
+\end{frame}
+
+%====================================================================
+\section{The Tangent Space}
+
+\begin{frame}{Tangent vectors as derivations}
+	\begin{definition}[Tangent vector]
+		A \emph{tangent vector} $v$ at the point $m \in M$ is a
+		\emph{linear derivation} of the algebra $\widetilde{\F}_m$, i.e.\
+		for $[f], [g] \in \widetilde{\F}_m$ and $\lambda, \mu \in \R$:
+		\begin{enumerate}
+			\item[(a)] $v\bigl(\lambda [f] + \mu [g]\bigr)
+				      = \lambda\, v([f]) + \mu\, v([g])$;
+			\item[(b)] $v\bigl([f]\cdot[g]\bigr)
+				      = v([f])\, g(m) + f(m)\, v([g])$.
+		\end{enumerate}
+	\end{definition}
+	Let $T_m M$ or $M_m$ denote the set of all linear derivations at $m$,
+	called the \emph{tangent space to $M$ at $m$}.
+	\begin{block}{Note}
+		If $M_m \neq \varnothing$, then $M_m$ is a \emph{linear space},
+		since for $v, w \in M_m$, $\lambda, \mu \in \R$,
+		\[
+			(\lambda v + \mu w)([f])
+			\ \triangleq\ \lambda\, v([f]) + \mu\, w([f]).
+		\]
+	\end{block}
+\end{frame}
+
+\begin{frame}{Two remarks on the definition}
+	\begin{enumerate}
+		\item This definition of tangent spaces only works for the
+		      $C^\infty$ case;
+		\item It is \emph{intrinsic} --- it does not depend on the local
+		      coordinate system.
+	\end{enumerate}
+	\medskip
+	\begin{block}{Note (constants are killed)}
+		For a derivation $w \in M_m$ and $[c]$ the germ of a locally
+		constant function, $w([c]) = 0$.
+	\end{block}
+	\begin{proof}
+		It suffices to show $w([1]) = 0$:
+		\[
+			w([1]) = w([1]\cdot[1])
+			= w([1]) \cdot 1 + 1 \cdot w([1]) = 2\, w([1]). \qedhere
+		\]
+	\end{proof}
+\end{frame}
+
+%====================================================================
+\section{$M_m \cong (F_m / F_m^2)^*$}
+
+\begin{frame}{The key isomorphism}
+	\begin{lemma}
+		$M_m$ is isomorphic to $(F_m / F_m^2)^*$.
+	\end{lemma}
+	\begin{proof}
+		Consider $v \in M_m$. Then $v$ is a linear function on $F_m$ by
+		$v : [f] \mapsto v([f])$. This function \emph{vanishes on $F_m^2$}
+		by the Leibniz rule of $v$: $\forall\, [f], [g] \in F_m$,
+		\[
+			v([f][g]) = v([f]) \cdot g(m) + f(m) \cdot v([g]) = 0.
+		\]
+		So $v$ can be thought of as a linear function defined on the
+		cosets $[f] + F_m^2$, therefore $v \in (F_m/F_m^2)^*$.
+	\end{proof}
+\end{frame}
+
+\begin{frame}{Converse direction}
+	Conversely, for $\ell \in (F_m / F_m^2)^*$, we can define
+	$v_\ell \in M_m$ by
+	\[
+		v_\ell([f]) \ \triangleq\
+		\ell\bigl( [f] - [f(m)] + F_m^2 \bigr).
+	\]
+	Then one verifies that $v_\ell$ is a derivation on
+	$\widetilde{\F}_m$:
+	\begin{enumerate}
+		\item \textbf{Linearity.}
+		      $v_\ell\bigl(\lambda[f] + \mu[g]\bigr)
+		      = \ell\bigl( \lambda[f] - \lambda[f(m)] + F_m^2 \bigr)
+		      + \ell\bigl( \mu[g] - \mu[g(m)] + F_m^2 \bigr)
+		      = \lambda\, v_\ell([f]) + \mu\, v_\ell([g])$.
+		\item \textbf{Leibniz.}
+		      $v_\ell\bigl([f][g]\bigr)
+		      = \ell\bigl( [f][g] - [f(m)][g(m)] + F_m^2 \bigr)$,
+		      where
+		      \begin{align*}
+			      [f][g] - [f(m)][g(m)]
+			      & = \underbrace{\bigl([f]-[f(m)]\bigr)\bigl([g]-[g(m)]\bigr)}_{\in\, F_m^2} \\
+			      & \quad + [f(m)]\bigl([g]-[g(m)]\bigr)
+			      + \bigl([f]-[f(m)]\bigr)[g(m)],
+		      \end{align*}
+		      so $v_\ell([f][g]) = f(m)\, v_\ell([g]) + v_\ell([f])\, g(m)$.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{An exercise hidden in the proof}
+	\begin{exercise}
+		Prove that for $\ell \in (F_m / F_m^2)^*$,
+		\[
+			\ell\bigl( [f(m)]\cdot\bigl([g]-[g(m)]\bigr) \bigr)
+			= f(m)\, \ell\bigl( [g] - [g(m)] \bigr).
+		\]
+	\end{exercise}
+	\bigskip
+	\begin{alertblock}{Theorem}
+		\[
+			\dim\bigl(F_m / F_m^2\bigr) = \dim M.
+		\]
+	\end{alertblock}
+\end{frame}
+
+%====================================================================
+\section{Proof of $\dim(F_m/F_m^2) = \dim M$}
+
+\begin{frame}{A Taylor lemma with integral remainder}
+	\small
+	\begin{lemma}
+		If $g \in C^k(U)$ for $k \geq 2$ and $U$ is a convex open set in
+		$\R^d$, then $\forall\, p, q \in U$,
+		\begin{multline*}
+			g(q) = g(p) + \sum_{i=1}^{d}
+			\left. \frac{\partial g}{\partial r_i} \right|_{p}
+			\bigl(r_i(q) - r_i(p)\bigr) \\
+			+ \sum_{i,j} \bigl(r_i(q) - r_i(p)\bigr)
+			\bigl(r_j(q) - r_j(p)\bigr)
+			\int_0^1 (1-t)
+			\left. \frac{\partial^2 g}{\partial r_j \partial r_i}
+			\right|_{p + t(q - p)} dt .
+		\end{multline*}
+	\end{lemma}
+	\begin{proof}
+		Since $U$ is convex, for any $p, q \in U$ the segment
+		$\{ p + t(q-p) \mid t \in [0,1] \} \subset U$. Writing
+		$p_i \triangleq r_i(p)$, $q_i \triangleq r_i(q)$, we get
+		\[
+			g(q) - g(p)
+			= \int_0^1 \frac{d}{dt}\, g\bigl(p + t(q-p)\bigr)\, dt
+			= \sum_i \int_0^1
+			\left. \frac{\partial g}{\partial r_i}
+			\right|_{p + t(q-p)} (q_i - p_i)\, dt .
+			\qedhere
+		\]
+	\end{proof}
+\end{frame}
+
+\begin{frame}{Proof of the Taylor lemma (continued)}
+	For each integrand, expand around $p$:
+	\[
+		\left. \frac{\partial g}{\partial r_i}
+		\right|_{p + t(q-p)}
+		= \left. \frac{\partial g}{\partial r_i} \right|_{p}
+		+ \sum_j \int_0^t
+		\frac{\partial^2 g}{\partial r_j \partial r_i}
+		\bigl(p + s(q-p)\bigr)\, (q_j - p_j)\, ds .
+	\]
+	So, interchanging the order of integration ($s \leftrightarrow t$),
+	\begin{align*}
+		g(q) & = g(p) + \sum_i
+		\left. \frac{\partial g}{\partial r_i} \right|_{p} (q_i - p_i) \\
+		& \quad + \sum_{i,j} (q_i - p_i)(q_j - p_j) \int_0^1 (1-t)
+		\left. \frac{\partial^2 g}{\partial r_j \partial r_i}
+		\right|_{p + t(q-p)} dt .
+		\qedhere
+	\end{align*}
+\end{frame}
+
+\begin{frame}{Proof of the theorem: spanning set}
+	Let $(U, \varphi)$ be any coordinate system about $m \in M$, with
+	coordinate functions $(x_1, \dots, x_d)$, $d = \dim M$. Let
+	$[f] \in \widetilde{\F}_m$. Applying $f \circ \varphi^{-1}$ to the
+	lemma:
+	\begin{multline*}
+		f \circ \varphi^{-1}(x) - f \circ \varphi^{-1}(x_0)
+		= \sum_{i=1}^{d}
+		\left. \frac{\partial (f \circ \varphi^{-1})}{\partial x_i}
+		\right|_{x_0} (x_i - x_i^0) \\
+		+ \sum_{i,j} (x_i - x_i^0)(x_j - x_j^0) \int_0^1 (1-t)
+		\left. \frac{\partial^2 (f \circ \varphi^{-1})}
+		{\partial x_j \partial x_i} \right|_{x_0 + t(x - x_0)} dt .
+	\end{multline*}
+	Since $x = \varphi(p)$, $x_0 = \varphi(m)$, composing with $\varphi$
+	gives, \emph{modulo} $F_m^2$,
+	\[
+		[f(p)] - [f(m)]
+		= \sum_{i=1}^{d}
+		\left. \frac{\partial (f \circ \varphi^{-1})}{\partial x_i}
+		\right|_{\varphi(m)} \bigl(x_i(p) - x_i(m)\bigr).
+	\]
+	Hence $\bigl\{ [x_i] - [x_i(m)] \bigr\}$ \emph{spans} $F_m / F_m^2$.
+\end{frame}
+
+\begin{frame}{Proof of the theorem: linear independence}
+	We claim they are also \emph{linearly independent}. Suppose that
+	\[
+		\sum_i a_i \bigl(x_i - x_i(m)\bigr) \in F_m^2
+		\ \Longleftrightarrow\
+		\sum_i a_i \bigl(r_i - r_i(\varphi(m))\bigr) \in F_{\varphi(m)}^2 .
+	\]
+	Then applying $\left. \dfrac{\partial}{\partial r_j}
+	\right|_{\varphi(m)}$ to both sides gives
+	\[
+		a_j = 0 \qquad \forall\, j .
+	\]
+	Therefore $\bigl\{ [x_i] - [x_i(m)] \bigr\}_{i=1}^{d}$ is a basis of
+	$F_m / F_m^2$, and
+	\[
+		\dim\bigl(F_m / F_m^2\bigr) = d = \dim M . \qed
+	\]
+\end{frame}
+
+\end{document}
