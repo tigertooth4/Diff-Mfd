@@ -136,7 +136,7 @@ the subset of $X$ defined by \index{Neighborhood}
 \]
 We use the Kronecker index \index{Kronecker index}
 \[
-	\delta_{i j}=\left\{\begin{aligned}{}&{{}1,\quad}&{i=j}\\ {}&{{}0,\quad}&{i\neq j.}\\ \end{aligned}\right.
+	\delta_{i j}=\left\{\begin{aligned}{}&{{}1,\quad}&{i=j}\\ {}&{{}0,\quad}&{i\neq j.}\end{aligned}\right.
 \]
 If  $ \alpha=(\alpha_{1},\ldots,\alpha_{d}) $ is a d-tuple of non-negative integers, then we set
 \[
@@ -449,7 +449,7 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	We prove first that there exists a sequence  $ \{G_{i}: i = 1, 2, \ldots\} $ of open sets such that
 	\begin{equation}
 		%\tag{1}\hypertarget{eq:1.9:1}{}
-		\tag{1}\label{eq:1.9:1}
+		\label{eq:1.9:1}
 		\begin{aligned}{\overline{{G_{i}}}} & {{}\text{ is compact,}} \\
 		               {\overline{{G_{i}}}} & {{}\subset G_{i+1},}    \\ {X}&{{}=\bigcup_{i=1}^{\infty}G_{i}.}\\\end{aligned}
 	\end{equation}
@@ -493,27 +493,25 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	We need only let $\varphi$ be the product
 	\begin{equation}
 		%\tag{1}\hypertarget{eq:1.10:1}{}
-		\tag{1}\label{eq:1.10:1}
+		\label{eq:1.10:1}
 		\varphi=(h\circ r_{1})\cdots(h\circ r_{d}),
 	\end{equation}
 	where $h$ is a non-negative $C^{\infty}$ function on the real line which is $1$
 	on $[-1,1]$ and zero outside of $(-2,2)$. To construct such an $h$, we
 	start with the function
 	\begin{equation}
-		\tag{2}\label{eq:1.10:2}
-		f(t)=\left\{\begin{aligned}{}&{{}e^{-1/t^{2}}}&{}&{{}t>0}\\ {}&{{}0}&{}&{{}t\leq0}\\ \end{aligned}\right.
+		\label{eq:1.10:2}
+		f(t)=\left\{\begin{aligned}{}&{{}e^{-1/t^{2}}}&{}&{{}t>0}\\ {}&{{}0}&{}&{{}t\leq0}\end{aligned}\right.
 	\end{equation}
 	which is non-negative, $C^{\infty}$, and positive for $t>0$. Then the function
 	\begin{equation}
-		%\tag{3}\hypertarget{eq:1.10:3}{}
-		\tag{3}\label{eq:1.10:3}
+		\label{eq:1.10:3}
 		g(t)=\frac{f(t)}{f(t)+f(1-t)}
 	\end{equation}
 	is non-negative, $C^\infty$, and takes the value $1$ for $t \geq 1$ and
 	the value zero for $t \leq 0$. We obtain the desired function $h$ by setting
 	\begin{equation}
-		%\tag{4}\hypertarget{eq:1.10:4}{}
-		\tag{4}\label{eq:1.10:4}
+		\label{eq:1.10:4}
 		h(t)=g(t+2)g(2-t).
 	\end{equation}
 \end{proof}
@@ -542,8 +540,7 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	and such that $\tau(V)$ contains the closed cube $\overline{C(2)}$. Define
 
 	\begin{equation}
-		%\tag{1}\hypertarget{eq:1.11:1}{}
-		\tag{1}\label{eq:1.11:1}
+		\label{eq:1.11:1}
 		\psi_{p}=\left\{\begin{aligned}{}&{{}\varphi\circ\tau}&{\quad\text{on }V}\\ {}&{{}0}&{\quad\text{elsewhere}} \end{aligned}\right.
 	\end{equation}
 
@@ -558,15 +555,13 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	supports of the $\psi_j$ form a locally finite family of subsets of $M$.
 	Thus the function
 	\begin{equation}
-		%\tag{2}\hypertarget{eq:1.11:2}{}
-		\tag{2}\label{eq:1.11:2}
+		\label{eq:1.11:2}
 		\psi=\sum_{j=1}^{\infty}\psi_{j}
 	\end{equation}
 	is a well-defined $C^{\infty}$ function on $M$, and moreover
 	$\psi(p) > 0$ for each $p \in M$. For each $i = 1, 2, 3, \ldots$ define
 	\begin{equation}
-		%\tag{3}\hypertarget{eq:1.11:3}{}
-		\tag{3}\label{eq:1.11:3}
+		\label{eq:1.11:3}
 		\varphi_{i}=\psi_{i}/\psi.
 	\end{equation}
 	Then the functions $\{\varphi_i: i=1,2,3,\ldots\}$ form a partition
@@ -611,15 +606,14 @@ then $v$ assigns to $f$ the real number $v(f)$ which is the
 directional derivative of $f$ in the direction $v$ at $p$. That is,
 
 \begin{equation}
-	%\tag{1}\hypertarget{eq:1.12:1}{}
-	\tag{1}\label{eq:1.12:1}
+	\label{eq:1.12:1}
 	v(f)=v_{1}\frac{\partial f}{\partial r_{1}}\bigg|_{p}+\cdots+v_{d}\frac{\partial f}{\partial r_{d}}\bigg|_{p}.
 \end{equation}
 
 This operation of the vector v on differentiable functions satisfies two important properties.
 
 \begin{equation}
-	\tag{2}\label{eq:1.12:2}%\tag{2}\hypertarget{eq:1.12:2}{}
+	\label{eq:1.12:2}%\tag{2}\hypertarget{eq:1.12:2}{}
 	\begin{aligned}{v(f+\lambda g)}&{{}=v(f)+\lambda v(g);}\\ {v(f\cdot g)}&{{}=f(p)v(g)+g(p)v(f),}\\ \end{aligned}
 \end{equation}
 whenever $f$ and $g$ are differentiable near $p$, and $\lambda$ is a real number.
@@ -668,8 +662,7 @@ $\widetilde{F}_m \supset F_m \supset F_m^{2} \supset F_m^{3} \supset \cdots$.
 \end{definition}
 Observe that if we define  $ (v + w)(f) $ and  $ (\lambda v)(f) $ by \index{Tangent space}
 \begin{equation}
-	%\tag{1}\hypertarget{eq:1.14:1}{}
-	\tag{1}\label{eq:1.14:1}
+	\label{eq:1.14:1}
 	\begin{aligned}(v+w)(\mathbf{f})&=v(\mathbf{f})+w(\mathbf{f})\\ (\lambda v)(\mathbf{f})&=\lambda\big(v(\mathbf{f})\big)\end{aligned}
 \end{equation}
 whenever $v, w \in M_m$ and $\lambda \in \mathbb{R}$, then $v + w$ and $\lambda v$ again are tangent
@@ -728,8 +721,7 @@ The proof is based on the following calculus lemma \cite{31}.
 \begin{lemma*}
 	If $g$ is of class $C^k$ ($k \geq 2$) on a convex open set $U$ about $p$ in $\mathbb{R}^d$, then for each $q \in U$,
 	\begin{equation}
-		%\tag{1}
-		\tag{1}\label{eq:1.17:1}
+		\label{eq:1.17:1}
 		\begin{aligned}{g(q)} & {{}=g(p)+\sum_{i=1}^{d}\frac{\partial g}{\partial r_{i}}\bigg|_{p}\big(r_{i}(q)-r_{i}(p)\big)\quad.} \\
 		               {}     & {{}\quad+\sum_{i,j}\big(r_{i}(q)-r_{i}(p)\big)\big(r_{j}(q)-r_{j}(p)\big)
 			                        \int_{0}^{1}(1-t)\frac{\partial^{2}g}{\partial r_{i}\partial r_{j}}\bigg|_{(p+t(q-p))}d t.}         \\
@@ -780,16 +772,14 @@ determines an element of $F_{p}^{2}$ since the integral as a function of $q$ is 
 In practice we will treat tangent vectors as operating on functions rather than on their germs.
 If $f$ is a differentiable function defined on a neighborhood of $m$, and $v \in M_{m}$, we define
 \begin{equation}
-	%\tag{1}\hypertarget{eq:1.18:1}{}
-	\tag{1}\label{eq:1.18:1}
+	\label{eq:1.18:1}
 	v(f)=v(\mathbf{f}).
 \end{equation}
 
 Thus  $ v(f) = v(g) $ whenever f and g agree on a neighborhood of m, and clearly
 
 \begin{equation}
-	%\tag{2}\hypertarget{eq:1.18:2}{}
-	\tag{2}\label{eq:1.18:2}
+	\label{eq:1.18:2}
 	\begin{aligned}{v(f+\lambda g)}&{{}=v(f)+\lambda v(g)\qquad(\lambda\in\mathbb{R}),}\\ {v(f\cdot g)}&{{}=f(m)v(g)+g(m)v(f),}\\ \end{aligned}
 \end{equation}
 where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of the domains of definition of f and g.
@@ -798,19 +788,15 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 \warnernumber{19}
 \begin{definition}\label{thm:1.19}
 	Let $(U,\varphi)$ be a coordinate system with coordinate functions $x_{1},\ldots,x_{d}$, and let $m\in U$. For each $i\in\{1,\ldots,d\}$, we define a tangent vector  $ (\partial/\partial x_i)|_{m} \in M_m $ by setting
-
 	\begin{equation}
-		\tag{1}\label{eq:1.19:1}
+		\label{eq:1.19:1}
 		\left(\frac{\partial}{\partial x_{i}}\bigg\vert_{m}\right)(f)=\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg\vert_{\varphi(m)}
 	\end{equation}
-
 	for each function $f$ which is $C^{\infty}$ on a neighborhood of $m$. We interpret (1) as the directional derivative of $f$ at $m$ in the $x_{i}$ coordinate direction. We also use the notation
-
 	\begin{equation}
-		\tag{2}\label{eq:1.19:2}
+		\label{eq:1.19:2}
 		\left.\frac{\partial f}{\partial x_{i}}\right|_{m}=\left(\left.\frac{\partial}{\partial x_{i}}\right|_{m}\right)(f).
 	\end{equation}
-
 	\begin{center}
 		\redrawn{figure-02}
 	\end{center}
@@ -819,89 +805,83 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 
 \warnernumber{20}
 \begin{remarks}{on 1.19}\label{thm:1.20}
+	\begin{enumerate}
+		\item[(a)] Clearly  $  ((\partial/\partial x_i)_m)(f)  $ depends only on the germ of  $  f  $ at  $  m  $, and (a) and (b) of 1.14 are satisfied; so  $  (\partial/\partial x_i)_m  $ is a tangent vector at  $  m  $. Moreover,  $  \{(\partial/\partial x_i)_m : i = 1, \ldots, d\}  $ is a basis of  $  M_m  $. Indeed, it is the basis of  $  M_m  $ dual to the basis  $  \{(\mathbf{x}_i - \mathbf{x}_1(\mathbf{m})) : i = 1, \ldots, d\}  $ of  $  F_m/F_m^2  $ since
+		      \[
+			      \frac{\partial}{\partial x_{i}}\bigg|_{m}(x_{j}-x_{j}(m))=\delta_{ij}.
+		      \]
 
+		\item[(b)] If  $ v \in M_{m} $, then
+		      \[
+			      v=\sum_{i=1}^{d}v(x_{i})\left.\frac{\partial}{\partial x_{i}}\right|_{m}.
+		      \]
+		      Simply check that both sides give the same results when applied to the functions $(x_{j}-x_{j}(m))$.
 
-	(a) Clearly  $  ((\partial/\partial x_i)_m)(f)  $ depends only on the germ of  $  f  $ at  $  m  $, and (a) and (b) of 1.14 are satisfied; so  $  (\partial/\partial x_i)_m  $ is a tangent vector at  $  m  $. Moreover,  $  \{(\partial/\partial x_i)_m : i = 1, \ldots, d\}  $ is a basis of  $  M_m  $. Indeed, it is the basis of  $  M_m  $ dual to the basis  $  \{(\mathbf{x}_i - \mathbf{x}_1(\mathbf{m})) : i = 1, \ldots, d\}  $ of  $  F_m/F_m^2  $ since
+		\item[(c)] Suppose that $(U,\varphi)$ and $(V,\psi)$ are coordinate systems about $m$, with coordinate functions $x_{1},\ldots,x_{d}$ and $y_{1},\ldots,y_{d}$ respectively. Then it follows from remark (b) that
 
-	\[
-		\frac{\partial}{\partial x_{i}}\bigg|_{m}(x_{j}-x_{j}(m))=\delta_{ij}.
-	\]
+		      \[
+			      \frac{\partial}{\partial y_{j}}\Big|_{m}=\sum_{i=1}^{d}\frac{\partial x_{i}}{\partial y_{j}}\Big|_{m}\frac{\partial}{\partial x_{i}}\Big|_{m}.
+		      \]
+		      Observe that $(\partial/\partial x_{i})$ depends on $\varphi$ and not only on $x_{i}$. In particular, if $x_{1}$ were equal to $y_{1}$, it would not necessarily follow that $\partial/\partial x_{1}$ equals $\partial/\partial y_{1}$.
 
-	(b) If  $ v \in M_{m} $, then
-
-	\[
-		v=\sum_{i=1}^{d}v(x_{i})\left.\frac{\partial}{\partial x_{i}}\right|_{m}.
-	\]
-
-	Simply check that both sides give the same results when applied to the functions $(x_{j}-x_{j}(m))$.
-
-	(c) Suppose that $(U,\varphi)$ and $(V,\psi)$ are coordinate systems about $m$, with coordinate functions $x_{1},\ldots,x_{d}$ and $y_{1},\ldots,y_{d}$ respectively. Then it follows from remark (b) that
-
-	\[
-		\frac{\partial}{\partial y_{j}}\Big|_{m}=\sum_{i=1}^{d}\frac{\partial x_{i}}{\partial y_{j}}\Big|_{m}\frac{\partial}{\partial x_{i}}\Big|_{m}.
-	\]
-
-	Observe that $(\partial/\partial x_{i})$ depends on $\varphi$ and not only on $x_{i}$. In particular, if $x_{1}$ were equal to $y_{1}$, it would not necessarily follow that $\partial/\partial x_{1}$ equals $\partial/\partial y_{1}$.
-
-	(d) If we apply \hyperref[thm:1.19]{Definition 1.19} to the canonical coordinate system  $ r_{1}, \ldots, r_{d} $ on  $ R^{d} $, then the tangent vectors which we obtain are none other than the ordinary partial derivative operators  $ (\partial/\partial r_{i}) $.
-
-	\warnernumber{21}
-	\discuss{1.21}{}\label{thm:1.21}
-	Our proof of the finite dimensionality of $F_m/F_m^2$ certainly fails in the  $ C^k $ case for  $ k < \infty $ since the remainder term in the \hyperref[thm:1.17]{lemma of 1.17} will not be a sum of products of  $ C^k $ functions, and the lemma doesn't even make sense in the  $ C^1 $ case. In fact, it turns out (see [21]) that $F_m/F_m^2$ is always infinite dimensional in the  $ C^k $ case for  $ 1 \leq k < \infty $. There are various ways to define tangent vectors in the  $ C^k $ case in order that  $ \dim M_m = \dim M $ (all of which work in the  $ C^\infty $ case, too). One way is to define a tangent vector v at m as a mapping which assigns to each function (defined and differentiable of class  $ C^k $ on a neighborhood of m) a real number  $ v(f) $ such that if  $ (U, \varphi) $ is a coordinate system on a neighborhood of m, then there exists a list of real numbers  $ (a_1, \ldots, a_d) $ (depending on  $ \varphi $) such that
-
-	\[
-		v(f)=\sum_{i=1}^{d}a_{i}\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg|_{\varphi(m)}.
-	\]
-
-	Then the space  $ M_m $ of tangent vectors again turns out to be finite dimensional, with a basis  $ \{(\partial/\partial x_i)\big|_{m}\} $.
-
-	\warnernumber{22}
-	\discuss{1.22}{The Differential}\label{thm:1.22}
-	Let  $ \psi: M \to N $ be  $ C^\infty $, and let  $ m \in M $. The differential of  $ \psi $ at  $ m $ is the linear map
-
-	\begin{equation}
-		\tag{1}\label{eq:1.22:1}
-		d\psi\colon M_{m}\to N_{\psi(m)}
-	\end{equation}
-
-	defined as follows. If $v\in M_{m}$, then $d\psi(v)$ is to be a tangent vector at $\psi(m)$, so we describe how it operates on functions. Let $g$ be a $C^{\infty}$ function on a neighborhood of $\psi(m)$. Define $d\psi(v)(g)$ by setting
-
-	\begin{equation}
-		\tag{2}\label{eq:1.22:2}
-		d\psi(v)(g)=v(g\circ\psi).
-	\end{equation}
-
-	It is easily checked that $d\psi$ is a linear map of $M_{m}$ into $N_{\psi(m)}$. Strictly speaking, this map should be denoted $d\psi\mid M_{m}$, or simply $d\psi_{m}$. However, we omit the subscript $m$ when there is no possibility of confusion. The map $\psi$ is called non-singular at $m$ if $d\psi_{m}$ is non-singular, that is, if the kernel of (1) consists of 0 alone. The dual map \index{Non-singular mapping}
-
-	\begin{equation}
-		\tag{3}\label{eq:1.22:3}
-		\delta\psi\colon N_{\psi(m)}^{*}\to M_{m}^{*}
-	\end{equation}
-
-	is defined as usual by requiring that
-
-	\begin{equation}
-		\tag{4}\label{eq:1.22:4}
-		\delta\psi(\omega)(v)=\omega\bigl(d\psi(v)\bigr)
-	\end{equation}
-
-	whenever $\omega \in N_{\psi(m)}^{*}$ and $v \in M_{m}$. In the special case of a $C^{\infty}$ function $f: M \to \mathbb{R}$, if $v \in M_{m}$ and $f(m) = r_{0}$, then
-
-	\begin{equation}
-		\tag{5}\label{eq:1.22:5}
-		d f(v)=v(f)\frac{d}{d r}\bigg|_{r_{0}}.
-	\end{equation}
-
-	In this case, we usually take $df$ to mean the element of $M_{m}^{*}$ defined by
-
-	\begin{equation}
-		\tag{6}\label{eq:1.22:6}
-		d f(v)=v(f).
-	\end{equation}
-
-	That is, we identify $df$ with $\delta f(\omega)$, where $\omega$ is the basis of the 1-dimensional space $\mathbb{R}_{r_{0}}^{*}$ dual to $(d/dr)|_{r_{0}}$. Particular usage will be clear from the context.
-
+		\item[(d)] If we apply \hyperref[thm:1.19]{Definition 1.19} to the canonical coordinate system  $ r_{1}, \ldots, r_{d} $ on  $ R^{d} $, then the tangent vectors which we obtain are none other than the ordinary partial derivative operators  $ (\partial/\partial r_{i}) $.
+	\end{enumerate}
 \end{remarks}
+
+\warnernumber{21}
+\discuss{1.21}{}\label{thm:1.21}
+Our proof of the finite dimensionality of $F_m/F_m^2$ certainly fails in the  $ C^k $ case for  $ k < \infty $ since the remainder term in the \hyperref[thm:1.17]{lemma of 1.17} will not be a sum of products of  $ C^k $ functions, and the lemma doesn't even make sense in the  $ C^1 $ case. In fact, it turns out (see [21]) that $F_m/F_m^2$ is always infinite dimensional in the  $ C^k $ case for  $ 1 \leq k < \infty $. There are various ways to define tangent vectors in the  $ C^k $ case in order that  $ \dim M_m = \dim M $ (all of which work in the  $ C^\infty $ case, too). One way is to define a tangent vector v at m as a mapping which assigns to each function (defined and differentiable of class  $ C^k $ on a neighborhood of m) a real number  $ v(f) $ such that if  $ (U, \varphi) $ is a coordinate system on a neighborhood of m, then there exists a list of real numbers  $ (a_1, \ldots, a_d) $ (depending on  $ \varphi $) such that
+\[
+	v(f)=\sum_{i=1}^{d}a_{i}\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg|_{\varphi(m)}.
+\]
+Then the space  $ M_m $ of tangent vectors again turns out to be finite dimensional, with a basis  $ \{(\partial/\partial x_i)\big|_{m}\} $.
+
+\warnernumber{22}
+\discuss{1.22}{The Differential}\label{thm:1.22}
+Let  $ \psi: M \to N $ be  $ C^\infty $, and let  $ m \in M $. The differential of  $ \psi $ at  $ m $ is the linear map
+
+\begin{equation}
+	\label{eq:1.22:1}
+	d\psi\colon M_{m}\to N_{\psi(m)}
+\end{equation}
+defined as follows. If $v\in M_{m}$, then $d\psi(v)$ is to be a tangent vector at $\psi(m)$, so we describe how it operates on functions.
+Let $g$ be a $C^{\infty}$ function on a neighborhood of $\psi(m)$. Define $d\psi(v)(g)$ by setting
+
+\begin{equation}
+	\label{eq:1.22:2}
+	d\psi(v)(g)=v(g\circ\psi).
+\end{equation}
+
+It is easily checked that $d\psi$ is a linear map of $M_{m}$ into $N_{\psi(m)}$. Strictly speaking, this map should be
+denoted $d\psi\mid M_{m}$, or simply $d\psi_{m}$. However, we omit the subscript $m$ when there is no
+possibility of confusion. The map $\psi$ is called non-singular at $m$ if $d\psi_{m}$ is non-singular,
+that is, if the kernel of (1) consists of 0 alone. The dual map \index{Non-singular mapping}
+\begin{equation}
+	\label{eq:1.22:3}
+	\delta\psi\colon N_{\psi(m)}^{*}\to M_{m}^{*}
+\end{equation}
+is defined as usual by requiring that
+\begin{equation}
+	\label{eq:1.22:4}
+	\delta\psi(\omega)(v)=\omega\bigl(d\psi(v)\bigr)
+\end{equation}
+
+whenever $\omega \in N_{\psi(m)}^{*}$ and $v \in M_{m}$. In the special case of a $C^{\infty}$ function $f: M \to \mathbb{R}$, if $v \in M_{m}$ and $f(m) = r_{0}$, then
+
+\begin{equation}
+	\label{eq:1.22:5}
+	d f(v)=v(f)\frac{d}{d r}\bigg|_{r_{0}}.
+\end{equation}
+
+In this case, we usually take $df$ to mean the element of $M_{m}^{*}$ defined by
+
+\begin{equation}
+	\label{eq:1.22:6}
+	d f(v)=v(f).
+\end{equation}
+
+That is, we identify $df$ with $\delta f(\omega)$, where $\omega$ is the basis of the 1-dimensional space $\mathbb{R}_{r_{0}}^{*}$ dual to $(d/dr)|_{r_{0}}$. Particular usage will be clear from the context.
+
 
 \warnernumber{23}
 \begin{remarks}{on 1.22}\label{thm:1.23}
@@ -936,7 +916,6 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 	\[
 		d\sigma\left(\frac{d}{d r}\bigg|_{t}\right)\in M_{\sigma(t)}.
 	\]
-
 	We shall denote the tangent vector to  $ \sigma $ at t by  $ \dot{\sigma}(t) $.
 
 	\begin{center}
@@ -944,37 +923,26 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 	\end{center}
 
 	Now, if $v$ is any element of $M_{m}$, then $v$ is the tangent vector to a smooth curve in $M$. For one can simply choose a coordinate system $(U,\varphi)$, centered at $m$, for which
-
 	\[
 		v=d\varphi\left(\frac{\partial}{\partial r_{1}}\bigg|_{0}\right).
 	\]
-
 	Then $v$ is the tangent vector at 0 to the curve $t \mapsto \varphi^{-1}(t, 0, \ldots, 0)$. One should observe that many curves can have the same tangent vector, and that two smooth curves $\sigma$ and $\tau$ in $M$ for which $\sigma(t_{0}) = \tau(t_{0}) = m$ have the same tangent vector at $t_{0}$ if and only if
-
 	\[
 		\frac{d(f\circ\sigma)}{d r}\Big|_{t_{0}}=\frac{d(f\circ\tau)}{d r}\Big|_{t_{0}}
 	\]
-
 	for all functions $f$ which are $C^{\infty}$ on a neighborhood of $m$.
-
 	If $\sigma$ happens to be a curve in the Euclidean space $\mathbb{R}^{n}$, then
-
 	\[
 		\dot{\sigma}(t)=\frac{d\sigma_{1}}{d r}\bigg|_{t}\frac{\partial}{\partial r_{1}}\bigg|_{\sigma(t)}+\cdots+\frac{d\sigma_{n}}{d r}\bigg|_{t}\frac{\partial}{\partial r_{n}}\bigg|_{\sigma(t)}.
 	\]
-
 	If we identify this tangent vector with the element
-
 	\[
 		\left(\frac{d\sigma_{1}}{d r}\bigg|_{t},\ldots,\frac{d\sigma_{n}}{d r}\bigg|_{t}\right)
 	\]
-
 	of $\mathbb{R}^{n}$, then we have
-
 	\[
 		\dot{\sigma}(t)=\lim_{h\to0}\frac{\sigma(t+h)-\sigma(t)}{h}.
 	\]
-
 	Thus with this identification our notion of tangent vector coincides, in this special case, with the geometric notion of a tangent to a curve in Euclidean space.
 
 \end{remarks}
@@ -987,19 +955,14 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 
 \begin{proof}
 	Let $n\in\psi(M)$. $\psi^{-1}(n)$ is closed. We need only show that it is open. For this, let $m\in\psi^{-1}(n)$. Choose coordinate systems $(U,x_{1},\ldots,x_{d})$ and $(V,y_{1},\ldots,y_{c})$ about $m$ and $n$ respectively, so that $\psi(U)\subset V$. Then on $U$,
-
 	\[
 		0=d\psi\left(\frac{\partial}{\partial x_{j}}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\frac{\partial}{\partial y_{i}}\qquad(j=1,\ldots,d),
 	\]
-
 	which implies that
-
 	\[
 		\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\equiv0\qquad(i=1,\ldots,c;j=1,\ldots,d).
 	\]
-
 	Thus the functions $y_{i}\circ\psi$ are constant on $U$. This implies that $\psi(U)=n$; hence $\psi^{-1}(n)$ is open and consequently $\psi^{-1}(n)=M$.
-
 \end{proof}
 
 We shall now see that in a natural way the collection of all tangent vectors to a differentiable manifold itself forms a differentiable manifold called the tangent bundle. We have a similar dual object called the cotangent bundle formed from the linear functionals on the tangent spaces. \index{Tangent bundle}
@@ -1009,14 +972,14 @@ We shall now see that in a natural way the collection of all tangent vectors to 
 Let $M$ be a $C^{\infty}$ manifold with differentiable structure $\mathcal{F}$. Let
 
 \begin{equation}
-	\tag{1}\label{eq:1.25:1}
+	\label{eq:1.25:1}
 	\begin{aligned}{T(M)=\bigcup_{m\in M}M_{m},}\\ {T^{*}(M)=\bigcup_{m\in M}M_{m}^{*}.}\\ \end{aligned}
 \end{equation}
 
 There are natural projections:
 
 \begin{equation}
-	\tag{2}\label{eq:1.25:2}
+	\label{eq:1.25:2}
 	\begin{aligned}{\pi\colon T(M)\to M,\qquad}&{{}\pi(v)=m\quad\text{if}\quad v\in M_{m},}\\ {\pi^{*}\colon T^{*}(M)\to M,\qquad}&{{}\pi^{*}(\tau)=m\quad\text{if}\quad\tau\in M_{m}^{*}.}\\ \end{aligned}
 \end{equation}
 
@@ -1026,24 +989,22 @@ Let $(U,\varphi)\in\mathcal{F}$ with coordinate functions $x_1,\ldots,x_d$. Defi
 	\tilde\varphi^*:(\pi^*)^{-1}(U)\to\mathbb R^{2d}
 \]
 by
-
 \[
 	\tilde{\varphi}(v)=\big(x_{1}\big(\pi(v)\big),\ldots,x_{d}\big(\pi(v)\big),d x_{1}(v),\ldots,d x_{d}(v)\big)
 \]
 
 \begin{equation}
-	\tag{3}\label{eq:1.25:3}
+	\label{eq:1.25:3}
 	\tilde{\varphi}^{*}(\tau)=\Bigl(x_{1}\bigl(\pi^{*}(\tau)\bigr),\ldots,x_{d}\bigl(\pi^{*}(\tau)\bigr),\tau\Bigl(\frac{\partial}{\partial x_{1}}\Bigr),\ldots,\tau\Bigl(\frac{\partial}{\partial x_{d}}\Bigr)\Bigr)
 \end{equation}
-
 for all $v\in\pi^{-1}(U)$ and $\tau\in(\pi^{*})^{-1}(U)$. Note that $\widetilde{\varphi}$ and $\widetilde{\varphi}^*$ are both one-to-one maps onto open subsets of $\mathbb{R}^{2d}$. The following steps outline the construction of a topology and a differentiable structure on $T(M)$. The construction for $T^*(M)$ goes similarly. The proofs are left as exercises.
+\begin{enumerate}
+	\item[(a)] If $(U,\varphi)$ and $(V,\psi)\in\mathcal{F}$, then $\tilde{\psi}\circ\tilde{\varphi}^{-1}$ is  $ C^{\infty} $.
 
-(a) If $(U,\varphi)$ and $(V,\psi)\in\mathcal{F}$, then $\tilde{\psi}\circ\tilde{\varphi}^{-1}$ is  $ C^{\infty} $.
+	\item[(b)] The collection $\{\tilde{\varphi}^{-1}(W)\colon W \text{ open in } \mathbb{R}^{2d}, (U,\varphi) \in \mathcal{F}\}$ forms a basis for a topology on $T(M)$ which makes $T(M)$ into a $2d$-dimensional, second countable, locally Euclidean space.
 
-(b) The collection $\{\tilde{\varphi}^{-1}(W)\colon W \text{ open in } \mathbb{R}^{2d}, (U,\varphi) \in \mathcal{F}\}$ forms a basis for a topology on $T(M)$ which makes $T(M)$ into a $2d$-dimensional, second countable, locally Euclidean space.
-
-(c) Let $\widetilde{\mathcal{F}}$ be the maximal collection, with respect to \hyperref[thm:1.4]{1.4(b)}, containing
-
+	\item[(c)] Let $\widetilde{\mathcal{F}}$ be the maximal collection, with respect to \hyperref[thm:1.4]{1.4(b)}, containing
+\end{enumerate}
 \[
 	\{(\pi^{-1}(U),\widetilde{\varphi})\colon(U,\varphi)\in\mathcal{F}\}.
 \]
@@ -1055,12 +1016,10 @@ $T(M)$ and $T^{*}(M)$ with these differentiable structures are called respective
 If $\psi: M \to N$ is a $C^{\infty}$ map, then the differential of $\psi$ defines a mapping of the tangent bundles
 
 \begin{equation}
-	\tag{4}\label{eq:1.25:4}
+	\label{eq:1.25:4}
 	d\psi\colon T(M)\to T(N),
 \end{equation}
-
 where  $ d\psi(m,v) = d\psi_{m}(v) $ whenever  $ v \in M_{m} $. It is easily checked that (4) is a  $ C^{\infty} $ map.
-
 \warnernumber{26}
 \discuss{1.26}{Higher Order Tangent Vectors and Differentials}\label{thm:1.26}\footnote{The material of this section will not be used elsewhere in the book, and so it may be skipped without loss of continuity.}
 It is useful to look at $M_{m}$ as $(F_{m}/F_{m}^{2})^{*}$, for this point of view allows an immediate generalization to higher order tangent vectors. We digress for a moment to give these definitions.
@@ -1070,7 +1029,7 @@ Recall that $\tilde{F}_{m}$ is the algebra of germs of functions at $m$. $F_{m} 
 The vector space $F_m/F_m^{k+1}$ is called the space of $k$th order differentials at $m$, and we denote it by ${}^kM_m$. As before, $f$ denotes the germ of $f$ at $m$, and \{\} will denote cosets in $F_m/F_m^{k+1}$. Let $f$ be a differentiable function on a neighborhood of $m$. We define the $k$th order differential $d^k f$ of $f$ at $m$ by
 
 \begin{equation}
-	\tag{1}\label{eq:1.26:1}
+	\label{eq:1.26:1}
 	d^{k}f=\{\mathbf{f}-\mathbf{f}(\mathbf{m})\}.
 \end{equation}
 
