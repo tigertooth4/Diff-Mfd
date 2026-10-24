@@ -1712,24 +1712,24 @@ is exact. Let $A^{*}\colon V\to U$ and $B^{*}\colon W\to V$ be the adjoints of $
 
 If $Bv \neq 0$, then $(B^*B + AA^*)v \neq 0$. If $Bv = 0$, then by the exactness, $v$ lies in the image of $A$. But $A^*$ is injective on the image of $A$. Thus $A^*v \neq 0$, which implies that $(B^*B + AA^*)v \neq 0$.
 
-We shall apply this to the special case in which $U$, $V$, and $W$ are $\Lambda_{p-1}(M_{m}^{*}), \Lambda_{p}(M_{m}^{*})$, and $\Lambda_{p+1}(M_{m}^{*})$ respectively, with the inner products
+We shall apply this to the special case in which $U$, $V$, and $W$ are $\Lambda_{p-1}(T_{m}^{*} M), \Lambda_{p}(T_{m}^{*} M)$, and $\Lambda_{p+1}(T_{m}^{*} M)$ respectively, with the inner products
 
 \[
 \langle\omega,\tau\rangle=\ast(\omega\wedge\ast\tau),
 \]
 
-and with $A$ and $B$ both left exterior multiplication by $\xi \in M_{m}^{*}$:
+and with $A$ and $B$ both left exterior multiplication by $\xi \in T_{m}^{*} M$:
 
 \begin{equation}
 \tag{1}\label{eq:6.34:1}
-\Lambda_{p-1}(M_{m}^{*})\xrightarrow{\xi}\Lambda_{p}(M_{m}^{*})\xrightarrow{\xi}\Lambda_{p+1}(M_{m}^{*}).
+\Lambda_{p-1}(T_{m}^{*} M)\xrightarrow{\xi}\Lambda_{p}(T_{m}^{*} M)\xrightarrow{\xi}\Lambda_{p+1}(T_{m}^{*} M).
 \end{equation}
 
-According to Exercise 15 of Chapter 2, the sequence (1) is exact; and according to Exercise 14 of Chapter 2, the adjoint of  $ \xi\colon \Lambda_{p}(M_{m}^{*})\to\Lambda_{p+1}(M_{m}^{*}) $ is
+According to Exercise 15 of Chapter 2, the sequence (1) is exact; and according to Exercise 14 of Chapter 2, the adjoint of  $ \xi\colon \Lambda_{p}(T_{m}^{*} M)\to\Lambda_{p+1}(T_{m}^{*} M) $ is
 
 \begin{equation}
 \tag{2}\label{eq:6.34:2}
-(-1)^{n p}*{\xi}*:\:\Lambda_{p+1}(M_{m}^{*})\to\Lambda_{p}(M_{m}^{*}).
+(-1)^{n p}*{\xi}*:\:\Lambda_{p+1}(T_{m}^{*} M)\to\Lambda_{p}(T_{m}^{*} M).
 \end{equation}
 
 Thus it follows from the above remarks that
@@ -1739,7 +1739,7 @@ Thus it follows from the above remarks that
 (-1)^{n p}{*}\xi{*}\xi+(-1)^{n(p-1)}\xi{*}\xi{*}
 \end{equation}
 
-is an isomorphism on $\Lambda_{p}(M_{m}^{*})$.
+is an isomorphism on $\Lambda_{p}(T_{m}^{*} M)$.
 
 \end{remarks}
 
@@ -1751,7 +1751,7 @@ is an isomorphism on $\Lambda_{p}(M_{m}^{*})$.
 \Delta(\varphi^{2}\alpha)(m)\neq0
 \end{equation}
 
-for each smooth form $\alpha$ such that $\alpha(m) \neq 0$ and for each $C^\infty$ function $\varphi$ on $M$ such that $\varphi(m) = 0$ but $d\varphi(m) \neq 0$. Assume that $\alpha$ is a $p$-form, and let $0 \neq d\varphi = \xi \in M_m^*$. Recall that
+for each smooth form $\alpha$ such that $\alpha(m) \neq 0$ and for each $C^\infty$ function $\varphi$ on $M$ such that $\varphi(m) = 0$ but $d\varphi(m) \neq 0$. Assume that $\alpha$ is a $p$-form, and let $0 \neq d\varphi = \xi \in T_{m}^{*} M$. Recall that
 
 \[
 \Delta=(-1)^{n(p+1)+1}d{\ast}d{\ast}+(-1)^{np+1}{\ast}d{\ast}d.
@@ -1779,14 +1779,14 @@ which is not zero, according to \eqref{eq:6.34:3}. Hence $\Delta$ is elliptic, a
 
 \warnernumber{36}
 \begin{remarks}\label{thm:6.36}
-We have seen that for each $\xi$ in $M_m^*$ there is a well-defined linear transformation $\sigma_\Delta(\xi)$ on $\Lambda_p(M_m^*)$ defined by
+We have seen that for each $\xi$ in $T_{m}^{*} M$ there is a well-defined linear transformation $\sigma_\Delta(\xi)$ on $\Lambda_p(T_{m}^{*} M)$ defined by
 
 \begin{equation}
 \tag{1}\label{eq:6.36:1}
 \sigma_{\Delta}(\xi)(v)=\Delta(\varphi^{2}\alpha)(m),
 \end{equation}
 
-where  $ v \in \Lambda_p(M_m^*) $, where  $ \alpha $ is any  $ p $-form such that  $ \alpha(m) = v $, and where  $ \varphi $ is any  $ C^\infty $ function such that  $ \varphi(m) = 0 $ and  $ d\varphi(m) = \xi $. This linear transformation  $ \sigma_\Delta(\xi) $ is known as the symbol of the operator  $ \Delta $. The ellipticity of all the operators  $ L $ on  $ \mathbb{R}^n $ obtained from  $ \Delta $ via coordinate systems is equivalent to the property that the symbol  $ \sigma_\Delta(\xi) $ is an isomorphism at each point  $ m $ for each non-zero  $ \xi \in M_m^* $. Our computations in 6.35 contain a proof of the fact that the symbol of the exterior derivative operator  $ d $, namely  $ \sigma_d(\xi): \Lambda(M_m^*) \to \Lambda(M_m^*) $, is simply left exterior multiplication by  $ \xi $; whereas the symbol of the adjoint  $ \delta $ of  $ d $ is the adjoint of left exterior multiplication by  $ \xi $. In the theory of general partial differential operators on vector bundles over  $ M $, ellipticity is defined, as above, in terms of the symbol. \index{Symbol of a differential operator}
+where  $ v \in \Lambda_p(T_{m}^{*} M) $, where  $ \alpha $ is any  $ p $-form such that  $ \alpha(m) = v $, and where  $ \varphi $ is any  $ C^\infty $ function such that  $ \varphi(m) = 0 $ and  $ d\varphi(m) = \xi $. This linear transformation  $ \sigma_\Delta(\xi) $ is known as the symbol of the operator  $ \Delta $. The ellipticity of all the operators  $ L $ on  $ \mathbb{R}^n $ obtained from  $ \Delta $ via coordinate systems is equivalent to the property that the symbol  $ \sigma_\Delta(\xi) $ is an isomorphism at each point  $ m $ for each non-zero  $ \xi \in T_{m}^{*} M $. Our computations in 6.35 contain a proof of the fact that the symbol of the exterior derivative operator  $ d $, namely  $ \sigma_d(\xi): \Lambda(T_{m}^{*} M) \to \Lambda(T_{m}^{*} M) $, is simply left exterior multiplication by  $ \xi $; whereas the symbol of the adjoint  $ \delta $ of  $ d $ is the adjoint of left exterior multiplication by  $ \xi $. In the theory of general partial differential operators on vector bundles over  $ M $, ellipticity is defined, as above, in terms of the symbol. \index{Symbol of a differential operator}
 
 \end{remarks}
 

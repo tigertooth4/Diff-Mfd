@@ -1,7 +1,7 @@
 % Chapter 2 — Tensors and Differential Forms (reviewed)
 \chapter{Tensors and Differential Forms}
 
-There are a number of vector spaces and algebras naturally associated with the tangent space  $ M_{m} $. Suitably smooth assignments of elements of these spaces to the points in M yield tensor fields and differential forms of various types. We shall first develop some of the pertinent facts from multilinear algebra, and then beginning with 2.14 we shall apply these concepts to manifolds.
+There are a number of vector spaces and algebras naturally associated with the tangent space  $ T_{m} M $. Suitably smooth assignments of elements of these spaces to the points in M yield tensor fields and differential forms of various types. We shall first develop some of the pertinent facts from multilinear algebra, and then beginning with 2.14 we shall apply these concepts to manifolds.
 
 \section{Tensor and Exterior Algebras}
 
@@ -480,18 +480,18 @@ where
 l(v_{1}\wedge\cdots\wedge v_{k})=l(v_{1})\wedge\cdots\wedge l(v_{k})\quad\mathrm{and}\quad l(1)=1.
 \]
 
-The transpose  $ \delta l $:  $ W^{*}\rightarrow V^{*} $ also extends to an algebra homomorphism
+The transpose  $ l^{*} $:  $ W^{*}\rightarrow V^{*} $ also extends to an algebra homomorphism
 
 \begin{equation}
 \tag{2}\label{eq:2.13:2}
-\delta l\colon\Lambda(W^{*})\to\Lambda(V^{*}).
+l^{*}\colon\Lambda(W^{*})\to\Lambda(V^{*}).
 \end{equation}
 
 Our isomorphisms \eqref{eq:2.9:5} of  $ \Lambda(V^{*}) $ with  $ \Lambda(V)^{*} $ and of  $ \Lambda(W^{*}) $ with  $ \Lambda(W)^{*} $ are natural in the sense that (2) is the transpose of (1); that is,
 
 \begin{equation}
 \tag{3}\label{eq:2.13:3}
-\big(\delta l(w^{*}),v\big)=\big(w^{*},l(v)\big)\qquad\big(w^{*}\in\Lambda(W^{*});v\in\Lambda(V)\big).
+\big(l^{*}(w^{*}),v\big)=\big(w^{*},l(v)\big)\qquad\big(w^{*}\in\Lambda(W^{*});v\in\Lambda(V)\big).
 \end{equation}
 
 \section{Tensor Fields and Differential Forms}
@@ -502,27 +502,27 @@ Our isomorphisms \eqref{eq:2.9:5} of  $ \Lambda(V^{*}) $ with  $ \Lambda(V)^{*} 
 Let M be a differentiable manifold. We define \index{Differential forms}
 
 \[
-T_{r,s}(M)=\bigcup_{m\in M}(M_{m})_{r,s}
+T_{r,s}(M)=\bigcup_{m\in M}(T_{m} M)_{r,s}
 \]
 
 tensor bundle of type (r,s) over M
 
 \[
-\Lambda_{k}^{*}(M)=\bigcup_{m\in M}\Lambda_{k}(M_{m}^{*})
+\Lambda_{k}^{*}(M)=\bigcup_{m\in M}\Lambda_{k}(T_{m}^{*} M)
 \]
 
 exterior k bundle over M
 
 
 \[
-\Lambda^{*}(M)=\bigcup_{m\in M}\Lambda(M_{m}^{*})
+\Lambda^{*}(M)=\bigcup_{m\in M}\Lambda(T_{m}^{*} M)
 \]
 
 exterior algebra bundle over M. \index{Exterior k-bundle}\index{Exterior algebra bundle}
 
-In the cases in which $k = 0$ and $(r,s) = (0,0)$, the unions in (1) and (2) are disjoint unions of copies of the real line—one copy for each point in $M$. $T_{r,s}(M)$, $\Lambda_{k}^{*}(M)$, and $\Lambda^{*}(M)$ have natural manifold structures such that the canonical projection maps to $M$ are $C^{\infty}$. If $(U,\varphi)$ is a coordinate system on $M$ with coordinate functions $y_{1}, \ldots, y_{d}$, then the bases $\{\partial/\partial y_{i}\}$ of $M_{m}$ and $\{dy_{i}\}$ of $M_{m}^{*}$, for $m \in U$, yield bases of $(M_{m})_{r,s}$, $\Lambda_{k}(M_{m}^{*})$, and $\Lambda(M_{m}^{*})$. For example, the basis of $\Lambda_{k}(M_{m}^{*})$ is $\{dy_{i_{1}} \wedge \cdots \wedge dy_{i_{k}}: i_{1} < \cdots < i_{k}\}$.
+In the cases in which $k = 0$ and $(r,s) = (0,0)$, the unions in (1) and (2) are disjoint unions of copies of the real line—one copy for each point in $M$. $T_{r,s}(M)$, $\Lambda_{k}^{*}(M)$, and $\Lambda^{*}(M)$ have natural manifold structures such that the canonical projection maps to $M$ are $C^{\infty}$. If $(U,\varphi)$ is a coordinate system on $M$ with coordinate functions $y_{1}, \ldots, y_{d}$, then the bases $\{\partial/\partial y_{i}\}$ of $T_{m} M$ and $\{dy_{i}\}$ of $T_{m}^{*} M$, for $m \in U$, yield bases of $(T_{m} M)_{r,s}$, $\Lambda_{k}(T_{m}^{*} M)$, and $\Lambda(T_{m}^{*} M)$. For example, the basis of $\Lambda_{k}(T_{m}^{*} M)$ is $\{dy_{i_{1}} \wedge \cdots \wedge dy_{i_{k}}: i_{1} < \cdots < i_{k}\}$.
 
-Using these bases, one can define maps of the inverse images of $U$ in $T_{r,s}(M)$, $\Lambda_{k}^{*}(M)$, and $\Lambda^{*}(M)$ under the respective projection maps to $\varphi(U) \times$ Euclidean spaces of the proper dimensions. By requiring these maps to be coordinate systems, one obtains the natural manifold structures on $T_{r,s}(M)$, $\Lambda_{k}^{*}(M)$, and $\Lambda^{*}(M)$ just as we did previously in 1.25 for $T(M)$ and $T^{*}(M)$ (which incidentally is simply $\Lambda_{1}^{*}(M)$).
+Using these bases, one can define maps of the inverse images of $U$ in $T_{r,s}(M)$, $\Lambda_{k}^{*}(M)$, and $\Lambda^{*}(M)$ under the respective projection maps to $\varphi(U) \times$ Euclidean spaces of the proper dimensions. By requiring these maps to be coordinate systems, one obtains the natural manifold structures on $T_{r,s}(M)$, $\Lambda_{k}^{*}(M)$, and $\Lambda^{*}(M)$ just as we did previously in 1.25 for $TM$ and $T^{*}M$ (which incidentally is simply $\Lambda_{1}^{*}(M)$).
 
 \end{definition}
 
@@ -566,7 +566,7 @@ $ E^k(M) $ shall denote the set of all smooth k-forms on M, and  $ E^*(M) $ the 
 
 \warnernumber{18}
 \discuss{2.18}{}\label{thm:2.18}
-Let  $ \omega \in E^k(M) $. Then  $ \omega_m \in \Lambda_k(M_m^*) $, and can be considered (via the duality \eqref{eq:2.9:4}) as an alternating multilinear function on  $ M_m $. So if  $ X_1, \ldots, X_k $ are vector fields on  $ M $,  $ \omega(X_1, \ldots, X_k) $ makes sense—it is the function whose value at  $ m $ is
+Let  $ \omega \in E^k(M) $. Then  $ \omega_m \in \Lambda_k(T_{m}^{*} M) $, and can be considered (via the duality \eqref{eq:2.9:4}) as an alternating multilinear function on  $ T_{m} M $. So if  $ X_1, \ldots, X_k $ are vector fields on  $ M $,  $ \omega(X_1, \ldots, X_k) $ makes sense—it is the function whose value at  $ m $ is
 
 \begin{equation}
 \tag{1}\label{eq:2.18:1}
@@ -589,7 +589,7 @@ and is an alternating multilinear map of the module  $ \mathfrak{X}(M) $ into  $
 
 whenever $f, g \in C^\infty(M)$ and $X_1, \ldots, X_{i-1}, X, Y, X_{i+1}, \ldots, X_k \in \mathfrak{X}(M)$.
 
-Conversely, it is useful to observe that any alternating $C^\infty(M)$ multilinear map (2) of the module $\mathfrak{X}(M)$ into $C^\infty(M)$ defines a form; for we claim that if $\omega$ is such a map, then $\omega(X_1, \ldots, X_k)(m)$ depends only on the values of the vector fields $X_i$ at $m$. Assuming this for the moment, it follows that $\omega$ defines an alternating multilinear function $\omega_m$ on $M_m$, and hence defines an element of $\Lambda_k(M_m^*)$; namely, given $(v_1, \ldots, v_k) \in M_m \times \cdots \times M_m$, choose $V_1, \ldots, V_k \in \mathfrak{X}(M)$ such that $V_i(m) = v_i$ ($i = 1, \ldots, k$), and define
+Conversely, it is useful to observe that any alternating $C^\infty(M)$ multilinear map (2) of the module $\mathfrak{X}(M)$ into $C^\infty(M)$ defines a form; for we claim that if $\omega$ is such a map, then $\omega(X_1, \ldots, X_k)(m)$ depends only on the values of the vector fields $X_i$ at $m$. Assuming this for the moment, it follows that $\omega$ defines an alternating multilinear function $\omega_m$ on $T_{m} M$, and hence defines an element of $\Lambda_k(T_{m}^{*} M)$; namely, given $(v_1, \ldots, v_k) \in T_{m} M \times \cdots \times T_{m} M$, choose $V_1, \ldots, V_k \in \mathfrak{X}(M)$ such that $V_i(m) = v_i$ ($i = 1, \ldots, k$), and define
 
 \begin{equation}
 \tag{4}\label{eq:2.18:4}
@@ -633,7 +633,7 @@ Observe the simple form which formula (2) of \hyperref[thm:2.10]{2.10(b)} takes 
 
 \warnernumber{19}
 \begin{definition}\label{thm:2.19}
-If $f \in C^\infty(M)$, the differential $df$ is a smooth mapping of $T(M)$ into $\mathbb{R}$ which is linear on each tangent space. Thus $df$ can be considered as a 1-form, $df: M \to \Lambda_1^*(M)$. The 1-form $df$ is called the exterior derivative of the 0-form $f$, and this exterior differentiation operator $d$ has an important extension to $E^*(M)$ given by the following.
+If $f \in C^\infty(M)$, the differential $df$ is the 1-form with value $df_m(v)=v(f)$ at $m$. Its evaluation $(m,v)\mapsto df_m(v)$ is a smooth real-valued function on $TM$, linear on each tangent space. The 1-form $df$ is called the exterior derivative of the 0-form $f$, and this exterior differentiation operator $d$ has an important extension to $E^*(M)$ given by the following.
 
 \end{definition}
 
@@ -658,13 +658,13 @@ Existence. Let $p \in M$. Let $E^*(p)$ be the set of all smooth forms defined on
 where the $a_\Phi \in C^\infty\big((\text{domain} \omega) \cap U\big)$, where $\Phi$ runs over all subsets of $\{1, \ldots, d\}$, and where the $dx_\Phi$ are either $dx_{\epsilon_1} \wedge \cdots \wedge dx_{\epsilon_r}$ when $\Phi = \{i_1 < \cdots < i_r\}$ or the constant function $1$ when $\Phi = \varnothing$. We define $d\omega$ at $p$ by setting
 
 \[
-\begin{array}{r}{d\omega_{p}=\sum d a_{\Phi}|_{p}\wedge d x_{\Phi}|_{p}\in\Lambda(M_{p}^{*}).}\end{array}
+\begin{array}{r}{d\omega_{p}=\sum d a_{\Phi}|_{p}\wedge d x_{\Phi}|_{p}\in\Lambda(T_{p}^{*} M).}\end{array}
 \]
 
 
 We will have to show that the definition of  $ d\omega $, is independent of the choice of coordinates. But first, we give the following properties:
 
-(a)  $ \omega \in E^{r}(p) \Rightarrow d\omega_{p} \in \Lambda_{r+1}(M_{p}^{*}) $.
+(a)  $ \omega \in E^{r}(p) \Rightarrow d\omega_{p} \in \Lambda_{r+1}(T_{p}^{*} M) $.
 
 (b)  $ d\omega_{p} $ depends only on the germ of  $ \omega $ at p.
 
@@ -737,11 +737,11 @@ That $i(X)\omega$ is smooth follows easily from \eqref{eq:2.16:2}; and from 2.12
 
 \warnernumber{22}
 \discuss{2.22}{Effect of Mappings}\label{thm:2.22}
-Let $\psi: M \to N$ be a smooth map, and let $m \in M$. Then we have the differential $d\psi: M_m \to N_{\psi(m)}$, its transpose $\delta\psi: N_{\psi(m)}^* \to M_m^*$, and the induced algebra homomorphism $\delta\psi\colon \Lambda\big(N_{\psi(m)}^{*}\big) \to \Lambda(M_{m}^{*})$. If $\omega$ is a form on $N$, then we can pull $\omega$ back to a form on $M$ by setting
+Let $\psi: M \to N$ be a smooth map, and let $m \in M$. Then we have the differential $\psi_{*,m}: T_{m} M \to T_{\psi(m)} N$, its transpose $\psi_m^{*}: T_{\psi(m)}^{*} N \to T_{m}^{*} M$, and the induced algebra homomorphism $\psi_m^{*}\colon \Lambda\big(T_{\psi(m)}^{*} N\big) \to \Lambda(T_{m}^{*} M)$. If $\omega$ is a form on $N$, then we can pull $\omega$ back to a form on $M$ by setting
 
 \begin{equation}
 \tag{1}\label{eq:2.22:1}
-\delta\psi(\omega)|_{m}=\delta\psi(\omega|_{\psi(m)}).
+\psi^{*}(\omega)|_{m}=\psi_m^{*}(\omega|_{\psi(m)}).
 \end{equation}
 
 This is one of the particularly nice features of differential forms. Under a smooth mapping, they can be pulled back from the range to the domain of the map. Vector fields, on the other hand, do not display such pleasing behavior under mappings.
@@ -751,20 +751,20 @@ This is one of the particularly nice features of differential forms. Under a smo
 \begin{proposition}\label{thm:2.23}
 Let  $ \psi\colon M \to N $ be a smooth map. Then
 
-(a)  $ \delta\psi\colon E^{*}(N)\to E^{*}(M) $ and is an algebra homomorphism.
+(a)  $ \psi^{*}\colon E^{*}(N)\to E^{*}(M) $ and is an algebra homomorphism.
 
-(b)  $ \delta\psi $ commutes with  $ d $; that is,  $ d(\delta\psi(\omega)) = \delta\psi(d\omega) $ ( $ \omega \in E^*(N) $).
+(b)  $ \psi^{*} $ commutes with  $ d $; that is,  $ d(\psi^{*}(\omega)) = \psi^{*}(d\omega) $ ( $ \omega \in E^*(N) $).
 
-(c)  $ \delta\psi(\omega)(X_1,\ldots,X_k)(m)=\omega_{\psi(m)}(d\psi(X_1(m)),\ldots,d\psi(X_k(m))) $ for  $ \omega\in E^k(N) $ and for vector fields  $ X_1,\ldots,X_k $ on  $ M $.
+(c)  $ \psi^{*}(\omega)(X_1,\ldots,X_k)(m)=\omega_{\psi(m)}(\psi_{*}(X_1(m)),\ldots,\psi_{*}(X_k(m))) $ for  $ \omega\in E^k(N) $ and for vector fields  $ X_1,\ldots,X_k $ on  $ M $.
 
 \end{proposition}
 
 \begin{proof}
-Result (c) is clear from \eqref{eq:2.13:3}; and \eqref{eq:2.13:2} and the \hyperref[thm:2.22]{definition 2.22}(1) imply that $\delta\psi$ is an algebra homomorphism. Before we check that $\delta\psi(\omega)$ is actually a smooth form for $\omega\in E^{*}(N)$, observe the following special case of (b): If $f\in C^\infty(N)$, then $\delta\psi(f)=f\circ\psi\in C^\infty(M)$, and \hyperref[thm:1.23]{1.23(d)} implies that
+Result (c) is clear from \eqref{eq:2.13:3}; and \eqref{eq:2.13:2} and the \hyperref[thm:2.22]{definition 2.22}(1) imply that $\psi^{*}$ is an algebra homomorphism. Before we check that $\psi^{*}(\omega)$ is actually a smooth form for $\omega\in E^{*}(N)$, observe the following special case of (b): If $f\in C^\infty(N)$, then $\psi^{*}(f)=f\circ\psi\in C^\infty(M)$, and \hyperref[thm:1.23]{1.23(d)} implies that
 
 \begin{equation}
 \tag{1}\label{eq:2.23:1}
-\delta\psi(d f)=d(f\circ\psi)=d(\delta\psi(f)).
+\psi^{*}(d f)=d(f\circ\psi)=d(\psi^{*}(f)).
 \end{equation}
 
 Now let $\omega \in E^{*}(N)$, and let $m \in M$. Choose a coordinate system $(U, x_1, \ldots, x_d)$ about $\psi(m)$ and a neighborhood $V$ of $m$ such that $\psi(V) \subset U$. Then there are $C^\infty$ functions $a_\Phi$ on $U$ such that
@@ -778,14 +778,14 @@ It follows that
 
 \begin{equation}
 \tag{3}\label{eq:2.23:3}
-\delta\psi(\omega)\bigm|V=\sum a_{\Phi}\circ\psi\;d(x_{i_{1}}\circ\psi)\wedge\dots\wedge d(x_{i_{r}}\circ\psi),
+\psi^{*}(\omega)\bigm|V=\sum a_{\Phi}\circ\psi\;d(x_{i_{1}}\circ\psi)\wedge\dots\wedge d(x_{i_{r}}\circ\psi),
 \end{equation}
 
-which is a smooth form on $V$. Hence $\delta\psi(\omega)\in E^{*}(M)$, and thus (a) is proved. To complete (b), we use (3):
+which is a smooth form on $V$. Hence $\psi^{*}(\omega)\in E^{*}(M)$, and thus (a) is proved. To complete (b), we use (3):
 
 \begin{equation}
 \tag{4}\label{eq:2.23:4}
-\begin{aligned}{d\big(\delta\psi(\omega)\big)\big|_{m}}&{{}=d\big(\textstyle\sum a_{\Phi}\circ\psi d(x_{i_{1}}\circ\psi)\wedge\cdots\wedge d(x_{i_{r}}\circ\psi)\big)\big|_{m}}\\ {}&{{}=\textstyle\sum\big(d(a_{\Phi}\circ\psi)\wedge d(x_{i_{1}}\circ\psi)\wedge\cdots\wedge d(x_{i_{r}}\circ\psi)\big)\big|_{m}}\\ {}&{{}=\delta\psi(\textstyle\sum d a_{\Phi}\wedge d x_{i_{1}}\wedge\cdots\wedge d x_{i_{r}}\big)\big|_{m}}\\ {}&{{}=\delta\psi(d\omega)\big|_{m}.}\\ \end{aligned}
+\begin{aligned}{d\big(\psi^{*}(\omega)\big)\big|_{m}}&{{}=d\big(\textstyle\sum a_{\Phi}\circ\psi d(x_{i_{1}}\circ\psi)\wedge\cdots\wedge d(x_{i_{r}}\circ\psi)\big)\big|_{m}}\\ {}&{{}=\textstyle\sum\big(d(a_{\Phi}\circ\psi)\wedge d(x_{i_{1}}\circ\psi)\wedge\cdots\wedge d(x_{i_{r}}\circ\psi)\big)\big|_{m}}\\ {}&{{}=\psi^{*}(\textstyle\sum d a_{\Phi}\wedge d x_{i_{1}}\wedge\cdots\wedge d x_{i_{r}}\big)\big|_{m}}\\ {}&{{}=\psi^{*}(d\omega)\big|_{m}.}\\ \end{aligned}
 \end{equation}
 
 Thus (b) is proved, and the proof is complete.
@@ -797,28 +797,28 @@ Thus (b) is proved, and the proof is complete.
 
 \warnernumber{24}
 \begin{definition}\label{thm:2.24}
-Tensor fields and differential forms can be differentiated with respect to a vector field. The resulting derivative is known as the Lie derivative and is defined as follows. Fix a smooth vector field $X$ on a manifold $M$. Recall (see 1.48) that we use $X_t$ to denote the local 1-parameter group of transformations associated with $X$. Let $Y$ be another smooth vector field on $M$. We shall define the derivative of $Y$ with respect to $X$ at the point $m \in M$. First we follow the integral curve of $X$ through $m$ out to the point $X_t(m)$ and evaluate $Y$ there. Then we transfer $Y_{X_{t}(m)}$ back to $M_m$ via the differential $dX_{-t}$ of the diffeomorphism $X_{-t}$. In $M_m$ we take the difference of the vectors $dX_{-t}(Y_{X_{t}(m)})$ and $Y_m$, divide the difference by $t$, and then take the limit as $t \to 0$. In other words, we consider the smooth $M_m$-valued function $t \mapsto dX_{-t}(Y_{X_{t}(m)})$, and we take its derivative at $t = 0$. The result is a vector in $M_m$ which is called the Lie derivative of $Y$ with respect to $X$ at $m$ and which is denoted by $(L_X Y)_m$. Thus we define
+Tensor fields and differential forms can be differentiated with respect to a vector field. The resulting derivative is known as the Lie derivative and is defined as follows. Fix a smooth vector field $X$ on a manifold $M$. Recall (see 1.48) that we use $X_t$ to denote the local 1-parameter group of transformations associated with $X$. Let $Y$ be another smooth vector field on $M$. We shall define the derivative of $Y$ with respect to $X$ at the point $m \in M$. First we follow the integral curve of $X$ through $m$ out to the point $X_t(m)$ and evaluate $Y$ there. Then we transfer $Y_{X_{t}(m)}$ back to $T_{m} M$ via the differential $(X_{-t})_{*}$ of the diffeomorphism $X_{-t}$. In $T_{m} M$ we take the difference of the vectors $(X_{-t})_{*}(Y_{X_{t}(m)})$ and $Y_m$, divide the difference by $t$, and then take the limit as $t \to 0$. In other words, we consider the smooth $T_{m} M$-valued function $t \mapsto (X_{-t})_{*}(Y_{X_{t}(m)})$, and we take its derivative at $t = 0$. The result is a vector in $T_{m} M$ which is called the Lie derivative of $Y$ with respect to $X$ at $m$ and which is denoted by $(L_X Y)_m$. Thus we define
 
 \begin{equation}
 \tag{1}\label{eq:2.24:1}
-(L_{X}Y)_{m}=\lim_{t\to0}\frac{d X_{-t}(Y_{X_{t}(m)})-Y_{m}}{t}=\frac{d}{d t}\bigg|_{t=0}\big(d X_{-t}(Y_{X_{t}(m)})\big).
+(L_{X}Y)_{m}=\lim_{t\to0}\frac{(X_{-t})_{*}(Y_{X_{t}(m)})-Y_{m}}{t}=\frac{d}{d t}\bigg|_{t=0}\big((X_{-t})_{*}(Y_{X_{t}(m)})\big).
 \end{equation}
 
 \begin{center}
 \redrawn{figure-24}
 \end{center}
 
-In a similar way we define the Lie derivative of a differential form $\omega$ with respect to the vector field $X$, except that in this case we evaluate $\omega$ at $X_t(m)$ and then pull back via $\delta X_t$ to $\Lambda(M_m^*)$ where we take the difference with $\omega(m)$, divide by $t$, and take the limit as $t \to 0$. Thus we define \index{Lie derivative}
+In a similar way we define the Lie derivative of a differential form $\omega$ with respect to the vector field $X$, except that in this case we evaluate $\omega$ at $X_t(m)$ and then pull back via $X_t^{*}$ to $\Lambda(T_{m}^{*} M)$ where we take the difference with $\omega(m)$, divide by $t$, and take the limit as $t \to 0$. Thus we define \index{Lie derivative}
 
 \begin{equation}
 \tag{2}\label{eq:2.24:2}
-(L_{X}\omega)_{m}=\lim_{t\to0}\frac{\delta X_{t}(\omega_{X_{t}(m)})-\omega_{m}}{t}=\frac{d}{d t}\bigg|_{t=0}\big(\delta X_{t}(\omega_{X_{t}(m)})\big).
+(L_{X}\omega)_{m}=\lim_{t\to0}\frac{X_{t}^{*}(\omega_{X_{t}(m)})-\omega_{m}}{t}=\frac{d}{d t}\bigg|_{t=0}\big(X_{t}^{*}(\omega_{X_{t}(m)})\big).
 \end{equation}
 
-Smoothness of $L_{X}\omega$ and of $L_{X}Y$ is asserted in \hyperref[thm:2.25]{Proposition 2.25}. The Lie derivative $L_{X}$ can be extended to arbitrary tensor fields in the obvious way. If $T$ is a tensor field of type $(r,s)$, then $(L_{X}T)_{m}$ is the derivative at $t=0$ of the $(M_{m})_{r,s}$-valued function whose value at $t$ is
+Smoothness of $L_{X}\omega$ and of $L_{X}Y$ is asserted in \hyperref[thm:2.25]{Proposition 2.25}. The Lie derivative $L_{X}$ can be extended to arbitrary tensor fields in the obvious way. If $T$ is a tensor field of type $(r,s)$, then $(L_{X}T)_{m}$ is the derivative at $t=0$ of the $(T_{m} M)_{r,s}$-valued function whose value at $t$ is
 
 \[
-d X_{-t}(v_{1}\otimes\cdots\otimes v_{r})\otimes\delta X_{t}(v_{1}^{*}\otimes\cdots\otimes v_{s}^{*})
+(X_{-t})_{*}(v_{1}\otimes\cdots\otimes v_{r})\otimes X_{t}^{*}(v_{1}^{*}\otimes\cdots\otimes v_{s}^{*})
 \]
 
 if
@@ -860,7 +860,7 @@ We leave result (a) as an exercise. For (b), we need only show that  $ L_{X}Y(f)
 
 \begin{equation}
 \tag{1}\label{eq:2.25:1}
-\begin{aligned}{(L_{X}Y)_{m}(f)}&{{}=\bigg(\lim_{t\to0}\frac{d X_{-t}Y_{X_{t}(m)}-Y_{m}}{t}\bigg)(f)}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}\big[\big(d X_{-t}(Y_{X_{t}(m)})\big)(f)\big]}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}[Y_{X_{t}(m)}(f\circ X_{-t})].}\\ \end{aligned}
+\begin{aligned}{(L_{X}Y)_{m}(f)}&{{}=\bigg(\lim_{t\to0}\frac{(X_{-t})_{*}Y_{X_{t}(m)}-Y_{m}}{t}\bigg)(f)}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}\big[\big((X_{-t})_{*}(Y_{X_{t}(m)})\big)(f)\big]}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}[Y_{X_{t}(m)}(f\circ X_{-t})].}\\ \end{aligned}
 \end{equation}
 
 Define a real-valued function $H$ on a neighborhood of $(0,0)$ in $\mathbb{R}^{2}$ by setting
@@ -925,7 +925,7 @@ For result (c), first consider $L_{X}$ as a mapping of $E^{*}(M)$ into forms whi
 \big(L_{X}(d f)\big)_{m}=d(L_{X}f)_{m}\qquad\big(f\in C^{\infty}(M);m\in M\big).
 \end{equation}
 
-Since both sides of (9) are elements of  $ M_{m}^{*} $, we need only prove that they have the same effect when applied to an arbitrary vector  $ Y_{m} $ in  $ M_{m} $. The right-hand side gives
+Since both sides of (9) are elements of  $ T_{m}^{*} M $, we need only prove that they have the same effect when applied to an arbitrary vector  $ Y_{m} $ in  $ T_{m} M $. The right-hand side gives
 
 \begin{equation}
 \tag{10}\label{eq:2.25:10}
@@ -936,7 +936,7 @@ where $f\circ X_{t}$ can be considered as a $C^{\infty}$ function on $(-\varepsi
 
 \begin{equation}
 \tag{11}\label{eq:2.25:11}
-\begin{aligned}{\big(L_{X}(d f)\big)_{m}(Y_{m})}&{{}=\bigg\{\frac{d}{d t}\bigg|_{t=0}\big(\delta X_{t}(d f_{X_{t}(m)})\big)\bigg\}(Y_{m})}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}\big(\delta X_{t}(d f_{X_{t}(m)})(Y_{m})\big)}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}\big(d f(d X_{t}(Y_{m}))\big)=\frac{d}{d t}\bigg|_{t=0}\big(Y_{m}(f\circ X_{t})\big).}\end{aligned}.
+\begin{aligned}{\big(L_{X}(d f)\big)_{m}(Y_{m})}&{{}=\bigg\{\frac{d}{d t}\bigg|_{t=0}\big(X_{t}^{*}(d f_{X_{t}(m)})\big)\bigg\}(Y_{m})}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}\big(X_{t}^{*}(d f_{X_{t}(m)})(Y_{m})\big)}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}\big(d f((X_{t})_{*}(Y_{m}))\big)=\frac{d}{d t}\bigg|_{t=0}\big(Y_{m}(f\circ X_{t})\big).}\end{aligned}.
 \end{equation}
 
 Now let $Y$ be an extension of $Y_{m}$ to a vector field on $W$. Then, according to Exercise 24(c) of Chapter 1, $d/dt$ and $Y$ have canonical extensions to vector fields on $(-\varepsilon,\varepsilon)\times W$ where they satisfy $[d/dt,Y] \equiv 0$. This fact together with (10) and (11) implies (9). Finally, to see that the form $L_{X}\omega$ is actually smooth and to check that $L_{X}$ commutes with $d$ on all of $E^{*}(M)$, simply express an arbitrary form $\omega$ in local coordinates as in \eqref{eq:2.16:2}, and compute using equation (9), result (a), and the fact that $L_{X}$ is a derivation.
@@ -981,7 +981,7 @@ $ \mathcal{I}(\mathcal{D}) = \{\omega \in E^*(M)\colon \omega \text{ annihilates
 
 \warnernumber{27}
 \begin{definition}\label{thm:2.27}
-A collection  $ \omega_1, \ldots, \omega_n $ of 1-forms on  $ M $ is called independent if they form an independent set in  $ M_m^* $ for each  $ m \in M $.
+A collection  $ \omega_1, \ldots, \omega_n $ of 1-forms on  $ M $ is called independent if they form an independent set in  $ T_{m}^{*} M $ for each  $ m \in M $.
 
 \end{definition}
 
@@ -1004,7 +1004,7 @@ Let $\mathcal{D}$ be a smooth $p$-dimensional distribution on M. Then
 \begin{proof}
 Part (a) follows from the definition of  $ \mathcal{I}(\mathcal{D}) $ and the definition of multiplication in  $ E^{*}(M) $.
 
-Let $m \in M$. Since $\mathcal{D}$ is smooth and $p$-dimensional, there exist $C^\infty$ vector fields $X_{d-p+1},\ldots,X_d$ defined and spanning $\mathcal{D}$ at each point of a neighborhood of $m$. This collection can be completed to a collection $X_1,\ldots,X_d$ of smooth vector fields forming a basis of $M_n$ for each $n$ in a neighborhood $U$ of $m$. Let $\omega_1,\ldots,\omega_d$ be the dual 1-forms; that is,
+Let $m \in M$. Since $\mathcal{D}$ is smooth and $p$-dimensional, there exist $C^\infty$ vector fields $X_{d-p+1},\ldots,X_d$ defined and spanning $\mathcal{D}$ at each point of a neighborhood of $m$. This collection can be completed to a collection $X_1,\ldots,X_d$ of smooth vector fields forming a basis of $T_{n} M$ for each $n$ in a neighborhood $U$ of $m$. Let $\omega_1,\ldots,\omega_d$ be the dual 1-forms; that is,
 
 \[
 \omega_{i}(X_{j})(n)=\delta_{i j}\qquad\text{(Kronecker index)}
@@ -1016,7 +1016,7 @@ for each $n$ in $U$. Then $\omega_{1},\ldots,\omega_{d-p}$ are the desired 1-for
 
 They are independent smooth 1-forms on $U$. If $\omega \in \mathcal{I}(\mathcal{D})$, $\omega \mid U = \sum a_{\Phi}\, \omega_{i_{1}} \wedge \cdots \wedge \omega_{i_{r}}$, where $\Phi$ runs over nonempty subsets $\{i_1, \ldots, i_r\} \subset \{1, \ldots, d\}$, and where the $a_{\Phi}$ must be identically zero unless $\{i_1, \ldots, i_r\} \cap \{1, \ldots, d-p\} \neq \emptyset$. Thus $\omega \mid U$ belongs to the ideal in $E^*(U)$ generated by $\omega_{1}, \ldots, \omega_{d-p}$. Conversely, if $\omega$ is a form such that for each such $U$ in some covering of $M$, $\omega \mid U$ belongs to the ideal in $E^*(U)$ generated by $\omega_1, \ldots, \omega_{d-p}$, then clearly $\omega \in \mathcal{I}(\mathcal{D})$. This proves (b).
 
-For part (c), let $m \in M$, and let the independent 1-forms $\omega_1, \ldots, \omega_{d-p}$ generate $\mathcal{I}$ on a neighborhood $U$ of $m$. Define $\mathcal{D}(m)$ to be the subspace of $M_m$ whose annihilator is the subspace of $M_m^*$ spanned by the collection $\{\omega_{i}(m): i=1, \ldots, d-p\}$. It follows that $\mathcal{D}$ is a smooth $p$-dimensional distribution on $M$ and that $\mathcal{I} = \mathcal{I}(\mathcal{D})$. Uniqueness of $\mathcal{D}$ follows from the fact that $\mathcal{D} \neq \mathcal{D}_1$ implies $\mathcal{I}(\mathcal{D}) \neq \mathcal{I}(\mathcal{D}_1)$.
+For part (c), let $m \in M$, and let the independent 1-forms $\omega_1, \ldots, \omega_{d-p}$ generate $\mathcal{I}$ on a neighborhood $U$ of $m$. Define $\mathcal{D}(m)$ to be the subspace of $T_{m} M$ whose annihilator is the subspace of $T_{m}^{*} M$ spanned by the collection $\{\omega_{i}(m): i=1, \ldots, d-p\}$. It follows that $\mathcal{D}$ is a smooth $p$-dimensional distribution on $M$ and that $\mathcal{I} = \mathcal{I}(\mathcal{D})$. Uniqueness of $\mathcal{D}$ follows from the fact that $\mathcal{D} \neq \mathcal{D}_1$ implies $\mathcal{I}(\mathcal{D}) \neq \mathcal{I}(\mathcal{D}_1)$.
 \end{proof}
 
 \warnernumber{29}
@@ -1044,13 +1044,13 @@ Let $\omega$ be a $q$-form in $\mathcal{I}(\mathcal{D})$, and let $X_0, \ldots, 
 \omega_{i}([Y_{0},Y_{1}])=-d\omega_{i}(Y_{0},Y_{1})+Y_{0}\omega_{i}(Y_{1})-Y_{1}\omega_{i}(Y_{0})
 \end{equation}
 
-for $i=1,\ldots,d-p$. The right-hand side of (1) is identically zero on $M$ since $\mathcal{I}(\mathcal{D})$ is a differential ideal and since $\omega_i\in\mathcal{I}(\mathcal{D})$. Thus $\omega_i([Y_0,Y_1])(m)=0$ for $i=1,\ldots,d-p$. Now $\mathcal{D}(m)$ is the subspace of $M_m$ whose annihilator is the subspace of $M_m^*$ spanned by the collection $\{\omega_i(m):i=1,\ldots,d-p\}$. Thus $[Y_0,Y_1](m)\in\mathcal{D}(m)$, and $\mathcal{D}$ is involutive.
+for $i=1,\ldots,d-p$. The right-hand side of (1) is identically zero on $M$ since $\mathcal{I}(\mathcal{D})$ is a differential ideal and since $\omega_i\in\mathcal{I}(\mathcal{D})$. Thus $\omega_i([Y_0,Y_1])(m)=0$ for $i=1,\ldots,d-p$. Now $\mathcal{D}(m)$ is the subspace of $T_{m} M$ whose annihilator is the subspace of $T_{m}^{*} M$ spanned by the collection $\{\omega_i(m):i=1,\ldots,d-p\}$. Thus $[Y_0,Y_1](m)\in\mathcal{D}(m)$, and $\mathcal{D}$ is involutive.
 
 \end{proof}
 
 \warnernumber{31}
 \begin{definition}\label{thm:2.31}
-A submanifold $(N,\psi)$ of $M$ is an integral manifold of an ideal $\mathcal{I} \subset E^{*}(M)$ if for every $\omega \in \mathcal{I}$, $\delta\psi(\omega) \equiv 0$. A connected integral manifold of an ideal $\mathcal{I}$ is maximal if its image is not a proper subset of the image of any other connected integral manifold of the ideal.
+A submanifold $(N,\psi)$ of $M$ is an integral manifold of an ideal $\mathcal{I} \subset E^{*}(M)$ if for every $\omega \in \mathcal{I}$, $\psi^{*}(\omega) \equiv 0$. A connected integral manifold of an ideal $\mathcal{I}$ is maximal if its image is not a proper subset of the image of any other connected integral manifold of the ideal.
 
 It now follows immediately that we have the following version of the Frobenius \hyperref[thm:1.64]{theorem 1.64} in terms of differential ideals.
 
@@ -1069,7 +1069,7 @@ Suppose that $f\colon N^{c}\to M^{d}$ is $C^{\infty}$ and that $\{\omega_{i}\}$ 
 
 \begin{equation}
 \tag{1}\label{eq:2.33:1}
-\mu_{i}=\delta\pi_{1}\delta f(\omega_{i})-\delta\pi_{2}(\omega_{i}).
+\mu_{i}=\pi_{1}^{*}f^{*}(\omega_{i})-\pi_{2}^{*}(\omega_{i}).
 \end{equation}
 
 Let  $ \mathcal{I} $ be the ideal in  $ E^{*}(N \times M) $ generated by the  $ \mu_i $.
@@ -1081,29 +1081,29 @@ Now the graph of f is the submanifold $(N,g)$ of $N\times M$ where \index{Graph 
 g(n)=(n,f(n)).
 \end{equation}
 
-We claim that the graph is an integral manifold of the ideal $\mathcal{I}$. For this, it suffices to show that $\delta g(\mu_{i})=0$ for each $i$. Now, $\pi_{1}\circ g=\mathrm{id}$, and $\pi_{2}\circ g=f$, and thus it follows that
+We claim that the graph is an integral manifold of the ideal $\mathcal{I}$. For this, it suffices to show that $g^{*}(\mu_{i})=0$ for each $i$. Now, $\pi_{1}\circ g=\mathrm{id}$, and $\pi_{2}\circ g=f$, and thus it follows that
 
 \[
-\delta g(\mu_{i})=\delta(\pi_{1}\circ g)\delta f(\omega_{i})-\delta(\pi_{2}\circ g)(\omega_{i})=\delta f(\omega_{i})-\delta f(\omega_{i})=0.
+g^{*}(\mu_{i})=(\pi_{1}\circ g)^{*}f^{*}(\omega_{i})-(\pi_{2}\circ g)^{*}(\omega_{i})=f^{*}(\omega_{i})-f^{*}(\omega_{i})=0.
 \]
 
-Thus starting with a map $f\colon N\to M$ and a collection of forms on $M$, we have observed that the graph of $f$ is an integral manifold of a certain ideal of forms on $N\times M$. Now, suppose that we start with the manifold $M^d$, and suppose that there exists a basis $\omega_1,\ldots,\omega_d$ of 1-forms on $M$, that is, $\{\omega_i(m)\}$ is a basis of $M_m^*$ for each $m\in M$. (Such a basis does not generally exist, but it does exist in a number of interesting situations for which the following technique is quite useful.) Suppose also that we have a manifold $N^c$ and a collection $\alpha_1,\ldots,\alpha_d$ of 1-forms on $N$ and that we wish to find a map $f\colon N\to M$ such that
+Thus starting with a map $f\colon N\to M$ and a collection of forms on $M$, we have observed that the graph of $f$ is an integral manifold of a certain ideal of forms on $N\times M$. Now, suppose that we start with the manifold $M^d$, and suppose that there exists a basis $\omega_1,\ldots,\omega_d$ of 1-forms on $M$, that is, $\{\omega_i(m)\}$ is a basis of $T_{m}^{*} M$ for each $m\in M$. (Such a basis does not generally exist, but it does exist in a number of interesting situations for which the following technique is quite useful.) Suppose also that we have a manifold $N^c$ and a collection $\alpha_1,\ldots,\alpha_d$ of 1-forms on $N$ and that we wish to find a map $f\colon N\to M$ such that
 
 \begin{equation}
 \tag{3}\label{eq:2.33:3}
-\delta f(\omega_{i})=\alpha_{i}
+f^{*}(\omega_{i})=\alpha_{i}
 \end{equation}
 
 for $i=1,\ldots,d$. If the map $f$ exists, then, as we have observed, its graph will be an integral manifold of a certain ideal of forms. So we attempt to find the graph from the ideal. We define forms $\mu_{i}$ on $N\times M$ by setting
 
 \begin{equation}
 \tag{4}\label{eq:2.33:4}
-\mu_{i}=\delta\pi_{1}(\alpha_{i})-\delta\pi_{2}(\omega_{i}),
+\mu_{i}=\pi_{1}^{*}(\alpha_{i})-\pi_{2}^{*}(\omega_{i}),
 \end{equation}
 
 and we let $\mathcal{I}$ be the ideal in $E^{*}(N \times M)$ which they generate. If $\mathcal{I}$ happens to be a differential ideal, then we can obtain the desired map $f$ (at least locally) from an integral manifold of $\mathcal{I}$. That is, one gets at $f$ by looking for
 
-its graph as an integral manifold of a suitable differential ideal. So suppose that $\mathcal{I}$ is a differential ideal, and let $(n_{0},m_{0})\in N\times M$. Then since $\mathcal{I}$ is locally (in fact globally) generated by $d$ independent 1-forms, the Frobenius theorem guarantees that there is a maximal, connected, integral manifold $I$ of $\mathcal{I}$ of dimension $c$ through $(n_{0},m_{0})$. Let $q\in I$. We claim that $d\pi_{1}\mid I_{q}$ is 1:1. For suppose that $v\in I_{q}$ and that $d\pi_{1}(v)=0$. Then since $\mu_{i}(v)=0$, it follows from (4) that $\omega_{i}(d\pi_{2}(v))=0$ for $i=1,\ldots,d$; and this implies that $d\pi_{2}(v)=0$ since the $\omega_{i}$ form a basis of 1-forms on $M$. But now if both $d\pi_{1}(v)=0$ and $d\pi_{2}(v)=0$, then $v=0$. Hence $d\pi_{1}\mid I_{q}$ is 1:1. Thus $\pi_{1}\mid I:I\to N$ is locally a diffeomorphism. So there exist neighborhoods $V$ of $(n_{0},m_{0})$ in $I$ and $U$ of $n_{0}$ such that $\pi_{1}\mid V:V\to U$ is a diffeomorphism. We define $f:U\to M$ by setting
+its graph as an integral manifold of a suitable differential ideal. So suppose that $\mathcal{I}$ is a differential ideal, and let $(n_{0},m_{0})\in N\times M$. Then since $\mathcal{I}$ is locally (in fact globally) generated by $d$ independent 1-forms, the Frobenius theorem guarantees that there is a maximal, connected, integral manifold $I$ of $\mathcal{I}$ of dimension $c$ through $(n_{0},m_{0})$. Let $q\in I$. We claim that $(\pi_{1})_{*}\mid I_{q}$ is 1:1. For suppose that $v\in I_{q}$ and that $(\pi_{1})_{*}(v)=0$. Then since $\mu_{i}(v)=0$, it follows from (4) that $\omega_{i}((\pi_{2})_{*}(v))=0$ for $i=1,\ldots,d$; and this implies that $(\pi_{2})_{*}(v)=0$ since the $\omega_{i}$ form a basis of 1-forms on $M$. But now if both $(\pi_{1})_{*}(v)=0$ and $(\pi_{2})_{*}(v)=0$, then $v=0$. Hence $(\pi_{1})_{*}\mid I_{q}$ is 1:1. Thus $\pi_{1}\mid I:I\to N$ is locally a diffeomorphism. So there exist neighborhoods $V$ of $(n_{0},m_{0})$ in $I$ and $U$ of $n_{0}$ such that $\pi_{1}\mid V:V\to U$ is a diffeomorphism. We define $f:U\to M$ by setting
 
 \begin{equation}
 \tag{5}\label{eq:2.33:5}
@@ -1114,16 +1114,16 @@ Then  $ f(n_{0}) = m_{0} $, the graph of f is an open submanifold of $I$, and mo
 
 \begin{equation}
 \tag{6}\label{eq:2.33:6}
-\delta f(\omega_{i})=\alpha_{i}\mid U.
+f^{*}(\omega_{i})=\alpha_{i}\mid U.
 \end{equation}
 
 For let  $ v \in U_{n} $ for some  $ n \in U $. Then by (4),
 
 \[
-\begin{aligned}{0}&{{}=\mu_{i}\big(d(\pi_{1}\mid V)^{-1}(v)\big)}\\ {}&{{}=\alpha_{i}(v)-\omega_{i}\big(d\pi_{2}\circ d(\pi_{1}\mid V)^{-1}(v)\big)=\alpha_{i}(v)-\delta f(\omega_{i})(v),}\\ \end{aligned}
+\begin{aligned}{0}&{{}=\mu_{i}\big(\big((\pi_{1}\mid V)^{-1}\big)_{*}(v)\big)}\\ {}&{{}=\alpha_{i}(v)-\omega_{i}\big((\pi_{2})_{*}\circ \big((\pi_{1}\mid V)^{-1}\big)_{*}(v)\big)=\alpha_{i}(v)-f^{*}(\omega_{i})(v),}\\ \end{aligned}
 \]
 
-which proves (6). Thus we have obtained the desired map locally. That is, given $n_{0} \in N$ and an arbitrary choice of $m_{0} \in M$, then under the assumption that the ideal $\mathcal{I}$ generated by (4) is a differential ideal, we have found an open neighborhood $U$ of $n_{0}$ and a $C^{\infty}$ map $f: U \to M$ such that $f(n_{0}) = m_{0}$ and such that $\delta f(\omega_{i}) = \alpha_{i} \mid U$. Moreover, there is a unique such map. More precisely, if $m_{0} \in M$, and if $U$ is any connected open neighborhood of $n_{0}$ in $N$ for which there exists a $C^{\infty}$ map $f: U \to M$ such that $f(n_{0}) = m_{0}$ and such that $\delta f(\omega_{i}) = \alpha_{i} \mid U$ for $t = 1, \ldots, d$, then there is a unique such map on $U$. For let $\tilde{f}$ be any other such map. Let $(U, \tilde{g})$ and $(U, g)$ be the graphs of $\tilde{f}$ and $f$ over $U$ respectively. Thus
+which proves (6). Thus we have obtained the desired map locally. That is, given $n_{0} \in N$ and an arbitrary choice of $m_{0} \in M$, then under the assumption that the ideal $\mathcal{I}$ generated by (4) is a differential ideal, we have found an open neighborhood $U$ of $n_{0}$ and a $C^{\infty}$ map $f: U \to M$ such that $f(n_{0}) = m_{0}$ and such that $f^{*}(\omega_{i}) = \alpha_{i} \mid U$. Moreover, there is a unique such map. More precisely, if $m_{0} \in M$, and if $U$ is any connected open neighborhood of $n_{0}$ in $N$ for which there exists a $C^{\infty}$ map $f: U \to M$ such that $f(n_{0}) = m_{0}$ and such that $f^{*}(\omega_{i}) = \alpha_{i} \mid U$ for $t = 1, \ldots, d$, then there is a unique such map on $U$. For let $\tilde{f}$ be any other such map. Let $(U, \tilde{g})$ and $(U, g)$ be the graphs of $\tilde{f}$ and $f$ over $U$ respectively. Thus
 
 \begin{equation}
 \tag{7}\label{eq:2.33:7}
@@ -1159,21 +1159,21 @@ Let $N^{c}$ and $M^{d}$ be differentiable manifolds, and let $\pi_{1}$ and $\pi_
 
 \begin{equation}
 \tag{1}\label{eq:2.34:1}
-\{\delta\pi_{1}\delta f(\omega_{i})-\delta\pi_{2}(\omega_{i})\colon i=1,\ldots,d\}.
+\{\pi_{1}^{*}f^{*}(\omega_{i})-\pi_{2}^{*}(\omega_{i})\colon i=1,\ldots,d\}.
 \end{equation}
 
 (b) If $\{\alpha_{i}\colon i=1,\ldots,d\}$ are $1$-forms on $N$, and if the ideal of forms on  $ N \times M $ generated by
 
 \begin{equation}
 \tag{2}\label{eq:2.34:2}
-\{\delta\pi_{1}(\alpha_{i})-\delta\pi_{2}(\omega_{i})\colon i=1,\ldots,d\}
+\{\pi_{1}^{*}(\alpha_{i})-\pi_{2}^{*}(\omega_{i})\colon i=1,\ldots,d\}
 \end{equation}
 
 is a differential ideal, then given $n_{0}\in N$ and $m_{0}\in M$ there exists a neighborhood $U$ of $n_{0}$ and a $C^{\infty}$ map $f\colon U\to M$ such that $f(n_{0})=m_{0}$ and such that
 
 
 \[
-\delta f(\omega_{i})=\alpha_{i}\big|_{U}\quad(i=1,\ldots,d).
+f^{*}(\omega_{i})=\alpha_{i}\big|_{U}\quad(i=1,\ldots,d).
 \]
 
 Moreover, if $U$ is any connected open set containing $n_{0}$ for which there exists a $C^{\infty}$ map $f: U \to M$ satisfying both $f(n_{0}) = m_{0}$ and equation (3), then there exists a unique such map on $U$.
@@ -1218,11 +1218,11 @@ Prove that
 \left[X,Y\right]\big|_{m}f=\lim_{t\rightarrow0}\frac{f\big(\beta(t)\big)-f\big(\beta(0)\big)}{t}.
 \end{equation}
 
-If $\beta(t)$ were a smooth curve at $t=0$, then the right-hand side of (1) would simply be the effect of the tangent vector to $\beta$ at $t=0$ applied to the function $f$. However, because of the $\sqrt{t}$, $\beta$ is not generally smooth at $t=0$. Thus the existence of the limit in (1) is part of the problem, and the problem asserts that this curve $\beta$, even though it is not smooth at $t=0$, defines a tangent vector in $M_m$ in the usual way, and this vector is precisely $[X,Y]|_{m}$.
+If $\beta(t)$ were a smooth curve at $t=0$, then the right-hand side of (1) would simply be the effect of the tangent vector to $\beta$ at $t=0$ applied to the function $f$. However, because of the $\sqrt{t}$, $\beta$ is not generally smooth at $t=0$. Thus the existence of the limit in (1) is part of the problem, and the problem asserts that this curve $\beta$, even though it is not smooth at $t=0$, defines a tangent vector in $T_{m} M$ in the usual way, and this vector is precisely $[X,Y]|_{m}$.
 
 \item Prove \hyperref[thm:2.25]{2.25(e)}.
 
-\item Let $M$ be connected, and let $\pi: M \times N \to N$ be the natural projection. Prove that a $p$-form $\omega$ on $M \times N$ is $\delta\pi(\alpha)$ for some $p$-form $\alpha$ on $N$ if and only if $i(X)\omega = 0$ and $L_{X}\omega = 0$ for every vector field $X$ on $M \times N$ for which $d\pi(X(m,n)) = 0$ at each point $(m,n) \in M \times N$.
+\item Let $M$ be connected, and let $\pi: M \times N \to N$ be the natural projection. Prove that a $p$-form $\omega$ on $M \times N$ is $\pi^{*}(\alpha)$ for some $p$-form $\alpha$ on $N$ if and only if $i(X)\omega = 0$ and $L_{X}\omega = 0$ for every vector field $X$ on $M \times N$ for which $\pi_{*}(X(m,n)) = 0$ at each point $(m,n) \in M \times N$.
 
 \item Prove that the elements  $ v_{1}, \ldots, v_{r} $ of the vector space V are linearly independent if and only if  $ v_{1} \wedge \cdots \wedge v_{r} \neq 0 $.
 

@@ -100,7 +100,7 @@
     "item": "1.13"
   },
   {
-    "symbol": "$M_{m}$",
+    "symbol": "$T_{m} M$",
     "meaning": "Tangent space at a point",
     "item": "1.14"
   },
@@ -115,13 +115,23 @@
     "item": "1.19"
   },
   {
-    "symbol": "$d\\varphi, d\\varphi_{m}, \\delta\\varphi$",
-    "meaning": "Differential and its dual",
+    "symbol": "$df_m,\\ df=f^*(dr)$",
+    "meaning": "Differential of a real-valued function",
     "item": "1.22"
   },
   {
-    "symbol": "$M_{m}^{*}$",
+    "symbol": "$T_{m}^{*} M$",
     "meaning": "Cotangent space",
+    "item": "1.22"
+  },
+  {
+    "symbol": "$\\psi_{*,m},\\ f_{*,m}$",
+    "meaning": "Pushforward (tangent map)",
+    "item": "1.22"
+  },
+  {
+    "symbol": "$\\psi_m^*=(\\psi_{*,m})^*$",
+    "meaning": "Pullback of covectors",
     "item": "1.22"
   },
   {
@@ -130,12 +140,12 @@
     "item": "1.23"
   },
   {
-    "symbol": "$T(M), T^{*}(M)$",
+    "symbol": "$TM, T^{*}M$",
     "meaning": "Tangent and cotangent bundles",
     "item": "1.25"
   },
   {
-    "symbol": "$^{k}M_{m}, d^{k}f, M_{m}^{k}$",
+    "symbol": "$T_{m}^{*(k)} M, d^{k}f, T_{m}^{(k)} M$",
     "meaning": "Higher order tangent vectors and differentials",
     "item": "1.26"
   },
@@ -145,7 +155,7 @@
     "item": "1.26"
   },
   {
-    "symbol": "$d^{k}\\varphi, \\delta^{k}\\varphi$",
+    "symbol": "$\\varphi_*^{(k)}, (\\varphi_*^{(k)})^{*}$",
     "meaning": "Higher differentials and their duals",
     "item": "1.26"
   },
@@ -280,7 +290,7 @@
     "item": "2.21"
   },
   {
-    "symbol": "$\\delta\\psi(\\omega)$",
+    "symbol": "$\\psi^{*}(\\omega)$",
     "meaning": "Pullback of a differential form",
     "item": "2.22"
   },
@@ -320,7 +330,7 @@
     "item": "3.8"
   },
   {
-    "symbol": "$G_{e}$",
+    "symbol": "$T_{e} G$",
     "meaning": "Tangent space at the identity",
     "item": "3.8"
   },

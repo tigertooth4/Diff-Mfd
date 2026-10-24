@@ -114,7 +114,7 @@ for all $\tau \in G$. If $V$ is a subset of $G$, we denote $r_{\sigma}(V)$ and $
 
 \begin{equation}
 \tag{2}\label{eq:3.6:2}
-dl_{\sigma}\circ X=X\circ l_{\sigma}.
+(l_{\sigma})_{*}\circ X=X\circ l_{\sigma}.
 \end{equation}
 
 The set of all left invariant vector fields on a Lie group $G$ will be denoted by the corresponding lowercase German letter $\mathfrak{g}$. \index{Left invariant vector fields}
@@ -125,7 +125,7 @@ The set of all left invariant vector fields on a Lie group $G$ will be denoted b
 \begin{proposition}\label{thm:3.7}
 Let $G$ be a Lie group and $\mathfrak{g}$ its set of left invariant vector fields.
 
-(a) $\mathfrak{g}$ is a real vector space, and the map $\alpha: \mathfrak{g} \to G_e$ defined by $\alpha(X) = X(e)$ is an isomorphism of $\mathfrak{g}$ with the tangent space $G_e$ to G at the identity. Consequently, $\dim \mathfrak{g} = \dim G_e = \dim G$.
+(a) $\mathfrak{g}$ is a real vector space, and the map $\alpha: \mathfrak{g} \to T_{e} G$ defined by $\alpha(X) = X(e)$ is an isomorphism of $\mathfrak{g}$ with the tangent space $T_{e} G$ to G at the identity. Consequently, $\dim \mathfrak{g} = \dim T_{e} G = \dim G$.
 
 (b) Left invariant vector fields are smooth.
 
@@ -140,13 +140,13 @@ That $\mathfrak{g}$ is a real vector space and that $\alpha$ is linear is clear.
 
 \begin{equation}
 \tag{1}\label{eq:3.7:1}
-X(\sigma)=d l_{\sigma}\big(X(e)\big)=d l_{\sigma}\big(Y(e)\big)=Y(\sigma);
+X(\sigma)=(l_{\sigma})_{*}\big(X(e)\big)=(l_{\sigma})_{*}\big(Y(e)\big)=Y(\sigma);
 \end{equation}
 
-hence $X = Y$. Moreover, $\alpha$ is surjective; for if $x \in G_e$, we let $X(\sigma) = dl_\sigma(x)$ for each $\sigma \in G$. Then $\alpha(X) = x$, and $X$ is left invariant since
+hence $X = Y$. Moreover, $\alpha$ is surjective; for if $x \in T_{e} G$, we let $X(\sigma) = (l_{\sigma})_{*}(x)$ for each $\sigma \in G$. Then $\alpha(X) = x$, and $X$ is left invariant since
 
 \[
-X(\tau\sigma)=d l_{\tau\sigma}(x)=d l_{\tau}d l_{\sigma}(x)=d l_{\tau}\big(X(\sigma)\big)
+X(\tau\sigma)=(l_{\tau\sigma})_{*}(x)=(l_{\tau})_{*}(l_{\sigma})_{*}(x)=(l_{\tau})_{*}\big(X(\sigma)\big)
 \]
 
 for all  $ \sigma $ and  $ \tau $ in G. This proves part (a).
@@ -155,7 +155,7 @@ For (b), let  $ X \in \mathfrak{g} $, and let  $ f \in C^\infty(G) $. We need on
 
 \begin{equation}
 \tag{2}\label{eq:3.7:2}
-X f(\sigma)=X_{\sigma}f=d l_{\sigma}(X_{e})f=X_{e}(f\circ l_{\sigma}).
+X f(\sigma)=X_{\sigma}f=(l_{\sigma})_{*}(X_{e})f=X_{e}(f\circ l_{\sigma}).
 \end{equation}
 
 Thus we need to show that $\sigma \mapsto X_e(f \circ l_\sigma)$ is a $C^\infty$ function on $G$. We do this by exhibiting this function as a suitable composition of $C^\infty$ maps. Let $\varphi: G \times G \to G$ denote group multiplication, $\varphi(\sigma, \tau) = \sigma\tau$. And let $i_e^1$ and $i_\sigma^2$ be the maps of $G \to G \times G$ defined by
@@ -179,7 +179,7 @@ Since, by (b), left invariant vector fields are smooth, their Lie brackets are d
 
 \warnernumber{8}
 \begin{definition}\label{thm:3.8}
-We define the Lie algebra of the Lie group G to be the Lie algebra $\mathfrak{g}$ of left invariant vector fields on $G$. Alternatively, we could take as the Lie algebra of $G$ the tangent space $G_{e}$ at the identity with Lie algebra structure induced by requiring the vector space isomorphism \hyperref[thm:3.7]{3.7(a)} of $\mathfrak{g}$ with $G_{e}$ to be an isomorphism of Lie algebras. It will be convenient at times to consider the Lie algebra from this alternate point of view. In particular, we shall see (3.10 and 3.37) that the Lie algebras of the classical groups admit particularly nice interpretations in terms of their tangent spaces at the identity.
+We define the Lie algebra of the Lie group G to be the Lie algebra $\mathfrak{g}$ of left invariant vector fields on $G$. Alternatively, we could take as the Lie algebra of $G$ the tangent space $T_{e} G$ at the identity with Lie algebra structure induced by requiring the vector space isomorphism \hyperref[thm:3.7]{3.7(a)} of $\mathfrak{g}$ with $T_{e} G$ to be an isomorphism of Lie algebras. It will be convenient at times to consider the Lie algebra from this alternate point of view. In particular, we shall see (3.10 and 3.37) that the Lie algebras of the classical groups admit particularly nice interpretations in terms of their tangent spaces at the identity.
 
 \end{definition}
 
@@ -217,7 +217,7 @@ Now let $\mathfrak{g}$ be the Lie algebra of $Gl(n,\mathbb{R})$. Let $\alpha: \m
 \alpha(v)_{i j}=v(x_{i j}).
 \end{equation}
 
-Then since $Gl(n,\mathbb{R})_{e}=\mathfrak{gl}(n,\mathbb{R})_{e}$, we have a natural map $\beta\colon\mathfrak{g}\to\mathfrak{gl}(n,\mathbb{R})$ defined by
+Then since $T_e Gl(n,\mathbb{R})=T_e\mathfrak{gl}(n,\mathbb{R})$, we have a natural map $\beta\colon\mathfrak{g}\to\mathfrak{gl}(n,\mathbb{R})$ defined by
 
 \begin{equation}
 \tag{2}\label{eq:3.10:2}
@@ -242,7 +242,7 @@ Since Y is a left invariant vector field,
 
 \begin{equation}
 \tag{5}\label{eq:3.10:5}
-\begin{aligned}{\big(Y(x_{i j})\big)(\sigma)}&{{}=dl_{\sigma}(Y_{e})(x_{i j})=Y_{e}(x_{i j}\circ l_{\sigma})}\\ {}&{{}=\sum_{k}x_{i k}(\sigma)Y_{e}(x_{k j})=\sum_{k}x_{i k}(\sigma)\alpha(Y_{e})_{k j}}\\ {}&{{}=\sum_{k}x_{i k}(\sigma)\beta(Y)_{k j}.}\\ \end{aligned}
+\begin{aligned}{\big(Y(x_{i j})\big)(\sigma)}&{{}=(l_{\sigma})_{*}(Y_{e})(x_{i j})=Y_{e}(x_{i j}\circ l_{\sigma})}\\ {}&{{}=\sum_{k}x_{i k}(\sigma)Y_{e}(x_{k j})=\sum_{k}x_{i k}(\sigma)\alpha(Y_{e})_{k j}}\\ {}&{{}=\sum_{k}x_{i k}(\sigma)\beta(Y)_{k j}.}\\ \end{aligned}
 \end{equation}
 
 Using (5), we now compute the  $ij$th component of  $ \beta([X,Y]) $:
@@ -274,7 +274,7 @@ A form  $ \omega $ on G is called left invariant if
 
 \begin{equation}
 \tag{1}\label{eq:3.11:1}
-\delta l_{\sigma}\omega=\omega
+l_{\sigma}^{*}\omega=\omega
 \end{equation}
 
 for each $\sigma \in G$. As in the case of left invariant vector fields, it is not necessary to assume that left invariant forms are smooth, for smoothness is a consequence of the left invariance. We shall denote the vector space of left invariant $p$-forms on $G$ by $E_{l\,\mathrm{inv}}^{p}(G)$, and we let \index{Left invariant forms}
@@ -294,7 +294,7 @@ The following proposition is the analog for left invariant forms of 3.7. The pro
 \begin{proposition}\label{thm:3.12}
 (a) Left invariant forms are smooth.
 
-(b) $E^{*}_{l\,\mathrm{inv}}(G)$ is a subalgebra of the algebra $E^{*}(G)$ of all smooth forms on $G$, and the map $\omega \to \omega(e)$ is an algebra isomorphism of $E^{*}_{l\,\mathrm{inv}}(G)$ onto $\Lambda(G_e^*)$. In particular, this map gives a natural isomorphism of $E^{1}_{l\,\mathrm{inv}}(G)$ with $G_e^*$ and hence with $\mathfrak{g}^*$. (In this way we shall consider $E^1_{1\mathrm{inv}}(G)$ as the dual space of the Lie algebra of $G$.)
+(b) $E^{*}_{l\,\mathrm{inv}}(G)$ is a subalgebra of the algebra $E^{*}(G)$ of all smooth forms on $G$, and the map $\omega \to \omega(e)$ is an algebra isomorphism of $E^{*}_{l\,\mathrm{inv}}(G)$ onto $\Lambda(T_{e}^{*} G)$. In particular, this map gives a natural isomorphism of $E^{1}_{l\,\mathrm{inv}}(G)$ with $T_{e}^{*} G$ and hence with $\mathfrak{g}^*$. (In this way we shall consider $E^1_{1\mathrm{inv}}(G)$ as the dual space of the Lie algebra of $G$.)
 
 (c) If $\omega$ is a left invariant 1-form and $X$ a left invariant vector field, then $\omega(X)$ is a constant function on $G$, and this constant is precisely the effect $\omega$ has on $X$ when $\omega$ is considered as an element of the dual space of $\mathfrak{g}$ as in part (b). (We shall consider $\omega(X)$ either as a constant function on $G$ or as the corresponding real number, the particular choice depending on the context.)
 
@@ -336,18 +336,18 @@ A map $\varphi: G \to H$ is a (Lie group) homomorphism if $\varphi$ is both $C^\
 
 If $\mathfrak{g}$ and $\mathfrak{h}$ are Lie algebras, a map $\psi\colon\mathfrak{g}\to\mathfrak{h}$ is a (Lie algebra) homomorphism if it is linear and preserves brackets $(\psi[X,Y]=[\psi(X),\psi(Y)]$ for all $X,Y\in\mathfrak{g}$). If, in addition, $\psi$ is 1:1 and onto, then $\psi$ is an isomorphism. An isomorphism of $g$ with itself is called an automorphism. If $b=\mathrm{End}(V)$ for some vector space $V$, or if $b=\mathfrak{gl}(n,\mathbb{C})$ or $\mathfrak{gl}(n,\mathbb{R})$, then a homomorphism $\psi: g \to b$ is called a representation of the Lie algebra $g$. \index{Lie algebra}
 
-Let $\varphi: G \to H$ be a homomorphism. Then since $\varphi$ maps the identity of $G$ to the identity of $H$, the differential $d\varphi$ of $\varphi$ is a linear transformation of $G_e$ into $H_e$. By means of the natural identifications of the tangent spaces at the identities with the Lie algebras, this linear transformation $d\varphi$ of $G_e$ into $H_e$ induces a linear transformation of $\mathfrak{g}$ into $\mathfrak{h}$ which we shall denote also by $d\varphi$. Thus
+Let $\varphi: G \to H$ be a homomorphism. Then since $\varphi$ maps the identity of $G$ to the identity of $H$, the differential $\varphi_{*}$ of $\varphi$ is a linear transformation of $T_{e} G$ into $T_{e} H$. By means of the natural identifications of the tangent spaces at the identities with the Lie algebras, this linear transformation $\varphi_{*}$ of $T_{e} G$ into $T_{e} H$ induces a linear transformation of $\mathfrak{g}$ into $\mathfrak{h}$ which we shall denote also by $\varphi_{*}$. Thus
 
 \begin{equation}
 \tag{1}\label{eq:3.13:1}
-d\varphi\colon\mathfrak{g}\to\mathfrak{h},
+\varphi_{*}\colon\mathfrak{g}\to\mathfrak{h},
 \end{equation}
 
-where if $X\in\mathfrak{g}$, then $d\varphi(X)$ is the unique left invariant vector field on $H$ such that
+where if $X\in\mathfrak{g}$, then $\varphi_{*}(X)$ is the unique left invariant vector field on $H$ such that
 
 \begin{equation}
 \tag{2}\label{eq:3.13:2}
-d\varphi(X)(e)=d\varphi\bigl(X(e)\bigr).
+\varphi_{*}(X)(e)=\varphi_{*}\bigl(X(e)\bigr).
 \end{equation}
 
 \end{definition}
@@ -356,18 +356,18 @@ d\varphi(X)(e)=d\varphi\bigl(X(e)\bigr).
 \begin{theorem}\label{thm:3.14}
 Let G and H be Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$ respectively, and let $\varphi\colon G\to H$ be a homomorphism. Then
 
-(a) $X$ and $d\varphi(X)$ are $\varphi$-related for each $X\in\mathfrak{g}$.
+(a) $X$ and $\varphi_{*}(X)$ are $\varphi$-related for each $X\in\mathfrak{g}$.
 
-(b)  $ d\varphi: \mathfrak{g} \to \mathfrak{h} $ is a Lie algebra homomorphism.
+(b)  $ \varphi_{*}: \mathfrak{g} \to \mathfrak{h} $ is a Lie algebra homomorphism.
 
 \end{theorem}
 
 \begin{proof}
-Let  $ \tilde{X} = d\varphi(X) $. Then  $ \tilde{X} $ and  $ X $ are  $ \varphi $-related. For since  $ \varphi $ is a homomorphism,  $ l_{\varphi(\sigma)} \circ \varphi = \varphi \circ l_{\sigma} $; hence
+Let  $ \tilde{X} = \varphi_{*}(X) $. Then  $ \tilde{X} $ and  $ X $ are  $ \varphi $-related. For since  $ \varphi $ is a homomorphism,  $ l_{\varphi(\sigma)} \circ \varphi = \varphi \circ l_{\sigma} $; hence
 
 \begin{equation}
 \tag{1}\label{eq:3.14:1}
-\begin{aligned}{\tilde{X}\big(\varphi(\sigma)\big)}&{{}=d l_{\varphi(\sigma)}\tilde{X}(e)=d l_{\varphi(\sigma)}d\varphi\big(X(e)\big)}\\ {}&{{}=d(l_{\varphi(\sigma)}\circ\varphi)X(e)=d(\varphi\circ l_{\sigma})X(e)=d\varphi\big(X(\sigma)\big).}\\ \end{aligned}
+\begin{aligned}{\tilde{X}\big(\varphi(\sigma)\big)}&{{}=(l_{\varphi(\sigma)})_{*}\tilde{X}(e)=(l_{\varphi(\sigma)})_{*}\varphi_{*}\big(X(e)\big)}\\ {}&{{}=(l_{\varphi(\sigma)}\circ\varphi)_{*}X(e)=(\varphi\circ l_{\sigma})_{*}X(e)=\varphi_{*}\big(X(\sigma)\big).}\\ \end{aligned}
 \end{equation}
 
 This proves part (a). Now let $X, Y \in \mathfrak{g}$. Then for part (b), we must show that
@@ -381,28 +381,28 @@ By 1.55, [X,Y] is  $ \varphi $-related to the left invariant vector field  $ [\t
 
 \begin{equation}
 \tag{3}\label{eq:3.14:3}
-[\tilde{X},\tilde{Y}](e)=d\varphi\big([X,Y](e)\big).
+[\tilde{X},\tilde{Y}](e)=\varphi_{*}\big([X,Y](e)\big).
 \end{equation}
 
-But  $ [X,Y] $, by \hyperref[thm:3.13]{Definition 3.13}(2), is the unique left invariant vector field on H whose value at the identity is  $ d\varphi([X,Y](e)) $. Thus (2) holds, and the theorem is proved.
+But  $ [X,Y] $, by \hyperref[thm:3.13]{Definition 3.13}(2), is the unique left invariant vector field on H whose value at the identity is  $ \varphi_{*}([X,Y](e)) $. Thus (2) holds, and the theorem is proved.
 
 \end{proof}
 \warnernumber{15}
 \discuss{3.15}{Effect of Homomorphisms on Left Invariant Forms}\label{thm:3.15}
-Let  $ \varphi: G \to H $ be a homomorphism. Then  $ \delta\varphi $ pulls left invariant forms on H back to left invariant forms on G, since whenever  $ \omega $ is a left invariant form
+Let  $ \varphi: G \to H $ be a homomorphism. Then  $ \varphi^{*} $ pulls left invariant forms on H back to left invariant forms on G, since whenever  $ \omega $ is a left invariant form
 
 on H,
 
 \begin{equation}
 \tag{1}\label{eq:3.15:1}
-\begin{aligned}{\delta l_{\sigma}\delta\varphi(\omega)}&{{}=\delta(\varphi\circ l_{\sigma})\omega=\delta(l_{\varphi(\sigma)}\circ\varphi)\omega}\\ {}&{{}=\delta\varphi\delta l_{\varphi(\sigma)}(\omega)=\delta\varphi(\omega).}\\ \end{aligned}
+\begin{aligned}{l_{\sigma}^{*}\varphi^{*}(\omega)}&{{}=(\varphi\circ l_{\sigma})^{*}\omega=(l_{\varphi(\sigma)}\circ\varphi)^{*}\omega}\\ {}&{{}=\varphi^{*}l_{\varphi(\sigma)}^{*}(\omega)=\varphi^{*}(\omega).}\\ \end{aligned}
 \end{equation}
 
-Moreover, the mapping $\delta\varphi\colon E_{l\,\mathrm{inv}}^{1}(H)\to E_{l\,\mathrm{inv}}^{1}(G)$, considered as a mapping of the dual space of $\mathfrak{h}$ to the dual space of $\mathfrak{g}$, is precisely the transpose of $d\varphi\colon\mathfrak{g}\to\mathfrak{h}$; that is,
+Moreover, the mapping $\varphi^{*}\colon E_{l\,\mathrm{inv}}^{1}(H)\to E_{l\,\mathrm{inv}}^{1}(G)$, considered as a mapping of the dual space of $\mathfrak{h}$ to the dual space of $\mathfrak{g}$, is precisely the transpose of $\varphi_{*}\colon\mathfrak{g}\to\mathfrak{h}$; that is,
 
 \begin{equation}
 \tag{2}\label{eq:3.15:2}
-\big(\delta\varphi(\omega)\big)(X)=\omega\big(d\varphi(X)\big)\qquad\big(\omega\in E_{l\,\mathrm{inv}}^{1}(H);\quad X\in\mathfrak{g}\big).
+\big(\varphi^{*}(\omega)\big)(X)=\omega\big(\varphi_{*}(X)\big)\qquad\big(\omega\in E_{l\,\mathrm{inv}}^{1}(H);\quad X\in\mathfrak{g}\big).
 \end{equation}
 
 Recall that if $\{\omega_1, \ldots, \omega_d\}$ is a basis of $E_{l\,\mathrm{inv}}^{1}(H)$, then there are structural constants $\{c_{ijk}\}$ (see \eqref{eq:3.12:4}) such that
@@ -412,28 +412,28 @@ Recall that if $\{\omega_1, \ldots, \omega_d\}$ is a basis of $E_{l\,\mathrm{inv
 d\omega_{i}=\sum_{j<k}c_{j k i}\omega_{k}\wedge\omega_{j}.
 \end{equation}
 
-Thus since $d$ and $\delta\varphi$ commute,
+Thus since $d$ and $\varphi^{*}$ commute,
 
 \begin{equation}
 \tag{4}\label{eq:3.15:4}
-d\big(\delta\varphi(\omega_{i})\big)=\sum_{j<k}c_{j k i}\;\delta\varphi(\omega_{k})\wedge\delta\varphi(\omega_{j}).
+d\big(\varphi^{*}(\omega_{i})\big)=\sum_{j<k}c_{j k i}\;\varphi^{*}(\omega_{k})\wedge\varphi^{*}(\omega_{j}).
 \end{equation}
 
 Now let $\pi_{1}$ and $\pi_{2}$ be the canonical projections of $G \times H$ onto $G$ and $H$ respectively. Then the ideal $\mathcal{J}$ of forms on $G \times H$ generated by the collection of independent 1-forms
 
 \begin{equation}
 \tag{5}\label{eq:3.15:5}
-\{\delta\pi_{1}\delta\varphi(\omega_{i})-\delta\pi_{2}(\omega_{i})\colon i=1,\ldots,d\}
+\{\pi_{1}^{*}\varphi^{*}(\omega_{i})-\pi_{2}^{*}(\omega_{i})\colon i=1,\ldots,d\}
 \end{equation}
 
 is a differential ideal; for using (4), we obtain for each i,
 
 \begin{equation}
 \tag{6}\label{eq:3.15:6}
-\begin{aligned}{d\big(\delta\pi_{1}\delta\varphi(\omega_{i})}&{{}-\delta\pi_{2}(\omega_{i})\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}\big(\delta\pi_{1}\delta\varphi(\omega_{k})\wedge\delta\pi_{1}\delta\varphi(\omega_{j})-\delta\pi_{2}(\omega_{k})\wedge\delta\pi_{2}(\omega_{j})\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}[\{\delta\pi_{1}\delta\varphi(\omega_{k})-\delta\pi_{2}(\omega_{k})\}\wedge\delta\pi_{1}\delta\varphi(\omega_{j})}\\ {}&{{}\quad+\delta\pi_{2}(\omega_{k})\wedge\{\delta\pi_{1}\delta\varphi(\omega_{j})-\delta\pi_{2}(\omega_{j})\}],}\\ \end{aligned}
+\begin{aligned}{d\big(\pi_{1}^{*}\varphi^{*}(\omega_{i})}&{{}-\pi_{2}^{*}(\omega_{i})\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}\big(\pi_{1}^{*}\varphi^{*}(\omega_{k})\wedge\pi_{1}^{*}\varphi^{*}(\omega_{j})-\pi_{2}^{*}(\omega_{k})\wedge\pi_{2}^{*}(\omega_{j})\big)}\\ {}&{{}=\sum_{j<k}c_{j k i}[\{\pi_{1}^{*}\varphi^{*}(\omega_{k})-\pi_{2}^{*}(\omega_{k})\}\wedge\pi_{1}^{*}\varphi^{*}(\omega_{j})}\\ {}&{{}\quad+\pi_{2}^{*}(\omega_{k})\wedge\{\pi_{1}^{*}\varphi^{*}(\omega_{j})-\pi_{2}^{*}(\omega_{j})\}],}\\ \end{aligned}
 \end{equation}
 
-which belongs to the ideal $\mathcal{J}$. Moreover, observe that the 1-forms (5) generating the differential ideal $\mathcal{J}$ are themselves left invariant 1-forms on $G \times H$. This follows immediately from applying $\delta l_{(\sigma,\xi)}$ to the forms (5), where $(\sigma,\xi)\in G\times H$, and from using the fact that $\pi_1\circ l_{(\sigma,\xi)}=l_\sigma\circ\pi_1$ and $\pi_2\circ l_{(\sigma,\xi)}=l_\xi\circ\pi_2$. Note also that the basis $\{\omega_i\}$ of $E^1_{l\,\mathrm{inv}}(H)$ is a basis of the 1-forms on $H$ in the sense of 2.33.
+which belongs to the ideal $\mathcal{J}$. Moreover, observe that the 1-forms (5) generating the differential ideal $\mathcal{J}$ are themselves left invariant 1-forms on $G \times H$. This follows immediately from applying $l_{(\sigma,\xi)}^{*}$ to the forms (5), where $(\sigma,\xi)\in G\times H$, and from using the fact that $\pi_1\circ l_{(\sigma,\xi)}=l_\sigma\circ\pi_1$ and $\pi_2\circ l_{(\sigma,\xi)}=l_\xi\circ\pi_2$. Note also that the basis $\{\omega_i\}$ of $E^1_{l\,\mathrm{inv}}(H)$ is a basis of the 1-forms on $H$ in the sense of 2.33.
 
 To carry out the above construction of a differential ideal on $G \times H$, it is sufficient to start simply with a homomorphism of the Lie algebras rather than a homomorphism of the Lie groups. Let $G$ and $H$ be Lie groups, and let $\psi\colon\mathfrak{g}\to\mathfrak{h}$ be a homomorphism of their Lie algebras. $\psi$ has a transpose $\psi^*: E_{l\,\mathrm{inv}}^{1}(H) \to E_{l\,\mathrm{inv}}^{1}(G)$, namely,
 
@@ -446,7 +446,7 @@ Let $\{\omega_i\}$ be a basis of $E^{1}_{l\,\mathrm{inv}}(H)$. Then we claim tha
 
 \begin{equation}
 \tag{8}\label{eq:3.15:8}
-\{\delta\pi_{1}(\psi^{*}(\omega_{i}))-\delta\pi_{2}(\omega_{i})\colon i=1,\cdots,d\}
+\{\pi_{1}^{*}(\psi^{*}(\omega_{i}))-\pi_{2}^{*}(\omega_{i})\colon i=1,\cdots,d\}
 \end{equation}
 
 is a differential ideal. This follows from a computation similar to (6) together with the observation that
@@ -469,16 +469,16 @@ We shall make use of these ideals on  $ G \times H $ in proving existence and un
 
 \warnernumber{16}
 \begin{theorem}\label{thm:3.16}
-Let G be connected, and let $\varphi$ and $\psi$ be homomorphisms of G into $H$ such that the Lie algebra homomorphisms $d\varphi$ and $d\psi$ of $\mathfrak{g}$ into $\mathfrak{h}$ are identical. Then $\varphi = \psi$.
+Let G be connected, and let $\varphi$ and $\psi$ be homomorphisms of G into $H$ such that the Lie algebra homomorphisms $\varphi_{*}$ and $\psi_{*}$ of $\mathfrak{g}$ into $\mathfrak{h}$ are identical. Then $\varphi = \psi$.
 
 \end{theorem}
 
 \begin{proof}
-Since  $ d\varphi = d\psi $, we have
+Since  $ \varphi_{*} = \psi_{*} $, we have
 
 \begin{equation}
 \tag{1}\label{eq:3.16:1}
-\begin{array}{r}{\delta\varphi=\delta\psi\colon E_{l\,\mathrm{inv}}^{1}(H)\to E_{l\,\mathrm{inv}}^{1}(G).}\end{array}
+\begin{array}{r}{\varphi^{*}=\psi^{*}\colon E_{l\,\mathrm{inv}}^{1}(H)\to E_{l\,\mathrm{inv}}^{1}(G).}\end{array}
 \end{equation}
 
 Thus we have two $C^\infty$ maps $\varphi$ and $\psi$ of the connected manifold $G$ into $H$, both agreeing at $e\in G$, and both having the same effect of pulling back a basis of 1-forms from $H$. Thus since the ideal of forms on $G\times H$ generated by the 1-forms \eqref{eq:3.15:5} is a differential ideal, it follows from \hyperref[thm:2.34]{2.34(b)} that $\varphi=\psi$.
@@ -501,7 +501,7 @@ $ (H,\varphi) $ is called a closed subgroup of G if, in addition,  $ \varphi(H) 
 
 Let $\mathfrak{g}$ be a Lie algebra. A subspace $\mathfrak{h} \subset \mathfrak{g}$ is a subalgebra if $[X, Y] \in \mathfrak{h}$ whenever $X, Y \in \mathfrak{h}$. A subalgebra $\mathfrak{h} \subseteq \mathfrak{g}$ clearly forms a Lie algebra under the bracket induced from $\mathfrak{g}$.
 
-Let $(H,\varphi)$ be a Lie subgroup of $G$, and let $\mathfrak{h}$ and $\mathfrak{g}$ be their respective Lie algebras. Then $d\varphi$ gives an isomorphism of $\mathfrak{h}$ with the subalgebra $d\varphi(\mathfrak{h})$ of $\mathfrak{g}$.
+Let $(H,\varphi)$ be a Lie subgroup of $G$, and let $\mathfrak{h}$ and $\mathfrak{g}$ be their respective Lie algebras. Then $\varphi_{*}$ gives an isomorphism of $\mathfrak{h}$ with the subalgebra $\varphi_{*}(\mathfrak{h})$ of $\mathfrak{g}$.
 
 Various theorems assert the existence of unique subgroups satisfying certain conditions, and as in the case of submanifolds (1.33 is pertinent), uniqueness needs a little explanation in view of our definition of subgroup. We will consider two subgroups $(H,\varphi)$ and $(H_{1},\varphi_{1})$ of $G$ equivalent if there exists a Lie group isomorphism $\alpha: H \to H_{1}$ such that $\varphi_{1} \circ \alpha = \varphi$. This is an equivalence relation on the Lie subgroups of $G$, and uniqueness for Lie subgroups means uniqueness up to this equivalence. As in the case of submanifolds (see 1.33), each equivalence class of Lie subgroups of $G$ has a unique representative of the form $(A,i)$, where $A$ is a subset of $G$ which is an abstract subgroup of $G$ and which has a manifold structure (not necessarily with the relative topology) making $A$ into a Lie group such that the inclusion $i: A \to G$ yields a submanifold and hence a Lie subgroup of $G$. When we wish to consider a subgroup of $G$ in this latter form (i.e. as an actual subset of $G$) we usually drop any reference to a mapping and speak simply of the Lie subgroup $A$ of $G$, the inclusion map being understood. Also, we usually identify the Lie algebra $\mathfrak{a}$ of $A$ with $di(\mathfrak{a})$ and simply speak of the Lie algebra of $A$ as a subalgebra of the Lie algebra of $G$. In particular, we identify a left invariant vector field $X$ on $A$ with the left invariant vector field $di(X)$ on $G$ with which it is inclusion-related.
 
@@ -535,7 +535,7 @@ Then $H$ is an abstract subgroup of $G$ and is an open subset of $G$ since $\sig
 
 \warnernumber{19}
 \begin{theorem}\label{thm:3.19}
-Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and let $\widetilde{\mathfrak{h}} \subset \mathfrak{g}$ be a subalgebra. Then there is a unique connected Lie subgroup $(H, \varphi)$ of $G$ such that $d\varphi(\mathfrak{h}) = \widetilde{\mathfrak{h}}$.
+Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and let $\widetilde{\mathfrak{h}} \subset \mathfrak{g}$ be a subalgebra. Then there is a unique connected Lie subgroup $(H, \varphi)$ of $G$ such that $\varphi_{*}(\mathfrak{h}) = \widetilde{\mathfrak{h}}$.
 
 \end{theorem}
 
@@ -562,9 +562,9 @@ Let $(H,\varphi)$ be a maximal connected integral manifold of $\mathcal{D}$ thro
 \redrawn{figure-26}
 \end{center}
 
-Since $(H,\varphi)$ is an integral manifold of an involutive distribution on $G$, it follows from 1.62 that $\alpha$ is $C^\infty$. Thus $(H,\varphi)$ is a Lie subgroup of $G$; and if $\mathfrak{h}$ is the Lie algebra of $H$, clearly $d\varphi(\mathfrak{h})=\widetilde{\mathfrak{h}}$.
+Since $(H,\varphi)$ is an integral manifold of an involutive distribution on $G$, it follows from 1.62 that $\alpha$ is $C^\infty$. Thus $(H,\varphi)$ is a Lie subgroup of $G$; and if $\mathfrak{h}$ is the Lie algebra of $H$, clearly $\varphi_{*}(\mathfrak{h})=\widetilde{\mathfrak{h}}$.
 
-For uniqueness, let $(K,\psi)$ be another connected Lie subgroup of $G$ with $d\psi(\mathfrak{k})=\tilde{\mathfrak{h}}$. Then $(K,\psi)$ must also be an integral manifold of $\mathcal{D}$ through $e$. By the maximality of $(H,\varphi)$, $\psi(K)\subset\varphi(H)$, and there is uniquely determined a map $\eta$ such that $\varphi\circ\eta=\psi$.
+For uniqueness, let $(K,\psi)$ be another connected Lie subgroup of $G$ with $\psi_{*}(\mathfrak{k})=\tilde{\mathfrak{h}}$. Then $(K,\psi)$ must also be an integral manifold of $\mathcal{D}$ through $e$. By the maximality of $(H,\varphi)$, $\psi(K)\subset\varphi(H)$, and there is uniquely determined a map $\eta$ such that $\varphi\circ\eta=\psi$.
 
 \begin{center}
 \redrawn{figure-27}
@@ -579,7 +579,7 @@ There is a 1:1 correspondence between connected Lie subgroups of a Lie group and
 \end{corollary*}
 
 \begin{corollary*}{b}
-Let $(H,\varphi)$ be a Lie subgroup of $G$. Then if $\tilde{H}$ is a component of $H$, $(\tilde{H},\varphi|\tilde{H})$ is a maximal connected integral manifold of the involutive distribution on $G$ determined by the subalgebra $d\varphi(\tilde{\mathfrak{h}})$ of $\mathfrak{g}$.
+Let $(H,\varphi)$ be a Lie subgroup of $G$. Then if $\tilde{H}$ is a component of $H$, $(\tilde{H},\varphi|\tilde{H})$ is a maximal connected integral manifold of the involutive distribution on $G$ determined by the subalgebra $\varphi_{*}(\tilde{\mathfrak{h}})$ of $\mathfrak{g}$.
 \end{corollary*}
 
 We can restate the content of part of the proof of \hyperref[thm:3.19]{Theorem 3.19} in terms of differential ideals on $G$ as follows (cf. Exercise 6):
@@ -710,14 +710,14 @@ Each connected Lie group has a simply connected covering space which is itself a
 
 \warnernumber{26}
 \begin{proposition}\label{thm:3.26}
-Let G and H be connected Lie groups, and let $\varphi: G \to H$ be a homomorphism. Then $\varphi$ is a covering map if and only if $d\varphi\colon G_{e}\to H_{e}$ is an isomorphism.
+Let G and H be connected Lie groups, and let $\varphi: G \to H$ be a homomorphism. Then $\varphi$ is a covering map if and only if $\varphi_{*}\colon T_{e} G\to T_{e} H$ is an isomorphism.
 
 \end{proposition}
 
 \begin{proof}
-Suppose first that $\varphi$ is a covering. Then $d\varphi\mid G_{e}$ must be injective. Otherwise, since $\varphi$ is a homomorphism, $d\varphi$ would have a nontrivial kernel at each point of $G$, and these kernels would form an involutive distribution on $G$, whose integral manifolds are collapsed to points under $\varphi$. Thus $\varphi$ would nowhere be locally one-to-one, contradicting the covering property. $d\varphi\mid G_{e}$ must also be surjective, for otherwise $(G,\varphi)$ would locally be a proper submanifold of $H$, again contradicting the local homeomorphism property of a covering. Thus $d\varphi:G_{\epsilon}\to H_{\epsilon}$ is an isomorphism.
+Suppose first that $\varphi$ is a covering. Then $\varphi_{*}\mid T_{e} G$ must be injective. Otherwise, since $\varphi$ is a homomorphism, $\varphi_{*}$ would have a nontrivial kernel at each point of $G$, and these kernels would form an involutive distribution on $G$, whose integral manifolds are collapsed to points under $\varphi$. Thus $\varphi$ would nowhere be locally one-to-one, contradicting the covering property. $\varphi_{*}\mid T_{e} G$ must also be surjective, for otherwise $(G,\varphi)$ would locally be a proper submanifold of $H$, again contradicting the local homeomorphism property of a covering. Thus $\varphi_{*}:T_{\epsilon} G\to T_{\epsilon} H$ is an isomorphism.
 
-Conversely, suppose that $d\varphi:G_{e}\to H_{e}$ is an isomorphism. Then $\varphi$ is everywhere a local diffeomorphism. Thus, by 3.18, $\varphi$ maps $G$ onto $H$ since $\varphi$ is a homomorphism and since $\varphi(G)$ contains a neighborhood of the identity in the connected Lie group $H$. $G$ certainly is pathwise and locally pathwise connected, so to prove that $\varphi$ is a covering map, it only remains to show that each point of $H$ is contained in an evenly covered neighborhood. Let
+Conversely, suppose that $\varphi_{*}:T_{e} G\to T_{e} H$ is an isomorphism. Then $\varphi$ is everywhere a local diffeomorphism. Thus, by 3.18, $\varphi$ maps $G$ onto $H$ since $\varphi$ is a homomorphism and since $\varphi(G)$ contains a neighborhood of the identity in the connected Lie group $H$. $G$ certainly is pathwise and locally pathwise connected, so to prove that $\varphi$ is a covering map, it only remains to show that each point of $H$ is contained in an evenly covered neighborhood. Let
 
 \begin{equation}
 \tag{1}\label{eq:3.26:1}
@@ -731,7 +731,7 @@ Then since $\varphi$ is a local diffeomorphism, $D$ is a discrete normal subgrou
 (V^{-1}V)\cap D=e.
 \end{equation}
 
-We claim that $\varphi(V)$ is a neighborhood of $e$ in $H$, evenly covered by $\varphi$. First, $\varphi\big|V$ is $1:1$, since if $\sigma,\tau\in V$ and $\varphi(\sigma)=\varphi(\tau)$, then $\varphi(\sigma^{-1}\tau)=e$, whence $\sigma^{-1}\tau=e$ by (2), and thus $\sigma=\tau$. Moreover, $d\varphi$ is an isomorphism at each point of $G$. Thus $\varphi\big|V$ is a diffeomorphism of $V$ with the open neighborhood $\varphi(V)$ of $e$ in $H$. Now, we claim that
+We claim that $\varphi(V)$ is a neighborhood of $e$ in $H$, evenly covered by $\varphi$. First, $\varphi\big|V$ is $1:1$, since if $\sigma,\tau\in V$ and $\varphi(\sigma)=\varphi(\tau)$, then $\varphi(\sigma^{-1}\tau)=e$, whence $\sigma^{-1}\tau=e$ by (2), and thus $\sigma=\tau$. Moreover, $\varphi_{*}$ is an isomorphism at each point of $G$. Thus $\varphi\big|V$ is a diffeomorphism of $V$ with the open neighborhood $\varphi(V)$ of $e$ in $H$. Now, we claim that
 
 \begin{equation}
 \tag{3}\label{eq:3.26:3}
@@ -746,7 +746,7 @@ The inclusion $\supset$ is obvious. To prove $\subset$, suppose that $\varphi(\s
 
 \warnernumber{27}
 \begin{theorem}\label{thm:3.27}
-Let G and H be Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$ respectively and with $G$ simply connected. Let $\psi\colon\mathfrak{g}\to\mathfrak{h}$ be a homomorphism. Then there exists a unique homomorphism $\varphi\colon G\to H$ such that $d\varphi=\psi$.
+Let G and H be Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$ respectively and with $G$ simply connected. Let $\psi\colon\mathfrak{g}\to\mathfrak{h}$ be a homomorphism. Then there exists a unique homomorphism $\varphi\colon G\to H$ such that $\varphi_{*}=\psi$.
 
 \end{theorem}
 
@@ -757,7 +757,7 @@ Let $\{\omega_i\}$ be a basis of the left invariant 1-forms on $H$, and let $\ps
 
 \begin{equation}
 \tag{1}\label{eq:3.27:1}
-\{\delta\pi_{1}\big(\psi^{*}(\omega_{i})\big)-\delta\pi_{2}(\omega_{i})\}
+\{\pi_{1}^{*}\big(\psi^{*}(\omega_{i})\big)-\pi_{2}^{*}(\omega_{i})\}
 \end{equation}
 
 on $G \times H$ (where $\pi_1$ and $\pi_2$ are the canonical projections of $G \times H$ onto $G$ and $H$ respectively) are left invariant, and the ideal $\mathcal{J}$ which they generate is a differential ideal. Thus by 3.19, Corollary (c), the maximal connected integral manifold $I$ of $\mathcal{J}$ through $(e,e) \in G \times H$ is a Lie subgroup of $G \times H$ with dimension equal to the dimension of $G$. Now, we know from 2.33 that $(\pi_1 \mid I): I \to G$ is non-singular, and therefore by 3.26 is a covering homomorphism. $G$ was assumed to be simply connected; hence by \hyperref[thm:3.23]{3.23(c)} and the inverse function theorem, $\pi_1 \mid I: I \to G$ is an isomorphism. We define $\varphi: G \to H$ by setting
@@ -770,10 +770,10 @@ on $G \times H$ (where $\pi_1$ and $\pi_2$ are the canonical projections of $G \
 Then $\varphi$ is a Lie group homomorphism, and according to \eqref{eq:2.33:6},
 
 \[
-\delta\varphi(\omega_{i})=\varphi^{*}(\omega_{i}).
+\varphi^{*}(\omega_{i})=\psi^{*}(\omega_{i}).
 \]
 
-Thus $d\varphi=\psi$, and the theorem is proved.
+Thus $\varphi_{*}=\psi$, and the theorem is proved.
 
 \end{proof}
 
@@ -817,7 +817,7 @@ such that
 
 \begin{equation}
 \tag{3}\label{eq:3.30:3}
-d\exp_{X}\Big(\lambda\frac{d}{d r}\Big)=\lambda X.
+(\exp_{X})_{*}\Big(\lambda\frac{d}{d r}\Big)=\lambda X.
 \end{equation}
 
 In other words, $t \mapsto \exp_{X}(t)$ is the unique 1-parameter subgroup of $G$ whose tangent vector at $0$ is $X(e)$. We define the exponential map
@@ -852,7 +852,7 @@ Let $X$ belong to the Lie algebra $\mathfrak{g}$ of the Lie group $G$. Then
 
 (c)  $ \exp(-tX) = (\exp tX)^{-1} $ for each  $ t \in \mathbb{R} $.
 
-(d) $\exp: \mathfrak{g} \to G$ is $C^{\infty}$ and $d\exp\colon\mathfrak{g}_{0}\to G_{e}$ is the identity map (with the usual identifications), so $\exp$ gives a diffeomorphism of a neighborhood of 0 in $\mathfrak{g}$ onto a neighborhood of $e$ in $G$.
+(d) $\exp: \mathfrak{g} \to G$ is $C^{\infty}$ and $\exp_{*,0}\colon T_0\mathfrak{g}\to T_{e} G$ is the identity map (with the usual identifications), so $\exp$ gives a diffeomorphism of a neighborhood of 0 in $\mathfrak{g}$ onto a neighborhood of $e$ in $G$.
 
 (e) $l_{\sigma}\circ\exp_{X}$ is the unique integral curve of $X$ which takes the value $\sigma$ at 0. As a particular consequence, left invariant vector fields are always complete.
 
@@ -865,7 +865,7 @@ X_{t}=r_{\exp tX}.
 \end{theorem}
 
 \begin{proof}
-By 3.14, $(d/dr)$ and $d\exp_X(d/dr)$, which is $X$, are $\exp_X$ related. Thus $\exp_X$ is an integral curve of $X$ and is the unique one for which $\exp_X(0) = e$. Since $X$ is left invariant, $l_\sigma\circ\exp_X$ is also an integral curve of $X$ and is the unique one taking the value $\sigma$ at 0. Thus part (e) is proved; and (f) is an immediate consequence of (e). Now define maps $\varphi$ and $\psi$ of $\mathbb{R}$ into $G$ by setting
+By 3.14, $(d/dr)$ and $(\exp_{X})_{*}(d/dr)$, which is $X$, are $\exp_X$ related. Thus $\exp_X$ is an integral curve of $X$ and is the unique one for which $\exp_X(0) = e$. Since $X$ is left invariant, $l_\sigma\circ\exp_X$ is also an integral curve of $X$ and is the unique one taking the value $\sigma$ at 0. Thus part (e) is proved; and (f) is an immediate consequence of (e). Now define maps $\varphi$ and $\psi$ of $\mathbb{R}$ into $G$ by setting
 
 \begin{equation}
 \tag{1}\label{eq:3.31:1}
@@ -875,7 +875,7 @@ By 3.14, $(d/dr)$ and $d\exp_X(d/dr)$, which is $X$, are $\exp_X$ related. Thus 
 where $s \in \mathbb{R}$. We have observed that $\psi$ is the unique integral curve of $sX$ such that $\psi(0) = e$. Now,
 
 \[
-d\varphi\left(\frac{d}{d r}\bigg\vert_{t}\right)=d\exp_{X}\left(s\frac{d}{d r}\bigg\vert_{s t}\right)=s X\big\vert_{\exp_{X}(s t)}.
+\varphi_{*}\left(\frac{d}{d r}\bigg\vert_{t}\right)=(\exp_{X})_{*}\left(s\frac{d}{d r}\bigg\vert_{s t}\right)=s X\big\vert_{\exp_{X}(s t)}.
 \]
 
 Thus $\varphi$ also is an integral curve of $sX$ such that $\varphi(0)=e$. By the uniqueness (1.48(c)) of integral curves, $\varphi=\psi$. Thus
@@ -888,7 +888,7 @@ Thus $\varphi$ also is an integral curve of $sX$ such that $\varphi(0)=e$. By th
 Setting $t=1$ and changing $s$ to $t$, we obtain part (a). Since $\exp_X$ is a homomorphism of $\mathbb{R}$ into $G$, parts (b) and (c) follow immediately from (a). For part (d), we define a vector field $V$ on $G\times g$ by setting
 
 \[
-V(\sigma,X)=(X(\sigma),0)\in G_{\sigma}\oplus\mathfrak{g}_{X}.
+V(\sigma,X)=(X(\sigma),0)\in T_{\sigma} G\oplus T_X\mathfrak{g}.
 \]
 
 Then $V$ is a smooth vector field, and according to part (e), the integral curve of $V$ through $(\sigma,X)$ is
@@ -909,7 +909,7 @@ In particular, $V$ is complete; hence $V_{1}$ is defined and smooth on all of $G
 \exp X=\pi\circ V_{1}(e,X).
 \]
 
-Thus we have exhibited $\exp$ as the composition of  $ C^{\infty} $ mappings, so  $ \exp $ is  $ C^{\infty} $. That  $ d\exp\colon\mathfrak{g}_{0}\to G_{e} $ is the identity map is immediate, for  $ tX $ is a curve in $\mathfrak{g}$ whose tangent vector at  $ t = 0 $ is X, and by part (a),  $ \exp tX $ is a curve in G whose tangent vector at  $ t = 0 $ is  $ X(e) $.
+Thus we have exhibited $\exp$ as the composition of  $ C^{\infty} $ mappings, so  $ \exp $ is  $ C^{\infty} $. That  $ \exp_{*,0}\colon T_0\mathfrak{g}\to T_{e} G $ is the identity map is immediate, for  $ tX $ is a curve in $\mathfrak{g}$ whose tangent vector at  $ t = 0 $ is X, and by part (a),  $ \exp tX $ is a curve in G whose tangent vector at  $ t = 0 $ is  $ X(e) $.
 
 \end{proof}
 
@@ -924,30 +924,30 @@ Let $\varphi\colon H\to G$ be a homomorphism, Then the following diagram is comm
 \end{theorem}
 
 \begin{proof}
-Let $X\in\mathfrak{h}$. Then $t\mapsto\varphi(\exp tX)$ is a smooth curve in $G$ whose tangent at $0$ is $d\varphi(X(e))$. This is also a 1-parameter subgroup of $G$ since $\varphi$ is a homomorphism. But $t\mapsto\exp t(d\varphi(X))$ is the unique 1-parameter subgroup of $G$ whose tangent at $0$ is $(d\varphi(X))(e)$. Thus
+Let $X\in\mathfrak{h}$. Then $t\mapsto\varphi(\exp tX)$ is a smooth curve in $G$ whose tangent at $0$ is $\varphi_{*}(X(e))$. This is also a 1-parameter subgroup of $G$ since $\varphi$ is a homomorphism. But $t\mapsto\exp t(\varphi_{*}(X))$ is the unique 1-parameter subgroup of $G$ whose tangent at $0$ is $(\varphi_{*}(X))(e)$. Thus
 
 \begin{equation}
 \tag{2}\label{eq:3.32:2}
-\varphi(\exp t X)=\exp t\big(d\varphi(X)\big),
+\varphi(\exp t X)=\exp t\big(\varphi_{*}(X)\big),
 \end{equation}
 
 whence
 
 \begin{equation}
 \tag{3}\label{eq:3.32:3}
-\varphi(\exp X)=\exp\bigl(d\varphi(X)\bigr).
+\varphi(\exp X)=\exp\bigl(\varphi_{*}(X)\bigr).
 \end{equation}
 
 \end{proof}
 
 \warnernumber{33}
 \begin{proposition}\label{thm:3.33}
-Let $(H,\varphi)$ be a Lie subgroup of $G$, and let $X\in\mathfrak{g}$. If $X\in d\varphi(\mathfrak{h})$, then $\exp tX\in\varphi(H)$ for all $t$. Conversely, if $\exp tX\in\varphi(H)$ for $t$ in some open interval, then $X\in d\varphi(\mathfrak{h})$.
+Let $(H,\varphi)$ be a Lie subgroup of $G$, and let $X\in\mathfrak{g}$. If $X\in \varphi_{*}(\mathfrak{h})$, then $\exp tX\in\varphi(H)$ for all $t$. Conversely, if $\exp tX\in\varphi(H)$ for $t$ in some open interval, then $X\in \varphi_{*}(\mathfrak{h})$.
 
 \end{proposition}
 
 \begin{proof}
-If $X\in d\varphi(\mathfrak{h})$, then $\exp tX\in\varphi(H)$ for all $t$, according to 3.32. On the other hand, if $\exp tX\in\varphi(H)$ for $t$ in some interval $I$, then for $t\in I$, the map $t\mapsto\exp tX$ can be expressed as a composition $\varphi\circ\alpha$ where $\alpha$, according to 1.62, is a smooth map of $I$ into $H$. Let $t_0\in I$, and let $\tilde{X}$ be the left invariant vector field on $H$ determined by $\dot{\alpha}(t_0)$. Then $d\varphi(\tilde{X})=X$.
+If $X\in \varphi_{*}(\mathfrak{h})$, then $\exp tX\in\varphi(H)$ for all $t$, according to 3.32. On the other hand, if $\exp tX\in\varphi(H)$ for $t$ in some interval $I$, then for $t\in I$, the map $t\mapsto\exp tX$ can be expressed as a composition $\varphi\circ\alpha$ where $\alpha$, according to 1.62, is a smooth map of $I$ into $H$. Let $t_0\in I$, and let $\tilde{X}$ be the left invariant vector field on $H$ determined by $\dot{\alpha}(t_0)$. Then $\varphi_{*}(\tilde{X})=X$.
 
 \end{proof}
 
@@ -1102,14 +1102,14 @@ If $\varphi: G \to \mathrm{Aut}(V)$ is a representation, and $X \in \mathfrak{g}
 
 \begin{equation}
 \tag{1}\label{eq:3.36:1}
-\varphi(\exp X)=1+d\varphi(X)+\frac{(d\varphi(X))^{2}}{2!}+\cdots,
+\varphi(\exp X)=1+\varphi_{*}(X)+\frac{(\varphi_{*}(X))^{2}}{2!}+\cdots,
 \end{equation}
 
 and it follows from 3.32 and \eqref{eq:3.9:2} that
 
 \begin{equation}
 \tag{2}\label{eq:3.36:2}
-d\varphi(X)=\lim_{t\to0}\frac{\varphi(\exp tX)-1}{t}=\left.\frac{d}{dt}\right|_{t=0}(\varphi(\exp tX)).
+\varphi_{*}(X)=\lim_{t\to0}\frac{\varphi(\exp tX)-1}{t}=\left.\frac{d}{dt}\right|_{t=0}(\varphi(\exp tX)).
 \end{equation}
 
 \end{remarks}
@@ -1336,12 +1336,12 @@ where $O(t^{2})$ is a $C^{\infty}$ $\mathfrak{g}$-valued function of $t$ such th
 
 \warnernumber{43}
 \begin{theorem}\label{thm:3.43}
-Let $\psi: G \to K$ be a homomorphism of Lie groups. If $A = \ker \psi$ and $\mathfrak{a} = \ker d\psi$, then $A$ is a closed Lie subgroup of $G$ with Lie algebra $\mathfrak{a}$.
+Let $\psi: G \to K$ be a homomorphism of Lie groups. If $A = \ker \psi$ and $\mathfrak{a} = \ker \psi_{*}$, then $A$ is a closed Lie subgroup of $G$ with Lie algebra $\mathfrak{a}$.
 
 \end{theorem}
 
 \begin{proof}
-$A$ is a closed abstract subgroup of $G$, hence, by 3.42, is a Lie subgroup of $G$. If $X\in\mathfrak{g}$, then according to 3.33 (with $H = A$ and $\varphi$ the inclusion map), $X$ belongs to the Lie algebra of $A$ if and only if $\exp t X \in A$ for all $t \in \mathbb{R}$, and this occurs if and only if $\psi(\exp t X) = e$ for all $t \in \mathbb{R}$. By 3.32, this latter condition is equivalent to having $\exp t \, d\psi(X) = e$ for all $t \in \mathbb{R}$, and this occurs if and only if $d\psi(X) = 0$ or $X \in a$.
+$A$ is a closed abstract subgroup of $G$, hence, by 3.42, is a Lie subgroup of $G$. If $X\in\mathfrak{g}$, then according to 3.33 (with $H = A$ and $\varphi$ the inclusion map), $X$ belongs to the Lie algebra of $A$ if and only if $\exp t X \in A$ for all $t \in \mathbb{R}$, and this occurs if and only if $\psi(\exp t X) = e$ for all $t \in \mathbb{R}$. By 3.32, this latter condition is equivalent to having $\exp t \, \psi_{*}(X) = e$ for all $t \in \mathbb{R}$, and this occurs if and only if $\psi_{*}(X) = 0$ or $X \in a$.
 
 \end{proof}
 
@@ -1373,14 +1373,14 @@ Let $\mu: G \times M \to M$ be an action of $G$ on $M$ on the left. Assume that 
 
 \begin{equation}
 \tag{1}\label{eq:3.45:1}
-\psi\colon G\to\mathrm{Aut}(M_{m_{0}})
+\psi\colon G\to\mathrm{Aut}(T_{m_{0}} M)
 \end{equation}
 
 defined by
 
 \begin{equation}
 \tag{2}\label{eq:3.45:2}
-\psi(\sigma)=d\mu_{\sigma}\mid M_{m_{0}}
+\psi(\sigma)=(\mu_{\sigma})_{*}\mid T_{m_{0}} M
 \end{equation}
 
 is a representation of G.
@@ -1392,29 +1392,29 @@ $ \psi $ is a homomorphism for
 
 \begin{equation}
 \tag{3}\label{eq:3.45:3}
-\psi(\sigma\tau)=d\mu_{\sigma\tau}\left|M_{m_{0}}=d(\mu_{\sigma}\circ\mu_{\tau})\right|M_{m_{0}}=\psi(\sigma)\circ\psi(\tau).
+\psi(\sigma\tau)=(\mu_{\sigma\tau})_{*}\left|T_{m_{0}} M=(\mu_{\sigma}\circ\mu_{\tau})_{*}\right|T_{m_{0}} M=\psi(\sigma)\circ\psi(\tau).
 \end{equation}
 
-It remains only to prove that $\psi$ is $C^{\infty}$. For this, it suffices to prove that $\psi$ composed with an arbitrary coordinate function on $\mathrm{Aut}(M_{m_0})$ is $C^{\infty}$. Now, one gets a coordinate system on $\mathrm{Aut}(M_{m_0})$ by choosing a basis for $M_{m_0}$ and then by using this basis to identify $\mathrm{Aut}(M_{m_0})$ with non-singular matrices. One gets the matrix associated with an element of $\mathrm{Aut}(M_{m_0})$ by applying this element to the basis of $M_{m_0}$ and then applying the dual basis. So it suffices to prove that if $v_0 \in M_{m_0}$ and if $\alpha \in M_{m_0}^*$, then
+It remains only to prove that $\psi$ is $C^{\infty}$. For this, it suffices to prove that $\psi$ composed with an arbitrary coordinate function on $\mathrm{Aut}(T_{m_0} M)$ is $C^{\infty}$. Now, one gets a coordinate system on $\mathrm{Aut}(T_{m_0} M)$ by choosing a basis for $T_{m_0} M$ and then by using this basis to identify $\mathrm{Aut}(T_{m_0} M)$ with non-singular matrices. One gets the matrix associated with an element of $\mathrm{Aut}(T_{m_0} M)$ by applying this element to the basis of $T_{m_0} M$ and then applying the dual basis. So it suffices to prove that if $v_0 \in T_{m_0} M$ and if $\alpha \in T_{m_0}^{*} M$, then
 
 \begin{equation}
-\sigma\mapsto\alpha\left(d\mu_{\sigma}(v_{0})\right)
+\sigma\mapsto\alpha\left((\mu_{\sigma})_{*}(v_{0})\right)
 \end{equation}
 
 is a $C^{\infty}$ function on $G$. For (3), it suffices to prove that
 
 \begin{equation}
 \tag{4}\label{eq:3.45:4}
-\sigma\mapsto d\mu_{\sigma}(v_{0})
+\sigma\mapsto (\mu_{\sigma})_{*}(v_{0})
 \end{equation}
 
-is a $C^{\infty}$ map of $G$ into $M_{m_{0}}$, or equivalently that (4) is a $C^{\infty}$ map of $G$ into $T(M)$. But (4) is exactly the composition of $C^{\infty}$ maps
+is a $C^{\infty}$ map of $G$ into $T_{m_{0}} M$, or equivalently that (4) is a $C^{\infty}$ map of $G$ into $TM$. But (4) is exactly the composition of $C^{\infty}$ maps
 
 \[
-G\to T(G)\times T(M)\to T(G\times M)\to T(M)
+G\to TG\times TM\to T(G\times M)\to TM
 \]
 
-in which the first map sends $\sigma \mapsto \big((\sigma,0),(m_0,v_0)\big)$, the second map is the canonical diffeomorphism of $T(G) \times T(M)$ with $T(G \times M)$, and the third map is $d\mu$. Thus $\psi$ is $C^\infty$.
+in which the first map sends $\sigma \mapsto \big((\sigma,0),(m_0,v_0)\big)$, the second map is the canonical diffeomorphism of $TG \times TM$ with $T(G \times M)$, and the third map is $\mu_{*}$. Thus $\psi$ is $C^\infty$.
 
 \end{proof}
 \warnernumber{46}
@@ -1430,7 +1430,7 @@ The identity is a fixed point of this action. Hence, by 3.45, the map
 
 \begin{equation}
 \tag{2}\label{eq:3.46:2}
-\sigma\mapsto da_{\sigma}\mid G_{e}\cong\mathfrak{g}
+\sigma\mapsto (a_{\sigma})_{*}\mid T_{e} G\cong\mathfrak{g}
 \end{equation}
 
 is a representation of $G$ into $\operatorname{Aut}(\mathfrak{g})$. This is called the adjoint representation and is denoted by
@@ -1444,7 +1444,7 @@ We let the differential of the adjoint representation be denoted by ad.
 
 \begin{equation}
 \tag{4}\label{eq:3.46:4}
-d(\mathrm{Ad})=\mathrm{ad},
+(\mathrm{Ad})_{*}=\mathrm{ad},
 \end{equation}
 
 and we denote $\mathrm{Ad}(\sigma)$ by $\mathrm{Ad}_{\sigma}$ and $\mathrm{ad}(X)$ by $\mathrm{ad}_{X}$. Thus by 3.32 we have a commutative diagram
@@ -1508,14 +1508,14 @@ Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$, and let $X,Y\in\mathfrak
 By \eqref{eq:3.36:2},
 
 \begin{equation}
-\tag{2}\label{eq:3.47:2}\begin{aligned}\mathrm{ad}_{X}Y&=\left(\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}(\exp tX)\right)Y\\&=\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}_{\exp tX}(Y)=\frac{d}{dt}\bigg|_{t=0}d(a_{\exp tX})(Y).\end{aligned}
+\tag{2}\label{eq:3.47:2}\begin{aligned}\mathrm{ad}_{X}Y&=\left(\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}(\exp tX)\right)Y\\&=\frac{d}{dt}\bigg|_{t=0}\mathrm{Ad}_{\exp tX}(Y)=\frac{d}{dt}\bigg|_{t=0}(a_{\exp tX})_{*}(Y).\end{aligned}
 \end{equation}
 
 Thus if $X_{t}$ denotes, as usual, the 1-parameter group of diffeomorphisms associated with $X$, then
 
 \begin{equation}
 \tag{3}\label{eq:3.47:3}
-\begin{aligned}{\operatorname{ad}_{X}Y(e)}&{{}=\frac{d}{d t}\bigg|_{t=0}d(r_{\exp(-tX)})\big(d(l_{\exp tX})(Y(e))\big)}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}d(r_{\exp(-tX)})(Y\big|_{\exp tX})}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}d(X_{-t})(Y_{X_{t}(e)})}\\ {}&{{}=(L_{X}Y)(e)=[X,Y](e).}\\ \end{aligned}
+\begin{aligned}{\operatorname{ad}_{X}Y(e)}&{{}=\frac{d}{d t}\bigg|_{t=0}(r_{\exp(-tX)})_{*}\big((l_{\exp tX})_{*}(Y(e))\big)}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}(r_{\exp(-tX)})_{*}(Y\big|_{\exp tX})}\\ {}&{{}=\frac{d}{d t}\bigg|_{t=0}(X_{-t})_{*}(Y_{X_{t}(e)})}\\ {}&{{}=(L_{X}Y)(e)=[X,Y](e).}\\ \end{aligned}
 \end{equation}
 
 The last equality follows from 2.25(b). Since $\operatorname{ad}_{X}Y$ and $[X,Y]$ are both left invariant, (1) is an immediate consequence of (3).
@@ -1779,7 +1779,7 @@ Suppose that $G$ is a simply connected Lie group with Lie algebra $\mathfrak{g}$
 
 \begin{equation}
 \tag{1}\label{eq:3.57:1}
-\psi\colon A(G)\to A(\mathfrak{g})\quad{\mathrm{defined~by}}\quad\psi(\alpha)=d\alpha
+\psi\colon A(G)\to A(\mathfrak{g})\quad{\mathrm{defined~by}}\quad\psi(\alpha)=\alpha_{*}
 \end{equation}
 
 is a homomorphism and is 1:1 by 3.16 and onto by 3.27. Thus we can induce via $\psi$ a manifold structure on $A(G)$, making $A(G)$ into a Lie group with Lie algebra isomorphic with $\mathfrak{b}(g)$.
@@ -1941,10 +1941,10 @@ H is a closed subgroup of G called the isotropy group at  $ m_{0} $. The action 
 
 \begin{equation}
 \tag{4}\label{eq:3.61:4}
-\alpha\colon H\to\operatorname{Aut}(M_{m_{0}})\quad\mathrm{where}\quad\alpha(\sigma)=d\eta_{\sigma}\mid M_{m_{0}}.
+\alpha\colon H\to\operatorname{Aut}(T_{m_{0}} M)\quad\mathrm{where}\quad\alpha(\sigma)=(\eta_{\sigma})_{*}\mid T_{m_{0}} M.
 \end{equation}
 
-The group  $ \alpha(H) $ of linear transformations of  $ M_{m_{0}} $ is called the linear isotropy group at  $ m_{0} $. \index{Linear isotropy group}
+The group  $ \alpha(H) $ of linear transformations of  $ T_{m_{0}} M $ is called the linear isotropy group at  $ m_{0} $. \index{Linear isotropy group}
 
 \end{definition}
 
@@ -1962,7 +1962,7 @@ Then  $ \tilde{\beta} $ is a diffeomorphism.
 \end{theorem}
 
 \begin{proof}
-Observe first that $\tilde{\beta}$ is well-defined since $\eta_{\sigma h}(m_0) = \eta_\sigma(\eta_h(m_0)) = \eta_\sigma(m_0)$ for any $h \in H$. $\tilde{\beta}$ is surjective since $G$ acts transitively, and is injective since if $\tilde{\beta}(\sigma H) = \tilde{\beta}(\tau H)$, then $\eta_{\tau^{-1}\sigma}(m_0) = m_0$, which implies that $\tau^{-1}\sigma$ belongs to $H$, or in other words that $\sigma H = \tau H$. In view of Exercise 6 of Chapter 1, it suffices to prove that $\tilde{\beta}$ is $C^\infty$ and that $d\tilde{\beta}$ is non-singular at each point.
+Observe first that $\tilde{\beta}$ is well-defined since $\eta_{\sigma h}(m_0) = \eta_\sigma(\eta_h(m_0)) = \eta_\sigma(m_0)$ for any $h \in H$. $\tilde{\beta}$ is surjective since $G$ acts transitively, and is injective since if $\tilde{\beta}(\sigma H) = \tilde{\beta}(\tau H)$, then $\eta_{\tau^{-1}\sigma}(m_0) = m_0$, which implies that $\tau^{-1}\sigma$ belongs to $H$, or in other words that $\sigma H = \tau H$. In view of Exercise 6 of Chapter 1, it suffices to prove that $\tilde{\beta}$ is $C^\infty$ and that $\tilde{\beta}_{*}$ is non-singular at each point.
 
 According to \hyperref[thm:3.60]{Remark 3.60}, $\tilde{\beta}$ is $C^{\infty}$ if and only if $\tilde{\beta}\circ\pi$ is $C^{\infty}$ where $\pi$ is the natural projection of $G$ onto $G/H$. But
 
@@ -1980,20 +1980,20 @@ i_{m_{0}}(\sigma)=(\sigma,m_{0}).
 
 Thus  $ \tilde{\beta} $ is  $ C^{\infty} $.
 
-Now let $\beta=\tilde{\beta}\circ\pi$. Since the kernel of $d\pi\mid G_{\sigma}$ is $(\sigma H)_{\sigma}\subset G_{\sigma}$, in order to prove that $d\tilde{\beta}\mid(G/H)_{\sigma H}$ is non-singular it is sufficient to prove that the kernel of $d\beta\mid G_{e}$ is also $(\sigma H)_{e}$. Since for each $\sigma\in G$,
+Now let $\beta=\tilde{\beta}\circ\pi$. Since the kernel of $\pi_{*}\mid T_{\sigma} G$ is $T_{\sigma}(\sigma H)\subset T_{\sigma} G$, in order to prove that $\tilde{\beta}_{*}\mid T_{\sigma H}(G/H)$ is non-singular it is sufficient to prove that the kernel of $\beta_{*}\mid T_{e} G$ is also $T_e(\sigma H)$. Since for each $\sigma\in G$,
 
 \begin{equation}
 \tag{4}\label{eq:3.62:4}
 \beta=\eta_{\sigma}\circ\beta\circ l_{\sigma^{-1}},
 \end{equation}
 
-it suffices to prove that the kernel of $d\beta \big| G_e$ is $H_e$. Certainly $H_e \subset \ker(d\beta \big| G_e)$. So let $x \in \ker(d\beta \big| G_e)$. To show that $x \in H_e$, we need only prove that $\exp tX \in H$ for all $t \in \mathbb{R}$ where $X$ is the left invariant vector field on $G$ determined by $x$. For this, it is sufficient to prove that the tangent vector to the curve $t \mapsto \beta(\exp tX)$ in $M$ is identically zero, for then $\beta(\exp tX) \equiv m_{0}$, which implies that $\exp tX \in H$ for all $t$. The tangent vector to this curve at $t$ is
+it suffices to prove that the kernel of $\beta_{*} \big| T_{e} G$ is $T_{e} H$. Certainly $T_{e} H \subset \ker(\beta_{*} \big| T_{e} G)$. So let $x \in \ker(\beta_{*} \big| T_{e} G)$. To show that $x \in T_{e} H$, we need only prove that $\exp tX \in H$ for all $t \in \mathbb{R}$ where $X$ is the left invariant vector field on $G$ determined by $x$. For this, it is sufficient to prove that the tangent vector to the curve $t \mapsto \beta(\exp tX)$ in $M$ is identically zero, for then $\beta(\exp tX) \equiv m_{0}$, which implies that $\exp tX \in H$ for all $t$. The tangent vector to this curve at $t$ is
 
 \[
-\begin{aligned}{d\beta(X_{\exp tX})}&{{}=d\big(\eta_{\exp tX}\circ\beta\circ l_{\exp(-tX)}\big)\big(X_{\exp tX}\big)}\\ {}&{{}=d\eta_{\exp tX}\circ d\beta\big(X(e)\big)=d\eta_{\exp tX}\circ d\beta(x)=0.}\\ \end{aligned}
+\begin{aligned}{\beta_{*}(X_{\exp tX})}&{{}=(\eta_{\exp tX}\circ\beta\circ l_{\exp(-tX)})_{*}\big(X_{\exp tX}\big)}\\ {}&{{}=(\eta_{\exp tX})_{*}\circ \beta_{*}\big(X(e)\big)=(\eta_{\exp tX})_{*}\circ \beta_{*}(x)=0.}\\ \end{aligned}
 \]
 
-Thus $d\tilde{\beta}$ is everywhere non-singular, and the theorem is proved.
+Thus $\tilde{\beta}_{*}$ is everywhere non-singular, and the theorem is proved.
 
 \end{proof}
 
@@ -2433,7 +2433,7 @@ For the general case, define the lifting $\tilde{\alpha}$ of $\alpha$ as follows
 
 \item Prove that if $\pi: \tilde{M} \to M$ is a covering of a differentiable manifold $M$, then $\tilde{M}$ is second countable. (It suffices to prove that $\pi_{1}(M, m)$ is countable. This follows easily from the observation that $M$ can be covered by a countable number of open sets, each homeomorphic with an open ball in Euclidean space.)
 
-\item Let $G$ and $H$ be Lie groups with $G$ connected. Prove that a $C^{\infty}$ map $\varphi: G \to H$ sending the identity of $G$ to the identity of $H$ is a homomorphism if $\delta\varphi$ pulls left invariant forms on $H$ back to left invariant forms on $G$. Show that the assumption of connectedness for $G$ is necessary. (Hint: One can construct a differential ideal on $G \times H$ as in \eqref{eq:3.15:5} whose maximal connected integral submanifold $I$ through $(e,e)$ is a Lie subgroup of $G \times H$. Factor the graph of $\varphi$ through $I$, and show that the natural covering homomorphism of $I$ onto $G$ is 1:1.)
+\item Let $G$ and $H$ be Lie groups with $G$ connected. Prove that a $C^{\infty}$ map $\varphi: G \to H$ sending the identity of $G$ to the identity of $H$ is a homomorphism if $\varphi^{*}$ pulls left invariant forms on $H$ back to left invariant forms on $G$. Show that the assumption of connectedness for $G$ is necessary. (Hint: One can construct a differential ideal on $G \times H$ as in \eqref{eq:3.15:5} whose maximal connected integral submanifold $I$ through $(e,e)$ is a Lie subgroup of $G \times H$. Factor the graph of $\varphi$ through $I$, and show that the natural covering homomorphism of $I$ onto $G$ is 1:1.)
 
 \item Prove that  $ \begin{pmatrix}-2 & 0 \\ 0 & -1\end{pmatrix} $ is not  $ e^A $ for any  $ A \in \mathfrak{gl}(2, \mathbb{R}) $.
 
@@ -2443,10 +2443,10 @@ For the general case, define the lifting $\tilde{\alpha}$ of $\alpha$ as follows
 \dot{\alpha}(0)=\dot{\sigma}(0)+\dot{\beta}(0).
 \]
 
-(Hint: Consider the group multiplication map  $ \eta\colon G\times G\to G $, that is,  $ \eta(\gamma,\tau)=\gamma\tau $. Let  $ v,w\in G_e $, and show that
+(Hint: Consider the group multiplication map  $ \eta\colon G\times G\to G $, that is,  $ \eta(\gamma,\tau)=\gamma\tau $. Let  $ v,w\in T_{e} G $, and show that
 
 \[
-d\eta(v,w)=d\eta\big((v,0)+(0,w)\big)=v+w.
+\eta_{*}(v,w)=\eta_{*}\big((v,0)+(0,w)\big)=v+w.
 \]
 
 \item Let $G$ be a connected Lie group, and let $\varphi: G \to H$ be a homomorphism with a discrete kernel. Prove that the kernel lies in the center of $G$. Use this fact to prove that the fundamental group of a Lie group is abelian.
@@ -2463,7 +2463,7 @@ d\eta(v,w)=d\eta\big((v,0)+(0,w)\big)=v+w.
 
 Use a formal power series argument to show that  $ e^{\log N} = N $.
 
-\item Let $G$ be a Lie group. A vector field $Y$ on $G$ is right invariant if $Y$ is $r_\sigma$-related to itself for each $\sigma\in G$. Prove that the set of right invariant vector fields on $G$ forms a Lie algebra under the Lie bracket operation and is naturally isomorphic as a vector space with $G_\sigma$. Let $\varphi: G\to G$ be the diffeomorphism defined by $\varphi(\sigma)=\sigma^{-1}$. Prove that if $X$ is a left invariant vector field on $G$, then $d\varphi(X)$ is the right invariant vector field whose value at $e$ is $-\chi(e)$. Prove that $X\mapsto d\varphi(X)$ gives a Lie algebra isomorphism of the Lie algebra of left invariant vector fields on $G$ with the Lie algebra of right invariant vector fields on $G$. \index{Right invariant vector field}
+\item Let $G$ be a Lie group. A vector field $Y$ on $G$ is right invariant if $Y$ is $r_\sigma$-related to itself for each $\sigma\in G$. Prove that the set of right invariant vector fields on $G$ forms a Lie algebra under the Lie bracket operation and is naturally isomorphic as a vector space with $T_{\sigma} G$. Let $\varphi: G\to G$ be the diffeomorphism defined by $\varphi(\sigma)=\sigma^{-1}$. Prove that if $X$ is a left invariant vector field on $G$, then $\varphi_{*}(X)$ is the right invariant vector field whose value at $e$ is $-\chi(e)$. Prove that $X\mapsto \varphi_{*}(X)$ gives a Lie algebra isomorphism of the Lie algebra of left invariant vector fields on $G$ with the Lie algebra of right invariant vector fields on $G$. \index{Right invariant vector field}
 
 \item Find an example of a Lie group $G$ with a Lie subgroup $A$ that is not closed in $G$.
 

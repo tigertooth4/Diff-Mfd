@@ -1,5 +1,142 @@
 # Revision of 16 September 2026
 
+## Differential and pushforward chain rules (21 October 2026)
+
+- Section 1.22 now presents the differential and its coordinate formula,
+  the scalar and multivariable chain rules, the pushforward definition,
+  and the pushforward chain rules before introducing pullbacks.
+- Added the formula for a pushed-forward tangent vector acting on a
+  composite function and a test-function proof of the composition law.
+- Rebuilt both editions (236 plain / 253 colored pages) and visually
+  checked the affected pages in both PDFs.
+
+## Section 1.22 teaching order (16 October 2026)
+
+- Reordered 1.22: definition of df_m, its coordinate total-differential
+  formula and derivation, tangent maps, pullback, then df = f^*(dr).
+- Renumbered this rewritten section (1)--(8) in presentation order and
+  updated the semantic references in 1.23(a) and 1.26. The reprint note
+  explicitly records this exception to the original local numbering.
+  Reordered the corresponding notation-index entries.
+- Rebuilt both editions (236 plain / 252 colored pages).
+  All automated checks pass, with 837 local equation labels. Visually
+  reviewed the reordered section in both editions.
+
+## Book-wide pushforward notation (16 October 2026)
+
+- Extended the subscript-star convention from 1.22 throughout the book.
+  Updated tangent maps in Chapters 1--4, including exercises, chain rules,
+  inverse maps, tangent bundles, related vector fields, flows, Lie-group
+  homomorphisms, exponential maps, actions and induced Riemannian metrics.
+  Scanned all six chapters and both appendices; Chapters 5--6 and the
+  appendices require no tangent-map substitutions.
+- Distinguished indexed maps from pointwise evaluation: for example,
+  `(exp_X)_*` is the pushforward of the one-parameter subgroup, whereas
+  `exp_{*,0}` is the derivative of the exponential map at zero.
+  Higher tangent maps in 1.26 now use `varphi_*^{(k)}` with their duals;
+  revised the paragraph connecting the first-order case to 1.22.
+- Clarified the 1-form interpretation of df in 2.19. Kept ordinary
+  derivative fractions, coordinate differentials, exterior derivatives,
+  integration measures and cochain differentials unchanged in meaning.
+  Updated three vector figures, the notation index and the global reprint
+  note. Preserved all original item/equation labels and explicit tags.
+- Rebuilt both editions (235 plain / 252 colored pages); full verification
+  passes with zero errors. Reviewed representative changed pages in both
+  editions, including the chain rule, flows, Lie groups and notation.
+
+## Section 1.22 rewrite: tangent maps versus covectors (16 October 2026)
+
+- Rewrote 1.22 with subscript-star tangent maps and superscript-star
+  pullbacks, reserving `df_m` for a covector. Retained the six original
+  numbered equations and their labels. An editorial notice explains the
+  notation and its relation to `d psi_m` elsewhere in the book.
+- Equation (5) now gives `f_{*,m} v` in `T_{f(m)} R`; equation (6)
+  gives `df_m(v)` in `R`. Added the computation of the coefficient using
+  the coordinate r, the canonical identification of the tangent line with
+  R, and the pointwise verification of `df_m = f_m^*(dr_{f(m)})`.
+  Explained the global 1-form identity `df = f^*(dr)`.
+- Updated the reprint note and notation index to remove the superseded
+  ambiguous `f_* = df` entry. The index now contains 156 entries.
+- Rebuilt both editions (235 plain / 252 colored pages), with zero
+  verification errors. Reviewed the rewritten section visually in both PDFs.
+
+## Pushforward notation note (16 October 2026)
+
+- Added an explicitly editorial note in 1.22 matching the course slides:
+  `psi_{*,m} = d psi_m`, `f_{*,p} = df_p`, and `f_* = df` when the
+  base point is understood. Included the coordinate-vector example and
+  distinguished subscript-star pushforward from superscript-star pullback.
+- Added `sigma_{*,t} = d sigma_t` in the velocity formula in 1.23(e),
+  and a linked pushforward entry in the notation index (now 155 entries).
+  Original numbered equations and item labels remain unchanged.
+- Rebuilt both editions (235 plain / 252 colored pages); all automated
+  checks pass. Visually inspected the new note and velocity formula
+  in both PDFs.
+
+## Chapter 1 equation-number repair (16 October 2026)
+
+- Restored 27 missing local equation tags in items 1.9--1.26, retaining
+  all existing labels. In particular, the differential in 1.22 is now
+  numbered (1), matching the reference in the non-singularity definition.
+  Removed two obsolete commented-out tag/hypertarget lines.
+- Rebuilt both PDFs (235 plain / 252 colored pages). Both complete
+  verification runs now pass with zero errors, including all 835 local
+  equation numbers, unique equation destinations and internal PDF links.
+  Visually checked the corrected 1.22 page in both editions.
+- This resolves the 27 numbering failures reported in the earlier entries
+  below; those entries retain the historical verification results.
+
+## Curve illustration update (16 October 2026)
+
+- Redrew figure-03 in 1.23(e) as a non-self-intersecting curve with an
+  arrow indicating increasing parameter. The marked point lies exactly
+  on the curve; the two Bezier pieces share the derivative `(1.2, 1.5)`
+  there, and the velocity arrow is parallel to that derivative.
+- Updated both PDF editions and visually checked the resulting figure.
+
+## Dual-map and pullback notation update (16 October 2026)
+
+- Replaced the prefix-delta notation for transposes and pullbacks throughout
+  Chapters 1--4 and their exercises by a superscript star. At a source point
+  m, the transpose is now `psi_m^* = (d psi_m)^*`; on forms the global
+  pullback is `psi^*`. Updated the source-point subscripts in 1.30 rather
+  than retaining the old target-point restriction notation.
+- The transpose of a higher differential is written `$(d^k\varphi)^*$`.
+  Indexed maps, compositions, flows, translations and simplex face maps
+  retain their indices inside the pullback notation. Updated the reprint
+  note and generated notation index. Covector names, Kronecker symbols,
+  Lebesgue numbers and the Chapter 6 codifferential are unchanged.
+- Corrected the right-hand side of the unnumbered final equality in the
+  proof of 3.27 from `varphi^*` to `psi^*`: psi is the prescribed Lie-algebra
+  map, and the graph construction in (1) gives `varphi^*(omega_i) =
+  psi^*(omega_i)`. This is a contextual editorial correction of the
+  inherited transcription, not a claim of scan collation.
+- Rebuilt both PDFs (235 plain / 252 colored pages), inspected the changed
+  definitions, pullback formulas, Lie-group argument, Stokes formula and
+  notation index visually, and verified all chapter labels and explicit
+  equation tags unchanged. Both verification reports have exactly the same
+  27 pre-existing Chapter 1 numbering errors as before this update, with
+  no new compile, font, overflow or PDF-link failures.
+
+## Tangent-space notation update (16 October 2026)
+
+- Unified tangent and cotangent spaces as `$T_mM$` and `$T_m^*M$`,
+  and bundles as `$TM$` and `$T^*M$`, across the textbook body, exercises,
+  notation index and three vector figures. Updated Lie-group, Euclidean,
+  product, boundary and quotient tangent spaces as well.
+- Section 1.26 uses `$T_m^{(k)}M$` for higher order derivations and
+  `$T_m^{*(k)}M$` for higher order differentials; their canonical duality
+  remains explicit. The reprint note explains these editorial conventions.
+- Retained base-point names, differential/pullback notation and unrelated
+  subscripted objects such as Grassmann manifolds and tensor spaces.
+  Archival OCR and the original scan remain unchanged.
+- Rebuilt both PDFs (235 plain / 252 colored pages) and visually reviewed
+  definitions, differentials, higher order notation, three changed figures
+  and notation-index pages in both editions. No overflow, font or link
+  errors were reported. The verifier still reports only the 27 pre-existing
+  Chapter 1 equation-number mismatches documented below; Chapter 1 labels
+  and explicit equation tags were checked unchanged against HEAD.
+
 ## Germ notation update (12 October 2026)
 
 - Replaced bold function germs by `$[f]_m$`, abbreviated to `$[f]$` when

@@ -449,8 +449,7 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 \begin{proof}
 	We prove first that there exists a sequence  $ \{G_{i}: i = 1, 2, \ldots\} $ of open sets such that
 	\begin{equation}
-		%\tag{1}\hypertarget{eq:1.9:1}{}
-		\label{eq:1.9:1}
+		\tag{1}\label{eq:1.9:1}
 		\begin{aligned}{\overline{{G_{i}}}} & {{}\text{ is compact,}} \\
 		               {\overline{{G_{i}}}} & {{}\subset G_{i+1},}    \\ {X}&{{}=\bigcup_{i=1}^{\infty}G_{i}.}\\\end{aligned}
 	\end{equation}
@@ -493,26 +492,25 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 \begin{proof}
 	We need only let $\varphi$ be the product
 	\begin{equation}
-		%\tag{1}\hypertarget{eq:1.10:1}{}
-		\label{eq:1.10:1}
+		\tag{1}\label{eq:1.10:1}
 		\varphi=(h\circ r_{1})\cdots(h\circ r_{d}),
 	\end{equation}
 	where $h$ is a non-negative $C^{\infty}$ function on the real line which is $1$
 	on $[-1,1]$ and zero outside of $(-2,2)$. To construct such an $h$, we
 	start with the function
 	\begin{equation}
-		\label{eq:1.10:2}
+		\tag{2}\label{eq:1.10:2}
 		f(t)=\left\{\begin{aligned}{}&{{}e^{-1/t^{2}}}&{}&{{}t>0}\\ {}&{{}0}&{}&{{}t\leq0}\end{aligned}\right.
 	\end{equation}
 	which is non-negative, $C^{\infty}$, and positive for $t>0$. Then the function
 	\begin{equation}
-		\label{eq:1.10:3}
+		\tag{3}\label{eq:1.10:3}
 		g(t)=\frac{f(t)}{f(t)+f(1-t)}
 	\end{equation}
 	is non-negative, $C^\infty$, and takes the value $1$ for $t \geq 1$ and
 	the value zero for $t \leq 0$. We obtain the desired function $h$ by setting
 	\begin{equation}
-		\label{eq:1.10:4}
+		\tag{4}\label{eq:1.10:4}
 		h(t)=g(t+2)g(2-t).
 	\end{equation}
 \end{proof}
@@ -541,7 +539,7 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	and such that $\tau(V)$ contains the closed cube $\overline{C(2)}$. Define
 
 	\begin{equation}
-		\label{eq:1.11:1}
+		\tag{1}\label{eq:1.11:1}
 		\psi_{p}=\left\{\begin{aligned}{}&{{}\varphi\circ\tau}&{\quad\text{on }V}\\ {}&{{}0}&{\quad\text{elsewhere}} \end{aligned}\right.
 	\end{equation}
 
@@ -556,13 +554,13 @@ are metrizable, see \cite{13}. \index{Second axiom of countability}\index{Paraco
 	supports of the $\psi_j$ form a locally finite family of subsets of $M$.
 	Thus the function
 	\begin{equation}
-		\label{eq:1.11:2}
+		\tag{2}\label{eq:1.11:2}
 		\psi=\sum_{j=1}^{\infty}\psi_{j}
 	\end{equation}
 	is a well-defined $C^{\infty}$ function on $M$, and moreover
 	$\psi(p) > 0$ for each $p \in M$. For each $i = 1, 2, 3, \ldots$ define
 	\begin{equation}
-		\label{eq:1.11:3}
+		\tag{3}\label{eq:1.11:3}
 		\varphi_{i}=\psi_{i}/\psi.
 	\end{equation}
 	Then the functions $\{\varphi_i: i=1,2,3,\ldots\}$ form a partition
@@ -607,14 +605,14 @@ then $v$ assigns to $f$ the real number $v(f)$ which is the
 directional derivative of $f$ in the direction $v$ at $p$. That is,
 
 \begin{equation}
-	\label{eq:1.12:1}
+	\tag{1}\label{eq:1.12:1}
 	v(f)=v_{1}\frac{\partial f}{\partial r_{1}}\bigg|_{p}+\cdots+v_{d}\frac{\partial f}{\partial r_{d}}\bigg|_{p}.
 \end{equation}
 
 This operation of the vector v on differentiable functions satisfies two important properties.
 
 \begin{equation}
-	\label{eq:1.12:2}%\tag{2}\hypertarget{eq:1.12:2}{}
+	\tag{2}\label{eq:1.12:2}%\tag{2}\hypertarget{eq:1.12:2}{}
 	\begin{aligned}{v(f+\lambda g)}&{{}=v(f)+\lambda v(g);}\\ {v(f\cdot g)}&{{}=f(p)v(g)+g(p)v(f),}\\ \end{aligned}
 \end{equation}
 whenever $f$ and $g$ are differentiable near $p$, and $\lambda$ is a real number.
@@ -658,17 +656,17 @@ $\widetilde{F}_m \supset F_m \supset F_m^{2} \supset F_m^{3} \supset \cdots$.
 		\citem{(b)} $v([f]\cdot[g])=f(m)v([g])+g(m)v([f]).$
 	\end{enumerate}
 
-	$ M_m $ denotes the set of tangent vectors to  $ M $ at  $ m $ and
+	$ T_{m} M $ denotes the set of tangent vectors to  $ M $ at  $ m $ and
 	is called the tangent space to  $ M $ at  $ m $.
 \end{definition}
 Observe that if we define  $ (v + w)([f]) $ and  $ (\lambda v)([f]) $ by \index{Tangent space}
 \begin{equation}
-	\label{eq:1.14:1}
+	\tag{1}\label{eq:1.14:1}
 	\begin{aligned}(v+w)([f])&=v([f])+w([f])\\ (\lambda v)([f])&=\lambda\big(v([f])\big)\end{aligned}
 \end{equation}
-whenever $v, w \in M_m$ and $\lambda \in \mathbb{R}$, then $v + w$ and $\lambda v$ again are tangent
-vectors at $m$. So in this way $M_m$ becomes a real vector space.
-The fundamental property of the vector space $M_m$,
+whenever $v, w \in T_{m} M$ and $\lambda \in \mathbb{R}$, then $v + w$ and $\lambda v$ again are tangent
+vectors at $m$. So in this way $T_{m} M$ becomes a real vector space.
+The fundamental property of the vector space $T_{m} M$,
 which we shall establish in \ref{thm:1.17}, is that its dimension
 equals the dimension of $M$. This definition of tangent vector
 is not suitable in the $C^{k}$ case for $1 \leq k < \infty$.
@@ -691,11 +689,11 @@ and \index{Germ of a function}
 \]
 \warnernumber{16}
 \begin{lemma}\label{thm:1.16}
-	$M_{m}$ is naturally isomorphic with $(F_{m}/F_{m}^{2})^{*}$. (The symbol ${}^{*}$ denotes dual vector space.)
+	$T_{m} M$ is naturally isomorphic with $(F_{m}/F_{m}^{2})^{*}$. (The symbol ${}^{*}$ denotes dual vector space.)
 \end{lemma}
 
 \begin{proof}
-	If $v \in M_m$, then $v$ is a linear function on $\widetilde{F}_m$
+	If $v \in T_{m} M$, then $v$ is a linear function on $\widetilde{F}_m$
 	vanishing on $F_m^2$ because of the derivation property.
 	Conversely, if $\ell \in (F_m/F_m^2)^*$, we define a tangent
 	vector $v_\ell$ at $m$ by setting
@@ -707,7 +705,7 @@ and \index{Germ of a function}
 	\[
 		\begin{aligned}{v_{\ell}([f]\cdot[g])}&{{}=\ell\big(\{[f]\cdot[g]-[f(m)][g(m)]\}\big)}\\ {}&{{}=\ell\big(\{([f]-[f(m)])([g]-[g(m)])+[f(m)]\big([g]-[g(m)]\big)}\\ {}&{{}\quad+\big([f]-[f(m)]\big)[g(m)]\}\big)}\\ {}&{{}=\ell\big(\{([f]-[f(m)])([g]-[g(m)])\}\big)+f(m)\ell\big(\{[g]-[g(m)]\}\big)}\\ {}&{{}\quad+g(m)\ell\big(\{[f]-[f(m)]\}\big)}\\ {}&{{}=f(m)v_{\ell}([g])+g(m)v_{\ell}([f]).}\\ \end{aligned}
 	\]
-	Thus we obtain mappings of $M_{m}$ into $(F_{m}/F_{m}^{2})^{*}$,
+	Thus we obtain mappings of $T_{m} M$ into $(F_{m}/F_{m}^{2})^{*}$,
 	and vice versa. It is easily checked that these are inverses
 	of each other and thus are isomorphisms.
 \end{proof}
@@ -722,7 +720,7 @@ The proof is based on the following calculus lemma \cite{31}.
 \begin{lemma*}
 	If $g$ is of class $C^k$ ($k \geq 2$) on a convex open set $U$ about $p$ in $\mathbb{R}^d$, then for each $q \in U$,
 	\begin{equation}
-		\label{eq:1.17:1}
+		\tag{1}\label{eq:1.17:1}
 		\begin{aligned}{g(q)} & {{}=g(p)+\sum_{i=1}^{d}\frac{\partial g}{\partial r_{i}}\bigg|_{p}\big(r_{i}(q)-r_{i}(p)\big)\quad.} \\
 		               {}     & {{}\quad+\sum_{i,j}\big(r_{i}(q)-r_{i}(p)\big)\big(r_{j}(q)-r_{j}(p)\big)
 			                        \int_{0}^{1}(1-t)\frac{\partial^{2}g}{\partial r_{i}\partial r_{j}}\bigg|_{(p+t(q-p))}d t.}         \\
@@ -765,22 +763,22 @@ determines an element of $F_{p}^{2}$ since the integral as a function of $q$ is 
 \end{proof}
 
 \begin{corollary*}
-	$\dim M_{m} = \dim M$.
+	$\dim T_{m} M = \dim M$.
 \end{corollary*}
 
 \warnernumber{18}
 \discuss{1.18}{}\label{thm:1.18}
 In practice we will treat tangent vectors as operating on functions rather than on their germs.
-If $f$ is a differentiable function defined on a neighborhood of $m$, and $v \in M_{m}$, we define
+If $f$ is a differentiable function defined on a neighborhood of $m$, and $v \in T_{m} M$, we define
 \begin{equation}
-	\label{eq:1.18:1}
+	\tag{1}\label{eq:1.18:1}
 	v(f)=v([f]).
 \end{equation}
 
 Thus  $ v(f) = v(g) $ whenever f and g agree on a neighborhood of m, and clearly
 
 \begin{equation}
-	\label{eq:1.18:2}
+	\tag{2}\label{eq:1.18:2}
 	\begin{aligned}{v(f+\lambda g)}&{{}=v(f)+\lambda v(g)\qquad(\lambda\in\mathbb{R}),}\\ {v(f\cdot g)}&{{}=f(m)v(g)+g(m)v(f),}\\ \end{aligned}
 \end{equation}
 where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of the domains of definition of f and g.
@@ -788,14 +786,14 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 
 \warnernumber{19}
 \begin{definition}\label{thm:1.19}
-	Let $(U,\varphi)$ be a coordinate system with coordinate functions $x_{1},\ldots,x_{d}$, and let $m\in U$. For each $i\in\{1,\ldots,d\}$, we define a tangent vector  $ (\partial/\partial x_i)|_{m} \in M_m $ by setting
+	Let $(U,\varphi)$ be a coordinate system with coordinate functions $x_{1},\ldots,x_{d}$, and let $m\in U$. For each $i\in\{1,\ldots,d\}$, we define a tangent vector  $ (\partial/\partial x_i)|_{m} \in T_{m} M $ by setting
 	\begin{equation}
-		\label{eq:1.19:1}
+		\tag{1}\label{eq:1.19:1}
 		\left(\frac{\partial}{\partial x_{i}}\bigg\vert_{m}\right)(f)=\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg\vert_{\varphi(m)}
 	\end{equation}
 	for each function $f$ which is $C^{\infty}$ on a neighborhood of $m$. We interpret (1) as the directional derivative of $f$ at $m$ in the $x_{i}$ coordinate direction. We also use the notation
 	\begin{equation}
-		\label{eq:1.19:2}
+		\tag{2}\label{eq:1.19:2}
 		\left.\frac{\partial f}{\partial x_{i}}\right|_{m}=\left(\left.\frac{\partial}{\partial x_{i}}\right|_{m}\right)(f).
 	\end{equation}
 	\begin{center}
@@ -807,12 +805,12 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 \warnernumber{20}
 \begin{remarks}{on 1.19}\label{thm:1.20}
 	\begin{enumerate}
-		\item[(a)] Clearly  $  ((\partial/\partial x_i)_m)(f)  $ depends only on the germ of  $  f  $ at  $  m  $, and (a) and (b) of 1.14 are satisfied; so  $  (\partial/\partial x_i)_m  $ is a tangent vector at  $  m  $. Moreover,  $  \{(\partial/\partial x_i)_m : i = 1, \ldots, d\}  $ is a basis of  $  M_m  $. Indeed, it is the basis of  $  M_m  $ dual to the basis  $  \{([x_i] - [x_i(m)]) : i = 1, \ldots, d\}  $ of  $  F_m/F_m^2  $ since
+		\item[(a)] Clearly  $  ((\partial/\partial x_i)_m)(f)  $ depends only on the germ of  $  f  $ at  $  m  $, and (a) and (b) of 1.14 are satisfied; so  $  (\partial/\partial x_i)_m  $ is a tangent vector at  $  m  $. Moreover,  $  \{(\partial/\partial x_i)_m : i = 1, \ldots, d\}  $ is a basis of  $  T_{m} M  $. Indeed, it is the basis of  $  T_{m} M  $ dual to the basis  $  \{([x_i] - [x_i(m)]) : i = 1, \ldots, d\}  $ of  $  F_m/F_m^2  $ since
 		      \[
 			      \frac{\partial}{\partial x_{i}}\bigg|_{m}(x_{j}-x_{j}(m))=\delta_{ij}.
 		      \]
 
-		\item[(b)] If  $ v \in M_{m} $, then
+		\item[(b)] If  $ v \in T_{m} M $, then
 		      \[
 			      v=\sum_{i=1}^{d}v(x_{i})\left.\frac{\partial}{\partial x_{i}}\right|_{m}.
 		      \]
@@ -831,70 +829,189 @@ where  $ f + \lambda g $ and  $ f \cdot g $ are defined on the intersection of t
 
 \warnernumber{21}
 \discuss{1.21}{}\label{thm:1.21}
-Our proof of the finite dimensionality of $F_m/F_m^2$ certainly fails in the  $ C^k $ case for  $ k < \infty $ since the remainder term in the \hyperref[thm:1.17]{lemma of 1.17} will not be a sum of products of  $ C^k $ functions, and the lemma doesn't even make sense in the  $ C^1 $ case. In fact, it turns out (see [21]) that $F_m/F_m^2$ is always infinite dimensional in the  $ C^k $ case for  $ 1 \leq k < \infty $. There are various ways to define tangent vectors in the  $ C^k $ case in order that  $ \dim M_m = \dim M $ (all of which work in the  $ C^\infty $ case, too). One way is to define a tangent vector v at m as a mapping which assigns to each function (defined and differentiable of class  $ C^k $ on a neighborhood of m) a real number  $ v(f) $ such that if  $ (U, \varphi) $ is a coordinate system on a neighborhood of m, then there exists a list of real numbers  $ (a_1, \ldots, a_d) $ (depending on  $ \varphi $) such that
+Our proof of the finite dimensionality of $F_m/F_m^2$ certainly fails in the  $ C^k $ case for  $ k < \infty $ since the remainder term in the \hyperref[thm:1.17]{lemma of 1.17} will not be a sum of products of  $ C^k $ functions, and the lemma doesn't even make sense in the  $ C^1 $ case. In fact, it turns out (see [21]) that $F_m/F_m^2$ is always infinite dimensional in the  $ C^k $ case for  $ 1 \leq k < \infty $. There are various ways to define tangent vectors in the  $ C^k $ case in order that  $ \dim T_{m} M = \dim M $ (all of which work in the  $ C^\infty $ case, too). One way is to define a tangent vector v at m as a mapping which assigns to each function (defined and differentiable of class  $ C^k $ on a neighborhood of m) a real number  $ v(f) $ such that if  $ (U, \varphi) $ is a coordinate system on a neighborhood of m, then there exists a list of real numbers  $ (a_1, \ldots, a_d) $ (depending on  $ \varphi $) such that
 \[
 	v(f)=\sum_{i=1}^{d}a_{i}\frac{\partial(f\circ\varphi^{-1})}{\partial r_{i}}\bigg|_{\varphi(m)}.
 \]
-Then the space  $ M_m $ of tangent vectors again turns out to be finite dimensional, with a basis  $ \{(\partial/\partial x_i)\big|_{m}\} $.
+Then the space  $ T_{m} M $ of tangent vectors again turns out to be finite dimensional, with a basis  $ \{(\partial/\partial x_i)\big|_{m}\} $.
 
 \warnernumber{22}
 \discuss{1.22}{The Differential}\label{thm:1.22}
-Let  $ \psi: M \to N $ be  $ C^\infty $, and let  $ m \in M $. The differential of  $ \psi $ at  $ m $ is the linear map
+\noindent\textit{Editorial presentation.}
+We first define the differential of a real-valued function and its
+coordinate expression and chain rule, then introduce tangent maps,
+their chain rule, and pullbacks.
+Throughout the book, a subscript star denotes a tangent map and a
+superscript star denotes a pullback.
 
+\medskip\noindent\textbf{The differential of a function.}
+Let $f:M\to\mathbb R$ be $C^\infty$, and let $m\in M$.
+The differential of $f$ at $m$ is the covector $df_m\in T_m^*M$
+defined by
 \begin{equation}
-	\label{eq:1.22:1}
-	d\psi\colon M_{m}\to N_{\psi(m)}
+  \tag{1}\label{eq:1.22:1}
+  df_m(v):=v(f),\qquad v\in T_mM.
 \end{equation}
-defined as follows. If $v\in M_{m}$, then $d\psi(v)$ is to be a tangent vector at $\psi(m)$, so we describe how it operates on functions.
-Let $g$ be a $C^{\infty}$ function on a neighborhood of $\psi(m)$. Define $d\psi(v)(g)$ by setting
+It is linear in $v$, so it is indeed an element of the dual space.
+As $m$ varies, these covectors form the differential $1$-form $df$.
+Thus $df_m$ is a covector, and its value $df_m(v)$ is a real number.
 
+\medskip\noindent\textbf{Coordinate expression: the total differential.}
+Let $(U,x_1,\ldots,x_d)$ be a coordinate system about $m$.
+Applying (1) to each coordinate function gives
+\[
+  (dx_i)_m\!\left(\left.\frac{\partial}{\partial x_j}\right|_m\right)
+  =\delta_{ij}.
+\]
+Hence $\{(dx_i)_m\}$ is the basis of $T_m^*M$ dual to
+$\{(\partial/\partial x_i)|_m\}$. In this basis,
 \begin{equation}
-	\label{eq:1.22:2}
-	d\psi(v)(g)=v(g\circ\psi).
+  \tag{2}\label{eq:1.22:2}
+  df_m=\sum_{i=1}^d\frac{\partial f}{\partial x_i}(m)(dx_i)_m,
+  \qquad
+  df=\sum_{i=1}^d\frac{\partial f}{\partial x_i}\,dx_i
+  \quad\text{on }U.
 \end{equation}
+This is the familiar total differential formula. Indeed, if
+$v=\sum_i v^i(\partial/\partial x_i)|_m$, then
+\[
+  df_m(v)=v(f)=\sum_i v^i\frac{\partial f}{\partial x_i}(m),
+\]
+which is also the value of the right-hand side of (2) on $v$.
 
-It is easily checked that $d\psi$ is a linear map of $M_{m}$ into $N_{\psi(m)}$. Strictly speaking, this map should be
-denoted $d\psi\mid M_{m}$, or simply $d\psi_{m}$. However, we omit the subscript $m$ when there is no
-possibility of confusion. The map $\psi$ is called non-singular at $m$ if $d\psi_{m}$ is non-singular,
-that is, if the kernel of (1) consists of 0 alone. The dual map \index{Non-singular mapping}
+\medskip\noindent\textbf{The chain rule for differentials.}
+Let $h:M\to\mathbb R$ be smooth, and let $g$ be a smooth real-valued
+function on an open interval containing $h(p)$. Then
+\[
+  d(g\circ h)_p=g'(h(p))\,dh_p.
+\]
+Indeed, the ordinary chain rule in local coordinates gives
+$\partial(g\circ h)/\partial x_i=g'(h)\,\partial h/\partial x_i$;
+substituting into (2) proves the formula. Evaluating on $v\in T_pM$ gives
+\[
+  v(g\circ h)=g'(h(p))\,v(h).
+\]
+More generally, if $h=(h_1,\ldots,h_k):M\to\mathbb R^k$ and $g$ is
+smooth near $h(p)$, the same argument gives
+\[
+  d(g\circ h)_p
+  =\sum_{a=1}^k\frac{\partial g}{\partial r_a}(h(p))\,(dh_a)_p.
+\]
+
+\medskip\noindent\textbf{The tangent map (pushforward).}
+Let $\psi:M\to N$ be $C^\infty$. Its pushforward at $m$ is the linear map
 \begin{equation}
-	\label{eq:1.22:3}
-	\delta\psi\colon N_{\psi(m)}^{*}\to M_{m}^{*}
+  \tag{3}\label{eq:1.22:3}
+  \psi_{*,m}:T_mM\longrightarrow T_{\psi(m)}N
 \end{equation}
-is defined as usual by requiring that
+defined by its action on every smooth function $g$ on a neighborhood
+of $\psi(m)$:
 \begin{equation}
-	\label{eq:1.22:4}
-	\delta\psi(\omega)(v)=\omega\bigl(d\psi(v)\bigr)
+  \tag{4}\label{eq:1.22:4}
+  (\psi_{*,m}v)(g)=v(g\circ\psi).
 \end{equation}
+The right-hand side defines a derivation at $\psi(m)$, and depends
+linearly on $v$. We write $\psi_*$ when the base point is understood.
+The map $\psi$ is called \emph{non-singular at $m$} if $\psi_{*,m}$
+is injective, that is, if the kernel of \eqref{eq:1.22:3} consists
+of $0$ alone. \index{Non-singular mapping}
 
-whenever $\omega \in N_{\psi(m)}^{*}$ and $v \in M_{m}$. In the special case of a $C^{\infty}$ function $f: M \to \mathbb{R}$, if $v \in M_{m}$ and $f(m) = r_{0}$, then
+In particular, for a smooth map $f:M\to N$ and $p\in M$, this definition
+reads
+\[
+  f_{*,p}:T_pM\to T_{f(p)}N,\qquad (f_{*,p}v)(u)=v(u\circ f).
+\]
 
+\medskip\noindent\textbf{The chain rule for pushforwards.}
+Since $f_{*,p}v$ is a tangent vector at $f(p)$, the preceding chain
+rule applies to it. For smooth functions $h:N\to\mathbb R$ and
+$g:\mathbb R\to\mathbb R$,
+\[
+  (f_{*,p}v)(g\circ h)
+  =g'(h(f(p)))\,(f_{*,p}v)(h)
+  =g'(h(f(p)))\,v(h\circ f).
+\]
+Here $f_{*,p}$ acts on the vector $v$, and the resulting vector acts
+on the function $g\circ h$.
+
+For smooth maps $f:M\to N$ and $F:N\to P$, the chain rule for
+composition of maps is
+\[
+  (F\circ f)_{*,p}=F_{*,f(p)}\circ f_{*,p}.
+\]
+To prove this, apply both sides to $v\in T_pM$ and then to any smooth
+function $u$ near $F(f(p))$:
+\[
+\begin{aligned}
+  \bigl((F\circ f)_{*,p}v\bigr)(u)
+  &=v(u\circ F\circ f)\\
+  &=(f_{*,p}v)(u\circ F)
+  =\bigl(F_{*,f(p)}(f_{*,p}v)\bigr)(u).
+\end{aligned}
+\]
+Thus the resulting tangent vectors agree on every test function and
+are equal.
+
+\medskip\noindent\textbf{Pullback.}
+The pullback of covectors is the dual map
 \begin{equation}
-	\label{eq:1.22:5}
-	d f(v)=v(f)\frac{d}{d r}\bigg|_{r_{0}}.
+  \tag{5}\label{eq:1.22:5}
+  \psi_m^*:T_{\psi(m)}^*N\longrightarrow T_m^*M,
 \end{equation}
-
-In this case, we usually take $df$ to mean the element of $M_{m}^{*}$ defined by
-
+defined by
 \begin{equation}
-	\label{eq:1.22:6}
-	d f(v)=v(f).
+  \tag{6}\label{eq:1.22:6}
+  (\psi_m^*\omega)(v)=\omega(\psi_{*,m}v).
 \end{equation}
+Thus $\psi_m^*=(\psi_{*,m})^*$. Pushforward sends tangent vectors
+forward; pullback sends covectors back. For a $1$-form $\omega$ on $N$,
+its pullback is the $1$-form on $M$ given pointwise by
+$(\psi^*\omega)_m=\psi_m^*(\omega_{\psi(m)})$.
+Pullback of differential forms is developed further in
+\hyperref[thm:2.22]{2.22}.
 
-That is, we identify $df$ with $\delta f(\omega)$, where $\omega$ is the basis
-of the 1-dimensional space $\mathbb{R}_{r_{0}}^{*}$ dual to $(d/dr)|_{r_{0}}$.
-Particular usage will be clear from the context.
-
+\medskip\noindent\textbf{How $df$ and $f_*$ are related.}
+For $f:M\to\mathbb R$, let $r$ be the standard coordinate on
+$\mathbb R$ and put $r_0=f(m)$. The vector $f_{*,m}v$ belongs to the
+one-dimensional space $T_{r_0}\mathbb R$, so it has the form
+$c\,(\partial/\partial r)|_{r_0}$. Applying it to $r$ gives
+\[
+  c=(f_{*,m}v)(r)=v(r\circ f)=v(f)=df_m(v).
+\]
+Therefore,
+\begin{equation}
+  \tag{7}\label{eq:1.22:7}
+  f_{*,m}v=df_m(v)\left.\frac{\partial}{\partial r}\right|_{r_0}
+  \in T_{r_0}\mathbb R.
+\end{equation}
+The value $f_{*,m}v$ is a tangent vector, whereas $df_m(v)$ is a scalar.
+The canonical identification
+$c\,(\partial/\partial r)|_{r_0}\mapsto c$ converts the former to the latter.
+Equivalently, since $dr_{r_0}$ is dual to
+$(\partial/\partial r)|_{r_0}$, we have
+\begin{equation}
+  \tag{8}\label{eq:1.22:8}
+  df_m=f_m^*(dr_{r_0}),\qquad df=f^*(dr).
+\end{equation}
+Indeed, for every $v\in T_mM$,
+\[
+  \bigl(f_m^*(dr_{r_0})\bigr)(v)
+  =dr_{r_0}(f_{*,m}v)
+  =dr_{r_0}\!\left(df_m(v)\left.\frac{\partial}{\partial r}\right|_{r_0}\right)
+  =df_m(v).
+\]
+The notation $df$ always denotes the differential $1$-form of the
+smooth real-valued function $f$, while $f_*$ denotes its tangent map.
 
 \warnernumber{23}
 \begin{remarks}{on 1.22}\label{thm:1.23}
 	\begin{enumerate}
 		\citem{(a)} Let $(U, x_{1}, \ldots, x_{d})$ and $(V, y_{1}, \ldots, y_{c})$
 		be coordinate systems about $m$ and $\psi(m)$
-		respectively. Then it follows from \eqref{eq:1.22:2}
+		respectively. Then it follows from \eqref{eq:1.22:4}
 		and \hyperref[thm:1.20]{1.20(b)} that
 		\[
-			d\psi\left(\frac{\partial}{\partial x_{j}}\bigg|_{m}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\bigg|_{m}\frac{\partial}{\partial y_{i}}\bigg|_{\psi(m)}.
+			\psi_{*}\left(\frac{\partial}{\partial x_{j}}\bigg|_{m}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\bigg|_{m}\frac{\partial}{\partial y_{i}}\bigg|_{\psi(m)}.
 		\]
 		The matrix $\{\partial(y_{i}\circ\psi)/\partial x_{j}\}$ is called the
 		Jacobian of the map $\psi$ (with respect to the given coordinate system).
@@ -902,7 +1019,7 @@ Particular usage will be clear from the context.
 		with respect to the canonical coordinate systems. \index{Jacobian}
 
 		\citem{(b)} If $(U, x_1, \ldots, x_d)$ is a coordinate system on $M$,
-		and $m \in U$, then $\{(dx_i)_m\}$ is the basis of $M_m^*$ dual
+		and $m \in U$, then $\{(dx_i)_m\}$ is the basis of $T_{m}^{*} M$ dual
 		to $\{(\partial/\partial x_i)|_m\}$. If $f: M \to \mathbb{R}$
 		is a $C^\infty$ function, then
 		\[
@@ -911,29 +1028,29 @@ Particular usage will be clear from the context.
 		\citem{(c)} Chain Rule. Let  $ \psi $:  $ M \to N $ and  $ \varphi $:  $ N \to X $
 		be  $ C^\infty $ maps. Then \index{Chain rule}
 		\[
-			d(\varphi\circ\psi)_{m}=d\varphi_{\psi(m)}\circ d\psi_{m},
+			(\varphi\circ\psi)_{*,m}=\varphi_{*,\psi(m)}\circ \psi_{*,m},
 		\]
-		or simply $d(\varphi\circ\psi)=d\varphi\circ d\psi$. It is a useful
+		or simply $(\varphi\circ\psi)_{*}=\varphi_{*}\circ \psi_{*}$. It is a useful
 		exercise to check the form that this equation takes when the maps are
 		expressed in terms of the matrices obtained by choosing coordinate systems.
 
-		\citem{(d)} If $\psi: M \to N$ and $f: N \to \mathbb{R}$ are $C^\infty$, then $\delta\psi(df_{\psi(m)}) = d(f \circ \psi)_m$,
-		for $\delta\psi(df_{\psi(m)})(v) = df(d\psi(v)) = d(f \circ \psi)_m(v)$ whenever $v \in M_m$.
+		\citem{(d)} If $\psi: M \to N$ and $f: N \to \mathbb{R}$ are $C^\infty$, then $\psi_m^{*}(df_{\psi(m)}) = d(f \circ \psi)_m$,
+		for $\psi_m^{*}(df_{\psi(m)})(v) = df(\psi_{*}(v)) = d(f \circ \psi)_m(v)$ whenever $v \in T_{m} M$.
 
 		\citem{(e)} A $C^{\infty}$ mapping $\sigma: (a,b)\to M$ is called a smooth curve in $M$. Let $t\in(a,b)$. Then
 		the tangent vector to the curve $\sigma$ at $t$ is the vector \index{Curve}
 		\[
-			d\sigma\left(\frac{d}{d r}\bigg|_{t}\right)\in M_{\sigma(t)}.
+			\sigma_{*,t}\left(\frac{d}{d r}\bigg|_{t}\right)\in T_{\sigma(t)} M.
 		\]
 		We shall denote the tangent vector to  $ \sigma $ at t by  $ \dot{\sigma}(t) $.
 		\begin{center}
 			\redrawn{figure-03}
 		\end{center}
-		Now, if $v$ is any element of $M_{m}$, then $v$ is the tangent vector to a smooth
+		Now, if $v$ is any element of $T_{m} M$, then $v$ is the tangent vector to a smooth
 		curve in $M$. For one can simply choose a coordinate system $(U,\varphi)$,
 		centered at $m$, for which
 		\[
-			v=d\varphi\left(\frac{\partial}{\partial r_{1}}\bigg|_{0}\right).
+			v=\varphi_{*}\left(\frac{\partial}{\partial r_{1}}\bigg|_{0}\right).
 		\]
 		Then $v$ is the tangent vector at 0 to the curve $t \mapsto \varphi^{-1}(t, 0, \ldots, 0)$. One
 		should observe that many curves can have the same tangent vector, and
@@ -964,13 +1081,13 @@ Particular usage will be clear from the context.
 \warnernumber{24}
 \begin{theorem}\label{thm:1.24}
 	Let $\psi$ be a $C^\infty$ mapping of the connected manifold $M$ into the manifold $N$. Suppose that for
-	each $m \in M$, $d\psi_m \equiv 0$. Then $\psi$ is a constant map.
+	each $m \in M$, $\psi_{*,m} \equiv 0$. Then $\psi$ is a constant map.
 \end{theorem}
 
 \begin{proof}
 	Let $n\in\psi(M)$. $\psi^{-1}(n)$ is closed. We need only show that it is open. For this, let $m\in\psi^{-1}(n)$. Choose coordinate systems $(U,x_{1},\ldots,x_{d})$ and $(V,y_{1},\ldots,y_{c})$ about $m$ and $n$ respectively, so that $\psi(U)\subset V$. Then on $U$,
 	\[
-		0=d\psi\left(\frac{\partial}{\partial x_{j}}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\frac{\partial}{\partial y_{i}}\qquad(j=1,\ldots,d),
+		0=\psi_{*}\left(\frac{\partial}{\partial x_{j}}\right)=\sum_{i=1}^{c}\frac{\partial(y_{i}\circ\psi)}{\partial x_{j}}\frac{\partial}{\partial y_{i}}\qquad(j=1,\ldots,d),
 	\]
 	which implies that
 	\[
@@ -986,15 +1103,15 @@ We shall now see that in a natural way the collection of all tangent vectors to 
 Let $M$ be a $C^{\infty}$ manifold with differentiable structure $\mathcal{F}$. Let
 
 \begin{equation}
-	\label{eq:1.25:1}
-	\begin{aligned}{T(M)=\bigcup_{m\in M}M_{m},}\\ {T^{*}(M)=\bigcup_{m\in M}M_{m}^{*}.}\\ \end{aligned}
+	\tag{1}\label{eq:1.25:1}
+	\begin{aligned}{TM=\bigcup_{m\in M}T_{m} M,}\\ {T^{*}M=\bigcup_{m\in M}T_{m}^{*} M.}\\ \end{aligned}
 \end{equation}
 
 There are natural projections:
 
 \begin{equation}
-	\label{eq:1.25:2}
-	\begin{aligned}{\pi\colon T(M)\to M,\qquad}&{{}\pi(v)=m\quad\text{if}\quad v\in M_{m},}\\ {\pi^{*}\colon T^{*}(M)\to M,\qquad}&{{}\pi^{*}(\tau)=m\quad\text{if}\quad\tau\in M_{m}^{*}.}\\ \end{aligned}
+	\tag{2}\label{eq:1.25:2}
+	\begin{aligned}{\pi\colon TM\to M,\qquad}&{{}\pi(v)=m\quad\text{if}\quad v\in T_{m} M,}\\ {\pi^{*}\colon T^{*}M\to M,\qquad}&{{}\pi^{*}(\tau)=m\quad\text{if}\quad\tau\in T_{m}^{*} M.}\\ \end{aligned}
 \end{equation}
 
 Let $(U,\varphi)\in\mathcal{F}$ with coordinate functions $x_1,\ldots,x_d$. Define maps
@@ -1008,14 +1125,14 @@ by
 \]
 
 \begin{equation}
-	\label{eq:1.25:3}
+	\tag{3}\label{eq:1.25:3}
 	\tilde{\varphi}^{*}(\tau)=\Bigl(x_{1}\bigl(\pi^{*}(\tau)\bigr),\ldots,x_{d}\bigl(\pi^{*}(\tau)\bigr),\tau\Bigl(\frac{\partial}{\partial x_{1}}\Bigr),\ldots,\tau\Bigl(\frac{\partial}{\partial x_{d}}\Bigr)\Bigr)
 \end{equation}
-for all $v\in\pi^{-1}(U)$ and $\tau\in(\pi^{*})^{-1}(U)$. Note that $\widetilde{\varphi}$ and $\widetilde{\varphi}^*$ are both one-to-one maps onto open subsets of $\mathbb{R}^{2d}$. The following steps outline the construction of a topology and a differentiable structure on $T(M)$. The construction for $T^*(M)$ goes similarly. The proofs are left as exercises.
+for all $v\in\pi^{-1}(U)$ and $\tau\in(\pi^{*})^{-1}(U)$. Note that $\widetilde{\varphi}$ and $\widetilde{\varphi}^*$ are both one-to-one maps onto open subsets of $\mathbb{R}^{2d}$. The following steps outline the construction of a topology and a differentiable structure on $TM$. The construction for $T^{*}M$ goes similarly. The proofs are left as exercises.
 \begin{enumerate}
 	\item[(a)] If $(U,\varphi)$ and $(V,\psi)\in\mathcal{F}$, then $\tilde{\psi}\circ\tilde{\varphi}^{-1}$ is  $ C^{\infty} $.
 
-	\item[(b)] The collection $\{\tilde{\varphi}^{-1}(W)\colon W \text{ open in } \mathbb{R}^{2d}, (U,\varphi) \in \mathcal{F}\}$ forms a basis for a topology on $T(M)$ which makes $T(M)$ into a $2d$-dimensional, second countable, locally Euclidean space.
+	\item[(b)] The collection $\{\tilde{\varphi}^{-1}(W)\colon W \text{ open in } \mathbb{R}^{2d}, (U,\varphi) \in \mathcal{F}\}$ forms a basis for a topology on $TM$ which makes $TM$ into a $2d$-dimensional, second countable, locally Euclidean space.
 
 	\item[(c)] Let $\widetilde{\mathcal{F}}$ be the maximal collection, with respect to \hyperref[thm:1.4]{1.4(b)}, containing
 \end{enumerate}
@@ -1023,31 +1140,31 @@ for all $v\in\pi^{-1}(U)$ and $\tau\in(\pi^{*})^{-1}(U)$. Note that $\widetilde{
 	\{(\pi^{-1}(U),\widetilde{\varphi})\colon(U,\varphi)\in\mathcal{F}\}.
 \]
 
-Then $\widetilde{\mathcal{F}}$ is a differentiable structure on $T(M)$.
+Then $\widetilde{\mathcal{F}}$ is a differentiable structure on $TM$.
 
-$T(M)$ and $T^{*}(M)$ with these differentiable structures are called respectively the tangent bundle and the cotangent bundle. It will sometimes be convenient to write the points of $T(M)$ as pairs $(m,v)$ where $m\in M$ and $v\in M_{m}$ (and similarly for $T^{*}(M)$).
+$TM$ and $T^{*}M$ with these differentiable structures are called respectively the tangent bundle and the cotangent bundle. It will sometimes be convenient to write the points of $TM$ as pairs $(m,v)$ where $m\in M$ and $v\in T_{m} M$ (and similarly for $T^{*}M$).
 
 If $\psi: M \to N$ is a $C^{\infty}$ map, then the differential of $\psi$ defines a mapping of the tangent bundles
 
 \begin{equation}
-	\label{eq:1.25:4}
-	d\psi\colon T(M)\to T(N),
+	\tag{4}\label{eq:1.25:4}
+	\psi_{*}\colon TM\to TN,
 \end{equation}
-where  $ d\psi(m,v) = d\psi_{m}(v) $ whenever  $ v \in M_{m} $. It is easily checked that (4) is a  $ C^{\infty} $ map.
+where  $ \psi_{*}(m,v) = \psi_{*,m}(v) $ whenever  $ v \in T_{m} M $. It is easily checked that (4) is a  $ C^{\infty} $ map.
 \warnernumber{26}
 \discuss{1.26}{Higher Order Tangent Vectors and Differentials}\label{thm:1.26}\footnote{The material of this section will not be used elsewhere in the book, and so it may be skipped without loss of continuity.}
-It is useful to look at $M_{m}$ as $(F_{m}/F_{m}^{2})^{*}$, for this point of view allows an immediate generalization to higher order tangent vectors. We digress for a moment to give these definitions.
+It is useful to look at $T_{m} M$ as $(F_{m}/F_{m}^{2})^{*}$, for this point of view allows an immediate generalization to higher order tangent vectors. We digress for a moment to give these definitions.
 
 Recall that $\tilde{F}_{m}$ is the algebra of germs of functions at $m$. $F_{m} \subset \tilde{F}_{m}$ is the ideal of germs vanishing at $m$, and $F_{m}^{k}$ ($k$ an integer $\geq 1$) is the ideal of $\tilde{F}_{m}$ consisting of all finite linear combinations of $k$-fold products of elements of $F_{m}$.
 
-The vector space $F_m/F_m^{k+1}$ is called the space of $k$th order differentials at $m$, and we denote it by ${}^kM_m$. As before, $[f]$ denotes the germ of $f$ at $m$, and \{\} will denote cosets in $F_m/F_m^{k+1}$. Let $f$ be a differentiable function on a neighborhood of $m$. We define the $k$th order differential $d^k f$ of $f$ at $m$ by
+The vector space $F_m/F_m^{k+1}$ is called the space of $k$th order differentials at $m$, and we denote it by $T_{m}^{*(k)} M$. As before, $[f]$ denotes the germ of $f$ at $m$, and \{\} will denote cosets in $F_m/F_m^{k+1}$. Let $f$ be a differentiable function on a neighborhood of $m$. We define the $k$th order differential $d^k f$ of $f$ at $m$ by
 
 \begin{equation}
-	\label{eq:1.26:1}
+	\tag{1}\label{eq:1.26:1}
 	d^{k}f=\{[f]-[f(m)]\}.
 \end{equation}
 
-A $k$th order tangent vector at $m$ is a real linear function on $\tilde{F}_{m}$ vanishing on $F_{m}^{k+1}$ and vanishing also on the set of germs of functions constant on a neighborhood of m. The real linear space of kth order tangent vectors at m will be denoted by  $ M_{m}^{k} $. We have a natural identification of  $ M_{m}^{k} $ with  $ ({}^kM_{m})^{*} $ since any kth order tangent vector restricted to  $ F_{m} $ yields a linear function on  $ F_{m} $ vanishing on  $ F_{m}^{k+1} $, and hence yields an element of  $ ({}^kM_{m})^{*} $; and conversely an element of  $ ({}^kM_{m})^{*} $ uniquely determines a linear function on  $ F_{m} $ vanishing on  $ F_{m}^{k+1} $, and this extends uniquely to a kth order tangent vector by requiring it to annihilate germs of constant functions.
+A $k$th order tangent vector at $m$ is a real linear function on $\tilde{F}_{m}$ vanishing on $F_{m}^{k+1}$ and vanishing also on the set of germs of functions constant on a neighborhood of m. The real linear space of kth order tangent vectors at m will be denoted by  $ T_{m}^{(k)} M $. We have a natural identification of  $ T_{m}^{(k)} M $ with  $ (T_{m}^{*(k)} M)^{*} $ since any kth order tangent vector restricted to  $ F_{m} $ yields a linear function on  $ F_{m} $ vanishing on  $ F_{m}^{k+1} $, and hence yields an element of  $ (T_{m}^{*(k)} M)^{*} $; and conversely an element of  $ (T_{m}^{*(k)} M)^{*} $ uniquely determines a linear function on  $ F_{m} $ vanishing on  $ F_{m}^{k+1} $, and this extends uniquely to a kth order tangent vector by requiring it to annihilate germs of constant functions.
 
 We can tie up this notion of higher order tangent vector with the usual notion of higher order derivative in Euclidean space by looking at the forms that these tangent vectors and differentials take in a coordinate system. Let  $ (U,\varphi) $ be a coordinate system about  $ m $ with coordinate functions  $ x_1, \ldots, x_d $ such that  $ \varphi(U) $ is a convex open set in Euclidean space  $ \mathbb{R}^d $. Let  $ \alpha = (\alpha_1, \ldots, \alpha_d) $ be a list of non-negative integers. In addition to our conventions of 1.1, we let
 
@@ -1085,7 +1202,7 @@ Thus the collection
 	\big\{\{([x]-[x(m)])^{\alpha}\}\colon1\leq[\alpha]\leq k\big\}
 \end{equation}
 
-spans  $ ^{k}M_{m} $. The proof that these elements are linearly independent in  $ ^{k}M_{m} $ is the obvious generalization of the proof for the case k = 2 which was treated in 1.17. Thus the collection (5) forms a basis of  $ ^{k}M_{m} $. Consequently  $ ^{k}M_{m} $ is finite dimensional with dimension equal to the binomial coefficient  $ \sum_{j=1}^{k}\binom{d+j-1}{j} $. As the dual space of  $ ^{k}M_{m} $,  $ M_{m}^{k} $ is also finite dimensional with the same dimension. Since  $ M_{m}^{k} $ is identified with  $ (^{k}M_{m})^{*} $, and these spaces are finite dimensional, we have a canonical isomorphism of  $ ^{k}M_{m} $ with  $ (M_{m}^{k})^{*} $, under which the element $d^{k}f \in {}^{k}M_{m}$, considered as an element of  $ (M_{m}^{k})^{*} $, satisfies
+spans  $ T_{m}^{*(k)} M $. The proof that these elements are linearly independent in  $ T_{m}^{*(k)} M $ is the obvious generalization of the proof for the case k = 2 which was treated in 1.17. Thus the collection (5) forms a basis of  $ T_{m}^{*(k)} M $. Consequently  $ T_{m}^{*(k)} M $ is finite dimensional with dimension equal to the binomial coefficient  $ \sum_{j=1}^{k}\binom{d+j-1}{j} $. As the dual space of  $ T_{m}^{*(k)} M $,  $ T_{m}^{(k)} M $ is also finite dimensional with the same dimension. Since  $ T_{m}^{(k)} M $ is identified with  $ (T_{m}^{*(k)} M)^{*} $, and these spaces are finite dimensional, we have a canonical isomorphism of  $ T_{m}^{*(k)} M $ with  $ (T_{m}^{(k)} M)^{*} $, under which the element $d^{k}f \in T_{m}^{*(k)} M$, considered as an element of  $ (T_{m}^{(k)} M)^{*} $, satisfies
 
 \begin{equation}
 	\tag{6}\label{eq:1.26:6}
@@ -1106,7 +1223,7 @@ Since the derivative is linear, and since the value of $\partial^{\alpha} f/\par
 	\left\{\left(\frac{1}{\alpha!}\right)\frac{\partial^{\alpha}}{\partial x^{\alpha}}\bigg|_{m}:1\leq[\alpha]\leq k\right\}
 \end{equation}
 
-is the basis of $M_{m}^{k}$ dual to the basis (5) of $^{k}M_{m}$. If $v$ is a $k$th order tangent vector at $m$, then
+is the basis of $T_{m}^{(k)} M$ dual to the basis (5) of $T_{m}^{*(k)} M$. If $v$ is a $k$th order tangent vector at $m$, then
 
 \begin{equation}
 	\tag{9}\label{eq:1.26:9}
@@ -1140,19 +1257,19 @@ Finally, just as there are natural mappings of tangent vectors and differentials
 
 \begin{equation}
 	\tag{13}\label{eq:1.26:13}
-	\begin{aligned}{}&{{}d^{k}\varphi\colon M_{m}^{k}\to N_{\varphi(m)}^{k},}\\ {}&{{}\delta^{k}\varphi\colon{}^{k}N_{\varphi(m)}\to{}^{k}M_{m}}\\ \end{aligned}
+	\begin{aligned}{}&{{}\varphi_*^{(k)}\colon T_{m}^{(k)} M\to T_{\varphi(m)}^{(k)} N,}\\ {}&{{}(\varphi_*^{(k)})^{*}\colon T_{\varphi(m)}^{*(k)} N\to T_{m}^{*(k)} M}\\ \end{aligned}
 \end{equation}
 
-defined by
+Here $\varphi_*^{(k)}$ denotes the induced map on higher order tangent vectors; for $k=1$ it is $\varphi_*$. These maps are defined by
 
 \begin{equation}
 	\tag{14}\label{eq:1.26:14}
-	\begin{array}{c}{d^{k}\varphi(v)(g)=v(g\circ\varphi),}\\ {\delta^{k}\varphi(d^{k}g)=d^{k}(g\circ\varphi)}\\ \end{array}
+	\begin{array}{c}{\varphi_*^{(k)}(v)(g)=v(g\circ\varphi),}\\ {(\varphi_*^{(k)})^{*}(d^{k}g)=d^{k}(g\circ\varphi)}\\ \end{array}
 \end{equation}
 
-whenever $v\in M_{m}^{k}$ and $g$ is a $C^{\infty}$ function on a neighborhood of $\varphi(m)$. It is easily checked that (14) does indeed define the mappings (13) and that the mappings $d^{k}\varphi$ and $\delta^{k}\varphi$ are dual.
+whenever $v\in T_{m}^{(k)} M$ and $g$ is a $C^{\infty}$ function on a neighborhood of $\varphi(m)$. It is easily checked that (14) does indeed define the mappings (13) and that the mappings $\varphi_*^{(k)}$ and $(\varphi_*^{(k)})^{*}$ are dual.
 
-Our definition of a first order tangent vector in this section agrees with \hyperref[thm:1.14]{Definition 1.14} in view of \hyperref[thm:1.16]{Lemma 1.16}. Moreover, we have seen three interpretations of the first order differential $df$ of a function $f$; the interpretation (13) agrees with our original \hyperref[thm:1.22]{definition 1.22}(1), the interpretation (6) agrees with \eqref{eq:1.22:6}, and we have the additional interpretation (1).
+Our definition of a first order tangent vector in this section agrees with \hyperref[thm:1.14]{Definition 1.14}. For $k=1$, the maps $\varphi_*^{(k)}$ and $(\varphi_*^{(k)})^*$ in (13) are the pushforward $\varphi_*$ and pullback $\varphi^*$ of \hyperref[thm:1.22]{1.22}. For a real-valued function $f$, $d^1f$ is the covector $df$: the interpretation (6) agrees with \eqref{eq:1.22:1}, and (1) represents it as a coset of germs.
 
 
 \section{Submanifolds, Diffeomorphisms, and the Inverse Function Theorem}
@@ -1162,7 +1279,7 @@ Our definition of a first order tangent vector in this section agrees with \hype
 \begin{definition}\label{thm:1.27}
 	Let  $ \psi\colon M \to N $ be  $ C^\infty $. \index{Inverse function theorem}\index{Submanifolds}
 
-	(a)  $ \psi $ is an immersion if  $ d\psi_{m} $ is non-singular for each  $ m \in M $. \index{Immersion}
+	(a)  $ \psi $ is an immersion if  $ \psi_{*,m} $ is non-singular for each  $ m \in M $. \index{Immersion}
 
 	(b) The pair $(M,\psi)$ is a submanifold of $N$ if $\psi$ is a one-to-one immersion.
 
@@ -1185,13 +1302,13 @@ Our definition of a first order tangent vector in this section agrees with \hype
 
 	The composition of diffeomorphisms is again a diffeomorphism. Thus the relation of being diffeomorphic is an equivalence relation on the collection of differentiable manifolds. It is quite possible for a locally Euclidean space to possess distinct differentiable structures which are diffeomorphic. (See Exercise 2.) In a remarkable paper, Milnor showed the existence of locally Euclidean spaces ($S^{7}$ is an example) which possess non-diffeomorphic differentiable structures [19]. There are also locally Euclidean spaces which possess no differentiable structures at all [14].
 
-	If $\psi$ is a diffeomorphism, then $d\psi_m$ is an isomorphism since both $(d\psi \circ d\psi^{-1})|_{\psi(m)}$ and $(d\psi^{-1} \circ d\psi)|_m$ are the identity transformations. The inverse function theorem gives us a local converse of this—whenever $d\psi_m$ is an isomorphism, $\psi$ is a diffeomorphism on a neighborhood of $m$. Before we recall the precise statement of the inverse function theorem, we give a definition which will be needed in the corollaries.
+	If $\psi$ is a diffeomorphism, then $\psi_{*,m}$ is an isomorphism since both $(\psi_{*} \circ (\psi^{-1})_{*})|_{\psi(m)}$ and $((\psi^{-1})_{*} \circ \psi_{*})|_m$ are the identity transformations. The inverse function theorem gives us a local converse of this—whenever $\psi_{*,m}$ is an isomorphism, $\psi$ is a diffeomorphism on a neighborhood of $m$. Before we recall the precise statement of the inverse function theorem, we give a definition which will be needed in the corollaries.
 
 \end{remarks}
 
 \warnernumber{29}
 \begin{definition}\label{thm:1.29}
-	A set $y_{1}, \ldots, y_{l}$ of $C^{\infty}$ functions defined on some neighborhood of $m$ in $M$ is called an independent set at $m$ if the differentials $dy_{1}, \ldots, dy_{l}$ form an independent set in $M_{m}^{*}$.
+	A set $y_{1}, \ldots, y_{l}$ of $C^{\infty}$ functions defined on some neighborhood of $m$ in $M$ is called an independent set at $m$ if the differentials $dy_{1}, \ldots, dy_{l}$ form an independent set in $T_{m}^{*} M$.
 \end{definition}
 
 \warnernumber{30}
@@ -1208,7 +1325,7 @@ Our definition of a first order tangent vector in this section agrees with \hype
 \end{theorem}
 
 \begin{corollary*}{a}
-	Assume that $\psi\colon M \to N$ is $C^{\infty}$, that $m \in M$, and that $d\psi\colon M_{m} \to N_{\psi(m)}$ is an isomorphism. Then there is a neighborhood $U$ of $m$ such that $\psi\colon U \to \psi(U)$ is a diffeomorphism onto the open set $\psi(U)$ in $N$.
+	Assume that $\psi\colon M \to N$ is $C^{\infty}$, that $m \in M$, and that $\psi_{*}\colon T_{m} M \to T_{\psi(m)} N$ is an isomorphism. Then there is a neighborhood $U$ of $m$ such that $\psi\colon U \to \psi(U)$ is a diffeomorphism onto the open set $\psi(U)$ in $N$.
 \end{corollary*}
 
 \begin{proof}
@@ -1228,11 +1345,11 @@ Our definition of a first order tangent vector in this section agrees with \hype
 	\[
 		\psi(m)=\left(y_{1}(m),\ldots,y_{d}(m)\right)\qquad(m\in U).
 	\]
-	Then $\psi$ is $C^{\infty}$. Now $\delta\psi$ is an isomorphism on $(\mathbb{R}^{d}_{\psi(m_{0})})^{*}$ since
+	Then $\psi$ is $C^{\infty}$. Now $\psi^{*}$ is an isomorphism on $T_{\psi(m_{0})}^{*}\mathbb{R}^{d}$ since
 	\[
-		\delta\psi(d r_{i})=d(r_{i}\circ\psi)=d y_{i}
+		\psi^{*}(d r_{i})=d(r_{i}\circ\psi)=d y_{i}
 	\]
-	which implies that $\delta\psi\big|_{\psi(m_0)}$ takes a basis to a basis. Consequently, the differential $d\psi_{m_0}$ (which is the dual of $\delta\psi\big|_{\psi(m_0)}$) is an isomorphism. So the inverse function theorem implies that $\psi$ is a diffeomorphism on a neighborhood $V \subset U$ of $m_0$, and consequently the functions $y_1, \ldots, y_d$ yield a coordinate system when restricted to $V$.
+	which implies that $\psi_{m_0}^{*}$ takes a basis to a basis. Consequently, the differential $\psi_{*,m_0}$ (which is the dual of $\psi_{m_0}^{*}$) is an isomorphism. So the inverse function theorem implies that $\psi$ is a diffeomorphism on a neighborhood $V \subset U$ of $m_0$, and consequently the functions $y_1, \ldots, y_d$ yield a coordinate system when restricted to $V$.
 \end{proof}
 
 \begin{corollary*}{c}
@@ -1240,31 +1357,31 @@ Our definition of a first order tangent vector in this section agrees with \hype
 \end{corollary*}
 
 \begin{proof}
-	Let $(U, x_1, \ldots, x_d)$ be a coordinate system about $m$. Then $\{dy_1, \ldots, dy_l, dx_1, \ldots, dx_d\}$ spans $M_m^*$. Choose $d-l$ of the $x_i$ so that $\{dy_1, \ldots, dy_l, dx_{i_1}, \ldots, dx_{i_{d-l}}\}$ is a basis of $M_m^*$. Then apply Corollary (b).
+	Let $(U, x_1, \ldots, x_d)$ be a coordinate system about $m$. Then $\{dy_1, \ldots, dy_l, dx_1, \ldots, dx_d\}$ spans $T_{m}^{*} M$. Choose $d-l$ of the $x_i$ so that $\{dy_1, \ldots, dy_l, dx_{i_1}, \ldots, dx_{i_{d-l}}\}$ is a basis of $T_{m}^{*} M$. Then apply Corollary (b).
 \end{proof}
 
 \begin{corollary*}{d}
-	Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $d\psi\colon M_{m} \to N_{\psi(m)}$ is surjective. Let $x_{1}, \ldots, x_{l}$ form a coordinate system on some neighborhood of $\psi(m)$. Then $x_{1} \circ \psi, \ldots, x_{l} \circ \psi$ form part of a coordinate system on some neighborhood of $m$.
+	Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $\psi_{*}\colon T_{m} M \to T_{\psi(m)} N$ is surjective. Let $x_{1}, \ldots, x_{l}$ form a coordinate system on some neighborhood of $\psi(m)$. Then $x_{1} \circ \psi, \ldots, x_{l} \circ \psi$ form part of a coordinate system on some neighborhood of $m$.
 \end{corollary*}
 
 \begin{proof}
-	The fact that $d\psi_{m}$ is surjective implies that the dual map $\delta\psi|_{\psi(m)}$ is injective. Thus the functions $\{x_{i}\circ\psi\colon i=1,\ldots,l\}$ are independent at $m$ since $\delta\psi(dx_{i})=d(x_{i}\circ\psi)$. The claim now follows from Corollary (c).
+	The fact that $\psi_{*,m}$ is surjective implies that the dual map $\psi_m^{*}$ is injective. Thus the functions $\{x_{i}\circ\psi\colon i=1,\ldots,l\}$ are independent at $m$ since $\psi^{*}(dx_{i})=d(x_{i}\circ\psi)$. The claim now follows from Corollary (c).
 \end{proof}
 
 \begin{corollary*}{e}
-	Suppose that $y_{1},\ldots,y_{k}$ is a set of $C^{\infty}$ functions on a neighborhood of $m$ such that their differentials span $M_{m}^{*}$. Then a subset of the $y_{i}$ forms a coordinate system on a neighborhood of $m$.
+	Suppose that $y_{1},\ldots,y_{k}$ is a set of $C^{\infty}$ functions on a neighborhood of $m$ such that their differentials span $T_{m}^{*} M$. Then a subset of the $y_{i}$ forms a coordinate system on a neighborhood of $m$.
 \end{corollary*}
 
 \begin{proof}
-	Simply choose a subset whose differentials form a basis of $M_{m}^{*}$, and apply Corollary (b).
+	Simply choose a subset whose differentials form a basis of $T_{m}^{*} M$, and apply Corollary (b).
 \end{proof}
 
 \begin{corollary*}{f}
-	Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $d\psi\colon M_{m} \to N_{\psi(m)}$ is injective. Let $x_{1}, \ldots, x_{k}$ form a coordinate system on a neighborhood of $\psi(m)$. Then a subset of the functions $\{x_{i} \circ \psi\}$ forms a coordinate system on a neighborhood of $m$. In particular, $\psi$ is one-to-one on a neighborhood of $m$.
+	Let $\psi\colon M \to N$ be $C^{\infty}$, and assume that $\psi_{*}\colon T_{m} M \to T_{\psi(m)} N$ is injective. Let $x_{1}, \ldots, x_{k}$ form a coordinate system on a neighborhood of $\psi(m)$. Then a subset of the functions $\{x_{i} \circ \psi\}$ forms a coordinate system on a neighborhood of $m$. In particular, $\psi$ is one-to-one on a neighborhood of $m$.
 \end{corollary*}
 
 \begin{proof}
-	The fact that $d\psi_m$ is injective implies that $\delta\psi|_{\psi(m)}$ is surjective. This implies that $\{d(x_i \circ \psi) = \delta\psi(dx_i)\colon i = 1, \ldots, k\}$ spans $M_m^*$. This corollary then follows from Corollary (e).
+	The fact that $\psi_{*,m}$ is injective implies that $\psi_m^{*}$ is surjective. This implies that $\{d(x_i \circ \psi) = \psi^{*}(dx_i)\colon i = 1, \ldots, k\}$ spans $T_{m}^{*} M$. This corollary then follows from Corollary (e).
 \end{proof}
 
 \warnernumber{31}
@@ -1441,12 +1558,12 @@ From the inverse function theorem we shall obtain two theorems which will provid
 
 \warnernumber{38}
 \begin{theorem}\label{thm:1.38}
-	Assume that $\psi\colon M^{c} \to N^{d}$ is $C^{\infty}$, that $n$ is a point of $N$, that $P = \psi^{-1}(n)$ is non-empty, and that $d\psi: M_{m} \to N_{\psi(m)}$ is surjective for all $m \in P$. Then $P$ has a unique manifold structure such that $(P, i)$ is a submanifold of $M$, where $i$ is the inclusion map. Moreover, $i: P \to M$ is actually an imbedding, and the dimension of $P$ is $c - d$.
+	Assume that $\psi\colon M^{c} \to N^{d}$ is $C^{\infty}$, that $n$ is a point of $N$, that $P = \psi^{-1}(n)$ is non-empty, and that $\psi_{*}: T_{m} M \to T_{\psi(m)} N$ is surjective for all $m \in P$. Then $P$ has a unique manifold structure such that $(P, i)$ is a submanifold of $M$, where $i$ is the inclusion map. Moreover, $i: P \to M$ is actually an imbedding, and the dimension of $P$ is $c - d$.
 
 \end{theorem}
 
 \begin{proof}
-	According to result (b) of 1.33, it is sufficient to prove that in the relative topology, $P$ has a differentiable structure such that $(P,i)$ is a submanifold of $M$ of dimension $c-d$. For this it is sufficient to prove that if $m\in P$, then there exists a coordinate system on a neighborhood $U$ of $m$ in $M$ for which $P\cap U$ is a single slice of the correct dimension. Let $x_{1},\ldots,x_{d}$ be a coordinate system centered at $n$ in $N$. Then since $d\psi:M_{m}\to N_{n}$ is surjective, it follows from Corollary (d) of 1.30 that the collection of functions
+	According to result (b) of 1.33, it is sufficient to prove that in the relative topology, $P$ has a differentiable structure such that $(P,i)$ is a submanifold of $M$ of dimension $c-d$. For this it is sufficient to prove that if $m\in P$, then there exists a coordinate system on a neighborhood $U$ of $m$ in $M$ for which $P\cap U$ is a single slice of the correct dimension. Let $x_{1},\ldots,x_{d}$ be a coordinate system centered at $n$ in $N$. Then since $\psi_{*}:T_{m} M\to T_{n} N$ is surjective, it follows from Corollary (d) of 1.30 that the collection of functions
 
 	\[
 		\{y_{i}=x_{i}\circ\psi\colon i=1,\ldots,d\},
@@ -1468,7 +1585,7 @@ In this theorem the inverse image of a point is shown to be a submanifold as lon
 
 	\begin{equation}
 		\tag{1}\label{eq:1.39:1}
-		N_{\psi(m)}=d\psi(M_{m})+d\varphi(O_{\varphi^{-1}(\psi(m))})
+		T_{\psi(m)} N=\psi_{*}(T_{m} M)+\varphi_{*}(T_{\varphi^{-1}(\psi(m))} O)
 	\end{equation}
 
 	(not necessarily a direct sum). Then if $P=\psi^{-1}\big(\varphi(O)\big)$ and is non-empty, $P$ can be given a manifold structure so that $(P,i)$ is a submanifold of $M$, where $i$ is the inclusion map, with
@@ -1543,10 +1660,10 @@ In this theorem the inverse image of a point is shown to be a submanifold as lon
 		\psi_{1}^{-1}(0)=\psi^{-1}\big(\varphi(W)\big).
 	\end{equation}
 
-	For each point  $ m \in \psi_{1}^{-1}(0) $,  $ d\psi_{1} \mid M_{m} $ is surjective since  $ d(\pi \circ \tau) \mid N_{\psi(m)} $ is surjective and since by (1), (5), and (7)
+	For each point  $ m \in \psi_{1}^{-1}(0) $,  $ (\psi_{1})_{*} \mid T_{m} M $ is surjective since  $ (\pi \circ \tau)_{*} \mid T_{\psi(m)} N $ is surjective and since by (1), (5), and (7)
 
 	\[
-		d(\pi\circ\tau)(N_{\varphi(m)})=d\psi_{1}(M_{m})+\{0\}.
+		(\pi\circ\tau)_{*}(T_{\varphi(m)} N)=(\psi_{1})_{*}(T_{m} M)+\{0\}.
 	\]
 
 	Thus by 1.38,  $ \psi^{-1}(\varphi(W)) $ has a unique manifold structure such that  $ (\psi^{-1}(\varphi(W)), i) $ is a submanifold of  $ M $; and in this manifold structure,
@@ -1580,7 +1697,7 @@ In this theorem the inverse image of a point is shown to be a submanifold as lon
 
 	where $I$ is the $d \times d$ identity matrix. $O(d)$ is a subgroup of $Gl(d,\mathbb{R})$ under matrix multiplication called the orthogonal group. To apply 1.38 to conclude that $O(d)$ has a unique manifold structure such that $(O(d),i)$ is a submanifold of $Gl(d,\mathbb{R})$, and that in this manifold structure $i$ is an imbedding and $O(d)$ has dimension $\frac{1}{2}(d(d-1))$, one \index{Orthogonal group}
 
-	need only check that  $ d\psi_\sigma $ is surjective at each  $ \sigma \in O(d) $. For this, it suffices to check that  $ d\psi_I $ is surjective, since whenever  $ \sigma \in O(d) $,
+	need only check that  $ \psi_{*,\sigma} $ is surjective at each  $ \sigma \in O(d) $. For this, it suffices to check that  $ \psi_{*,I} $ is surjective, since whenever  $ \sigma \in O(d) $,
 
 	\[
 		\psi=\psi\circ r_{\sigma}
@@ -1598,7 +1715,7 @@ In this theorem the inverse image of a point is shown to be a submanifold as lon
 	Smooth curves $\sigma: (a,b) \to M$ and their tangent vectors $\dot{\sigma}(t)$ were defined in \hyperref[thm:1.23]{1.23(e)}. We say that a mapping $\sigma: [a,b] \to M$ is a smooth curve in $M$ if $\sigma$ extends to be a $C^\infty$ mapping of $(a-\varepsilon, b+\varepsilon)$ into $M$ for some $\varepsilon > 0$. The curve $\sigma: [a,b] \to M$ is said to be piecewise smooth if there exists a partition $a = \alpha_0 < \alpha_1 < \cdots < \alpha_n = b$ such that $\sigma \mid [\alpha_i, \alpha_{i+1}]$ is smooth for each $i = 0, \ldots, n-1$. Observe that piecewise smooth curves are necessarily continuous. If $\sigma: [a,b] \to M$ is a smooth curve in $M$, then its tangent vector \index{Vector fields}
 
 	\[
-		\dot{\sigma}(t)=d\sigma\biggl(\frac{d}{d r}\biggl|_{t}\biggr)\in M_{\sigma(t)}
+		\dot{\sigma}(t)=\sigma_{*}\biggl(\frac{d}{d r}\biggl|_{t}\biggr)\in T_{\sigma(t)} M
 	\]
 
 	is well-defined for each  $ t \in [a, b] $.
@@ -1607,19 +1724,19 @@ In this theorem the inverse image of a point is shown to be a submanifold as lon
 
 \warnernumber{42}
 \begin{definition}\label{thm:1.42}
-	A vector field X along a curve  $ \sigma $:  $ [a,b] \to M $ is a mapping  $ X\colon [a,b] \to T(M) $ which lifts  $ \sigma $; that is,  $ \pi \circ X = \sigma $. A vector field
+	A vector field X along a curve  $ \sigma $:  $ [a,b] \to M $ is a mapping  $ X\colon [a,b] \to TM $ which lifts  $ \sigma $; that is,  $ \pi \circ X = \sigma $. A vector field
 
 	\begin{center}
 		\redrawn{figure-14}
 	\end{center}
 
-	X is called a smooth $(C^{\infty})$ vector field along $\sigma$ if the mapping $X\colon[a,b]\to T(M)$ is $C^{\infty}$. A vector field $X$ on an open set $U$ in $M$ is a lifting of $U$ into $T(M)$, that is, a map $X\colon U\to T(M)$ such that \index{Lifting}
+	X is called a smooth $(C^{\infty})$ vector field along $\sigma$ if the mapping $X\colon[a,b]\to TM$ is $C^{\infty}$. A vector field $X$ on an open set $U$ in $M$ is a lifting of $U$ into $TM$, that is, a map $X\colon U\to TM$ such that \index{Lifting}
 
 	\[
 		\pi\circ X=\text{identity map on }U.
 	\]
 
-	Again, for the vector field $X$ to be smooth ($C^\infty$) means that $X \in C^\infty(U, T(M))$. The set of smooth vector fields over $U$ forms in the obvious way a vector space over $\mathbb{R}$ and a module over the ring $C^\infty(U)$ of $C^\infty$ functions on $U$. If $X$ is a vector field on $U$ and $m \in U$, then $X(m)$ (often denoted $X_m$) is an element of $M_m$. If $f$ is a $C^\infty$ function on $U$, then $X(f)$ is the function on $U$ whose value at $m$ is $X_m(f)$.
+	Again, for the vector field $X$ to be smooth ($C^\infty$) means that $X \in C^\infty(U, TM)$. The set of smooth vector fields over $U$ forms in the obvious way a vector space over $\mathbb{R}$ and a module over the ring $C^\infty(U)$ of $C^\infty$ functions on $U$. If $X$ is a vector field on $U$ and $m \in U$, then $X(m)$ (often denoted $X_m$) is an element of $T_{m} M$. If $f$ is a $C^\infty$ function on $U$, then $X(f)$ is the function on $U$ whose value at $m$ is $X_m(f)$.
 
 \end{definition}
 
@@ -1642,7 +1759,7 @@ In this theorem the inverse image of a point is shown to be a submanifold as lon
 \end{proposition}
 
 \begin{proof}
-	(a) $\Rightarrow$ (b) The fact that $X$ is smooth implies that $X \mid U$ is smooth; and since the composition of differentiable maps is again differentiable, it follows that $dx_i \circ X \mid U$ is smooth. (Recall that the $dx_i$ are coordinate functions on $\pi^{-1}(U) \subset T(M)$, \eqref{eq:1.25:3}.) But \index{Coordinate functions on Euclidean space}
+	(a) $\Rightarrow$ (b) The fact that $X$ is smooth implies that $X \mid U$ is smooth; and since the composition of differentiable maps is again differentiable, it follows that $dx_i \circ X \mid U$ is smooth. (Recall that the $dx_i$ are coordinate functions on $\pi^{-1}(U) \subset TM$, \eqref{eq:1.25:3}.) But \index{Coordinate functions on Euclidean space}
 
 	\[
 		d x_{i}\circ X\mid U=a_{i}.
@@ -1704,7 +1821,7 @@ A curve  $ \gamma $:  $ (a,b) \to M $ is an integral curve of X if and only if
 
 \begin{equation}
 	\tag{1}\label{eq:1.47:1}
-	d\gamma\left(\frac{d}{d r}\bigg|_{t}\right)=X\big(\gamma(t)\big)\qquad\big(t\in(a,b)\big).
+	\gamma_{*}\left(\frac{d}{d r}\bigg|_{t}\right)=X\big(\gamma(t)\big)\qquad\big(t\in(a,b)\big).
 \end{equation}
 
 Let us interpret this in coordinates. Suppose that  $ 0 \in (a,b) $ and  $ \gamma(0) = m $. Choose a coordinate system  $ (U,\varphi) $ with coordinate functions  $ x_1, \ldots, x_d $ about m. By \hyperref[thm:1.43]{1.43(b)},
@@ -1718,7 +1835,7 @@ where the $f_{i}$ are $C^{\infty}$ functions on $U$. Moreover, for each $t$ such
 
 \begin{equation}
 	\tag{3}\label{eq:1.47:3}
-	d\gamma\left(\frac{d}{d r}\bigg\vert_{t}\right)=\sum_{i=1}^{d}\frac{d(x_{i}\circ\gamma)}{d r}\bigg\vert_{t}\frac{\partial}{\partial x_{i}}\bigg\vert_{\gamma(t)}.
+	\gamma_{*}\left(\frac{d}{d r}\bigg\vert_{t}\right)=\sum_{i=1}^{d}\frac{d(x_{i}\circ\gamma)}{d r}\bigg\vert_{t}\frac{\partial}{\partial x_{i}}\bigg\vert_{\gamma(t)}.
 \end{equation}
 
 Thus, in view of (2) and (3), equation (1) becomes
@@ -1861,7 +1978,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 \warnernumber{51}
 \begin{definition}\label{thm:1.51}
-	Let $\psi: M \to N$ be $C^\infty$. A smooth vector field $X$ along $\psi$ (that is, $X \in C^\infty(M, T(N))$ and $\pi \circ X = \psi$) has local $C^\infty$ extensions in $N$ if given $m \in M$ there exist a neighborhood $U$ of $m$ and a neighborhood $V$ of $\psi(m)$ such that $\psi(U) \subset V$, and there also exists a $C^\infty$ vector field $\tilde{X}$ on $V$ such that
+	Let $\psi: M \to N$ be $C^\infty$. A smooth vector field $X$ along $\psi$ (that is, $X \in C^\infty(M, TN)$ and $\pi \circ X = \psi$) has local $C^\infty$ extensions in $N$ if given $m \in M$ there exist a neighborhood $U$ of $m$ and a neighborhood $V$ of $\psi(m)$ such that $\psi(U) \subset V$, and there also exists a $C^\infty$ vector field $\tilde{X}$ on $V$ such that
 
 	\begin{equation}
 		\tag{1}\label{eq:1.51:1}
@@ -1883,7 +2000,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 	\begin{equation}
 		\tag{2}\label{eq:1.52:2}
-		X(t)=\dot{\alpha}(t)=d\alpha\left(\frac{d}{d r}\bigg|_{t}\right).
+		X(t)=\dot{\alpha}(t)=\alpha_{*}\left(\frac{d}{d r}\bigg|_{t}\right).
 	\end{equation}
 
 	\begin{center}
@@ -1894,7 +2011,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 	\begin{equation}
 		\tag{3}\label{eq:1.52:3}
-		\begin{aligned}{\tilde{X}_{u}}&{{}=\tilde{X}_{\alpha(t)}=X(t)=d\alpha\bigg(\frac{d}{d r}\bigg|_{t}\bigg)}\\ {}&{{}=\frac{d\alpha}{d r}\bigg|_{t}\frac{d}{d r}\bigg|_{\alpha(t)}=3t^{2}\frac{d}{d r}\bigg|_{\alpha(t)}=3u^{2/3}\frac{d}{d r}\bigg|_{u}.}\\ \end{aligned}
+		\begin{aligned}{\tilde{X}_{u}}&{{}=\tilde{X}_{\alpha(t)}=X(t)=\alpha_{*}\bigg(\frac{d}{d r}\bigg|_{t}\bigg)}\\ {}&{{}=\frac{d\alpha}{d r}\bigg|_{t}\frac{d}{d r}\bigg|_{\alpha(t)}=3t^{2}\frac{d}{d r}\bigg|_{\alpha(t)}=3u^{2/3}\frac{d}{d r}\bigg|_{u}.}\\ \end{aligned}
 	\end{equation}
 
 	Thus
@@ -1945,13 +2062,13 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 	Now,  $ \sigma $ is non-singular at the origin since
 
 	\[
-		d\sigma\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{0}\bigg)=X_{m}=\frac{\partial}{\partial y_{1}}\bigg|_{m}\quad\mathrm{and}\quad d\sigma\bigg(\frac{\partial}{\partial r_{i}}\bigg|_{0}\bigg)=\frac{\partial}{\partial y_{i}}\bigg|_{m}\qquad(i\geq2).
+		\sigma_{*}\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{0}\bigg)=X_{m}=\frac{\partial}{\partial y_{1}}\bigg|_{m}\quad\mathrm{and}\quad \sigma_{*}\bigg(\frac{\partial}{\partial r_{i}}\bigg|_{0}\bigg)=\frac{\partial}{\partial y_{i}}\bigg|_{m}\qquad(i\geq2).
 	\]
 
 	Thus by Corollary (a) of 1.30,  $ \varphi = \sigma^{-1} $ is a coordinate map on some neighborhood U of m. Let  $ x_1, \ldots, x_d $ denote the coordinate functions of the coordinate system  $ (U, \varphi) $. Then since
 
 	\[
-		d\sigma\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{(t,a_{2},\ldots,a_{d})}\bigg)=X_{\sigma(t,a_{2},\ldots,a_{d})}\;,
+		\sigma_{*}\bigg(\frac{\partial}{\partial r_{1}}\bigg|_{(t,a_{2},\ldots,a_{d})}\bigg)=X_{\sigma(t,a_{2},\ldots,a_{d})}\;,
 	\]
 
 	we have
@@ -1964,7 +2081,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 \warnernumber{54}
 \begin{definition}\label{thm:1.54}
-	Let  $ \varphi: M \to N $ be  $ C^\infty $. Smooth vector fields X on M and Y on N are called  $ \varphi $-related if  $ d\varphi \circ X = Y \circ \varphi $.
+	Let  $ \varphi: M \to N $ be  $ C^\infty $. Smooth vector fields X on M and Y on N are called  $ \varphi $-related if  $ \varphi_{*} \circ X = Y \circ \varphi $.
 
 \end{definition}
 
@@ -1975,17 +2092,17 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 \end{proposition}
 
 \begin{proof}
-	We must show that $d\varphi \circ [X, X_1] = [Y, Y_1] \circ \varphi$. For this, let  $ m \in M $ and  $f \in C^{\infty}(N)$. Then we must show that
+	We must show that $\varphi_{*} \circ [X, X_1] = [Y, Y_1] \circ \varphi$. For this, let  $ m \in M $ and  $f \in C^{\infty}(N)$. Then we must show that
 
 	\begin{equation}
 		\tag{1}\label{eq:1.55:1}
-		d\varphi([X,X_{1}]_{m})(f)=[Y,Y_{1}]_{\varphi(m)}(f).
+		\varphi_{*}([X,X_{1}]_{m})(f)=[Y,Y_{1}]_{\varphi(m)}(f).
 	\end{equation}
 
 	We simply unwind the definitions:
 
 	\[
-		\begin{aligned}{d\varphi([X,X_{1}]_{m})(f)}&{{}=[X,X_{1}]_{m}(f\circ\varphi)}\\ {}&{{}=X_{m}\big(X_{1}(f\circ\varphi)\big)-X_{1}\big|_{m}\left(X(f\circ\varphi)\right)}\\ {}&{{}=X_{m}\big((d\varphi\circ X_{1})(f)\big)-X_{1}\big|_{m}\left((d\varphi\circ X)(f)\right)}\\ {}&{{}=X_{m}\big(Y_{1}(f)\circ\varphi\big)-X_{1}\big|_{m}\big(Y(f)\circ\varphi\big)}\\ {}&{{}=d\varphi(X_{m})\big(Y_{1}(f)\big)-d\varphi(X_{1}|_{m})\big(Y(f)\big)}\\ {}&{{}=Y_{\varphi(m)}\big(Y_{1}(f)\big)-Y_{1}\big|_{\varphi(m)}\left(Y(f)\right)}\\ {}&{{}=[Y,Y_{1}]_{\varphi(m)}(f).}\\ \end{aligned}
+		\begin{aligned}{\varphi_{*}([X,X_{1}]_{m})(f)}&{{}=[X,X_{1}]_{m}(f\circ\varphi)}\\ {}&{{}=X_{m}\big(X_{1}(f\circ\varphi)\big)-X_{1}\big|_{m}\left(X(f\circ\varphi)\right)}\\ {}&{{}=X_{m}\big((\varphi_{*}\circ X_{1})(f)\big)-X_{1}\big|_{m}\left((\varphi_{*}\circ X)(f)\right)}\\ {}&{{}=X_{m}\big(Y_{1}(f)\circ\varphi\big)-X_{1}\big|_{m}\big(Y(f)\circ\varphi\big)}\\ {}&{{}=\varphi_{*}(X_{m})\big(Y_{1}(f)\big)-\varphi_{*}(X_{1}|_{m})\big(Y(f)\big)}\\ {}&{{}=Y_{\varphi(m)}\big(Y_{1}(f)\big)-Y_{1}\big|_{\varphi(m)}\left(Y(f)\right)}\\ {}&{{}=[Y,Y_{1}]_{\varphi(m)}(f).}\\ \end{aligned}
 		\qedhere
 	\]
 \end{proof}
@@ -1995,7 +2112,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 \warnernumber{56}
 \begin{definition}\label{thm:1.56}
-	Let $c$ be an integer, $1 \leq c \leq d$. A $c$-dimensional distribution $\mathcal{D}$ on a $d$-dimensional manifold $M$ is a choice of a $c$-dimensional subspace $\mathcal{D}(m)$ of $M_m$ for each $m$ in $M$. $\mathcal{D}$ is smooth if for each $m$ in $M$ there is a neighborhood $U$ of $m$ and there are $c$ vector fields $X_1, \ldots, X_c$ of class $C^\infty$ on $U$ which span $\mathcal{D}$ at each point of $U$. A vector field $X$ on $M$ is said to belong to (or lie in) the distribution $\mathcal{D}(X \in \mathcal{D})$ if $X_m \in \mathcal{D}(m)$ for each \index{Distributions}\index{Frobenius theorem}
+	Let $c$ be an integer, $1 \leq c \leq d$. A $c$-dimensional distribution $\mathcal{D}$ on a $d$-dimensional manifold $M$ is a choice of a $c$-dimensional subspace $\mathcal{D}(m)$ of $T_{m} M$ for each $m$ in $M$. $\mathcal{D}$ is smooth if for each $m$ in $M$ there is a neighborhood $U$ of $m$ and there are $c$ vector fields $X_1, \ldots, X_c$ of class $C^\infty$ on $U$ which span $\mathcal{D}$ at each point of $U$. A vector field $X$ on $M$ is said to belong to (or lie in) the distribution $\mathcal{D}(X \in \mathcal{D})$ if $X_m \in \mathcal{D}(m)$ for each \index{Distributions}\index{Frobenius theorem}
 
 	$ m \in M $. A smooth distribution  $ \mathcal{D} $ is called involutive (or completely integrable) if  $ [X, Y] \in \mathcal{D} $ whenever  $ X $ and  $ Y $ are smooth vector fields lying in  $ \mathcal{D} $.
 
@@ -2007,7 +2124,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 	\begin{equation}
 		\tag{1}\label{eq:1.57:1}
-		d\psi(N_{n})=\mathcal{D}\big(\psi(n)\big)\qquad\text{for each }n\in N.
+		\psi_{*}(T_{n} N)=\mathcal{D}\big(\psi(n)\big)\qquad\text{for each }n\in N.
 	\end{equation}
 
 \end{definition}
@@ -2025,18 +2142,18 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 \end{proposition}
 
 \begin{proof}
-	Let $X$ and $Y$ be smooth vector fields lying in $\mathcal{D}$, and let $m \in M$. We must prove that $[X, Y]_{m} \in \mathcal{D}(m)$. Let $(N, \psi)$ be an integral manifold of $\mathcal{D}$ through $m$, and suppose that $\psi(n_0) = m$. Since $d\psi: N_n \to \mathcal{D}(\psi(n))$ is an isomorphism at each $n$ in $N$, there exist vector fields $\widetilde{X}$, $\widetilde{Y}$ on $N$ such that
+	Let $X$ and $Y$ be smooth vector fields lying in $\mathcal{D}$, and let $m \in M$. We must prove that $[X, Y]_{m} \in \mathcal{D}(m)$. Let $(N, \psi)$ be an integral manifold of $\mathcal{D}$ through $m$, and suppose that $\psi(n_0) = m$. Since $\psi_{*}: T_{n} N \to \mathcal{D}(\psi(n))$ is an isomorphism at each $n$ in $N$, there exist vector fields $\widetilde{X}$, $\widetilde{Y}$ on $N$ such that
 
 	\begin{equation}
 		\tag{1}\label{eq:1.59:1}
-		d\psi\circ\tilde{X}=X\circ\psi,
+		\psi_{*}\circ\tilde{X}=X\circ\psi,
 	\end{equation}
 
 	\[
-		d\psi\circ\tilde{Y}=Y\circ\psi.
+		\psi_{*}\circ\tilde{Y}=Y\circ\psi.
 	\]
 
-	It is easily checked that $\tilde{X}$ and $\tilde{Y}$ are smooth. By 1.55, $[\tilde{X},\tilde{Y}]$ and $[X,Y]$ are $\psi$-related. Hence $[X,Y]_{m}=d\psi([\tilde{X},\tilde{Y}]_{n_{0}})\in\mathcal{D}(m)$.
+	It is easily checked that $\tilde{X}$ and $\tilde{Y}$ are smooth. By 1.55, $[\tilde{X},\tilde{Y}]$ and $[X,Y]$ are $\psi$-related. Hence $[X,Y]_{m}=\psi_{*}([\tilde{X},\tilde{Y}]_{n_{0}})\in\mathcal{D}(m)$.
 
 \end{proof}
 
@@ -2174,10 +2291,10 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 	The first equality follows from (4) and (8), and the second from the fact that the integral manifolds of the distribution on $S$ determined by the $Z_{i}$ are given by suitable slices in the $w$ coordinate system. It follows from (14) and (15) that the functions $Y_{i}(x_{c+r})$ must be identically zero on $U$. Thus (9) holds, and the induction step is completed.
 
-	Finally, suppose that $(N,\psi)$ is a connected integral manifold of $\mathcal{D}$ such that $\psi(N)\subset U$. Let $\pi$ be the projection of $\mathbb{R}^d$ onto the last $d-c$ coordinates. Then vectors in $\mathcal{D}$ are annihilated by $d(\pi\circ\varphi)$. Thus
+	Finally, suppose that $(N,\psi)$ is a connected integral manifold of $\mathcal{D}$ such that $\psi(N)\subset U$. Let $\pi$ be the projection of $\mathbb{R}^d$ onto the last $d-c$ coordinates. Then vectors in $\mathcal{D}$ are annihilated by $(\pi\circ\varphi)_{*}$. Thus
 
 	\[
-		d(\pi\circ\varphi\circ\psi)|_{n}\equiv0
+		(\pi\circ\varphi\circ\psi)_{*}|_{n}\equiv0
 	\]
 
 	for each $n \in N$. By 1.24, $\pi \circ \varphi \circ \psi$ is a constant map since $N$ is connected. Thus $\psi(N)$ is contained in one of the slices (1).
@@ -2223,7 +2340,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 	\end{equation}
 
 	\[
-		d\alpha_{s}|_{r}=b(r,\alpha(r,s))
+		(\alpha_{s})_{*}|_{r}=b(r,\alpha(r,s))
 	\]
 
 	for all  $ (r,s)\in U_{0}\times V_{0} $
@@ -2364,7 +2481,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 	\item Prove \hyperref[thm:1.25]{1.25(a)}, (b), and (c).
 
-	\item Prove that if $\psi: M \to N$ is $C^{\infty}$, one-to-one, onto, and everywhere non-singular, then $\psi$ is a diffeomorphism. (This proposition depends strongly on the second countability of $M$. Here is an outline for a proof. This map $\psi$ is a diffeomorphism if and only if $d\psi$ is surjective everywhere. If $d\psi$ is not surjective at some point, then the dimension of $M$ is less than the dimension of $N$. Let $\dim M = p$ and $\dim N = d$. Assuming that $p < d$, one arrives at a contradiction as follows. Let $(U,\varphi)$ be a coordinate system on $N$ such that $\varphi(U) = \mathbb{R}^d$. Since $\psi$ maps $M$ onto $N$, the range of $\varphi \circ \psi$ is all of $\mathbb{R}^d$. Now we show that this yields a contradiction. One way is to use 1.35 to observe that the range of $\varphi \circ \psi$ is a countable union of nowhere dense sets in $\mathbb{R}^d$, and therefore, by the Baire category theorem, could not possibly be all of $\mathbb{R}^d$. Another way is to use the fact that $p < d$ to prove that the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$, which also is a contradiction (where a set in $\mathbb{R}^d$ has measure 0 if it can be covered by a sequence of balls, the union of whose volumes is arbitrarily small). That the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$ follows from the second countability of $M$ and the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ has image of measure 0, and this, in turn, follows from the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ takes sets of measure 0 to sets of measure 0. To prove the latter, observe that if $f: \mathbb{R}^d \to \mathbb{R}^d$ is $C^1$, and if $A$ is a compact set in $\mathbb{R}^d$, then $f$ has a Lipschitz constant $K$ on $A$,
+	\item Prove that if $\psi: M \to N$ is $C^{\infty}$, one-to-one, onto, and everywhere non-singular, then $\psi$ is a diffeomorphism. (This proposition depends strongly on the second countability of $M$. Here is an outline for a proof. This map $\psi$ is a diffeomorphism if and only if $\psi_{*}$ is surjective everywhere. If $\psi_{*}$ is not surjective at some point, then the dimension of $M$ is less than the dimension of $N$. Let $\dim M = p$ and $\dim N = d$. Assuming that $p < d$, one arrives at a contradiction as follows. Let $(U,\varphi)$ be a coordinate system on $N$ such that $\varphi(U) = \mathbb{R}^d$. Since $\psi$ maps $M$ onto $N$, the range of $\varphi \circ \psi$ is all of $\mathbb{R}^d$. Now we show that this yields a contradiction. One way is to use 1.35 to observe that the range of $\varphi \circ \psi$ is a countable union of nowhere dense sets in $\mathbb{R}^d$, and therefore, by the Baire category theorem, could not possibly be all of $\mathbb{R}^d$. Another way is to use the fact that $p < d$ to prove that the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$, which also is a contradiction (where a set in $\mathbb{R}^d$ has measure 0 if it can be covered by a sequence of balls, the union of whose volumes is arbitrarily small). That the range of $\varphi \circ \psi$ has measure 0 in $\mathbb{R}^d$ follows from the second countability of $M$ and the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ has image of measure 0, and this, in turn, follows from the fact that a $C^1$ map $\mathbb{R}^d \to \mathbb{R}^d$ takes sets of measure 0 to sets of measure 0. To prove the latter, observe that if $f: \mathbb{R}^d \to \mathbb{R}^d$ is $C^1$, and if $A$ is a compact set in $\mathbb{R}^d$, then $f$ has a Lipschitz constant $K$ on $A$,
 
 	\[
 		\|f(x)-f(y)\|\leq K\|x-y\|\quad(x,y\in A),
@@ -2396,7 +2513,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 	\item Prove that if $(U, x_1, \ldots, x_d)$ is a coordinate system on $M$, then $[\partial/\partial x_i, \partial/\partial x_j] = 0$ on $U$.
 
-	\item Let $N \subset M$ be a submanifold. Let $\gamma: (a,b) \to M$ be a $C^\infty$ curve such that $\gamma(a,b) \subset N$. Show that it is not necessarily true that $\dot{\gamma}(t) \in N_{\gamma(t)}$ for each $t \in (a,b)$.
+	\item Let $N \subset M$ be a submanifold. Let $\gamma: (a,b) \to M$ be a $C^\infty$ curve such that $\gamma(a,b) \subset N$. Show that it is not necessarily true that $\dot{\gamma}(t) \in T_{\gamma(t)} N$ for each $t \in (a,b)$.
 
 	\item Prove that any $C^{\infty}$ vector field on a compact manifold is complete.
 
@@ -2404,19 +2521,19 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 
 	\item Supply the details of the equivalence of the two versions 1.60 and 1.61 of the Frobenius theorem.
 
-	\item Let $\varphi: N \to M$ be $C^\infty$, and let $X$ be a $C^\infty$ vector field on $N$. Suppose that $d\varphi(X(p)) = d\varphi(X(q))$ whenever $\varphi(p) = \varphi(q)$. Is there a smooth vector field $Y$ on $M$ which is $\varphi$-related to $X?$
+	\item Let $\varphi: N \to M$ be $C^\infty$, and let $X$ be a $C^\infty$ vector field on $N$. Suppose that $\varphi_{*}(X(p)) = \varphi_{*}(X(q))$ whenever $\varphi(p) = \varphi(q)$. Is there a smooth vector field $Y$ on $M$ which is $\varphi$-related to $X?$
 
 	\item The torus is the manifold $S^{1} \times S^{1}$. Consider $S^{1}$ as the unit circle in the complex plane. We define a mapping $\varphi: \mathbb{R} \to S^{1} \times S^{1}$ by setting $\varphi(t) = (e^{2\pi i t}, e^{2\pi i\alpha t})$ where $\alpha$ is an irrational number. Prove that $(\mathbb{R}, \varphi)$ is a dense submanifold of $S^{1} \times S^{1}$. This submanifold is known as the skew line on the torus. \index{Skew line on torus} \index{Torus}
 
 	\item Let $\gamma(t)$ be an integral curve of a vector field $X$ on $M$. Suppose that $\dot{\gamma}(t)=0$ for some $t$. Prove that $\gamma$ is a constant map, that is, its range consists of one point.
 
-	\item A Riemannian structure on a differentiable manifold M is a smooth choice of a positive definite inner product  $ \langle\cdot,\rangle_{m} $ on each tangent space  $ M_{m} $, smooth in the sense that whenever X and Y are  $ C^{\infty} $ vector fields on M, then  $ \langle X,Y\rangle $ is a  $ C^{\infty} $ function on M. Prove that there exists a Riemannian structure on every differentiable manifold. You will need to use a partition of unity argument. A Riemannian manifold is a differentiable manifold together with a Riemannian structure.
+	\item A Riemannian structure on a differentiable manifold M is a smooth choice of a positive definite inner product  $ \langle\cdot,\rangle_{m} $ on each tangent space  $ T_{m} M $, smooth in the sense that whenever X and Y are  $ C^{\infty} $ vector fields on M, then  $ \langle X,Y\rangle $ is a  $ C^{\infty} $ function on M. Prove that there exists a Riemannian structure on every differentiable manifold. You will need to use a partition of unity argument. A Riemannian manifold is a differentiable manifold together with a Riemannian structure.
 
 	\item Consider the product manifold  $ M \times N $ with the canonical projections  $ \pi_1: M \times N \to M $ and  $ \pi_2\colon M \times N \to N $.
 
 	(a) Prove that  $ \alpha\colon \tilde{M} \to M \times N $ is  $ C^\infty $ if and only if  $ \pi_1 \circ \alpha $ and  $ \pi_2 \circ \alpha $ are  $ C^\infty $. \index{Riemannian structure}
 
-	(b) Prove that the map $v \mapsto (d\pi_{1}(v), d\pi_{2}(v))$ is an isomorphism of $(M \times N)_{(m,n)}$ with $M_{m} \oplus N_{n}$.
+	(b) Prove that the map $v \mapsto ((\pi_{1})_{*}(v), (\pi_{2})_{*}(v))$ is an isomorphism of $T_{(m,n)}(M \times N)$ with $T_{m} M \oplus T_{n} N$.
 
 	(c) Let $X$ and $Y$ be $C^{\infty}$ vector fields on $M$ and $N$ respectively. Then, by (b), $X$ and $Y$ canonically determine vector fields $\tilde{X} = (X,0)$ and $\tilde{Y} = (0,Y)$ on $M \times N$. Prove that $[\tilde{X}, \tilde{Y}] = 0$.
 
@@ -2426,7 +2543,7 @@ where $\gamma_{i}=x_{i}\circ\gamma$. Equation (5) is a system of first order ord
 		\begin{aligned}{}&{{}i_{n_{0}}(m)=(m,n_{0}),}\\ {}&{{}i_{m_{0}}(n)=(m_{0},n).}\\ \end{aligned}
 	\]
 
-	Let  $ v \in (M \times N)_{(m_0, n_0)} $, and let  $ v_1 = d\pi_1(v) \in M_{m_0} $ and  $ v_2 = d\pi_2(v) \in N_{m_0} $. Let  $ f \in C^\infty(M \times N) $. Prove that
+	Let  $ v \in T_{(m_0,n_0)}(M \times N) $, and let  $ v_1 = (\pi_{1})_{*}(v) \in T_{m_0} M $ and  $ v_2 = (\pi_{2})_{*}(v) \in T_{m_0} N $. Let  $ f \in C^\infty(M \times N) $. Prove that
 
 	\[
 		v(f)=v_{1}(f\circ i_{n_{0}})+v_{2}(f\circ i_{m_{0}}).
