@@ -1,0 +1,286 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{xeCJK}
+\IfFontExistsTF{Noto Serif SC}{\setCJKmainfont{Noto Serif SC}}{\setCJKmainfont{Noto Serif CJK SC}}
+\usepackage{tikz-cd}
+
+% 1. 开启标题背景色填充
+\metroset{block=fill}
+
+% theorem environments
+\newtheorem{proposition}{Proposition}
+\newtheorem{exercise}{Exercise}
+
+% notation
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\supp}{\operatorname{supp}}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\codim}{codim}
+
+\title{8.3\quad Transversality}
+\subtitle{Transversal Intersections \& Vector Fields}
+\date{October 27, 2026}
+\author{LXJ}
+
+\begin{document}
+
+\maketitle
+
+%====================================================================
+\section{Examples: Level Sets as Regular Submanifolds}
+
+\begin{frame}{Hypersurfaces determined by quadratic forms}
+	\textbf{Eg.} Let $A$ be a non-degenerate $(n+1)\times(n+1)$ real
+	symmetric matrix. The quadratic form defines a smooth function
+	$\varphi_A$:
+	\[
+		\varphi_A(x_1, \dots, x_{n+1})
+		= \sum_{i,j=1}^{n+1} a_{ij}\, x_i x_j .
+	\]
+	When $s \neq 0$, $\varphi_A^{-1}(s)$ is either $\varnothing$ or an
+	$n$-dimensional regular submanifold (a \emph{hypersurface}).
+\end{frame}
+
+\begin{frame}{The special linear group $SL(n, \R)$}
+	\textbf{Eg.} Take $n \times n$ real matrices as points in
+	$\R^{n^2}$, i.e.\
+	\[
+		M_{n \times n}(\R) \cong \R^{n^2}.
+	\]
+	Consider $f : M_{n \times n}(\R) \longrightarrow \R$,\quad
+	$A \longmapsto \det(A)$. By the definition of $\det$, $f$ is a
+	smooth map.
+	\medskip
+
+	\textbf{Claim.} $SL(n, \R)$ is an $(n^2 - 1)$-dim regular
+	submanifold of $GL(n, \R)$, an open subset of $\R^{n^2}$.
+	\medskip
+
+	\begin{block}{Idea}
+		Show $\rank f_{*,A} = 1$ at every $A \in GL(n, \R)$ and apply
+		the pre-image theorem.
+	\end{block}
+\end{frame}
+
+\begin{frame}{$SL(n, \R)$: proof}
+	$GL(n, \R) = \bigl\{ M \bigm| \det M \neq 0 \bigr\}$ is an open
+	subset of $M_{n \times n}(\R) \cong \R^{n^2}$, hence a
+	$C^\infty$-manifold. Consider
+	\[
+		f\big|_{GL(n, \R)} : A \longmapsto \det(A) \in \R .
+	\]
+	Given $A = (a_{ij}) \in GL(n, \R)$, $\{ a_{ij} \}$ is a local
+	coordinate system about $A$, and
+	\[
+		f_{*,A}\Bigl( \frac{\partial}{\partial a_{ij}} \Big|_{A} \Bigr)
+		= \frac{\partial f}{\partial a_{ij}}(A)\, \frac{\partial}{\partial r}
+		= A_{ij}\, \frac{\partial}{\partial r},
+	\]
+	where $A_{ij}$ is the minor of $a_{ij}$. If $\det A \neq 0$ these
+	minors cannot all be zero, so
+	$f_{*,A} : T_A GL(n, \R) \to T_{f(A)} \R$ has full rank, $\rank = 1$.
+	Hence $f^{-1}(\{1\}) = SL(n, \R)$ is an $(n^2-1)$-dim regular
+	submanifold of $GL(n, \R)$. \qedhere
+\end{frame}
+
+\begin{frame}{A remark on the proof}
+	\begin{block}{Remark (Mei's book)}
+		The author only checked $p \in SL(n, \R)$: $f_{*,p}$ has full
+		rank. This is enough, since if $\rank f_* = \mathrm{const}$ on
+		$SL(n, \R)$, it is constant on an open neighborhood of
+		$SL(n, \R)$.
+	\end{block}
+	\bigskip
+
+	\textbf{Eg.} A class of $2$-dim surfaces. Let
+	$F : \R^3 \to \R$,\quad $F(x, y, z) = (x^2 + y^2)^2 + z^2$.
+	When $(x,y,z) \neq 0$, $\rank_{(x,y,z)} F = 1$. So for $r > 0$,
+	\[
+		S_r = F^{-1}(\{r\})
+	\]
+	is a regular submanifold of $\R^3 \setminus \{0\}$. Note that
+	$S_r$ is diffeomorphic to $S^2$.
+\end{frame}
+
+%====================================================================
+\section{Tangent Space of a Regular Submanifold}
+
+\begin{frame}{$T_p S = \ker f_{*,p}$}
+	\textbf{Eg.} Let $f : M^m \to N^n$ be a smooth map with
+	$\rank f \equiv l$ (identical everywhere). For $q \in N$, let
+	$S = f^{-1}(\{q\}) \neq \varnothing$. Then $S \subset M$ is a
+	regular submanifold, and $\forall\, p \in S$,
+	\[
+		T_p S = \ker f_{*,p}
+		= \bigl\{ w \in T_p M \bigm| f_{*,p}(w) = 0 \bigr\}.
+	\]
+	\begin{proof}
+		For any tangent vector $w \in T_p S \subset T_p M$ and
+		$h \in C^\infty(N)$,
+		\[
+			f_{*,p}(w)(h) = w(h \circ f).
+		\]
+		Since $f\big|_S \equiv \mathrm{const} = q$,
+		$\Rightarrow w\bigl( h \circ f\big|_S \bigr) = w\bigl(h(q)\bigr)
+		\equiv 0$, so $w \in \ker f_{*,p}$ (equality by dimension).
+		\qedhere
+	\end{proof}
+\end{frame}
+
+%====================================================================
+\section{Transversal Intersection}
+
+\begin{frame}{When a map meets a submanifold transversally}
+	\begin{definition}[Transversal intersection]
+		Let $f : M \to N$ be a $C^\infty$-map and $S \subset N$ a
+		regular submanifold. If for any $p \in M$ with
+		$f(p) = q \in S$ one has
+		\[
+			f_{*,p}(T_p M) + T_q S = T_q N,
+		\]
+		then $f$ and $S$ \emph{intersect transversally}, denoted by
+		$f \pitchfork S$. When $f(M) \cap S = \varnothing$, we also
+		call $f$ and $S$ intersecting transversally.
+	\end{definition}
+	If $M, S$ are two regular submanifolds of $N$ and for all
+	$p \in M \cap S$,
+	\[
+		T_p M + T_p S = T_p N,
+	\]
+	we say $M$ and $S$ intersect transversally, denoted by
+	$M \pitchfork S$.
+\end{frame}
+
+\begin{frame}{The transversal intersection theorem}
+	\begin{alertblock}{Theorem}
+		Let $f : M \to N$ be a $C^\infty$-map and $S \subset N$ a
+		regular submanifold. If $f$ intersects transversally with $S$,
+		then $f^{-1}(S)$ is a regular submanifold of $M$, and
+		\[
+			\dim M - \dim f^{-1}(S) = \dim N - \dim S .
+		\]
+	\end{alertblock}
+	\medskip
+	\begin{block}{Note}
+		This generalizes the pre-image theorem: a \emph{constant}
+		rank condition on $f$ is replaced by a transversality
+		condition \emph{along} $S$.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Regular values}
+	\begin{definition}[Regular value]
+		Let $f : M \to N$ be a $C^\infty$-map. If for every
+		$p \in f^{-1}(\{q\})$ the differential
+		$f_{*,p}$ is surjective, then $q \in N$ is called a
+		\emph{regular value} of $f$.
+	\end{definition}
+	\medskip
+	\begin{lemma}
+		Let $0 \in \R^k$ be a regular value of the $C^\infty$-map
+		$g : N \to \R^k$ and $S = g^{-1}(\{0\})$. Then
+		$f : M \to N$ intersects transversally with $S$ $\iff$ $0 \in
+		\R^k$ is a regular value of $g \circ f$.
+	\end{lemma}
+	\emph{This reduces transversality of $f$ with a level set to a
+	regular-value check for $g \circ f$.}
+\end{frame}
+
+\begin{frame}{Proof of the lemma}
+	If $0$ is a regular value of $g \circ f$, then
+	$\forall\, p \in (g \circ f)^{-1}(\{0\})$,
+	\[
+		(g \circ f)_{*,p}(T_p M)
+		= g_{*,f(p)} \circ f_{*,p}(T_p M)
+		= T_0 \R^k .
+	\]
+	Since $T_{f(p)} S = \ker g_{*,f(p)}$ and
+	$g_{*,f(p)}(T_{f(p)} N) = T_0 \R^k$,
+	\begin{align*}
+		& \quad\ f_{*,p}(T_p M) + \ker g_{*,f(p)} = T_{f(p)} N \\
+		& \Rightarrow\
+		f_{*,p}(T_p M) + T_{f(p)} S = T_{f(p)} N .
+		\qedhere
+	\end{align*}
+\end{frame}
+
+\begin{frame}{Codimension}
+	\begin{definition}[Codimension]
+		For a submanifold $S \subset N$, denote
+		\[
+			\codim S = \dim N - \dim S .
+		\]
+	\end{definition}
+	\medskip
+	\begin{block}{Corollary (of the theorem)}
+		In the transversal intersection theorem we can say
+		\[
+			\codim f^{-1}(S) = \codim S .
+		\]
+	\end{block}
+	\emph{Transversal pre-images keep the codimension of $S$.}
+\end{frame}
+
+%====================================================================
+\section{Vector Fields}
+
+\begin{frame}{Smooth curves on a closed interval}
+	\begin{definition}[Smooth curve]
+		A mapping $\sigma : [a, b] \to M$ is a \emph{smooth curve} in
+		$M$ if $\sigma$ extends to a $C^\infty$-map of
+		$(a - \varepsilon, b + \varepsilon) \to M$ for some
+		$\varepsilon > 0$.
+	\end{definition}
+	\begin{block}{Note}
+		If $\sigma : [a, b] \to M$ is a smooth curve, then its tangent
+		vector
+		\[
+			\dot{\sigma}(t)
+			= \sigma_*\Bigl( \frac{d}{dt} \Big|_{t} \Bigr)
+			\in T_{\sigma(t)} M
+		\]
+		is well-defined for all $t \in [a, b]$.
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Vector fields along a curve}
+	\begin{definition}[Vector field along a curve]
+		A smooth vector field $X$ along a curve
+		$\sigma : [a, b] \to M$ is a $C^\infty$-map
+		\[
+			X : [a, b] \longrightarrow TM
+		\]
+		which \emph{lifts} $\sigma$, i.e.
+		\[
+			\pi \circ X = \sigma .
+		\]
+	\end{definition}
+	\medskip
+	\begin{center}
+		\begin{tikzcd}
+			& TM \arrow[d, "\pi"] \\
+			{[a,b]} \arrow[ru, "X"] \arrow[r, "\sigma"'] & M
+		\end{tikzcd}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Vector fields on an open subset}
+	\begin{definition}[Vector fields on an open subset of $M$]
+		A smooth vector field on an open set $U$ in $M$ is a
+		$C^\infty$-map $X : U \to TM$ s.t.
+		\[
+			\pi \circ X = \mathrm{id}_U .
+		\]
+	\end{definition}
+	Sometimes we call a smooth vector field $X$ on $M$ a
+	\emph{section} of $TM$. The set of all smooth sections on $U$ of
+	$TM$ is denoted by $\Gamma(U; TM)$. It is a vector space over
+	$\R$ and also a $C^\infty(U)$-\emph{module}.
+\end{frame}
+
+\end{document}
