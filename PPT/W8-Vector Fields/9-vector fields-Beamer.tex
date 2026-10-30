@@ -1,0 +1,259 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{xeCJK}
+\IfFontExistsTF{Noto Serif SC}{\setCJKmainfont{Noto Serif SC}}{\setCJKmainfont{Noto Serif CJK SC}}
+\usepackage{tikz-cd}
+
+% 1. 开启标题背景色填充
+\metroset{block=fill}
+
+% theorem environments
+\newtheorem{proposition}{Proposition}
+\newtheorem{exercise}{Exercise}
+
+% notation
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\vX}{\mathfrak{X}}
+
+\title{9\quad Vector Fields}
+\subtitle{Smoothness, Lie Brackets \& Integral Curves}
+\date{October 29, 2026}
+\author{LXJ}
+
+\begin{document}
+
+\maketitle
+
+%====================================================================
+\section{Vector Fields}
+
+\begin{frame}{Smooth curves on a closed interval}
+	\begin{definition}[Smooth curve]
+		A mapping $\sigma : [a, b] \to M$ is a \emph{smooth curve} in
+		$M$ if $\sigma$ extends to a $C^\infty$-map of
+		$(a - \varepsilon, b + \varepsilon) \to M$ for some
+		$\varepsilon > 0$.
+	\end{definition}
+	\begin{block}{Note}
+		If $\sigma : [a, b] \to M$ is a smooth curve, then its tangent
+		vector
+		\[
+			\dot{\sigma}(t)
+			= \sigma_*\Bigl( \frac{d}{dt} \Big|_{t} \Bigr)
+			\in T_{\sigma(t)} M
+		\]
+		is well-defined for all $t \in [a, b]$.
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Vector fields along a curve}
+	\begin{definition}[Vector field along a curve]
+		A smooth vector field $X$ along a curve
+		$\sigma : [a, b] \to M$ is a $C^\infty$-map
+		\[
+			X : [a, b] \longrightarrow TM
+		\]
+		which \emph{lifts} $\sigma$, i.e.
+		\[
+			\pi \circ X = \sigma .
+		\]
+	\end{definition}
+	\medskip
+	\begin{center}
+		\begin{tikzcd}
+			& TM \arrow[d, "\pi"] \\
+			{[a,b]} \arrow[ru, "X"] \arrow[r, "\sigma"'] & M
+		\end{tikzcd}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Vector fields on an open subset}
+	\begin{definition}[Vector fields on an open subset of $M$]
+		A smooth vector field on an open set $U$ in $M$ is a
+		$C^\infty$-map $X : U \to TM$ s.t.
+		\[
+			\pi \circ X = \mathrm{id}_U .
+		\]
+	\end{definition}
+	Sometimes we call a smooth vector field $X$ on $M$ a
+	\emph{section} of $TM$. The set of all smooth sections on $U$ of
+	$TM$ is denoted by $\Gamma(U; TM)$. It is a vector space over
+	$\R$ and also a $C^\infty(U)$-\emph{module}:
+	\[
+		\Gamma(U; TM) = C^\infty(U, TM) = \vX(U).
+	\]
+\end{frame}
+
+%====================================================================
+\section{A Criterion for Smoothness}
+
+\begin{frame}{Three equivalent conditions}
+	\begin{proposition}
+		Let $X$ be a vector field on $M$. Then the following are
+		equivalent:
+		\begin{enumerate}
+			\item[(a)] $X$ is $C^\infty$;
+			\item[(b)] if $(U, x_1, \dots, x_d)$ is a local coordinate
+			      system on $M$ and $\{a_i\}$ are the functions on $U$
+			      defined by
+			      \[
+				      X\big|_U = \sum_{i=1}^{d} a_i\,
+				      \frac{\partial}{\partial x_i},
+			      \]
+			      then $a_i \in C^\infty(U)$;
+			\item[(c)] whenever $V \subset M$ is open, if
+			      $f \in C^\infty(V)$, then $X(f) \in C^\infty(V)$.
+		\end{enumerate}
+	\end{proposition}
+\end{frame}
+
+\begin{frame}{Proof: (a) $\Rightarrow$ (b)}
+	Let $X : M \to TM$ be a $C^\infty$-map s.t.\ $\pi \circ X =
+	\mathrm{id}_M$, so $X(p) = V_p \in T_p M$. Take a local coordinate
+	system $(U, \varphi, x_1, \dots, x_d)$ about $p \in M$; the local
+	coordinate system about $V_p$ is given by the local trivialization
+	$\widetilde{\varphi} : \pi^{-1}(U) \to \R^{2d}$.
+	\medskip
+
+	Smoothness of $X$ in local coordinates requires
+	$\widetilde{\varphi} \circ X \circ \varphi^{-1}$ to be $C^\infty$
+	from $\varphi(U) \subset \R^d$ to
+	$\widetilde{\varphi}\bigl(\pi^{-1}(U)\bigr) \subset \R^{2d}$.
+	Writing $X(p) = V_p = \sum_i a_i(p) \left. \frac{\partial}{\partial
+	x_i} \right|_{p}$,
+	\begin{align*}
+		\widetilde{\varphi} \circ X \circ \varphi^{-1}(x_1, \dots, x_d)
+		& = \Bigl( \varphi\bigl(\varphi^{-1}(x_1, \dots, x_d)\bigr);\
+		a_i\bigl(\varphi^{-1}(x_1, \dots, x_d)\bigr) \Bigr)  \\
+		& = \bigl( x_1, \dots, x_d;\ a_i(\varphi^{-1}(x_1, \dots, x_d)) \bigr),
+	\end{align*}
+	which means $a_i \in C^\infty(U)$.
+\end{frame}
+
+\begin{frame}{Proof: (b) $\Rightarrow$ (c) $\Rightarrow$ (a)}
+	\textbf{(b) $\Rightarrow$ (c).} For $f \in C^\infty(V)$ we show
+	$X(f)$ is $C^\infty$ about each $p \in V$. Take a local coordinate
+	system $(U, x_1, \dots, x_d)$ about $p$; then
+	$X\big|_U = \sum_i a_i\, \frac{\partial}{\partial x_i}$ with
+	$a_i \in C^\infty(U)$, so
+	\[
+		X(f) = \sum_{i=1}^{d} a_i\, \frac{\partial f}{\partial x_i}
+		= \sum_{i=1}^{d} a_i\,
+		\frac{\partial (f \circ \varphi^{-1})}{\partial x_i}
+		\in C^\infty(U).
+	\]
+	\textbf{(c) $\Rightarrow$ (a).} In an arbitrary local coordinate
+	system $(U, x_1, \dots, x_d)$, write
+	$X = \sum_i a_i\, \frac{\partial}{\partial x_i}$. Apply (c) to the
+	coordinate function $x_i \in C^\infty(U)$:
+	\[
+		X(x_i) = a_i \in C^\infty(U). \qedhere
+	\]
+\end{frame}
+
+%====================================================================
+\section{The Lie Bracket}
+
+\begin{frame}{The Lie bracket of two vector fields}
+	If $X, Y$ are smooth vector fields on $M$ (i.e.\ $X, Y \in
+	\vX(M) = \Gamma(TM)$), we define a vector field $[X, Y]$,
+	the \emph{Lie bracket} of $X$ and $Y$, by
+	\[
+		[X, Y]_p(f) = X_p\bigl(Y(f)\bigr) - Y_p\bigl(X(f)\bigr).
+	\]
+	\medskip
+	\begin{block}{Note}
+		The bracket measures the \emph{failure} of the flows of $X$ and
+		$Y$ to commute; locally it is the commutator of the derivations
+		$X$ and $Y$.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Properties of the Lie bracket}
+	\begin{proposition}
+		Let $X, Y, Z \in \vX(M)$ and $f, g \in C^\infty(M)$.
+		\begin{enumerate}
+			\item[(a)] $[X, Y]$ is a smooth vector field on $M$;
+			\item[(b)] $[fX, gY] = fg\,[X, Y] + f\,(Xg)\, Y
+				      - g\,(Yf)\, X$;
+			\item[(c)] $[X, Y] = -[Y, X]$
+			      \emph{(skew-symmetry)};
+			\item[(d)] $\bigl[[X, Y], Z\bigr] + \bigl[[Y, Z], X\bigr]
+				      + \bigl[[Z, X], Y\bigr] = 0$
+			      \emph{(Jacobi identity)}.
+		\end{enumerate}
+	\end{proposition}
+	\begin{block}{Note (Lie algebra)}
+		A vector space with a bilinear operation satisfying (c) and (d)
+		is called a \emph{Lie algebra}.
+	\end{block}
+\end{frame}
+
+%====================================================================
+\section{Integral Curves}
+
+\begin{frame}{Integral curves}
+	\begin{definition}[Integral curve]
+		Let $X \in \vX(M)$. A smooth curve $\sigma$ in $M$ is an
+		\emph{integral curve} of $X$ if
+		\[
+			\dot{\sigma}(t) = X\bigl(\sigma(t)\bigr)
+			\qquad (\forall\, t \in I).
+		\]
+	\end{definition}
+	\medskip
+	\begin{block}{Reformulation}
+		A curve $\gamma : (a, b) \to M$ is an integral curve of $X$
+		$\iff$
+		\[
+			\gamma_*\Bigl( \frac{d}{dt} \Big|_{t} \Bigr)
+			= X\bigl(\gamma(t)\bigr)
+			\qquad (t \in (a, b)).
+		\]
+	\end{block}
+\end{frame}
+
+\begin{frame}{Existence and uniqueness: local form}
+	Suppose $0 \in (a,b)$ and $\gamma(0) = p$. Choose a local coordinate
+	system $(U, \varphi)$ with coordinate functions $x_1, \dots, x_d$
+	about $p$; write
+	\[
+		X\big|_U = \sum_{i=1}^{d} f_i\, \frac{\partial}{\partial x_i}
+		\qquad (f_i \in C^\infty(U)).
+	\]
+	For all $t$ with $\gamma(t) \in U$,
+	\[
+		\gamma_*\Bigl( \frac{d}{dt} \Big|_{t} \Bigr)
+		= \sum_{i=1}^{d} \frac{d (x_i \circ \gamma)}{dt} \Big|_{t}
+		\left. \frac{\partial}{\partial x_i} \right|_{\gamma(t)}
+		= X\bigl(\gamma(t)\bigr)
+		= \sum_{i=1}^{d} f_i\bigl(\gamma(t)\bigr)
+		\left. \frac{\partial}{\partial x_i} \right|_{\gamma(t)} .
+	\]
+\end{frame}
+
+\begin{frame}{Reduction to a system of ODEs}
+	Thus $\gamma$ is an integral curve of $X$ on $\gamma^{-1}(U)$ iff,
+	with $\gamma_i \triangleq x_i \circ \gamma$,
+	\[
+		(\star)\qquad
+		\frac{d \gamma_i}{dt} \Big|_{t}
+		= f_i\bigl( \varphi^{-1}\bigl( \gamma_1(t), \dots,
+		\gamma_d(t) \bigr) \bigr)
+		\qquad (t \in \gamma^{-1}(U)).
+	\]
+	\medskip
+	\begin{alertblock}{Theorem (Existence \& uniqueness)}
+		$(\star)$ is a system of ODEs, for which there exists a
+		fundamental existence \& uniqueness theorem; hence integral
+		curves of a smooth vector field exist and are unique.
+	\end{alertblock}
+\end{frame}
+
+\end{document}

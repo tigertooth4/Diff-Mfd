@@ -35,30 +35,32 @@
 \section{Examples: Level Sets as Regular Submanifolds}
 
 \begin{frame}{Hypersurfaces determined by quadratic forms}
-	\textbf{Eg.} Let $A$ be a non-degenerate $(n+1)\times(n+1)$ real
-	symmetric matrix. The quadratic form defines a smooth function
-	$\varphi_A$:
-	\[
-		\varphi_A(x_1, \dots, x_{n+1})
-		= \sum_{i,j=1}^{n+1} a_{ij}\, x_i x_j .
-	\]
-	When $s \neq 0$, $\varphi_A^{-1}(s)$ is either $\varnothing$ or an
-	$n$-dimensional regular submanifold (a \emph{hypersurface}).
+	\begin{example} Let $A$ be a non-degenerate $(n+1)\times(n+1)$ real
+		symmetric matrix. The quadratic form defines a smooth function
+		$\varphi_A$:
+		\[
+			\varphi_A(x_1, \dots, x_{n+1})
+			= \sum_{i,j=1}^{n+1} a_{ij}\, x_i x_j .
+		\]
+		When $s \neq 0$, $\varphi_A^{-1}(s)$ is either $\varnothing$ or an
+		$n$-dimensional regular submanifold (a \emph{hypersurface}).
+	\end{example}
 \end{frame}
 
 \begin{frame}{The special linear group $SL(n, \R)$}
-	\textbf{Eg.} Take $n \times n$ real matrices as points in
-	$\R^{n^2}$, i.e.\
-	\[
-		M_{n \times n}(\R) \cong \R^{n^2}.
-	\]
-	Consider $f : M_{n \times n}(\R) \longrightarrow \R$,\quad
-	$A \longmapsto \det(A)$. By the definition of $\det$, $f$ is a
-	smooth map.
-	\medskip
+	\begin{example}Take $n \times n$ real matrices as points in
+		$\R^{n^2}$, i.e.\
+		\[
+			M_{n \times n}(\R) \cong \R^{n^2}.
+		\]
+		Consider $f : M_{n \times n}(\R) \longrightarrow \R$,\quad
+		$A \longmapsto \det(A)$. By the definition of $\det$, $f$ is a
+		smooth map.
+		\medskip
 
-	\textbf{Claim.} $SL(n, \R)$ is an $(n^2 - 1)$-dim regular
-	submanifold of $GL(n, \R)$, an open subset of $\R^{n^2}$.
+		\textbf{Claim.} $SL(n, \R)$ is an $(n^2 - 1)$-dim regular
+		submanifold of $GL(n, \R)$, an open subset of $\R^{n^2}$.
+	\end{example}
 	\medskip
 
 	\begin{block}{Idea}
@@ -91,34 +93,52 @@
 \begin{frame}{A remark on the proof}
 	\begin{block}{Remark (Mei's book)}
 		The author only checked $p \in SL(n, \R)$: $f_{*,p}$ has full
-		rank. This is enough, since if $\rank f_* = \mathrm{const}$ on
-		$SL(n, \R)$, it is constant on an open neighborhood of
+		rank. This is enough, since if $\rank f_* $ reaches maximum on
+		$SL(n, \R)$, it remains maximum on an open neighborhood of
 		$SL(n, \R)$.
 	\end{block}
 	\bigskip
 
-	\textbf{Eg.} A class of $2$-dim surfaces. Let
-	$F : \R^3 \to \R$,\quad $F(x, y, z) = (x^2 + y^2)^2 + z^2$.
-	When $(x,y,z) \neq 0$, $\rank_{(x,y,z)} F = 1$. So for $r > 0$,
-	\[
-		S_r = F^{-1}(\{r\})
-	\]
-	is a regular submanifold of $\R^3 \setminus \{0\}$. Note that
-	$S_r$ is diffeomorphic to $S^2$.
+	\begin{example} A class of $2$-dim surfaces. Let
+		$F : \R^3 \to \R$,\quad $F(x, y, z) = (x^2 + y^2)^2 + z^2$.
+		When $(x,y,z) \neq 0$, $\rank_{(x,y,z)} F = 1$. So for $r > 0$,
+		\[
+			S_r = F^{-1}(\{r\})
+		\]
+		is a regular submanifold of $\R^3 \setminus \{0\}$. Note that
+		$S_r$ is diffeomorphic to $S^2$.
+	\end{example}
+\end{frame}
+
+
+\begin{frame}{Regular Value}
+	\begin{definition}[Regular value]
+		Let $f : M \to N$ be a $C^\infty$-map. If for every
+		$p \in f^{-1}(\{q\})$ the differential
+		$f_{*,p}$ is surjective, then $q \in N$ is called a
+		\emph{regular value} of $f$.
+	\end{definition}
+	\begin{proposition}
+		Let  $f : M^m \to N^n$ be a $C^\infty$-map. If $q\in N$ is a
+		regular value for $f$，then $f^{-1}(\{q\})$
+		is a $(m-n)$-dimensional regular submanifold of $M$.
+	\end{proposition}
+
 \end{frame}
 
 %====================================================================
 \section{Tangent Space of a Regular Submanifold}
 
 \begin{frame}{$T_p S = \ker f_{*,p}$}
-	\textbf{Eg.} Let $f : M^m \to N^n$ be a smooth map with
-	$\rank f \equiv l$ (identical everywhere). For $q \in N$, let
-	$S = f^{-1}(\{q\}) \neq \varnothing$. Then $S \subset M$ is a
-	regular submanifold, and $\forall\, p \in S$,
-	\[
-		T_p S = \ker f_{*,p}
-		= \bigl\{ w \in T_p M \bigm| f_{*,p}(w) = 0 \bigr\}.
-	\]
+	\begin{example} Let $f : M^m \to N^n$ be a smooth map with
+		$\rank f \equiv l$ (identical everywhere). For $q \in N$, let
+		$S = f^{-1}(\{q\}) \neq \varnothing$. Then $S \subset M$ is a
+		regular submanifold, and $\forall\, p \in S$,
+		\[
+			T_p S = \ker f_{*,p}
+			= \bigl\{ w \in T_p M \bigm| f_{*,p}(w) = 0 \bigr\}.
+		\]
+	\end{example}
 	\begin{proof}
 		For any tangent vector $w \in T_p S \subset T_p M$ and
 		$h \in C^\infty(N)$,
@@ -127,7 +147,7 @@
 		\]
 		Since $f\big|_S \equiv \mathrm{const} = q$,
 		$\Rightarrow w\bigl( h \circ f\big|_S \bigr) = w\bigl(h(q)\bigr)
-		\equiv 0$, so $w \in \ker f_{*,p}$ (equality by dimension).
+			\equiv 0$, so $w \in \ker f_{*,p}$ (equality by dimension).
 		\qedhere
 	\end{proof}
 \end{frame}
@@ -173,22 +193,15 @@
 	\end{block}
 \end{frame}
 
-\begin{frame}{Regular values}
-	\begin{definition}[Regular value]
-		Let $f : M \to N$ be a $C^\infty$-map. If for every
-		$p \in f^{-1}(\{q\})$ the differential
-		$f_{*,p}$ is surjective, then $q \in N$ is called a
-		\emph{regular value} of $f$.
-	\end{definition}
-	\medskip
+\begin{frame}{A Lemma}
 	\begin{lemma}
 		Let $0 \in \R^k$ be a regular value of the $C^\infty$-map
 		$g : N \to \R^k$ and $S = g^{-1}(\{0\})$. Then
 		$f : M \to N$ intersects transversally with $S$ $\iff$ $0 \in
-		\R^k$ is a regular value of $g \circ f$.
+			\R^k$ is a regular value of $g \circ f$.
 	\end{lemma}
 	\emph{This reduces transversality of $f$ with a level set to a
-	regular-value check for $g \circ f$.}
+		regular-value check for $g \circ f$.}
 \end{frame}
 
 \begin{frame}{Proof of the lemma}
@@ -202,8 +215,8 @@
 	Since $T_{f(p)} S = \ker g_{*,f(p)}$ and
 	$g_{*,f(p)}(T_{f(p)} N) = T_0 \R^k$,
 	\begin{align*}
-		& \quad\ f_{*,p}(T_p M) + \ker g_{*,f(p)} = T_{f(p)} N \\
-		& \Rightarrow\
+		 & \quad\ f_{*,p}(T_p M) + \ker g_{*,f(p)} = T_{f(p)} N \\
+		 & \Rightarrow\
 		f_{*,p}(T_p M) + T_{f(p)} S = T_{f(p)} N .
 		\qedhere
 	\end{align*}
