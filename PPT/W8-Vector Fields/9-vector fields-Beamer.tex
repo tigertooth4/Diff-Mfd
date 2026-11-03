@@ -20,6 +20,8 @@
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\supp}{\operatorname{supp}}
 \newcommand{\vX}{\mathfrak{X}}
+\newcommand{\D}{\mathcal{D}}
+
 
 \title{9\quad Vector Fields}
 \subtitle{Smoothness, Lie Brackets \& Integral Curves}
@@ -115,7 +117,7 @@
 
 \begin{frame}{Proof: (a) $\Rightarrow$ (b)}
 	Let $X : M \to TM$ be a $C^\infty$-map s.t.\ $\pi \circ X =
-	\mathrm{id}_M$, so $X(p) = V_p \in T_p M$. Take a local coordinate
+		\mathrm{id}_M$, so $X(p) = V_p \in T_p M$. Take a local coordinate
 	system $(U, \varphi, x_1, \dots, x_d)$ about $p \in M$; the local
 	coordinate system about $V_p$ is given by the local trivialization
 	$\widetilde{\varphi} : \pi^{-1}(U) \to \R^{2d}$.
@@ -126,12 +128,12 @@
 	from $\varphi(U) \subset \R^d$ to
 	$\widetilde{\varphi}\bigl(\pi^{-1}(U)\bigr) \subset \R^{2d}$.
 	Writing $X(p) = V_p = \sum_i a_i(p) \left. \frac{\partial}{\partial
-	x_i} \right|_{p}$,
+			x_i} \right|_{p}$,
 	\begin{align*}
 		\widetilde{\varphi} \circ X \circ \varphi^{-1}(x_1, \dots, x_d)
-		& = \Bigl( \varphi\bigl(\varphi^{-1}(x_1, \dots, x_d)\bigr);\
-		a_i\bigl(\varphi^{-1}(x_1, \dots, x_d)\bigr) \Bigr)  \\
-		& = \bigl( x_1, \dots, x_d;\ a_i(\varphi^{-1}(x_1, \dots, x_d)) \bigr),
+		 & = \Bigl( \varphi\bigl(\varphi^{-1}(x_1, \dots, x_d)\bigr);\
+		a_i\bigl(\varphi^{-1}(x_1, \dots, x_d)\bigr) \Bigr)                      \\
+		 & = \bigl( x_1, \dots, x_d;\ a_i(\varphi^{-1}(x_1, \dots, x_d)) \bigr),
 	\end{align*}
 	which means $a_i \in C^\infty(U)$.
 \end{frame}
@@ -162,7 +164,7 @@
 
 \begin{frame}{The Lie bracket of two vector fields}
 	If $X, Y$ are smooth vector fields on $M$ (i.e.\ $X, Y \in
-	\vX(M) = \Gamma(TM)$), we define a vector field $[X, Y]$,
+		\vX(M) = \Gamma(TM)$), we define a vector field $[X, Y]$,
 	the \emph{Lie bracket} of $X$ and $Y$, by
 	\[
 		[X, Y]_p(f) = X_p\bigl(Y(f)\bigr) - Y_p\bigl(X(f)\bigr).
@@ -255,5 +257,236 @@
 		curves of a smooth vector field exist and are unique.
 	\end{alertblock}
 \end{frame}
+
+\section{Existence and Uniqueness}
+
+\begin{frame}{Integral curves: the question}
+	\begin{definition}[Integral curve]
+		Let $X$ be a smooth vector field on $M$. A smooth curve
+		$\sigma$ in $M$ is an \emph{integral curve} of $X$ if
+		\[
+			\dot{\sigma}(t) = X\bigl(\sigma(t)\bigr)
+		\]
+		for each $t$ in the domain of $\sigma$.
+	\end{definition}
+	\medskip
+	\begin{block}{Question}
+		Given a smooth vector field on $M$ and a point $p \in M$, does
+		there exist an integral curve of $X$ through $p$? If so, is
+		there a unique one?
+	\end{block}
+\end{frame}
+
+\begin{frame}{The ODE system in local coordinates}
+	We interpret in coordinates! Let $0 \in (a,b)$, $p = \sigma(0)$.
+	Let $(U, \varphi = (x_1, \dots, x_d))$ be a local coordinate system
+	(centered at $p$). Then the vector field $X$ can be written as
+	\[
+		X = \sum_{i=1}^{d} f_i\, \frac{\partial}{\partial x_i},
+		\qquad f_i \in C^\infty(U).
+	\]
+	Assuming $\sigma\bigl((a,b)\bigr) \subset U$,
+	\[
+		\dot{\sigma}(t) = \sigma_*\Bigl( \frac{d}{dt} \Big|_{t} \Bigr)
+		= \sum_{i=1}^{d} \frac{d (x_i \circ \sigma)}{dt}
+		\left. \frac{\partial}{\partial x_i} \right|_{\sigma(t)}
+		\quad \forall\, t \in (a,b).
+	\]
+	So $\dot{\sigma}(t) = X\bigl(\sigma(t)\bigr)$ iff
+	\[
+		\frac{d \sigma_i}{dt}
+		= f_i\bigl( \varphi^{-1}\bigl( \sigma_1(t), \dots,
+		\sigma_d(t) \bigr) \bigr),
+		\quad i = 1, \dots, d . \tag{1}
+	\]
+\end{frame}
+
+\begin{frame}{Reduction to ODEs}
+	Here $\bigl( \sigma_1, \dots, \sigma_d \bigr)
+		= \bigl( x_1 \circ \sigma, \dots, x_d \circ \sigma \bigr)
+		\in \varphi(U)$ are the coordinates of the point
+	$\sigma(t) \in M$.
+	\medskip
+
+	\emph{(1) is a system of ODEs, for which there exist fundamental
+		existence and uniqueness theorems. In terms of the terminology for
+		manifolds, we have:}
+	\medskip
+
+	\begin{theorem}
+		Let $X$ be a $C^\infty$ vector field on $M$. For each $p \in M$
+		there exist $a(p)$, $b(p) \in \R \cup \{\pm\infty\}$ and a
+		smooth curve $\sigma_p : \bigl( a(p), b(p) \bigr) \to M$ such
+		that
+		\begin{enumerate}
+			\item[(a)] $0 \in \bigl( a(p), b(p) \bigr)$ and
+			      $\sigma_p(0) = p$;
+			\item[(b)] $\sigma_p$ is an integral curve of $X$;
+			\item[(c)] if $\mu : (c, d) \to M$ satisfies (a), (b), then
+			      $(c, d) \subset \bigl( a(p), b(p) \bigr)$ and
+			      $\sigma_p\big|_{(c,d)} = \mu$.
+		\end{enumerate}
+	\end{theorem}
+\end{frame}
+
+\begin{frame}{Proof of uniqueness and maximality}
+	If $\alpha, \beta$ are integral curves defined on open intervals
+	$I$, $J$, assume they have the same initial condition
+	$\alpha(t_0) = \beta(t_0)$ for the same $t_0 \in I \cap J$. Then
+	$I \cap J \neq \varnothing$. Define
+	\[
+		K = \bigl\{ t \in I \cap J \bigm| \alpha(t) = \beta(t) \bigr\}.
+	\]
+	\begin{itemize}
+		\item $K$ is \emph{open} (by the uniqueness theorem of ODE);
+		\item $K$ is \emph{closed} (by continuity);
+		\item hence $K = I \cap J$ (by the connectedness of
+		      $I \cap J$).
+	\end{itemize}
+	\medskip
+	Thus (c) is true --- (a), (b) as well: $\bigl( a(p), b(p) \bigr)$
+	is the union of all domains containing $t = 0$ on which an integral
+	curve with $\sigma(0) = p$ exists, and it is non-empty by the
+	fundamental existence theorem.
+\end{frame}
+
+\section{The Flow of a Vector Field}
+
+\begin{frame}{The transformations $X_t$}
+	\begin{definition}[$X_t$ and its domain]
+		$\forall\, t \in \R$, we define a transformation $X_t$ with
+		domain
+		\[
+			\D_t = \bigl\{ p \in M \bigm|
+			t \in \bigl( a(p), b(p) \bigr) \bigr\},
+		\]
+		by setting
+		\[
+			X_t(p) = \sigma_p(t).
+		\]
+	\end{definition}
+	\medskip
+	\begin{center}
+		\emph{$X_t$ moves each point $p$ for time $t$ along its
+			maximal integral curve.}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Properties of the flow}
+	\begin{theorem}[Properties of the flow]
+		\begin{enumerate}
+			\item[(d)] $\forall\, p \in M$, $\exists$ a neighborhood $V$
+			      of $p$ and $\varepsilon > 0$ s.t.\ the map
+			      $(t, p) \longmapsto X_t(p)$ is defined and $C^\infty$
+			      from $(-\varepsilon, \varepsilon) \times V \to M$;
+			\item[(e)] $\D_t$ is open for each $t$;
+			\item[(f)] $\bigcup_{t > 0} \D_t = M$;
+			\item[(g)] $X_t : \D_t \longrightarrow \D_{-t}$ is a
+			      diffeomorphism with inverse $X_{-t}$;
+			\item[(h)] let $s, t \in \R$. Then the domain of $X_s \circ X_t$
+			      is contained in but generally not equal to $\D_{s+t}$.
+			      However, the domain of $X_s \circ X_t$ \emph{is}
+			      $\D_{s+t}$ in the case in which $s, t$ have the same
+			      sign. And we have
+			      \[
+				      X_s \circ X_t = X_{s+t}.
+			      \]
+		\end{enumerate}
+	\end{theorem}
+\end{frame}
+
+%====================================================================
+\section{Proof of the Flow Properties}
+
+\begin{frame}{Smooth dependence and (f)}
+	\textbf{(d)} holds true according to the ODE theorem that the
+	solution depends on both $t$ and the initial value $\varphi(p)$
+	smoothly. So there's a neighborhood $V$ of $p$ and
+	$(-\varepsilon, \varepsilon)$ of $t = 0$ s.t.\ $\D_t$ is defined
+	for all $t \in (-\varepsilon, \varepsilon)$ and $V \subset \D_t$.
+	\bigskip
+
+	\textbf{(f)} Let $\bigl( a(p), b(p) \bigr)$ be the union of the
+	domains of $t$ that contain $t = 0$ and on which $\sigma(t)$ is an
+	integral curve of $X$ with $\sigma(0) = p$. By the fundamental
+	existence theorem, $\bigl( a(p), b(p) \bigr) \neq \varnothing$.
+	Therefore
+	\[
+		\bigcup_{t > 0} \D_t = M . \qed
+	\]
+\end{frame}
+
+\begin{frame}{Proof of (h): shifting the initial point}
+	Let $t \in \bigl( a(p), b(p) \bigr)$. Then
+	$s \longmapsto \sigma_p(t + s)$ is an integral curve of $X$
+	initiated at $\sigma_p(t)$, with maximal domain
+	$\bigl( a(p) - t,\, b(p) - t \bigr)$. By (c),
+	\[
+		\bigl( a(p) - t,\, b(p) - t \bigr)
+		= \bigl( a\bigl(\sigma_p(t)\bigr),\,
+		b\bigl(\sigma_p(t)\bigr) \bigr).
+	\]
+	So
+	\[
+		\sigma_p(t + s) = \sigma_{\sigma_p(t)}(s). \tag{2}
+	\]
+	Now, if $p \in$ the domain of $X_s \circ X_t$, then
+	\[
+		t \in \bigl( a(p), b(p) \bigr)
+		\quad \text{and} \quad
+		s \in \bigl( a\bigl(\sigma_p(t)\bigr),\,
+		b\bigl(\sigma_p(t)\bigr) \bigr)
+		= \bigl( a(p) - t,\, b(p) - t \bigr).
+	\]
+	So $s + t \in \bigl( a(p), b(p) \bigr)$, i.e.\ $p \in \D_{s+t}$,
+	and we know $X_s \circ X_t = X_{s+t}$ by (2).
+\end{frame}
+
+\begin{frame}{Opposite signs: the domain can shrink}
+	For $s$ and $t$ that do not have the same sign, the inclusion may
+	be strict. \textbf{Eg.} On $\R^2 \setminus \{0\}$, consider
+	$\frac{\partial}{\partial r_1}$ and take $s = -1$, $t = 1$. Then
+	the domain of
+	\[
+		X_{-1} \circ X_1 \quad \text{is} \quad
+		\R \setminus [-1, 0],
+	\]
+	but
+	\[
+		\D_{-1+1} = \D_0 = \R \setminus \{0\}.
+	\]
+	\medskip
+	\begin{block}{Note}
+		The composed map can be defined \emph{less} often than
+		$X_{s+t}$: a point may leave the manifold at time $t$ and the
+		way back at time $s$ need not exist.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Same sign: the domain of $X_s \circ X_t$ is $\D_{s+t}$}
+	If, however, $s, t$ have the same sign, for eg.\ $s, t > 0$:
+	$\forall\, p \in \D_{s+t}$,
+	\[
+		s + t \in \bigl( a(p), b(p) \bigr)
+		\ \Rightarrow\
+		\left.\begin{aligned}
+			t & \in \bigl( a(p), b(p) \bigr)           \\
+			s & \in \bigl( a(p) - t,\, b(p) - t \bigr)
+			= \bigl( a\bigl(\sigma_p(t)\bigr),\,
+			b\bigl(\sigma_p(t)\bigr) \bigr)
+		\end{aligned}\right\}
+	\]
+	\[
+		\Rightarrow\
+		p \in \D_t,\quad \sigma_p(t) \in \D_s
+		\ \Rightarrow\
+		p \in \text{domain of } X_s \circ X_t .
+	\]
+	\medskip
+	\textbf{(e)} is trivial when $t = 0$, i.e.\ $\D_0 = M$ is open.
+	Assume that $t > 0$ and $p \in \D_t$\,\dots
+\end{frame}
+
+
 
 \end{document}
