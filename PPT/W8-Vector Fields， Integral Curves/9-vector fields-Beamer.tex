@@ -487,6 +487,227 @@
 	Assume that $t > 0$ and $p \in \D_t$\,\dots
 \end{frame}
 
+%====================================================================
+\section{Completion of the Flow Proofs}
+
+\begin{frame}{Recall (h): shifting the initial point}
+	Let $t, s \in \R$. For any $p$ in the domain of $X_s \circ X_t$ we
+	see that
+	\[
+		p \in \D_t
+		\quad \bigl( t \in \bigl( a(p), b(p) \bigr) \bigr)
+		\quad \text{and} \quad
+		\sigma_p(t) = X_t(p) \in \D_s .
+	\]
+	To see that $p \in \D_{s+t}$, notice that we can define a
+	$C^\infty$-map $\gamma : s \longmapsto \sigma_p(t + s)$. Then
+	\[
+		\gamma(0) = \sigma_p(t), \qquad
+		\dot{\gamma}(s) = X\bigl(\sigma_p(t+s)\bigr) = X\bigl(\gamma(s)\bigr).
+	\]
+	So $\bigl( a(\sigma_p(t)), b(\sigma_p(t)) \bigr)$ is the maximal
+	interval for $\gamma$, hence equals $\bigl( a(p) - t,\, b(p) - t
+	\bigr)$, and
+	\[
+		\sigma_p(t + s) = \sigma_{\sigma_p(t)}(s). \tag{2}
+	\]
+	So if $p \in \D_t$ and $\sigma_p(t) \in \D_s$ then
+	$p \in \D_{t+s}$. The inverse \emph{doesn't} hold! For eg.\ the
+	domain of $X_{-0.9} \circ X_1$ is contained in $\D_{0.1}$ but not
+	equal to it.
+\end{frame}
+
+\begin{frame}{Proof of (e): $\D_t$ is open --- setup}
+	Obviously true when $t = 0$, since $\D_0 = M$. Fix $t > 0$
+	(similar for $t < 0$) and $p \in \D_t$. We need a neighborhood
+	$N_p$ s.t.\ $N_p \subset \D_t$, i.e.\ $\forall\, q \in N_p$,
+	$t \in \bigl( a(q), b(q) \bigr)$.
+	\medskip
+
+	Consider the curve $\sigma_p\bigl( [0, t] \bigr)$, which is
+	\emph{compact} in $M$, and let
+	\[
+		\Gamma = \bigl\{ \bigl( \tau, \sigma_p(\tau) \bigr)
+		\bigm| \tau \in [0, t] \bigr\}.
+	\]
+	By (d), for each point $\bigl( t_0, \sigma_p(t_0) \bigr) \in
+	\Gamma$ there is an $\varepsilon_{t_0} > 0$ and
+	$V_{\sigma_p(t_0)}$ open about $\sigma_p(t_0)$ s.t.\
+	$(-\varepsilon_{t_0}, \varepsilon_{t_0}) \times
+	V_{\sigma_p(t_0)}$ carries the flow.
+\end{frame}
+
+\begin{frame}{Proof of (e): compactness and induction}
+	By the compactness of $\Gamma$, there is a finite subcover for
+	$\sigma_p\bigl( [0, t] \bigr)$: an interval $(-\varepsilon,
+	\varepsilon)$ and a neighborhood $W$ of $\sigma_p\bigl( [0,t]
+	\bigr)$ s.t.\ the flow is defined on $(-\varepsilon, \varepsilon)
+	\times W$. Let $n$ be an integer $> 1$ s.t.\ $\bigl| \frac{t}{n}
+	\bigr| < \varepsilon$. Define
+	\[
+		W_1 = \bigl\{ p \in W \bigm| X_{\frac{t}{n}}(p) \in W \bigr\}
+		= W \cap X_{\frac{t}{n}}^{-1}(W),
+	\]
+	which is open in $W$; inductively,
+	\[
+		W_k = W \cap X_{\frac{t}{n}}^{-1}(W_{k-1}) \subset W
+		\quad \text{open}, \qquad p \in W_n .
+	\]
+	$W_n$ consists of all points remaining in $W$ after $n$
+	translations, so $W_n \subset \D_t$. Therefore $\D_t$ is open.
+\end{frame}
+
+\begin{frame}{Proof of (g): $X_t$ is a diffeomorphism}
+	$X_t : \D_t \longrightarrow \D_{-t}$ with inverse $X_{-t}$. It
+	follows from
+	\[
+		X_t = X_{\frac{t}{n}} \circ \cdots \circ X_{\frac{t}{n}},
+	\]
+	with each $X_{\frac{t}{n}}$ $C^\infty$ on a neighborhood of
+	$p \in \D_t$, that $X_t$ is $C^\infty$.
+	\medskip
+
+	$X_t$ is $1{:}1$ because
+	\[
+		X_{-t} \circ X_t(p) = \sigma_{\sigma_p(t)}(-t) = p
+	\]
+	by the uniqueness of the initial-value problem of ODE. And
+	$X_{-t}$ is also $C^\infty$.
+\end{frame}
+
+%====================================================================
+\section{Complete Vector Fields}
+
+\begin{frame}{Complete vector fields and 1-parameter groups}
+	\begin{definition}[Complete vector field]
+		A smooth vector field $X$ on $M$ is \emph{complete} if
+		$\D_t = M$ for all $t$ (i.e.\ all the points of $M$ can be
+		translated up till time $t$).
+	\end{definition}
+	\begin{itemize}
+		\item The set of transformations $\{ X_t \mid t \in \R \}$
+		      forms a \emph{group} of transformations, isomorphic to
+		      $(\R, +)$, because $X_t \circ X_s = X_{t+s}$.
+		\item If $X$ is not complete, the transformations $X_t$ do
+		      \emph{not} form a group since the domain may depend on
+		      $t$. In this case we refer to the collection
+		      $\{ X_t \}$ as the \emph{local 1-parameter group}
+		      of $X$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Remark: a simple noncomplete example}
+	Consider $\frac{\partial}{\partial r_1}$ on $\R^2 \setminus \{0\}$.
+	The integral curve $\sigma$ passing through $(a, b)$ is given by
+	\[
+		\left\{
+		\begin{aligned}
+			\dot{\sigma}(t)
+			 & = \left. \frac{\partial}{\partial r_1}
+			\right|_{\sigma(t)} \\
+			\sigma(0)          & = (a, b)
+		\end{aligned}
+		\right.
+		\iff
+		\left\{
+		\begin{aligned}
+			\frac{d r_1}{dt} & = 1 \\
+			\frac{d r_2}{dt} & = 0
+		\end{aligned}
+		\right.
+		\quad (r_1, r_2)(0) = (a, b).
+	\]
+	So the integral curve starting from $(a, 0)$ ($a > 0$) has a life
+	span $(-a, +\infty)$.
+	\medskip
+
+	\begin{block}{Note}
+		If the manifold $M$ is \emph{compact}, any $C^\infty$ vector
+		field on $M$ is complete! (Exercise !!)
+	\end{block}
+\end{frame}
+
+%====================================================================
+\section{Straightening a Vector Field}
+
+\begin{frame}{Prop 1.53: straightening out a nonzero vector field}
+	\begin{alertblock}{Proposition 1.53}
+		Let $p \in M^d$, and let $X$ be a smooth vector field on $M$
+		s.t.\ $X(p) \neq 0$. Then there is a coordinate system
+		$(U, \varphi) = (U, x_1, \dots, x_d)$ about $p$ s.t.
+		\[
+			X\big|_U = \left. \frac{\partial}{\partial x_1} \right|_U .
+		\]
+	\end{alertblock}
+	\medskip
+	\begin{center}
+		\emph{Near a non-vanishing point, $X$ can be taken as the
+			first coordinate vector field.}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Proof: the flow map}
+	Choose a coordinate system centered at $p$, denoted by
+	$(V, \psi) = (V, y_1, \dots, y_d)$, s.t.
+	\[
+		X\big|_p = \left. \frac{\partial}{\partial y_1} \right|_{p}.
+	\]
+	Consider the flow defined by
+	\[
+		\left\{
+		\begin{aligned}
+			\dot{\sigma}(t) & = X\bigl(\sigma(t)\bigr), \\
+			\sigma(0)       & = \psi^{-1}(0, \eta_2, \dots, \eta_d).
+		\end{aligned}
+		\right.
+	\]
+	Then $\exists\, \varepsilon > 0$ and a neighborhood
+	$W \subset \R^{d-1}$ about $0$ s.t.
+	\[
+		\sigma(t, \eta_2, \dots, \eta_d)
+		= X_t\bigl( \psi^{-1}(0, \eta_2, \dots, \eta_d) \bigr)
+	\]
+	is defined and smooth for
+	$(t, \eta_2, \dots, \eta_d) \in (-\varepsilon, \varepsilon)
+	\times W \subset \R^d$.
+\end{frame}
+
+\begin{frame}{Proof: $\sigma$ is non-singular at the origin}
+	\[
+		\sigma_{*,0}\Bigl( \frac{d}{dt} \Big|_{0} \Bigr)
+		= X(p) = \left. \frac{\partial}{\partial y_1} \right|_{p}.
+	\]
+	For $k = 1, \dots, d$ and $i = 2, \dots, d$,
+	\begin{align*}
+		\sigma_{*,0}\Bigl( \frac{\partial}{\partial \eta_i} \Big|_{0}
+		\Bigr) (y_k)
+		 & = \left. \frac{d}{ds} \right|_{s=0}
+		y_k \circ \sigma(0, \dots, s, \dots, 0)  \\
+		 & = \left. \frac{d}{ds} \right|_{s=0}
+		y_k \circ X_0\bigl( \psi^{-1}(0, \dots, s, \dots, 0) \bigr) \\
+		 & = \left. \frac{d}{ds} \right|_{s=0}
+		y_k \circ \psi^{-1}(0, \dots, s, \dots, 0)
+		= \delta_{ki}.
+	\end{align*}
+	So $\sigma_{*,0}\bigl( \left. \frac{\partial}{\partial \eta_i}
+		\right|_{0} \bigr) = \left. \frac{\partial}{\partial y_i}
+		\right|_{p}$, hence $\sigma_{*,0}$ is non-singular at $p$.
+\end{frame}
+
+\begin{frame}{Proof: the new coordinates}
+	By the inverse function theorem, $\exists\, (U, \sigma^{-1})$ about
+	$p$. Denote $\sigma^{-1} = (x_1, \dots, x_d)$. Then
+	$\forall\, h \in C^\infty(U)$,
+	\begin{align*}
+		\left. \frac{\partial}{\partial x_1} \right|_{U} (h)
+		 & = \left. \frac{\partial}{\partial r_1} \right|_{0}
+		(h \circ \sigma)
+		= \frac{\partial}{\partial t} (h \circ \sigma)  \\
+		 & = \sigma_*\Bigl( \frac{\partial}{\partial t} \Bigr) (h)
+		= X(h) = X\big|_U (h). \qedhere
+	\end{align*}
+\end{frame}
+
 
 
 \end{document}
